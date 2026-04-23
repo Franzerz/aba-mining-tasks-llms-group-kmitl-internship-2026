@@ -1,0 +1,7 @@
+pandas
+pyyaml
+python-dotenv
+jsonschema
+tqdm
+ollama
+httpx
