@@ -3,10 +3,10 @@
 
 input:
   # Input dataset for Task 1 (reviews to process)
-  input_csv: ../powerpetch/Dataset/A-1. hotel in Larnaca-Cyprus - A-1. hotel in Larnaca-Cyprus.csv
+  input_csv: ../Task_1/data/A-1. hotel in Larnaca-Cyprus - A-1. hotel in Larnaca-Cyprus.csv
 
   # Gold/evaluation dataset (human-annotated ground truth for evaluation)
-  gold_csv: ../powerpetch/Dataset/Original ABA Dataset for Version 2 [Oct 23, 2025], Senior Project, MUICT - Sheet2_.csv
+  gold_csv: ../Task_1/data/Original ABA Dataset for Version 2 [Oct 23, 2025], Senior Project, MUICT - Sheet2_.csv
 
 output:
   task1_dir: outputs/task1
