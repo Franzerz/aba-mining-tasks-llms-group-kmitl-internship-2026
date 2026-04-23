@@ -1,0 +1,137 @@
+You are an expert hotel review analyst performing multi-label topic extraction with span-level sentiment analysis.
+
+TASK: Analyze the hotel review below. For each topic, extract the EXACT text span from the review and classify its sentiment.
+
+TOPICS (closed set — use ONLY these): {{TOPICS}}
+
+STEP-BY-STEP PROCESS:
+1. Read the entire review carefully, including both positive and negative sections.
+2. For each topic, find every relevant text span in the review.
+3. Copy each span EXACTLY as it appears (verbatim substring — no paraphrasing, no rewriting).
+4. Assign sentiment PER SPAN, not per review section. A span in the "Positive" section CAN be Negative if the text expresses a complaint, and vice versa.
+5. If a topic has BOTH positive and negative mentions, you MUST list them as SEPARATE items (contrastive split). Never merge mixed sentiments into one item.
+6. If a SINGLE SPAN relates to MULTIPLE topics, extract it under EACH relevant topic with the same label (multi-topic extraction).
+7. If a topic is not mentioned at all, use: [{"text": null, "label": null}] — NEVER write a bare null for a topic.
+8. Self-check BEFORE outputting: (a) every topic key maps to a JSON array (never null), (b) every "text" is a verbatim substring found in the review, (c) unmentioned topics use [{"text": null, "label": null}].
+
+CRITICAL FORMAT:
+  NEVER: "Food": null
+  ALWAYS: "Food": [{"text": null, "label": null}] ; (unmentioned topic)
+  ALWAYS: "Food": [{"text": "Breakfast was great.", "label": "Positive"}] ; (mentioned topic)
+
+DATA STRUCTURED FOR EACH REVIEW: Title — PositiveReview — NegativeReview
+Example Review STRUCTURED:
+Title — "Wonderful place to stay."
+PositiveReview — "New, comfortable apartments, close to the airport, to very clean beach.
+  Staff is extremely helpful and easy to communicate with
+  Tasty food on the first floor, comfortable restaurant for both cozy evenings and calm work to escape the heat in the midday"
+NegativeReview — "Nothing at all."
+
+CONTRASTIVE EXAMPLES:
+
+Example 1 — Mixed sentiment on same topic (MUST split):
+Review:
+Title — "Great hotel with great food!"
+PositiveReview — "I liked the rooms- they are spacious, clean, the window view is nice too. The restaurant downstairs is amazing- the food there is very very tasty and made with a lot of care- they care a lot about the details: olive oil galore, herbs- absolutely delicious!"
+NegativeReview — ""
+Correct — Room: [{"text": "they are spacious, clean, the window view is nice too.", "label": "Positive"}]
+Correct — Food: [{"text": "the food there is very very tasty and made with a lot of care- they care a lot about the details: olive oil galore, herbs- absolutely delicious!", "label": "Positive"}]
+Correct — Because each topic's spans are extracted separately with correct sentiment.
+Wrong — Room: [{"text": "I liked the rooms- they are spacious, clean, the window view is nice too. The restaurant downstairs is amazing", "label": "Positive"}]
+Wrong — Because the span merges Room and Food content into one item.
+
+Example 2 — Sentiment contradicts the review section it appears in:
+Review:
+Title — "thoroughly satisfied with our choice of hotel"
+PositiveReview — "so comfortable, clean, friendly staff. perfect for overnight stay before flying from Larnaca Airport."
+NegativeReview — "nothing."
+Correct — Room: [{"text": "so comfortable, clean,", "label": "Positive"}]
+Correct — Because the text expresses a positive opinion regardless of the section.
+Wrong — Room: [{"text": "so comfortable, clean,", "label": "Negative"}]
+Wrong — Because the label was assigned based on the section name, not the actual sentiment.
+
+Example 3 — Topic not mentioned:
+Review:
+Title — "Nice hotel close to the airport"
+PositiveReview — "Close to airport"
+NegativeReview — ""
+Correct — Food: [{"text": null, "label": null}]
+Correct — Because Food is not mentioned, so both text and label are null.
+Wrong — Food: [{"text": null, "label": "Positive"}]
+Wrong — Because when text is null, label must also be null.
+
+Example 4 — Multi-topic extraction: same span belongs to multiple topics:
+Review:
+Title — "Would stay again for sure 😊"
+PositiveReview — "Room was perfect, looked new, clean shiny tiled floors and bathroom tiles, just every inch perfect and clean. Bed was really comfortable, lots of room for me to put my things..."
+NegativeReview — ""
+Correct — Room: [{"text": "Room was perfect, looked new, clean shiny tiled floors and bathroom tiles, just every inch perfect and clean.", "label": "Positive"}, {"text": "Bed was really comfortable, lots of room for me to put my things...", "label": "Positive"}]
+Correct — Facility: [{"text": "Bed was really comfortable, lots of room for me to put my things...", "label": "Positive"}]
+Correct — Because "Bed was really comfortable, lots of room for me to put my things..." relates to BOTH Room (bed quality) AND Facility (room amenities), so it appears under both topics with the same label.
+Wrong — Only extracting "Bed was really comfortable, lots of room for me to put my things..." under Room but not under Facility.
+Wrong — Because if a span is relevant to multiple topics, it must be extracted under each one.
+
+Example 5 — Sarcasm or irony: label by actual intended sentiment:
+Review:
+Title — "staff was wonderful. very accommodating and the food service and quality was very good. this was our second stay."
+PositiveReview — "very clean functional rooms. lovely and very helpful staff."
+NegativeReview — "I would have liked an ironing board in the room."
+Correct — Facility: [{"text": "I would have liked an ironing board in the room.", "label": "Negative"}]
+Correct — Because the guest is complaining about a missing amenity.
+Wrong — Facility: [{"text": "I would have liked an ironing board in the room.", "label": "Positive"}]
+Wrong — Because "liked" does not make this positive. The guest is expressing a wish for something missing.
+
+Example 6 — Null handling, ALL topics required, values must be JSON arrays:
+Review:
+Title — "Nice hotel close to the airport"
+PositiveReview — "Close to airport"
+NegativeReview — ""
+Correct — Location: [{"text": "Close to airport", "label": "Positive"}]
+Correct — Food: [{"text": null, "label": null}]
+Correct — Because Food is not mentioned, both text and label are null. ALL topics must appear.
+Wrong — Food: [{"text": null, "label": "Positive"}]
+Wrong — Because when text is null, label must also be null.
+Wrong — Food: null
+Wrong — Because each topic value MUST be a JSON array of objects. Never null, string, or other type.
+Wrong — Omitting topics from the output. ALL {{TOPIC_COUNT}} topics must be keys.
+
+Example 7 — Multiple spans for the same topic go in the same array:
+Review:
+Title — "Exceptional"
+PositiveReview — "My second time here and true to say it was better than the first which was excellent..
+ The staff here are amazing beyond expectations..*****
+ Maria at reception is just great she really took time to explain where to go how to get there and so helpful ... 🙏
+ Richard the chef this guy is like the friendliest guy ever, such a nice guy with a permanent. Smile 😁
+ Oh yeah the food is great to and very reasonable prices ..
+ Even the cleaning lady is so friendly and so nice to talk to .
+ The rooms are spacious and clean great to stay .. I even got an upgrade which is always so nice.
+ The owners are also great it's like a real caring family set up ...
+ The bus stop which goes to and from the airport as well as the town center is a minutes walk away and just 2 euros
+ I don't think I need to mention where I'll be staying next time I'm in Larnaka.. 😊
+ Brilliant guys ... 🙏🙏🙏"
+NegativeReview — ""
+Correct — Staff: [{"text": "Maria at reception is just great she really took time to explain where to go how to get there and so helpful ... 🙏", "label": "Positive"}, {"text": "Richard the chef this guy is like the friendliest guy ever, such a nice guy with a permanent. Smile 😁", "label": "Positive"}]
+Correct — Because both spans are about Staff and listed as separate items in the same array.
+Wrong — Staff: [{"text": "Maria at reception is just great she really took time to explain where to go how to get there and so helpful ... 🙏", "label": "Positive"}]
+Wrong — Because the span about Richard was ignored. All relevant spans for a topic must be extracted.
+
+FULL EXAMPLE:
+Input:
+Title — "A lovely hotel"
+PositiveReview — "Staff were lovely. Service was great. The room was spotless. Great location for restaurants. Great location for a short drive to the airport."
+NegativeReview — "Not applicable"
+Output:
+{"Topics":{"Room":[{"text":"The room was spotless.","label":"Positive"}],"Staff":[{"text":"Staff were lovely.","label":"Positive"}],"Location":[{"text":"Great location for restaurants.","label":"Positive"},{"text":"Great location for a short drive to the airport.","label":"Positive"}],"Food":[{"text":null,"label":null}],"Price":[{"text":null,"label":null}],"Facility":[{"text":null,"label":null}],"Check-in":[{"text":null,"label":null}],"Check-out":[{"text":null,"label":null}],"Off":[{"text":null,"label":null}],"Booking-issue":[{"text":null,"label":null}],"Taxi-issue":[{"text":null,"label":null}]}}
+
+OUTPUT RULES:
+- CRITICAL: Every topic value MUST be a JSON array. "Food": null is ALWAYS WRONG. For unmentioned topics: "Food": [{"text": null, "label": null}].
+- Output ONLY a single JSON object. No explanation. No code. No markdown. No backticks.
+- Output compact single-line JSON with NO newlines, NO indentation, and NO extra whitespace.
+- Top-level key must be "Topics" containing ALL {{TOPIC_COUNT}} topics as keys.
+- Each topic value is a list of {"text": ..., "label": ...} objects.
+- "label" must be exactly "Positive", "Negative", or null (when text is null).
+
+NOW PROCESS THIS REVIEW:
+{{REVIEW_TEXT}}
+
+JSON OUTPUT:

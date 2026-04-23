@@ -1,0 +1,36 @@
+active_schema: extended11
+
+schemas:
+  clar8:
+    topics:
+      - Room
+      - Staff
+      - Location
+      - Food
+      - Price
+      - Facility
+      - Check-in
+      - Check-out
+    off_topic_labels:
+      - Off
+      - Off-topic
+      - Noise
+
+  extended11:
+    topics:
+      - Room
+      - Staff
+      - Location
+      - Food
+      - Price
+      - Facility
+      - Check-in
+      - Check-out
+      - "Off"
+      - Booking-issue
+      - Taxi-issue
+    off_topic_labels:
+      - Off
+      - Off-topic
+      - Noise
+

@@ -1,0 +1,112 @@
+You are an expert hotel review analyst performing multi-label topic extraction with span-level sentiment analysis.
+
+TASK: Analyze the hotel review below. For each topic, extract the EXACT text span from the review and classify its sentiment.
+
+TOPICS (closed set — use ONLY these): {{TOPICS}}
+
+STEP-BY-STEP PROCESS:
+1. Read the entire review carefully, including both positive and negative sections.
+2. For each topic, find every relevant text span in the review.
+3. Copy each span EXACTLY as it appears (verbatim substring — no paraphrasing, no rewriting).
+4. Assign sentiment PER SPAN, not per review section. A span in the "Positive" section CAN be Negative if the text expresses a complaint, and vice versa.
+5. If a topic has BOTH positive and negative mentions, you MUST list them as SEPARATE items (contrastive split). Never merge mixed sentiments into one item.
+6. If a SINGLE SPAN relates to MULTIPLE topics, extract it under EACH relevant topic with the same label (multi-topic extraction).
+7. If a topic is not mentioned at all, use: [{"text": null, "label": null}] — NEVER write a bare null for a topic.
+8. Self-check BEFORE outputting: (a) every topic key maps to a JSON array (never null), (b) every "text" is a verbatim substring found in the review, (c) unmentioned topics use [{"text": null, "label": null}].
+
+MUSR DO FORMAT:
+  NEVER: "Food": null
+  ALWAYS: "Food": [{"text": null, "label": null}] ; (unmentioned topic)
+  ALWAYS: "Food": [{"text": "Breakfast was great.", "label": "Positive"}] ; (mentioned topic)
+
+DATA STRUCTURED FOR EACH REVIEW: Title — PositiveReview — NegativeReview
+Example Review STRUCTURED:
+Title — "Wonderful place to stay."
+PositiveReview — "New, comfortable apartments, close to the airport, to very clean beach.
+  Staff is extremely helpful and easy to communicate with 
+  Tasty food on the first floor, comfortable restaurant for both cozy evenings and calm work to escape the heat in the midday"
+NegativeReview — "Nothing at all."
+
+CONTRASTIVE EXAMPLES — SENTIMENT ASSIGNMENT:
+
+Example 1 — Positive statement in the Negative section is still Positive:
+Review: 
+Title — "Wonderful"
+PositiveReview — ""
+NegativeReview — "Lovely little hotel with very friendly staff. Breakfast was excellent."
+Correct — Staff: [{"text": "very friendly staff.", "label": "Positive"}]
+Correct — Food: [{"text": "Breakfast was excellent.", "label": "Positive"}]
+Correct — Because the text expresses positive opinions, so labels are Positive even though the text appears in the Negative section.
+Wrong — Staff: [{"text": "very friendly staff.", "label": "Negative"}]
+Wrong — Because the label was assigned based on the section name ("Negative"), not the actual sentiment of the text.
+
+Example 2 — Negative complaint in the Positive section is still Negative:
+Review: 
+Title — "Wonderful"
+PositiveReview — "Staff is very polite and caring. Thank you"
+NegativeReview — "Surrounding buildings are under construction and poorly lit."
+Correct — Staff: [{"text": "Staff is very polite and caring.", "label": "Positive"}]
+Correct — Off: [{"text": "Surrounding buildings are under construction and poorly lit.", "label": "Negative"}]
+Correct — Because the construction complaint is negative even though it could be misread.
+Wrong — Off: [{"text": "Surrounding buildings are under construction and poorly lit.", "label": "Positive"}]
+Wrong — Because the construction and poor lighting are clearly negative. Section name does not determine sentiment.
+
+Example 3 — Two opposite sentiments on the same topic must be split:
+Review: 
+Title — "Would stay again for sure 😊"
+PositiveReview — "Room was perfect, looked new, clean shiny tiled floors and bathroom tiles, just every inch perfect and clean. Bed was really comfortable, lots of room for me to put my things... although might have needed another set of drawers if there were two of us."
+NegativeReview — "Fridge could have been put on beforehand so it was cold, the shower took a while to get hot, had to have a cold shower one morning as i needed to get out early. When you left it running for around 5 mins it got warm and was a good shower.
+ Ordered pizza one night and was not great, too stodgy but I'm sure other food is better. The restaurant area is nice and the staff very accomodating."
+Correct — Room: [{"text": "Room was perfect, looked new, clean shiny tiled floors and bathroom tiles, just every inch perfect and clean.", "label": "Positive"}, {"text": "Fridge could have been put on beforehand so it was cold,", "label": "Negative"}]
+Correct — Because positive and negative aspects are listed as separate items.
+Wrong — Room: [{"text": "Room was perfect, looked new, clean shiny tiled floors and bathroom tiles, just every inch perfect and clean. Bed was really comfortable, lots of room for me to put my things... although might have needed another set of drawers if there were two of us.", "label": "Positive"}]
+Wrong — Because the negative aspect about the fridge was ignored. Must include all relevant spans.
+
+Example 4 — Sarcasm or irony should be labeled by the actual intended sentiment:
+Review: 
+Title — "staff was wonderful. very accommodating and the food service and quality was very good. this was our second stay."
+PositiveReview — "very clean functional rooms. lovely and very helpful staff."
+NegativeReview — "I would have liked an ironing board in the room."
+Correct — Facility: [{"text": "I would have liked an ironing board in the room.", "label": "Negative"}]
+Correct — Room: [{"text": "very clean functional rooms.", "label": "Positive"}]
+Correct — Facility: [{"text": "very clean functional rooms.", "label": "Positive"}]
+Correct — Because "very clean functional rooms" relates to both Room (room cleanliness) AND Facility (room quality/features), so it appears under both topics.
+Wrong — Facility: [{"text": "I would have liked an ironing board in the room.", "label": "Positive"}]
+Wrong — Because "liked" does not make this positive. The guest is complaining about a missing amenity.
+
+Example 5 — Extract the full meaningful span, not just a fragment:
+Review: 
+Title — "Great stay"
+PositiveReview — "The hotel is 5 minutes from the beach and the location is also near the lake.
+ The rooms are a good size and are laid out very well with a good size bathroom
+ The room also has a great sized balcony to take a tea/coffee and 
+ chill
+ There is a great restaurant inside where the food is good and not to pricey. 
+ The staff are super wonderful really friendly all of them the receptionist Maria is so nice she's amazing 
+ Keep up the great work 👍🏼🙏"
+NegativeReview — "Leaving..in fact just re booked the hotel for 2 weeks time 😁"
+Correct — Location: [{"text": "The hotel is 5 minutes from the beach and the location is also near the lake.", "label": "Positive"}]
+Correct — Because the full span provides context about location proximity.
+Wrong — Location: [{"text": "5 minutes", "label": "Positive"}]
+Wrong — Because "5 minutes" alone is too short and loses context. Extract the full meaningful span.
+
+FULL EXAMPLE:
+Input: 
+Title — "A lovely hotel"
+PositiveReview — "Staff were lovely. Service was great. The room was spotless. Great location for restaurants. Great location for a short drive to the airport."
+NegativeReview — "Not applicable"
+Output:
+{"Topics":{"Room":[{"text":"The room was spotless.","label":"Positive"}],"Staff":[{"text":"Staff were lovely.","label":"Positive"}],"Location":[{"text":"Great location for restaurants.","label":"Positive"},{"text":"Great location for a short drive to the airport.","label":"Positive"}],"Food":[{"text":null,"label":null}],"Price":[{"text":null,"label":null}],"Facility":[{"text":null,"label":null}],"Check-in":[{"text":null,"label":null}],"Check-out":[{"text":null,"label":null}],"Off":[{"text":null,"label":null}],"Booking-issue":[{"text":null,"label":null}],"Taxi-issue":[{"text":null,"label":null}]}}
+
+OUTPUT RULES:
+- CRITICAL: Every topic value MUST be a JSON array. "Food": null is ALWAYS WRONG. For unmentioned topics: "Food": [{"text": null, "label": null}].
+- Output ONLY a single JSON object. No explanation. No code. No markdown. No backticks.
+- Output compact single-line JSON with NO newlines, NO indentation, and NO extra whitespace.
+- Top-level key must be "Topics" containing ALL {{TOPIC_COUNT}} topics as keys.
+- Each topic value is a list of {"text": ..., "label": ...} objects.
+- "label" must be exactly "Positive", "Negative", or null (when text is null).
+
+NOW PROCESS THIS REVIEW:
+{{REVIEW_TEXT}}
+
+JSON OUTPUT:

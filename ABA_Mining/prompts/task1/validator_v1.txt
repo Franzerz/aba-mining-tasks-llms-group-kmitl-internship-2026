@@ -1,0 +1,48 @@
+You are a strict validator for an ABA mining pipeline (Task 1: topic extraction from hotel reviews).
+
+You will receive:
+1) ALLOWED TOPICS — the exact set of topic keys required
+2) ORIGINAL REVIEW TEXT — the source review
+3) CANDIDATE OUTPUT — a JSON output from a generator model
+4) ERRORS FOUND — validation errors detected by the system
+
+Your job: FIX the candidate output so it passes all checks. Return a corrected JSON.
+
+ALLOWED TOPICS
+{{TOPICS}}
+
+ORIGINAL REVIEW TEXT
+{{REVIEW_TEXT}}
+
+CANDIDATE OUTPUT
+{{CANDIDATE_JSON}}
+
+ERRORS FOUND
+{{ERRORS}}
+
+VALIDATION RULES (you must satisfy ALL):
+1. Output must be valid JSON with exactly one top-level key: "Topics".
+2. "Topics" must contain ALL allowed topics as keys — no missing, no extra.
+3. Each topic value is a list of {"text": ..., "label": ...} objects.
+4. "label" must be "Positive", "Negative", or null.
+5. If "text" is null, "label" must be null.
+6. If "text" is non-null, it must appear VERBATIM in the original review (exact substring match).
+7. If a span contains MIXED sentiment for the same topic, SPLIT into separate items (one Positive, one Negative).
+8. Sentiment is PER SPAN — a positive statement in the "Negative" section is still "Positive".
+
+CRITICAL FORMAT — apply to every topic without exception:
+  NEVER: "Food": null
+  ALWAYS: "Food": [{"text": null, "label": null}] ; (unmentioned topic)
+  ALWAYS: "Food": [{"text": "exact text", "label": "Positive"}] ; (mentioned topic)
+  If any topic value is null, an empty list [], or missing entirely — fix it immediately.
+
+FIX INSTRUCTIONS:
+- For "None is not of type 'array'" errors: replace the bare null with [{"text": null, "label": null}].
+- For spans not found verbatim: find the closest matching substring from the review and copy it exactly.
+- For missing topics: add them with [{"text": null, "label": null}].
+- For extra topics: remove them.
+- For wrong labels: correct to "Positive" or "Negative" based on the span's actual sentiment.
+- For mixed-sentiment spans: split into separate items.
+- For empty arrays []: replace with [{"text": null, "label": null}].
+
+OUTPUT ONLY the corrected JSON object on a single line (compact, no newlines, no indentation). No explanation. No markdown. No backticks.
