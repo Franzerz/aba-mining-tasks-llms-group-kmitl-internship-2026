@@ -1,7 +1,11 @@
 pandas
+numpy
 pyyaml
 python-dotenv
 jsonschema
 tqdm
 ollama
 httpx
+rank-bm25
+scikit-learn
+sentence-transformers
