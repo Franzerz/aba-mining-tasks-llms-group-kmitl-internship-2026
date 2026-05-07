@@ -8,9 +8,7 @@ import numpy as np
 import pandas as pd
 from rank_bm25 import BM25Plus
 
-# ---------------------------------------------------------------------------
 # Paths
-# ---------------------------------------------------------------------------
 TASK_DIR = Path(__file__).resolve().parent.parent
 GT_CSV   = TASK_DIR / "data" / (
     "Original ABA Dataset for Version 2 "
@@ -20,9 +18,7 @@ LLM_DIR  = TASK_DIR / "outputs" / "task1"
 EVAL_DIR = TASK_DIR / "outputs" / "eval" / "sentiment"
 EVAL_DIR.mkdir(parents=True, exist_ok=True)
 
-# ---------------------------------------------------------------------------
 # Helpers
-# ---------------------------------------------------------------------------
 def normalize(text: str) -> str:
     if pd.isna(text):
         return ""
@@ -42,9 +38,7 @@ def best_bm25_idx(query: str, candidates: list) -> int:
         return 0
 
 
-# ---------------------------------------------------------------------------
 # Load ground truth
-# ---------------------------------------------------------------------------
 if not GT_CSV.exists():
     sys.exit(f"[ERROR] Ground truth not found:\n  {GT_CSV}")
 
@@ -75,9 +69,7 @@ print(f"Ground truth: {len(gt_raw)} rows, {gt_raw['Review ID'].nunique()} unique
 print(f"Sentiments: {ALL_SENTIMENTS}\n")
 
 
-# ---------------------------------------------------------------------------
 # Evaluate one LLM CSV
-# ---------------------------------------------------------------------------
 def evaluate(llm_csv: Path) -> None:
     t_start = time.perf_counter()
 
@@ -169,9 +161,7 @@ def evaluate(llm_csv: Path) -> None:
             W(f"    {sent:<12}  LLM={'yes' if llm_has else 'no ':<4} "
               f"GT={'yes' if gt_has else 'no ':<4} → {label}")
 
-    # -----------------------------------------------------------------------
     # Build results
-    # -----------------------------------------------------------------------
     results = []
     R = results.append
     R("=" * 72)
@@ -277,9 +267,7 @@ def _write(llm_csv: Path, workings: list, results: list) -> None:
     print(f"  Saved: {w_path.relative_to(TASK_DIR)}")
 
 
-# ---------------------------------------------------------------------------
 # Main
-# ---------------------------------------------------------------------------
 llm_csvs = sorted(LLM_DIR.rglob("*.csv"))
 if not llm_csvs:
     sys.exit(f"[ERROR] No CSV files found under {LLM_DIR}")

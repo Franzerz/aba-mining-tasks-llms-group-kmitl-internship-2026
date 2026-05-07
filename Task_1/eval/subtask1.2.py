@@ -102,9 +102,7 @@ def is_match(method: str, scores: list) -> bool:
         return best >= THRESHOLD
 
 
-# ---------------------------------------------------------------------------
 # Load ground truth
-# ---------------------------------------------------------------------------
 if not GT_CSV.exists():
     sys.exit(f"[ERROR] Ground truth not found:\n  {GT_CSV}")
 
@@ -124,9 +122,7 @@ print(f"Ground truth: {len(gt_raw)} rows, "
       f"{gt_raw['Review ID'].nunique()} unique Review IDs\n")
 
 
-# ---------------------------------------------------------------------------
 # Evaluate one LLM CSV
-# ---------------------------------------------------------------------------
 def evaluate(llm_csv: Path) -> None:
 
     raw = pd.read_csv(llm_csv)
@@ -200,9 +196,7 @@ def evaluate(llm_csv: Path) -> None:
             W(f"  {m:<14}: {'MATCH    ' if hit else 'NO MATCH '}  "
               f"best={max(s):.4f}")
 
-    # -----------------------------------------------------------------------
     # Results
-    # -----------------------------------------------------------------------
     n = len(raw)
     results = []
     R = results.append
@@ -246,9 +240,7 @@ def _write(llm_csv: Path, workings: list, results: list) -> None:
     print(f"  Saved: {w_path.relative_to(TASK_DIR)}")
 
 
-# ---------------------------------------------------------------------------
 # Main
-# ---------------------------------------------------------------------------
 llm_csvs = sorted(LLM_DIR.rglob("*.csv"))
 if not llm_csvs:
     sys.exit(f"[ERROR] No CSV files found under {LLM_DIR}")

@@ -36,7 +36,7 @@ huggingface/
 sentence_transformers/
 
 # Output files
-Task_1/outputs/
+#Task_1/outputs/
 
 # Dataset
 Task_1/data/*.csv

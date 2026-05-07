@@ -4,9 +4,7 @@ import sys
 import time
 from pathlib import Path
 
-# ---------------------------------------------------------------------------
 # Paths
-# ---------------------------------------------------------------------------
 TASK_DIR = Path(__file__).resolve().parent.parent
 LLM_DIR  = TASK_DIR / "outputs" / "task1"
 EVAL_DIR    = TASK_DIR / "outputs" / "eval"
@@ -26,9 +24,7 @@ SECTION_HEADERS = {
 }
 
 
-# ---------------------------------------------------------------------------
 # Helpers
-# ---------------------------------------------------------------------------
 def _short_stem(llm_csv: Path) -> str:
     s = llm_csv.stem
     s = re.sub(r"^task\d+_", "", s)
@@ -50,9 +46,7 @@ def extract_section(txt_path: Path, header: str) -> str:
     return m.group(1)
 
 
-# ---------------------------------------------------------------------------
 # Step 1 – Run all subtask scripts
-# ---------------------------------------------------------------------------
 print("=" * 72)
 print("Running subtask evaluations...")
 print("=" * 72)
@@ -79,9 +73,7 @@ for name, script in [
         sys.exit(1)
     print(f"done ({elapsed:.1f}s)")
 
-# ---------------------------------------------------------------------------
 # Step 2 – Write one summary file per LLM output
-# ---------------------------------------------------------------------------
 SUMMARY_DIR.mkdir(parents=True, exist_ok=True)
 
 llm_csvs = sorted(LLM_DIR.rglob("*.csv"))
