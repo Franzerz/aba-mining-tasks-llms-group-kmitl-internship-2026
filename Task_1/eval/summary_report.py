@@ -85,7 +85,7 @@ for name, script in [
 # Step 2 – Write one summary file per LLM output
 SUMMARY_DIR.mkdir(parents=True, exist_ok=True)
 
-llm_csvs    = sorted(LLM_DIR.rglob("*.csv"))
+llm_csvs    = sorted(p for p in LLM_DIR.rglob("*.csv") if p.stem.endswith("_n20"))
 stem_pairs  = [_stem_parts(p, LLM_DIR) for p in llm_csvs]
 
 saved = []

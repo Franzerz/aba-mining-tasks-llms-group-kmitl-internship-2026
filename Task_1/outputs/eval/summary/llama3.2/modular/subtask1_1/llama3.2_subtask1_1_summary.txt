@@ -2,18 +2,18 @@
 SUMMARY REPORT  –  llama3.2\modular\subtask1_1\llama3.2_subtask1_1
 ========================================================================
 
-Generated : 2026-05-07 17:10:11
+Generated : 2026-05-07 20:20:10
 
 
 [Subtask 1.1 – Topic Classification]
 ────────────────────────────────────────────────────────────────────────
 OVERALL SUMMARY
 ────────────────────────────────────────────────────────────────────────
-  TP=51  FP=13  FN=7  TN=149
+  TP=50  FP=12  FN=7  TN=140
   Accuracy  : 0.9091
-  Precision : 0.7969
-  Recall    : 0.8793
-  F1        : 0.8361
+  Precision : 0.8065
+  Recall    : 0.8772
+  F1        : 0.8403
 
 [Subtask 1.2 – Content / Text Span Matching]
   [File not found: llama3.2_subtask1_1_results.txt]

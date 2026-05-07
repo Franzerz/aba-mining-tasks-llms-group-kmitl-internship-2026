@@ -2,7 +2,7 @@
 SUMMARY REPORT  –  llama4_scout\modular\rules_4_7\sample_A_run1\llama4_scout_rules_4_7
 ========================================================================
 
-Generated : 2026-05-07 17:10:12
+Generated : 2026-05-07 20:20:10
 
 
 [Subtask 1.1 – Topic Classification]

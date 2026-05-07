@@ -4,8 +4,8 @@ WORKINGS  –  task1_llama3.2_extended11_subtask1_1_n20.csv
 
 Column format   : Topics Present
 GT  Review IDs  : 783
-LLM Review IDs  : 20
-IDs evaluated   : 20
+LLM Review IDs  : 19
+IDs evaluated   : 19
 Global topics   : ['Room', 'Staff', 'Location', 'Food', 'Price', 'Facility', 'Check-in', 'Check-out', 'Off', 'Booking-issue', 'Taxi-issue']
 
 
@@ -40,23 +40,6 @@ Review ID : 2
     Check-in              GT=no   LLM=no   → TN
     Check-out             GT=no   LLM=no   → TN
     Off                   GT=yes  LLM=yes  → TP
-    Booking-issue         GT=no   LLM=no   → TN
-    Taxi-issue            GT=no   LLM=no   → TN
-
-────────────────────────────────────────────────────────────
-Review ID : 3
-  GT  topics : ['Location']
-  LLM topics : ['Location', 'Off']
-
-    Room                  GT=no   LLM=no   → TN
-    Staff                 GT=no   LLM=no   → TN
-    Location              GT=yes  LLM=yes  → TP
-    Food                  GT=no   LLM=no   → TN
-    Price                 GT=no   LLM=no   → TN
-    Facility              GT=no   LLM=no   → TN
-    Check-in              GT=no   LLM=no   → TN
-    Check-out             GT=no   LLM=no   → TN
-    Off                   GT=no   LLM=yes  → FP
     Booking-issue         GT=no   LLM=no   → TN
     Taxi-issue            GT=no   LLM=no   → TN
 
@@ -350,45 +333,45 @@ Review ID : 20
     Taxi-issue            GT=no   LLM=no   → TN
 
 [Per-topic totals: Room]
-  TP=8  FP=1  FN=4  TN=7
-  Acc=0.7500  Prec=0.8889  Rec=0.6667  F1=0.7619
+  TP=8  FP=1  FN=4  TN=6
+  Acc=0.7368  Prec=0.8889  Rec=0.6667  F1=0.7619
 
 [Per-topic totals: Staff]
-  TP=13  FP=1  FN=0  TN=6
-  Acc=0.9500  Prec=0.9286  Rec=1.0000  F1=0.9630
+  TP=13  FP=1  FN=0  TN=5
+  Acc=0.9474  Prec=0.9286  Rec=1.0000  F1=0.9630
 
 [Per-topic totals: Location]
-  TP=10  FP=2  FN=1  TN=7
-  Acc=0.8500  Prec=0.8333  Rec=0.9091  F1=0.8696
+  TP=9  FP=2  FN=1  TN=7
+  Acc=0.8421  Prec=0.8182  Rec=0.9000  F1=0.8571
 
 [Per-topic totals: Food]
-  TP=6  FP=0  FN=0  TN=14
+  TP=6  FP=0  FN=0  TN=13
   Acc=1.0000  Prec=1.0000  Rec=1.0000  F1=1.0000
 
 [Per-topic totals: Price]
-  TP=1  FP=0  FN=0  TN=19
+  TP=1  FP=0  FN=0  TN=18
   Acc=1.0000  Prec=1.0000  Rec=1.0000  F1=1.0000
 
 [Per-topic totals: Facility]
-  TP=0  FP=1  FN=2  TN=17
-  Acc=0.8500  Prec=0.0000  Rec=0.0000  F1=0.0000
+  TP=0  FP=1  FN=2  TN=16
+  Acc=0.8421  Prec=0.0000  Rec=0.0000  F1=0.0000
 
 [Per-topic totals: Check-in]
-  TP=0  FP=1  FN=0  TN=19
-  Acc=0.9500  Prec=0.0000  Rec=0.0000  F1=0.0000
+  TP=0  FP=1  FN=0  TN=18
+  Acc=0.9474  Prec=0.0000  Rec=0.0000  F1=0.0000
 
 [Per-topic totals: Check-out]
-  TP=0  FP=0  FN=0  TN=20
+  TP=0  FP=0  FN=0  TN=19
   Acc=1.0000  Prec=0.0000  Rec=0.0000  F1=0.0000
 
 [Per-topic totals: Off]
-  TP=13  FP=7  FN=0  TN=0
-  Acc=0.6500  Prec=0.6500  Rec=1.0000  F1=0.7879
+  TP=13  FP=6  FN=0  TN=0
+  Acc=0.6842  Prec=0.6842  Rec=1.0000  F1=0.8125
 
 [Per-topic totals: Booking-issue]
-  TP=0  FP=0  FN=0  TN=20
+  TP=0  FP=0  FN=0  TN=19
   Acc=1.0000  Prec=0.0000  Rec=0.0000  F1=0.0000
 
 [Per-topic totals: Taxi-issue]
-  TP=0  FP=0  FN=0  TN=20
+  TP=0  FP=0  FN=0  TN=19
   Acc=1.0000  Prec=0.0000  Rec=0.0000  F1=0.0000

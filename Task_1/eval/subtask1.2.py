@@ -165,15 +165,19 @@ def evaluate(llm_csv: Path) -> None:
     if "Review ID" not in raw.columns and "ID" in raw.columns:
         raw = raw.rename(columns={"ID": "Review ID"})
 
+    if "Errors" in raw.columns:
+        raw = raw[raw["Errors"].isna() | (raw["Errors"].astype(str).str.strip().isin({"", "nan"}))].copy()
+
     # Requires 'Topic' and 'Text Span' columns
     if "Topic" not in raw.columns or "Text Span" not in raw.columns:
         print(f"  [SKIP 1.2] missing 'Topic' or 'Text Span' – {llm_csv.name}")
         return
 
+    _bad = {"parse failed", "topics not found", "topic not found", "(parse failed)"}
     raw = raw[
         raw["Topic"].notna() &
         (raw["Topic"].str.strip() != "") &
-        (raw["Topic"].str.strip() != "(parse failed)") &
+        (~raw["Topic"].str.strip().str.lower().isin(_bad)) &
         raw["Text Span"].notna() &
         (raw["Text Span"].str.strip() != "")
     ].copy()
@@ -283,7 +287,7 @@ def _write(llm_csv: Path, workings: list, results: list) -> None:
 
 
 # Main
-llm_csvs = sorted(LLM_DIR.rglob("*.csv"))
+llm_csvs = sorted(p for p in LLM_DIR.rglob("*.csv") if p.stem.endswith("_n20"))
 if not llm_csvs:
     sys.exit(f"[ERROR] No CSV files found under {LLM_DIR}")
 

@@ -75,6 +75,9 @@ print(f"Ground truth: {len(gt_raw)} rows across {len(gt_sets)} Review IDs")
 print(f"Global topics ({len(ALL_TOPICS)}): {ALL_TOPICS}\n")
 
 
+_BAD_VALS = {"parse failed", "topics not found", "topic not found", "(parse failed)"}
+
+
 def _load_topic_sets(raw: pd.DataFrame) -> dict | None:
     """
     Return {Review ID: set of topics} from either format:
@@ -85,6 +88,7 @@ def _load_topic_sets(raw: pd.DataFrame) -> dict | None:
     if "Topics Present" in raw.columns:
         result: dict = {}
         valid = raw[raw["Topics Present"].notna()].copy()
+        valid = valid[~valid["Topics Present"].str.strip().str.lower().isin(_BAD_VALS)]
         for _, row in valid.iterrows():
             topics = {t.strip() for t in str(row["Topics Present"]).split(",") if t.strip()}
             result.setdefault(row["Review ID"], set()).update(topics)
@@ -94,7 +98,7 @@ def _load_topic_sets(raw: pd.DataFrame) -> dict | None:
         valid = raw[
             raw["Topic"].notna() &
             (raw["Topic"].str.strip() != "") &
-            (raw["Topic"].str.strip() != "(parse failed)")
+            (~raw["Topic"].str.strip().str.lower().isin(_BAD_VALS))
         ].copy()
         valid["Topic"] = valid["Topic"].str.strip()
         return valid.groupby("Review ID")["Topic"].apply(set).to_dict()
@@ -110,6 +114,9 @@ def evaluate(llm_csv: Path) -> None:
     raw = pd.read_csv(llm_csv)
     if "Review ID" not in raw.columns and "ID" in raw.columns:
         raw = raw.rename(columns={"ID": "Review ID"})
+
+    if "Errors" in raw.columns:
+        raw = raw[raw["Errors"].isna() | (raw["Errors"].astype(str).str.strip().isin({"", "nan"}))].copy()
 
     fmt = ("Topics Present" if "Topics Present" in raw.columns
            else "Topic"     if "Topic"          in raw.columns
@@ -277,7 +284,7 @@ def _write(llm_csv: Path, workings: list, results: list) -> None:
 
 
 # Main
-llm_csvs = sorted(LLM_DIR.rglob("*.csv"))
+llm_csvs = sorted(p for p in LLM_DIR.rglob("*.csv") if p.stem.endswith("_n20"))
 if not llm_csvs:
     sys.exit(f"[ERROR] No CSV files found under {LLM_DIR}")
 

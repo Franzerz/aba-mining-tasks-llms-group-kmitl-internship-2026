@@ -35,4 +35,4 @@ MICRO-AVERAGED METRICS  (aggregate TP/FP/FN across all sentiments)
   Micro Recall    : 1.0000
   Micro F1        : 1.0000
 
-Runtime: 0.00s
+Runtime: 0.01s

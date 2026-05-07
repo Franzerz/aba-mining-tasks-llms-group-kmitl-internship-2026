@@ -2,18 +2,18 @@
 SUMMARY REPORT  –  llama4_scout\modular\subtask1_1_and_1_2\llama4_scout_subtask1_1_and_1_2
 ========================================================================
 
-Generated : 2026-05-07 17:10:12
+Generated : 2026-05-07 20:20:11
 
 
 [Subtask 1.1 – Topic Classification]
 ────────────────────────────────────────────────────────────────────────
 OVERALL SUMMARY
 ────────────────────────────────────────────────────────────────────────
-  TP=32  FP=3  FN=26  TN=159
-  Accuracy  : 0.8682
+  TP=32  FP=3  FN=23  TN=151
+  Accuracy  : 0.8756
   Precision : 0.9143
-  Recall    : 0.5517
-  F1        : 0.6882
+  Recall    : 0.5818
+  F1        : 0.7111
 
 [Subtask 1.2 – Content / Text Span Matching]
 ────────────────────────────────────────────────────────────────────────
