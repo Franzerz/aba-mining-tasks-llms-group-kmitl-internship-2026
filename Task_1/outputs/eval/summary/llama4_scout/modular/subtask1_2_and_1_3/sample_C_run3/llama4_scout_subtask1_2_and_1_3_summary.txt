@@ -1,0 +1,33 @@
+========================================================================
+SUMMARY REPORT  –  llama4_scout\modular\subtask1_2_and_1_3\sample_C_run3\llama4_scout_subtask1_2_and_1_3
+========================================================================
+
+Generated : 2026-05-07 17:10:12
+
+
+[Subtask 1.1 – Topic Classification]
+  [File not found: llama4_scout_subtask1_2_and_1_3_results.txt]
+
+[Subtask 1.2 – Content / Text Span Matching]
+────────────────────────────────────────────────────────────────────────
+OVERALL ACCURACY BY METHOD
+────────────────────────────────────────────────────────────────────────
+Method            Correct   Total   Accuracy
+────────────────────────────────────────────────────────────────────────
+Parity                 15      44     0.3409
+TF-IDF                 30      44     0.6818
+BM25                   35      44     0.7955
+Sentence Emb           34      44     0.7727
+Cross-Encoder          35      44     0.7955
+────────────────────────────────────────────────────────────────────────
+
+[Subtask 1.3 – Sentiment Classification]
+────────────────────────────────────────────────────────────────────────
+OVERALL SUMMARY
+────────────────────────────────────────────────────────────────────────
+  Correct / Evaluated : 35 / 38
+  TP=35  FP=2  FN=3  TN=36
+  Accuracy  : 0.9211
+  Precision : 0.9459
+  Recall    : 0.9211
+  F1        : 0.9333

@@ -1,0 +1,23 @@
+========================================================================
+SUMMARY REPORT  –  llama4_scout\modular\rule3_only\sample_C_run2\llama4_scout_rule3_only
+========================================================================
+
+Generated : 2026-05-07 17:10:11
+
+
+[Subtask 1.1 – Topic Classification]
+  [File not found: llama4_scout_rule3_only_results.txt]
+
+[Subtask 1.2 – Content / Text Span Matching]
+  [File not found: llama4_scout_rule3_only_results.txt]
+
+[Subtask 1.3 – Sentiment Classification]
+────────────────────────────────────────────────────────────────────────
+OVERALL SUMMARY
+────────────────────────────────────────────────────────────────────────
+  Correct / Evaluated : 32 / 33
+  TP=32  FP=1  FN=1  TN=32
+  Accuracy  : 0.9697
+  Precision : 0.9697
+  Recall    : 0.9697
+  F1        : 0.9697

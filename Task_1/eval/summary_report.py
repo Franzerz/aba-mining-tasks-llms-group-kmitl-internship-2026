@@ -4,13 +4,20 @@ import sys
 import time
 from pathlib import Path
 
+import sys as _sys
+
 # Paths
 TASK_DIR = Path(__file__).resolve().parent.parent
 LLM_DIR  = TASK_DIR / "outputs" / "task1"
 EVAL_DIR    = TASK_DIR / "outputs" / "eval"
 SUMMARY_DIR = EVAL_DIR / "summary"
-PYTHON   = Path(__file__).resolve().parents[2] / ".venv" / "bin" / "python"
-EVAL_PY  = Path(__file__).resolve().parent
+
+_venv_base = Path(__file__).resolve().parents[2] / ".venv"
+PYTHON = (_venv_base / "Scripts" / "python.exe"
+          if _sys.platform == "win32"
+          else _venv_base / "bin" / "python")
+
+EVAL_PY = Path(__file__).resolve().parent
 
 RESULT_DIRS = {
     "1.1": EVAL_DIR / "topic",
@@ -24,14 +31,15 @@ SECTION_HEADERS = {
 }
 
 
-# Helpers
-def _short_stem(llm_csv: Path) -> str:
-    s = llm_csv.stem
-    s = re.sub(r"^task\d+_", "", s)
-    s = re.sub(r"_extended\d+", "", s)
-    s = re.sub(r"_generator", "", s)
-    s = re.sub(r"_n\d+$", "", s)
-    return s
+def _stem_parts(llm_csv: Path, base_dir: Path) -> tuple:
+    rel    = llm_csv.relative_to(base_dir)
+    subdir = Path(*rel.parts[:-1]) if len(rel.parts) > 1 else Path(".")
+    stem   = llm_csv.stem
+    stem   = re.sub(r"^task\d+_", "", stem)
+    stem   = re.sub(r"_extended\d+", "", stem)
+    stem   = re.sub(r"_generator", "", stem)
+    stem   = re.sub(r"_n\d+$", "", stem)
+    return subdir, stem
 
 
 def extract_section(txt_path: Path, header: str) -> str:
@@ -65,6 +73,7 @@ for name, script in [
         cwd=str(TASK_DIR),
         capture_output=True,
         text=True,
+        env={**__import__("os").environ, "PYTHONUTF8": "1"},
     )
     elapsed = time.perf_counter() - t0
     if proc.returncode != 0:
@@ -76,30 +85,32 @@ for name, script in [
 # Step 2 – Write one summary file per LLM output
 SUMMARY_DIR.mkdir(parents=True, exist_ok=True)
 
-llm_csvs = sorted(LLM_DIR.rglob("*.csv"))
-stems    = [_short_stem(p) for p in llm_csvs]
+llm_csvs    = sorted(LLM_DIR.rglob("*.csv"))
+stem_pairs  = [_stem_parts(p, LLM_DIR) for p in llm_csvs]
 
 saved = []
-for stem in stems:
-    lines = []
+for llm_csv, (subdir, stem) in zip(llm_csvs, stem_pairs):
+    lines: list = []
     L = lines.append
 
     L("=" * 72)
-    L(f"SUMMARY REPORT  –  {stem}")
+    L(f"SUMMARY REPORT  –  {subdir / stem}")
     L("=" * 72)
     L(f"\nGenerated : {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
 
     for task, label in [
         ("1.1", "Topic Classification"),
-        ("1.2", "Content Matching"),
+        ("1.2", "Content / Text Span Matching"),
         ("1.3", "Sentiment Classification"),
     ]:
-        result_file = RESULT_DIRS[task] / f"{stem}_results.txt"
+        result_file = RESULT_DIRS[task] / subdir / f"{stem}_results.txt"
         section     = extract_section(result_file, SECTION_HEADERS[task])
         L(f"\n[Subtask {task} – {label}]")
         L(section)
 
-    out_path = SUMMARY_DIR / f"{stem}_summary.txt"
+    out_dir  = SUMMARY_DIR / subdir
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_path = out_dir / f"{stem}_summary.txt"
     out_path.write_text("\n".join(lines), encoding="utf-8")
     saved.append(out_path)
     print(f"  Saved: {out_path.relative_to(TASK_DIR)}")

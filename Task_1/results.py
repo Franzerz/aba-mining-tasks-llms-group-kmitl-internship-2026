@@ -8,7 +8,7 @@ def _norm(text):
     if pd.isna(text): return ""
     return re.sub(r"\s+", " ", str(text).strip().lower())
 
-# Adjust to your exact file paths
+# Adjust to exact file paths
 orig_df = pd.read_csv("put original dataset path here.csv")
 orig_df = orig_df.rename(columns={"ID": "Review ID", "Pos/Neg": "Sentiment"})
 orig_df = orig_df[["Review ID", "Topic", "Selected Content", "Sentiment"]].copy()

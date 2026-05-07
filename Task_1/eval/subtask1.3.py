@@ -1,8 +1,8 @@
 import re
 import sys
 import time
-from pathlib import Path
 from collections import defaultdict
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -18,7 +18,41 @@ LLM_DIR  = TASK_DIR / "outputs" / "task1"
 EVAL_DIR = TASK_DIR / "outputs" / "eval" / "sentiment"
 EVAL_DIR.mkdir(parents=True, exist_ok=True)
 
-# Helpers
+
+# Rule → subtask mapping
+RULE_SUBTASKS: dict = {
+    1: {"1.2"},
+    2: {"1.1"},
+    3: {"1.3"},
+    4: {"1.3"},
+    5: {"1.1"},
+    6: {"1.1", "1.2"},
+    7: {"1.2"},
+}
+
+
+def applicable_subtasks(llm_csv: Path, llm_dir: Path) -> set:
+    parts = llm_csv.relative_to(llm_dir).parts
+    try:
+        folder = parts[list(parts).index("modular") + 1]
+    except (ValueError, IndexError):
+        return {"1.1", "1.2", "1.3"}
+    if folder == "combined":
+        return {"1.1", "1.2", "1.3"}
+    if folder.startswith("subtask"):
+        s = set()
+        if "1_1" in folder: s.add("1.1")
+        if "1_2" in folder: s.add("1.2")
+        if "1_3" in folder: s.add("1.3")
+        return s or {"1.1", "1.2", "1.3"}
+    if "rule" in folder:
+        s = set()
+        for n in re.findall(r"\d+", folder):
+            s |= RULE_SUBTASKS.get(int(n), set())
+        return s or {"1.1", "1.2", "1.3"}
+    return {"1.1", "1.2", "1.3"}
+
+
 def normalize(text: str) -> str:
     if pd.isna(text):
         return ""
@@ -38,7 +72,15 @@ def best_bm25_idx(query: str, candidates: list) -> int:
         return 0
 
 
+def majority_sentiment(sentiments: list) -> str:
+    """Return the most common sentiment; on tie return the first."""
+    from collections import Counter
+    counts = Counter(sentiments)
+    return counts.most_common(1)[0][0]
+
+
 # Load ground truth
+# GT uses 'Selected Content' for text span and 'Pos/Neg' for sentiment
 if not GT_CSV.exists():
     sys.exit(f"[ERROR] Ground truth not found:\n  {GT_CSV}")
 
@@ -69,62 +111,73 @@ print(f"Ground truth: {len(gt_raw)} rows, {gt_raw['Review ID'].nunique()} unique
 print(f"Sentiments: {ALL_SENTIMENTS}\n")
 
 
-# Evaluate one LLM CSV
 def evaluate(llm_csv: Path) -> None:
+    if "1.3" not in applicable_subtasks(llm_csv, LLM_DIR):
+        print(f"  [SKIP 1.3] not applicable by rules – {llm_csv.name}")
+        return
+
     t_start = time.perf_counter()
 
     raw = pd.read_csv(llm_csv)
     if "Review ID" not in raw.columns and "ID" in raw.columns:
         raw = raw.rename(columns={"ID": "Review ID"})
 
-    for col in ("Review ID", "Topic", "Selected Content", "Sentiment"):
-        if col not in raw.columns:
-            print(f"  [SKIP] missing column '{col}' – {llm_csv.name}")
-            return
+    if "Topic" not in raw.columns or "Sentiment" not in raw.columns:
+        print(f"  [SKIP 1.3] missing 'Topic' or 'Sentiment' – {llm_csv.name}")
+        return
+
+    has_span = "Text Span" in raw.columns
 
     raw = raw[
         raw["Topic"].notna() &
         (raw["Topic"].str.strip() != "") &
         (raw["Topic"].str.strip() != "(parse failed)") &
-        raw["Selected Content"].notna() &
-        (raw["Selected Content"].str.strip() != "") &
         raw["Sentiment"].notna() &
         (raw["Sentiment"].str.strip() != "")
     ].copy()
     raw["Topic"]     = raw["Topic"].str.strip()
     raw["Sentiment"] = raw["Sentiment"].str.strip()
-    raw["norm"]      = raw["Selected Content"].apply(normalize)
-    raw = raw[raw["norm"] != ""].reset_index(drop=True)
 
-    tp = defaultdict(int)
-    fp = defaultdict(int)
-    fn = defaultdict(int)
-    tn = defaultdict(int)
+    if has_span:
+        raw["norm"] = raw["Text Span"].apply(normalize)
+    else:
+        raw["norm"] = ""
 
-    n_evaluated = 0
-    n_skipped   = 0
-    n_correct   = 0
+    raw = raw.reset_index(drop=True)
 
-    workings = []
+    if raw.empty:
+        print(f"  [SKIP 1.3] no valid rows after filtering – {llm_csv.name}")
+        return
+
+    tp: dict = defaultdict(int)
+    fp: dict = defaultdict(int)
+    fn: dict = defaultdict(int)
+    tn: dict = defaultdict(int)
+
+    n_evaluated = n_skipped = n_correct = 0
+
+    workings: list = []
     W = workings.append
     W("=" * 72)
     W(f"WORKINGS  –  {llm_csv.name}")
     W("=" * 72)
-    W(f"\nTotal LLM rows : {len(raw)}")
-    W(f"Sentiments     : {ALL_SENTIMENTS}\n")
+    W(f"\nHas 'Text Span' : {has_span}")
+    W(f"Match strategy  : {'BM25 on text span' if has_span else 'majority GT sentiment for (ID, Topic)'}")
+    W(f"Total LLM rows  : {len(raw)}")
+    W(f"Sentiments      : {ALL_SENTIMENTS}\n")
 
     for _, row in raw.iterrows():
         rid      = row["Review ID"]
         topic    = row["Topic"]
-        lnorm    = row["norm"]
-        lcont    = row["Selected Content"]
         llm_sent = row["Sentiment"]
+        lnorm    = row["norm"]
 
         gt_entries = gt_index.get((rid, topic), [])
 
         W(f"\n{'─' * 60}")
         W(f"ID={rid}  Topic={topic}")
-        W(f"  LLM Content   : {lcont[:80]}")
+        if has_span:
+            W(f"  LLM Span      : {row['Text Span'][:80]}")
         W(f"  LLM Sentiment : {llm_sent}")
         W(f"  GT candidates : {len(gt_entries)}")
 
@@ -137,32 +190,34 @@ def evaluate(llm_csv: Path) -> None:
         gt_conts = [e[1] for e in gt_entries]
         gt_sents = [e[2] for e in gt_entries]
 
-        best_i  = best_bm25_idx(lnorm, gt_norms)
-        gt_sent = gt_sents[best_i]
-        gt_cont = gt_conts[best_i]
+        if has_span and lnorm:
+            best_i  = best_bm25_idx(lnorm, gt_norms)
+            gt_sent = gt_sents[best_i]
+            gt_cont = gt_conts[best_i]
+            W(f"  Best GT Span      : {gt_cont[:80]}")
+        else:
+            gt_sent = majority_sentiment(gt_sents)
+            W(f"  Majority GT sent  : {gt_sent}  (from {gt_sents})")
 
         n_evaluated += 1
         if llm_sent == gt_sent:
             n_correct += 1
 
-        W(f"  Best GT Content   : {gt_cont[:80]}")
         W(f"  Best GT Sentiment : {gt_sent}  → "
           f"{'CORRECT' if llm_sent == gt_sent else 'WRONG'}")
 
         for sent in ALL_SENTIMENTS:
             llm_has = (llm_sent == sent)
             gt_has  = (gt_sent  == sent)
-
             if   llm_has and     gt_has: tp[sent] += 1; label = "TP"
             elif llm_has and not gt_has: fp[sent] += 1; label = "FP"
             elif not llm_has and gt_has: fn[sent] += 1; label = "FN"
             else:                        tn[sent] += 1; label = "TN"
-
             W(f"    {sent:<12}  LLM={'yes' if llm_has else 'no ':<4} "
               f"GT={'yes' if gt_has else 'no ':<4} → {label}")
 
-    # Build results
-    results = []
+    # Results
+    results: list = []
     R = results.append
     R("=" * 72)
     R(f"EVALUATION RESULTS  –  {llm_csv.name}")
@@ -170,14 +225,12 @@ def evaluate(llm_csv: Path) -> None:
     R(f"\nTotal LLM rows  : {len(raw)}")
     R(f"Evaluated rows  : {n_evaluated}  (GT candidate found)")
     R(f"Skipped rows    : {n_skipped}  (no GT for ID+Topic)")
+    R(f"Has Text Span   : {has_span}")
     R(f"Sentiments      : {ALL_SENTIMENTS}")
 
-    # --- OVERALL SUMMARY ---
-    ov_tp  = sum(tp.values())
-    ov_fp  = sum(fp.values())
-    ov_fn  = sum(fn.values())
-    ov_tn  = sum(tn.values())
-    ov_acc = n_correct / n_evaluated            if n_evaluated      > 0 else 0
+    ov_tp  = sum(tp.values()); ov_fp  = sum(fp.values())
+    ov_fn  = sum(fn.values()); ov_tn  = sum(tn.values())
+    ov_acc   = n_correct / n_evaluated            if n_evaluated      > 0 else 0
     ov_prec  = ov_tp / (ov_tp + ov_fp)           if (ov_tp + ov_fp)  > 0 else 0
     ov_rec   = ov_tp / (ov_tp + ov_fn)           if (ov_tp + ov_fn)  > 0 else 0
     ov_f1    = 2*ov_prec*ov_rec/(ov_prec+ov_rec) if (ov_prec+ov_rec) > 0 else 0
@@ -192,7 +245,6 @@ def evaluate(llm_csv: Path) -> None:
     R(f"  Recall    : {ov_rec:.4f}")
     R(f"  F1        : {ov_f1:.4f}")
 
-    # --- PER-SENTIMENT METRICS ---
     R(f"\n{'─' * 72}")
     R("PER-SENTIMENT METRICS")
     R(f"{'─' * 72}")
@@ -201,33 +253,21 @@ def evaluate(llm_csv: Path) -> None:
     R("─" * 72)
 
     micro_tp = micro_fp = micro_fn = 0
-
     for sent in ALL_SENTIMENTS:
-        t   = tp[sent]
-        f_p = fp[sent]
-        f_n = fn[sent]
-        t_n = tn[sent]
+        t = tp[sent]; f_p = fp[sent]; f_n = fn[sent]; t_n = tn[sent]
         total = t + f_p + f_n + t_n
-
         acc  = (t + t_n) / total     if total        > 0 else 0
         prec = t / (t + f_p)         if (t + f_p)    > 0 else 0
         rec  = t / (t + f_n)         if (t + f_n)    > 0 else 0
         f1   = 2*prec*rec/(prec+rec) if (prec + rec) > 0 else 0
-
-        micro_tp += t
-        micro_fp += f_p
-        micro_fn += f_n
-
+        micro_tp += t; micro_fp += f_p; micro_fn += f_n
         R(f"{sent:<12} {acc:>8.4f} {prec:>8.4f} {rec:>8.4f} {f1:>8.4f}"
           f"  {t:>5} {f_p:>5} {f_n:>5} {t_n:>5}")
-
         W(f"\n[Per-sentiment totals: {sent}]")
         W(f"  TP={t}  FP={f_p}  FN={f_n}  TN={t_n}")
         W(f"  Acc={acc:.4f}  Prec={prec:.4f}  Rec={rec:.4f}  F1={f1:.4f}")
-
     R("─" * 72)
 
-    # --- MICRO-AVERAGED ---
     micro_prec = micro_tp / (micro_tp + micro_fp) if (micro_tp + micro_fp) > 0 else 0
     micro_rec  = micro_tp / (micro_tp + micro_fn) if (micro_tp + micro_fn) > 0 else 0
     micro_f1   = (2*micro_prec*micro_rec / (micro_prec+micro_rec)
@@ -248,19 +288,23 @@ def evaluate(llm_csv: Path) -> None:
     print("\n".join(results))
 
 
-def _short_stem(llm_csv: Path) -> str:
-    s = llm_csv.stem
-    s = re.sub(r"^task\d+_", "", s)
-    s = re.sub(r"_extended\d+", "", s)
-    s = re.sub(r"_generator", "", s)
-    s = re.sub(r"_n\d+$", "", s)
-    return s
+def _stem_parts(llm_csv: Path, base_dir: Path) -> tuple:
+    rel    = llm_csv.relative_to(base_dir)
+    subdir = Path(*rel.parts[:-1]) if len(rel.parts) > 1 else Path(".")
+    stem   = llm_csv.stem
+    stem   = re.sub(r"^task\d+_", "", stem)
+    stem   = re.sub(r"_extended\d+", "", stem)
+    stem   = re.sub(r"_generator", "", stem)
+    stem   = re.sub(r"_n\d+$", "", stem)
+    return subdir, stem
 
 
 def _write(llm_csv: Path, workings: list, results: list) -> None:
-    stem   = _short_stem(llm_csv)
-    r_path = EVAL_DIR / f"{stem}_results.txt"
-    w_path = EVAL_DIR / f"{stem}_workings.txt"
+    subdir, stem = _stem_parts(llm_csv, LLM_DIR)
+    out_dir = EVAL_DIR / subdir
+    out_dir.mkdir(parents=True, exist_ok=True)
+    r_path = out_dir / f"{stem}_results.txt"
+    w_path = out_dir / f"{stem}_workings.txt"
     r_path.write_text("\n".join(results),  encoding="utf-8")
     w_path.write_text("\n".join(workings), encoding="utf-8")
     print(f"  Saved: {r_path.relative_to(TASK_DIR)}")
@@ -283,10 +327,7 @@ for llm_csv in llm_csvs:
     print(f"\n{'#' * 72}")
     print(f"Processing: {llm_csv.relative_to(TASK_DIR)}")
     print(f"{'#' * 72}")
-    t0 = time.perf_counter()
     evaluate(llm_csv)
-    elapsed = time.perf_counter() - t0
-    print(f"  Runtime: {elapsed:.2f}s")
 
 total_elapsed = time.perf_counter() - total_start
 print(f"\n\nAll done. Results in: {EVAL_DIR.relative_to(TASK_DIR)}/")

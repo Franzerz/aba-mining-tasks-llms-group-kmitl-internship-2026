@@ -1,0 +1,105 @@
+========================================================================
+WORKINGS  –  task1_llama4_scout_extended11_rule2_only_n3.csv
+========================================================================
+
+Column format   : Topics Present
+GT  Review IDs  : 783
+LLM Review IDs  : 3
+IDs evaluated   : 3
+Global topics   : ['Room', 'Staff', 'Location', 'Food', 'Price', 'Facility', 'Check-in', 'Check-out', 'Off', 'Booking-issue', 'Taxi-issue']
+
+
+────────────────────────────────────────────────────────────
+Review ID : 1
+  GT  topics : ['Facility', 'Food', 'Location', 'Off', 'Staff']
+  LLM topics : ['Food', 'Location', 'Staff']
+
+    Room                  GT=no   LLM=no   → TN
+    Staff                 GT=yes  LLM=yes  → TP
+    Location              GT=yes  LLM=yes  → TP
+    Food                  GT=yes  LLM=yes  → TP
+    Price                 GT=no   LLM=no   → TN
+    Facility              GT=yes  LLM=no   → FN
+    Check-in              GT=no   LLM=no   → TN
+    Check-out             GT=no   LLM=no   → TN
+    Off                   GT=yes  LLM=no   → FN
+    Booking-issue         GT=no   LLM=no   → TN
+    Taxi-issue            GT=no   LLM=no   → TN
+
+────────────────────────────────────────────────────────────
+Review ID : 2
+  GT  topics : ['Facility', 'Food', 'Off', 'Room', 'Staff']
+  LLM topics : ['Food', 'Room', 'Staff']
+
+    Room                  GT=yes  LLM=yes  → TP
+    Staff                 GT=yes  LLM=yes  → TP
+    Location              GT=no   LLM=no   → TN
+    Food                  GT=yes  LLM=yes  → TP
+    Price                 GT=no   LLM=no   → TN
+    Facility              GT=yes  LLM=no   → FN
+    Check-in              GT=no   LLM=no   → TN
+    Check-out             GT=no   LLM=no   → TN
+    Off                   GT=yes  LLM=no   → FN
+    Booking-issue         GT=no   LLM=no   → TN
+    Taxi-issue            GT=no   LLM=no   → TN
+
+────────────────────────────────────────────────────────────
+Review ID : 3
+  GT  topics : ['Location']
+  LLM topics : ['Location']
+
+    Room                  GT=no   LLM=no   → TN
+    Staff                 GT=no   LLM=no   → TN
+    Location              GT=yes  LLM=yes  → TP
+    Food                  GT=no   LLM=no   → TN
+    Price                 GT=no   LLM=no   → TN
+    Facility              GT=no   LLM=no   → TN
+    Check-in              GT=no   LLM=no   → TN
+    Check-out             GT=no   LLM=no   → TN
+    Off                   GT=no   LLM=no   → TN
+    Booking-issue         GT=no   LLM=no   → TN
+    Taxi-issue            GT=no   LLM=no   → TN
+
+[Per-topic totals: Room]
+  TP=1  FP=0  FN=0  TN=2
+  Acc=1.0000  Prec=1.0000  Rec=1.0000  F1=1.0000
+
+[Per-topic totals: Staff]
+  TP=2  FP=0  FN=0  TN=1
+  Acc=1.0000  Prec=1.0000  Rec=1.0000  F1=1.0000
+
+[Per-topic totals: Location]
+  TP=2  FP=0  FN=0  TN=1
+  Acc=1.0000  Prec=1.0000  Rec=1.0000  F1=1.0000
+
+[Per-topic totals: Food]
+  TP=2  FP=0  FN=0  TN=1
+  Acc=1.0000  Prec=1.0000  Rec=1.0000  F1=1.0000
+
+[Per-topic totals: Price]
+  TP=0  FP=0  FN=0  TN=3
+  Acc=1.0000  Prec=0.0000  Rec=0.0000  F1=0.0000
+
+[Per-topic totals: Facility]
+  TP=0  FP=0  FN=2  TN=1
+  Acc=0.3333  Prec=0.0000  Rec=0.0000  F1=0.0000
+
+[Per-topic totals: Check-in]
+  TP=0  FP=0  FN=0  TN=3
+  Acc=1.0000  Prec=0.0000  Rec=0.0000  F1=0.0000
+
+[Per-topic totals: Check-out]
+  TP=0  FP=0  FN=0  TN=3
+  Acc=1.0000  Prec=0.0000  Rec=0.0000  F1=0.0000
+
+[Per-topic totals: Off]
+  TP=0  FP=0  FN=2  TN=1
+  Acc=0.3333  Prec=0.0000  Rec=0.0000  F1=0.0000
+
+[Per-topic totals: Booking-issue]
+  TP=0  FP=0  FN=0  TN=3
+  Acc=1.0000  Prec=0.0000  Rec=0.0000  F1=0.0000
+
+[Per-topic totals: Taxi-issue]
+  TP=0  FP=0  FN=0  TN=3
+  Acc=1.0000  Prec=0.0000  Rec=0.0000  F1=0.0000

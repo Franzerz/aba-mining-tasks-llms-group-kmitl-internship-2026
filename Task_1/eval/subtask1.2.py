@@ -19,12 +19,44 @@ EVAL_DIR = TASK_DIR / "outputs" / "eval" / "content"
 EVAL_DIR.mkdir(parents=True, exist_ok=True)
 
 THRESHOLD = 0.5
+METHODS   = ["Parity", "TF-IDF", "BM25", "Sentence Emb", "Cross-Encoder"]
 
-METHODS = ["Parity", "TF-IDF", "BM25", "Sentence Emb", "Cross-Encoder"]
+# Rule → subtask mapping
+RULE_SUBTASKS: dict = {
+    1: {"1.2"},
+    2: {"1.1"},
+    3: {"1.3"},
+    4: {"1.3"},
+    5: {"1.1"},
+    6: {"1.1", "1.2"},
+    7: {"1.2"},
+}
 
-# Global topic list (from topics.yaml)
+
+def applicable_subtasks(llm_csv: Path, llm_dir: Path) -> set:
+    parts = llm_csv.relative_to(llm_dir).parts
+    try:
+        folder = parts[list(parts).index("modular") + 1]
+    except (ValueError, IndexError):
+        return {"1.1", "1.2", "1.3"}
+    if folder == "combined":
+        return {"1.1", "1.2", "1.3"}
+    if folder.startswith("subtask"):
+        s = set()
+        if "1_1" in folder: s.add("1.1")
+        if "1_2" in folder: s.add("1.2")
+        if "1_3" in folder: s.add("1.3")
+        return s or {"1.1", "1.2", "1.3"}
+    if "rule" in folder:
+        s = set()
+        for n in re.findall(r"\d+", folder):
+            s |= RULE_SUBTASKS.get(int(n), set())
+        return s or {"1.1", "1.2", "1.3"}
+    return {"1.1", "1.2", "1.3"}
+
 _sent_model  = None
 _cross_model = None
+
 
 def _get_sent_model():
     global _sent_model
@@ -34,6 +66,7 @@ def _get_sent_model():
         _sent_model = SentenceTransformer("all-MiniLM-L6-v2")
     return _sent_model
 
+
 def _get_cross_model():
     global _cross_model
     if _cross_model is None:
@@ -42,7 +75,7 @@ def _get_cross_model():
         _cross_model = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2")
     return _cross_model
 
-# Helpers
+
 def normalize(text: str) -> str:
     if pd.isna(text):
         return ""
@@ -55,8 +88,8 @@ def tokenize(text: str) -> list:
 
 def tfidf_scores(query: str, candidates: list) -> list:
     try:
-        vec  = TfidfVectorizer(min_df=1, analyzer="word", ngram_range=(1, 2))
-        mat  = vec.fit_transform([query] + candidates)
+        vec = TfidfVectorizer(min_df=1, analyzer="word", ngram_range=(1, 2))
+        mat = vec.fit_transform([query] + candidates)
         return cosine_similarity(mat[0:1], mat[1:])[0].tolist()
     except Exception:
         return [0.0] * len(candidates)
@@ -85,7 +118,7 @@ def cross_enc_scores(query: str, candidates: list) -> list:
         model  = _get_cross_model()
         pairs  = [(query, c) for c in candidates]
         logits = np.array(model.predict(pairs), dtype=float)
-        return (1 / (1 + np.exp(-logits))).tolist()   # sigmoid → [0, 1]
+        return (1 / (1 + np.exp(-logits))).tolist()
     except Exception:
         return [0.0] * len(candidates)
 
@@ -103,6 +136,7 @@ def is_match(method: str, scores: list) -> bool:
 
 
 # Load ground truth
+# GT uses 'Selected Content' as the text span column
 if not GT_CSV.exists():
     sys.exit(f"[ERROR] Ground truth not found:\n  {GT_CSV}")
 
@@ -122,32 +156,38 @@ print(f"Ground truth: {len(gt_raw)} rows, "
       f"{gt_raw['Review ID'].nunique()} unique Review IDs\n")
 
 
-# Evaluate one LLM CSV
 def evaluate(llm_csv: Path) -> None:
+    if "1.2" not in applicable_subtasks(llm_csv, LLM_DIR):
+        print(f"  [SKIP 1.2] not applicable by rules – {llm_csv.name}")
+        return
 
     raw = pd.read_csv(llm_csv)
     if "Review ID" not in raw.columns and "ID" in raw.columns:
         raw = raw.rename(columns={"ID": "Review ID"})
 
-    for col in ("Review ID", "Topic", "Selected Content"):
-        if col not in raw.columns:
-            print(f"  [SKIP] missing column '{col}' – {llm_csv.name}")
-            return
+    # Requires 'Topic' and 'Text Span' columns
+    if "Topic" not in raw.columns or "Text Span" not in raw.columns:
+        print(f"  [SKIP 1.2] missing 'Topic' or 'Text Span' – {llm_csv.name}")
+        return
 
     raw = raw[
         raw["Topic"].notna() &
         (raw["Topic"].str.strip() != "") &
         (raw["Topic"].str.strip() != "(parse failed)") &
-        raw["Selected Content"].notna() &
-        (raw["Selected Content"].str.strip() != "")
+        raw["Text Span"].notna() &
+        (raw["Text Span"].str.strip() != "")
     ].copy()
     raw["Topic"] = raw["Topic"].str.strip()
-    raw["norm"]  = raw["Selected Content"].apply(normalize)
+    raw["norm"]  = raw["Text Span"].apply(normalize)
     raw = raw[raw["norm"] != ""].reset_index(drop=True)
+
+    if raw.empty:
+        print(f"  [SKIP 1.2] no valid rows after filtering – {llm_csv.name}")
+        return
 
     correct: dict = {m: [] for m in METHODS}
 
-    workings = []
+    workings: list = []
     W = workings.append
     W("=" * 72)
     W(f"WORKINGS  –  {llm_csv.name}")
@@ -157,10 +197,10 @@ def evaluate(llm_csv: Path) -> None:
     W(f"Total LLM rows : {len(raw)}\n")
 
     for _, row in raw.iterrows():
-        rid    = row["Review ID"]
-        topic  = row["Topic"]
-        lnorm  = row["norm"]
-        lcont  = row["Selected Content"]
+        rid   = row["Review ID"]
+        topic = row["Topic"]
+        lnorm = row["norm"]
+        lcont = row["Text Span"]
 
         gt_entries = gt_index.get((rid, topic), [])
         gt_norms   = [e[0] for e in gt_entries]
@@ -178,11 +218,11 @@ def evaluate(llm_csv: Path) -> None:
             continue
 
         scores_map = {
-            "Parity":       [1.0 if lnorm == gn else 0.0 for gn in gt_norms],
-            "TF-IDF":       tfidf_scores(lnorm, gt_norms),
-            "BM25":         bm25_scores(lnorm, gt_norms),
-            "Sentence Emb": sent_emb_scores(lnorm, gt_norms),
-            "Cross-Encoder":cross_enc_scores(lnorm, gt_norms),
+            "Parity":        [1.0 if lnorm == gn else 0.0 for gn in gt_norms],
+            "TF-IDF":        tfidf_scores(lnorm, gt_norms),
+            "BM25":          bm25_scores(lnorm, gt_norms),
+            "Sentence Emb":  sent_emb_scores(lnorm, gt_norms),
+            "Cross-Encoder": cross_enc_scores(lnorm, gt_norms),
         }
 
         for m in METHODS:
@@ -191,14 +231,12 @@ def evaluate(llm_csv: Path) -> None:
         best_j = int(np.argmax(scores_map["TF-IDF"]))
         W(f"  Best GT : {gt_conts[best_j][:100]}")
         for m in METHODS:
-            s  = scores_map[m]
+            s   = scores_map[m]
             hit = is_match(m, s)
-            W(f"  {m:<14}: {'MATCH    ' if hit else 'NO MATCH '}  "
-              f"best={max(s):.4f}")
+            W(f"  {m:<14}: {'MATCH    ' if hit else 'NO MATCH '}  best={max(s):.4f}")
 
-    # Results
     n = len(raw)
-    results = []
+    results: list = []
     R = results.append
     R("=" * 72)
     R(f"EVALUATION RESULTS  –  {llm_csv.name}")
@@ -221,19 +259,23 @@ def evaluate(llm_csv: Path) -> None:
     print("\n".join(results))
 
 
-def _short_stem(llm_csv: Path) -> str:
-    s = llm_csv.stem
-    s = re.sub(r"^task\d+_", "", s)
-    s = re.sub(r"_extended\d+", "", s)
-    s = re.sub(r"_generator", "", s)
-    s = re.sub(r"_n\d+$", "", s)
-    return s
+def _stem_parts(llm_csv: Path, base_dir: Path) -> tuple:
+    rel    = llm_csv.relative_to(base_dir)
+    subdir = Path(*rel.parts[:-1]) if len(rel.parts) > 1 else Path(".")
+    stem   = llm_csv.stem
+    stem   = re.sub(r"^task\d+_", "", stem)
+    stem   = re.sub(r"_extended\d+", "", stem)
+    stem   = re.sub(r"_generator", "", stem)
+    stem   = re.sub(r"_n\d+$", "", stem)
+    return subdir, stem
 
 
 def _write(llm_csv: Path, workings: list, results: list) -> None:
-    stem   = _short_stem(llm_csv)
-    r_path = EVAL_DIR / f"{stem}_results.txt"
-    w_path = EVAL_DIR / f"{stem}_workings.txt"
+    subdir, stem = _stem_parts(llm_csv, LLM_DIR)
+    out_dir = EVAL_DIR / subdir
+    out_dir.mkdir(parents=True, exist_ok=True)
+    r_path = out_dir / f"{stem}_results.txt"
+    w_path = out_dir / f"{stem}_workings.txt"
     r_path.write_text("\n".join(results),  encoding="utf-8")
     w_path.write_text("\n".join(workings), encoding="utf-8")
     print(f"  Saved: {r_path.relative_to(TASK_DIR)}")
