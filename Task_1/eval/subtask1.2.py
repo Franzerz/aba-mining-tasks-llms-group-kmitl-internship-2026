@@ -9,19 +9,18 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 # Paths & settings
-TASK_DIR = Path(__file__).resolve().parent.parent
-GT_CSV   = TASK_DIR / "data" / (
+TASK_DIR  = Path(__file__).resolve().parent.parent
+GT_CSV    = TASK_DIR / "data" / (
     "Original ABA Dataset for Version 2 "
     "[Oct 23, 2025], Senior Project, MUICT - Sheet2_.csv"
 )
-LLM_DIR  = TASK_DIR / "outputs" / "task1"
-EVAL_DIR = TASK_DIR / "outputs" / "eval" / "content"
+LLM_DIR   = TASK_DIR / "outputs" / "task1"
+EVAL_DIR  = TASK_DIR / "outputs" / "eval" / "content"
 EVAL_DIR.mkdir(parents=True, exist_ok=True)
 
 THRESHOLD = 0.5
 METHODS   = ["Parity", "TF-IDF", "BM25", "Sentence Emb", "Cross-Encoder"]
 
-# Rule → subtask mapping
 RULE_SUBTASKS: dict = {
     1: {"1.2"},
     2: {"1.1"},
@@ -53,6 +52,7 @@ def applicable_subtasks(llm_csv: Path, llm_dir: Path) -> set:
             s |= RULE_SUBTASKS.get(int(n), set())
         return s or {"1.1", "1.2", "1.3"}
     return {"1.1", "1.2", "1.3"}
+
 
 _sent_model  = None
 _cross_model = None
@@ -123,20 +123,14 @@ def cross_enc_scores(query: str, candidates: list) -> list:
         return [0.0] * len(candidates)
 
 
-def is_match(method: str, scores: list) -> bool:
+def passes_threshold(method: str, scores: list) -> bool:
+    """All methods: best score >= 0.5 threshold."""
     if not scores:
         return False
-    best = max(scores)
-    if method == "Parity":
-        return best == 1.0
-    elif method == "BM25":
-        return best > 0
-    else:
-        return best >= THRESHOLD
+    return max(scores) >= THRESHOLD
 
 
 # Load ground truth
-# GT uses 'Selected Content' as the text span column
 if not GT_CSV.exists():
     sys.exit(f"[ERROR] Ground truth not found:\n  {GT_CSV}")
 
@@ -156,51 +150,31 @@ print(f"Ground truth: {len(gt_raw)} rows, "
       f"{gt_raw['Review ID'].nunique()} unique Review IDs\n")
 
 
-def evaluate(llm_csv: Path) -> None:
-    if "1.2" not in applicable_subtasks(llm_csv, LLM_DIR):
-        print(f"  [SKIP 1.2] not applicable by rules – {llm_csv.name}")
-        return
-
-    raw = pd.read_csv(llm_csv)
-    if "Review ID" not in raw.columns and "ID" in raw.columns:
-        raw = raw.rename(columns={"ID": "Review ID"})
-
-    if "Errors" in raw.columns:
-        raw = raw[raw["Errors"].isna() | (raw["Errors"].astype(str).str.strip().isin({"", "nan"}))].copy()
-
-    # Requires 'Topic' and 'Text Span' columns
-    if "Topic" not in raw.columns or "Text Span" not in raw.columns:
-        print(f"  [SKIP 1.2] missing 'Topic' or 'Text Span' – {llm_csv.name}")
-        return
+def _eval_run(run_id, df: pd.DataFrame, workings: list, results: list) -> None:
+    W = workings.append
+    R = results.append
 
     _bad = {"parse failed", "topics not found", "topic not found", "(parse failed)"}
-    raw = raw[
-        raw["Topic"].notna() &
-        (raw["Topic"].str.strip() != "") &
-        (~raw["Topic"].str.strip().str.lower().isin(_bad)) &
-        raw["Text Span"].notna() &
-        (raw["Text Span"].str.strip() != "")
+    df = df[
+        df["Topic"].notna() &
+        (df["Topic"].str.strip() != "") &
+        (~df["Topic"].str.strip().str.lower().isin(_bad)) &
+        df["Text Span"].notna() &
+        (df["Text Span"].str.strip() != "")
     ].copy()
-    raw["Topic"] = raw["Topic"].str.strip()
-    raw["norm"]  = raw["Text Span"].apply(normalize)
-    raw = raw[raw["norm"] != ""].reset_index(drop=True)
+    df["Topic"] = df["Topic"].str.strip()
+    df["norm"]  = df["Text Span"].apply(normalize)
+    df = df[df["norm"] != ""].reset_index(drop=True)
 
-    if raw.empty:
-        print(f"  [SKIP 1.2] no valid rows after filtering – {llm_csv.name}")
+    if df.empty:
+        R(f"  [No valid rows for Run {run_id}]")
         return
 
-    correct: dict = {m: [] for m in METHODS}
+    passed: dict = {m: [] for m in METHODS}
 
-    workings: list = []
-    W = workings.append
-    W("=" * 72)
-    W(f"WORKINGS  –  {llm_csv.name}")
-    W("=" * 72)
-    W(f"\nThreshold (TF-IDF / Sentence Emb / Cross-Encoder) : {THRESHOLD}")
-    W(f"BM25 match : score > 0  (any term overlap)")
-    W(f"Total LLM rows : {len(raw)}\n")
+    W(f"\n  Total rows : {len(df)}")
 
-    for _, row in raw.iterrows():
+    for _, row in df.iterrows():
         rid   = row["Review ID"]
         topic = row["Topic"]
         lnorm = row["norm"]
@@ -217,7 +191,7 @@ def evaluate(llm_csv: Path) -> None:
 
         if not gt_entries:
             for m in METHODS:
-                correct[m].append(False)
+                passed[m].append(False)
             W("  [No GT rows → all methods: NO MATCH]")
             continue
 
@@ -230,34 +204,74 @@ def evaluate(llm_csv: Path) -> None:
         }
 
         for m in METHODS:
-            correct[m].append(is_match(m, scores_map[m]))
+            passed[m].append(passes_threshold(m, scores_map[m]))
 
         best_j = int(np.argmax(scores_map["TF-IDF"]))
         W(f"  Best GT : {gt_conts[best_j][:100]}")
         for m in METHODS:
             s   = scores_map[m]
-            hit = is_match(m, s)
-            W(f"  {m:<14}: {'MATCH    ' if hit else 'NO MATCH '}  best={max(s):.4f}")
+            hit = passes_threshold(m, s)
+            W(f"  {m:<14}: {'PASS     ' if hit else 'FAIL     '}  best={max(s):.4f}")
 
-    n = len(raw)
-    results: list = []
+    n = len(df)
+    R(f"\n{'─' * 72}")
+    R("OVERALL SUMMARY")
+    R(f"{'─' * 72}")
+    R(f"  Total rows evaluated : {n}")
+    R(f"  Threshold            : {THRESHOLD}  (all methods)")
+    R(f"\n{'─' * 72}")
+    R("PASSING COUNT  (score >= 0.5)")
+    R(f"{'─' * 72}")
+    R(f"{'Method':<16} {'Passed':>8} {'Total':>7} {'Pass Rate':>10}")
+    R("─" * 72)
+    for m in METHODS:
+        np_ = sum(passed[m])
+        rate = np_ / n if n > 0 else 0
+        R(f"{m:<16} {np_:>8} {n:>7} {rate:>10.4f}")
+    R("─" * 72)
+
+
+def evaluate(llm_csv: Path) -> None:
+    if "1.2" not in applicable_subtasks(llm_csv, LLM_DIR):
+        print(f"  [SKIP 1.2] not applicable by rules – {llm_csv.name}")
+        return
+
+    raw = pd.read_csv(llm_csv)
+    if "Review ID" not in raw.columns and "ID" in raw.columns:
+        raw = raw.rename(columns={"ID": "Review ID"})
+
+    if "Errors" in raw.columns:
+        raw = raw[raw["Errors"].isna() | (raw["Errors"].astype(str).str.strip().isin({"", "nan"}))].copy()
+
+    if "Topic" not in raw.columns or "Text Span" not in raw.columns:
+        print(f"  [SKIP 1.2] missing 'Topic' or 'Text Span' – {llm_csv.name}")
+        return
+
+    workings: list = []
+    results: list  = []
+    W = workings.append
     R = results.append
+
+    W("=" * 72)
+    W(f"WORKINGS  –  {llm_csv.name}")
+    W("=" * 72)
+    W(f"\nThreshold (all methods) : {THRESHOLD}")
+    W(f"Total rows in file      : {len(raw)}\n")
+
     R("=" * 72)
     R(f"EVALUATION RESULTS  –  {llm_csv.name}")
     R("=" * 72)
-    R(f"\nTotal LLM rows : {n}")
-    R(f"Threshold      : {THRESHOLD}  (TF-IDF / Sentence Emb / Cross-Encoder)")
-    R(f"BM25 match     : score > 0")
-    R(f"\n{'─' * 72}")
-    R("OVERALL ACCURACY BY METHOD")
-    R(f"{'─' * 72}")
-    R(f"{'Method':<16} {'Correct':>8} {'Total':>7} {'Accuracy':>10}")
-    R("─" * 72)
-    for m in METHODS:
-        nc  = sum(correct[m])
-        acc = nc / n if n > 0 else 0
-        R(f"{m:<16} {nc:>8} {n:>7} {acc:>10.4f}")
-    R("─" * 72)
+
+    run_groups = sorted(raw.groupby("Run")) if "Run" in raw.columns else [(1, raw)]
+
+    for run_id, df in run_groups:
+        R(f"\n{'=' * 72}")
+        R(f"RUN {run_id}")
+        R(f"{'=' * 72}")
+        W(f"\n{'=' * 72}")
+        W(f"RUN {run_id}")
+        W(f"{'=' * 72}")
+        _eval_run(run_id, df.reset_index(drop=True), workings, results)
 
     _write(llm_csv, workings, results)
     print("\n".join(results))
@@ -286,8 +300,11 @@ def _write(llm_csv: Path, workings: list, results: list) -> None:
     print(f"  Saved: {w_path.relative_to(TASK_DIR)}")
 
 
-# Main
-llm_csvs = sorted(p for p in LLM_DIR.rglob("*.csv") if p.stem.endswith("_n20"))
+# Main – exclude old_output
+llm_csvs = sorted(
+    p for p in LLM_DIR.rglob("*.csv")
+    if "old_output" not in p.parts
+)
 if not llm_csvs:
     sys.exit(f"[ERROR] No CSV files found under {LLM_DIR}")
 

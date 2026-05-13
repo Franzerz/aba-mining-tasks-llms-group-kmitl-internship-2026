@@ -2,18 +2,42 @@
 SUMMARY REPORT  –  llama4_scout\modular\subtask1_1\llama4_scout_subtask1_1
 ========================================================================
 
-Generated : 2026-05-07 20:20:10
+Generated : 2026-05-13 17:08:31
 
 
 [Subtask 1.1 – Topic Classification]
+  -- Run 1 --
 ────────────────────────────────────────────────────────────────────────
 OVERALL SUMMARY
 ────────────────────────────────────────────────────────────────────────
-  TP=41  FP=10  FN=17  TN=152
-  Accuracy  : 0.8773
-  Precision : 0.8039
-  Recall    : 0.7069
-  F1        : 0.7523
+  Review IDs evaluated : 734
+  TP=1447  FP=209  FN=715  TN=5703
+  Accuracy  : 0.8856
+  Precision : 0.8738
+  Recall    : 0.6693
+  F1        : 0.7580
+
+  -- Run 2 --
+────────────────────────────────────────────────────────────────────────
+OVERALL SUMMARY
+────────────────────────────────────────────────────────────────────────
+  Review IDs evaluated : 738
+  TP=1445  FP=206  FN=725  TN=5742
+  Accuracy  : 0.8853
+  Precision : 0.8752
+  Recall    : 0.6659
+  F1        : 0.7563
+
+  -- Run 3 --
+────────────────────────────────────────────────────────────────────────
+OVERALL SUMMARY
+────────────────────────────────────────────────────────────────────────
+  Review IDs evaluated : 738
+  TP=1445  FP=206  FN=725  TN=5742
+  Accuracy  : 0.8853
+  Precision : 0.8752
+  Recall    : 0.6659
+  F1        : 0.7563
 
 [Subtask 1.2 – Content / Text Span Matching]
   [File not found: llama4_scout_subtask1_1_results.txt]

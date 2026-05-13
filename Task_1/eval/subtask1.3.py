@@ -1,12 +1,10 @@
 import re
 import sys
 import time
-from collections import defaultdict
+from collections import Counter, defaultdict
 from pathlib import Path
 
-import numpy as np
 import pandas as pd
-from rank_bm25 import BM25Plus
 
 # Paths
 TASK_DIR = Path(__file__).resolve().parent.parent
@@ -18,8 +16,6 @@ LLM_DIR  = TASK_DIR / "outputs" / "task1"
 EVAL_DIR = TASK_DIR / "outputs" / "eval" / "sentiment"
 EVAL_DIR.mkdir(parents=True, exist_ok=True)
 
-
-# Rule → subtask mapping
 RULE_SUBTASKS: dict = {
     1: {"1.2"},
     2: {"1.1"},
@@ -53,34 +49,12 @@ def applicable_subtasks(llm_csv: Path, llm_dir: Path) -> set:
     return {"1.1", "1.2", "1.3"}
 
 
-def normalize(text: str) -> str:
-    if pd.isna(text):
-        return ""
-    return re.sub(r"\s+", " ", str(text).strip().lower())
-
-
-def tokenize(text: str) -> list:
-    return re.findall(r"\w+", text.lower())
-
-
-def best_bm25_idx(query: str, candidates: list) -> int:
-    try:
-        bm25   = BM25Plus([tokenize(c) for c in candidates])
-        scores = bm25.get_scores(tokenize(query))
-        return int(np.argmax(scores))
-    except Exception:
-        return 0
-
-
 def majority_sentiment(sentiments: list) -> str:
-    """Return the most common sentiment; on tie return the first."""
-    from collections import Counter
     counts = Counter(sentiments)
     return counts.most_common(1)[0][0]
 
 
-# Load ground truth
-# GT uses 'Selected Content' for text span and 'Pos/Neg' for sentiment
+# Load ground truth: (Review ID, Topic) → majority sentiment
 if not GT_CSV.exists():
     sys.exit(f"[ERROR] Ground truth not found:\n  {GT_CSV}")
 
@@ -88,22 +62,15 @@ gt_raw = pd.read_csv(GT_CSV)
 gt_raw = gt_raw.rename(columns={"ID": "Review ID", "Pos/Neg": "Sentiment"})
 gt_raw = gt_raw[
     gt_raw["Topic"].notna() &
-    gt_raw["Selected Content"].notna() &
     gt_raw["Sentiment"].notna() &
     (gt_raw["Sentiment"].str.strip() != "")
 ].copy()
 gt_raw["Topic"]     = gt_raw["Topic"].str.strip()
 gt_raw["Sentiment"] = gt_raw["Sentiment"].str.strip()
-gt_raw["norm"]      = gt_raw["Selected Content"].apply(normalize)
-gt_raw = gt_raw[gt_raw["norm"] != ""].reset_index(drop=True)
 
-# gt_index: (Review ID, Topic) → list of (norm_content, original_content, sentiment)
-gt_index: dict = {}
-for _, row in gt_raw.iterrows():
-    key = (row["Review ID"], row["Topic"])
-    gt_index.setdefault(key, []).append((
-        row["norm"], row["Selected Content"], row["Sentiment"]
-    ))
+gt_sentiments: dict = {}
+for (rid, topic), grp in gt_raw.groupby(["Review ID", "Topic"]):
+    gt_sentiments[(rid, topic)] = majority_sentiment(grp["Sentiment"].tolist())
 
 ALL_SENTIMENTS = sorted(gt_raw["Sentiment"].unique())
 
@@ -111,46 +78,24 @@ print(f"Ground truth: {len(gt_raw)} rows, {gt_raw['Review ID'].nunique()} unique
 print(f"Sentiments: {ALL_SENTIMENTS}\n")
 
 
-def evaluate(llm_csv: Path) -> None:
-    if "1.3" not in applicable_subtasks(llm_csv, LLM_DIR):
-        print(f"  [SKIP 1.3] not applicable by rules – {llm_csv.name}")
-        return
-
-    t_start = time.perf_counter()
-
-    raw = pd.read_csv(llm_csv)
-    if "Review ID" not in raw.columns and "ID" in raw.columns:
-        raw = raw.rename(columns={"ID": "Review ID"})
-
-    if "Errors" in raw.columns:
-        raw = raw[raw["Errors"].isna() | (raw["Errors"].astype(str).str.strip().isin({"", "nan"}))].copy()
-
-    if "Topic" not in raw.columns or "Sentiment" not in raw.columns:
-        print(f"  [SKIP 1.3] missing 'Topic' or 'Sentiment' – {llm_csv.name}")
-        return
-
-    has_span = "Text Span" in raw.columns
+def _eval_run(run_id, df: pd.DataFrame, workings: list, results: list) -> None:
+    W = workings.append
+    R = results.append
 
     _bad = {"parse failed", "topics not found", "topic not found", "(parse failed)"}
-    raw = raw[
-        raw["Topic"].notna() &
-        (raw["Topic"].str.strip() != "") &
-        (~raw["Topic"].str.strip().str.lower().isin(_bad)) &
-        raw["Sentiment"].notna() &
-        (raw["Sentiment"].str.strip() != "")
+    df = df[
+        df["Topic"].notna() &
+        (df["Topic"].str.strip() != "") &
+        (~df["Topic"].str.strip().str.lower().isin(_bad)) &
+        df["Sentiment"].notna() &
+        (df["Sentiment"].str.strip() != "")
     ].copy()
-    raw["Topic"]     = raw["Topic"].str.strip()
-    raw["Sentiment"] = raw["Sentiment"].str.strip()
+    df["Topic"]     = df["Topic"].str.strip()
+    df["Sentiment"] = df["Sentiment"].str.strip()
+    df = df.reset_index(drop=True)
 
-    if has_span:
-        raw["norm"] = raw["Text Span"].apply(normalize)
-    else:
-        raw["norm"] = ""
-
-    raw = raw.reset_index(drop=True)
-
-    if raw.empty:
-        print(f"  [SKIP 1.3] no valid rows after filtering – {llm_csv.name}")
+    if df.empty:
+        R(f"  [No valid rows for Run {run_id}]")
         return
 
     tp: dict = defaultdict(int)
@@ -160,55 +105,31 @@ def evaluate(llm_csv: Path) -> None:
 
     n_evaluated = n_skipped = n_correct = 0
 
-    workings: list = []
-    W = workings.append
-    W("=" * 72)
-    W(f"WORKINGS  –  {llm_csv.name}")
-    W("=" * 72)
-    W(f"\nHas 'Text Span' : {has_span}")
-    W(f"Match strategy  : {'BM25 on text span' if has_span else 'majority GT sentiment for (ID, Topic)'}")
-    W(f"Total LLM rows  : {len(raw)}")
-    W(f"Sentiments      : {ALL_SENTIMENTS}\n")
+    W(f"\n  Total rows : {len(df)}")
 
-    for _, row in raw.iterrows():
+    for _, row in df.iterrows():
         rid      = row["Review ID"]
         topic    = row["Topic"]
         llm_sent = row["Sentiment"]
-        lnorm    = row["norm"]
 
-        gt_entries = gt_index.get((rid, topic), [])
+        gt_sent = gt_sentiments.get((rid, topic))
 
         W(f"\n{'─' * 60}")
         W(f"ID={rid}  Topic={topic}")
-        if has_span:
-            W(f"  LLM Span      : {row['Text Span'][:80]}")
         W(f"  LLM Sentiment : {llm_sent}")
-        W(f"  GT candidates : {len(gt_entries)}")
 
-        if not gt_entries:
+        if gt_sent is None:
             n_skipped += 1
-            W("  [No GT rows for this ID+Topic → skipped]")
+            W("  [No GT entry for this (ID, Topic) → skipped]")
             continue
 
-        gt_norms = [e[0] for e in gt_entries]
-        gt_conts = [e[1] for e in gt_entries]
-        gt_sents = [e[2] for e in gt_entries]
-
-        if has_span and lnorm:
-            best_i  = best_bm25_idx(lnorm, gt_norms)
-            gt_sent = gt_sents[best_i]
-            gt_cont = gt_conts[best_i]
-            W(f"  Best GT Span      : {gt_cont[:80]}")
-        else:
-            gt_sent = majority_sentiment(gt_sents)
-            W(f"  Majority GT sent  : {gt_sent}  (from {gt_sents})")
+        W(f"  GT  Sentiment : {gt_sent}")
 
         n_evaluated += 1
         if llm_sent == gt_sent:
             n_correct += 1
 
-        W(f"  Best GT Sentiment : {gt_sent}  → "
-          f"{'CORRECT' if llm_sent == gt_sent else 'WRONG'}")
+        W(f"  → {'CORRECT' if llm_sent == gt_sent else 'WRONG'}")
 
         for sent in ALL_SENTIMENTS:
             llm_has = (llm_sent == sent)
@@ -220,29 +141,19 @@ def evaluate(llm_csv: Path) -> None:
             W(f"    {sent:<12}  LLM={'yes' if llm_has else 'no ':<4} "
               f"GT={'yes' if gt_has else 'no ':<4} → {label}")
 
-    # Results
-    results: list = []
-    R = results.append
-    R("=" * 72)
-    R(f"EVALUATION RESULTS  –  {llm_csv.name}")
-    R("=" * 72)
-    R(f"\nTotal LLM rows  : {len(raw)}")
-    R(f"Evaluated rows  : {n_evaluated}  (GT candidate found)")
-    R(f"Skipped rows    : {n_skipped}  (no GT for ID+Topic)")
-    R(f"Has Text Span   : {has_span}")
-    R(f"Sentiments      : {ALL_SENTIMENTS}")
-
     ov_tp  = sum(tp.values()); ov_fp  = sum(fp.values())
     ov_fn  = sum(fn.values()); ov_tn  = sum(tn.values())
-    ov_acc   = n_correct / n_evaluated            if n_evaluated      > 0 else 0
-    ov_prec  = ov_tp / (ov_tp + ov_fp)           if (ov_tp + ov_fp)  > 0 else 0
-    ov_rec   = ov_tp / (ov_tp + ov_fn)           if (ov_tp + ov_fn)  > 0 else 0
-    ov_f1    = 2*ov_prec*ov_rec/(ov_prec+ov_rec) if (ov_prec+ov_rec) > 0 else 0
+    ov_total = ov_tp + ov_fp + ov_fn + ov_tn
+    ov_acc  = (ov_tp + ov_tn) / ov_total        if ov_total         > 0 else 0
+    ov_prec = ov_tp / (ov_tp + ov_fp)           if (ov_tp + ov_fp)  > 0 else 0
+    ov_rec  = ov_tp / (ov_tp + ov_fn)           if (ov_tp + ov_fn)  > 0 else 0
+    ov_f1   = 2*ov_prec*ov_rec/(ov_prec+ov_rec) if (ov_prec+ov_rec) > 0 else 0
 
     R(f"\n{'─' * 72}")
     R("OVERALL SUMMARY")
     R(f"{'─' * 72}")
-    R(f"  Correct / Evaluated : {n_correct} / {n_evaluated}")
+    R(f"  Rows evaluated  : {n_evaluated}  (skipped: {n_skipped} – no GT entry)")
+    R(f"  Correct         : {n_correct} / {n_evaluated}")
     R(f"  TP={ov_tp}  FP={ov_fp}  FN={ov_fn}  TN={ov_tn}")
     R(f"  Accuracy  : {ov_acc:.4f}")
     R(f"  Precision : {ov_prec:.4f}")
@@ -285,6 +196,53 @@ def evaluate(llm_csv: Path) -> None:
     R(f"  Micro Recall    : {micro_rec:.4f}")
     R(f"  Micro F1        : {micro_f1:.4f}")
 
+
+def evaluate(llm_csv: Path) -> None:
+    if "1.3" not in applicable_subtasks(llm_csv, LLM_DIR):
+        print(f"  [SKIP 1.3] not applicable by rules – {llm_csv.name}")
+        return
+
+    t_start = time.perf_counter()
+
+    raw = pd.read_csv(llm_csv)
+    if "Review ID" not in raw.columns and "ID" in raw.columns:
+        raw = raw.rename(columns={"ID": "Review ID"})
+
+    if "Errors" in raw.columns:
+        raw = raw[raw["Errors"].isna() | (raw["Errors"].astype(str).str.strip().isin({"", "nan"}))].copy()
+
+    if "Topic" not in raw.columns or "Sentiment" not in raw.columns:
+        print(f"  [SKIP 1.3] missing 'Topic' or 'Sentiment' – {llm_csv.name}")
+        return
+
+    workings: list = []
+    results: list  = []
+    W = workings.append
+    R = results.append
+
+    W("=" * 72)
+    W(f"WORKINGS  –  {llm_csv.name}")
+    W("=" * 72)
+    W(f"\nSentiments    : {ALL_SENTIMENTS}")
+    W(f"Total rows    : {len(raw)}")
+    W(f"Match strategy: (Review ID, Topic) → majority GT sentiment\n")
+
+    R("=" * 72)
+    R(f"EVALUATION RESULTS  –  {llm_csv.name}")
+    R("=" * 72)
+    R(f"\nSentiments : {ALL_SENTIMENTS}")
+
+    run_groups = sorted(raw.groupby("Run")) if "Run" in raw.columns else [(1, raw)]
+
+    for run_id, df in run_groups:
+        R(f"\n{'=' * 72}")
+        R(f"RUN {run_id}")
+        R(f"{'=' * 72}")
+        W(f"\n{'=' * 72}")
+        W(f"RUN {run_id}")
+        W(f"{'=' * 72}")
+        _eval_run(run_id, df.reset_index(drop=True), workings, results)
+
     elapsed = time.perf_counter() - t_start
     R(f"\nRuntime: {elapsed:.2f}s")
 
@@ -315,8 +273,11 @@ def _write(llm_csv: Path, workings: list, results: list) -> None:
     print(f"  Saved: {w_path.relative_to(TASK_DIR)}")
 
 
-# Main
-llm_csvs = sorted(p for p in LLM_DIR.rglob("*.csv") if p.stem.endswith("_n20"))
+# Main – exclude old_output
+llm_csvs = sorted(
+    p for p in LLM_DIR.rglob("*.csv")
+    if "old_output" not in p.parts
+)
 if not llm_csvs:
     sys.exit(f"[ERROR] No CSV files found under {LLM_DIR}")
 

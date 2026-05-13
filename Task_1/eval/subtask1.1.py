@@ -17,7 +17,6 @@ EVAL_DIR   = TASK_DIR / "outputs" / "eval" / "topic"
 TOPICS_CFG = TASK_DIR / "configs" / "topics.yaml"
 EVAL_DIR.mkdir(parents=True, exist_ok=True)
 
-# Rule → subtask mapping (from rules table)
 RULE_SUBTASKS: dict = {
     1: {"1.2"},
     2: {"1.1"},
@@ -51,13 +50,11 @@ def applicable_subtasks(llm_csv: Path, llm_dir: Path) -> set:
     return {"1.1", "1.2", "1.3"}
 
 
-# Global topic list
 with open(TOPICS_CFG, encoding="utf-8") as f:
     cfg = yaml.safe_load(f)
 active        = cfg.get("active_schema", "extended11")
 GLOBAL_TOPICS = cfg["schemas"][active]["topics"]
 
-# Load ground truth
 if not GT_CSV.exists():
     sys.exit(f"[ERROR] Ground truth not found:\n  {GT_CSV}")
 
@@ -74,61 +71,38 @@ ALL_TOPICS = GLOBAL_TOPICS + extra
 print(f"Ground truth: {len(gt_raw)} rows across {len(gt_sets)} Review IDs")
 print(f"Global topics ({len(ALL_TOPICS)}): {ALL_TOPICS}\n")
 
-
 _BAD_VALS = {"parse failed", "topics not found", "topic not found", "(parse failed)"}
 
 
-def _load_topic_sets(raw: pd.DataFrame) -> dict | None:
-    """
-    Return {Review ID: set of topics} from either format:
-      - 'Topics Present' column  (comma-separated list per row)
-      - 'Topic' column           (one topic per row)
-    Returns None if neither column exists.
-    """
-    if "Topics Present" in raw.columns:
+def _load_topic_sets(df: pd.DataFrame) -> dict:
+    if "Topics Present" in df.columns:
         result: dict = {}
-        valid = raw[raw["Topics Present"].notna()].copy()
+        valid = df[df["Topics Present"].notna()].copy()
         valid = valid[~valid["Topics Present"].str.strip().str.lower().isin(_BAD_VALS)]
         for _, row in valid.iterrows():
             topics = {t.strip() for t in str(row["Topics Present"]).split(",") if t.strip()}
             result.setdefault(row["Review ID"], set()).update(topics)
         return result
 
-    if "Topic" in raw.columns:
-        valid = raw[
-            raw["Topic"].notna() &
-            (raw["Topic"].str.strip() != "") &
-            (~raw["Topic"].str.strip().str.lower().isin(_BAD_VALS))
+    if "Topic" in df.columns:
+        valid = df[
+            df["Topic"].notna() &
+            (df["Topic"].str.strip() != "") &
+            (~df["Topic"].str.strip().str.lower().isin(_BAD_VALS))
         ].copy()
         valid["Topic"] = valid["Topic"].str.strip()
         return valid.groupby("Review ID")["Topic"].apply(set).to_dict()
 
-    return None
+    return {}
 
 
-def evaluate(llm_csv: Path) -> None:
-    if "1.1" not in applicable_subtasks(llm_csv, LLM_DIR):
-        print(f"  [SKIP 1.1] not applicable by rules – {llm_csv.name}")
-        return
+def _eval_run(run_id, df: pd.DataFrame, workings: list, results: list, fmt: str) -> None:
+    W = workings.append
+    R = results.append
 
-    raw = pd.read_csv(llm_csv)
-    if "Review ID" not in raw.columns and "ID" in raw.columns:
-        raw = raw.rename(columns={"ID": "Review ID"})
-
-    if "Errors" in raw.columns:
-        raw = raw[raw["Errors"].isna() | (raw["Errors"].astype(str).str.strip().isin({"", "nan"}))].copy()
-
-    fmt = ("Topics Present" if "Topics Present" in raw.columns
-           else "Topic"     if "Topic"          in raw.columns
-           else None)
-
-    if fmt is None:
-        print(f"  [SKIP 1.1] no topic column – {llm_csv.name}")
-        return
-
-    llm_sets = _load_topic_sets(raw)
+    llm_sets = _load_topic_sets(df)
     if not llm_sets:
-        print(f"  [SKIP 1.1] no valid topic data – {llm_csv.name}")
+        R(f"  [No valid topic data for Run {run_id}]")
         return
 
     tp: dict = defaultdict(int)
@@ -136,19 +110,11 @@ def evaluate(llm_csv: Path) -> None:
     fn: dict = defaultdict(int)
     tn: dict = defaultdict(int)
 
-    all_rids = sorted(llm_sets)
+    all_rids  = sorted(llm_sets)
     id_stats: dict = {}
 
-    workings: list = []
-    W = workings.append
-    W("=" * 72)
-    W(f"WORKINGS  –  {llm_csv.name}")
-    W("=" * 72)
-    W(f"\nColumn format   : {fmt}")
-    W(f"GT  Review IDs  : {len(gt_sets)}")
-    W(f"LLM Review IDs  : {len(llm_sets)}")
-    W(f"IDs evaluated   : {len(all_rids)}")
-    W(f"Global topics   : {ALL_TOPICS}\n")
+    W(f"\n  LLM Review IDs : {len(llm_sets)}")
+    W(f"  IDs evaluated  : {len(all_rids)}")
 
     for rid in all_rids:
         gt_t  = gt_sets.get(rid,  set())
@@ -171,22 +137,7 @@ def evaluate(llm_csv: Path) -> None:
             W(f"    {topic:<20}  GT={'yes' if in_gt else 'no ':<4} "
               f"LLM={'yes' if in_llm else 'no ':<4} → {label}")
 
-        id_stats[rid] = {
-            "tp": id_tp, "fp": id_fp, "fn": id_fn, "tn": id_tn,
-            "gt": gt_t,  "llm": llm_t,
-        }
-
-    # Results
-    results: list = []
-    R = results.append
-    R("=" * 72)
-    R(f"EVALUATION RESULTS  –  {llm_csv.name}")
-    R("=" * 72)
-    R(f"\nReview IDs in LLM  : {len(all_rids)}")
-    R(f"Review IDs in GT   : {len(gt_sets)}")
-    R(f"Topics evaluated   : {len(ALL_TOPICS)}")
-    R(f"Total observations : {len(all_rids)} IDs x {len(ALL_TOPICS)} topics"
-      f" = {len(all_rids) * len(ALL_TOPICS)}")
+        id_stats[rid] = {"tp": id_tp, "fp": id_fp, "fn": id_fn, "tn": id_tn}
 
     ov_tp = sum(tp.values()); ov_fp = sum(fp.values())
     ov_fn = sum(fn.values()); ov_tn = sum(tn.values())
@@ -199,6 +150,7 @@ def evaluate(llm_csv: Path) -> None:
     R(f"\n{'─' * 72}")
     R("OVERALL SUMMARY")
     R(f"{'─' * 72}")
+    R(f"  Review IDs evaluated : {len(all_rids)}")
     R(f"  TP={ov_tp}  FP={ov_fp}  FN={ov_fn}  TN={ov_tn}")
     R(f"  Accuracy  : {ov_acc:.4f}")
     R(f"  Precision : {ov_prec:.4f}")
@@ -256,6 +208,54 @@ def evaluate(llm_csv: Path) -> None:
     R(f"  Micro Recall    : {micro_rec:.4f}")
     R(f"  Micro F1        : {micro_f1:.4f}")
 
+
+def evaluate(llm_csv: Path) -> None:
+    if "1.1" not in applicable_subtasks(llm_csv, LLM_DIR):
+        print(f"  [SKIP 1.1] not applicable by rules – {llm_csv.name}")
+        return
+
+    raw = pd.read_csv(llm_csv)
+    if "Review ID" not in raw.columns and "ID" in raw.columns:
+        raw = raw.rename(columns={"ID": "Review ID"})
+
+    if "Errors" in raw.columns:
+        raw = raw[raw["Errors"].isna() | (raw["Errors"].astype(str).str.strip().isin({"", "nan"}))].copy()
+
+    fmt = ("Topics Present" if "Topics Present" in raw.columns
+           else "Topic"     if "Topic"          in raw.columns
+           else None)
+
+    if fmt is None:
+        print(f"  [SKIP 1.1] no topic column – {llm_csv.name}")
+        return
+
+    workings: list = []
+    results: list  = []
+    W = workings.append
+    R = results.append
+
+    W("=" * 72)
+    W(f"WORKINGS  –  {llm_csv.name}")
+    W("=" * 72)
+    W(f"\nColumn format : {fmt}")
+    W(f"GT Review IDs : {len(gt_sets)}")
+    W(f"Global topics : {ALL_TOPICS}\n")
+
+    R("=" * 72)
+    R(f"EVALUATION RESULTS  –  {llm_csv.name}")
+    R("=" * 72)
+
+    run_groups = sorted(raw.groupby("Run")) if "Run" in raw.columns else [(1, raw)]
+
+    for run_id, df in run_groups:
+        R(f"\n{'=' * 72}")
+        R(f"RUN {run_id}")
+        R(f"{'=' * 72}")
+        W(f"\n{'=' * 72}")
+        W(f"RUN {run_id}")
+        W(f"{'=' * 72}")
+        _eval_run(run_id, df.reset_index(drop=True), workings, results, fmt)
+
     _write(llm_csv, workings, results)
     print("\n".join(results))
 
@@ -283,8 +283,11 @@ def _write(llm_csv: Path, workings: list, results: list) -> None:
     print(f"  Saved: {w_path.relative_to(TASK_DIR)}")
 
 
-# Main
-llm_csvs = sorted(p for p in LLM_DIR.rglob("*.csv") if p.stem.endswith("_n20"))
+# Main – exclude old_output
+llm_csvs = sorted(
+    p for p in LLM_DIR.rglob("*.csv")
+    if "old_output" not in p.parts
+)
 if not llm_csvs:
     sys.exit(f"[ERROR] No CSV files found under {LLM_DIR}")
 
