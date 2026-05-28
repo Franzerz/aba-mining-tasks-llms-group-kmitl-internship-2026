@@ -1,0 +1,46 @@
+[Rule 5: Null Handling — All Topics Required] — ALL {{TOPIC_COUNT}} topics MUST appear as keys in the output. Unmentioned topics use [{"text": null, "label": null}]. A bare null value, an empty array [], and a missing key are all WRONG.
+
+Review:
+PositiveReview — "Close to airport"
+NegativeReview — ""
+Correct — Location: [{"text": "Close to airport", "label": "Positive"}]
+Correct — Food: [{"text": null, "label": null}]
+Correct — Room: [{"text": null, "label": null}]
+Correct — Staff: [{"text": null, "label": null}]
+... (all other topics also with [{"text": null, "label": null}])
+Correct — Because ALL {{TOPIC_COUNT}} topics must appear as keys. Unmentioned ones use [{"text": null, "label": null}].
+Wrong — Food: null
+Wrong — Because each topic value MUST be a JSON array. A bare null is never allowed.
+Wrong — Food: [{"text": null, "label": "Positive"}]
+Wrong — Because when text is null, label must also be null.
+Wrong — Food: []
+Wrong — Because an empty array is never allowed. Always include at least [{"text": null, "label": null}].
+Wrong — Omitting Food from the output entirely.
+Wrong — Because ALL {{TOPIC_COUNT}} topics must be present as keys, with no exceptions.
+
+Review:
+PositiveReview — "Great value for money!"
+NegativeReview — "Nothing at all"
+Correct — Price: [{"text": "Great value for money!", "label": "Positive"}]
+Correct — Off: [{"text": "Nothing at all", "label": null}]
+Correct — Room: [{"text": null, "label": null}]
+Correct — Staff: [{"text": null, "label": null}]
+... (all other topics also with [{"text": null, "label": null}])
+Correct — Because "Nothing at all" is a filler phrase in the Off topic (label is null, not Positive/Negative). All 11 topics still appear.
+Wrong — Off: [{"text": "Nothing at all", "label": "Negative"}]
+Wrong — Because "Nothing at all" is an Off-topic filler, not a negative opinion — its label must be null.
+Wrong — Omitting Off from the output or giving it a bare null.
+Wrong — Because Off is one of the {{TOPIC_COUNT}} required topics and must appear as a JSON array.
+
+Review:
+PositiveReview — "The room was spacious and well-furnished. Breakfast was excellent."
+NegativeReview — "Checkout took a very long time."
+Correct — Room: [{"text": "The room was spacious and well-furnished.", "label": "Positive"}]
+Correct — Food: [{"text": "Breakfast was excellent.", "label": "Positive"}]
+Correct — Check-out: [{"text": "Checkout took a very long time.", "label": "Negative"}]
+Correct — Staff: [{"text": null, "label": null}]
+Correct — Price: [{"text": null, "label": null}]
+... (all remaining topics also with [{"text": null, "label": null}])
+Correct — Because topics not mentioned in the review still appear as keys with the null placeholder.
+Wrong — Outputting only Room, Food, Check-out and leaving out the other 8 topics.
+Wrong — Because ALL {{TOPIC_COUNT}} topics must be present as keys — partial output is never acceptable.

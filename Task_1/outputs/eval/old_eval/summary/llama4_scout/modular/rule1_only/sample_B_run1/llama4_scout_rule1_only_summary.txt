@@ -1,0 +1,25 @@
+========================================================================
+SUMMARY REPORT  –  llama4_scout\modular\rule1_only\sample_B_run1\llama4_scout_rule1_only
+========================================================================
+
+Generated : 2026-05-07 20:20:10
+
+
+[Subtask 1.1 – Topic Classification]
+  [File not found: llama4_scout_rule1_only_results.txt]
+
+[Subtask 1.2 – Content / Text Span Matching]
+────────────────────────────────────────────────────────────────────────
+OVERALL ACCURACY BY METHOD
+────────────────────────────────────────────────────────────────────────
+Method            Correct   Total   Accuracy
+────────────────────────────────────────────────────────────────────────
+Parity                 14      45     0.3111
+TF-IDF                 35      45     0.7778
+BM25                   40      45     0.8889
+Sentence Emb           38      45     0.8444
+Cross-Encoder          39      45     0.8667
+────────────────────────────────────────────────────────────────────────
+
+[Subtask 1.3 – Sentiment Classification]
+  [File not found: llama4_scout_rule1_only_results.txt]

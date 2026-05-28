@@ -1,0 +1,25 @@
+========================================================================
+SUMMARY REPORT  –  llama3.2\modular\subtask1_2\llama3.2_subtask1_2
+========================================================================
+
+Generated : 2026-05-07 20:20:10
+
+
+[Subtask 1.1 – Topic Classification]
+  [File not found: llama3.2_subtask1_2_results.txt]
+
+[Subtask 1.2 – Content / Text Span Matching]
+────────────────────────────────────────────────────────────────────────
+OVERALL ACCURACY BY METHOD
+────────────────────────────────────────────────────────────────────────
+Method            Correct   Total   Accuracy
+────────────────────────────────────────────────────────────────────────
+Parity                 10      68     0.1471
+TF-IDF                 22      68     0.3235
+BM25                   35      68     0.5147
+Sentence Emb           29      68     0.4265
+Cross-Encoder          28      68     0.4118
+────────────────────────────────────────────────────────────────────────
+
+[Subtask 1.3 – Sentiment Classification]
+  [File not found: llama3.2_subtask1_2_results.txt]

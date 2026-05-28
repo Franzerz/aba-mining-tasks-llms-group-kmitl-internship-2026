@@ -1,0 +1,58 @@
+Review ID,Valid,Topic,Text Span,Sentiment,Errors
+1,False,Room,"New, comfortable apartments.",Positive,
+1,False,Room,close to the airport.,Positive,
+1,False,Room,to very clean beach.,Positive,
+1,False,Staff,Staff is extremely helpful and easy to communicate with ,Positive,
+1,False,Food,Tasty food on the first floor,Positive,
+1,False,Food,comfortable restaurant for both cozy evenings and calm work to escape the heat in the midday,Positive,
+1,False,Location,close to the airport.,Positive,
+1,False,Location,to very clean beach.,Positive,
+1,False,Off,Nothing at all.,,
+2,False,(parse failed),,,"json_parse_error: Expecting ',' delimiter: line 1 column 828 (char 827)"
+3,False,(parse failed),,,"json_parse_error: Expecting ',' delimiter: line 1 column 297 (char 296)"
+4,True,Room,Great stuff,Positive,
+4,True,Staff,Great stuff,Positive,
+4,True,Food,Clean,Positive,
+4,True,Price,Great Quality/price,Positive,
+4,True,Facility,Clean,Positive,
+5,False,Room,Clean and modern with very comfortable beds.,Positive,
+5,False,Room,in a very convenient location.,Positive,
+5,False,Room,An easy stroll to numerous nice restaurants.,Positive,
+5,False,Room,and a great beach.,Positive,
+5,False,Location,Clean and modern with very comfortable beds.,Positive,
+5,False,Location,in a very convenient location.,Positive,
+5,False,Location,An easy stroll to numerous nice restaurants.,Positive,
+5,False,Location,and a great beach.,Positive,
+6,False,Room,The room was exceptionally clean.,Positive,
+6,False,Room,with a really comfortable bed,,
+7,True,Room,great,Positive,
+8,False,(parse failed),,,json_parse_error: Unterminated string starting at: line 1 column 212 (char 211)
+9,False,Food,maybe possibility of purchasing fresh fruit or veg,Negative,
+9,False,Location,couldn't eat breakfast due to dietary restrictions-but very helpful host showed us how nearby bus takes to town-centre (and airport by the way so no need for 21 euro taxi),Positive,
+10,False,Room,Great modern room,Positive,
+10,False,Room,comfortable bed,Positive,
+10,False,Room,and quiet location.,Positive,
+10,False,Location,Great modern room,Positive,
+10,False,Location,comfortable bed,Positive,
+10,False,Location,and quiet location.,Positive,
+10,False,Off,Not applicable,,
+11,False,(parse failed),,,"json_parse_error: Expecting ',' delimiter: line 1 column 843 (char 842)"
+12,False,(parse failed),,,"json_parse_error: Expecting ',' delimiter: line 1 column 335 (char 334)"
+13,False,(parse failed),,,"json_parse_error: Expecting ',' delimiter: line 1 column 653 (char 652)"
+14,False,(parse failed),,,"json_parse_error: Expecting ',' delimiter: line 1 column 813 (char 812)"
+15,False,Room,The room was spotless.,Positive,
+15,False,Staff,The staff make it - particularly reception and the dining room.,Positive,
+15,False,Location,"Second visit - Chose really because it was reasonably close to the Airport for an early morning flight, yet could have a stroll along the nearby beach.",Positive,
+15,False,Location,"Nothing really, though for a stay for more than a few days - it is a bit on the edge of Larnaca - with frequent busses to the centre.",Negative,
+15,False,Off,"Nothing really, though for a stay for more than a few days - it is a bit on the edge of Larnaca - with frequent busses to the centre.",Negative,
+16,False,Room,the room was spacious.,Positive,
+16,False,Room,the window view is nice too.,Positive,
+16,False,Room,they are clean.,Positive,
+16,False,Staff,I liked the service.,Positive,
+16,False,Location,the restaurant downstairs is amazing-,Negative,
+16,False,Location,"the food there is very very tasty and made with a lot of care- they care a lot about the details: olive oil galore, herbs- absolutely delicious!",Negative,
+16,False,Food,"the food there is very very tasty and made with a lot of care- they care a lot about the details: olive oil galore, herbs- absolutely delicious!",Negative,
+17,False,(parse failed),,,"json_parse_error: Expecting ',' delimiter: line 1 column 296 (char 295)"
+18,False,(parse failed),,,"json_parse_error: Expecting ',' delimiter: line 1 column 1462 (char 1461)"
+19,False,(parse failed),,,json_parse_error: Expecting ':' delimiter: line 1 column 230 (char 229)
+20,False,(parse failed),,,"json_parse_error: Expecting ',' delimiter: line 1 column 211 (char 210)"

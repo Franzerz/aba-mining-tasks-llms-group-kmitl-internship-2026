@@ -1,0 +1,360 @@
+========================================================================
+WORKINGS  –  task1_llama4_scout_extended11_rule6_only_n20.csv
+========================================================================
+
+Column format   : Topic
+GT  Review IDs  : 783
+LLM Review IDs  : 18
+IDs evaluated   : 18
+Global topics   : ['Room', 'Staff', 'Location', 'Food', 'Price', 'Facility', 'Check-in', 'Check-out', 'Off', 'Booking-issue', 'Taxi-issue']
+
+
+────────────────────────────────────────────────────────────
+Review ID : 41
+  GT  topics : ['Food', 'Location', 'Off', 'Room', 'Staff']
+  LLM topics : ['Food', 'Location', 'Staff']
+
+    Room                  GT=yes  LLM=no   → FN
+    Staff                 GT=yes  LLM=yes  → TP
+    Location              GT=yes  LLM=yes  → TP
+    Food                  GT=yes  LLM=yes  → TP
+    Price                 GT=no   LLM=no   → TN
+    Facility              GT=no   LLM=no   → TN
+    Check-in              GT=no   LLM=no   → TN
+    Check-out             GT=no   LLM=no   → TN
+    Off                   GT=yes  LLM=no   → FN
+    Booking-issue         GT=no   LLM=no   → TN
+    Taxi-issue            GT=no   LLM=no   → TN
+
+────────────────────────────────────────────────────────────
+Review ID : 42
+  GT  topics : ['Room', 'Staff']
+  LLM topics : ['(no spans found)']
+
+    Room                  GT=yes  LLM=no   → FN
+    Staff                 GT=yes  LLM=no   → FN
+    Location              GT=no   LLM=no   → TN
+    Food                  GT=no   LLM=no   → TN
+    Price                 GT=no   LLM=no   → TN
+    Facility              GT=no   LLM=no   → TN
+    Check-in              GT=no   LLM=no   → TN
+    Check-out             GT=no   LLM=no   → TN
+    Off                   GT=no   LLM=no   → TN
+    Booking-issue         GT=no   LLM=no   → TN
+    Taxi-issue            GT=no   LLM=no   → TN
+
+────────────────────────────────────────────────────────────
+Review ID : 43
+  GT  topics : ['Room']
+  LLM topics : ['(no spans found)']
+
+    Room                  GT=yes  LLM=no   → FN
+    Staff                 GT=no   LLM=no   → TN
+    Location              GT=no   LLM=no   → TN
+    Food                  GT=no   LLM=no   → TN
+    Price                 GT=no   LLM=no   → TN
+    Facility              GT=no   LLM=no   → TN
+    Check-in              GT=no   LLM=no   → TN
+    Check-out             GT=no   LLM=no   → TN
+    Off                   GT=no   LLM=no   → TN
+    Booking-issue         GT=no   LLM=no   → TN
+    Taxi-issue            GT=no   LLM=no   → TN
+
+────────────────────────────────────────────────────────────
+Review ID : 44
+  GT  topics : ['Location', 'Off', 'Price', 'Staff']
+  LLM topics : ['Facility', 'Price', 'Staff']
+
+    Room                  GT=no   LLM=no   → TN
+    Staff                 GT=yes  LLM=yes  → TP
+    Location              GT=yes  LLM=no   → FN
+    Food                  GT=no   LLM=no   → TN
+    Price                 GT=yes  LLM=yes  → TP
+    Facility              GT=no   LLM=yes  → FP
+    Check-in              GT=no   LLM=no   → TN
+    Check-out             GT=no   LLM=no   → TN
+    Off                   GT=yes  LLM=no   → FN
+    Booking-issue         GT=no   LLM=no   → TN
+    Taxi-issue            GT=no   LLM=no   → TN
+
+────────────────────────────────────────────────────────────
+Review ID : 45
+  GT  topics : ['Food', 'Location', 'Off', 'Room']
+  LLM topics : ['Food', 'Location']
+
+    Room                  GT=yes  LLM=no   → FN
+    Staff                 GT=no   LLM=no   → TN
+    Location              GT=yes  LLM=yes  → TP
+    Food                  GT=yes  LLM=yes  → TP
+    Price                 GT=no   LLM=no   → TN
+    Facility              GT=no   LLM=no   → TN
+    Check-in              GT=no   LLM=no   → TN
+    Check-out             GT=no   LLM=no   → TN
+    Off                   GT=yes  LLM=no   → FN
+    Booking-issue         GT=no   LLM=no   → TN
+    Taxi-issue            GT=no   LLM=no   → TN
+
+────────────────────────────────────────────────────────────
+Review ID : 46
+  GT  topics : ['Price']
+  LLM topics : ['Price']
+
+    Room                  GT=no   LLM=no   → TN
+    Staff                 GT=no   LLM=no   → TN
+    Location              GT=no   LLM=no   → TN
+    Food                  GT=no   LLM=no   → TN
+    Price                 GT=yes  LLM=yes  → TP
+    Facility              GT=no   LLM=no   → TN
+    Check-in              GT=no   LLM=no   → TN
+    Check-out             GT=no   LLM=no   → TN
+    Off                   GT=no   LLM=no   → TN
+    Booking-issue         GT=no   LLM=no   → TN
+    Taxi-issue            GT=no   LLM=no   → TN
+
+────────────────────────────────────────────────────────────
+Review ID : 47
+  GT  topics : ['Price', 'Staff']
+  LLM topics : ['Price', 'Staff', 'Taxi-issue']
+
+    Room                  GT=no   LLM=no   → TN
+    Staff                 GT=yes  LLM=yes  → TP
+    Location              GT=no   LLM=no   → TN
+    Food                  GT=no   LLM=no   → TN
+    Price                 GT=yes  LLM=yes  → TP
+    Facility              GT=no   LLM=no   → TN
+    Check-in              GT=no   LLM=no   → TN
+    Check-out             GT=no   LLM=no   → TN
+    Off                   GT=no   LLM=no   → TN
+    Booking-issue         GT=no   LLM=no   → TN
+    Taxi-issue            GT=no   LLM=yes  → FP
+
+────────────────────────────────────────────────────────────
+Review ID : 48
+  GT  topics : ['Room', 'Staff']
+  LLM topics : ['Room', 'Staff']
+
+    Room                  GT=yes  LLM=yes  → TP
+    Staff                 GT=yes  LLM=yes  → TP
+    Location              GT=no   LLM=no   → TN
+    Food                  GT=no   LLM=no   → TN
+    Price                 GT=no   LLM=no   → TN
+    Facility              GT=no   LLM=no   → TN
+    Check-in              GT=no   LLM=no   → TN
+    Check-out             GT=no   LLM=no   → TN
+    Off                   GT=no   LLM=no   → TN
+    Booking-issue         GT=no   LLM=no   → TN
+    Taxi-issue            GT=no   LLM=no   → TN
+
+────────────────────────────────────────────────────────────
+Review ID : 49
+  GT  topics : ['Location', 'Price', 'Room']
+  LLM topics : ['Location', 'Price', 'Room']
+
+    Room                  GT=yes  LLM=yes  → TP
+    Staff                 GT=no   LLM=no   → TN
+    Location              GT=yes  LLM=yes  → TP
+    Food                  GT=no   LLM=no   → TN
+    Price                 GT=yes  LLM=yes  → TP
+    Facility              GT=no   LLM=no   → TN
+    Check-in              GT=no   LLM=no   → TN
+    Check-out             GT=no   LLM=no   → TN
+    Off                   GT=no   LLM=no   → TN
+    Booking-issue         GT=no   LLM=no   → TN
+    Taxi-issue            GT=no   LLM=no   → TN
+
+────────────────────────────────────────────────────────────
+Review ID : 50
+  GT  topics : ['Location', 'Room']
+  LLM topics : ['Location']
+
+    Room                  GT=yes  LLM=no   → FN
+    Staff                 GT=no   LLM=no   → TN
+    Location              GT=yes  LLM=yes  → TP
+    Food                  GT=no   LLM=no   → TN
+    Price                 GT=no   LLM=no   → TN
+    Facility              GT=no   LLM=no   → TN
+    Check-in              GT=no   LLM=no   → TN
+    Check-out             GT=no   LLM=no   → TN
+    Off                   GT=no   LLM=no   → TN
+    Booking-issue         GT=no   LLM=no   → TN
+    Taxi-issue            GT=no   LLM=no   → TN
+
+────────────────────────────────────────────────────────────
+Review ID : 51
+  GT  topics : ['Location', 'Off', 'Room', 'Staff']
+  LLM topics : ['Food', 'Location', 'Room', 'Staff']
+
+    Room                  GT=yes  LLM=yes  → TP
+    Staff                 GT=yes  LLM=yes  → TP
+    Location              GT=yes  LLM=yes  → TP
+    Food                  GT=no   LLM=yes  → FP
+    Price                 GT=no   LLM=no   → TN
+    Facility              GT=no   LLM=no   → TN
+    Check-in              GT=no   LLM=no   → TN
+    Check-out             GT=no   LLM=no   → TN
+    Off                   GT=yes  LLM=no   → FN
+    Booking-issue         GT=no   LLM=no   → TN
+    Taxi-issue            GT=no   LLM=no   → TN
+
+────────────────────────────────────────────────────────────
+Review ID : 52
+  GT  topics : ['Off']
+  LLM topics : ['(no spans found)']
+
+    Room                  GT=no   LLM=no   → TN
+    Staff                 GT=no   LLM=no   → TN
+    Location              GT=no   LLM=no   → TN
+    Food                  GT=no   LLM=no   → TN
+    Price                 GT=no   LLM=no   → TN
+    Facility              GT=no   LLM=no   → TN
+    Check-in              GT=no   LLM=no   → TN
+    Check-out             GT=no   LLM=no   → TN
+    Off                   GT=yes  LLM=no   → FN
+    Booking-issue         GT=no   LLM=no   → TN
+    Taxi-issue            GT=no   LLM=no   → TN
+
+────────────────────────────────────────────────────────────
+Review ID : 54
+  GT  topics : ['Room']
+  LLM topics : ['Room']
+
+    Room                  GT=yes  LLM=yes  → TP
+    Staff                 GT=no   LLM=no   → TN
+    Location              GT=no   LLM=no   → TN
+    Food                  GT=no   LLM=no   → TN
+    Price                 GT=no   LLM=no   → TN
+    Facility              GT=no   LLM=no   → TN
+    Check-in              GT=no   LLM=no   → TN
+    Check-out             GT=no   LLM=no   → TN
+    Off                   GT=no   LLM=no   → TN
+    Booking-issue         GT=no   LLM=no   → TN
+    Taxi-issue            GT=no   LLM=no   → TN
+
+────────────────────────────────────────────────────────────
+Review ID : 55
+  GT  topics : ['Location', 'Room']
+  LLM topics : ['(no spans found)']
+
+    Room                  GT=yes  LLM=no   → FN
+    Staff                 GT=no   LLM=no   → TN
+    Location              GT=yes  LLM=no   → FN
+    Food                  GT=no   LLM=no   → TN
+    Price                 GT=no   LLM=no   → TN
+    Facility              GT=no   LLM=no   → TN
+    Check-in              GT=no   LLM=no   → TN
+    Check-out             GT=no   LLM=no   → TN
+    Off                   GT=no   LLM=no   → TN
+    Booking-issue         GT=no   LLM=no   → TN
+    Taxi-issue            GT=no   LLM=no   → TN
+
+────────────────────────────────────────────────────────────
+Review ID : 57
+  GT  topics : ['Location', 'Off', 'Room', 'Staff']
+  LLM topics : ['Location', 'Room', 'Staff', 'Taxi-issue']
+
+    Room                  GT=yes  LLM=yes  → TP
+    Staff                 GT=yes  LLM=yes  → TP
+    Location              GT=yes  LLM=yes  → TP
+    Food                  GT=no   LLM=no   → TN
+    Price                 GT=no   LLM=no   → TN
+    Facility              GT=no   LLM=no   → TN
+    Check-in              GT=no   LLM=no   → TN
+    Check-out             GT=no   LLM=no   → TN
+    Off                   GT=yes  LLM=no   → FN
+    Booking-issue         GT=no   LLM=no   → TN
+    Taxi-issue            GT=no   LLM=yes  → FP
+
+────────────────────────────────────────────────────────────
+Review ID : 58
+  GT  topics : ['Location', 'Room', 'Staff']
+  LLM topics : ['Location', 'Room', 'Staff']
+
+    Room                  GT=yes  LLM=yes  → TP
+    Staff                 GT=yes  LLM=yes  → TP
+    Location              GT=yes  LLM=yes  → TP
+    Food                  GT=no   LLM=no   → TN
+    Price                 GT=no   LLM=no   → TN
+    Facility              GT=no   LLM=no   → TN
+    Check-in              GT=no   LLM=no   → TN
+    Check-out             GT=no   LLM=no   → TN
+    Off                   GT=no   LLM=no   → TN
+    Booking-issue         GT=no   LLM=no   → TN
+    Taxi-issue            GT=no   LLM=no   → TN
+
+────────────────────────────────────────────────────────────
+Review ID : 59
+  GT  topics : ['Check-in', 'Location']
+  LLM topics : ['Check-in', 'Location']
+
+    Room                  GT=no   LLM=no   → TN
+    Staff                 GT=no   LLM=no   → TN
+    Location              GT=yes  LLM=yes  → TP
+    Food                  GT=no   LLM=no   → TN
+    Price                 GT=no   LLM=no   → TN
+    Facility              GT=no   LLM=no   → TN
+    Check-in              GT=yes  LLM=yes  → TP
+    Check-out             GT=no   LLM=no   → TN
+    Off                   GT=no   LLM=no   → TN
+    Booking-issue         GT=no   LLM=no   → TN
+    Taxi-issue            GT=no   LLM=no   → TN
+
+────────────────────────────────────────────────────────────
+Review ID : 60
+  GT  topics : ['Check-in', 'Off']
+  LLM topics : ['Check-in', 'Room', 'Staff']
+
+    Room                  GT=no   LLM=yes  → FP
+    Staff                 GT=no   LLM=yes  → FP
+    Location              GT=no   LLM=no   → TN
+    Food                  GT=no   LLM=no   → TN
+    Price                 GT=no   LLM=no   → TN
+    Facility              GT=no   LLM=no   → TN
+    Check-in              GT=yes  LLM=yes  → TP
+    Check-out             GT=no   LLM=no   → TN
+    Off                   GT=yes  LLM=no   → FN
+    Booking-issue         GT=no   LLM=no   → TN
+    Taxi-issue            GT=no   LLM=no   → TN
+
+[Per-topic totals: Room]
+  TP=6  FP=1  FN=6  TN=5
+  Acc=0.6111  Prec=0.8571  Rec=0.5000  F1=0.6316
+
+[Per-topic totals: Staff]
+  TP=7  FP=1  FN=1  TN=9
+  Acc=0.8889  Prec=0.8750  Rec=0.8750  F1=0.8750
+
+[Per-topic totals: Location]
+  TP=8  FP=0  FN=2  TN=8
+  Acc=0.8889  Prec=1.0000  Rec=0.8000  F1=0.8889
+
+[Per-topic totals: Food]
+  TP=2  FP=1  FN=0  TN=15
+  Acc=0.9444  Prec=0.6667  Rec=1.0000  F1=0.8000
+
+[Per-topic totals: Price]
+  TP=4  FP=0  FN=0  TN=14
+  Acc=1.0000  Prec=1.0000  Rec=1.0000  F1=1.0000
+
+[Per-topic totals: Facility]
+  TP=0  FP=1  FN=0  TN=17
+  Acc=0.9444  Prec=0.0000  Rec=0.0000  F1=0.0000
+
+[Per-topic totals: Check-in]
+  TP=2  FP=0  FN=0  TN=16
+  Acc=1.0000  Prec=1.0000  Rec=1.0000  F1=1.0000
+
+[Per-topic totals: Check-out]
+  TP=0  FP=0  FN=0  TN=18
+  Acc=1.0000  Prec=0.0000  Rec=0.0000  F1=0.0000
+
+[Per-topic totals: Off]
+  TP=0  FP=0  FN=7  TN=11
+  Acc=0.6111  Prec=0.0000  Rec=0.0000  F1=0.0000
+
+[Per-topic totals: Booking-issue]
+  TP=0  FP=0  FN=0  TN=18
+  Acc=1.0000  Prec=0.0000  Rec=0.0000  F1=0.0000
+
+[Per-topic totals: Taxi-issue]
+  TP=0  FP=2  FN=0  TN=16
+  Acc=0.8889  Prec=0.0000  Rec=0.0000  F1=0.0000

@@ -1,0 +1,39 @@
+[Rule 2: Topic Assignment] — Assign each span to the topic it is ACTUALLY about. Never put a span under an unrelated topic, even if that topic appears nearby in the text.
+
+Review:
+PositiveReview — "We had a really pleasant stay! The staff was very nice and helpful! The room was very clean, well decorated and modern. Also, the breakfast was amazing, fresh and handmade! Especially vegetarian version with humus."
+NegativeReview — ""
+Correct — Food: [{"text": "the breakfast was amazing, fresh and handmade!", "label": "Positive"}]
+Correct — Because breakfast is about food, so it goes under Food, not Staff.
+Wrong — Staff: [{"text": "the breakfast was amazing, fresh and handmade!", "label": "Positive"}]
+Wrong — Because breakfast is not about Staff. Assign each span to the topic it is genuinely about.
+
+Review:
+PositiveReview — "We wanted a hotel for a night that is close to the airport and this hotel did that purpose more than fair. There are some restaurants and bars next to the beach just 10min of walking distance from the hotel."
+NegativeReview — "The receptionist didn't speak English properly, and you have a feeling that people are living in the hotel, rather than staying at a hotel."
+Correct — Staff: [{"text": "The receptionist didn't speak English properly,", "label": "Negative"}]
+Correct — Location: [{"text": "There are some restaurants and bars next to the beach just 10min of walking distance from the hotel.", "label": "Positive"}]
+Correct — Because "The receptionist" is only about Staff; "restaurants and bars next to the beach" is only about Location.
+Wrong — Putting "The receptionist" under both Staff AND Check-in.
+Wrong — Because never duplicate a span into unrelated topics. Only assign to the topics a span genuinely describes.
+
+Review:
+PositiveReview — "The pool was beautiful and the gym equipment was modern."
+NegativeReview — "Our Grab taxi booked through the hotel was 30 minutes late and the driver was rude."
+Correct — Facility: [{"text": "The pool was beautiful", "label": "Positive"}, {"text": "the gym equipment was modern.", "label": "Positive"}]
+Correct — Taxi-issue: [{"text": "Our Grab taxi booked through the hotel was 30 minutes late and the driver was rude.", "label": "Negative"}]
+Correct — Because pool and gym are hotel amenities (Facility), not Location; the taxi complaint goes under Taxi-issue, not Staff.
+Wrong — Location: [{"text": "The pool was beautiful", "label": "Positive"}]
+Wrong — Because the pool is a hotel amenity (Facility), not about where the hotel is located.
+Wrong — Staff: [{"text": "Our Grab taxi booked through the hotel was 30 minutes late and the driver was rude.", "label": "Negative"}]
+Wrong — Because the taxi driver issue belongs under Taxi-issue, not Staff. Only hotel employees are Staff.
+
+Review:
+PositiveReview — "Check-in was smooth and the front desk staff were extremely professional."
+NegativeReview — "I had trouble with my online booking — the room type I reserved was not available when I arrived."
+Correct — Check-in: [{"text": "Check-in was smooth", "label": "Positive"}]
+Correct — Staff: [{"text": "the front desk staff were extremely professional.", "label": "Positive"}]
+Correct — Booking-issue: [{"text": "I had trouble with my online booking — the room type I reserved was not available when I arrived.", "label": "Negative"}]
+Correct — Because Check-in is about the check-in process; Staff is about employee behavior; the room reservation error is a Booking-issue.
+Wrong — Combining Check-in and Booking-issue into one span or one topic.
+Wrong — Because Check-in (arrival experience) and Booking-issue (reservation problem) are separate concerns and must be kept as separate topics.

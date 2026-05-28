@@ -1,0 +1,27 @@
+[Rule 4: Contrastive Split] — If a topic has BOTH positive and negative mentions, extract them as SEPARATE items in the same array. Never merge opposite sentiments into one item, and never omit the minority sentiment.
+
+Review:
+PositiveReview — "Room was perfect, looked new, clean shiny tiled floors and bathroom tiles, just every inch perfect and clean. Bed was really comfortable, lots of room for me to put my things..."
+NegativeReview — "Fridge could have been put on beforehand so it was cold, the shower took a while to get hot, had to have a cold shower one morning as i needed to get out early."
+Correct — Room: [{"text": "Room was perfect, looked new, clean shiny tiled floors and bathroom tiles, just every inch perfect and clean.", "label": "Positive"}, {"text": "Fridge could have been put on beforehand so it was cold,", "label": "Negative"}]
+Correct — Because both the positive and negative span about Room are listed as SEPARATE items in the same array.
+Wrong — Room: [{"text": "Room was perfect, looked new, clean shiny tiled floors and bathroom tiles, just every inch perfect and clean.", "label": "Positive"}]
+Wrong — Because the negative fridge span was ignored. Include ALL relevant spans for a topic, even if they have opposite sentiments.
+
+Review:
+PositiveReview — "The breakfast buffet was incredibly varied and fresh."
+NegativeReview — "The dinner at the hotel restaurant was overpriced and mediocre."
+Correct — Food: [{"text": "The breakfast buffet was incredibly varied and fresh.", "label": "Positive"}, {"text": "The dinner at the hotel restaurant was overpriced and mediocre.", "label": "Negative"}]
+Correct — Because both spans are about Food and have opposite sentiments — they must be SEPARATE items in the same Food array.
+Wrong — Food: [{"text": "The breakfast buffet was incredibly varied and fresh.", "label": "Positive"}]
+Wrong — Because the negative dinner span was dropped. Never omit a span just because it conflicts with another span for the same topic.
+Wrong — Food: [{"text": "The breakfast buffet was incredibly varied and fresh. The dinner at the hotel restaurant was overpriced and mediocre.", "label": "Positive"}]
+Wrong — Because merging opposite-sentiment spans into one item is forbidden. Always split them.
+
+Review:
+PositiveReview — "Staff at the front desk were incredibly welcoming."
+NegativeReview — "The housekeeping staff left our room without clean towels two days in a row."
+Correct — Staff: [{"text": "Staff at the front desk were incredibly welcoming.", "label": "Positive"}, {"text": "The housekeeping staff left our room without clean towels two days in a row.", "label": "Negative"}]
+Correct — Because the same topic (Staff) has both a positive and a negative span — each must appear as its own separate item.
+Wrong — Staff: [{"text": "Staff at the front desk were incredibly welcoming.", "label": "Positive"}]
+Wrong — Because the housekeeping complaint was silently dropped. A contrastive split requires ALL spans, both positive and negative.

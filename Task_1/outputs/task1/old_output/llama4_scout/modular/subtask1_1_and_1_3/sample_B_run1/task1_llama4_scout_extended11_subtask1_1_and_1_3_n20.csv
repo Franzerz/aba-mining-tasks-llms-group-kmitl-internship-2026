@@ -1,0 +1,31 @@
+Review ID,Valid,Topic,Sentiment,Errors
+21,True,Staff,Positive,
+21,True,Food,Positive,
+22,False,(parse failed),,json_parse_error: Expecting value: line 1 column 1 (char 0)
+23,True,Room,Positive,
+24,True,(no sentiments found),,
+25,True,(no sentiments found),,
+26,False,(parse failed),,json_parse_error: Expecting value: line 1 column 1 (char 0)
+27,False,Staff,Positive,
+28,False,Staff,Positive,
+28,False,Surrounding-Buildings,Negative,
+29,False,Room,Positive,
+29,False,Staff,Positive,
+30,False,Room,Positive,
+30,False,Staff,Positive,
+30,False,Service,Positive,
+30,False,Location,Positive,
+31,False,(parse failed),,json_parse_error: Expecting value: line 1 column 1 (char 0)
+32,True,Room,Positive,
+32,True,Staff,Positive,
+33,False,(parse failed),,json_parse_error: Expecting value: line 1 column 1 (char 0)
+34,True,Location,Positive,
+34,True,Price,Positive,
+34,True,Facility,Positive,
+35,False,(parse failed),,json_parse_error: Expecting ':' delimiter: line 1 column 113 (char 112)
+36,False,(parse failed),,json_parse_error: Expecting value: line 1 column 1 (char 0)
+37,True,Staff,Positive,
+37,True,Food,Positive,
+38,True,Room,Positive,
+39,True,Room,Positive,
+40,True,Location,Positive,

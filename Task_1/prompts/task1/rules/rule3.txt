@@ -1,0 +1,34 @@
+[Rule 3: Sentiment by Actual Content, Not by Section Name] — The label must reflect the actual sentiment expressed by the words, not which section (PositiveReview or NegativeReview) the text appears in.
+
+Review:
+PositiveReview — ""
+NegativeReview — "Lovely little hotel with very friendly staff. Breakfast was excellent."
+Correct — Staff: [{"text": "very friendly staff.", "label": "Positive"}]
+Correct — Food: [{"text": "Breakfast was excellent.", "label": "Positive"}]
+Correct — Because the words express positive opinions. Label by actual sentiment, NOT by section header.
+Wrong — Staff: [{"text": "very friendly staff.", "label": "Negative"}]
+Wrong — Because the label was based on the section name ("NegativeReview"), not the actual words.
+
+Review:
+PositiveReview — "Staff is very polite and caring. Thank you"
+NegativeReview — "Surrounding buildings are under construction and poorly lit."
+Correct — Off: [{"text": "Surrounding buildings are under construction and poorly lit.", "label": "Negative"}]
+Correct — Because construction and poor lighting are objectively negative, regardless of which section they appear in.
+Wrong — Off: [{"text": "Surrounding buildings are under construction and poorly lit.", "label": "Positive"}]
+Wrong — Because section name never determines sentiment. Read the words and decide.
+
+Review:
+PositiveReview — "The room was fine."
+NegativeReview — "Despite the noise outside, the staff went out of their way to move us to a quieter room at no extra charge. Really appreciated!"
+Correct — Staff: [{"text": "the staff went out of their way to move us to a quieter room at no extra charge.", "label": "Positive"}]
+Correct — Because the words describe a helpful, praiseworthy action. The fact that it appears in NegativeReview does not make it negative.
+Wrong — Staff: [{"text": "the staff went out of their way to move us to a quieter room at no extra charge.", "label": "Negative"}]
+Wrong — Because the label was copied from the section header. The actual words express a positive experience.
+
+Review:
+PositiveReview — "We paid a lot for this room but it did not live up to expectations."
+NegativeReview — ""
+Correct — Price: [{"text": "We paid a lot for this room but it did not live up to expectations.", "label": "Negative"}]
+Correct — Because the sentence expresses dissatisfaction with value, which is a Negative sentiment regardless of appearing in PositiveReview.
+Wrong — Price: [{"text": "We paid a lot for this room but it did not live up to expectations.", "label": "Positive"}]
+Wrong — Because the section name "PositiveReview" must not be used to decide the label. The text clearly signals a complaint.

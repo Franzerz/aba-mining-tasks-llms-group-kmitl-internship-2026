@@ -1,0 +1,486 @@
+========================================================================
+WORKINGS  –  task1_llama4_scout_extended11_combined_n20.csv
+========================================================================
+
+Has 'Text Span' : True
+Match strategy  : BM25 on text span
+Total LLM rows  : 51
+Sentiments      : ['Negative', 'Positive']
+
+
+────────────────────────────────────────────────────────────
+ID=21  Topic=Room
+  LLM Span      : The hotel is impressive how clean nice and comfortable it is
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Best GT Span      : The hotel is impressive how clean nice and comfortable it is
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=21  Topic=Staff
+  LLM Span      : what will bring me back is the staff and the owners.
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Best GT Span      : however what will bring me back is the staff and the owners. Richard (the chef) 
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=21  Topic=Staff
+  LLM Span      : Richard (the chef) is personally buying super fresh food for the restaurant.
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Best GT Span      : however what will bring me back is the staff and the owners. Richard (the chef) 
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=21  Topic=Food
+  LLM Span      : Everything from breakfast to dinner is absolutely delicious.
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Best GT Span      : Everything from breakfast to dinner is absolutely delicious.
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=23  Topic=Room
+  LLM Span      : the beds were very comfortable
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Best GT Span      : the beds were very comfortable
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=26  Topic=Room
+  LLM Span      : The rooms are a good size and are laid out very well with a good size bathroom
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Best GT Span      : The rooms are a good size and are laid out very well with a good size bathroom
+ 
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=26  Topic=Location
+  LLM Span      : The hotel is 5 minutes from the beach and the location is also near the lake.
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Best GT Span      : The hotel is 5 minutes from the beach and the location is also near the lake.
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=26  Topic=Staff
+  LLM Span      : The staff are super wonderful really friendly all of them the receptionist Maria
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Best GT Span      : The staff are super wonderful really friendly all of them the receptionist Maria
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=26  Topic=Food
+  LLM Span      : The restaurant is great and the food is good and not to pricey.
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Best GT Span      : There is a great restaurant inside where the food is good and not to pricey.
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=26  Topic=Facility
+  LLM Span      : The room also has a great sized balcony to take a tea/coffee and chill
+  LLM Sentiment : Positive
+  GT candidates : 0
+  [No GT rows for this ID+Topic → skipped]
+
+────────────────────────────────────────────────────────────
+ID=26  Topic=Off
+  LLM Span      : Leaving..in fact just re booked the hotel for 2 weeks time
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Best GT Span      : Keep up the great work. Leaving..in fact just re booked the hotel for 2 weeks ti
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=26  Topic=Booking
+  LLM Span      : Leaving..in fact just re booked the hotel for 2 weeks time
+  LLM Sentiment : Positive
+  GT candidates : 0
+  [No GT rows for this ID+Topic → skipped]
+
+────────────────────────────────────────────────────────────
+ID=26  Topic=Price
+  LLM Span      : The food is not to pricey.
+  LLM Sentiment : Positive
+  GT candidates : 0
+  [No GT rows for this ID+Topic → skipped]
+
+────────────────────────────────────────────────────────────
+ID=27  Topic=Room
+  LLM Span      : so comfortable, clean
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Best GT Span      : so comfortable, clean
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=27  Topic=Staff
+  LLM Span      : friendly staff
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Best GT Span      : friendly staff
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=27  Topic=Location
+  LLM Span      : perfect for overnight stay before flying from Larnaca Airport
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Best GT Span      : perfect for overnight stay before flying from Larnaca Airport.
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=28  Topic=Staff
+  LLM Span      : Staff is very polite and caring. Thank you
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Best GT Span      : Staff is very polite and caring.
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=28  Topic=Surrounding-Buildings
+  LLM Span      : Surrounding buildings are under construction and poorly lit.
+  LLM Sentiment : Negative
+  GT candidates : 0
+  [No GT rows for this ID+Topic → skipped]
+
+────────────────────────────────────────────────────────────
+ID=29  Topic=Room
+  LLM Span      : very clean functional rooms.
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Best GT Span      : very clean functional rooms
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=29  Topic=Staff
+  LLM Span      : lovely and very helpful staff.
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Best GT Span      : lovely and very helpful staff.
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=29  Topic=Facility
+  LLM Span      : I would have liked an ironing board in the room.
+  LLM Sentiment : Negative
+  GT candidates : 0
+  [No GT rows for this ID+Topic → skipped]
+
+────────────────────────────────────────────────────────────
+ID=30  Topic=Room
+  LLM Span      : The room was spotless.
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Best GT Span      : The room was spotless.
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=30  Topic=Staff
+  LLM Span      : Staff were lovely.
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Best GT Span      : Staff were lovely. Service was great.
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=30  Topic=Service
+  LLM Span      : Service was great.
+  LLM Sentiment : Positive
+  GT candidates : 0
+  [No GT rows for this ID+Topic → skipped]
+
+────────────────────────────────────────────────────────────
+ID=30  Topic=Location
+  LLM Span      : Great location for restaurants.
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Best GT Span      : Great location for restaurants. Great location for a short drive to the airport.
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=30  Topic=Location
+  LLM Span      : Great location for a short drive to the airport.
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Best GT Span      : Great location for restaurants. Great location for a short drive to the airport.
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=31  Topic=Staff
+  LLM Span      : friendly staff
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Best GT Span      : friendly staff.
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=31  Topic=Food
+  LLM Span      : excellent
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Best GT Span      : Great restaurant beneath the hotel - food excellent & reasonably priced.
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=31  Topic=Price
+  LLM Span      : reasonably priced
+  LLM Sentiment : Positive
+  GT candidates : 0
+  [No GT rows for this ID+Topic → skipped]
+
+────────────────────────────────────────────────────────────
+ID=31  Topic=Location
+  LLM Span      : Very close to Mackenzy beach & Larnaca airport
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Best GT Span      : Very close to Mackenzy beach & Larnaca airport.
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=31  Topic=Cleanliness
+  LLM Span      : Clean
+  LLM Sentiment : Positive
+  GT candidates : 0
+  [No GT rows for this ID+Topic → skipped]
+
+────────────────────────────────────────────────────────────
+ID=32  Topic=Room
+  LLM Span      : The bed was great.
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Best GT Span      : The bed was great. Rooms clean.
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=32  Topic=Room
+  LLM Span      : Rooms clean.
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Best GT Span      : The bed was great. Rooms clean.
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=32  Topic=Staff
+  LLM Span      : Staff were so kind.
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Best GT Span      : Staff were so kind.
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=33  Topic=Room
+  LLM Span      : super clean room with modern furniture
+  LLM Sentiment : Positive
+  GT candidates : 2
+  Best GT Span      : super clean room with modern furniture all together make your stay max comfortab
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=33  Topic=Staff
+  LLM Span      : Very helpful staff
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Best GT Span      : Very helpful staff
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=33  Topic=Facility
+  LLM Span      : option to have a good breakfast within the hotel
+  LLM Sentiment : Positive
+  GT candidates : 0
+  [No GT rows for this ID+Topic → skipped]
+
+────────────────────────────────────────────────────────────
+ID=34  Topic=Location
+  LLM Span      : location
+  LLM Sentiment : Positive
+  GT candidates : 0
+  [No GT rows for this ID+Topic → skipped]
+
+────────────────────────────────────────────────────────────
+ID=34  Topic=Location
+  LLM Span      : welcoming
+  LLM Sentiment : Positive
+  GT candidates : 0
+  [No GT rows for this ID+Topic → skipped]
+
+────────────────────────────────────────────────────────────
+ID=34  Topic=Location
+  LLM Span      : value for money
+  LLM Sentiment : Positive
+  GT candidates : 0
+  [No GT rows for this ID+Topic → skipped]
+
+────────────────────────────────────────────────────────────
+ID=36  Topic=Room
+  LLM Span      : The room was smaller than I expected but as we were only there a few days it was
+  LLM Sentiment : Positive
+  GT candidates : 2
+  Best GT Span      : The room was smaller than I expected but as we were only there a few days it was
+  Best GT Sentiment : Negative  → WRONG
+    Negative      LLM=no   GT=yes  → FN
+    Positive      LLM=yes  GT=no   → FP
+
+────────────────────────────────────────────────────────────
+ID=36  Topic=Staff
+  LLM Span      : The receptionist on check in was very good and explained the information very cl
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Best GT Span      : The receptionist on check in was very good and explained the information very cl
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=36  Topic=Staff
+  LLM Span      : The chef was very polite and his food was excellent, he had passion and it showe
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Best GT Span      : The receptionist on check in was very good and explained the information very cl
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=36  Topic=Location
+  LLM Span      : When we arrived, we were surprised at the location in a small side street, but i
+  LLM Sentiment : Positive
+  GT candidates : 2
+  Best GT Span      : we were surprised at the location in a small side street,
+  Best GT Sentiment : Negative  → WRONG
+    Negative      LLM=no   GT=yes  → FN
+    Positive      LLM=yes  GT=no   → FP
+
+────────────────────────────────────────────────────────────
+ID=36  Topic=Food
+  LLM Span      : The chef was very polite and his food was excellent, he had passion and it showe
+  LLM Sentiment : Positive
+  GT candidates : 2
+  Best GT Span      : The chef was very polite, and his food was excellent, he had passion and it show
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=36  Topic=Check-in
+  LLM Span      : The receptionist on check in was very good and explained the information very cl
+  LLM Sentiment : Positive
+  GT candidates : 0
+  [No GT rows for this ID+Topic → skipped]
+
+────────────────────────────────────────────────────────────
+ID=37  Topic=Staff
+  LLM Span      : lovely caring staff.
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Best GT Span      : lovely caring staff.
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=37  Topic=Food
+  LLM Span      : food was good too!
+  LLM Sentiment : Positive
+  GT candidates : 0
+  [No GT rows for this ID+Topic → skipped]
+
+────────────────────────────────────────────────────────────
+ID=38  Topic=Room
+  LLM Span      : great rooms - nice and cool
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Best GT Span      : great rooms - nice and cool
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=40  Topic=Room
+  LLM Span      : My only real observation was that there was no net curtain or blind so one neede
+  LLM Sentiment : Negative
+  GT candidates : 1
+  Best GT Span      : My only real observation was that there was no net curtain or blind so one neede
+  Best GT Sentiment : Negative  → CORRECT
+    Negative      LLM=yes  GT=yes  → TP
+    Positive      LLM=no   GT=no   → TN
+
+────────────────────────────────────────────────────────────
+ID=40  Topic=Location
+  LLM Span      : Nice location, not far from Airport and Mackenzie beach.
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Best GT Span      : Nice location, not far from Airport and Mackenzie beach.
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+[Per-sentiment totals: Negative]
+  TP=1  FP=0  FN=2  TN=34
+  Acc=0.9459  Prec=1.0000  Rec=0.3333  F1=0.5000
+
+[Per-sentiment totals: Positive]
+  TP=34  FP=2  FN=0  TN=1
+  Acc=0.9459  Prec=0.9444  Rec=1.0000  F1=0.9714
