@@ -1,0 +1,35 @@
+[Rule 7: Multiple Spans per Topic in Same Array] — If a topic has multiple mentions across the review, list ALL of them as separate items in the same array. Never extract only the first or most prominent mention.
+
+Review:
+PositiveReview — "My second time here and true to say it was better than the first which was excellent..
+ The staff here are amazing beyond expectations..*****
+ Maria at reception is just great she really took time to explain where to go how to get there and so helpful ... 🙏
+ Richard the chef this guy is like the friendliest guy ever, such a nice guy with a permanent. Smile 😁
+ Oh yeah the food is great to and very reasonable prices ..
+ Even the cleaning lady is so friendly and so nice to talk to .
+ The rooms are spacious and clean great to stay .. I even got an upgrade which is always so nice.
+ The owners are also great it's like a real caring family set up ...
+ The bus stop which goes to and from the airport as well as the town center is a minutes walk away and just 2 euros
+ I don't think I need to mention where I'll be staying next time I'm in Larnaka.. 😊
+ Brilliant guys ... 🙏🙏🙏"
+NegativeReview — ""
+Correct — Staff: [{"text": "Maria at reception is just great she really took time to explain where to go how to get there and so helpful ... 🙏", "label": "Positive"}, {"text": "Richard the chef this guy is like the friendliest guy ever, such a nice guy with a permanent. Smile 😁", "label": "Positive"}]
+Correct — Because both spans mention Staff and both are listed as separate items in the same array.
+Wrong — Staff: [{"text": "Maria at reception is just great she really took time to explain where to go how to get there and so helpful ... 🙏", "label": "Positive"}]
+Wrong — Because the span about Richard was ignored. All relevant spans for a topic must be extracted, not just the first one.
+
+Review:
+PositiveReview — "Location is excellent — just a 5-minute walk to the beach. Also very convenient for the night market, which is only one street away."
+NegativeReview — ""
+Correct — Location: [{"text": "just a 5-minute walk to the beach.", "label": "Positive"}, {"text": "very convenient for the night market, which is only one street away.", "label": "Positive"}]
+Correct — Because the review mentions Location twice (beach proximity AND night market proximity) and both must be extracted as separate items.
+Wrong — Location: [{"text": "just a 5-minute walk to the beach.", "label": "Positive"}]
+Wrong — Because the second location span (night market) was omitted. Never stop at the first mention — extract every span that belongs to the topic.
+
+Review:
+PositiveReview — "Breakfast was wonderful — fresh fruit, eggs any style, and great coffee."
+NegativeReview — "We ordered room service for dinner and the food arrived cold and took over an hour."
+Correct — Food: [{"text": "Breakfast was wonderful — fresh fruit, eggs any style, and great coffee.", "label": "Positive"}, {"text": "the food arrived cold and took over an hour.", "label": "Negative"}]
+Correct — Because Food is mentioned twice — once positively (breakfast) and once negatively (room service). Both spans must appear in the array.
+Wrong — Food: [{"text": "Breakfast was wonderful — fresh fruit, eggs any style, and great coffee.", "label": "Positive"}]
+Wrong — Because the room service complaint was dropped. A topic can have multiple spans even when they have different sentiments — include them all.

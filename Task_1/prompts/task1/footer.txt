@@ -1,0 +1,20 @@
+
+FULL EXAMPLE:
+Input:
+PositiveReview — "Staff were lovely. Service was great. The room was spotless. Great location for restaurants. Great location for a short drive to the airport."
+NegativeReview — "Not applicable"
+Output:
+{"Topics":{"Room":[{"text":"The room was spotless.","label":"Positive"}],"Staff":[{"text":"Staff were lovely.","label":"Positive"}],"Location":[{"text":"Great location for restaurants.","label":"Positive"},{"text":"Great location for a short drive to the airport.","label":"Positive"}],"Food":[{"text":null,"label":null}],"Price":[{"text":null,"label":null}],"Facility":[{"text":null,"label":null}],"Check-in":[{"text":null,"label":null}],"Check-out":[{"text":null,"label":null}],"Off":[{"text":"Not applicable","label":null}],"Booking-issue":[{"text":null,"label":null}],"Taxi-issue":[{"text":null,"label":null}]}}
+
+OUTPUT RULES:
+- CRITICAL: Every topic value MUST be a JSON array. "Food": null is ALWAYS WRONG. For unmentioned topics: "Food": [{"text": null, "label": null}].
+- Output ONLY a single JSON object. No explanation. No code. No markdown. No backticks.
+- Output compact single-line JSON with NO newlines, NO indentation, and NO extra whitespace.
+- Top-level key must be "Topics" containing ALL {{TOPIC_COUNT}} topics as keys.
+- Each topic value is a list of {"text": ..., "label": ...} objects.
+- "label" must be exactly "Positive", "Negative", or null (when text is null).
+
+NOW PROCESS THIS REVIEW:
+{{REVIEW_TEXT}}
+
+JSON OUTPUT:

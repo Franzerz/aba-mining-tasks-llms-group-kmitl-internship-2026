@@ -1,0 +1,20 @@
+You are an expert hotel review analyst performing multi-label topic identification.
+
+TASK: Read the review and decide which of the 11 topics below are mentioned. Output true for each mentioned topic and false for each unmentioned topic.
+
+TOPICS (closed set — use ONLY these): {{TOPICS}}
+
+STEP-BY-STEP PROCESS:
+1. Read the entire review carefully, including both positive and negative sections.
+2. For each topic, ask: does the reviewer explicitly mention anything related to this topic?
+3. Mark true if the topic is discussed (even briefly or indirectly). Mark false if it is never mentioned.
+4. Filler phrases like "Nothing at all", "Not applicable", "N/A", "none" → Off: true (the filler IS present, even though it carries no hotel opinion).
+5. Self-check BEFORE outputting: every one of the {{TOPIC_COUNT}} topic keys must be present with a boolean value.
+
+CRITICAL FORMAT:
+  ALWAYS: "Food": true   or   "Food": false
+  NEVER:  "Food": null   or   "Food": "yes"   or   "Food": [...]
+
+DATA STRUCTURED FOR EACH REVIEW: PositiveReview — NegativeReview
+
+CONTRASTIVE EXAMPLES:

@@ -1,0 +1,28 @@
+[Rule 6: Multi-topic Extraction] — If a single span is relevant to MULTIPLE topics, extract it under EACH relevant topic with the same label. Never limit a span to only one topic when it genuinely describes more than one.
+
+Review:
+PositiveReview — "Room was perfect, looked new, clean shiny tiled floors and bathroom tiles, just every inch perfect and clean. Bed was really comfortable, lots of room for me to put my things... although might have needed another set of drawers if there were two of us."
+NegativeReview — "Fridge could have been put on beforehand so it was cold."
+Correct — Room: [{"text": "Room was perfect, looked new, clean shiny tiled floors and bathroom tiles, just every inch perfect and clean.", "label": "Positive"}, {"text": "Bed was really comfortable, lots of room for me to put my things...", "label": "Positive"}, {"text": "Fridge could have been put on beforehand so it was cold,", "label": "Negative"}]
+Correct — Facility: [{"text": "Bed was really comfortable, lots of room for me to put my things...", "label": "Positive"}]
+Correct — Because "Bed was really comfortable..." describes BOTH Room (bed quality) AND Facility (room amenities), so it appears under both topics with the same label.
+Wrong — Only extracting "Bed was really comfortable..." under Room but not Facility.
+Wrong — Because a span relevant to multiple topics must appear under each relevant topic.
+
+Review:
+PositiveReview — "The hotel is perfectly located — right next to the train station and surrounded by restaurants and shopping malls."
+NegativeReview — ""
+Correct — Location: [{"text": "The hotel is perfectly located — right next to the train station and surrounded by restaurants and shopping malls.", "label": "Positive"}]
+Correct — Food: [{"text": "The hotel is perfectly located — right next to the train station and surrounded by restaurants and shopping malls.", "label": "Positive"}]
+Correct — Because the span mentions being "surrounded by restaurants" (relevant to Food) AND general location (relevant to Location), so it appears under BOTH with the same label.
+Wrong — Only extracting it under Location and leaving Food as null.
+Wrong — Because a span that genuinely describes multiple topics must be listed under each of them.
+
+Review:
+PositiveReview — "The rooftop pool had a stunning view of the city."
+NegativeReview — ""
+Correct — Facility: [{"text": "The rooftop pool had a stunning view of the city.", "label": "Positive"}]
+Correct — Location: [{"text": "The rooftop pool had a stunning view of the city.", "label": "Positive"}]
+Correct — Because the span describes a hotel amenity (pool → Facility) AND highlights a location-related feature (city view → Location), so it goes under both.
+Wrong — Only placing it under Facility.
+Wrong — Because the city view is genuinely relevant to Location as well. When in doubt whether a span covers multiple topics, extract it under all that apply.

@@ -1,0 +1,35 @@
+[Rule 1: Verbatim Copying] — Copy the text span EXACTLY as it appears: same characters, same casing, same punctuation, same spacing. Never paraphrase, never rewrite, never alter a single character.
+
+Review:
+PositiveReview — "We had a really pleasant stay! The staff was very nice and helpful! The room was very clean, well decorated and modern, although not big. Also, the breakfast was amazing, fresh and handmade!"
+NegativeReview — ""
+Correct — Staff: [{"text": "The staff was very nice and helpful!", "label": "Positive"}]
+Correct — Because the text is a verbatim substring of the review, including casing and exclamation mark.
+Wrong — Staff: [{"text": "The staff was friendly and helpful", "label": "Positive"}]
+Wrong — Because "friendly" is a paraphrase of "very nice". Never change the wording.
+
+Review:
+PositiveReview — "nice location, lovely personal, renovated,"
+NegativeReview — "nothing"
+Correct — Location: [{"text": "nice location,", "label": "Positive"}]
+Correct — Because the text matches exactly including lowercase "nice" and the trailing comma.
+Wrong — Location: [{"text": "Nice location", "label": "Positive"}]
+Wrong — Because "nice" was capitalized to "Nice" and the comma was removed. Copy character-for-character.
+
+Review:
+PositiveReview — "Breakfast was really good. Fresh juice, eggs made to order, and a wide selection of pastries."
+NegativeReview — "The shower pressure was very low."
+Correct — Food: [{"text": "Breakfast was really good.", "label": "Positive"}, {"text": "Fresh juice, eggs made to order, and a wide selection of pastries.", "label": "Positive"}]
+Correct — Room: [{"text": "The shower pressure was very low.", "label": "Negative"}]
+Correct — Because each span is copied character-for-character, including periods and commas in their exact positions.
+Wrong — Food: [{"text": "Fresh juice, eggs made to order and a wide selection of pastries.", "label": "Positive"}]
+Wrong — Because the comma after "order" was removed. Every punctuation mark is part of the verbatim copy.
+
+Review:
+PositiveReview — "Great stay overall 😊 The bed was super comfy and the Wi-Fi worked perfectly!"
+NegativeReview — ""
+Correct — Room: [{"text": "The bed was super comfy", "label": "Positive"}]
+Correct — Facility: [{"text": "the Wi-Fi worked perfectly!", "label": "Positive"}]
+Correct — Because emoji and punctuation in surrounding text do not affect how the span itself is copied — still verbatim.
+Wrong — Room: [{"text": "The bed was very comfortable", "label": "Positive"}]
+Wrong — Because "super comfy" was rewritten as "very comfortable". No rewording is ever allowed, no matter how minor.
