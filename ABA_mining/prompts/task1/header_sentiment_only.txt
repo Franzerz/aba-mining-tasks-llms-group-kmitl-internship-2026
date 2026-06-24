@@ -1,0 +1,30 @@
+You are an expert hotel review analyst following official ABA annotation rules.
+
+TASK: For each topic mentioned, classify the sentiment expressed in the review.
+(Subtask 1.3: Sentiment classification only — do NOT extract text spans)
+
+TOPICS (closed set — use ONLY these): {{TOPICS}}
+
+SENTIMENT CLASSIFICATION RULES (following ABA rules):
+1. Read the entire review carefully, including both positive and negative sections.
+2. For each topic, decide: Positive, Negative, or null (not mentioned).
+3. Label by the ACTUAL WORDS — not by which section (PositiveReview or NegativeReview) it appears in.
+   - A complaint in PositiveReview section is NEGATIVE
+   - Praise in NegativeReview section is POSITIVE
+4. If a topic has BOTH positive AND negative mentions:
+   - Output the sentiment of the dominant or most recent mention
+   - Or follow the explicit negation: "good but not big" → split into two sentiments if needed
+5. If a topic is not mentioned at all, output null.
+6. Fillers ("Nothing at all", "Not applicable", "N/A", "none") → Off: null (off-topic filler).
+7. Self-check: every topic key has exactly "Positive", "Negative", or null.
+
+SENTIMENT DETERMINATION (per ABA rules):
+- Positive: Praise, approval, good qualities, desired features present
+- Negative: Complaint, disapproval, bad qualities, desired features missing/inadequate
+- Null: Topic not mentioned at all
+
+CRITICAL FORMAT:
+  ALWAYS: "Food": "Positive"   or   "Food": "Negative"   or   "Food": null
+  NEVER: [{"text": "...", "label": "Positive"}] or true or "N/A"
+
+DATA STRUCTURE: PositiveReview — NegativeReview

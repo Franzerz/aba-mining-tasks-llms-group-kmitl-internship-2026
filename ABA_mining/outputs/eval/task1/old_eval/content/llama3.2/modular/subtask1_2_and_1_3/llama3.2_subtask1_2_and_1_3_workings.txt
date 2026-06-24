@@ -1,0 +1,1170 @@
+========================================================================
+WORKINGS  –  task1_llama3.2_extended11_subtask1_2_and_1_3_n20.csv
+========================================================================
+
+Threshold (TF-IDF / Sentence Emb / Cross-Encoder) : 0.5
+BM25 match : score > 0  (any term overlap)
+Total LLM rows : 125
+
+
+────────────────────────────────────────────────────────────
+ID=2  Topic=Room
+  LLM : The room was very clean, well decorated and modern, although not big.
+  GT rows for (ID=2, Topic=Room): 2
+  Best GT : The room was very clean, well decorated and modern, although not big.
+  Parity        : MATCH      best=1.0000
+  TF-IDF        : MATCH      best=1.0000
+  BM25          : MATCH      best=9.7312
+  Sentence Emb  : MATCH      best=1.0000
+  Cross-Encoder : MATCH      best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=2  Topic=Room
+  LLM : although not big.
+  GT rows for (ID=2, Topic=Room): 2
+  Best GT : The room was very clean, well decorated and modern, although not big.
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.3788
+  BM25          : MATCH      best=2.4328
+  Sentence Emb  : NO MATCH   best=0.2791
+  Cross-Encoder : MATCH      best=0.9967
+
+────────────────────────────────────────────────────────────
+ID=2  Topic=Staff
+  LLM : The staff was very nice and helpful!
+  GT rows for (ID=2, Topic=Staff): 1
+  Best GT : The staff was very nice and helpful!
+  Parity        : MATCH      best=1.0000
+  TF-IDF        : MATCH      best=1.0000
+  BM25          : MATCH      best=9.7041
+  Sentence Emb  : MATCH      best=1.0000
+  Cross-Encoder : MATCH      best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=2  Topic=Staff
+  LLM : the cook is great, and all staff was very kind and helpful.
+  GT rows for (ID=2, Topic=Staff): 1
+  Best GT : The staff was very nice and helpful!
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.3963
+  BM25          : MATCH      best=9.7041
+  Sentence Emb  : MATCH      best=0.6696
+  Cross-Encoder : MATCH      best=0.9958
+
+────────────────────────────────────────────────────────────
+ID=2  Topic=Staff
+  LLM : I like hotels with a family atmosphere, cozy and not big.
+  GT rows for (ID=2, Topic=Staff): 1
+  Best GT : The staff was very nice and helpful!
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.0352
+  BM25          : MATCH      best=1.3863
+  Sentence Emb  : NO MATCH   best=0.1173
+  Cross-Encoder : NO MATCH   best=0.0001
+
+────────────────────────────────────────────────────────────
+ID=2  Topic=Location
+  LLM : We had a really pleasant stay! The location was excellent.
+  GT rows for (ID=2, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=2  Topic=Food
+  LLM : Also, the breakfast was amazing, fresh and handmade! Especially vegetarian version with humus.
+  GT rows for (ID=2, Topic=Food): 1
+  Best GT : Also, the breakfast was amazing, fresh and handmade! Especially vegetarian version with humus. The c
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : MATCH      best=0.6546
+  BM25          : MATCH      best=19.0781
+  Sentence Emb  : MATCH      best=0.9407
+  Cross-Encoder : MATCH      best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=2  Topic=Food
+  LLM : the food arrived cold and took over an hour.
+  GT rows for (ID=2, Topic=Food): 1
+  Best GT : Also, the breakfast was amazing, fresh and handmade! Especially vegetarian version with humus. The c
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.0872
+  BM25          : MATCH      best=3.5317
+  Sentence Emb  : NO MATCH   best=0.3427
+  Cross-Encoder : NO MATCH   best=0.0000
+
+────────────────────────────────────────────────────────────
+ID=2  Topic=Off
+  LLM : Nothing at all
+  GT rows for (ID=2, Topic=Off): 1
+  Best GT : We had a really pleasant stay!, I recommend it
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.0000
+  BM25          : NO MATCH   best=0.0000
+  Sentence Emb  : NO MATCH   best=0.0304
+  Cross-Encoder : NO MATCH   best=0.0000
+
+────────────────────────────────────────────────────────────
+ID=3  Topic=Room
+  LLM : The room was clean.
+  GT rows for (ID=3, Topic=Room): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=3  Topic=Room
+  LLM : The bed was comfortable.
+  GT rows for (ID=3, Topic=Room): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=3  Topic=Staff
+  LLM : They were helpful.
+  GT rows for (ID=3, Topic=Staff): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=3  Topic=Staff
+  LLM : The staff were friendly.
+  GT rows for (ID=3, Topic=Staff): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=3  Topic=Staff
+  LLM : The service was great.
+  GT rows for (ID=3, Topic=Staff): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=3  Topic=Staff
+  LLM : The staff were very nice and helpful!
+  GT rows for (ID=3, Topic=Staff): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=3  Topic=Location
+  LLM : the location is great and near the airport.
+  GT rows for (ID=3, Topic=Location): 1
+  Best GT : the location is great and near the airport. bus stop is very close.
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : MATCH      best=0.7103
+  BM25          : MATCH      best=11.9815
+  Sentence Emb  : MATCH      best=0.8897
+  Cross-Encoder : MATCH      best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=3  Topic=Location
+  LLM : bus stop is very close.
+  GT rows for (ID=3, Topic=Location): 1
+  Best GT : the location is great and near the airport. bus stop is very close.
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.4937
+  BM25          : MATCH      best=7.2285
+  Sentence Emb  : MATCH      best=0.7395
+  Cross-Encoder : MATCH      best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=3  Topic=Location
+  LLM : Nothing at all
+  GT rows for (ID=3, Topic=Location): 1
+  Best GT : the location is great and near the airport. bus stop is very close.
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.0000
+  BM25          : NO MATCH   best=0.0000
+  Sentence Emb  : NO MATCH   best=0.0082
+  Cross-Encoder : NO MATCH   best=0.0000
+
+────────────────────────────────────────────────────────────
+ID=3  Topic=Off
+  LLM : Nothing at all
+  GT rows for (ID=3, Topic=Off): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=4  Topic=Room
+  LLM : Clean
+  GT rows for (ID=4, Topic=Room): 1
+  Best GT : Clean
+  Parity        : MATCH      best=1.0000
+  TF-IDF        : MATCH      best=1.0000
+  BM25          : MATCH      best=1.3863
+  Sentence Emb  : MATCH      best=1.0000
+  Cross-Encoder : MATCH      best=0.9285
+
+────────────────────────────────────────────────────────────
+ID=4  Topic=Off
+  LLM : Not applicable
+  GT rows for (ID=4, Topic=Off): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=5  Topic=Room
+  LLM : with very comfortable beds
+  GT rows for (ID=5, Topic=Room): 1
+  Best GT : Clean and modern with very comfortable beds
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : MATCH      best=0.6094
+  BM25          : MATCH      best=5.5452
+  Sentence Emb  : MATCH      best=0.6641
+  Cross-Encoder : MATCH      best=0.9997
+
+────────────────────────────────────────────────────────────
+ID=5  Topic=Room
+  LLM : very clean and modern
+  GT rows for (ID=5, Topic=Room): 1
+  Best GT : Clean and modern with very comfortable beds
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.4771
+  BM25          : MATCH      best=5.5452
+  Sentence Emb  : MATCH      best=0.6667
+  Cross-Encoder : MATCH      best=0.9938
+
+────────────────────────────────────────────────────────────
+ID=5  Topic=Room
+  LLM : and very comfortable beds
+  GT rows for (ID=5, Topic=Room): 1
+  Best GT : Clean and modern with very comfortable beds
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.4771
+  BM25          : MATCH      best=5.5452
+  Sentence Emb  : MATCH      best=0.6666
+  Cross-Encoder : MATCH      best=0.9995
+
+────────────────────────────────────────────────────────────
+ID=5  Topic=Room
+  LLM : in a very convenient location.
+  GT rows for (ID=5, Topic=Room): 1
+  Best GT : Clean and modern with very comfortable beds
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.0561
+  BM25          : MATCH      best=1.3863
+  Sentence Emb  : NO MATCH   best=0.1458
+  Cross-Encoder : NO MATCH   best=0.0000
+
+────────────────────────────────────────────────────────────
+ID=5  Topic=Location
+  LLM : in a very convenient location.
+  GT rows for (ID=5, Topic=Location): 1
+  Best GT : in a very convenient location.  An easy stroll to numerous nice restaurants and a great beach.
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.3880
+  BM25          : MATCH      best=7.2285
+  Sentence Emb  : MATCH      best=0.6677
+  Cross-Encoder : MATCH      best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=5  Topic=Location
+  LLM : a great beach.
+  GT rows for (ID=5, Topic=Location): 1
+  Best GT : in a very convenient location.  An easy stroll to numerous nice restaurants and a great beach.
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.2440
+  BM25          : MATCH      best=4.4559
+  Sentence Emb  : MATCH      best=0.7141
+  Cross-Encoder : MATCH      best=0.9923
+
+────────────────────────────────────────────────────────────
+ID=5  Topic=Food
+  LLM : nice restaurants
+  GT rows for (ID=5, Topic=Food): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=5  Topic=Off
+  LLM : Not applicable
+  GT rows for (ID=5, Topic=Off): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=6  Topic=Room
+  LLM : The room was exceptionally clean.
+  GT rows for (ID=6, Topic=Room): 1
+  Best GT : The room was exceptionally clean with a really comfortable bed
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : MATCH      best=0.6024
+  BM25          : MATCH      best=6.9315
+  Sentence Emb  : MATCH      best=0.8571
+  Cross-Encoder : MATCH      best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=6  Topic=Off
+  LLM : Not applicable
+  GT rows for (ID=6, Topic=Off): 1
+  Best GT : We only stayed over night before heading to the airport.
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.0000
+  BM25          : NO MATCH   best=0.0000
+  Sentence Emb  : NO MATCH   best=0.0672
+  Cross-Encoder : NO MATCH   best=0.0000
+
+────────────────────────────────────────────────────────────
+ID=7  Topic=Room
+  LLM : The room was spotless.
+  GT rows for (ID=7, Topic=Room): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=7  Topic=Staff
+  LLM : Staff were lovely.
+  GT rows for (ID=7, Topic=Staff): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=7  Topic=Location
+  LLM : Great location for restaurants.
+  GT rows for (ID=7, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=7  Topic=Location
+  LLM : Great location for a short drive to the airport.
+  GT rows for (ID=7, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=7  Topic=Off
+  LLM : Not applicable
+  GT rows for (ID=7, Topic=Off): 1
+  Best GT : great
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.0000
+  BM25          : NO MATCH   best=0.0000
+  Sentence Emb  : NO MATCH   best=0.2690
+  Cross-Encoder : NO MATCH   best=0.0000
+
+────────────────────────────────────────────────────────────
+ID=8  Topic=Room
+  LLM : The room was spotless.
+  GT rows for (ID=8, Topic=Room): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=8  Topic=Room
+  LLM : not big
+  GT rows for (ID=8, Topic=Room): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=8  Topic=Staff
+  LLM : The staff was very nice and helpful!
+  GT rows for (ID=8, Topic=Staff): 1
+  Best GT : lovely personal
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.0000
+  BM25          : NO MATCH   best=0.0000
+  Sentence Emb  : NO MATCH   best=0.1646
+  Cross-Encoder : NO MATCH   best=0.0028
+
+────────────────────────────────────────────────────────────
+ID=8  Topic=Staff
+  LLM : very friendly staff.
+  GT rows for (ID=8, Topic=Staff): 1
+  Best GT : lovely personal
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.0000
+  BM25          : NO MATCH   best=0.0000
+  Sentence Emb  : NO MATCH   best=0.2516
+  Cross-Encoder : NO MATCH   best=0.0112
+
+────────────────────────────────────────────────────────────
+ID=8  Topic=Staff
+  LLM : the staff went out of their way to move us to a quieter room at no extra charge.
+  GT rows for (ID=8, Topic=Staff): 1
+  Best GT : lovely personal
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.0000
+  BM25          : NO MATCH   best=0.0000
+  Sentence Emb  : NO MATCH   best=-0.0070
+  Cross-Encoder : NO MATCH   best=0.0006
+
+────────────────────────────────────────────────────────────
+ID=8  Topic=Location
+  LLM : nice location,
+  GT rows for (ID=8, Topic=Location): 1
+  Best GT : nice location
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : MATCH      best=1.0000
+  BM25          : MATCH      best=2.7726
+  Sentence Emb  : MATCH      best=0.9230
+  Cross-Encoder : MATCH      best=0.9968
+
+────────────────────────────────────────────────────────────
+ID=8  Topic=Location
+  LLM : Surrounding buildings are under construction and poorly lit.
+  GT rows for (ID=8, Topic=Location): 1
+  Best GT : nice location
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.0000
+  BM25          : NO MATCH   best=0.0000
+  Sentence Emb  : NO MATCH   best=0.1576
+  Cross-Encoder : NO MATCH   best=0.0001
+
+────────────────────────────────────────────────────────────
+ID=8  Topic=Off
+  LLM : nothing
+  GT rows for (ID=8, Topic=Off): 1
+  Best GT : renovated, nothing
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.4494
+  BM25          : MATCH      best=1.3863
+  Sentence Emb  : NO MATCH   best=0.4652
+  Cross-Encoder : MATCH      best=0.7886
+
+────────────────────────────────────────────────────────────
+ID=10  Topic=Room
+  LLM : Great modern room
+  GT rows for (ID=10, Topic=Room): 1
+  Best GT : Great modern room comfortable bed
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : MATCH      best=0.6225
+  BM25          : MATCH      best=4.1589
+  Sentence Emb  : MATCH      best=0.7828
+  Cross-Encoder : MATCH      best=0.9974
+
+────────────────────────────────────────────────────────────
+ID=10  Topic=Room
+  LLM : comfortable bed and quiet location.
+  GT rows for (ID=10, Topic=Room): 1
+  Best GT : Great modern room comfortable bed
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.2020
+  BM25          : MATCH      best=2.7726
+  Sentence Emb  : MATCH      best=0.6591
+  Cross-Encoder : MATCH      best=0.7373
+
+────────────────────────────────────────────────────────────
+ID=10  Topic=Location
+  LLM : quiet location
+  GT rows for (ID=10, Topic=Location): 1
+  Best GT : quiet location
+  Parity        : MATCH      best=1.0000
+  TF-IDF        : MATCH      best=1.0000
+  BM25          : MATCH      best=2.7726
+  Sentence Emb  : MATCH      best=1.0000
+  Cross-Encoder : MATCH      best=0.9989
+
+────────────────────────────────────────────────────────────
+ID=10  Topic=Off
+  LLM : Not applicable
+  GT rows for (ID=10, Topic=Off): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=11  Topic=Room
+  LLM : The room was spotless.
+  GT rows for (ID=11, Topic=Room): 1
+  Best GT : The rooms are spacious and clean great to stay .. I even got an upgrade
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.0401
+  BM25          : MATCH      best=1.3863
+  Sentence Emb  : NO MATCH   best=0.3503
+  Cross-Encoder : NO MATCH   best=0.0013
+
+────────────────────────────────────────────────────────────
+ID=11  Topic=Staff
+  LLM : Maria at reception is just great she really took time to explain where to go how to get there and so
+  GT rows for (ID=11, Topic=Staff): 1
+  Best GT : The staff here are amazing beyond expectations..*****
+  Maria at reception is just great she really 
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : MATCH      best=0.5170
+  BM25          : MATCH      best=33.9363
+  Sentence Emb  : MATCH      best=0.6290
+  Cross-Encoder : MATCH      best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=11  Topic=Staff
+  LLM : Richard the chef this guy is like the friendliest guy ever, such a nice guy with a permanent. Smile 
+  GT rows for (ID=11, Topic=Staff): 1
+  Best GT : The staff here are amazing beyond expectations..*****
+  Maria at reception is just great she really 
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.4147
+  BM25          : MATCH      best=28.9725
+  Sentence Emb  : MATCH      best=0.5495
+  Cross-Encoder : MATCH      best=0.9995
+
+────────────────────────────────────────────────────────────
+ID=11  Topic=Location
+  LLM : The bus stop which goes to and from the airport as well as the town center is a minutes walk away an
+  GT rows for (ID=11, Topic=Location): 1
+  Best GT : The bus stop which goes to and from the airport as well as the town center is a minutes walk away an
+  Parity        : MATCH      best=1.0000
+  TF-IDF        : MATCH      best=1.0000
+  BM25          : MATCH      best=37.2319
+  Sentence Emb  : MATCH      best=1.0000
+  Cross-Encoder : MATCH      best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=11  Topic=Food
+  LLM : Oh yeah the food is great to and very reasonable prices 
+  GT rows for (ID=11, Topic=Food): 1
+  Best GT : Oh yeah the food is great to and very reasonable prices ..
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : MATCH      best=1.0000
+  BM25          : MATCH      best=15.2492
+  Sentence Emb  : MATCH      best=0.9857
+  Cross-Encoder : MATCH      best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=11  Topic=Price
+  LLM : I don't think I need to mention where I'll be staying next time I'm in Larnaka.. 
+  GT rows for (ID=11, Topic=Price): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=11  Topic=Off
+  LLM : Not applicable
+  GT rows for (ID=11, Topic=Off): 1
+  Best GT : My second time here and true to say it was better than the first which was excellent. I don't think 
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.0000
+  BM25          : NO MATCH   best=0.0000
+  Sentence Emb  : NO MATCH   best=0.0050
+  Cross-Encoder : NO MATCH   best=0.0000
+
+────────────────────────────────────────────────────────────
+ID=12  Topic=Room
+  LLM : The room was clean and comfortable.
+  GT rows for (ID=12, Topic=Room): 1
+  Best GT : Very clean and comfortable.
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.4071
+  BM25          : MATCH      best=4.1589
+  Sentence Emb  : MATCH      best=0.5854
+  Cross-Encoder : MATCH      best=0.9869
+
+────────────────────────────────────────────────────────────
+ID=12  Topic=Staff
+  LLM : The staff were exceptional. So helpful and friendly.
+  GT rows for (ID=12, Topic=Staff): 1
+  Best GT : The staff were exceptional. So helpful and friendly. Went out of their way for us.
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : MATCH      best=0.5930
+  BM25          : MATCH      best=11.0904
+  Sentence Emb  : MATCH      best=0.9529
+  Cross-Encoder : MATCH      best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=12  Topic=Staff
+  LLM : Went out of their way for us.
+  GT rows for (ID=12, Topic=Staff): 1
+  Best GT : The staff were exceptional. So helpful and friendly. Went out of their way for us.
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : MATCH      best=0.5399
+  BM25          : MATCH      best=9.7041
+  Sentence Emb  : NO MATCH   best=0.4967
+  Cross-Encoder : MATCH      best=0.9997
+
+────────────────────────────────────────────────────────────
+ID=12  Topic=Location
+  LLM : The hotel was located in a great area.
+  GT rows for (ID=12, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=12  Topic=Food
+  LLM : The breakfast was lovely with room service too.
+  GT rows for (ID=12, Topic=Food): 1
+  Best GT : The breakfast was lovely with room service too.
+  Parity        : MATCH      best=1.0000
+  TF-IDF        : MATCH      best=1.0000
+  BM25          : MATCH      best=11.0904
+  Sentence Emb  : MATCH      best=1.0000
+  Cross-Encoder : MATCH      best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=12  Topic=Check-in
+  LLM : We had a smooth check-in process.
+  GT rows for (ID=12, Topic=Check-in): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=12  Topic=Off
+  LLM : Couldn’t stay longer.
+  GT rows for (ID=12, Topic=Off): 1
+  Best GT : Couldn’t stay longer
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : MATCH      best=1.0000
+  BM25          : MATCH      best=5.5452
+  Sentence Emb  : MATCH      best=0.9661
+  Cross-Encoder : MATCH      best=0.9995
+
+────────────────────────────────────────────────────────────
+ID=13  Topic=Room
+  LLM : The rooms are lovely and new, very clean and comfortable.
+  GT rows for (ID=13, Topic=Room): 1
+  Best GT : The rooms are lovely and new, very clean and comfortable. The mattress was to my taste.
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : MATCH      best=0.7099
+  BM25          : MATCH      best=14.7541
+  Sentence Emb  : MATCH      best=0.8623
+  Cross-Encoder : MATCH      best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=13  Topic=Room
+  LLM : The mattress was to my taste.
+  GT rows for (ID=13, Topic=Room): 1
+  Best GT : The rooms are lovely and new, very clean and comfortable. The mattress was to my taste.
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.4857
+  BM25          : MATCH      best=8.6148
+  Sentence Emb  : MATCH      best=0.6114
+  Cross-Encoder : MATCH      best=0.9994
+
+────────────────────────────────────────────────────────────
+ID=13  Topic=Staff
+  LLM : The staff are so welcoming, we felt like staying with family.
+  GT rows for (ID=13, Topic=Staff): 1
+  Best GT : The staff are so welcoming, we felt like staying with family.
+  Parity        : MATCH      best=1.0000
+  TF-IDF        : MATCH      best=1.0000
+  BM25          : MATCH      best=15.2492
+  Sentence Emb  : MATCH      best=1.0000
+  Cross-Encoder : MATCH      best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=13  Topic=Location
+  LLM : Short drive to the airport and very well located, just a short walk from the promenade, coffee shops
+  GT rows for (ID=13, Topic=Location): 1
+  Best GT : Short drive to the airport and very well located, just a short walk from the promenade, coffee shops
+  Parity        : MATCH      best=1.0000
+  TF-IDF        : MATCH      best=1.0000
+  BM25          : MATCH      best=27.5278
+  Sentence Emb  : MATCH      best=1.0000
+  Cross-Encoder : MATCH      best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=13  Topic=Location
+  LLM : Not applicable
+  GT rows for (ID=13, Topic=Location): 1
+  Best GT : Short drive to the airport and very well located, just a short walk from the promenade, coffee shops
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.0000
+  BM25          : NO MATCH   best=0.0000
+  Sentence Emb  : NO MATCH   best=-0.0235
+  Cross-Encoder : NO MATCH   best=0.0000
+
+────────────────────────────────────────────────────────────
+ID=13  Topic=Off
+  LLM : Not applicable
+  GT rows for (ID=13, Topic=Off): 1
+  Best GT : We stayed 1 week and enjoyed it very much, We would definitely stay again on our next visit to Larna
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.0000
+  BM25          : NO MATCH   best=0.0000
+  Sentence Emb  : NO MATCH   best=-0.0362
+  Cross-Encoder : NO MATCH   best=0.0000
+
+────────────────────────────────────────────────────────────
+ID=14  Topic=Room
+  LLM : We wanted a hotel for a night that is close to the airport and this hotel did that purpose more than
+  GT rows for (ID=14, Topic=Room): 1
+  Best GT : You can hear the airplanes coming and leaving from the airport all the time
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.0911
+  BM25          : MATCH      best=4.6210
+  Sentence Emb  : NO MATCH   best=0.3135
+  Cross-Encoder : NO MATCH   best=0.0007
+
+────────────────────────────────────────────────────────────
+ID=14  Topic=Room
+  LLM : There are some restaurants and bars next to the beach just 10min of walking distance from the hotel.
+  GT rows for (ID=14, Topic=Room): 1
+  Best GT : You can hear the airplanes coming and leaving from the airport all the time
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.1512
+  BM25          : MATCH      best=6.4694
+  Sentence Emb  : NO MATCH   best=0.1866
+  Cross-Encoder : NO MATCH   best=0.0000
+
+────────────────────────────────────────────────────────────
+ID=14  Topic=Staff
+  LLM : The receptionist didn't speak English properly.
+  GT rows for (ID=14, Topic=Staff): 1
+  Best GT : The receptionist didn't speak English properly
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : MATCH      best=1.0000
+  BM25          : MATCH      best=9.7041
+  Sentence Emb  : MATCH      best=0.9776
+  Cross-Encoder : MATCH      best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=14  Topic=Staff
+  LLM : The receptionist didn't speak English properly.
+  GT rows for (ID=14, Topic=Staff): 1
+  Best GT : The receptionist didn't speak English properly
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : MATCH      best=1.0000
+  BM25          : MATCH      best=9.7041
+  Sentence Emb  : MATCH      best=0.9776
+  Cross-Encoder : MATCH      best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=14  Topic=Location
+  LLM : We wanted a hotel for a night that is close to the airport and this hotel did that purpose more than
+  GT rows for (ID=14, Topic=Location): 1
+  Best GT : We wanted a hotel for a night that is close to the airport and this hotel did that purpose more than
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : MATCH      best=0.6840
+  BM25          : MATCH      best=33.6671
+  Sentence Emb  : MATCH      best=0.8411
+  Cross-Encoder : MATCH      best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=14  Topic=Location
+  LLM : There are some restaurants and bars next to the beach just 10min of walking distance from the hotel.
+  GT rows for (ID=14, Topic=Location): 1
+  Best GT : We wanted a hotel for a night that is close to the airport and this hotel did that purpose more than
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : MATCH      best=0.6342
+  BM25          : MATCH      best=26.9337
+  Sentence Emb  : MATCH      best=0.7785
+  Cross-Encoder : MATCH      best=0.9997
+
+────────────────────────────────────────────────────────────
+ID=14  Topic=Food
+  LLM : There are some restaurants and bars next to the beach just 10min of walking distance from the hotel.
+  GT rows for (ID=14, Topic=Food): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=14  Topic=Price
+  LLM : We wanted a hotel for a night that is close to the airport and this hotel did that purpose more than
+  GT rows for (ID=14, Topic=Price): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=14  Topic=Price
+  LLM : There are some restaurants and bars next to the beach just 10min of walking distance from the hotel.
+  GT rows for (ID=14, Topic=Price): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=14  Topic=Facility
+  LLM : We wanted a hotel for a night that is close to the airport and this hotel did that purpose more than
+  GT rows for (ID=14, Topic=Facility): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=14  Topic=Facility
+  LLM : There are some restaurants and bars next to the beach just 10min of walking distance from the hotel.
+  GT rows for (ID=14, Topic=Facility): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=14  Topic=Check-in
+  LLM : We wanted a hotel for a night that is close to the airport and this hotel did that purpose more than
+  GT rows for (ID=14, Topic=Check-in): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=14  Topic=Check-in
+  LLM : There are some restaurants and bars next to the beach just 10min of walking distance from the hotel.
+  GT rows for (ID=14, Topic=Check-in): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=14  Topic=Check-out
+  LLM : We wanted a hotel for a night that is close to the airport and this hotel did that purpose more than
+  GT rows for (ID=14, Topic=Check-out): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=14  Topic=Check-out
+  LLM : There are some restaurants and bars next to the beach just 10min of walking distance from the hotel.
+  GT rows for (ID=14, Topic=Check-out): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=14  Topic=Off
+  LLM : You can hear the airplanes coming and leaving from the airport all the time, so if you are sensitive
+  GT rows for (ID=14, Topic=Off): 1
+  Best GT : and you have a feeling that people are living in the hotel, rather than staying at a hotel, so if yo
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : MATCH      best=0.5720
+  BM25          : MATCH      best=44.8895
+  Sentence Emb  : MATCH      best=0.8464
+  Cross-Encoder : MATCH      best=0.7540
+
+────────────────────────────────────────────────────────────
+ID=14  Topic=Booking-issue
+  LLM : You can hear the airplanes coming and leaving from the airport all the time, so if you are sensitive
+  GT rows for (ID=14, Topic=Booking-issue): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=15  Topic=Room
+  LLM : The room was spotless.
+  GT rows for (ID=15, Topic=Room): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=15  Topic=Staff
+  LLM : The staff make it - particularly reception and the dining room.
+  GT rows for (ID=15, Topic=Staff): 1
+  Best GT : The staff make it
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : MATCH      best=0.5368
+  BM25          : MATCH      best=6.9315
+  Sentence Emb  : MATCH      best=0.6363
+  Cross-Encoder : MATCH      best=0.9489
+
+────────────────────────────────────────────────────────────
+ID=15  Topic=Location
+  LLM : Second visit - Chose really because it was reasonably close to the Airport for an early morning flig
+  GT rows for (ID=15, Topic=Location): 2
+  Best GT : Chose really because it was reasonably close to the Airport for an early morning flight, yet could h
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : MATCH      best=0.9299
+  BM25          : MATCH      best=43.9913
+  Sentence Emb  : MATCH      best=0.8850
+  Cross-Encoder : MATCH      best=0.9996
+
+────────────────────────────────────────────────────────────
+ID=15  Topic=Location
+  LLM : Nothing really
+  GT rows for (ID=15, Topic=Location): 2
+  Best GT : Chose really because it was reasonably close to the Airport for an early morning flight, yet could h
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.0545
+  BM25          : MATCH      best=2.0939
+  Sentence Emb  : NO MATCH   best=0.1276
+  Cross-Encoder : NO MATCH   best=0.0111
+
+────────────────────────────────────────────────────────────
+ID=15  Topic=Off
+  LLM : Nothing really, though for a stay for more than a few days - it is a bit on the edge of Larnaca - wi
+  GT rows for (ID=15, Topic=Off): 1
+  Best GT : Second visit. - particularly reception and the dining room, Nothing really, though for a stay for mo
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.3663
+  BM25          : MATCH      best=22.2797
+  Sentence Emb  : MATCH      best=0.6543
+  Cross-Encoder : MATCH      best=0.9653
+
+────────────────────────────────────────────────────────────
+ID=16  Topic=Room
+  LLM : they are spacious, clean, the window view is nice too.
+  GT rows for (ID=16, Topic=Room): 1
+  Best GT : I liked the rooms- they are spacious, clean, the window view is nice too.
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : MATCH      best=0.8127
+  BM25          : MATCH      best=14.1600
+  Sentence Emb  : MATCH      best=0.7463
+  Cross-Encoder : MATCH      best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=16  Topic=Room
+  LLM : the room was small and had no window.
+  GT rows for (ID=16, Topic=Room): 1
+  Best GT : I liked the rooms- they are spacious, clean, the window view is nice too.
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.0819
+  BM25          : MATCH      best=3.0697
+  Sentence Emb  : NO MATCH   best=0.3734
+  Cross-Encoder : NO MATCH   best=0.0585
+
+────────────────────────────────────────────────────────────
+ID=16  Topic=Food
+  LLM : the food there is very very tasty and made with a lot of care- they care a lot about the details: ol
+  GT rows for (ID=16, Topic=Food): 1
+  Best GT : The restaurant downstairs is amazing- the food there is very very tasty and made with a lot of care-
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : MATCH      best=0.8841
+  BM25          : MATCH      best=41.0277
+  Sentence Emb  : MATCH      best=0.7812
+  Cross-Encoder : MATCH      best=0.9997
+
+────────────────────────────────────────────────────────────
+ID=16  Topic=Off
+  LLM : Not applicable
+  GT rows for (ID=16, Topic=Off): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=17  Topic=Room
+  LLM : Our room had a balcony with great view of the sea and surrounding area.
+  GT rows for (ID=17, Topic=Room): 1
+  Best GT : Our room had a balcony with great view of the sea and surrounding area.
+  Parity        : MATCH      best=1.0000
+  TF-IDF        : MATCH      best=1.0000
+  BM25          : MATCH      best=19.4081
+  Sentence Emb  : MATCH      best=1.0000
+  Cross-Encoder : MATCH      best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=17  Topic=Staff
+  LLM : The owner and staff were exceptionally friendly and supportive and helped with all our wishes.
+  GT rows for (ID=17, Topic=Staff): 1
+  Best GT : The owner and staff were exceptionally friendly and supportive and helped with all our wishes.
+  Parity        : MATCH      best=1.0000
+  TF-IDF        : MATCH      best=1.0000
+  BM25          : MATCH      best=22.1807
+  Sentence Emb  : MATCH      best=1.0000
+  Cross-Encoder : MATCH      best=1.0000
+
+────────────────────────────────────────────────────────────
+ID=17  Topic=Off
+  LLM : -
+  GT rows for (ID=17, Topic=Off): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=18  Topic=Room
+  LLM : The room was spotless.
+  GT rows for (ID=18, Topic=Room): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=18  Topic=Staff
+  LLM : with extremely friendly reception and dining staff
+  GT rows for (ID=18, Topic=Staff): 1
+  Best GT : with extremely friendly reception and dining staff,
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : MATCH      best=1.0000
+  BM25          : MATCH      best=9.7041
+  Sentence Emb  : MATCH      best=0.9911
+  Cross-Encoder : MATCH      best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=18  Topic=Staff
+  LLM : very bright, nice seating areas inside and out.
+  GT rows for (ID=18, Topic=Staff): 1
+  Best GT : with extremely friendly reception and dining staff,
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.0376
+  BM25          : MATCH      best=1.3863
+  Sentence Emb  : NO MATCH   best=0.4620
+  Cross-Encoder : NO MATCH   best=0.0029
+
+────────────────────────────────────────────────────────────
+ID=18  Topic=Staff
+  LLM : Meals well prepared and good value.
+  GT rows for (ID=18, Topic=Staff): 1
+  Best GT : with extremely friendly reception and dining staff,
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.0442
+  BM25          : MATCH      best=1.3863
+  Sentence Emb  : NO MATCH   best=0.4491
+  Cross-Encoder : NO MATCH   best=0.0002
+
+────────────────────────────────────────────────────────────
+ID=18  Topic=Staff
+  LLM : Bus every 20 minutes to the centre of Larnaka.
+  GT rows for (ID=18, Topic=Staff): 1
+  Best GT : with extremely friendly reception and dining staff,
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.0000
+  BM25          : NO MATCH   best=0.0000
+  Sentence Emb  : NO MATCH   best=0.2853
+  Cross-Encoder : NO MATCH   best=0.0001
+
+────────────────────────────────────────────────────────────
+ID=18  Topic=Location
+  LLM : A family run hotel
+  GT rows for (ID=18, Topic=Location): 1
+  Best GT : Bus every 20 minutes to the centre of Larnaka.
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.0000
+  BM25          : NO MATCH   best=0.0000
+  Sentence Emb  : NO MATCH   best=0.2104
+  Cross-Encoder : NO MATCH   best=0.0000
+
+────────────────────────────────────────────────────────────
+ID=18  Topic=Location
+  LLM : with extremely friendly reception and dining staff
+  GT rows for (ID=18, Topic=Location): 1
+  Best GT : Bus every 20 minutes to the centre of Larnaka.
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.0000
+  BM25          : NO MATCH   best=0.0000
+  Sentence Emb  : NO MATCH   best=0.2830
+  Cross-Encoder : NO MATCH   best=0.0000
+
+────────────────────────────────────────────────────────────
+ID=18  Topic=Location
+  LLM : very bright, nice seating areas inside and out.
+  GT rows for (ID=18, Topic=Location): 1
+  Best GT : Bus every 20 minutes to the centre of Larnaka.
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.0000
+  BM25          : NO MATCH   best=0.0000
+  Sentence Emb  : NO MATCH   best=0.1802
+  Cross-Encoder : NO MATCH   best=0.0000
+
+────────────────────────────────────────────────────────────
+ID=18  Topic=Location
+  LLM : Meals well prepared and good value.
+  GT rows for (ID=18, Topic=Location): 1
+  Best GT : Bus every 20 minutes to the centre of Larnaka.
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.0000
+  BM25          : NO MATCH   best=0.0000
+  Sentence Emb  : NO MATCH   best=0.1290
+  Cross-Encoder : NO MATCH   best=0.0000
+
+────────────────────────────────────────────────────────────
+ID=18  Topic=Location
+  LLM : Bus every 20 minutes to the centre of Larnaka.
+  GT rows for (ID=18, Topic=Location): 1
+  Best GT : Bus every 20 minutes to the centre of Larnaka.
+  Parity        : MATCH      best=1.0000
+  TF-IDF        : MATCH      best=1.0000
+  BM25          : MATCH      best=12.4766
+  Sentence Emb  : MATCH      best=1.0000
+  Cross-Encoder : MATCH      best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=18  Topic=Food
+  LLM : Meals well prepared and good value.
+  GT rows for (ID=18, Topic=Food): 1
+  Best GT : Meals well prepared and good value.
+  Parity        : MATCH      best=1.0000
+  TF-IDF        : MATCH      best=1.0000
+  BM25          : MATCH      best=8.3178
+  Sentence Emb  : MATCH      best=1.0000
+  Cross-Encoder : MATCH      best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=18  Topic=Price
+  LLM : considering the price
+  GT rows for (ID=18, Topic=Price): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=18  Topic=Off
+  LLM : Nothing
+  GT rows for (ID=18, Topic=Off): 1
+  Best GT : A family run hotel, very bright, nice seating areas inside and out.
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.0000
+  BM25          : NO MATCH   best=0.0000
+  Sentence Emb  : NO MATCH   best=0.0969
+  Cross-Encoder : NO MATCH   best=0.0001
+
+────────────────────────────────────────────────────────────
+ID=19  Topic=Room
+  LLM : The room was clean and comfortable.
+  GT rows for (ID=19, Topic=Room): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=19  Topic=Staff
+  LLM : The staff were very helpful and friendly.
+  GT rows for (ID=19, Topic=Staff): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=19  Topic=Staff
+  LLM : They were very polite and courteous.
+  GT rows for (ID=19, Topic=Staff): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=19  Topic=Location
+  LLM : It's close to the airport.
+  GT rows for (ID=19, Topic=Location): 1
+  Best GT : Close to airport
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.4393
+  BM25          : MATCH      best=4.1589
+  Sentence Emb  : MATCH      best=0.8972
+  Cross-Encoder : MATCH      best=0.9974
+
+────────────────────────────────────────────────────────────
+ID=19  Topic=Location
+  LLM : The location is great for travelers.
+  GT rows for (ID=19, Topic=Location): 1
+  Best GT : Close to airport
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.0000
+  BM25          : NO MATCH   best=0.0000
+  Sentence Emb  : NO MATCH   best=0.4649
+  Cross-Encoder : NO MATCH   best=0.0016
+
+────────────────────────────────────────────────────────────
+ID=19  Topic=Location
+  LLM : The hotel is located near the airport.
+  GT rows for (ID=19, Topic=Location): 1
+  Best GT : Close to airport
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.0626
+  BM25          : MATCH      best=1.3863
+  Sentence Emb  : MATCH      best=0.6093
+  Cross-Encoder : MATCH      best=0.5532
+
+────────────────────────────────────────────────────────────
+ID=19  Topic=Off
+  LLM : Nothing at all
+  GT rows for (ID=19, Topic=Off): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=20  Topic=Room
+  LLM : clean
+  GT rows for (ID=20, Topic=Room): 1
+  Best GT : clean
+  Parity        : MATCH      best=1.0000
+  TF-IDF        : MATCH      best=1.0000
+  BM25          : MATCH      best=1.3863
+  Sentence Emb  : MATCH      best=1.0000
+  Cross-Encoder : MATCH      best=0.9285
+
+────────────────────────────────────────────────────────────
+ID=20  Topic=Room
+  LLM : The room was spotless.
+  GT rows for (ID=20, Topic=Room): 1
+  Best GT : clean
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.0000
+  BM25          : NO MATCH   best=0.0000
+  Sentence Emb  : NO MATCH   best=0.1466
+  Cross-Encoder : NO MATCH   best=0.0001
+
+────────────────────────────────────────────────────────────
+ID=20  Topic=Staff
+  LLM : friendly stuff
+  GT rows for (ID=20, Topic=Staff): 1
+  Best GT : friendly stuff
+  Parity        : MATCH      best=1.0000
+  TF-IDF        : MATCH      best=1.0000
+  BM25          : MATCH      best=2.7726
+  Sentence Emb  : MATCH      best=1.0000
+  Cross-Encoder : MATCH      best=0.9997
+
+────────────────────────────────────────────────────────────
+ID=20  Topic=Staff
+  LLM : Staff were lovely.
+  GT rows for (ID=20, Topic=Staff): 1
+  Best GT : friendly stuff
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.0000
+  BM25          : NO MATCH   best=0.0000
+  Sentence Emb  : NO MATCH   best=0.2967
+  Cross-Encoder : NO MATCH   best=0.0004
+
+────────────────────────────────────────────────────────────
+ID=20  Topic=Location
+  LLM : location
+  GT rows for (ID=20, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=20  Topic=Location
+  LLM : Great location for restaurants.
+  GT rows for (ID=20, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=20  Topic=Location
+  LLM : Great location for a short drive to the airport.
+  GT rows for (ID=20, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=20  Topic=Off
+  LLM : Not applicable
+  GT rows for (ID=20, Topic=Off): 1
+  Best GT : location
+  Parity        : NO MATCH   best=0.0000
+  TF-IDF        : NO MATCH   best=0.0000
+  BM25          : NO MATCH   best=0.0000
+  Sentence Emb  : NO MATCH   best=0.2690
+  Cross-Encoder : NO MATCH   best=0.0001

@@ -1,0 +1,1016 @@
+Review ID,Run,Valid,Topic,Text Span,Errors
+1,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 330 (char 329)
+2,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 233 (char 232)
+3,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 31 (char 30)
+4,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 54 (char 53)
+5,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 219 (char 218)
+6,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 114 (char 113)
+7,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 306 (char 305)"
+8,1,False,Location,"nice location,",
+8,1,False,Staff,"lovely personal,",
+8,1,False,Facility,"renovated,",
+9,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 154 (char 153)
+10,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 151 (char 150)
+11,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 820 (char 819)
+12,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 236 (char 235)
+13,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 384 (char 383)
+14,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 536 (char 535)
+15,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 385 (char 384)
+16,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 333 (char 332)
+17,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 244 (char 243)
+18,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 180 (char 179)
+19,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 31 (char 30)
+20,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 106 (char 105)
+21,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 368 (char 367)
+22,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 764 (char 763)
+23,1,False,Room,the beds were very comfortable,
+24,1,False,Room,I loved the mattress!!!,
+25,1,False,Room,Clean and quiet,
+26,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 578 (char 577)
+27,1,False,Room,"so comfortable, clean,",
+27,1,False,Staff,friendly staff.,
+27,1,False,Location,perfect for overnight stay before flying from Larnaca Airport.,
+28,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 175 (char 174)
+29,1,False,Room,very clean functional rooms.,
+29,1,False,Staff,lovely and very helpful staff.,
+29,1,False,Off,I would have liked an ironing board in the room.,
+30,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 111 (char 110)
+31,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 375 (char 374)
+32,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 129 (char 128)
+33,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 387 (char 386)
+34,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 27 (char 26)
+35,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 27 (char 26)
+36,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 622 (char 621)
+37,1,False,Room,"Really clean ,",
+37,1,False,Staff,lovely caring staff.,
+37,1,False,Location,The bus to the airport is close by and runs every 15 minutes.,
+38,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 344 (char 343)"
+39,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 27 (char 26)
+40,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 430 (char 429)
+41,1,False,Staff,Super friendly and helpful staff.,
+41,1,False,Location,"A good location 5 lins away from the airport by car, 5 mins walk to the beach.",
+41,1,False,Room,"Clean modern rooms,",
+41,1,False,Food,very nice breakfast.,
+42,1,False,Room,clean,
+43,1,False,Room,clean spacious practical,
+44,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 276 (char 275)
+45,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 261 (char 260)
+46,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 28 (char 27)
+47,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 180 (char 179)"
+48,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 119 (char 118)
+49,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 141 (char 140)
+50,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 78 (char 77)
+51,1,False,Location,"Near airport,",
+51,1,False,Room,"nice clean room, very well kept.",
+51,1,False,Staff,staff very helpful and friendly.,
+51,1,False,Food,good food,
+52,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 356 (char 355)
+53,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 168 (char 167)
+54,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 27 (char 26)
+55,1,False,Location,Good for airport transfers,
+56,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 333 (char 332)
+57,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 379 (char 378)
+58,1,False,Location,"Close to the airport,",
+58,1,False,Staff,the staff were nice and helpful.,
+58,1,False,Room,The room wasn't soundproof so you can hear the planes.,
+59,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 195 (char 194)
+60,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 28 (char 27)
+61,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 77 (char 76)
+62,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 380 (char 379)
+63,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 304 (char 303)
+64,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 392 (char 391)
+65,1,False,Room,"The property was clean, bed was comfortable",
+65,1,False,Food,and the food and staff were really good.,
+65,1,False,Location,Location was great and easy to get to and from.,
+66,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 426 (char 425)
+67,1,False,Staff,friendly staff,
+68,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 157 (char 156)"
+69,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 28 (char 27)
+70,1,False,Room,Peaceful and clean,
+70,1,False,Staff,friendly helpful staff,
+71,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 165 (char 164)
+72,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 116 (char 115)
+73,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 135 (char 134)
+74,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 518 (char 517)"
+75,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 27 (char 26)
+76,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 139 (char 138)
+77,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 158 (char 157)
+78,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 60 (char 59)
+79,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 121 (char 120)"
+80,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 171 (char 170)
+81,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 184 (char 183)"
+82,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 202 (char 201)"
+83,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 153 (char 152)
+84,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 338 (char 337)
+85,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 207 (char 206)
+86,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 191 (char 190)
+87,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 116 (char 115)
+88,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 183 (char 182)"
+89,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 201 (char 200)
+90,1,False,Location,"position,",
+90,1,False,Staff,staff,
+90,1,False,Room,and very clean,
+90,1,False,Facility,parking not always easy,
+91,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 171 (char 170)
+92,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 119 (char 118)
+93,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 66 (char 65)
+94,1,False,Staff,"Amazing staff,",
+94,1,False,Facility,modern facility,
+94,1,False,Food,very tasty food with a super service at the restaurant by the hotel.,
+95,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 102 (char 101)
+96,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 210 (char 209)"
+97,1,False,Room,"The food we had was excellent,",
+97,1,False,Staff,service was excellent,
+97,1,False,Location,we will go back.,
+98,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 537 (char 536)"
+99,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 84 (char 83)"
+100,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 189 (char 188)
+101,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 88 (char 87)
+102,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 277 (char 276)
+103,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 291 (char 290)
+104,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 104 (char 103)
+105,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 160 (char 159)
+106,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 314 (char 313)
+107,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 258 (char 257)
+108,1,False,Room,everything,
+109,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 137 (char 136)
+110,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 171 (char 170)
+111,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 69 (char 68)
+112,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 59 (char 58)
+113,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 134 (char 133)
+114,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 320 (char 319)
+115,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 200 (char 199)
+116,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 96 (char 95)
+117,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 31 (char 30)
+118,1,False,Location,location near the airport and beach 10/10.,
+118,1,False,Staff,front desk are absolutely perfect 10/10,
+118,1,False,Food,hotel restaurant delicious! 10/10,
+118,1,False,Room,the room perfect!,
+119,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 563 (char 562)
+120,1,False,Staff,Helpful staff,
+120,1,False,Location,close to airport,
+120,1,False,Room,The room was small but adequate,
+121,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 334 (char 333)
+122,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 100 (char 99)
+123,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 259 (char 258)"
+124,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 28 (char 27)
+125,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 519 (char 518)
+126,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 153 (char 152)
+127,1,False,Room,very clean and modern,
+128,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 129 (char 128)
+129,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 387 (char 386)
+130,1,False,Room,that your hotel allowed to stay with animals,
+131,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 431 (char 430)
+132,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 140 (char 139)
+133,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 142 (char 141)
+134,1,False,Room,"La veranda was lovely and clean,",
+134,1,False,Staff,great friendly staff,
+134,1,False,Location,Brilliant location for beach and bars.,
+135,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 183 (char 182)
+136,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 132 (char 131)
+137,1,False,Room,Room was clean and the bed was comfortable,
+137,1,False,Room,The smell in the bathroom,
+137,1,False,Staff,Friendly staff,
+137,1,False,Location,great location,
+138,1,False,Location,"Great localization,",
+138,1,False,Staff,"very helpful and kind personel,",
+138,1,False,Room,"very clean room and bathroom,",
+139,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 135 (char 134)
+140,1,False,Room,"Very clean, comfy bed,",
+140,1,False,Location,"close to the airport,",
+140,1,False,Check-in,"easy self check-in,",
+140,1,False,Food,great breakfast.,
+141,1,False,Room,It felt like a home from home.,
+141,1,False,Room,Fantastic hotel,
+141,1,False,Staff,wonderful staff.,
+141,1,False,Location,There was nothing not to like. Fabulous place.,
+142,1,False,Staff,friendly staff,
+142,1,False,Location,near mackenzie beach,
+143,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 31 (char 30)
+144,1,False,Room,nice and clean,
+145,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 468 (char 467)
+146,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 186 (char 185)
+147,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 53 (char 52)
+148,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 78 (char 77)
+149,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 396 (char 395)"
+150,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 92 (char 91)
+151,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 49 (char 48)
+152,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 300 (char 299)
+153,1,False,Location,"very close to the airport after a late flight,",
+153,1,False,Staff,lovely friendly staff who checked us in quickly,
+153,1,False,Room,"beautiful, spotless room. really comfortable nights sleep in an air conditioned room after a great shower.",
+153,1,False,Food,beautiful fresh breakfast which was very reasonably priced.,
+154,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 62 (char 61)
+155,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 334 (char 333)
+156,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 278 (char 277)
+157,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 142 (char 141)
+158,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 339 (char 338)"
+159,1,False,Room,"Clean rooms,",
+159,1,False,Staff,very friendly staff,
+159,1,False,Location,and great location as it is close to the airport.,
+160,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 67 (char 66)
+161,1,False,Staff,"the staff,",
+161,1,False,Room,"the cleanness,",
+161,1,False,Price,"the price,",
+161,1,False,Check-out,check out time,
+162,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 144 (char 143)
+163,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 31 (char 30)
+164,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 179 (char 178)
+165,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 107 (char 106)
+166,1,False,Room,very clean and homely,
+167,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 96 (char 95)
+168,1,False,Staff,The staff are good,
+168,1,False,Room,The room is clean.,
+168,1,False,Location,"We liked the location, near the airport and at the same time short walking distance to the beach and restaurants,",
+168,1,False,Food,"The food at the restaurant is a must try, pretty delicious.",
+169,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 198 (char 197)
+170,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 114 (char 113)
+171,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 617 (char 616)
+172,1,False,Staff,Personal was friendly..,
+172,1,False,Room,Everything was clean.,
+172,1,False,Facility,Nice place..,
+173,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 184 (char 183)
+174,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 350 (char 349)
+175,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 31 (char 30)
+176,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 27 (char 26)
+177,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 83 (char 82)
+178,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 27 (char 26)
+179,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 209 (char 208)
+180,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 251 (char 250)
+181,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 107 (char 106)
+182,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 65 (char 64)
+183,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 258 (char 257)
+184,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 174 (char 173)
+185,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 339 (char 338)
+186,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 28 (char 27)
+187,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 105 (char 104)
+188,1,False,Staff,lovely,
+189,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 630 (char 629)
+190,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 427 (char 426)"
+191,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 86 (char 85)"
+192,1,False,Staff,staff was amazing.,
+192,1,False,Location,location,
+192,1,False,Room,and cleanliness.,
+193,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 94 (char 93)
+194,1,False,Location,"Good location,",
+194,1,False,Staff,"friendly people,",
+194,1,False,Room,good a/c,
+195,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 183 (char 182)"
+196,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 67 (char 66)
+197,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 31 (char 30)
+198,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 474 (char 473)
+199,1,False,Room,"it is clean, beautiful",
+199,1,False,Location,"being 5 minute walk from the beach, restaurants and cafés.",
+199,1,False,Staff,kind service with a smile!,
+200,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 143 (char 142)
+201,1,False,Room,flexibility,
+202,1,False,Room,"Super clean,",
+202,1,False,Location,"close to the beach and great restaurants,",
+202,1,False,Staff,"the staff is exceptionally nice,",
+203,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 147 (char 146)
+204,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 78 (char 77)
+205,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 27 (char 26)
+206,1,False,Staff,Welcoming owners,
+206,1,False,Location,The beach is less than 5 minutes away.,
+206,1,False,Price,Good value.,
+207,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 199 (char 198)
+208,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 79 (char 78)
+209,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 143 (char 142)
+210,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 184 (char 183)
+211,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 227 (char 226)
+212,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 186 (char 185)
+213,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 176 (char 175)
+214,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 105 (char 104)
+215,1,False,Room,clean and simple,
+216,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 464 (char 463)"
+217,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 58 (char 57)
+218,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 162 (char 161)
+219,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 109 (char 108)
+220,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 451 (char 450)
+221,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 394 (char 393)
+222,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 334 (char 333)
+223,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 28 (char 27)
+224,1,False,Staff,Staff very friendly and very helpful.,
+224,1,False,Room,Very comfortable nights sleep,
+224,1,False,Location,Parking in the area is always possible but not necessarily the most convenient,
+225,1,False,Room,Everything,
+226,1,False,Staff,Excellent staff in this family driven hotel. Very helpful and pleasant people who speak perfect English and couldn't have been better -- all the way from the booking process and online dialog to putting us on a taxi to the airport!,
+226,1,False,Location,The backyard itself could actually have been used so much better.,
+226,1,False,Food,"there is not much extra in this hotel or in the room. 
+  
+  - The out-of-order pool table hidden away in the backyard should be brought back to life.
+  - The backyard itself could actually have been used so much better.
+  - The small fridge in the room was warm (turned off) upon arrival and completely empty, and no local shop/kiosk nearby to fill it up. One small bottle of water upon arrival to double room feels a little poor. Would gladly have paid those 2€ more per day to have 2 bottles initially and being refilled daily with room service. A couple of cents more, to have even tea on the small welcome tray ;-)
+  - Bathroom floor gets completely wet when (carefully) showering, as only half a glass wall covers the shower.
+  - Bed frame has very sharp/hard corners, and it's easy to get hurt. Apply baby safety corners?
+  - Veranda door and main door doesn't close entirely tight so main door slams in the night when it's windy. However fixable in MacGyver way using the bed cover and a tea spoon, although a professional seal attached to the door frame would probably be a better fix long-term ;-)
+  - Beach towel services would also have been nice and useful, to avoid using lots of space/weight in baggage.
+  All in all, this hotel is great but still has room for improvement in many little details which could easily be fixed. Still getting our high rating as the staff is simply the best and made our stay a true pleasure, thus above comments should not scare anyone from booking this hotel. We highly recommend it and would definitely love to return!",
+226,1,False,Food,"All in all, this hotel is great but still has room for improvement in many little details which could easily be fixed.",
+227,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 196 (char 195)
+228,1,False,Staff,the Cyprus hospitality at the highest level. Feel at home in 1 minute with owners welcoming you with a big smile.,
+228,1,False,Location,the location is convenient,
+228,1,False,Room,and the room had a big balcony,
+229,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 140 (char 139)
+230,1,False,Location,"location,",
+230,1,False,Price,and very good value,
+231,1,False,Staff,"very friendly staff,",
+231,1,False,Room,rooms were clean,
+231,1,False,Location,and ideally situated for the airport,
+232,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 504 (char 503)
+233,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 214 (char 213)
+234,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 164 (char 163)"
+235,1,False,Location,Great location,
+235,1,False,Staff,"very welcoming staff,",
+235,1,False,Room,and very clean,
+236,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 425 (char 424)
+237,1,False,Room,clean and comfortable,
+238,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 151 (char 150)
+239,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 233 (char 232)
+240,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 488 (char 487)
+241,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 345 (char 344)
+242,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 211 (char 210)
+243,1,False,Location,near beaches and restaurants,
+244,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 1078 (char 1077)
+245,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 355 (char 354)
+246,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 447 (char 446)
+247,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 63 (char 62)
+248,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 350 (char 349)
+249,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 157 (char 156)
+250,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 433 (char 432)
+251,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 28 (char 27)
+252,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 188 (char 187)
+253,1,False,Room,cleanliness and quietness,
+254,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 186 (char 185)
+255,1,False,Location,close to the airport.,
+255,1,False,Location,"The location is super convenient, only few steps from the beach.",
+255,1,False,Staff,The staff is super friendly and attentive.,
+255,1,False,Room,The room is spacious and new.,
+256,1,False,Room,clean and modern,
+257,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 139 (char 138)"
+258,1,False,Room,"Great accommodation,",
+258,1,False,Staff,"wonderful staff,",
+258,1,False,Food,"delicious food,",
+258,1,False,Location,tranquility!,
+259,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 217 (char 216)
+260,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 308 (char 307)
+261,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 193 (char 192)
+262,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 364 (char 363)
+263,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 27 (char 26)
+264,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 64 (char 63)
+265,1,False,Staff,Very warm welcome,
+265,1,False,Room,and very clean and comfortable-,
+265,1,False,Location,as good a hotel as I’ve stayed at for £50 a night.,
+266,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 107 (char 106)
+267,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 196 (char 195)
+268,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 231 (char 230)
+269,1,False,Room,clean,
+269,1,False,Staff,super friendly,
+269,1,False,Location,convenient,
+270,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 105 (char 104)
+271,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 31 (char 30)
+272,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 323 (char 322)
+273,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 334 (char 333)
+274,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 161 (char 160)
+275,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 198 (char 197)
+276,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 227 (char 226)
+277,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 270 (char 269)
+278,1,False,Staff,"The staff were wonderful, so friendly and welcoming",
+278,1,False,Food,and the food was superb.,
+278,1,False,Location,The hotel was clean and easy for the airport.,
+279,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 308 (char 307)
+280,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 352 (char 351)
+281,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 109 (char 108)
+282,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 154 (char 153)"
+283,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 334 (char 333)
+284,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 380 (char 379)
+285,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 59 (char 58)
+286,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 31 (char 30)
+287,1,False,Room,"Very clean, nice bed and linen.",
+287,1,False,Price,Good value.,
+287,1,False,Facility,Some smell from bathroom/water.,
+288,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 309 (char 308)
+289,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 339 (char 338)"
+290,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 544 (char 543)
+291,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 131 (char 130)"
+292,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 101 (char 100)
+293,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 28 (char 27)
+294,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 60 (char 59)
+295,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 616 (char 615)
+296,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 27 (char 26)
+297,1,False,Room,recently refurbished and very clean!,
+297,1,False,Room,The room was spotless.,
+297,1,False,Staff,The staff was very nice and helpful!,
+297,1,False,Location,"nice location,",
+297,1,False,Food,"Also, the breakfast was amazing, fresh and handmade!",
+297,1,False,Price,"Also, the breakfast was amazing, fresh and handmade!",
+297,1,False,Facility,"Also, the breakfast was amazing, fresh and handmade!",
+297,1,False,Check-in,Check-in was great.,
+297,1,False,Check-out,Check-out was great.,
+297,1,False,Off,"Also, the breakfast was amazing, fresh and handmade!",
+297,1,False,Booking-issue,"Also, the breakfast was amazing, fresh and handmade!",
+297,1,False,Taxi-issue,"Also, the breakfast was amazing, fresh and handmade!",
+298,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 284 (char 283)
+299,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 377 (char 376)
+300,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 432 (char 431)
+301,1,False,Room,"Christmas vibes, nice ambiance.",
+301,1,False,Staff,Staff make you feel at home.,
+301,1,False,Location,Quiet area.,
+301,1,False,Food,everything was perfect.,
+302,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 27 (char 26)
+303,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 206 (char 205)
+304,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 600 (char 599)
+305,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 289 (char 288)
+306,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 55 (char 54)
+307,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 31 (char 30)
+308,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 125 (char 124)
+309,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 324 (char 323)
+310,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 298 (char 297)
+311,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 402 (char 401)
+312,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 315 (char 314)
+313,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 241 (char 240)
+314,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 203 (char 202)
+315,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 134 (char 133)
+316,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 311 (char 310)
+317,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 27 (char 26)
+318,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 581 (char 580)
+319,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 216 (char 215)
+320,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 95 (char 94)
+321,1,False,Room,Well organised and clean,
+322,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 234 (char 233)
+323,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 487 (char 486)
+324,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 487 (char 486)
+325,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 122 (char 121)
+326,1,False,Room,Clean and freshly renovated room,
+327,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 325 (char 324)
+328,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 425 (char 424)
+329,1,False,Room,Small and quiet,
+330,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 189 (char 188)
+331,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 67 (char 66)
+332,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 163 (char 162)
+333,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 103 (char 102)"
+334,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 204 (char 203)
+335,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 27 (char 26)
+336,1,False,Staff,Exceptionally friendly and helpful.,
+336,1,False,Room,Tastefully decorated room and super comfy bed.,
+336,1,False,Food,Dinner and breakfast were freshly made and very tasty.,
+337,1,False,Room,clean,
+337,1,False,Staff,and with excellent owners,
+337,1,False,Location,"Excellent hotel,",
+338,1,False,Staff,The family running this hotel are very friendly and welcoming! They gave us a free room upgrade.,
+338,1,False,Location,"Walking distance to the beach, restaurants and shops. It is away from traffic.",
+338,1,False,Room,Fully stocked minibar with coffee and tea-making facilities.,
+338,1,False,Price,Value for money.,
+339,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 416 (char 415)"
+340,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 373 (char 372)
+341,1,False,Staff,The owners were absolutely lovely and made sure we had everything we needed!,
+341,1,False,Room,Property was clean and modern,
+341,1,False,Location,location was good.,
+342,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 131 (char 130)
+343,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 290 (char 289)
+344,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 212 (char 211)"
+345,1,False,Room,Very modern and clean,
+346,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 102 (char 101)
+347,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 362 (char 361)
+348,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 448 (char 447)
+349,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 345 (char 344)
+350,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 257 (char 256)"
+351,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 191 (char 190)
+352,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 27 (char 26)
+353,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 445 (char 444)"
+354,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 187 (char 186)
+355,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 184 (char 183)
+356,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 242 (char 241)
+357,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 131 (char 130)
+358,1,False,Location,Location close to airport,
+359,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 90 (char 89)"
+360,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 261 (char 260)
+361,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 31 (char 30)
+362,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 306 (char 305)
+363,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 212 (char 211)
+364,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 103 (char 102)
+365,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 292 (char 291)
+366,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 478 (char 477)
+367,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 116 (char 115)
+368,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 57 (char 56)
+369,1,False,Location,Location,
+369,1,False,Staff,and staff,
+369,1,False,Food,The food was amazing at the restaurant,
+369,1,False,Room,Mostly the bathroom floor sink was closed with tapes and there was bugs under it.,
+370,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 171 (char 170)
+371,1,False,Staff,People working here are the best ever,
+372,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 148 (char 147)
+373,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 328 (char 327)
+374,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 239 (char 238)
+375,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 245 (char 244)
+376,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 334 (char 333)
+377,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 195 (char 194)"
+378,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 210 (char 209)
+379,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 251 (char 250)
+380,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 414 (char 413)
+381,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 165 (char 164)
+382,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 330 (char 329)
+383,1,False,Staff,Very friendly and helpful staff.,
+383,1,False,Facility,Clean facilities.,
+383,1,False,Food,Good breakfast,
+384,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 137 (char 136)
+385,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 28 (char 27)
+386,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 569 (char 568)
+387,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 101 (char 100)
+388,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 298 (char 297)
+389,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 248 (char 247)
+390,1,False,Staff,Very good service,
+391,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 196 (char 195)
+392,1,False,Location,"Nice location,",
+392,1,False,Room,"excellent rooms,",
+392,1,False,Staff,very friendly staff!,
+393,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 213 (char 212)
+394,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 434 (char 433)
+395,1,False,Room,Everything was perfect,
+395,1,False,Staff,Amazing place to be honest!,
+395,1,False,Location,Everything was perfect,
+396,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 237 (char 236)
+397,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 510 (char 509)
+398,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 381 (char 380)
+399,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 208 (char 207)
+400,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 448 (char 447)
+401,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 111 (char 110)
+402,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 265 (char 264)
+403,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 104 (char 103)
+404,1,False,Room,A bit small rooms,
+405,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 461 (char 460)
+406,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 501 (char 500)
+407,1,False,Room,"Nice modern bedroom,",
+407,1,False,Food,nice greek breakfast,
+407,1,False,Location,"and hotel great location,",
+408,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 117 (char 116)
+409,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 84 (char 83)
+410,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 31 (char 30)
+411,1,False,Room,perfect,
+412,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 227 (char 226)
+413,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 107 (char 106)
+414,1,False,Staff,"Great staff,",
+414,1,False,Room,"very clean and modern rooms,",
+414,1,False,Price,great value,
+415,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 326 (char 325)
+416,1,False,Staff,The staff and hosts were great!,
+416,1,False,Location,Quiet place!,
+416,1,False,Price,Value for money!,
+417,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 469 (char 468)
+418,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 138 (char 137)
+419,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 256 (char 255)"
+420,1,False,Location,A LITTLE BIT FAR FROM SEA,
+421,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 342 (char 341)
+422,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 350 (char 349)
+423,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 320 (char 319)
+424,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 244 (char 243)
+425,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 791 (char 790)
+426,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 96 (char 95)
+427,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 187 (char 186)"
+428,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 49 (char 48)
+429,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 149 (char 148)
+430,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 27 (char 26)
+431,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 193 (char 192)
+432,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 118 (char 117)
+433,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 1126 (char 1125)
+434,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 62 (char 61)
+435,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 74 (char 73)
+436,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 775 (char 774)"
+437,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 336 (char 335)
+438,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 896 (char 895)
+439,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 274 (char 273)
+440,1,False,Staff,Friendly Staff!,
+440,1,False,Staff,Very modern rooms,
+440,1,False,Room,"Bath room was cleaned rather superficially, so that medium nice with hair not being removed.",
+441,1,False,Room,the room was PERFECT.,
+441,1,False,Food,"Break fast was PERFECT,",
+441,1,False,Location,"Some issues with internet and location, bit far from the center, but very quite Area around.",
+442,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 395 (char 394)
+443,1,False,Room,"clean room,",
+443,1,False,Staff,friendly staff,
+443,1,False,Location,"off season, so no bar / restaurant/ pool, which was not clear on booking.",
+444,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 59 (char 58)
+445,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 124 (char 123)"
+446,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 168 (char 167)
+447,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 70 (char 69)
+448,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 563 (char 562)
+449,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 63 (char 62)
+450,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 95 (char 94)
+451,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 622 (char 621)
+452,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 576 (char 575)
+453,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 609 (char 608)
+454,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 31 (char 30)
+455,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 603 (char 602)
+456,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 551 (char 550)
+457,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 73 (char 72)
+458,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 59 (char 58)
+459,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 167 (char 166)
+460,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 488 (char 487)
+461,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 122 (char 121)
+462,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 118 (char 117)
+463,1,False,Room,cleanliness,
+464,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 108 (char 107)
+465,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 306 (char 305)
+466,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 31 (char 30)
+467,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 237 (char 236)
+468,1,False,Staff,"Nice staff,",
+468,1,False,Room,room very nice and clean.,
+468,1,False,Facility,Swimming pool could be cleaner.,
+469,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 144 (char 143)
+470,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 166 (char 165)
+471,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 369 (char 368)
+472,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 254 (char 253)
+473,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 129 (char 128)
+474,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 223 (char 222)
+475,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 27 (char 26)
+476,1,False,Staff,"The kindness of the staff,",
+476,1,False,Room,"the size of the room,",
+476,1,False,Location,location.,
+477,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 136 (char 135)
+478,1,False,Staff,"The kindness of the staff,",
+478,1,False,Location,"the location,",
+478,1,False,Room,the cleanliness of the room.,
+479,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 381 (char 380)
+480,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 28 (char 27)
+481,1,False,Room,The cleanest place I stayed in Cyprus!,
+481,1,False,Staff,The staff is kind and welcoming.,
+481,1,False,Location,The Waze is to blame for what I didn't like.,
+482,1,False,Room,cleanliness,
+482,1,False,Staff,helpful reception,
+483,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 422 (char 421)
+484,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 402 (char 401)
+485,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 5455 (char 5454)
+486,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 260 (char 259)
+487,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 500 (char 499)
+488,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 356 (char 355)
+489,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 239 (char 238)
+490,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 127 (char 126)
+491,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 304 (char 303)
+492,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 393 (char 392)
+493,1,True,Room,"nice, clean and neat.",
+493,1,True,Room,super sweet hosts,
+493,1,True,Staff,super sweet hosts,
+494,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 134 (char 133)"
+495,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 31 (char 30)
+496,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 196 (char 195)
+497,1,False,Staff,welcoming and helpful staff.,
+497,1,False,Room,the room was spacious.and clean.,
+497,1,False,Food,the restaurant is very varied.,
+497,1,False,Location,as well as the location close to the airport and the beach as well as many restaurants and snacks.,
+498,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 65 (char 64)
+499,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 215 (char 214)
+500,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 243 (char 242)
+501,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 166 (char 165)
+502,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 139 (char 138)
+503,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 409 (char 408)
+504,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 31 (char 30)
+505,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 384 (char 383)
+506,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 183 (char 182)
+507,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 292 (char 291)
+508,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 420 (char 419)
+509,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 125 (char 124)
+510,1,False,Location,"Proximity to the airport,",
+510,1,False,Room,clean and cheap,
+510,1,False,Facility,"Cramped, the third bed for a child is more suitable for a baby, minimalist room accessories",
+511,1,False,Room,new clean,
+511,1,False,Staff,reception,
+511,1,False,Location,Nothing,
+512,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 207 (char 206)
+513,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 420 (char 419)"
+514,1,False,Room,The cleaning,
+515,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 279 (char 278)
+516,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 28 (char 27)
+517,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 139 (char 138)
+518,1,False,Location,quiet place,
+519,1,False,Room,"Very good breakfast,",
+519,1,False,Location,great location near MacKenzie beach.,
+519,1,False,Staff,Staff very polite and helpful almost family atmosphere.,
+521,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 135 (char 134)
+522,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 28 (char 27)
+523,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 376 (char 375)
+524,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 216 (char 215)
+525,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 27 (char 26)
+526,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 72 (char 71)
+527,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 330 (char 329)
+528,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 82 (char 81)
+529,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 440 (char 439)
+530,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 245 (char 244)
+531,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 240 (char 239)
+532,1,False,Location,"The proximity to the airport,",
+532,1,False,Facility,"free parking,",
+532,1,False,Room,large rooms! very clean,
+533,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 111 (char 110)
+534,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 27 (char 26)
+535,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 215 (char 214)
+536,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 273 (char 272)
+537,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 73 (char 72)
+538,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 375 (char 374)
+539,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 141 (char 140)
+540,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 335 (char 334)
+541,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 373 (char 372)
+542,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 248 (char 247)
+543,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 79 (char 78)
+544,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 77 (char 76)
+545,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 27 (char 26)
+546,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 251 (char 250)
+547,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 148 (char 147)
+548,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 50 (char 49)
+549,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 109 (char 108)
+550,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 209 (char 208)
+551,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 418 (char 417)
+552,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 246 (char 245)
+553,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 143 (char 142)
+554,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 387 (char 386)
+555,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 462 (char 461)
+556,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 687 (char 686)
+557,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 504 (char 503)
+558,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 60 (char 59)
+559,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 442 (char 441)
+560,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 144 (char 143)
+561,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 60 (char 59)
+562,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 293 (char 292)
+564,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 346 (char 345)
+565,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 462 (char 461)
+566,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 150 (char 149)
+567,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 28 (char 27)
+568,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 248 (char 247)
+569,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 671 (char 670)
+570,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 156 (char 155)
+571,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 268 (char 267)
+572,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 228 (char 227)
+573,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 106 (char 105)
+574,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 52 (char 51)
+575,1,False,Staff,personal attention,
+576,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 276 (char 275)
+577,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 332 (char 331)
+578,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 411 (char 410)
+579,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 31 (char 30)
+580,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 111 (char 110)
+581,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 286 (char 285)
+582,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 149 (char 148)
+583,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 27 (char 26)
+584,1,False,Staff,Very pleasant welcome,
+585,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 140 (char 139)
+586,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 332 (char 331)
+587,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 141 (char 140)
+588,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 31 (char 30)
+589,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 294 (char 293)
+590,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 459 (char 458)
+591,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 27 (char 26)
+592,1,False,Staff,the service,
+593,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 27 (char 26)
+594,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 483 (char 482)
+595,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 27 (char 26)
+596,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 68 (char 67)
+597,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 233 (char 232)
+598,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 28 (char 27)
+599,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 338 (char 337)
+600,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 181 (char 180)
+601,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 356 (char 355)
+602,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 224 (char 223)
+603,1,False,Room,Very clean accommodation.,
+603,1,False,Staff,Friendly staff.,
+603,1,False,Facility,The quality of the television image quite poor.,
+604,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 480 (char 479)
+605,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 86 (char 85)
+606,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 198 (char 197)
+607,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 351 (char 350)"
+608,1,False,Room,clean and comfortable,
+609,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 504 (char 503)
+610,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 282 (char 281)
+611,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 409 (char 408)
+612,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 595 (char 594)
+613,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 304 (char 303)
+614,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 285 (char 284)
+615,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 820 (char 819)
+616,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 255 (char 254)
+617,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 173 (char 172)
+618,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 143 (char 142)
+619,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 394 (char 393)
+620,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 423 (char 422)
+621,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 198 (char 197)
+622,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 119 (char 118)
+623,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 88 (char 87)
+624,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 190 (char 189)
+625,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 31 (char 30)
+626,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 483 (char 482)
+627,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 623 (char 622)
+628,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 589 (char 588)"
+629,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 111 (char 110)
+630,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 131 (char 130)
+631,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 148 (char 147)
+632,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 102 (char 101)
+633,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 159 (char 158)
+634,1,False,Staff,kindness,
+635,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 364 (char 363)"
+636,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 474 (char 473)
+637,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 198 (char 197)
+638,1,False,Location,"Location,",
+638,1,False,Room,"room comfort,",
+638,1,False,Staff,service and courtesy of the staff.,
+639,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 298 (char 297)"
+640,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 366 (char 365)
+641,1,False,Staff,"Very friendly staff,",
+641,1,False,Room,Nice room with a nice balcony.,
+641,1,False,Location,Quiet and peaceful area.,
+641,1,False,Facility,Definitely a hotel worth visiting again.,
+642,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 131 (char 130)
+643,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 143 (char 142)
+644,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 108 (char 107)
+645,1,False,Room,"The room was very clean, well decorated and modern, although not big.",
+645,1,False,Room,The bed was super comfy,
+645,1,False,Staff,The staff was very nice and helpful!,
+645,1,False,Location,"nice location,",
+645,1,False,Food,"Also, the breakfast was amazing, fresh and handmade!",
+645,1,False,Price,"Also, the breakfast was amazing, fresh and handmade!",
+645,1,False,Facility,"Also, the breakfast was amazing, fresh and handmade!",
+645,1,False,Check-in,Check-in was quick and easy.,
+645,1,False,Check-out,Check-out was quick and easy.,
+645,1,False,Off,"Also, the breakfast was amazing, fresh and handmade!",
+645,1,False,Booking-issue,"Also, the breakfast was amazing, fresh and handmade!",
+645,1,False,Taxi-issue,"Also, the breakfast was amazing, fresh and handmade!",
+646,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 288 (char 287)
+647,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 27 (char 26)
+648,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 135 (char 134)
+649,1,False,Room,Clean comfortable room.,
+649,1,False,Room,"The room was small, could have been a bit more spacious.",
+649,1,False,Staff,Friendly staff.,
+649,1,False,Location,The hotel is located near the airport.,
+650,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 284 (char 283)
+651,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 28 (char 27)
+652,1,False,Room,Cleanliness 10/10!,
+652,1,False,Staff,"We spent one night before the plane, were very satisfied.",
+652,1,False,Location,the accommodation is perfect - close to the airport.,
+653,1,False,Staff,"Very nice staff,",
+653,1,False,Room,"comfortable beds, great shower.",
+653,1,False,Location,"the option is excellent, close to the airport, near the lake with flamingos (in winter)",
+654,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 452 (char 451)
+655,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 303 (char 302)
+656,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 120 (char 119)
+657,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 117 (char 116)
+658,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 287 (char 286)
+659,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 621 (char 620)
+660,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 458 (char 457)
+661,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 299 (char 298)
+662,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 310 (char 309)
+663,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 471 (char 470)
+664,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 150 (char 149)
+665,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 346 (char 345)
+666,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 413 (char 412)"
+667,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 449 (char 448)
+668,1,False,Location,location and calm,
+669,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 251 (char 250)
+670,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 368 (char 367)
+671,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 172 (char 171)
+672,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 66 (char 65)
+673,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 288 (char 287)
+674,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 28 (char 27)
+675,1,False,Facility,"Very well-kept hotel,",
+675,1,False,Staff,"friendly service,",
+675,1,False,Room,"very comfortable mattresses, fridge, kettle, very modern new equipment.",
+676,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 661 (char 660)
+677,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 130 (char 129)
+678,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 31 (char 30)
+679,1,False,Room,"Superb room, bathroom and balcony, very comfortable,",
+679,1,False,Staff,the staff was top notch!,
+679,1,False,Location,Lots of noise from the hallway,
+680,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 326 (char 325)
+681,1,False,Facility,"Very cozy and stylish hotel,",
+681,1,False,Staff,"good staff,",
+681,1,False,Location,"excellent location, bus stops nearby, salt lake, 5 minutes walk to the sea.",
+682,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 31 (char 30)
+683,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 130 (char 129)
+684,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 118 (char 117)
+685,1,False,Location,"Excellent location,",
+685,1,False,Room,"perfect cleanliness,",
+685,1,False,Food,"excellent breakfasts for only 8€,",
+685,1,False,Staff,super service,
+686,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 110 (char 109)
+687,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 443 (char 442)
+688,1,False,Staff,"Very nice owner,",
+688,1,False,Facility,"great hotel,",
+688,1,False,Location,close to the beach!!,
+689,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 173 (char 172)
+690,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 111 (char 110)
+691,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 102 (char 101)
+692,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 122 (char 121)
+693,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 320 (char 319)
+694,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 261 (char 260)
+695,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 143 (char 142)
+696,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 154 (char 153)
+697,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 118 (char 117)
+698,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 278 (char 277)
+699,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 28 (char 27)
+700,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 211 (char 210)
+701,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 170 (char 169)
+702,1,False,Staff,"Nice staff,",
+702,1,False,Food,good cook,
+702,1,False,Room,room a bit small.,
+703,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 208 (char 207)
+704,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 94 (char 93)
+705,1,False,Staff,"Pleasant staff,",
+705,1,False,Room,clean and tidy.,
+705,1,False,Food,Good food.,
+706,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 117 (char 116)
+707,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 52 (char 51)
+708,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 165 (char 164)
+709,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 147 (char 146)
+710,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 194 (char 193)
+711,1,False,Room,possibility for late check out,
+711,1,False,Staff,and very nice staff,
+711,1,False,Facility,"Swimming pool , small and dirty",
+712,1,False,Room,Comfortable room,
+713,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 31 (char 30)
+714,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 27 (char 26)
+715,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 109 (char 108)"
+716,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 183 (char 182)
+717,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 100 (char 99)
+718,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 69 (char 68)
+719,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 185 (char 184)
+720,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 120 (char 119)
+721,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 116 (char 115)
+722,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 586 (char 585)
+723,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 27 (char 26)
+724,1,False,Room,Clean,
+725,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 88 (char 87)
+726,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 178 (char 177)
+727,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 356 (char 355)
+728,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 99 (char 98)
+729,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 231 (char 230)
+730,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 447 (char 446)
+731,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 174 (char 173)
+732,1,False,Staff,Very welcoming and friendly staff.,
+732,1,False,Room,"Everything is clean, white, freshly renovated.",
+732,1,False,Location,"Near Mackenzie beach, airport, salt lake.",
+733,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 324 (char 323)
+734,1,False,Room,Everything was wonderful!,
+734,1,False,Staff,☆☆☆☆☆,
+734,1,False,Location,Everything was wonderful!,
+734,1,False,Food,☆☆☆☆☆,
+735,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 335 (char 334)
+736,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 28 (char 27)
+737,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 159 (char 158)
+738,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 286 (char 285)
+739,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 400 (char 399)
+740,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 156 (char 155)
+741,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 43 (char 42)
+742,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 54 (char 53)
+743,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 115 (char 114)"
+744,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 51 (char 50)
+745,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 68 (char 67)
+746,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 467 (char 466)
+747,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 100 (char 99)
+748,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 222 (char 221)
+749,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 170 (char 169)
+750,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 71 (char 70)
+751,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 87 (char 86)
+752,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 86 (char 85)
+753,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 88 (char 87)
+754,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 88 (char 87)
+755,1,False,Room,Very clean,
+756,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 123 (char 122)
+757,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 243 (char 242)
+758,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 57 (char 56)
+759,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 47 (char 46)
+760,1,False,Location,Very good location,
+761,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 217 (char 216)
+762,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 65 (char 64)
+763,1,False,Staff,"The warm welcome in French,",
+763,1,False,Room,"the comfort of the beds, the cleanliness.",
+763,1,False,Location,The noise emanating from the terrace when located on the 1st floor.,
+764,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 694 (char 693)
+765,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 803 (char 802)
+766,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 50 (char 49)
+767,1,False,(parse failed),,"json_parse_error: Expecting ',' delimiter: line 1 column 255 (char 254)"
+768,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 449 (char 448)
+769,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 639 (char 638)
+770,1,False,Room,"Clean, daily change of towels,",
+770,1,False,Room,lack of storage spaces,
+770,1,False,Staff,"pleasant and helpful staff,",
+770,1,False,Price,value for money,
+771,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 617 (char 616)
+772,1,False,Room,"new equipment,",
+772,1,False,Room,couldn't close one window.,
+773,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 325 (char 324)
+774,1,False,Room,"comfortable and clean room,",
+774,1,False,Location,good location,
+774,1,False,Staff,kind staff,
+774,1,False,Facility,difficulties with the different sockets as they provided devices without adapters.,
+775,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 154 (char 153)
+776,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 135 (char 134)
+777,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 247 (char 246)
+778,1,False,Staff,Perfect welcome at 1:30 in the morning!,
+778,1,False,Price,Excellent value.,
+778,1,False,Location,Close to the airport.,
+779,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 583 (char 582)
+780,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 139 (char 138)
+781,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 179 (char 178)
+782,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 180 (char 179)
+783,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 154 (char 153)
+784,1,False,Staff,Very friendly and warm service.,
+784,1,False,Room,very clean and new rooms.,
+784,1,False,Location,Proximity to the beach and airport.,
+785,1,False,Staff,Very kind and helpful staff.,
+785,1,False,Location,Bad-degraded area.,
+785,1,False,Room,Garbage heap in the bin next to the hotel. Not as clean as it should be inside.,
+2484,1,False,(parse failed),,json_parse_error: Unterminated string starting at: line 1 column 261 (char 260)

@@ -40,3 +40,9 @@ sentence_transformers/
 
 # Dataset
 Task_1/data/*.csv
+
+.claude
+claude.md
+# Large model files
+ABA_mining/finetune/output/
+llama.cpp/

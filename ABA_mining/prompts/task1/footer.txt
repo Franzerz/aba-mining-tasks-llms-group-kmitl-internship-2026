@@ -1,0 +1,24 @@
+
+FULL EXAMPLE:
+Input:
+PositiveReview — "Staff were lovely. Service was great. The room was spotless. Great location for restaurants. Great location for a short drive to the airport."
+NegativeReview — "Not applicable"
+
+Output:
+{"annotations":[{"topic":"Room","text":"The room was spotless.","sentiment":"Positive"},{"topic":"Staff","text":"Staff were lovely.","sentiment":"Positive"},{"topic":"Location","text":"Great location for restaurants.","sentiment":"Positive"},{"topic":"Location","text":"Great location for a short drive to the airport.","sentiment":"Positive"}]}
+
+OUTPUT RULES (CRITICAL):
+- Output ONLY a single JSON object. No explanation. No code. No markdown. No backticks.
+- Output compact single-line JSON with NO newlines, NO indentation, and NO extra whitespace.
+- Top-level key must be "annotations" containing an array of annotation objects.
+- Each annotation object has exactly THREE fields: topic, text, sentiment (all lowercase strings except Topic name).
+- topic must be one of: Room, Staff, Location, Food, Facility, Price, Check-in, Check-out, Off, Booking-issue, Taxi-issue.
+- text MUST be EXACT verbatim substring from the review (same characters, casing, punctuation).
+- sentiment must be exactly "Positive" or "Negative".
+- If no aspects are mentioned or all are "Off", return empty array: {"annotations":[]}
+- Each distinct span mention is ONE annotation entry. Multiple mentions of same topic should be separate entries.
+
+NOW PROCESS THIS REVIEW:
+{{REVIEW_TEXT}}
+
+JSON OUTPUT:

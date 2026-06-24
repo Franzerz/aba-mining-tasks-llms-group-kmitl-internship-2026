@@ -1,0 +1,46 @@
+Extract body literals from the hotel review text span below.
+
+A body literal is a short snake_case phrase describing ONE quality of the topic, using ONLY words from the text.
+
+FORMAT RULE: [adjective or description]_[noun] — always end with a relevant noun.
+Example: "clean" + "room" → clean_room | "helpful" + "staff" → helpful_staff
+
+Topic: {{TOPIC}}
+Sentiment: {{SENTIMENT}}
+Text span: "{{SELECTED_CONTENT}}"
+
+KEY RULE — Sentiment guides extraction:
+  Positive → extract only good/present qualities from the text
+  Negative → extract only bad/missing qualities from the text
+  (A text may mention both — take only the ones matching the sentiment)
+
+Think step by step:
+Step 1 — What qualities or characteristics does this text mention about {{TOPIC}}?
+Step 2 — For each quality, write it as [quality]_[noun] using exact words from the text.
+Step 3 — Check: are all words from the original text? Is each literal ≤ 5 words?
+
+Examples showing the thinking:
+Text: "Staff is extremely helpful and easy to communicate with"
+Step 1: helpful, easy to communicate with
+Step 2: helpful_staff, easy_to_communicate_with
+Output: {"body_literals": ["helpful_staff", "easy_to_communicate_with"]}
+
+Text: "The room was very clean, well decorated and modern, although not big"
+Step 1: clean, well decorated, modern, not big
+Step 2: clean_room, well_decorated_room, modern_room, not_big_room
+Output: {"body_literals": ["clean_room", "well_decorated_room", "modern_room", "not_big_room"]}
+
+Text: "close to the airport and a very clean beach"
+Step 1: close to airport, close to clean beach
+Step 2: close_to_airport, close_to_clean_beach
+Output: {"body_literals": ["close_to_airport", "close_to_clean_beach"]}
+
+Important: keep words EXACTLY as they appear in the text — do NOT change singular/plural form.
+Example: "apartments" stays "apartments", not "apartment".
+
+Now output ONLY the final JSON (no step-by-step text in output):
+{"body_literals": ["literal_1", ...]}
+
+If nothing can be extracted: {"body_literals": []}
+
+JSON OUTPUT:

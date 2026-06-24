@@ -1,0 +1,47 @@
+Hotel review argument mining task. Extract body literals from the text span.
+
+A body literal is a short phrase in snake_case that names ONE quality the text expresses about the topic.
+
+Topic     : {{TOPIC}}
+Sentiment : {{SENTIMENT}}
+Text span : "{{SELECTED_CONTENT}}"
+
+How to form a body literal:
+  - Find each distinct quality or attribute mentioned about {{TOPIC}}
+  - Write it as: quality_words_topic_noun  (e.g. clean_room, helpful_staff, close_to_airport)
+  - Only use words from the original text — never add new words
+  - Remove articles (a, an, the) and degree adverbs (very, extremely, quite, so) — keep everything else
+  - Use present tense, lowercase, underscores instead of spaces
+  - Keep compound phrases whole (e.g. "easy stroll to nice restaurant" → easy_stroll_to_nice_restaurant)
+
+Reference examples:
+Topic=Staff | "Staff is extremely helpful and easy to communicate with"
+  → {"body_literals": ["helpful_staff", "easy_to_communicate_with"]}
+
+Topic=Room | "The room was very clean, well decorated and modern, although not big"
+  → {"body_literals": ["clean_room", "well_decorated_room", "modern_room", "not_big_room"]}
+
+Topic=Location | "close to airport, easy stroll to nice restaurants and great beach"
+  → {"body_literals": ["close_to_airport", "easy_stroll_to_nice_restaurants", "easy_stroll_to_great_beach"]}
+
+Topic=Food | "Tasty food on the first floor, comfortable restaurant"
+  → {"body_literals": ["tasty_food", "comfortable_restaurant"]}
+
+Topic=Facility | "New, comfortable apartments"
+  → {"body_literals": ["new_apartments", "comfortable_apartments"]}
+
+Topic=Room, Sentiment=Positive | "clean room, although not big"
+  → {"body_literals": ["clean_room"]}    (only positive aspect)
+
+Topic=Room, Sentiment=Negative | "clean room, although not big"
+  → {"body_literals": ["not_big_room"]}  (only negative aspect)
+
+IMPORTANT: The SENTIMENT tells you which side to extract. A text may contain both good and bad
+qualities — extract ONLY those that match the given sentiment.
+
+Output ONLY a single JSON object, no explanation:
+{"body_literals": ["literal_1", "literal_2", ...]}
+
+If the text contains nothing extractable: {"body_literals": []}
+
+JSON OUTPUT:

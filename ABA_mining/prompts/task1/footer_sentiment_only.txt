@@ -1,0 +1,23 @@
+
+FULL EXAMPLE:
+Input:
+PositiveReview — "Staff were lovely. Service was great. The room was spotless. Great location for restaurants."
+NegativeReview — "Not applicable"
+
+Output:
+{"sentiments":{"Room":"Positive","Staff":"Positive","Location":"Positive","Food":null,"Price":null,"Facility":null,"Check-in":null,"Check-out":null,"Off":null,"Booking-issue":null,"Taxi-issue":null}}
+
+OUTPUT RULES:
+- Label by ACTUAL words and sentiment, NOT by section name (PositiveReview vs NegativeReview).
+- Output ONLY a single JSON object. No explanation. No code. No markdown. No backticks.
+- Output compact single-line JSON with NO newlines, NO indentation, NO extra whitespace.
+- Top-level key must be "sentiments" containing all 11 topics.
+- Each topic value is exactly "Positive", "Negative", or null (if not mentioned).
+- Fillers like "Not applicable", "nothing", "N/A" → Off: null (no sentiment).
+- Read the WORDS carefully and decide sentiment based on the actual text, not the section.
+- If topic not mentioned → null
+
+NOW PROCESS THIS REVIEW:
+{{REVIEW_TEXT}}
+
+JSON OUTPUT:

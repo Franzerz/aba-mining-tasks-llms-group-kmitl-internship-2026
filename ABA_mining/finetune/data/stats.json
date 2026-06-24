@@ -1,0 +1,12 @@
+{
+  "n_examples": 745,
+  "n_train": 596,
+  "n_val": 149,
+  "n_dropped_spans": 253,
+  "n_dropped_too_long": 7,
+  "max_seq_length": 1024,
+  "mean_tokens": 701.7597315436242,
+  "p50_tokens": 686,
+  "p95_tokens": 836,
+  "max_tokens": 990
+}

@@ -1,0 +1,56 @@
+You are extracting inference rule body literals for the topic "{{TOPIC}}" from a hotel review.
+
+Input:
+  Topic     : {{TOPIC}}
+  Sentiment : {{SENTIMENT}}
+  Text span : "{{SELECTED_CONTENT}}"
+
+Instructions:
+Read the text span and extract every quality, attribute, or characteristic it mentions about {{TOPIC}}.
+For each one, write a snake_case phrase following this exact format:
+
+  [descriptive_word(s)]_[topic_noun]
+
+Where:
+  - descriptive_word(s) come directly from the text (copy exactly)
+  - topic_noun is the relevant noun (room, staff, food, location, etc.)
+  - remove only: articles (a/an/the), very, extremely, quite (these are filler)
+  - keep: adjectives, action phrases, descriptive compounds
+  - SENTIMENT guides which qualities to extract:
+    Positive → positive/good qualities only | Negative → negative/bad qualities only
+    Same text can appear twice with different sentiments — extract only the matching side
+    Example: Topic=Room | Sentiment=Positive | Text="clean room, although not big" → clean_room
+    Example: Topic=Room | Sentiment=Negative | Text="clean room, although not big" → not_big_room
+
+Multiple examples:
+
+Topic=Staff, Sentiment=Positive, Text="Staff is extremely helpful and easy to communicate with"
+  → helpful_staff, easy_to_communicate_with
+
+Topic=Room, Sentiment=Positive, Text="The room was very clean, well decorated and modern, although not big"
+  → clean_room, well_decorated_room, modern_room
+
+Topic=Room, Sentiment=Negative, Text="The room was very clean, well decorated and modern, although not big"
+  → not_big_room
+
+Topic=Food,     Text="Tasty food on the first floor, comfortable restaurant for cozy evenings"
+  → tasty_food, comfortable_restaurant
+
+Topic=Location, Text="close to the airport, to very clean beach"
+  → close_to_airport, close_to_clean_beach
+
+Topic=Facility, Text="New, comfortable apartments"
+  → new_apartments, comfortable_apartments
+
+Topic=Price,    Text="Great value for money"
+  → great_value_for_money
+
+Important:
+- Preserve exact words (do not change "restaurants" to "restaurant" or vice versa)
+- If a phrase spans multiple words (e.g. "easy stroll to nice restaurant"), keep it whole
+- If text mentions nothing extractable, return []
+
+Output format — compact single-line JSON only, no explanation:
+{"body_literals": ["literal_1", "literal_2", ...]}
+
+JSON OUTPUT:

@@ -1,0 +1,90 @@
+========================================================================
+EVALUATION RESULTS — task2_llama4_scout_llama4_scout_generator_v6_run2_gt_n2078.csv
+========================================================================
+
+Instances evaluated: 2078
+
+────────────────────────────────────────────────────────────────────────
+HEAD CHECK
+────────────────────────────────────────────────────────────────────────
+  Correct  : 2019 / 2078  (accuracy = 0.9716)
+  Code-rule vs GT-convention mismatches (potential generation bug): 0
+
+────────────────────────────────────────────────────────────────────────
+BODY MATCH (sentence-embedding cosine similarity vs GT 'Concat')
+────────────────────────────────────────────────────────────────────────
+  GT match type breakdown : {'exact': 2078}
+  Evaluated  : 1840
+  Pass rate (>= 0.5) : 1829/1840 = 0.9940
+  Mean similarity        : 0.9076
+  Median similarity      : 0.9498
+  Min / Max               : 0.3553 / 1.0000
+
+────────────────────────────────────────────────────────────────────────
+RULE COMPLIANCE (body literals, mechanically-checkable rules only)
+────────────────────────────────────────────────────────────────────────
+  Literals checked : 3141
+  Clean (no violations) : 2083  (0.6632)
+  Violations by rule code:
+    R8             593
+    R16(soft)      433
+    R16            63
+    R5             28
+    R9             7
+
+  Rules requiring semantic/human judgement and NOT auto-checked: R2 (safe plural removal), R3 (-ed ending necessity), R10 (typo correction), R11 (sentiment-matched extraction), R12/R13 (double-meaning splitting), R14 (implied-noun phrasing), R15 (indirect-meaning rewrites), R18 (active voice), R19 (multi-meaning extraction).
+
+────────────────────────────────────────────────────────────────────────
+MICRO PRECISION / RECALL (per-literal sentence-embedding matching, threshold 0.8, grouped by Review ID+Topic)
+────────────────────────────────────────────────────────────────────────
+  Counts are aggregated across ALL instances before computing a single global ratio (micro), not averaged per-instance (macro).
+
+  Label type: BODY
+    Precision : 0.6907  (2164/3133 literals matched)
+    Recall    : 0.5291  (2212/4181 GT literals covered)
+    F1        : 0.5992
+    Topic                Prec      Rec       F1   n_pred   n_gt
+    Booking-issue      0.0000   0.0000   0.0000        8      5
+    Check-in           0.1556   0.1273   0.1400       45     55
+    Check-out          0.2500   0.1111   0.1538        4      9
+    Facility           0.5230   0.4233   0.4679      348    437
+    Food               0.7227   0.5026   0.5929      256    384
+    Location           0.5465   0.4044   0.4648      666    910
+    Price              0.6607   0.5441   0.5968       56     68
+    Room               0.8179   0.6390   0.7175     1082   1424
+    Staff              0.7587   0.5760   0.6548      659    882
+    Taxi-issue         0.3333   0.4286   0.3750        9      7
+
+  Label type: CONT
+    Precision : 0.8176  (2568/3141 literals matched)
+    Recall    : 0.6580  (2751/4181 GT literals covered)
+    F1        : 0.7291
+    Topic                Prec      Rec       F1   n_pred   n_gt
+    Booking-issue      0.2500   0.4000   0.3077        8      5
+    Check-in           0.3111   0.2545   0.2800       45     55
+    Check-out          0.2500   0.1111   0.1538        4      9
+    Facility           0.7126   0.5913   0.6463      348    438
+    Food               0.8444   0.6536   0.7369      257    384
+    Location           0.7496   0.5611   0.6418      671    909
+    Price              0.8214   0.6912   0.7507       56     68
+    Room               0.9041   0.7500   0.8199     1084   1424
+    Staff              0.8392   0.6746   0.7479      659    882
+    Taxi-issue         0.4444   0.5714   0.5000        9      7
+
+  Label type: BOTH
+    Precision : 0.7542  (4732/6274 literals matched)
+    Recall    : 0.5935  (4963/8362 GT literals covered)
+    F1        : 0.6643
+    Topic                Prec      Rec       F1   n_pred   n_gt
+    Booking-issue      0.1250   0.2000   0.1538       16     10
+    Check-in           0.2333   0.1909   0.2100       90    110
+    Check-out          0.2500   0.1111   0.1538        8     18
+    Facility           0.6178   0.5074   0.5572      696    875
+    Food               0.7836   0.5781   0.6654      513    768
+    Location           0.6485   0.4827   0.5534     1337   1819
+    Price              0.7411   0.6176   0.6738      112    136
+    Room               0.8610   0.6945   0.7689     2166   2848
+    Staff              0.7989   0.6253   0.7015     1318   1764
+    Taxi-issue         0.3889   0.5000   0.4375       18     14
+
+Runtime: 15.47s

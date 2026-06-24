@@ -1,0 +1,23 @@
+
+FULL EXAMPLE:
+Input:
+PositiveReview — "Staff were lovely. Service was great. The room was spotless. Great location for restaurants. Great location for a short drive to the airport."
+NegativeReview — "Not applicable"
+
+Output:
+{"spans":{"Room":[{"text":"The room was spotless."}],"Staff":[{"text":"Staff were lovely."}],"Location":[{"text":"Great location for restaurants."},{"text":"Great location for a short drive to the airport."}],"Food":[{"text":null}],"Price":[{"text":null}],"Facility":[{"text":null}],"Check-in":[{"text":null}],"Check-out":[{"text":null}],"Off":[{"text":"Not applicable"}],"Booking-issue":[{"text":null}],"Taxi-issue":[{"text":null}]}}
+
+OUTPUT RULES:
+- Every topic value MUST be a JSON array. Never bare null or empty array.
+- Output ONLY a single JSON object. No explanation. No code. No markdown. No backticks.
+- Output compact single-line JSON with NO newlines, NO indentation, NO extra whitespace.
+- Top-level key must be "spans" containing all 11 topics.
+- Each topic value is a list of {"text": ...} objects.
+- "text" MUST be EXACT verbatim substring from review, or null if not mentioned.
+- Extract ALL mentions of each topic — include all occurrences.
+- For unmentioned topics: [{"text": null}]
+
+NOW PROCESS THIS REVIEW:
+{{REVIEW_TEXT}}
+
+JSON OUTPUT:

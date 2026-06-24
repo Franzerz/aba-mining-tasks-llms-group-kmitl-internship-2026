@@ -1,0 +1,37 @@
+Review ID,Valid,Topic,Text Span,Sentiment,Errors
+41,False,(parse failed),,,json_parse_error: Expecting value: line 1 column 1 (char 0)
+42,True,Off,hospitality,Positive,
+42,True,Off,clean,Positive,
+43,True,Room,clean spacious practical,Positive,
+44,False,(parse failed),,,json_parse_error: Expecting value: line 1 column 1 (char 0)
+45,False,(parse failed),,,json_parse_error: Expecting value: line 1 column 1 (char 0)
+46,True,Price,Great value for money,Positive,
+47,True,Staff,very helpful staff who organised a taxi to collect us in the morning.,Positive,
+47,True,Price,Good value for money.,Positive,
+48,True,Room,Clean and comfortable rooms,Positive,
+48,True,Staff,lovely owner,Positive,
+49,True,Room,The 2 rooms were big enough for a family of 5.,Positive,
+49,True,Location,Great location close to the airport and a short walk to the sea.,Positive,
+49,True,Price,Great value for money.,Positive,
+50,True,Room,Not very Soundproof,Negative,
+50,True,Location,Great little hotel close to airport,Positive,
+51,True,Room,"nice clean room, very well kept.",Positive,
+51,True,Staff,staff very helpful and friendly.,Positive,
+51,True,Food,good food,Positive,
+51,True,Location,Near airport,Positive,
+52,True,(no topics found),,,
+53,True,Location,close to the airport and Mackenzie Beach,Positive,
+53,True,Food,delicious breakfasts,Positive,
+53,True,Facility,"nice, renovated hotel",Positive,
+54,True,Room,Very nice and clean room.,Positive,
+55,False,(parse failed),,,json_parse_error: Extra data: line 4 column 1 (char 462)
+56,False,(parse failed),,,json_parse_error: Extra data: line 16 column 1 (char 671)
+57,True,Room,"Very clean, very comfortable room.",Positive,
+57,True,Staff,Staff was extremely helpful.,Positive,
+57,True,Staff,They ordered a taxi for us to get to the airport very early in the morning.,Positive,
+57,True,Location,"We were able to enjoy a very nice, short walk to the beach where there were many restaurants available to choose from.",Positive,
+58,True,Staff,the staff were nice and helpful.,Positive,
+58,True,Location,Close to the airport,Positive,
+59,False,Location,Close to airport so very convenient for overnight stay.,Positive,
+59,False,Check-in,also very easy to check-in if you arrive late at night,Positive,
+60,False,(parse failed),,,"json_parse_error: Expecting ',' delimiter: line 1 column 375 (char 374)"

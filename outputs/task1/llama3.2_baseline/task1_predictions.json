@@ -1,0 +1,4701 @@
+{
+  "9": {
+    "id": "9",
+    "review_text": "PositiveReview — \"couldn't eat breakfast due to dietary restrictions-but very helpful host showed us how nearby bus takes to town-cntre (and airport by the way so no need for 21 euro taxi)\"\nNegativeReview — \"maybe possibility of purchasing fresh fruit or veg\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "The room was spotless.",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "couldn't eat breakfast due to dietary restrictions-but very helpful host showed us how nearby bus takes to town-cntre",
+            "label": "Negative"
+          },
+          {
+            "text": "and airport by the way so no need for 21 euro taxi",
+            "label": "Positive"
+          }
+        ],
+        "Location": [
+          {
+            "text": null,
+            "label": null
+          },
+          {
+            "text": "maybe possibility of purchasing fresh fruit or veg",
+            "label": "Negative"
+          }
+        ],
+        "Food": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": "Not applicable",
+            "label": "Negative"
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "10": {
+    "id": "10",
+    "review_text": "PositiveReview — \"Great modern room comfortable bed and quiet location.\"\nNegativeReview — \"\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "modern room",
+            "label": "Positive"
+          },
+          {
+            "text": "comfortable bed",
+            "label": "Positive"
+          },
+          {
+            "text": "quiet location",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [],
+        "Location": [],
+        "Food": null,
+        "Price": null,
+        "Facility": null,
+        "Check-in": null,
+        "Check-out": null,
+        "Off": [
+          {
+            "text": "Not applicable",
+            "label": null
+          }
+        ],
+        "Booking-issue": null,
+        "Taxi-issue": null
+      }
+    }
+  },
+  "50": {
+    "id": "50",
+    "review_text": "PositiveReview — \"Great little hotel close to airport\"\nNegativeReview — \"Not very Soundproof\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Staff": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Location": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Food": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "51": {
+    "id": "51",
+    "review_text": "PositiveReview — \"Near airport, nice clean room, very well kept. staff very helpful and friendly. good food\"\nNegativeReview — \"\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "nice clean room",
+            "label": "Positive"
+          },
+          {
+            "text": "very well kept.",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "staff very helpful and friendly.",
+            "label": "Positive"
+          }
+        ],
+        "Location": [
+          {
+            "text": "Near airport",
+            "label": "Positive"
+          },
+          {
+            "text": "good food",
+            "label": null
+          }
+        ],
+        "Food": [
+          {
+            "text": "good food",
+            "label": "Negative"
+          },
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": "Not applicable",
+            "label": null
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "59": {
+    "id": "59",
+    "review_text": "PositiveReview — \"Close to airport so very convenient for overnight stay. Also very easy to check-in if you arrive late at night\"\nNegativeReview — \"N/a\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "Also very easy to check-in if you arrive late at night",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Location": [
+          {
+            "text": "Close to airport so very convenient for overnight stay.",
+            "label": "Positive"
+          }
+        ],
+        "Food": null,
+        "Price": null,
+        "Facility": null,
+        "Check-in": [
+          {
+            "text": "Also very easy to check-in if you arrive late at night",
+            "label": "Positive"
+          }
+        ],
+        "Check-out": null,
+        "Off": [
+          {
+            "text": "N/a",
+            "label": "Negative"
+          }
+        ],
+        "Booking-issue": null,
+        "Taxi-issue": null
+      }
+    }
+  },
+  "68": {
+    "id": "68",
+    "review_text": "PositiveReview — \"Friendly, good value, clean\"\nNegativeReview — \"\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "clean",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "Friendly",
+            "label": "Positive"
+          }
+        ],
+        "Location": [
+          null,
+          null
+        ],
+        "Food": [
+          null,
+          null
+        ],
+        "Price": [
+          null,
+          null
+        ],
+        "Facility": [
+          null,
+          null
+        ],
+        "Check-in": [
+          null,
+          null
+        ],
+        "Check-out": [
+          null,
+          null
+        ],
+        "Off": [
+          "Not applicable",
+          "Nothing at all"
+        ],
+        "Booking-issue": [
+          null,
+          null
+        ],
+        "Taxi-issue": [
+          null,
+          null
+        ]
+      }
+    }
+  },
+  "72": {
+    "id": "72",
+    "review_text": "PositiveReview — \"I arrived late. I received very clear instructions how to enter the hotel and access my room.\"\nNegativeReview — \"\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "I received very clear instructions how to enter the hotel and access my room.",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Location": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Food": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          "I arrived late.",
+          "Not applicable"
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "78": {
+    "id": "78",
+    "review_text": "PositiveReview — \"Nice friendly staff. clean, nice room, big bathroom\"\nNegativeReview — \"nothing\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "clean",
+            "label": "null"
+          },
+          {
+            "text": "nice room",
+            "label": "null"
+          },
+          {
+            "text": "big bathroom",
+            "label": "null"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "Nice friendly staff.",
+            "label": "Positive"
+          }
+        ],
+        "Location": null,
+        "Food": null,
+        "Price": null,
+        "Facility": null,
+        "Check-in": null,
+        "Check-out": null,
+        "Off": [
+          {
+            "text": "nothing",
+            "label": "Negative"
+          }
+        ],
+        "Booking-issue": null,
+        "Taxi-issue": null
+      }
+    }
+  },
+  "81": {
+    "id": "81",
+    "review_text": "PositiveReview — \"Close to the airport and clean spacious rooms.\"\nNegativeReview — \"No 24 hour reception so not easy to access entry at odd hours.\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "clean spacious rooms.",
+            "label": "Positive"
+          }
+        ],
+        "Location": [
+          {
+            "text": "Close to the airport.",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": "No",
+            "label": "Negative"
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "89": {
+    "id": "89",
+    "review_text": "PositiveReview — \"We had a horrible 4am arrival, instructions for access were sent in advance and absolutely perfect. In a clean, comfortable bed within minutes of arrival.\"\nNegativeReview — \"N/a\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "Within minutes of arrival.",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "instructions for access were sent in advance",
+            "label": "Positive"
+          },
+          {
+            "text": "horrible",
+            "label": "Negative"
+          }
+        ],
+        "Location": null,
+        "Food": null,
+        "Price": null,
+        "Facility": null,
+        "Check-in": null,
+        "Check-out": null,
+        "Off": [
+          {
+            "text": "N/a",
+            "label": "null"
+          }
+        ],
+        "Booking-issue": null,
+        "Taxi-issue": null
+      }
+    }
+  },
+  "102": {
+    "id": "102",
+    "review_text": "PositiveReview — \"Nice modern and clean rooms. The location is excellent close to Airport, Makenzie beach and touristic area, and bus stop going from Airport to town is few meters away. Very friendly staff.\r\n  Highly recommended.\"\nNegativeReview — \"Nothing\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "Nice modern and clean rooms.",
+            "label": "Positive"
+          },
+          {
+            "text": "The room was spotless.",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "Very friendly staff.",
+            "label": "Positive"
+          }
+        ],
+        "Location": [
+          {
+            "text": "The location is excellent close to Airport, Makenzie beach and touristic area,"
+          },
+          {
+            "text": "and bus stop going from Airport to town is few meters away."
+          },
+          {
+            "text": "Great location for restaurants.",
+            "label": "Positive"
+          },
+          {
+            "text": "Great location for a short drive to the airport.",
+            "label": "Positive"
+          }
+        ],
+        "Food": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": "Nothing",
+            "label": null
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "122": {
+    "id": "122",
+    "review_text": "PositiveReview — \"Very clean and super friendly staff. Would recommend\"\nNegativeReview — \"Nothing\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "The room was very clean.",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "super friendly staff.",
+            "label": "Positive"
+          }
+        ],
+        "Location": [
+          null,
+          "null",
+          "null"
+        ],
+        "Food": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Price": [
+          null,
+          "null",
+          "null"
+        ],
+        "Facility": [
+          null,
+          "null",
+          "null"
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": "Nothing",
+            "label": null
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "133": {
+    "id": "133",
+    "review_text": "PositiveReview — \"We took the suit has we were 2 adults & 3 kids.\r\n  the room was clean & the bed were comfortable\r\n  if the hotel had swimming pool it would be perfect\r\n  the lady in reception (Maria) was VERY helpful\r\n  good value for money\"\nNegativeReview — \"no swimming pool\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "the room was clean & the bed were comfortable",
+            "label": "Positive"
+          },
+          {
+            "text": "if the hotel had swimming pool it would be perfect",
+            "label": "Negative"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "the lady in reception (Maria) was VERY helpful",
+            "label": "Positive"
+          }
+        ],
+        "Location": [],
+        "Food": null,
+        "Price": null,
+        "Facility": null,
+        "Check-in": null,
+        "Check-out": null,
+        "Off": [
+          "no swimming pool"
+        ],
+        "Booking-issue": null,
+        "Taxi-issue": null
+      }
+    }
+  },
+  "146": {
+    "id": "146",
+    "review_text": "PositiveReview — \"the staff were so incredibly friendly. such a nice hotel with good rooms , clean, smart and comfortable. But it’s the staff who make this hotel:\"\nNegativeReview — \"Nothing\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Staff": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Location": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Food": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "154": {
+    "id": "154",
+    "review_text": "PositiveReview — \"Lovely staff. Good food.\"\nNegativeReview — \"Would have liked more TV channels like RT Russia Today\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Staff": [
+          {
+            "text": "Lovely staff.",
+            "label": "Positive"
+          }
+        ],
+        "Location": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Food": [
+          {
+            "text": "Good food.",
+            "label": "Positive"
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": "Would have liked more TV channels like RT Russia Today",
+            "label": "Negative"
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "163": {
+    "id": "163",
+    "review_text": "PositiveReview — \"Easy late night check in\"\nNegativeReview — \"\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Staff": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Location": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Food": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "167": {
+    "id": "167",
+    "review_text": "PositiveReview — \"Super clean place , excellent staff and service \r\n  And on top of everything is the food , the food is SUPER EXCELLENT 🙏\"\nNegativeReview — \"All was perfect .\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "Super clean place ",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "excellent staff and service ",
+            "label": "Positive"
+          },
+          {
+            "text": "And on top of everything is the food",
+            "label": null
+          }
+        ],
+        "Location": [],
+        "Food": [
+          {
+            "text": "the food is SUPER EXCELLENT ",
+            "label": "Positive"
+          }
+        ],
+        "Price": [
+          "All was perfect ."
+        ],
+        "Facility": [],
+        "Check-in": [],
+        "Check-out": [],
+        "Off": [
+          {
+            "text": "Not applicable",
+            "label": null
+          }
+        ],
+        "Booking-issue": [],
+        "Taxi-issue": []
+      }
+    }
+  },
+  "173": {
+    "id": "173",
+    "review_text": "PositiveReview — \"IMMACULATELY CLEAN!!! The bedding and floors were SOO CLEAN. The staff so friendly and kind and helpful!!!\"\nNegativeReview — \"how clean it was and the bed and linens were soo comfy and everything smelled good\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "The bedding and floors were SOO CLEAN.",
+            "label": "Positive"
+          },
+          {
+            "text": "IMMACULATELY CLEAN!!!",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "The staff so friendly and kind and helpful!!!",
+            "label": "Positive"
+          }
+        ],
+        "Location": null,
+        "Food": null,
+        "Price": null,
+        "Facility": null,
+        "Check-in": null,
+        "Check-out": null,
+        "Off": [
+          "how clean it was and the bed and linens were soo comfy and everything smelled good"
+        ],
+        "Booking-issue": null,
+        "Taxi-issue": null
+      }
+    }
+  },
+  "177": {
+    "id": "177",
+    "review_text": "PositiveReview — \"It’s close to the beach and the airport. The staff was nice and helpful. Extremely agile to respond.\"\nNegativeReview — \"Nothing to complain.\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "The room was spotless.",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "The staff was nice and helpful.",
+            "label": "Positive"
+          }
+        ],
+        "Location": [
+          {
+            "text": "It’s close to the beach and the airport.",
+            "label": "Positive"
+          },
+          {
+            "text": "Nothing to complain.",
+            "label": null
+          }
+        ],
+        "Food": null,
+        "Price": null,
+        "Facility": null,
+        "Check-in": null,
+        "Check-out": null,
+        "Off": [
+          {
+            "text": "Nothing to complain.",
+            "label": null
+          }
+        ],
+        "Booking-issue": null,
+        "Taxi-issue": null
+      }
+    }
+  },
+  "179": {
+    "id": "179",
+    "review_text": "PositiveReview — \"Close to local restaurants and beach.\r\n  Quiet.\r\n  Very clean.\"\nNegativeReview — \"Better TV channel selection would have been good for evening.\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "Quiet.",
+            "label": "Positive"
+          },
+          {
+            "text": "Very clean.",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [],
+        "Location": [
+          {
+            "text": "Close to local restaurants and beach.",
+            "label": "Positive"
+          }
+        ],
+        "Food": null,
+        "Price": null,
+        "Facility": null,
+        "Check-in": null,
+        "Check-out": null,
+        "Off": [
+          "Better TV channel selection would have been good for evening."
+        ],
+        "Booking-issue": null,
+        "Taxi-issue": null
+      }
+    }
+  },
+  "182": {
+    "id": "182",
+    "review_text": "PositiveReview — \"Closure to the Airport\r\n  Hospitality\"\nNegativeReview — \"\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "null",
+            "label": null
+          }
+        ],
+        "Staff": [
+          {
+            "text": "null",
+            "label": null
+          }
+        ],
+        "Location": [
+          {
+            "text": "Closure to the Airport.",
+            "label": "Positive"
+          }
+        ],
+        "Food": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": "Hospitality",
+            "label": "Negative"
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "190": {
+    "id": "190",
+    "review_text": "PositiveReview — \"Conveniently located. A very modern and contemporary hotel. Excellent breakfast. We had a very late (1am) self check-in which worked very well.\"\nNegativeReview — \"Our room was rather small and lacked a balcony, which can make a lot of difference (we had one on our previous stay).\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "Our room was rather small.",
+            "label": "Negative"
+          },
+          {
+            "text": "and lacked a balcony",
+            "label": null
+          },
+          {
+            "text": "which can make a lot of difference",
+            "label": null
+          }
+        ],
+        "Staff": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Location": [
+          {
+            "text": "Conveniently located.",
+            "label": "Positive"
+          }
+        ],
+        "Food": [
+          {
+            "text": "Excellent breakfast.",
+            "label": "Positive"
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": "A very late (1am) self check-in",
+            "label": "Negative"
+          },
+          {
+            "text": "which worked very well.",
+            "label": "Positive"
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": "None",
+            "label": null
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "219": {
+    "id": "219",
+    "review_text": "PositiveReview — \"very clean room, comfy beds, very nice showers. all freshly renovated.\"\nNegativeReview — \"nothing, it is sometimes a bit noisy because of the air traffic\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "very clean room",
+            "label": "Positive"
+          },
+          {
+            "text": "comfy beds",
+            "label": "Positive"
+          },
+          {
+            "text": "very nice showers",
+            "label": "Positive"
+          }
+        ],
+        "Staff": null,
+        "Location": null,
+        "Food": null,
+        "Price": null,
+        "Facility": null,
+        "Check-in": null,
+        "Check-out": null,
+        "Off": [
+          {
+            "text": "Nothing at all",
+            "label": "Negative"
+          }
+        ],
+        "Booking-issue": null,
+        "Taxi-issue": null
+      }
+    }
+  },
+  "237": {
+    "id": "237",
+    "review_text": "PositiveReview — \"clean and comfortable\"\nNegativeReview — \"\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "clean and comfortable",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Location": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Food": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": "Not applicable",
+            "label": null
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "266": {
+    "id": "266",
+    "review_text": "PositiveReview — \"it’s clean and very nice crew\"\nNegativeReview — \"\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "clean and very nice",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "crew",
+            "label": "Negative"
+          }
+        ],
+        "Location": [],
+        "Food": [],
+        "Price": [],
+        "Facility": [],
+        "Check-in": [],
+        "Check-out": [],
+        "Off": [
+          "Not applicable"
+        ],
+        "Booking-issue": [],
+        "Taxi-issue": []
+      }
+    }
+  },
+  "267": {
+    "id": "267",
+    "review_text": "PositiveReview — \"Helpful staff arranged a taxi for us from the airport to the hotel. The hotel was basic but clean and comfortable.\"\nNegativeReview — \"\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Staff": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Location": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Food": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "275": {
+    "id": "275",
+    "review_text": "PositiveReview — \"The rooms were clean, very comfortable, and the staff was amazing. They went over and beyond to help make my stay enjoyable. I highly recommend this hotel for anyone visiting downtown!!\"\nNegativeReview — \"\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "The rooms were clean, very comfortable",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "the staff was amazing",
+            "label": "Positive"
+          },
+          {
+            "text": "They went over and beyond to help make my stay enjoyable.",
+            "label": "Negative"
+          }
+        ],
+        "Location": [],
+        "Food": null,
+        "Price": null,
+        "Facility": null,
+        "Check-in": null,
+        "Check-out": null,
+        "Off": [
+          {
+            "text": "",
+            "label": "null"
+          }
+        ],
+        "Booking-issue": null,
+        "Taxi-issue": null
+      }
+    }
+  },
+  "285": {
+    "id": "285",
+    "review_text": "PositiveReview — \"Clean and nice place\"\nNegativeReview — \"It takes too long hot water to reach tap/shower in the room\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "Clean and nice place",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [],
+        "Location": [],
+        "Food": [],
+        "Price": [],
+        "Facility": [],
+        "Check-in": [],
+        "Check-out": [],
+        "Off": [
+          {
+            "text": "",
+            "label": null
+          }
+        ],
+        "Booking-issue": [],
+        "Taxi-issue": []
+      }
+    }
+  },
+  "302": {
+    "id": "302",
+    "review_text": "PositiveReview — \"It was very clean.\"\nNegativeReview — \"\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "The room was spotless.",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Location": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Food": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": "Not applicable",
+            "label": null
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "309": {
+    "id": "309",
+    "review_text": "PositiveReview — \"The management/husband and wife/were fantastic as were all the staff!\"\nNegativeReview — \"\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "null",
+            "label": null
+          }
+        ],
+        "Staff": [
+          {
+            "text": "The management/husband and wife/were fantastic.",
+            "label": "Positive"
+          },
+          {
+            "text": "as were all the staff.",
+            "label": "Positive"
+          }
+        ],
+        "Location": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Food": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": "Not applicable",
+            "label": null
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "317": {
+    "id": "317",
+    "review_text": "PositiveReview — \"Did not have breakfast. Left too early.\"\nNegativeReview — \"Nothing\"",
+    "prediction": {
+      "Topics": {
+        "Room": [],
+        "Staff": [
+          "Left too early.",
+          "Did not have breakfast."
+        ],
+        "Location": [
+          null,
+          ""
+        ],
+        "Food": [
+          {
+            "text": "Breakfast was great.",
+            "label": null
+          }
+        ],
+        "Price": [
+          null,
+          ""
+        ],
+        "Facility": [
+          null,
+          ""
+        ],
+        "Check-in": [
+          null,
+          ""
+        ],
+        "Check-out": [
+          null,
+          ""
+        ],
+        "Off": [
+          {
+            "text": "Nothing",
+            "label": "Negative"
+          }
+        ],
+        "Booking-issue": [
+          null,
+          ""
+        ],
+        "Taxi-issue": [
+          null,
+          ""
+        ]
+      }
+    }
+  },
+  "343": {
+    "id": "343",
+    "review_text": "PositiveReview — \"great friendly staff, very welcoming, the owner took me personally to our room, and gave me a prime parking spot.\r\n  he introduced us to his daughter who was learning the trade and she was super nice and helpful.\r\n  couldn't have been more pleased\"\nNegativeReview — \"all good!\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "the room was spotless.",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "great friendly staff, very welcoming, the owner took me personally to our room, and gave me a prime parking spot.",
+            "label": "Positive"
+          },
+          {
+            "text": "he introduced us to his daughter who was learning the trade and she was super nice and helpful.",
+            "label": "Positive"
+          }
+        ],
+        "Location": [
+          {
+            "text": "great location for restaurants.",
+            "label": "Positive"
+          },
+          {
+            "text": "great location for a short drive to the airport.",
+            "label": "Positive"
+          }
+        ],
+        "Food": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": "all good!",
+            "label": null
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "355": {
+    "id": "355",
+    "review_text": "PositiveReview — \"We’ve chosen La Veranda as we had an early flight from Larnaka airport, and we enjoyed one night stay. There is a beach strip nearby with various restaurants for every taste - we walked there, had cocktails in one place, and a dinner in another. Breakfast in the hotel was great, and we were in the airport in no time at all.\"\nNegativeReview — \"Nothing to complain about\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Staff": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Location": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Food": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "357": {
+    "id": "357",
+    "review_text": "PositiveReview — \"Staff is friendly, hotel is comfortable and clean\"\nNegativeReview — \"\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Staff": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Location": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Food": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "359": {
+    "id": "359",
+    "review_text": "PositiveReview — \"Excellent all round would come again\"\nNegativeReview — \"Good location and nice atmosphere\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "all round",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Location": [
+          {
+            "text": "Good location and nice atmosphere.",
+            "label": "Positive"
+          }
+        ],
+        "Food": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": "Excellent all round would come again",
+            "label": "Negative"
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "362": {
+    "id": "362",
+    "review_text": "PositiveReview — \"Excellent service, very kind and helpful staff, the room with a balcony overlooking Makenzy and Salt Lake made an amazing impression. I recommend the breakfasts, which are really delicious.\"\nNegativeReview — \"\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "the room with a balcony overlooking Makenzy and Salt Lake",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "very kind and helpful staff",
+            "label": "Positive"
+          },
+          {
+            "text": "Excellent service",
+            "label": "Positive"
+          }
+        ],
+        "Location": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Food": [
+          {
+            "text": "I recommend the breakfasts, which are really delicious.",
+            "label": "Positive"
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": "Not applicable",
+            "label": null
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "399": {
+    "id": "399",
+    "review_text": "PositiveReview — \"Amazing staff. I met the owners at the reception and they took care of my girl and she was very happy with her stay and the room was clean and ready by 12 to check in.\"\nNegativeReview — \"Nothing\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "The room was clean and ready by 12 to check in.",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "Amazing staff.",
+            "label": "Positive"
+          },
+          {
+            "text": "I met the owners at the reception",
+            "label": "Negative"
+          },
+          {
+            "text": "and they took care of my girl",
+            "label": "Neutral"
+          },
+          {
+            "text": "and she was very happy with her stay",
+            "label": "Positive"
+          },
+          {
+            "text": "but the room was clean and ready by 12 to check in.",
+            "label": "Positive"
+          }
+        ],
+        "Location": null,
+        "Food": null,
+        "Price": null,
+        "Facility": null,
+        "Check-in": [
+          {
+            "text": "The room was clean and ready by 12 to check in.",
+            "label": "Positive"
+          }
+        ],
+        "Check-out": null,
+        "Off": [
+          {
+            "text": "Nothing",
+            "label": "Negative"
+          }
+        ],
+        "Booking-issue": null,
+        "Taxi-issue": null
+      }
+    }
+  },
+  "403": {
+    "id": "403",
+    "review_text": "PositiveReview — \"Very good team\r\n  Good hospitality\r\n  Good food\r\n  Smiling and willing people.\"\nNegativeReview — \"\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Staff": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Location": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Food": [
+          {
+            "text": "Good food.",
+            "label": "Positive"
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": "Not applicable",
+            "label": null
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "411": {
+    "id": "411",
+    "review_text": "PositiveReview — \"perfect\"\nNegativeReview — \"\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "perfect",
+            "label": null
+          }
+        ],
+        "Staff": [
+          null
+        ],
+        "Location": [
+          null
+        ],
+        "Food": [
+          null
+        ],
+        "Price": [
+          null
+        ],
+        "Facility": [
+          null
+        ],
+        "Check-in": [
+          null
+        ],
+        "Check-out": [
+          null
+        ],
+        "Off": [
+          {
+            "text": "Not applicable",
+            "label": null
+          }
+        ],
+        "Booking-issue": [
+          null
+        ],
+        "Taxi-issue": [
+          null
+        ]
+      }
+    }
+  },
+  "414": {
+    "id": "414",
+    "review_text": "PositiveReview — \"Great staff, very clean and modern rooms, great value\"\nNegativeReview — \"\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "modern rooms",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "Great staff",
+            "label": "Positive"
+          }
+        ],
+        "Location": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Food": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": "Not applicable",
+            "label": null
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "417": {
+    "id": "417",
+    "review_text": "PositiveReview — \"Close to airport - just 7-10 min by taxi (15€). Clean, fresh rooms with all you need for overnight stay. Very friendly staff.\"\nNegativeReview — \"The bottle with hair/body wash was empty. Aircon had just one uncontrolled speed. There were no adapters for CY sockets. The blanket was too warm for summer night.\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "Clean, fresh rooms with all you need for overnight stay.",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "Very friendly staff.",
+            "label": "Positive"
+          }
+        ],
+        "Location": [
+          {
+            "text": "Close to airport - just 7-10 min by taxi (15€).",
+            "label": "Negative"
+          },
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Food": [
+          {
+            "text": "The bottle with hair/body wash was empty.",
+            "label": "Negative"
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          },
+          {
+            "text": "Clean, fresh rooms with all you need for overnight stay.",
+            "label": "Positive"
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          },
+          {
+            "text": "Clean, fresh rooms with all you need for overnight stay.",
+            "label": "Positive"
+          }
+        ],
+        "Off": [
+          {
+            "text": "Not applicable",
+            "label": null
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          },
+          {
+            "text": null,
+            "label": null
+          },
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": "Close to airport - just 7-10 min by taxi (15€).",
+            "label": "Negative"
+          }
+        ]
+      }
+    }
+  },
+  "435": {
+    "id": "435",
+    "review_text": "PositiveReview — \"close to the airports\"\nNegativeReview — \"this is a guesthouse that is priced like a hotel\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "None",
+            "label": "null"
+          }
+        ],
+        "Staff": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Location": [
+          {
+            "text": "close to the airports.",
+            "label": "Positive"
+          }
+        ],
+        "Food": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Price": [
+          {
+            "text": "priced like a hotel",
+            "label": "Negative"
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": "this is a guesthouse",
+            "label": "Negative"
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "460": {
+    "id": "460",
+    "review_text": "PositiveReview — \"Location was excellent and staff was very polite. Room was very clean upon arrival\"\nNegativeReview — \"Rate was very expensive for what it offered. No cleaning service the 4 days I stayed, no emptying garbage can and also had to ask for fresh towels. There were not even hangers for clothes in the closet\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Staff": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Location": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Food": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "471": {
+    "id": "471",
+    "review_text": "PositiveReview — \"Very clean, modern rooms, comfortable bed and good shower. Very helpful staff. Exceptional value for money and very close to beach.\"\nNegativeReview — \"Maybe a little way from main town\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "modern rooms",
+            "label": "Positive"
+          },
+          {
+            "text": "comfortable bed",
+            "label": "Positive"
+          },
+          {
+            "text": "good shower",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "very helpful staff",
+            "label": "Positive"
+          }
+        ],
+        "Location": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Food": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Price": [
+          {
+            "text": "exceptional value for money",
+            "label": "Positive"
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": "Maybe a little way from main town",
+            "label": "Negative"
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "476": {
+    "id": "476",
+    "review_text": "PositiveReview — \"The kindness of the staff, the size of the room, location.\"\nNegativeReview — \"\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "size of the room",
+            "label": "Negative"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "kindness of the staff",
+            "label": "Negative"
+          }
+        ],
+        "Location": [
+          {
+            "text": "location",
+            "label": "None"
+          }
+        ],
+        "Food": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": "None",
+            "label": "Negative"
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "477": {
+    "id": "477",
+    "review_text": "PositiveReview — \"Very kind staff. Delicious food, impeccable cleanliness.\r\n  Thank you!\"\nNegativeReview — \"\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "null",
+            "label": null
+          }
+        ],
+        "Staff": [
+          {
+            "text": "Very kind staff.",
+            "label": "Positive"
+          }
+        ],
+        "Location": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Food": [
+          {
+            "text": "Delicious food, impeccable cleanliness.",
+            "label": "Positive"
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": "Not applicable",
+            "label": null
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "490": {
+    "id": "490",
+    "review_text": "PositiveReview — \"Proximity to the airport and excellent cuisine\"\nNegativeReview — \"Nothing\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "null",
+            "label": null
+          }
+        ],
+        "Staff": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Location": [
+          {
+            "text": "Proximity to the airport.",
+            "label": "Positive"
+          },
+          {
+            "text": "airport and excellent cuisine.",
+            "label": "Positive"
+          }
+        ],
+        "Food": [
+          {
+            "text": "Excellent cuisine.",
+            "label": "Positive"
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": "Nothing",
+            "label": null
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "501": {
+    "id": "501",
+    "review_text": "PositiveReview — \"The hotel is very clean and close to the airport. Simple and comfortable rooms, you can see that there is care in the place.\"\nNegativeReview — \"The restaurant in the hotel lobby is good, although it took a relatively long time for our food to be ready.\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "Simple and comfortable rooms",
+            "label": "Positive"
+          },
+          {
+            "text": "you can see that there is care in the place.",
+            "label": "Negative"
+          }
+        ],
+        "Staff": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Location": [
+          {
+            "text": "The hotel is very clean and close to the airport.",
+            "label": "Positive"
+          }
+        ],
+        "Food": [
+          {
+            "text": "The restaurant in the hotel lobby is good",
+            "label": "Positive"
+          },
+          {
+            "text": ", although it took a relatively long time for our food to be ready.",
+            "label": "Negative"
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": "Not applicable",
+            "label": null
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "503": {
+    "id": "503",
+    "review_text": "PositiveReview — \"Close to the field, the staff is nice, the room is restful and pleasant, clean and renovated\r\n  The bed is comfortable and so is the shower\"\nNegativeReview — \"The environment is a bit unfriendly for walking, there is a lot of construction and the roads are bumpy\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "the room is restful and pleasant",
+            "label": "Positive"
+          },
+          {
+            "text": "clean and renovated",
+            "label": "Positive"
+          },
+          {
+            "text": "the bed is comfortable",
+            "label": "Positive"
+          },
+          {
+            "text": "so is the shower",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "the staff is nice",
+            "label": "Positive"
+          }
+        ],
+        "Location": [
+          {
+            "text": "Close to the field",
+            "label": "Negative"
+          },
+          {
+            "text": "there is a lot of construction and the roads are bumpy",
+            "label": "Negative"
+          }
+        ],
+        "Food": null,
+        "Price": null,
+        "Facility": null,
+        "Check-in": null,
+        "Check-out": null,
+        "Off": [
+          {
+            "text": "Not applicable",
+            "label": null
+          }
+        ],
+        "Booking-issue": null,
+        "Taxi-issue": null
+      }
+    }
+  },
+  "504": {
+    "id": "504",
+    "review_text": "PositiveReview — \"Everything is a perfect boutique hotel\"\nNegativeReview — \"\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Staff": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Location": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Food": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "505": {
+    "id": "505",
+    "review_text": "PositiveReview — \"Modern furnished and very clean room, friendly staff. Nice restaurant in the house, great coffee!\r\n  Close to the city center, the airport and the sea. Price/performance is totally right.\"\nNegativeReview — \"\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "Modern furnished and very clean room",
+            "label": "Positive"
+          },
+          {
+            "text": "",
+            "label": null
+          }
+        ],
+        "Staff": [
+          {
+            "text": "friendly staff",
+            "label": "Positive"
+          }
+        ],
+        "Location": [
+          {
+            "text": "Close to the city center, the airport and the sea.",
+            "label": "Positive"
+          },
+          {
+            "text": "",
+            "label": null
+          }
+        ],
+        "Food": [
+          {
+            "text": "Nice restaurant in the house, great coffee!",
+            "label": "Positive"
+          }
+        ],
+        "Price": [
+          {
+            "text": "Price/performance is totally right.",
+            "label": "Positive"
+          }
+        ],
+        "Facility": [],
+        "Check-in": [],
+        "Check-out": [],
+        "Off": [
+          {
+            "text": "Not applicable",
+            "label": null
+          }
+        ],
+        "Booking-issue": [],
+        "Taxi-issue": []
+      }
+    }
+  },
+  "525": {
+    "id": "525",
+    "review_text": "PositiveReview — \"clean, quiet, well organized\"\nNegativeReview — \"\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "clean",
+            "label": "Positive"
+          },
+          {
+            "text": "quiet",
+            "label": "Positive"
+          },
+          {
+            "text": "well organized",
+            "label": "Positive"
+          }
+        ],
+        "Staff": null,
+        "Location": null,
+        "Food": null,
+        "Price": null,
+        "Facility": null,
+        "Check-in": null,
+        "Check-out": null,
+        "Off": [
+          {
+            "text": "Not applicable",
+            "label": "null"
+          }
+        ],
+        "Booking-issue": null,
+        "Taxi-issue": null
+      }
+    }
+  },
+  "529": {
+    "id": "529",
+    "review_text": "PositiveReview — \"Cleanliness/Towels: 10/10\r\n  Design/Furniture: 10/10\r\n  Staff: 10/10\"\nNegativeReview — \"Soundproofing: 07/10 (separated rooms with plasterboards)\r\n  Balcony furniture set: 08/10 (could refurbish these too)\r\n  Set of shampoo etc. for the bathroom: 08/10 (Could offer 1 to 1 for the pampering)\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": null,
+            "label": "Negative"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "10/10",
+            "label": "Positive"
+          },
+          {
+            "text": "10/10",
+            "label": "Positive"
+          },
+          {
+            "text": "10/10",
+            "label": "Positive"
+          }
+        ],
+        "Location": [
+          {
+            "text": null,
+            "label": "Negative"
+          }
+        ],
+        "Food": [
+          {
+            "text": null,
+            "label": "Negative"
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": "Negative"
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": "Negative"
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": "Negative"
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": "Negative"
+          }
+        ],
+        "Off": [
+          {
+            "text": "Not applicable",
+            "label": null
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": "Negative"
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": "Negative"
+          }
+        ]
+      }
+    }
+  },
+  "533": {
+    "id": "533",
+    "review_text": "PositiveReview — \"We did not have breakfast because we were leaving very early, however the restaurant in the evening was perfect. The cook particularly affable fast and delicious irreproachable service. A real Lebanese tabbouleh all hearty I recommend the restaurant as much as the hotel\"\nNegativeReview — \"\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Staff": [
+          {
+            "text": "cook particularly affable fast and delicious irreproachable service.",
+            "label": "Positive"
+          }
+        ],
+        "Location": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Food": [
+          {
+            "text": "the restaurant in the evening was perfect. A real Lebanese tabbouleh",
+            "label": "Positive"
+          },
+          {
+            "text": "We did not have breakfast because we were leaving very early",
+            "label": "Negative"
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          "We did not have breakfast because we were leaving very early",
+          "Nothing at all"
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "550": {
+    "id": "550",
+    "review_text": "PositiveReview — \"The rooms are big and very clean! There is also a balcony. Tony the hotel owner is a great man! Helped us with everything we needed\"\nNegativeReview — \"everything will be alright\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "The rooms are big and very clean!",
+            "label": "Positive"
+          },
+          {
+            "text": "There is also a balcony.",
+            "label": "null"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "Tony the hotel owner is a great man!",
+            "label": "Positive"
+          }
+        ],
+        "Location": null,
+        "Food": null,
+        "Price": null,
+        "Facility": null,
+        "Check-in": null,
+        "Check-out": null,
+        "Off": [
+          {
+            "text": "everything will be alright",
+            "label": "Negative"
+          }
+        ],
+        "Booking-issue": null,
+        "Taxi-issue": null
+      }
+    }
+  },
+  "564": {
+    "id": "564",
+    "review_text": "PositiveReview — \"The room was spotless and the sheets were musky! While we had booked a double room, they gave us a 4-bed room with two rooms, which made us very happy. While we arrived after midnight there was a person at the reception to check in. The staff is very kind and helpful! We would definitely go again!!\"\nNegativeReview — \"\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "The room was spotless.",
+            "label": "Positive"
+          },
+          {
+            "text": "the sheets were musky!",
+            "label": "Negative"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "While we had booked a double room, they gave us a 4-bed room with two rooms, which made us very happy.",
+            "label": "Negative"
+          },
+          {
+            "text": "The staff is very kind and helpful!",
+            "label": "Positive"
+          }
+        ],
+        "Location": [
+          {
+            "text": "While we arrived after midnight there was a person at the reception to check in.",
+            "label": "Neutral"
+          },
+          {
+            "text": "Great location for restaurants.",
+            "label": "Positive"
+          },
+          {
+            "text": "Great location for a short drive to the airport.",
+            "label": "Positive"
+          }
+        ],
+        "Food": [
+          null,
+          "Negative"
+        ],
+        "Price": [
+          null,
+          "Negative"
+        ],
+        "Facility": [
+          null,
+          "Negative"
+        ],
+        "Check-in": [
+          {
+            "text": "While we arrived after midnight there was a person at the reception to check in.",
+            "label": "Neutral"
+          },
+          {
+            "text": "The staff is very kind and helpful!",
+            "label": "Positive"
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": "None of those things were not applicable.",
+            "label": "Negative"
+          }
+        ],
+        "Booking-issue": [
+          null,
+          "Negative"
+        ],
+        "Taxi-issue": [
+          null,
+          "Negative"
+        ]
+      }
+    }
+  },
+  "578": {
+    "id": "578",
+    "review_text": "PositiveReview — \"Good, firm beds and nice air conditioning in the room. We were especially impressed with the staff: they were very nice and prepared a fantastic breakfast for us! Self check-in at night was also very easy. And they arranged a taxi from the airport to the hotel for us, what a great service!\"\nNegativeReview — \"There was a bottle of water ready, that should have been two for 6 people. Everything else was to your liking!\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "Good, firm beds and nice air conditioning in the room.",
+            "label": "Positive"
+          },
+          {
+            "text": "We were especially impressed with the staff: they were very nice and prepared a fantastic breakfast for us!",
+            "label": "Negative"
+          },
+          {
+            "text": "Self check-in at night was also very easy.",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "they were very nice and prepared a fantastic breakfast for us!",
+            "label": "Positive"
+          },
+          {
+            "text": "We were especially impressed with the staff: they were very nice and prepared a fantastic breakfast for us!",
+            "label": "Negative"
+          }
+        ],
+        "Location": [],
+        "Food": [
+          {
+            "text": "fantastic breakfast for us!",
+            "label": "Negative"
+          },
+          {
+            "text": "breakfast was great.",
+            "label": null
+          }
+        ],
+        "Price": [],
+        "Facility": [],
+        "Check-in": [
+          {
+            "text": "Self check-in at night was also very easy.",
+            "label": "Positive"
+          }
+        ],
+        "Check-out": [],
+        "Off": [
+          {
+            "text": "Nothing at all",
+            "label": "Negative"
+          }
+        ],
+        "Booking-issue": [],
+        "Taxi-issue": []
+      }
+    }
+  },
+  "580": {
+    "id": "580",
+    "review_text": "PositiveReview — \"Super establishment undervalued in my opinion with an available, pleasant and very professional staff. You\"\nNegativeReview — \"\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "The room was great.",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "available, pleasant and very professional",
+            "label": "Positive"
+          },
+          {
+            "text": "",
+            "label": "Negative"
+          }
+        ],
+        "Location": [
+          {
+            "text": "",
+            "label": "Negative"
+          }
+        ],
+        "Food": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": "",
+            "label": "Negative"
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "589": {
+    "id": "589",
+    "review_text": "PositiveReview — \"Arrival at 5am, just for one night.\r\n  The owners left us clear and precise information for our arrival, sending us photos.\r\n  Cleanliness, distance from the airport, quality of bedding, size of the room, bottle of water available.\r\n  Sympathy of the owners in the morning who made the effort to speak French to us.\r\n  We recommend eyes closed.\"\nNegativeReview — \"Works next door, but unfortunately the owners can't do anything about it\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "Cleanliness, distance from the airport, quality of bedding, size of the room, bottle of water available.",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "Sympathy of the owners in the morning who made the effort to speak French to us.",
+            "label": "Positive"
+          },
+          {
+            "text": "The owners left us clear and precise information for our arrival, sending us photos.",
+            "label": "Negative"
+          },
+          {
+            "text": "Staff were lovely. Service was great.",
+            "label": "null"
+          }
+        ],
+        "Location": [
+          {
+            "text": "Great location for restaurants.",
+            "label": "Positive"
+          },
+          {
+            "text": "Great location for a short drive to the airport.",
+            "label": "Positive"
+          }
+        ],
+        "Food": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": "Not applicable",
+            "label": null
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "596": {
+    "id": "596",
+    "review_text": "PositiveReview — \"very clean cheap, modern room\"\nNegativeReview — \"Noisy outside\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "clean",
+            "label": "Negative"
+          },
+          {
+            "text": "cheap",
+            "label": "Negative"
+          },
+          {
+            "text": "modern",
+            "label": "Negative"
+          }
+        ],
+        "Staff": [],
+        "Location": [],
+        "Food": [],
+        "Price": [],
+        "Facility": [],
+        "Check-in": [],
+        "Check-out": [],
+        "Off": [
+          {
+            "text": "Noisy outside",
+            "label": null
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "611": {
+    "id": "611",
+    "review_text": "PositiveReview — \"The kindness and availability of the staff, the restaurant offering a good quality of dishes.\r\n  The comfortable and very clean room. The calm\r\n  Proximity to the city center and the beach.\r\n  Very good value for money\"\nNegativeReview — \"Ras\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "The comfortable and very clean room.",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "the kindness and availability of the staff",
+            "label": "Positive"
+          },
+          {
+            "text": "The calm",
+            "label": null
+          }
+        ],
+        "Location": [
+          {
+            "text": "Proximity to the city center and the beach.",
+            "label": "Positive"
+          },
+          {
+            "text": "Ras",
+            "label": "Negative"
+          }
+        ],
+        "Food": [
+          {
+            "text": "the restaurant offering a good quality of dishes.",
+            "label": "Positive"
+          }
+        ],
+        "Price": [
+          {
+            "text": "Very good value for money",
+            "label": "Positive"
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": "Ras",
+            "label": "Negative"
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "633": {
+    "id": "633",
+    "review_text": "PositiveReview — \"Even though we arrived at 3 a.m., they waited for us. Very friendly, very clean! close to the airport!\"\nNegativeReview — \"\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "Very clean!",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "they waited for us",
+            "label": "Positive"
+          },
+          {
+            "text": "Very friendly",
+            "label": "Positive"
+          }
+        ],
+        "Location": [
+          {
+            "text": "close to the airport",
+            "label": "Positive"
+          }
+        ],
+        "Food": [],
+        "Price": [],
+        "Facility": [],
+        "Check-in": [],
+        "Check-out": [],
+        "Off": [
+          "Not applicable"
+        ],
+        "Booking-issue": [],
+        "Taxi-issue": []
+      }
+    }
+  },
+  "641": {
+    "id": "641",
+    "review_text": "PositiveReview — \"Very friendly staff, very clean everywhere. Nice room with a nice balcony. Quiet and peaceful area. Definitely a hotel worth visiting again.\"\nNegativeReview — \"All was well\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "Nice room with a nice balcony.",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "Very friendly staff,",
+            "label": "Positive"
+          },
+          {
+            "text": "",
+            "label": "Negative"
+          }
+        ],
+        "Location": [
+          {
+            "text": "Quiet and peaceful area.",
+            "label": "Positive"
+          }
+        ],
+        "Food": [],
+        "Price": [],
+        "Facility": [],
+        "Check-in": [],
+        "Check-out": [],
+        "Off": [
+          {
+            "text": "All was well",
+            "label": "Negative"
+          }
+        ],
+        "Booking-issue": [],
+        "Taxi-issue": []
+      }
+    }
+  },
+  "646": {
+    "id": "646",
+    "review_text": "PositiveReview — \"The hotel is clean, comfortable and a good location. Very close to Salt Lake and Mackenzie Beach. Very close to bus stop. Very close to the airport, the bus only costs 1.5 euros to and from the airport. From the hotel you can just walk along the entire promenade of Larnaca, you won’t miss anything. A calm step along the sea to the Church of St. Lazarus 30-40 minutes. The room was wonderful. White bed. Breakfast can be bought directly at the hotel for only 8 euros. I rented a car, there is a place to park. The shower is wonderful, the air conditioner works, we were in January, it was very warm and sunny. Everything is great. The owner of the hotel was very friendly, allowed to leave things, even after we checked out, I highly recommend,\"\nNegativeReview — \"\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "The room was wonderful.",
+            "label": "Positive"
+          },
+          {
+            "text": "White bed.",
+            "label": "null"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "The owner of the hotel was very friendly, allowed to leave things, even after we checked out, ",
+            "label": "Negative"
+          }
+        ],
+        "Location": [
+          {
+            "text": "Very close to Salt Lake and Mackenzie Beach.",
+            "label": "Positive"
+          },
+          {
+            "text": "Very close to bus stop.",
+            "label": "Positive"
+          },
+          {
+            "text": "Very close to the airport, the bus only costs 1.5 euros to and from the airport.",
+            "label": "Positive"
+          },
+          {
+            "text": "From the hotel you can just walk along the entire promenade of Larnaca, you won’t miss anything.",
+            "label": "Positive"
+          },
+          {
+            "text": "A calm step along the sea to the Church of St. Lazarus 30-40 minutes.",
+            "label": "null"
+          }
+        ],
+        "Food": [
+          {
+            "text": "Breakfast can be bought directly at the hotel for only 8 euros.",
+            "label": "Positive"
+          }
+        ],
+        "Price": [
+          {
+            "text": "1.5 euros",
+            "label": "Negative"
+          }
+        ],
+        "Facility": [
+          {
+            "text": "a place to park.",
+            "label": "Positive"
+          },
+          {
+            "text": "the shower is wonderful, the air conditioner works,",
+            "label": "Positive"
+          }
+        ],
+        "Check-in": [
+          {
+            "text": "Very close to bus stop.",
+            "label": "Positive"
+          }
+        ],
+        "Check-out": [
+          {
+            "text": "I highly recommend, ",
+            "label": "Negative"
+          }
+        ],
+        "Off": [
+          {
+            "text": "Not applicable",
+            "label": "null"
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": "null",
+            "label": "null"
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": "null",
+            "label": "null"
+          }
+        ]
+      }
+    }
+  },
+  "652": {
+    "id": "652",
+    "review_text": "PositiveReview — \"Cleanliness 10/10!\r\n  everything is white, bright, cozy!\r\n  We spent one night before the plane, were very satisfied.\r\n  the accommodation is perfect - close to the airport.\"\nNegativeReview — \"nothing to complain about)\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "the accommodation is perfect",
+            "label": "Positive"
+          },
+          {
+            "text": "We spent one night",
+            "label": "Null"
+          }
+        ],
+        "Staff": [],
+        "Location": [
+          {
+            "text": "cleanliness 10/10!",
+            "label": "Negative"
+          },
+          {
+            "text": "close to the airport.",
+            "label": "Positive"
+          },
+          {
+            "text": "Everything is white, bright, cozy.",
+            "label": "Positive"
+          }
+        ],
+        "Food": [
+          {
+            "text": "Nothing to complain about",
+            "label": "Positive"
+          }
+        ],
+        "Price": [],
+        "Facility": [],
+        "Check-in": [
+          {
+            "text": "We spent one night before the plane,",
+            "label": "Null"
+          },
+          {
+            "text": " everything is white, bright, cozy.",
+            "label": "Positive"
+          }
+        ],
+        "Check-out": [],
+        "Off": [
+          {
+            "text": "nothing",
+            "label": "Negative"
+          }
+        ],
+        "Booking-issue": [],
+        "Taxi-issue": []
+      }
+    }
+  },
+  "653": {
+    "id": "653",
+    "review_text": "PositiveReview — \"Very nice staff, comfortable beds, great shower. We stayed for one night before flying out of Cyprus, the option is excellent, close to the airport, near the lake with flamingos (in winter)\"\nNegativeReview — \"They are drawing a number :)\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "comfortable beds",
+            "label": "Positive"
+          },
+          {
+            "text": "the room was spotless.",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "Very nice staff",
+            "label": "Positive"
+          }
+        ],
+        "Location": [
+          {
+            "text": "close to the airport",
+            "label": "Positive"
+          },
+          {
+            "text": "near the lake with flamingos (in winter)",
+            "label": "Positive"
+          }
+        ],
+        "Food": [
+          null
+        ],
+        "Price": [
+          null
+        ],
+        "Facility": [
+          null
+        ],
+        "Check-in": [
+          null
+        ],
+        "Check-out": [
+          null
+        ],
+        "Off": [
+          {
+            "text": "They are drawing a number :)",
+            "label": "Negative"
+          }
+        ],
+        "Booking-issue": [
+          null
+        ],
+        "Taxi-issue": [
+          null
+        ]
+      }
+    }
+  },
+  "683": {
+    "id": "683",
+    "review_text": "PositiveReview — \"Clean and modern hotel with very friendly staff.\"\nNegativeReview — \"\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "clean and modern hotel",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "very friendly",
+            "label": "Positive"
+          }
+        ],
+        "Location": [],
+        "Food": [],
+        "Price": [],
+        "Facility": [],
+        "Check-in": [],
+        "Check-out": [],
+        "Off": [
+          "Not applicable"
+        ],
+        "Booking-issue": [],
+        "Taxi-issue": []
+      }
+    }
+  },
+  "691": {
+    "id": "691",
+    "review_text": "PositiveReview — \"very clean Plenty of parking. Nice and kind staff.\"\nNegativeReview — \"\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "very clean",
+            "label": "Negative"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "Nice and kind",
+            "label": "Positive"
+          }
+        ],
+        "Location": [
+          {
+            "text": "Plenty of parking",
+            "label": "Positive"
+          }
+        ],
+        "Food": null,
+        "Price": null,
+        "Facility": null,
+        "Check-in": null,
+        "Check-out": null,
+        "Off": [
+          {
+            "text": "Not applicable",
+            "label": null
+          }
+        ],
+        "Booking-issue": null,
+        "Taxi-issue": null
+      }
+    }
+  },
+  "695": {
+    "id": "695",
+    "review_text": "PositiveReview — \"New hotel, with super clean rooms and comfortable beds. Family business and the owners are very friendly!\"\nNegativeReview — \"\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "super clean rooms",
+            "label": "Positive"
+          },
+          {
+            "text": "and comfortable beds.",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "friendly",
+            "label": "Positive"
+          }
+        ],
+        "Location": null,
+        "Food": null,
+        "Price": null,
+        "Facility": null,
+        "Check-in": null,
+        "Check-out": null,
+        "Off": [
+          {
+            "text": "New hotel, with super clean rooms and comfortable beds. Family business and the owners are very friendly!",
+            "label": null
+          }
+        ],
+        "Booking-issue": null,
+        "Taxi-issue": null
+      }
+    }
+  },
+  "706": {
+    "id": "706",
+    "review_text": "PositiveReview — \"Very good accommodation in a perfect location, 7 minutes from the airport!\"\nNegativeReview — \"\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "accommodation",
+            "label": "Negative"
+          }
+        ],
+        "Staff": [],
+        "Location": [
+          {
+            "text": "perfect location",
+            "label": "Positive"
+          },
+          {
+            "text": "7 minutes from the airport",
+            "label": "Positive"
+          }
+        ],
+        "Food": null,
+        "Price": null,
+        "Facility": null,
+        "Check-in": null,
+        "Check-out": null,
+        "Off": [
+          {
+            "text": "",
+            "label": "Negative"
+          }
+        ],
+        "Booking-issue": null,
+        "Taxi-issue": null
+      }
+    }
+  },
+  "717": {
+    "id": "717",
+    "review_text": "PositiveReview — \"Very accommodating and nice staff. Helpful. Top\"\nNegativeReview — \"\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "The room was spotless.",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [
+          {
+            "text": "Very accommodating and nice staff.",
+            "label": "Positive"
+          },
+          {
+            "text": "Helpful.",
+            "label": "Positive"
+          }
+        ],
+        "Location": [
+          "Great location for restaurants.",
+          "Great location for a short drive to the airport."
+        ],
+        "Food": null,
+        "Price": null,
+        "Facility": null,
+        "Check-in": null,
+        "Check-out": null,
+        "Off": [
+          {
+            "text": "Not applicable",
+            "label": "null"
+          }
+        ],
+        "Booking-issue": null,
+        "Taxi-issue": null
+      }
+    }
+  },
+  "755": {
+    "id": "755",
+    "review_text": "PositiveReview — \"Very clean\"\nNegativeReview — \"\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Staff": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Location": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Food": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "768": {
+    "id": "768",
+    "review_text": "PositiveReview — \"- terrace in the room,\r\n  - well-furnished room and bathroom,\r\n  - location of the object.\"\nNegativeReview — \"- monotonous breakfasts (everyday the same set: 2 eggs, 2 slices of toast, 1/4 grilled mushroom, 1/2 grilled tomato, pepper, 2 small sausages, coffee),\r\n  - the relaxation zone (swimming pool, deckchairs, billiards) definitely did not encourage you to use it.\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "well-furnished room and bathroom",
+            "label": "Positive"
+          },
+          {
+            "text": "terrace in the room",
+            "label": "Positive"
+          }
+        ],
+        "Staff": [],
+        "Location": [],
+        "Food": [
+          {
+            "text": "- monotonous breakfasts (everyday the same set: 2 eggs, 2 slices of toast, 1/4 grilled mushroom, 1/2 grilled tomato, pepper, 2 small sausages, coffee)",
+            "label": "Negative"
+          }
+        ],
+        "Price": [],
+        "Facility": [
+          {
+            "text": "- the relaxation zone (swimming pool, deckchairs, billiards) definitely did not encourage you to use it.",
+            "label": "Negative"
+          }
+        ],
+        "Check-in": [],
+        "Check-out": [],
+        "Off": [
+          {
+            "text": "- Not applicable",
+            "label": null
+          }
+        ],
+        "Booking-issue": [],
+        "Taxi-issue": []
+      }
+    }
+  },
+  "774": {
+    "id": "774",
+    "review_text": "PositiveReview — \"comfortable and clean room, good location and kind staff\"\nNegativeReview — \"difficulties with the different sockets as they provided devices without adapters.\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": "comfortable and clean room",
+            "label": "Positive"
+          },
+          {
+            "text": "room",
+            "label": null
+          }
+        ],
+        "Staff": [
+          {
+            "text": "kind staff",
+            "label": "Positive"
+          }
+        ],
+        "Location": [
+          {
+            "text": "good location",
+            "label": "Positive"
+          }
+        ],
+        "Food": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": "difficulties with the different sockets as they provided devices without adapters.",
+            "label": "Negative"
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  },
+  "780": {
+    "id": "780",
+    "review_text": "PositiveReview — \"Cozy hotel, nice room, large room size, location near mackenzie beach.\"\nNegativeReview — \"-\"",
+    "prediction": {
+      "Topics": {
+        "Room": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Staff": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Location": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Food": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Price": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Facility": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-in": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Check-out": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Off": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Booking-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ],
+        "Taxi-issue": [
+          {
+            "text": null,
+            "label": null
+          }
+        ]
+      }
+    }
+  }
+}

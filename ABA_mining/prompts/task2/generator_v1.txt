@@ -1,0 +1,93 @@
+You are an expert in hotel review analysis following official ABA (Aspect-Body-Contrary) annotation rules.
+
+TASK: Given topic, sentiment, and text span from a review, generate TWO components: Head (category) and Body (structured phrase).
+
+TOPIC: {{TOPIC}}
+SENTIMENT: {{SENTIMENT}}
+TEXT SPAN: "{{SELECTED_CONTENT}}"
+
+HEAD GENERATION (Deterministic):
+- Format: [sentiment_direction]_[topic_lowercase]
+- If Sentiment = Positive: head starts with "good_"
+- If Sentiment = Negative: head starts with "bad_"
+- Examples: good_room, bad_staff, good_location, bad_facility
+
+BODY GENERATION (Follows Body Decision Log rules):
+
+OFFICIAL BODY DECISION LOG RULES (Apply in order, strictly):
+1. Remove intensifiers: "very", "extremely", "really", "quite", "rather", "so", "such"
+   Example: "Very clean room" → clean_room
+2. Remove plural suffixes "s", "es" if semantically safe
+   Example: "staffs" → staff
+3. Remove "-ed" endings ONLY if not semantically critical
+   Example: "well decorated room" → well_decorated_room (keep if necessary)
+4. Remove punctuation: ".", "!", "?"
+5. Remove articles ("a", "an", "the") and redundant prepositions
+   Example: "a nice room" → nice_room
+6. Convert to lowercase
+7. Replace spaces with underscores
+8. Use ONLY words from original text (NO synonyms, NO external words)
+9. Keep phrases SHORT — one noun + one key adjective/verb (unless meanings require split)
+10. Correct obvious typos only (else mark as inappropriate)
+11. Match sentiment — extract features matching the given sentiment only
+12. SPLIT if double meanings exist
+    Example: "great modern room" → great_room AND modern_room (two separate entries)
+13. SPLIT for multiple meanings into all combinations
+14. Create natural noun phrases:
+    - If phrase ends with ADJECTIVE: add implied noun — "room is clean" → clean_room
+    - If phrase ends with OBJECT/VERB: don't add subject — "close to airport" stays as near_airport
+15. HANDLE INDIRECT MEANINGS:
+    a) "would be X / should be X / lack of X" → create "no_[X]" — Example: "would like buffet" → no_buffet
+    b) "-er comparatives" → "[noun]_could_be_[adjective]" — Example: "pool could be bigger" → pool_could_be_bigger
+    c) "couldn't have been more X" → "[X]_[topic]" — Example: "couldn't have been more helpful" → helpful_staff
+16. TOPIC-SPECIFIC conversions:
+    - Room: "clean" → clean_room; use _room suffix
+    - Facility: {apartment, hotel, accommodation, place, building, atmosphere, property} → _hotel
+    - Staff: {people, receptionist, housekeeper, owner, host, gentleman, lady} → _staff
+    - Location: Noise outside (street, beach, bars) → Location; Noise inside (walls, AC) → Room
+17. If body duplicates head, use Contrary (opposite) instead
+18. Prefer active voice
+19. For complex text, extract EACH distinct meaning as separate body
+
+EXTRACTION RULES:
+- Extract only characteristics matching the given SENTIMENT (Positive = good/present qualities; Negative = bad/missing qualities)
+- One body literal per distinct characteristic (SPLIT if multiple meanings)
+- Use ONLY words appearing in the original text
+
+FULL EXAMPLES:
+
+Example 1 — Positive, Staff:
+Text: "Staff is extremely helpful and easy to communicate with"
+Output: {"head": "good_staff", "body_literals": ["helpful_staff", "easy_to_communicate_with"]}
+
+Example 2 — Positive, Room:
+Text: "The room was very clean and well decorated, modern"
+Output: {"head": "good_room", "body_literals": ["clean_room", "well_decorated_room", "modern_room"]}
+
+Example 3 — Negative, Food:
+Text: "The breakfast was cold and the portions were too small"
+Output: {"head": "bad_food", "body_literals": ["cold_breakfast", "small_portions"]}
+
+Example 4 — Positive, Location:
+Text: "close to the airport and to a very clean beach"
+Output: {"head": "good_location", "body_literals": ["close_to_airport", "clean_beach"]}
+
+Example 5 — Negative with indirect meaning:
+Text: "It would be nice to have more TV channels"
+Output: {"head": "bad_location", "body_literals": ["no_more_tv_channel"]}
+
+OUTPUT FORMAT:
+Output ONLY a single JSON object. No explanation. No markdown. No backticks.
+{"head": "good_room", "body_literals": ["literal_1", "literal_2", ...]}
+
+- "head": The category (format: [sentiment_direction]_[topic_lowercase])
+- "body_literals": Array of structured phrases following Body Decision Log rules
+
+If nothing can be extracted, output: {"head": "good_room", "body_literals": []}
+
+NOW PROCESS:
+Topic: {{TOPIC}}
+Sentiment: {{SENTIMENT}}
+Text span: "{{SELECTED_CONTENT}}"
+
+JSON OUTPUT:

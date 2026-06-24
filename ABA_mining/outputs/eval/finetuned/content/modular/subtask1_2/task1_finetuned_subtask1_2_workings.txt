@@ -1,0 +1,3498 @@
+========================================================================
+WORKINGS  –  task1_task1_finetuned_extended11_subtask1_2.csv
+========================================================================
+
+Threshold (all methods) : 0.5
+Total rows in file      : 358
+
+
+========================================================================
+RUN 1
+========================================================================
+
+  Total rows : 358
+
+────────────────────────────────────────────────────────────
+ID=8  Topic=Location
+  LLM : nice location,
+  GT rows for (ID=8, Topic=Location): 1
+  Best GT : nice location
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=0.9230
+  Cross-Encoder : PASS       best=0.9968
+
+────────────────────────────────────────────────────────────
+ID=8  Topic=Staff
+  LLM : lovely personal,
+  GT rows for (ID=8, Topic=Staff): 1
+  Best GT : lovely personal
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=0.9278
+  Cross-Encoder : PASS       best=0.9996
+
+────────────────────────────────────────────────────────────
+ID=8  Topic=Facility
+  LLM : renovated,
+  GT rows for (ID=8, Topic=Facility): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=23  Topic=Room
+  LLM : the beds were very comfortable
+  GT rows for (ID=23, Topic=Room): 1
+  Best GT : the beds were very comfortable
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=6.9315
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=24  Topic=Room
+  LLM : I loved the mattress!!!
+  GT rows for (ID=24, Topic=Room): 1
+  Best GT : I loved the mattress!!!
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=5.5452
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=25  Topic=Room
+  LLM : Clean and quiet
+  GT rows for (ID=25, Topic=Room): 1
+  Best GT : Clean and quiet
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9996
+
+────────────────────────────────────────────────────────────
+ID=27  Topic=Room
+  LLM : so comfortable, clean,
+  GT rows for (ID=27, Topic=Room): 1
+  Best GT : so comfortable, clean
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=0.9728
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=27  Topic=Staff
+  LLM : friendly staff.
+  GT rows for (ID=27, Topic=Staff): 1
+  Best GT : friendly staff
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=0.9864
+  Cross-Encoder : PASS       best=0.9996
+
+────────────────────────────────────────────────────────────
+ID=27  Topic=Location
+  LLM : perfect for overnight stay before flying from Larnaca Airport.
+  GT rows for (ID=27, Topic=Location): 1
+  Best GT : perfect for overnight stay before flying from Larnaca Airport.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=12.4766
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=29  Topic=Room
+  LLM : very clean functional rooms.
+  GT rows for (ID=29, Topic=Room): 1
+  Best GT : very clean functional rooms
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=5.5452
+  Sentence Emb  : PASS       best=0.9819
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=29  Topic=Staff
+  LLM : lovely and very helpful staff.
+  GT rows for (ID=29, Topic=Staff): 1
+  Best GT : lovely and very helpful staff.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=6.9315
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=29  Topic=Off
+  LLM : I would have liked an ironing board in the room.
+  GT rows for (ID=29, Topic=Off): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=37  Topic=Room
+  LLM : Really clean ,
+  GT rows for (ID=37, Topic=Room): 1
+  Best GT : Really clean
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=0.9184
+  Cross-Encoder : PASS       best=0.9991
+
+────────────────────────────────────────────────────────────
+ID=37  Topic=Staff
+  LLM : lovely caring staff.
+  GT rows for (ID=37, Topic=Staff): 1
+  Best GT : lovely caring staff.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=37  Topic=Location
+  LLM : The bus to the airport is close by and runs every 15 minutes.
+  GT rows for (ID=37, Topic=Location): 1
+  Best GT : The bus to the airport is close by and runs every 15 minutes.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=18.6160
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=41  Topic=Staff
+  LLM : Super friendly and helpful staff.
+  GT rows for (ID=41, Topic=Staff): 1
+  Best GT : Super friendly and helpful staff.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=6.9315
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=41  Topic=Location
+  LLM : A good location 5 lins away from the airport by car, 5 mins walk to the beach.
+  GT rows for (ID=41, Topic=Location): 2
+  Best GT : A good location 5 lins away from the airport by car, 5 mins walk to the beach.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=36.2061
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=41  Topic=Room
+  LLM : Clean modern rooms,
+  GT rows for (ID=41, Topic=Room): 1
+  Best GT : Clean modern rooms,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9997
+
+────────────────────────────────────────────────────────────
+ID=41  Topic=Food
+  LLM : very nice breakfast.
+  GT rows for (ID=41, Topic=Food): 1
+  Best GT : very nice breakfast.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=42  Topic=Room
+  LLM : clean
+  GT rows for (ID=42, Topic=Room): 1
+  Best GT : clean
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=1.3863
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9285
+
+────────────────────────────────────────────────────────────
+ID=43  Topic=Room
+  LLM : clean spacious practical
+  GT rows for (ID=43, Topic=Room): 1
+  Best GT : clean spacious practical
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9997
+
+────────────────────────────────────────────────────────────
+ID=51  Topic=Location
+  LLM : Near airport,
+  GT rows for (ID=51, Topic=Location): 1
+  Best GT : Near airport,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9991
+
+────────────────────────────────────────────────────────────
+ID=51  Topic=Room
+  LLM : nice clean room, very well kept.
+  GT rows for (ID=51, Topic=Room): 1
+  Best GT : nice clean room, very well kept
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=8.3178
+  Sentence Emb  : PASS       best=0.9821
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=51  Topic=Staff
+  LLM : staff very helpful and friendly.
+  GT rows for (ID=51, Topic=Staff): 1
+  Best GT : staff very helpful and friendly.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=6.9315
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=51  Topic=Food
+  LLM : good food
+  GT rows for (ID=51, Topic=Food): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=55  Topic=Location
+  LLM : Good for airport transfers
+  GT rows for (ID=55, Topic=Location): 1
+  Best GT : Good for airport transfers
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=5.5452
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9997
+
+────────────────────────────────────────────────────────────
+ID=58  Topic=Location
+  LLM : Close to the airport,
+  GT rows for (ID=58, Topic=Location): 2
+  Best GT : Close to the airport,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=8.3865
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9988
+
+────────────────────────────────────────────────────────────
+ID=58  Topic=Staff
+  LLM : the staff were nice and helpful.
+  GT rows for (ID=58, Topic=Staff): 1
+  Best GT : the staff were nice and helpful.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=8.3178
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=58  Topic=Room
+  LLM : The room wasn't soundproof so you can hear the planes.
+  GT rows for (ID=58, Topic=Room): 1
+  Best GT : The room wasn't soundproof so you can hear the planes.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=15.8434
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=65  Topic=Room
+  LLM : The property was clean, bed was comfortable
+  GT rows for (ID=65, Topic=Room): 1
+  Best GT : The property was clean, bed was comfortable
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=10.2982
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=65  Topic=Food
+  LLM : and the food and staff were really good.
+  GT rows for (ID=65, Topic=Food): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=65  Topic=Location
+  LLM : Location was great and easy to get to and from.
+  GT rows for (ID=65, Topic=Location): 1
+  Best GT : Location was great and easy to get to and from.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=15.0512
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=67  Topic=Staff
+  LLM : friendly staff
+  GT rows for (ID=67, Topic=Staff): 1
+  Best GT : friendly staff
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9997
+
+────────────────────────────────────────────────────────────
+ID=70  Topic=Room
+  LLM : Peaceful and clean
+  GT rows for (ID=70, Topic=Room): 1
+  Best GT : Peaceful and clean
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9997
+
+────────────────────────────────────────────────────────────
+ID=70  Topic=Staff
+  LLM : friendly helpful staff
+  GT rows for (ID=70, Topic=Staff): 1
+  Best GT : friendly helpful staff
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=90  Topic=Location
+  LLM : position,
+  GT rows for (ID=90, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=90  Topic=Staff
+  LLM : staff
+  GT rows for (ID=90, Topic=Staff): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=90  Topic=Room
+  LLM : and very clean
+  GT rows for (ID=90, Topic=Room): 1
+  Best GT : very clean
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=0.6570
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=0.7908
+  Cross-Encoder : PASS       best=0.9992
+
+────────────────────────────────────────────────────────────
+ID=90  Topic=Facility
+  LLM : parking not always easy
+  GT rows for (ID=90, Topic=Facility): 1
+  Best GT : parking not always easy
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=5.5452
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=94  Topic=Staff
+  LLM : Amazing staff,
+  GT rows for (ID=94, Topic=Staff): 1
+  Best GT : Amazing staff,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=94  Topic=Facility
+  LLM : modern facility
+  GT rows for (ID=94, Topic=Facility): 1
+  Best GT : modern facility
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9993
+
+────────────────────────────────────────────────────────────
+ID=94  Topic=Food
+  LLM : very tasty food with a super service at the restaurant by the hotel.
+  GT rows for (ID=94, Topic=Food): 1
+  Best GT : very tasty food with a super service at the restaurant by the hotel.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=18.6160
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=97  Topic=Room
+  LLM : The food we had was excellent,
+  GT rows for (ID=97, Topic=Room): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=97  Topic=Staff
+  LLM : service was excellent
+  GT rows for (ID=97, Topic=Staff): 1
+  Best GT : service was excellent
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=97  Topic=Location
+  LLM : we will go back.
+  GT rows for (ID=97, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=108  Topic=Room
+  LLM : everything
+  GT rows for (ID=108, Topic=Room): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=118  Topic=Location
+  LLM : location near the airport and beach 10/10.
+  GT rows for (ID=118, Topic=Location): 1
+  Best GT : location near the airport and beach 10/10.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=11.6845
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9993
+
+────────────────────────────────────────────────────────────
+ID=118  Topic=Staff
+  LLM : front desk are absolutely perfect 10/10
+  GT rows for (ID=118, Topic=Staff): 1
+  Best GT : front desk are absolutely perfect 10/10
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=10.2982
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=118  Topic=Food
+  LLM : hotel restaurant delicious! 10/10
+  GT rows for (ID=118, Topic=Food): 1
+  Best GT : hotel restaurant delicious! 10/10
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=7.5256
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=118  Topic=Room
+  LLM : the room perfect!
+  GT rows for (ID=118, Topic=Room): 1
+  Best GT : the room perfect!
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=120  Topic=Staff
+  LLM : Helpful staff
+  GT rows for (ID=120, Topic=Staff): 1
+  Best GT : Helpful staff
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9996
+
+────────────────────────────────────────────────────────────
+ID=120  Topic=Location
+  LLM : close to airport
+  GT rows for (ID=120, Topic=Location): 1
+  Best GT : close to airport
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9990
+
+────────────────────────────────────────────────────────────
+ID=120  Topic=Room
+  LLM : The room was small but adequate
+  GT rows for (ID=120, Topic=Room): 1
+  Best GT : The room was small but adequate
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=8.3178
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=127  Topic=Room
+  LLM : very clean and modern
+  GT rows for (ID=127, Topic=Room): 1
+  Best GT : very clean and modern
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=5.5452
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=130  Topic=Room
+  LLM : that your hotel allowed to stay with animals
+  GT rows for (ID=130, Topic=Room): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=134  Topic=Room
+  LLM : La veranda was lovely and clean,
+  GT rows for (ID=134, Topic=Room): 1
+  Best GT : La veranda was lovely and clean,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=8.3178
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=1.0000
+
+────────────────────────────────────────────────────────────
+ID=134  Topic=Staff
+  LLM : great friendly staff
+  GT rows for (ID=134, Topic=Staff): 1
+  Best GT : great friendly staff
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=134  Topic=Location
+  LLM : Brilliant location for beach and bars.
+  GT rows for (ID=134, Topic=Location): 1
+  Best GT : Brilliant location for beach and bars.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=8.3178
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9996
+
+────────────────────────────────────────────────────────────
+ID=137  Topic=Room
+  LLM : Room was clean and the bed was comfortable
+  GT rows for (ID=137, Topic=Room): 2
+  Best GT : Room was clean and the bed was comfortable
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=16.3615
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=137  Topic=Room
+  LLM : The smell in the bathroom
+  GT rows for (ID=137, Topic=Room): 2
+  Best GT : The smell in the bathroom
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=9.0358
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9996
+
+────────────────────────────────────────────────────────────
+ID=137  Topic=Staff
+  LLM : Friendly staff
+  GT rows for (ID=137, Topic=Staff): 1
+  Best GT : Friendly staff
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9997
+
+────────────────────────────────────────────────────────────
+ID=137  Topic=Location
+  LLM : great location
+  GT rows for (ID=137, Topic=Location): 1
+  Best GT : great location
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9948
+
+────────────────────────────────────────────────────────────
+ID=138  Topic=Location
+  LLM : Great localization,
+  GT rows for (ID=138, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=138  Topic=Staff
+  LLM : very helpful and kind personel,
+  GT rows for (ID=138, Topic=Staff): 1
+  Best GT : very helpful and kind personel,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=6.9315
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=138  Topic=Room
+  LLM : very clean room and bathroom,
+  GT rows for (ID=138, Topic=Room): 1
+  Best GT : very clean room and bathroom,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=6.9315
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=140  Topic=Room
+  LLM : Very clean, comfy bed,
+  GT rows for (ID=140, Topic=Room): 1
+  Best GT : Very clean, comfy bed,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=5.5452
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=140  Topic=Location
+  LLM : close to the airport,
+  GT rows for (ID=140, Topic=Location): 1
+  Best GT : close to the airport,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=5.5452
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9988
+
+────────────────────────────────────────────────────────────
+ID=140  Topic=Check-in
+  LLM : easy self check-in,
+  GT rows for (ID=140, Topic=Check-in): 1
+  Best GT : easy self check-in,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=5.5452
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=140  Topic=Food
+  LLM : great breakfast.
+  GT rows for (ID=140, Topic=Food): 1
+  Best GT : great breakfast.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9997
+
+────────────────────────────────────────────────────────────
+ID=141  Topic=Room
+  LLM : It felt like a home from home.
+  GT rows for (ID=141, Topic=Room): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=141  Topic=Room
+  LLM : Fantastic hotel
+  GT rows for (ID=141, Topic=Room): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=141  Topic=Staff
+  LLM : wonderful staff.
+  GT rows for (ID=141, Topic=Staff): 1
+  Best GT : with wonderful staff.
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=0.6570
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=0.8170
+  Cross-Encoder : PASS       best=0.9992
+
+────────────────────────────────────────────────────────────
+ID=141  Topic=Location
+  LLM : There was nothing not to like. Fabulous place.
+  GT rows for (ID=141, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=142  Topic=Staff
+  LLM : friendly staff
+  GT rows for (ID=142, Topic=Staff): 1
+  Best GT : very convenient friendly staff
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=0.5246
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=0.8635
+  Cross-Encoder : PASS       best=0.9995
+
+────────────────────────────────────────────────────────────
+ID=142  Topic=Location
+  LLM : near mackenzie beach
+  GT rows for (ID=142, Topic=Location): 1
+  Best GT : near mackenzie beach
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=144  Topic=Room
+  LLM : nice and clean
+  GT rows for (ID=144, Topic=Room): 1
+  Best GT : nice and clean
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9996
+
+────────────────────────────────────────────────────────────
+ID=153  Topic=Location
+  LLM : very close to the airport after a late flight,
+  GT rows for (ID=153, Topic=Location): 1
+  Best GT : very close to the airport after a late flight,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=12.4766
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=153  Topic=Staff
+  LLM : lovely friendly staff who checked us in quickly
+  GT rows for (ID=153, Topic=Staff): 1
+  Best GT : lovely friendly staff who checked us in quickly, also stored luggage and called a taxi for us.
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=0.5986
+  BM25          : PASS       best=11.3874
+  Sentence Emb  : PASS       best=0.7664
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=153  Topic=Room
+  LLM : beautiful, spotless room. really comfortable nights sleep in an air conditioned room after a great s
+  GT rows for (ID=153, Topic=Room): 1
+  Best GT : and beautiful, spotless room. really comfortable nights sleep in an air conditioned room after a gre
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=0.9418
+  BM25          : PASS       best=22.7748
+  Sentence Emb  : PASS       best=0.9747
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=153  Topic=Food
+  LLM : beautiful fresh breakfast which was very reasonably priced.
+  GT rows for (ID=153, Topic=Food): 1
+  Best GT : beautiful fresh breakfast which was very reasonably priced.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=11.0904
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=159  Topic=Room
+  LLM : Clean rooms,
+  GT rows for (ID=159, Topic=Room): 1
+  Best GT : Clean rooms,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9989
+
+────────────────────────────────────────────────────────────
+ID=159  Topic=Staff
+  LLM : very friendly staff
+  GT rows for (ID=159, Topic=Staff): 1
+  Best GT : very friendly staff
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=159  Topic=Location
+  LLM : and great location as it is close to the airport.
+  GT rows for (ID=159, Topic=Location): 1
+  Best GT : and great location as it is close to the airport.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=13.8629
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=161  Topic=Staff
+  LLM : the staff,
+  GT rows for (ID=161, Topic=Staff): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=161  Topic=Room
+  LLM : the cleanness,
+  GT rows for (ID=161, Topic=Room): 1
+  Best GT : the cleanness,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9992
+
+────────────────────────────────────────────────────────────
+ID=161  Topic=Price
+  LLM : the price,
+  GT rows for (ID=161, Topic=Price): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=161  Topic=Check-out
+  LLM : check out time
+  GT rows for (ID=161, Topic=Check-out): 1
+  Best GT : check out time
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9992
+
+────────────────────────────────────────────────────────────
+ID=166  Topic=Room
+  LLM : very clean and homely
+  GT rows for (ID=166, Topic=Room): 1
+  Best GT : very clean and homely
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=5.5452
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=168  Topic=Staff
+  LLM : The staff are good
+  GT rows for (ID=168, Topic=Staff): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=168  Topic=Room
+  LLM : The room is clean.
+  GT rows for (ID=168, Topic=Room): 1
+  Best GT : and room is clean.
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=0.5586
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=0.7131
+  Cross-Encoder : PASS       best=0.9996
+
+────────────────────────────────────────────────────────────
+ID=168  Topic=Location
+  LLM : We liked the location, near the airport and at the same time short walking distance to the beach and
+  GT rows for (ID=168, Topic=Location): 1
+  Best GT : We liked the location, near the airport and at the same time short walking distance to the beach and
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=30.5885
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=168  Topic=Food
+  LLM : The food at the restaurant is a must try, pretty delicious.
+  GT rows for (ID=168, Topic=Food): 1
+  Best GT : The food at the restaurant is a must try, pretty delicious.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=15.8434
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=172  Topic=Staff
+  LLM : Personal was friendly..
+  GT rows for (ID=172, Topic=Staff): 1
+  Best GT : Personal was friendly..
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=172  Topic=Room
+  LLM : Everything was clean.
+  GT rows for (ID=172, Topic=Room): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=172  Topic=Facility
+  LLM : Nice place..
+  GT rows for (ID=172, Topic=Facility): 1
+  Best GT : Everything was clean.
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : FAIL       best=0.0000
+  BM25          : FAIL       best=0.0000
+  Sentence Emb  : FAIL       best=0.2215
+  Cross-Encoder : FAIL       best=0.0001
+
+────────────────────────────────────────────────────────────
+ID=188  Topic=Staff
+  LLM : lovely
+  GT rows for (ID=188, Topic=Staff): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=192  Topic=Staff
+  LLM : staff was amazing.
+  GT rows for (ID=192, Topic=Staff): 1
+  Best GT : staff was amazing.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=192  Topic=Location
+  LLM : location
+  GT rows for (ID=192, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=192  Topic=Room
+  LLM : and cleanliness.
+  GT rows for (ID=192, Topic=Room): 1
+  Best GT : and cleanliness.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9996
+
+────────────────────────────────────────────────────────────
+ID=194  Topic=Location
+  LLM : Good location,
+  GT rows for (ID=194, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=194  Topic=Staff
+  LLM : friendly people,
+  GT rows for (ID=194, Topic=Staff): 1
+  Best GT : friendly people
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=0.9258
+  Cross-Encoder : PASS       best=0.9995
+
+────────────────────────────────────────────────────────────
+ID=194  Topic=Room
+  LLM : good a/c
+  GT rows for (ID=194, Topic=Room): 1
+  Best GT : good a/c
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9988
+
+────────────────────────────────────────────────────────────
+ID=199  Topic=Room
+  LLM : it is clean, beautiful
+  GT rows for (ID=199, Topic=Room): 1
+  Best GT : it is clean, beautiful
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=5.5452
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9997
+
+────────────────────────────────────────────────────────────
+ID=199  Topic=Location
+  LLM : being 5 minute walk from the beach, restaurants and cafés.
+  GT rows for (ID=199, Topic=Location): 1
+  Best GT : perfectly located being 5 minute walk from the beach, restaurants and cafés.
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=0.8263
+  BM25          : PASS       best=13.8629
+  Sentence Emb  : PASS       best=0.8047
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=199  Topic=Staff
+  LLM : kind service with a smile!
+  GT rows for (ID=199, Topic=Staff): 1
+  Best GT : kind service with a smile!
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=6.9315
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=201  Topic=Room
+  LLM : flexibility
+  GT rows for (ID=201, Topic=Room): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=202  Topic=Room
+  LLM : Super clean,
+  GT rows for (ID=202, Topic=Room): 1
+  Best GT : Super clean,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9994
+
+────────────────────────────────────────────────────────────
+ID=202  Topic=Location
+  LLM : close to the beach and great restaurants,
+  GT rows for (ID=202, Topic=Location): 1
+  Best GT : close to the beach and great restaurants,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=9.7041
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9997
+
+────────────────────────────────────────────────────────────
+ID=202  Topic=Staff
+  LLM : the staff is exceptionally nice,
+  GT rows for (ID=202, Topic=Staff): 1
+  Best GT : the staff is exceptionally nice,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=6.9315
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=206  Topic=Staff
+  LLM : Welcoming owners
+  GT rows for (ID=206, Topic=Staff): 1
+  Best GT : Welcoming owners
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9997
+
+────────────────────────────────────────────────────────────
+ID=206  Topic=Location
+  LLM : The beach is less than 5 minutes away.
+  GT rows for (ID=206, Topic=Location): 1
+  Best GT : great location. The beach is less than 5 minutes away.
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=0.7887
+  BM25          : PASS       best=11.0904
+  Sentence Emb  : PASS       best=0.7776
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=206  Topic=Price
+  LLM : Good value.
+  GT rows for (ID=206, Topic=Price): 1
+  Best GT : Good value.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9996
+
+────────────────────────────────────────────────────────────
+ID=215  Topic=Room
+  LLM : clean and simple
+  GT rows for (ID=215, Topic=Room): 1
+  Best GT : clean and simple
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9995
+
+────────────────────────────────────────────────────────────
+ID=224  Topic=Staff
+  LLM : Staff very friendly and very helpful.
+  GT rows for (ID=224, Topic=Staff): 1
+  Best GT : Staff very friendly and very helpful.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=8.9119
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=224  Topic=Room
+  LLM : Very comfortable nights sleep
+  GT rows for (ID=224, Topic=Room): 1
+  Best GT : Very comfortable nights sleep
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=5.5452
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=224  Topic=Location
+  LLM : Parking in the area is always possible but not necessarily the most convenient
+  GT rows for (ID=224, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=225  Topic=Room
+  LLM : Everything
+  GT rows for (ID=225, Topic=Room): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=226  Topic=Staff
+  LLM : Excellent staff in this family driven hotel. Very helpful and pleasant people who speak perfect Engl
+  GT rows for (ID=226, Topic=Staff): 1
+  Best GT : Excellent staff in this family driven hotel. Very helpful and pleasant people who speak perfect Engl
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=60.2048
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=226  Topic=Location
+  LLM : The backyard itself could actually have been used so much better.
+  GT rows for (ID=226, Topic=Location): 1
+  Best GT : The small fridge in the room was warm (turned off) upon arrival and completely empty, and no local s
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : FAIL       best=0.0313
+  BM25          : PASS       best=1.6834
+  Sentence Emb  : FAIL       best=0.1202
+  Cross-Encoder : FAIL       best=0.0000
+
+────────────────────────────────────────────────────────────
+ID=226  Topic=Food
+  LLM : there is not much extra in this hotel or in the room. 
+  
+  - The out-of-order pool table hidden awa
+  GT rows for (ID=226, Topic=Food): 1
+  Best GT : Except excellent staff/owners and an ok restaurant,
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : FAIL       best=0.0414
+  BM25          : PASS       best=13.8629
+  Sentence Emb  : FAIL       best=0.1863
+  Cross-Encoder : FAIL       best=0.0005
+
+────────────────────────────────────────────────────────────
+ID=226  Topic=Food
+  LLM : All in all, this hotel is great but still has room for improvement in many little details which coul
+  GT rows for (ID=226, Topic=Food): 1
+  Best GT : Except excellent staff/owners and an ok restaurant,
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : FAIL       best=0.0000
+  BM25          : FAIL       best=0.0000
+  Sentence Emb  : FAIL       best=0.4040
+  Cross-Encoder : FAIL       best=0.0004
+
+────────────────────────────────────────────────────────────
+ID=228  Topic=Staff
+  LLM : the Cyprus hospitality at the highest level. Feel at home in 1 minute with owners welcoming you with
+  GT rows for (ID=228, Topic=Staff): 1
+  Best GT : the Cyprus hospitality at the highest level. Feel at home in 1 minute with owners welcoming you with
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=0.9687
+  BM25          : PASS       best=31.1916
+  Sentence Emb  : PASS       best=0.9904
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=228  Topic=Location
+  LLM : the location is convenient
+  GT rows for (ID=228, Topic=Location): 1
+  Best GT : the location is convenient, quiet
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=0.7995
+  BM25          : PASS       best=5.5452
+  Sentence Emb  : PASS       best=0.8160
+  Cross-Encoder : PASS       best=0.9988
+
+────────────────────────────────────────────────────────────
+ID=228  Topic=Room
+  LLM : and the room had a big balcony
+  GT rows for (ID=228, Topic=Room): 1
+  Best GT : and the room had a big balcony
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=9.7041
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=230  Topic=Location
+  LLM : location,
+  GT rows for (ID=230, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=230  Topic=Price
+  LLM : and very good value
+  GT rows for (ID=230, Topic=Price): 1
+  Best GT : and very good value
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=5.5452
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9997
+
+────────────────────────────────────────────────────────────
+ID=231  Topic=Staff
+  LLM : very friendly staff,
+  GT rows for (ID=231, Topic=Staff): 1
+  Best GT : very friendly staff,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=231  Topic=Room
+  LLM : rooms were clean
+  GT rows for (ID=231, Topic=Room): 1
+  Best GT : rooms were clean
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=231  Topic=Location
+  LLM : and ideally situated for the airport
+  GT rows for (ID=231, Topic=Location): 1
+  Best GT : and ideally situated for the airport
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=8.3178
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=235  Topic=Location
+  LLM : Great location
+  GT rows for (ID=235, Topic=Location): 1
+  Best GT : Great location
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9948
+
+────────────────────────────────────────────────────────────
+ID=235  Topic=Staff
+  LLM : very welcoming staff,
+  GT rows for (ID=235, Topic=Staff): 1
+  Best GT : with very welcoming staff,
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=0.7474
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=0.9105
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=235  Topic=Room
+  LLM : and very clean
+  GT rows for (ID=235, Topic=Room): 1
+  Best GT : and very clean
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9997
+
+────────────────────────────────────────────────────────────
+ID=237  Topic=Room
+  LLM : clean and comfortable
+  GT rows for (ID=237, Topic=Room): 1
+  Best GT : clean and comfortable
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9994
+
+────────────────────────────────────────────────────────────
+ID=243  Topic=Location
+  LLM : near beaches and restaurants
+  GT rows for (ID=243, Topic=Location): 1
+  Best GT : near beaches and restaurants
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=5.5452
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9996
+
+────────────────────────────────────────────────────────────
+ID=253  Topic=Room
+  LLM : cleanliness and quietness
+  GT rows for (ID=253, Topic=Room): 1
+  Best GT : cleanliness and quietness
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=255  Topic=Location
+  LLM : close to the airport.
+  GT rows for (ID=255, Topic=Location): 1
+  Best GT : Very cozy, modern, clean hotel close to the airport. The location is super convenient, only few step
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : FAIL       best=0.3947
+  BM25          : PASS       best=6.0073
+  Sentence Emb  : PASS       best=0.5194
+  Cross-Encoder : PASS       best=0.9978
+
+────────────────────────────────────────────────────────────
+ID=255  Topic=Location
+  LLM : The location is super convenient, only few steps from the beach.
+  GT rows for (ID=255, Topic=Location): 1
+  Best GT : Very cozy, modern, clean hotel close to the airport. The location is super convenient, only few step
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=0.6643
+  BM25          : PASS       best=16.1734
+  Sentence Emb  : PASS       best=0.6023
+  Cross-Encoder : PASS       best=0.9994
+
+────────────────────────────────────────────────────────────
+ID=255  Topic=Staff
+  LLM : The staff is super friendly and attentive.
+  GT rows for (ID=255, Topic=Staff): 1
+  Best GT : The staff is super friendly and attentive.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=9.7041
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=255  Topic=Room
+  LLM : The room is spacious and new.
+  GT rows for (ID=255, Topic=Room): 1
+  Best GT : The room is spacious and new.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=8.3178
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=256  Topic=Room
+  LLM : clean and modern
+  GT rows for (ID=256, Topic=Room): 1
+  Best GT : clean and modern
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9993
+
+────────────────────────────────────────────────────────────
+ID=258  Topic=Room
+  LLM : Great accommodation,
+  GT rows for (ID=258, Topic=Room): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=258  Topic=Staff
+  LLM : wonderful staff,
+  GT rows for (ID=258, Topic=Staff): 1
+  Best GT : wonderful staff,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=258  Topic=Food
+  LLM : delicious food,
+  GT rows for (ID=258, Topic=Food): 1
+  Best GT : delicious food, tranquility!
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=0.6570
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=0.5750
+  Cross-Encoder : PASS       best=0.9952
+
+────────────────────────────────────────────────────────────
+ID=258  Topic=Location
+  LLM : tranquility!
+  GT rows for (ID=258, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=265  Topic=Staff
+  LLM : Very warm welcome
+  GT rows for (ID=265, Topic=Staff): 1
+  Best GT : Very warm welcome
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=265  Topic=Room
+  LLM : and very clean and comfortable-
+  GT rows for (ID=265, Topic=Room): 1
+  Best GT : and very clean and comfortable-
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=7.5256
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9997
+
+────────────────────────────────────────────────────────────
+ID=265  Topic=Location
+  LLM : as good a hotel as I’ve stayed at for £50 a night.
+  GT rows for (ID=265, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=269  Topic=Room
+  LLM : clean
+  GT rows for (ID=269, Topic=Room): 1
+  Best GT : clean,
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=1.3863
+  Sentence Emb  : PASS       best=0.8705
+  Cross-Encoder : PASS       best=0.9467
+
+────────────────────────────────────────────────────────────
+ID=269  Topic=Staff
+  LLM : super friendly
+  GT rows for (ID=269, Topic=Staff): 1
+  Best GT : super friendly,
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=0.9333
+  Cross-Encoder : PASS       best=0.9994
+
+────────────────────────────────────────────────────────────
+ID=269  Topic=Location
+  LLM : convenient
+  GT rows for (ID=269, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=278  Topic=Staff
+  LLM : The staff were wonderful, so friendly and welcoming
+  GT rows for (ID=278, Topic=Staff): 1
+  Best GT : The staff were wonderful, so friendly and welcoming
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=11.0904
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=278  Topic=Food
+  LLM : and the food was superb.
+  GT rows for (ID=278, Topic=Food): 1
+  Best GT : and the food was superb.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=6.9315
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=278  Topic=Location
+  LLM : The hotel was clean and easy for the airport.
+  GT rows for (ID=278, Topic=Location): 1
+  Best GT : and easy for the airport.
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=0.6559
+  BM25          : PASS       best=8.3178
+  Sentence Emb  : PASS       best=0.5835
+  Cross-Encoder : PASS       best=0.8904
+
+────────────────────────────────────────────────────────────
+ID=287  Topic=Room
+  LLM : Very clean, nice bed and linen.
+  GT rows for (ID=287, Topic=Room): 2
+  Best GT : Very clean, nice bed and linen.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=12.9243
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=287  Topic=Price
+  LLM : Good value.
+  GT rows for (ID=287, Topic=Price): 1
+  Best GT : Good value.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9996
+
+────────────────────────────────────────────────────────────
+ID=287  Topic=Facility
+  LLM : Some smell from bathroom/water.
+  GT rows for (ID=287, Topic=Facility): 1
+  Best GT : Allowed to take dog was the reason for booking.
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : FAIL       best=0.0000
+  BM25          : FAIL       best=0.0000
+  Sentence Emb  : FAIL       best=0.0293
+  Cross-Encoder : FAIL       best=0.0000
+
+────────────────────────────────────────────────────────────
+ID=297  Topic=Room
+  LLM : recently refurbished and very clean!
+  GT rows for (ID=297, Topic=Room): 1
+  Best GT : recently refurbished and very clean!
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=6.9315
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=297  Topic=Room
+  LLM : The room was spotless.
+  GT rows for (ID=297, Topic=Room): 1
+  Best GT : recently refurbished and very clean!
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : FAIL       best=0.0000
+  BM25          : FAIL       best=0.0000
+  Sentence Emb  : FAIL       best=0.0347
+  Cross-Encoder : FAIL       best=0.0001
+
+────────────────────────────────────────────────────────────
+ID=297  Topic=Staff
+  LLM : The staff was very nice and helpful!
+  GT rows for (ID=297, Topic=Staff): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=297  Topic=Location
+  LLM : nice location,
+  GT rows for (ID=297, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=297  Topic=Food
+  LLM : Also, the breakfast was amazing, fresh and handmade!
+  GT rows for (ID=297, Topic=Food): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=297  Topic=Price
+  LLM : Also, the breakfast was amazing, fresh and handmade!
+  GT rows for (ID=297, Topic=Price): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=297  Topic=Facility
+  LLM : Also, the breakfast was amazing, fresh and handmade!
+  GT rows for (ID=297, Topic=Facility): 1
+  Best GT : recently refurbished and very clean!
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : FAIL       best=0.0456
+  BM25          : PASS       best=1.3863
+  Sentence Emb  : FAIL       best=0.2895
+  Cross-Encoder : FAIL       best=0.0003
+
+────────────────────────────────────────────────────────────
+ID=297  Topic=Check-in
+  LLM : Check-in was great.
+  GT rows for (ID=297, Topic=Check-in): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=297  Topic=Check-out
+  LLM : Check-out was great.
+  GT rows for (ID=297, Topic=Check-out): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=297  Topic=Off
+  LLM : Also, the breakfast was amazing, fresh and handmade!
+  GT rows for (ID=297, Topic=Off): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=297  Topic=Booking-issue
+  LLM : Also, the breakfast was amazing, fresh and handmade!
+  GT rows for (ID=297, Topic=Booking-issue): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=297  Topic=Taxi-issue
+  LLM : Also, the breakfast was amazing, fresh and handmade!
+  GT rows for (ID=297, Topic=Taxi-issue): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=301  Topic=Room
+  LLM : Christmas vibes, nice ambiance.
+  GT rows for (ID=301, Topic=Room): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=301  Topic=Staff
+  LLM : Staff make you feel at home.
+  GT rows for (ID=301, Topic=Staff): 1
+  Best GT : Staff make you feel at home.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=8.3178
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=301  Topic=Location
+  LLM : Quiet area.
+  GT rows for (ID=301, Topic=Location): 1
+  Best GT : Quiet area.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9997
+
+────────────────────────────────────────────────────────────
+ID=301  Topic=Food
+  LLM : everything was perfect.
+  GT rows for (ID=301, Topic=Food): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=321  Topic=Room
+  LLM : Well organised and clean
+  GT rows for (ID=321, Topic=Room): 1
+  Best GT : Well organised and clean
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=5.5452
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=326  Topic=Room
+  LLM : Clean and freshly renovated room
+  GT rows for (ID=326, Topic=Room): 1
+  Best GT : Clean and freshly renovated room
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=6.9315
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=329  Topic=Room
+  LLM : Small and quiet
+  GT rows for (ID=329, Topic=Room): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=336  Topic=Staff
+  LLM : Exceptionally friendly and helpful.
+  GT rows for (ID=336, Topic=Staff): 1
+  Best GT : Exceptionally friendly and helpful.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=5.5452
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=336  Topic=Room
+  LLM : Tastefully decorated room and super comfy bed.
+  GT rows for (ID=336, Topic=Room): 1
+  Best GT : Tastefully decorated room and super comfy bed.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=9.7041
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=336  Topic=Food
+  LLM : Dinner and breakfast were freshly made and very tasty.
+  GT rows for (ID=336, Topic=Food): 1
+  Best GT : Dinner and breakfast were freshly made and very tasty.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=13.0708
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=337  Topic=Room
+  LLM : clean
+  GT rows for (ID=337, Topic=Room): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=337  Topic=Staff
+  LLM : and with excellent owners
+  GT rows for (ID=337, Topic=Staff): 1
+  Best GT : and with excellent owners
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=5.5452
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=337  Topic=Location
+  LLM : Excellent hotel,
+  GT rows for (ID=337, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=338  Topic=Staff
+  LLM : The family running this hotel are very friendly and welcoming! They gave us a free room upgrade.
+  GT rows for (ID=338, Topic=Staff): 1
+  Best GT : The family running this hotel are very friendly and welcoming! They gave us a free room upgrade.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=23.5670
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=338  Topic=Location
+  LLM : Walking distance to the beach, restaurants and shops. It is away from traffic.
+  GT rows for (ID=338, Topic=Location): 1
+  Best GT : Walking distance to the beach, restaurants and shops. It is away from traffic.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=18.0218
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9997
+
+────────────────────────────────────────────────────────────
+ID=338  Topic=Room
+  LLM : Fully stocked minibar with coffee and tea-making facilities.
+  GT rows for (ID=338, Topic=Room): 2
+  Best GT : Fully stocked minibar with coffee and tea-making facilities.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=18.6303
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=338  Topic=Price
+  LLM : Value for money.
+  GT rows for (ID=338, Topic=Price): 1
+  Best GT : Value for money.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9992
+
+────────────────────────────────────────────────────────────
+ID=341  Topic=Staff
+  LLM : The owners were absolutely lovely and made sure we had everything we needed!
+  GT rows for (ID=341, Topic=Staff): 1
+  Best GT : The owners were absolutely lovely and made sure we had everything we needed!
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=18.6160
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=341  Topic=Room
+  LLM : Property was clean and modern
+  GT rows for (ID=341, Topic=Room): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=341  Topic=Location
+  LLM : location was good.
+  GT rows for (ID=341, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=345  Topic=Room
+  LLM : Very modern and clean
+  GT rows for (ID=345, Topic=Room): 1
+  Best GT : Very modern and clean
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=5.5452
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=358  Topic=Location
+  LLM : Location close to airport
+  GT rows for (ID=358, Topic=Location): 1
+  Best GT : Location close to airport
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=5.5452
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9992
+
+────────────────────────────────────────────────────────────
+ID=369  Topic=Location
+  LLM : Location
+  GT rows for (ID=369, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=369  Topic=Staff
+  LLM : and staff
+  GT rows for (ID=369, Topic=Staff): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=369  Topic=Food
+  LLM : The food was amazing at the restaurant
+  GT rows for (ID=369, Topic=Food): 1
+  Best GT : The food was amazing at the restaurant
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=10.2982
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9996
+
+────────────────────────────────────────────────────────────
+ID=369  Topic=Room
+  LLM : Mostly the bathroom floor sink was closed with tapes and there was bugs under it.
+  GT rows for (ID=369, Topic=Room): 1
+  Best GT : Mostly the bathroom floor sink was closed with tapes and there was bugs under it.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=21.3885
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=371  Topic=Staff
+  LLM : People working here are the best ever
+  GT rows for (ID=371, Topic=Staff): 1
+  Best GT : People working here are the best ever
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=9.7041
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=383  Topic=Staff
+  LLM : Very friendly and helpful staff.
+  GT rows for (ID=383, Topic=Staff): 1
+  Best GT : Very friendly and helpful staff.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=6.9315
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=383  Topic=Facility
+  LLM : Clean facilities.
+  GT rows for (ID=383, Topic=Facility): 1
+  Best GT : Clean facilities.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9993
+
+────────────────────────────────────────────────────────────
+ID=383  Topic=Food
+  LLM : Good breakfast
+  GT rows for (ID=383, Topic=Food): 1
+  Best GT : Good breakfast
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9988
+
+────────────────────────────────────────────────────────────
+ID=390  Topic=Staff
+  LLM : Very good service
+  GT rows for (ID=390, Topic=Staff): 1
+  Best GT : Very good service
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=392  Topic=Location
+  LLM : Nice location,
+  GT rows for (ID=392, Topic=Location): 1
+  Best GT : Nice location,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9982
+
+────────────────────────────────────────────────────────────
+ID=392  Topic=Room
+  LLM : excellent rooms,
+  GT rows for (ID=392, Topic=Room): 1
+  Best GT : excellent rooms,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9995
+
+────────────────────────────────────────────────────────────
+ID=392  Topic=Staff
+  LLM : very friendly staff!
+  GT rows for (ID=392, Topic=Staff): 1
+  Best GT : very friendly staff!
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=395  Topic=Room
+  LLM : Everything was perfect
+  GT rows for (ID=395, Topic=Room): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=395  Topic=Staff
+  LLM : Amazing place to be honest!
+  GT rows for (ID=395, Topic=Staff): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=395  Topic=Location
+  LLM : Everything was perfect
+  GT rows for (ID=395, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=404  Topic=Room
+  LLM : A bit small rooms
+  GT rows for (ID=404, Topic=Room): 1
+  Best GT : A bit small rooms
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=5.5452
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=407  Topic=Room
+  LLM : Nice modern bedroom,
+  GT rows for (ID=407, Topic=Room): 1
+  Best GT : Nice modern bedroom,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=407  Topic=Food
+  LLM : nice greek breakfast
+  GT rows for (ID=407, Topic=Food): 1
+  Best GT : nice greek breakfast
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=407  Topic=Location
+  LLM : and hotel great location,
+  GT rows for (ID=407, Topic=Location): 1
+  Best GT : and hotel great location,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=5.5452
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9997
+
+────────────────────────────────────────────────────────────
+ID=411  Topic=Room
+  LLM : perfect
+  GT rows for (ID=411, Topic=Room): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=414  Topic=Staff
+  LLM : Great staff,
+  GT rows for (ID=414, Topic=Staff): 1
+  Best GT : Great staff,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9995
+
+────────────────────────────────────────────────────────────
+ID=414  Topic=Room
+  LLM : very clean and modern rooms,
+  GT rows for (ID=414, Topic=Room): 1
+  Best GT : very clean and modern rooms,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=6.9315
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=414  Topic=Price
+  LLM : great value
+  GT rows for (ID=414, Topic=Price): 1
+  Best GT : great value
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9992
+
+────────────────────────────────────────────────────────────
+ID=416  Topic=Staff
+  LLM : The staff and hosts were great!
+  GT rows for (ID=416, Topic=Staff): 1
+  Best GT : The staff and hosts were great!
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=8.3178
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=1.0000
+
+────────────────────────────────────────────────────────────
+ID=416  Topic=Location
+  LLM : Quiet place!
+  GT rows for (ID=416, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=416  Topic=Price
+  LLM : Value for money!
+  GT rows for (ID=416, Topic=Price): 1
+  Best GT : Value for money!
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9993
+
+────────────────────────────────────────────────────────────
+ID=420  Topic=Location
+  LLM : A LITTLE BIT FAR FROM SEA
+  GT rows for (ID=420, Topic=Location): 1
+  Best GT : A LITTLE BIT FAR FROM SEA
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=8.3178
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=440  Topic=Staff
+  LLM : Friendly Staff!
+  GT rows for (ID=440, Topic=Staff): 1
+  Best GT : Friendly Staff!
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=440  Topic=Staff
+  LLM : Very modern rooms
+  GT rows for (ID=440, Topic=Staff): 1
+  Best GT : Friendly Staff!
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : FAIL       best=0.0000
+  BM25          : FAIL       best=0.0000
+  Sentence Emb  : FAIL       best=0.1974
+  Cross-Encoder : FAIL       best=0.0000
+
+────────────────────────────────────────────────────────────
+ID=440  Topic=Room
+  LLM : Bath room was cleaned rather superficially, so that medium nice with hair not being removed.
+  GT rows for (ID=440, Topic=Room): 2
+  Best GT : Bath room was cleaned rather superficially, so that medium nice with hair not being removed.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=29.1555
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=441  Topic=Room
+  LLM : the room was PERFECT.
+  GT rows for (ID=441, Topic=Room): 2
+  Best GT : the room was PERFECT.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=6.1746
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=441  Topic=Food
+  LLM : Break fast was PERFECT,
+  GT rows for (ID=441, Topic=Food): 1
+  Best GT : Break fast was PERFECT,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=5.5452
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=441  Topic=Location
+  LLM : Some issues with internet and location, bit far from the center, but very quite Area around.
+  GT rows for (ID=441, Topic=Location): 2
+  Best GT : Some issues with internet and location, bit far from the center,
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=0.8135
+  BM25          : PASS       best=27.9177
+  Sentence Emb  : PASS       best=0.8965
+  Cross-Encoder : PASS       best=0.9986
+
+────────────────────────────────────────────────────────────
+ID=443  Topic=Room
+  LLM : clean room,
+  GT rows for (ID=443, Topic=Room): 1
+  Best GT : clean room,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9990
+
+────────────────────────────────────────────────────────────
+ID=443  Topic=Staff
+  LLM : friendly staff
+  GT rows for (ID=443, Topic=Staff): 1
+  Best GT : friendly staff
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9997
+
+────────────────────────────────────────────────────────────
+ID=443  Topic=Location
+  LLM : off season, so no bar / restaurant/ pool, which was not clear on booking.
+  GT rows for (ID=443, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=463  Topic=Room
+  LLM : cleanliness
+  GT rows for (ID=463, Topic=Room): 1
+  Best GT : cleanliness
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=1.3863
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9971
+
+────────────────────────────────────────────────────────────
+ID=468  Topic=Staff
+  LLM : Nice staff,
+  GT rows for (ID=468, Topic=Staff): 1
+  Best GT : Nice staff,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9997
+
+────────────────────────────────────────────────────────────
+ID=468  Topic=Room
+  LLM : room very nice and clean.
+  GT rows for (ID=468, Topic=Room): 1
+  Best GT : room very nice and clean.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=6.9315
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=468  Topic=Facility
+  LLM : Swimming pool could be cleaner.
+  GT rows for (ID=468, Topic=Facility): 1
+  Best GT : Swimming pool could be cleaner.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=6.9315
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=476  Topic=Staff
+  LLM : The kindness of the staff,
+  GT rows for (ID=476, Topic=Staff): 1
+  Best GT : The kindness of the staff,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=7.5256
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=476  Topic=Room
+  LLM : the size of the room,
+  GT rows for (ID=476, Topic=Room): 1
+  Best GT : the size of the room,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=7.5256
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9831
+
+────────────────────────────────────────────────────────────
+ID=476  Topic=Location
+  LLM : location.
+  GT rows for (ID=476, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=478  Topic=Staff
+  LLM : The kindness of the staff,
+  GT rows for (ID=478, Topic=Staff): 1
+  Best GT : The kindness of the staff,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=7.5256
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=478  Topic=Location
+  LLM : the location,
+  GT rows for (ID=478, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=478  Topic=Room
+  LLM : the cleanliness of the room.
+  GT rows for (ID=478, Topic=Room): 1
+  Best GT : the cleanliness of the room.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=7.5256
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9996
+
+────────────────────────────────────────────────────────────
+ID=481  Topic=Room
+  LLM : The cleanest place I stayed in Cyprus!
+  GT rows for (ID=481, Topic=Room): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=481  Topic=Staff
+  LLM : The staff is kind and welcoming.
+  GT rows for (ID=481, Topic=Staff): 1
+  Best GT : The staff is kind and welcoming.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=8.3178
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=481  Topic=Location
+  LLM : The Waze is to blame for what I didn't like.
+  GT rows for (ID=481, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=482  Topic=Room
+  LLM : cleanliness
+  GT rows for (ID=482, Topic=Room): 2
+  Best GT : cleanliness
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7176
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9971
+
+────────────────────────────────────────────────────────────
+ID=482  Topic=Staff
+  LLM : helpful reception
+  GT rows for (ID=482, Topic=Staff): 1
+  Best GT : helpful reception,
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=0.9269
+  Cross-Encoder : PASS       best=0.9994
+
+────────────────────────────────────────────────────────────
+ID=493  Topic=Room
+  LLM : nice, clean and neat.
+  GT rows for (ID=493, Topic=Room): 1
+  Best GT : nice, clean and neat.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=5.5452
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=493  Topic=Room
+  LLM : super sweet hosts
+  GT rows for (ID=493, Topic=Room): 1
+  Best GT : nice, clean and neat.
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : FAIL       best=0.0000
+  BM25          : FAIL       best=0.0000
+  Sentence Emb  : FAIL       best=0.2114
+  Cross-Encoder : FAIL       best=0.0000
+
+────────────────────────────────────────────────────────────
+ID=493  Topic=Staff
+  LLM : super sweet hosts
+  GT rows for (ID=493, Topic=Staff): 1
+  Best GT : super sweet hosts
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9996
+
+────────────────────────────────────────────────────────────
+ID=497  Topic=Staff
+  LLM : welcoming and helpful staff.
+  GT rows for (ID=497, Topic=Staff): 1
+  Best GT : welcoming and helpful staff. and I thank Tony for his welcome and his smile, it's so rare.
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : FAIL       best=0.4306
+  BM25          : PASS       best=6.0073
+  Sentence Emb  : PASS       best=0.6057
+  Cross-Encoder : PASS       best=0.9996
+
+────────────────────────────────────────────────────────────
+ID=497  Topic=Room
+  LLM : the room was spacious.and clean.
+  GT rows for (ID=497, Topic=Room): 1
+  Best GT : the room was spacious.and clean.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=8.3178
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=497  Topic=Food
+  LLM : the restaurant is very varied.
+  GT rows for (ID=497, Topic=Food): 1
+  Best GT : the restaurant is very varied.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=6.9315
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=497  Topic=Location
+  LLM : as well as the location close to the airport and the beach as well as many restaurants and snacks.
+  GT rows for (ID=497, Topic=Location): 1
+  Best GT : as well as the location close to the airport and the beach as well as many restaurants and snacks.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=31.1826
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=510  Topic=Location
+  LLM : Proximity to the airport,
+  GT rows for (ID=510, Topic=Location): 1
+  Best GT : Proximity to the airport
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=5.5452
+  Sentence Emb  : PASS       best=0.9603
+  Cross-Encoder : PASS       best=0.9955
+
+────────────────────────────────────────────────────────────
+ID=510  Topic=Room
+  LLM : clean and cheap
+  GT rows for (ID=510, Topic=Room): 2
+  Best GT : clean
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : FAIL       best=0.3554
+  BM25          : PASS       best=2.9207
+  Sentence Emb  : PASS       best=0.6715
+  Cross-Encoder : FAIL       best=0.0422
+
+────────────────────────────────────────────────────────────
+ID=510  Topic=Facility
+  LLM : Cramped, the third bed for a child is more suitable for a baby, minimalist room accessories
+  GT rows for (ID=510, Topic=Facility): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=511  Topic=Room
+  LLM : new clean
+  GT rows for (ID=511, Topic=Room): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=511  Topic=Staff
+  LLM : reception
+  GT rows for (ID=511, Topic=Staff): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=511  Topic=Location
+  LLM : Nothing
+  GT rows for (ID=511, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=514  Topic=Room
+  LLM : The cleaning
+  GT rows for (ID=514, Topic=Room): 1
+  Best GT : The cleaning
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9847
+
+────────────────────────────────────────────────────────────
+ID=518  Topic=Location
+  LLM : quiet place
+  GT rows for (ID=518, Topic=Location): 1
+  Best GT : quiet place
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9994
+
+────────────────────────────────────────────────────────────
+ID=519  Topic=Room
+  LLM : Very good breakfast,
+  GT rows for (ID=519, Topic=Room): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=519  Topic=Location
+  LLM : great location near MacKenzie beach.
+  GT rows for (ID=519, Topic=Location): 1
+  Best GT : great location near MacKenzie beach.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=6.9315
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=519  Topic=Staff
+  LLM : Staff very polite and helpful almost family atmosphere.
+  GT rows for (ID=519, Topic=Staff): 1
+  Best GT : Staff very polite and helpful almost family atmosphere.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=11.0904
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=532  Topic=Location
+  LLM : The proximity to the airport,
+  GT rows for (ID=532, Topic=Location): 1
+  Best GT : The proximity to the airport,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=7.5256
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9983
+
+────────────────────────────────────────────────────────────
+ID=532  Topic=Facility
+  LLM : free parking,
+  GT rows for (ID=532, Topic=Facility): 1
+  Best GT : free parking,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9996
+
+────────────────────────────────────────────────────────────
+ID=532  Topic=Room
+  LLM : large rooms! very clean
+  GT rows for (ID=532, Topic=Room): 1
+  Best GT : large rooms! very clean
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=5.5452
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=575  Topic=Staff
+  LLM : personal attention
+  GT rows for (ID=575, Topic=Staff): 1
+  Best GT : personal attention
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9995
+
+────────────────────────────────────────────────────────────
+ID=584  Topic=Staff
+  LLM : Very pleasant welcome
+  GT rows for (ID=584, Topic=Staff): 1
+  Best GT : Very pleasant welcome
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=592  Topic=Staff
+  LLM : the service
+  GT rows for (ID=592, Topic=Staff): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=603  Topic=Room
+  LLM : Very clean accommodation.
+  GT rows for (ID=603, Topic=Room): 1
+  Best GT : The quality of the television image quite poor.
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : FAIL       best=0.0000
+  BM25          : FAIL       best=0.0000
+  Sentence Emb  : FAIL       best=0.2406
+  Cross-Encoder : FAIL       best=0.0000
+
+────────────────────────────────────────────────────────────
+ID=603  Topic=Staff
+  LLM : Friendly staff.
+  GT rows for (ID=603, Topic=Staff): 1
+  Best GT : Friendly staff
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=0.9864
+  Cross-Encoder : PASS       best=0.9996
+
+────────────────────────────────────────────────────────────
+ID=603  Topic=Facility
+  LLM : The quality of the television image quite poor.
+  GT rows for (ID=603, Topic=Facility): 1
+  Best GT : Very clean accommodation. Very pleasant terrace in the evening.
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : FAIL       best=0.0607
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : FAIL       best=0.1307
+  Cross-Encoder : FAIL       best=0.0000
+
+────────────────────────────────────────────────────────────
+ID=608  Topic=Room
+  LLM : clean and comfortable
+  GT rows for (ID=608, Topic=Room): 2
+  Best GT : clean and comfortable
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=7.0095
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9994
+
+────────────────────────────────────────────────────────────
+ID=634  Topic=Staff
+  LLM : kindness
+  GT rows for (ID=634, Topic=Staff): 1
+  Best GT : kindness
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=1.3863
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9929
+
+────────────────────────────────────────────────────────────
+ID=638  Topic=Location
+  LLM : Location,
+  GT rows for (ID=638, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=638  Topic=Room
+  LLM : room comfort,
+  GT rows for (ID=638, Topic=Room): 1
+  Best GT : room comfort,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9996
+
+────────────────────────────────────────────────────────────
+ID=638  Topic=Staff
+  LLM : service and courtesy of the staff.
+  GT rows for (ID=638, Topic=Staff): 1
+  Best GT : service and courtesy of the staff.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=8.3178
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=641  Topic=Staff
+  LLM : Very friendly staff,
+  GT rows for (ID=641, Topic=Staff): 1
+  Best GT : Very friendly staff,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=641  Topic=Room
+  LLM : Nice room with a nice balcony.
+  GT rows for (ID=641, Topic=Room): 1
+  Best GT : very clean everywhere. Nice room with a nice balcony.
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=0.6938
+  BM25          : PASS       best=8.9119
+  Sentence Emb  : PASS       best=0.7565
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=641  Topic=Location
+  LLM : Quiet and peaceful area.
+  GT rows for (ID=641, Topic=Location): 1
+  Best GT : Quiet and peaceful area.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=5.5452
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=641  Topic=Facility
+  LLM : Definitely a hotel worth visiting again.
+  GT rows for (ID=641, Topic=Facility): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=645  Topic=Room
+  LLM : The room was very clean, well decorated and modern, although not big.
+  GT rows for (ID=645, Topic=Room): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=645  Topic=Room
+  LLM : The bed was super comfy
+  GT rows for (ID=645, Topic=Room): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=645  Topic=Staff
+  LLM : The staff was very nice and helpful!
+  GT rows for (ID=645, Topic=Staff): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=645  Topic=Location
+  LLM : nice location,
+  GT rows for (ID=645, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=645  Topic=Food
+  LLM : Also, the breakfast was amazing, fresh and handmade!
+  GT rows for (ID=645, Topic=Food): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=645  Topic=Price
+  LLM : Also, the breakfast was amazing, fresh and handmade!
+  GT rows for (ID=645, Topic=Price): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=645  Topic=Facility
+  LLM : Also, the breakfast was amazing, fresh and handmade!
+  GT rows for (ID=645, Topic=Facility): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=645  Topic=Check-in
+  LLM : Check-in was quick and easy.
+  GT rows for (ID=645, Topic=Check-in): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=645  Topic=Check-out
+  LLM : Check-out was quick and easy.
+  GT rows for (ID=645, Topic=Check-out): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=645  Topic=Off
+  LLM : Also, the breakfast was amazing, fresh and handmade!
+  GT rows for (ID=645, Topic=Off): 1
+  Best GT : Perfect!
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : FAIL       best=0.0000
+  BM25          : FAIL       best=0.0000
+  Sentence Emb  : FAIL       best=0.1899
+  Cross-Encoder : FAIL       best=0.0012
+
+────────────────────────────────────────────────────────────
+ID=645  Topic=Booking-issue
+  LLM : Also, the breakfast was amazing, fresh and handmade!
+  GT rows for (ID=645, Topic=Booking-issue): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=645  Topic=Taxi-issue
+  LLM : Also, the breakfast was amazing, fresh and handmade!
+  GT rows for (ID=645, Topic=Taxi-issue): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=649  Topic=Room
+  LLM : Clean comfortable room.
+  GT rows for (ID=649, Topic=Room): 2
+  Best GT : Clean comfortable room.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=6.1063
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9997
+
+────────────────────────────────────────────────────────────
+ID=649  Topic=Room
+  LLM : The room was small, could have been a bit more spacious.
+  GT rows for (ID=649, Topic=Room): 2
+  Best GT : The room was small, could have been a bit more spacious.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=20.4531
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=649  Topic=Staff
+  LLM : Friendly staff.
+  GT rows for (ID=649, Topic=Staff): 1
+  Best GT : Friendly staff.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=649  Topic=Location
+  LLM : The hotel is located near the airport.
+  GT rows for (ID=649, Topic=Location): 1
+  Best GT : The hotel is located near the airport. but we traveled in the off season - there was no noise from t
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : FAIL       best=0.4508
+  BM25          : PASS       best=10.9837
+  Sentence Emb  : PASS       best=0.7196
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=652  Topic=Room
+  LLM : Cleanliness 10/10!
+  GT rows for (ID=652, Topic=Room): 1
+  Best GT : Cleanliness 10/10! everything is white, bright, cozy!
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=0.5115
+  BM25          : PASS       best=4.7530
+  Sentence Emb  : PASS       best=0.6730
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=652  Topic=Staff
+  LLM : We spent one night before the plane, were very satisfied.
+  GT rows for (ID=652, Topic=Staff): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=652  Topic=Location
+  LLM : the accommodation is perfect - close to the airport.
+  GT rows for (ID=652, Topic=Location): 1
+  Best GT : - close to the airport.
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=0.6194
+  BM25          : PASS       best=6.9315
+  Sentence Emb  : PASS       best=0.5970
+  Cross-Encoder : FAIL       best=0.4080
+
+────────────────────────────────────────────────────────────
+ID=653  Topic=Staff
+  LLM : Very nice staff,
+  GT rows for (ID=653, Topic=Staff): 1
+  Best GT : Very nice staff,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=653  Topic=Room
+  LLM : comfortable beds, great shower.
+  GT rows for (ID=653, Topic=Room): 1
+  Best GT : comfortable beds, great shower.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=5.5452
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=653  Topic=Location
+  LLM : the option is excellent, close to the airport, near the lake with flamingos (in winter)
+  GT rows for (ID=653, Topic=Location): 1
+  Best GT : close to the airport, near the lake with flamingos (in winter)
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=0.8060
+  BM25          : PASS       best=17.5267
+  Sentence Emb  : PASS       best=0.8762
+  Cross-Encoder : PASS       best=0.9957
+
+────────────────────────────────────────────────────────────
+ID=668  Topic=Location
+  LLM : location and calm
+  GT rows for (ID=668, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=675  Topic=Facility
+  LLM : Very well-kept hotel,
+  GT rows for (ID=675, Topic=Facility): 1
+  Best GT : Very well-kept hotel,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=5.5452
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=675  Topic=Staff
+  LLM : friendly service,
+  GT rows for (ID=675, Topic=Staff): 1
+  Best GT : friendly service,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9996
+
+────────────────────────────────────────────────────────────
+ID=675  Topic=Room
+  LLM : very comfortable mattresses, fridge, kettle, very modern new equipment.
+  GT rows for (ID=675, Topic=Room): 1
+  Best GT : very comfortable mattresses, fridge, kettle, very modern new equipment.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=13.0708
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=679  Topic=Room
+  LLM : Superb room, bathroom and balcony, very comfortable,
+  GT rows for (ID=679, Topic=Room): 2
+  Best GT : Superb room, bathroom and balcony, very comfortable,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=15.1233
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=1.0000
+
+────────────────────────────────────────────────────────────
+ID=679  Topic=Staff
+  LLM : the staff was top notch!
+  GT rows for (ID=679, Topic=Staff): 1
+  Best GT : the staff was top notch!
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=6.9315
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=679  Topic=Location
+  LLM : Lots of noise from the hallway
+  GT rows for (ID=679, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=681  Topic=Facility
+  LLM : Very cozy and stylish hotel,
+  GT rows for (ID=681, Topic=Facility): 1
+  Best GT : Very cozy and stylish hotel,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=6.9315
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=681  Topic=Staff
+  LLM : good staff,
+  GT rows for (ID=681, Topic=Staff): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=681  Topic=Location
+  LLM : excellent location, bus stops nearby, salt lake, 5 minutes walk to the sea.
+  GT rows for (ID=681, Topic=Location): 1
+  Best GT : excellent location, bus stops nearby, salt lake, 5 minutes walk to the sea.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=18.0218
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=685  Topic=Location
+  LLM : Excellent location,
+  GT rows for (ID=685, Topic=Location): 1
+  Best GT : Excellent location,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9992
+
+────────────────────────────────────────────────────────────
+ID=685  Topic=Room
+  LLM : perfect cleanliness,
+  GT rows for (ID=685, Topic=Room): 1
+  Best GT : perfect cleanliness,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9997
+
+────────────────────────────────────────────────────────────
+ID=685  Topic=Food
+  LLM : excellent breakfasts for only 8€,
+  GT rows for (ID=685, Topic=Food): 1
+  Best GT : excellent breakfasts for only 8€,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=6.9315
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=685  Topic=Staff
+  LLM : super service
+  GT rows for (ID=685, Topic=Staff): 1
+  Best GT : super service
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9991
+
+────────────────────────────────────────────────────────────
+ID=688  Topic=Staff
+  LLM : Very nice owner,
+  GT rows for (ID=688, Topic=Staff): 1
+  Best GT : Very nice owner,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=688  Topic=Facility
+  LLM : great hotel,
+  GT rows for (ID=688, Topic=Facility): 1
+  Best GT : great hotel,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9995
+
+────────────────────────────────────────────────────────────
+ID=688  Topic=Location
+  LLM : close to the beach!!
+  GT rows for (ID=688, Topic=Location): 1
+  Best GT : close to the beach!!
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=5.5452
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9994
+
+────────────────────────────────────────────────────────────
+ID=702  Topic=Staff
+  LLM : Nice staff,
+  GT rows for (ID=702, Topic=Staff): 1
+  Best GT : Nice staff
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=0.9428
+  Cross-Encoder : PASS       best=0.9994
+
+────────────────────────────────────────────────────────────
+ID=702  Topic=Food
+  LLM : good cook
+  GT rows for (ID=702, Topic=Food): 1
+  Best GT : good cook
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9978
+
+────────────────────────────────────────────────────────────
+ID=702  Topic=Room
+  LLM : room a bit small.
+  GT rows for (ID=702, Topic=Room): 1
+  Best GT : room a bit small.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=5.5452
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=705  Topic=Staff
+  LLM : Pleasant staff,
+  GT rows for (ID=705, Topic=Staff): 1
+  Best GT : Pleasant staff,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9996
+
+────────────────────────────────────────────────────────────
+ID=705  Topic=Room
+  LLM : clean and tidy.
+  GT rows for (ID=705, Topic=Room): 1
+  Best GT : clean and tidy.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9995
+
+────────────────────────────────────────────────────────────
+ID=705  Topic=Food
+  LLM : Good food.
+  GT rows for (ID=705, Topic=Food): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=711  Topic=Room
+  LLM : possibility for late check out
+  GT rows for (ID=711, Topic=Room): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=711  Topic=Staff
+  LLM : and very nice staff
+  GT rows for (ID=711, Topic=Staff): 1
+  Best GT : very nice staff
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=0.7474
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=0.8412
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=711  Topic=Facility
+  LLM : Swimming pool , small and dirty
+  GT rows for (ID=711, Topic=Facility): 1
+  Best GT : Swimming pool , small and dirty
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=6.9315
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=712  Topic=Room
+  LLM : Comfortable room
+  GT rows for (ID=712, Topic=Room): 1
+  Best GT : Comfortable room
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9994
+
+────────────────────────────────────────────────────────────
+ID=724  Topic=Room
+  LLM : Clean
+  GT rows for (ID=724, Topic=Room): 1
+  Best GT : Clean
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=1.3863
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9285
+
+────────────────────────────────────────────────────────────
+ID=732  Topic=Staff
+  LLM : Very welcoming and friendly staff.
+  GT rows for (ID=732, Topic=Staff): 1
+  Best GT : Very welcoming and friendly staff.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=6.9315
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=732  Topic=Room
+  LLM : Everything is clean, white, freshly renovated.
+  GT rows for (ID=732, Topic=Room): 1
+  Best GT : Everything is clean, white, freshly renovated.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=8.3178
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=732  Topic=Location
+  LLM : Near Mackenzie beach, airport, salt lake.
+  GT rows for (ID=732, Topic=Location): 1
+  Best GT : Near Mackenzie beach, airport, salt lake.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=8.3178
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=734  Topic=Room
+  LLM : Everything was wonderful!
+  GT rows for (ID=734, Topic=Room): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=734  Topic=Staff
+  LLM : ☆☆☆☆☆
+  GT rows for (ID=734, Topic=Staff): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=734  Topic=Location
+  LLM : Everything was wonderful!
+  GT rows for (ID=734, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=734  Topic=Food
+  LLM : ☆☆☆☆☆
+  GT rows for (ID=734, Topic=Food): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=755  Topic=Room
+  LLM : Very clean
+  GT rows for (ID=755, Topic=Room): 1
+  Best GT : Very clean
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9994
+
+────────────────────────────────────────────────────────────
+ID=760  Topic=Location
+  LLM : Very good location
+  GT rows for (ID=760, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=763  Topic=Staff
+  LLM : The warm welcome in French,
+  GT rows for (ID=763, Topic=Staff): 1
+  Best GT : The warm welcome in French.
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=6.9315
+  Sentence Emb  : PASS       best=0.9914
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=763  Topic=Room
+  LLM : the comfort of the beds, the cleanliness.
+  GT rows for (ID=763, Topic=Room): 2
+  Best GT : the comfort of the beds, the cleanliness.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=12.7657
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9997
+
+────────────────────────────────────────────────────────────
+ID=763  Topic=Location
+  LLM : The noise emanating from the terrace when located on the 1st floor.
+  GT rows for (ID=763, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=770  Topic=Room
+  LLM : Clean, daily change of towels,
+  GT rows for (ID=770, Topic=Room): 2
+  Best GT : Clean, daily change of towels,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=9.3713
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9997
+
+────────────────────────────────────────────────────────────
+ID=770  Topic=Room
+  LLM : lack of storage spaces
+  GT rows for (ID=770, Topic=Room): 2
+  Best GT : lack of storage spaces
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=7.5974
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9997
+
+────────────────────────────────────────────────────────────
+ID=770  Topic=Staff
+  LLM : pleasant and helpful staff,
+  GT rows for (ID=770, Topic=Staff): 1
+  Best GT : pleasant and helpful staff,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=5.5452
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=770  Topic=Price
+  LLM : value for money
+  GT rows for (ID=770, Topic=Price): 1
+  Best GT : value for money
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9987
+
+────────────────────────────────────────────────────────────
+ID=772  Topic=Room
+  LLM : new equipment,
+  GT rows for (ID=772, Topic=Room): 2
+  Best GT : new equipment,
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=4.9194
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9990
+
+────────────────────────────────────────────────────────────
+ID=772  Topic=Room
+  LLM : couldn't close one window.
+  GT rows for (ID=772, Topic=Room): 2
+  Best GT : couldn't close one window
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=10.0980
+  Sentence Emb  : PASS       best=0.9387
+  Cross-Encoder : PASS       best=0.9997
+
+────────────────────────────────────────────────────────────
+ID=774  Topic=Room
+  LLM : comfortable and clean room,
+  GT rows for (ID=774, Topic=Room): 2
+  Best GT : comfortable and clean room
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=9.9570
+  Sentence Emb  : PASS       best=0.9642
+  Cross-Encoder : PASS       best=0.9997
+
+────────────────────────────────────────────────────────────
+ID=774  Topic=Location
+  LLM : good location
+  GT rows for (ID=774, Topic=Location): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=774  Topic=Staff
+  LLM : kind staff
+  GT rows for (ID=774, Topic=Staff): 1
+  Best GT : kind staff
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9997
+
+────────────────────────────────────────────────────────────
+ID=774  Topic=Facility
+  LLM : difficulties with the different sockets as they provided devices without adapters.
+  GT rows for (ID=774, Topic=Facility): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=778  Topic=Staff
+  LLM : Perfect welcome at 1:30 in the morning!
+  GT rows for (ID=778, Topic=Staff): 0
+  [No GT rows → all methods: NO MATCH]
+
+────────────────────────────────────────────────────────────
+ID=778  Topic=Price
+  LLM : Excellent value.
+  GT rows for (ID=778, Topic=Price): 1
+  Best GT : Excellent value.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=2.7726
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=778  Topic=Location
+  LLM : Close to the airport.
+  GT rows for (ID=778, Topic=Location): 1
+  Best GT : Close to the airport.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=5.5452
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9989
+
+────────────────────────────────────────────────────────────
+ID=784  Topic=Staff
+  LLM : Very friendly and warm service.
+  GT rows for (ID=784, Topic=Staff): 1
+  Best GT : Very friendly and warm service.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=6.9315
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=784  Topic=Room
+  LLM : very clean and new rooms.
+  GT rows for (ID=784, Topic=Room): 1
+  Best GT : very clean and new rooms.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=6.9315
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=784  Topic=Location
+  LLM : Proximity to the beach and airport.
+  GT rows for (ID=784, Topic=Location): 1
+  Best GT : Proximity to the beach and airport.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=8.3178
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9987
+
+────────────────────────────────────────────────────────────
+ID=785  Topic=Staff
+  LLM : Very kind and helpful staff.
+  GT rows for (ID=785, Topic=Staff): 1
+  Best GT : Very kind and helpful staff.
+  Parity        : PASS       best=1.0000
+  TF-IDF        : PASS       best=1.0000
+  BM25          : PASS       best=6.9315
+  Sentence Emb  : PASS       best=1.0000
+  Cross-Encoder : PASS       best=0.9999
+
+────────────────────────────────────────────────────────────
+ID=785  Topic=Location
+  LLM : Bad-degraded area.
+  GT rows for (ID=785, Topic=Location): 1
+  Best GT : Bad-degraded area. Garbage heap in the bin next to the hotel.
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : FAIL       best=0.3352
+  BM25          : PASS       best=4.1589
+  Sentence Emb  : PASS       best=0.6718
+  Cross-Encoder : PASS       best=0.9998
+
+────────────────────────────────────────────────────────────
+ID=785  Topic=Room
+  LLM : Garbage heap in the bin next to the hotel. Not as clean as it should be inside.
+  GT rows for (ID=785, Topic=Room): 1
+  Best GT : Not as clean as it should be inside. Misleading photos.
+  Parity        : FAIL       best=0.0000
+  TF-IDF        : FAIL       best=0.4532
+  BM25          : PASS       best=11.6845
+  Sentence Emb  : FAIL       best=0.4875
+  Cross-Encoder : PASS       best=0.5498

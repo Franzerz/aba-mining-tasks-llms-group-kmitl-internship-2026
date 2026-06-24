@@ -1,5 +1,0 @@
-Review ID,Valid,Topic,Text Span,Sentiment,Errors
-1,False,(parse failed),,,json_parse_error: Expecting value: line 1 column 1 (char 0)
-2,False,Room,"The room was very clean, well decorated and modern, although not big.",Positive,
-2,False,Staff,The staff was very nice and helpful!,Positive,
-2,False,Food,"The breakfast was amazing, fresh and handmade! Especially vegetarian version with humus.",Positive,

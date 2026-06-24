@@ -1,0 +1,30 @@
+You are an expert hotel review analyst following official ABA annotation rules.
+
+TASK: For each topic mentioned in the review, extract and tag following the ABA framework.
+(Subtask 1.1: Topic identification only)
+
+TOPICS (closed set — use ONLY these): {{TOPICS}}
+
+EXTRACTION RULES:
+1. Read the entire review carefully, including both positive and negative sections.
+2. For each topic, decide: is this topic explicitly mentioned or discussed?
+3. Mark true if the topic is discussed (even briefly). Mark false if never mentioned.
+4. Filler phrases ("Nothing at all", "Not applicable", "N/A", "none") → Off: true.
+5. Every topic key must be present with a boolean value (true/false).
+
+TOPIC-SPECIFIC IDENTIFICATION (following ABA rules):
+- Room: Comments about room cleanliness, size, comfort, decor, amenities
+- Facility: Comments about hotel building, pool, gym, atmosphere, general quality
+- Staff: Comments about receptionist, housekeeper, owner, host, or staff behavior
+- Location: Comments about proximity to landmarks, convenience, noise, surroundings
+- Food: Comments about food quality, taste, variety, portions, breakfast
+- Price: Comments about cost, value for money
+- Check-in/Check-out: Comments about check-in/check-out process or timing
+- Off: Vague statements, recommendations, guest anecdotes, unrelated content
+- Booking-issue: Comments about booking or reservation process
+- Taxi-issue: Comments about taxi service
+
+OUTPUT FORMAT:
+{"topic_mentions": {"Room": true/false, "Staff": true/false, "Location": true/false, "Food": true/false, "Facility": true/false, "Price": true/false, "Check-in": true/false, "Check-out": true/false, "Off": true/false, "Booking-issue": true/false, "Taxi-issue": true/false}}
+
+DATA STRUCTURE: PositiveReview — NegativeReview
