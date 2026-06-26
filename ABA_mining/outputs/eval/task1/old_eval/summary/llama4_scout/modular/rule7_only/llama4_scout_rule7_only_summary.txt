@@ -1,0 +1,25 @@
+========================================================================
+SUMMARY REPORT  –  llama4_scout\modular\rule7_only\llama4_scout_rule7_only
+========================================================================
+
+Generated : 2026-05-07 20:20:10
+
+
+[Subtask 1.1 – Topic Classification]
+  [File not found: llama4_scout_rule7_only_results.txt]
+
+[Subtask 1.2 – Content / Text Span Matching]
+────────────────────────────────────────────────────────────────────────
+OVERALL ACCURACY BY METHOD
+────────────────────────────────────────────────────────────────────────
+Method            Correct   Total   Accuracy
+────────────────────────────────────────────────────────────────────────
+Parity                 19      37     0.5135
+TF-IDF                 26      37     0.7027
+BM25                   36      37     0.9730
+Sentence Emb           35      37     0.9459
+Cross-Encoder          35      37     0.9459
+────────────────────────────────────────────────────────────────────────
+
+[Subtask 1.3 – Sentiment Classification]
+  [File not found: llama4_scout_rule7_only_results.txt]

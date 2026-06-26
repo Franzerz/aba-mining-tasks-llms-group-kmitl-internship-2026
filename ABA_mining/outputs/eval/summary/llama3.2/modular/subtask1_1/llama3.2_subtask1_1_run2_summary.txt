@@ -1,0 +1,46 @@
+========================================================================
+SUMMARY REPORT  –  llama3.2\modular\subtask1_1\llama3.2_subtask1_1_run2
+========================================================================
+
+Generated : 2026-06-23 00:49:00
+
+
+[Subtask 1.1 – Topic Classification]
+  -- Run 1 --
+────────────────────────────────────────────────────────────────────────
+OVERALL SUMMARY
+────────────────────────────────────────────────────────────────────────
+  Review IDs evaluated : 653
+  TP=1376  FP=369  FN=538  TN=4900
+  Accuracy  : 0.8737
+  Precision : 0.7885
+  Recall    : 0.7189
+  F1        : 0.7521
+
+  -- Run 2 --
+────────────────────────────────────────────────────────────────────────
+OVERALL SUMMARY
+────────────────────────────────────────────────────────────────────────
+  Review IDs evaluated : 653
+  TP=1376  FP=369  FN=538  TN=4900
+  Accuracy  : 0.8737
+  Precision : 0.7885
+  Recall    : 0.7189
+  F1        : 0.7521
+
+  -- Run 3 --
+────────────────────────────────────────────────────────────────────────
+OVERALL SUMMARY
+────────────────────────────────────────────────────────────────────────
+  Review IDs evaluated : 653
+  TP=1376  FP=369  FN=538  TN=4900
+  Accuracy  : 0.8737
+  Precision : 0.7885
+  Recall    : 0.7189
+  F1        : 0.7521
+
+[Subtask 1.2 – Content / Text Span Matching]
+  [File not found: llama3.2_subtask1_1_run2_results.txt]
+
+[Subtask 1.3 – Sentiment Classification]
+  [File not found: llama3.2_subtask1_1_run2_results.txt]

@@ -1,0 +1,30 @@
+You are an expert hotel review analyst extracting aspect mentions from hotel reviews.
+
+TASK: For each aspect mentioned in the review, extract and tag THREE components: Topic, Sentiment, and Head (category).
+
+TOPICS (closed set — use ONLY these): {{TOPICS}}
+
+THE THREE COMPONENTS TO EXTRACT:
+1. Topic: One of 11 hotel aspects (Room, Staff, Location, Food, Facility, Price, Check-in, Check-out, Off, Booking-issue, Taxi-issue)
+2. Text Span: The EXACT verbatim text from the review (same characters, casing, punctuation, spacing)
+3. Sentiment: Either "Positive" or "Negative"
+
+EXTRACTION RULES:
+- Extract EXACT verbatim text spans — no paraphrasing, no rewriting, no changes
+- Copy each span EXACTLY as it appears in the review
+- Assign sentiment based on semantic meaning of the text, not its location in the review
+- If a single span relates to MULTIPLE topics, extract it under EACH relevant topic
+- If a topic has multiple mentions, list them as separate entries
+- Topic "Off" is for fillers, vague praise, recommendations, or guest anecdotes unrelated to hotel aspects
+
+TOPIC-SPECIFIC RULES:
+- Room: Use for comments about room cleanliness, size, comfort, decor, amenities
+- Facility: Use for comments about hotel building, amenities (pool, gym), atmosphere, general facility quality
+- Staff: Use for comments about receptionist, housekeeper, owner, host, or general staff behavior
+- Location: Use for comments about proximity to landmarks, convenience, noise from outside, surroundings
+- Food: Use for food quality, taste, variety, portions, breakfast
+- Price: Use for cost, value for money comparisons
+- Check-in/Check-out: Use for check-in/check-out process, timing, staff behavior during these times
+- Off: Use for vague statements, recommendations, guest anecdotes, things that don't fit other topics
+
+DATA STRUCTURE FOR EACH REVIEW: PositiveReview — NegativeReview

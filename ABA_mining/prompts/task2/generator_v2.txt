@@ -1,0 +1,40 @@
+You are an Assumption-Based Argument Mining assistant. Extract body literals from hotel review text.
+
+TOPIC: {{TOPIC}}
+SENTIMENT: {{SENTIMENT}}
+TEXT: "{{SELECTED_CONTENT}}"
+
+PATTERN: Each literal = [quality]_[topic_noun] — lowercase, underscores, words from text only.
+
+STEPS:
+1. List every distinct quality mentioned about {{TOPIC}} in the text.
+2. For each quality, write: quality_word(s)_topic_noun (use words exactly as they appear).
+3. Keep short — 2 to 4 words maximum per literal.
+
+EXAMPLES:
+"Staff is extremely helpful and easy to communicate with" → ["helpful_staff", "easy_to_communicate_with"]
+"The room was very clean, well decorated and modern" → ["clean_room", "well_decorated_room", "modern_room"]
+"Tasty food on the first floor, comfortable restaurant" → ["tasty_food", "comfortable_restaurant"]
+"close to the airport, to very clean beach" → ["close_to_airport", "close_to_clean_beach"]
+"Service was great" → ["great_service"]
+
+RULES:
+- SENTIMENT guides which qualities to extract:
+  Positive → extract good/present aspects only | Negative → extract bad/absent aspects only
+- A text can mention BOTH positive and negative things — only take those matching the SENTIMENT
+  Example: Topic=Room | Sentiment=Positive | Text="clean room, although not big"
+  → ["clean_room"]  (only the positive quality — NOT not_big_room which is Negative)
+  Example: Topic=Room | Sentiment=Negative | Text="clean room, although not big"
+  → ["not_big_room"]  (only the negative quality)
+- Copy words EXACTLY as they appear (do not change singular/plural)
+- Do NOT add words that are not in the text
+- One literal per distinct quality
+- If nothing relevant, return []
+
+Output ONLY JSON. No explanation.
+{"body_literals": ["literal_1", "literal_2"]}
+
+NOW EXTRACT:
+Topic: {{TOPIC}} | Sentiment: {{SENTIMENT}}
+Text: "{{SELECTED_CONTENT}}"
+{"body_literals": [

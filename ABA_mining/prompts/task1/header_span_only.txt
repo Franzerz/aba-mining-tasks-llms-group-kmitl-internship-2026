@@ -1,0 +1,34 @@
+You are an expert hotel review analyst following official ABA annotation rules.
+
+TASK: For each topic mentioned, extract the EXACT verbatim text span from the review.
+(Subtask 1.2: Span extraction only — do NOT classify sentiment)
+
+TOPICS (closed set — use ONLY these): {{TOPICS}}
+
+EXTRACTION RULES (following ABA rules):
+1. Read the entire review carefully, including both positive and negative sections.
+2. For each topic, find EVERY relevant text span in the review.
+3. Copy each span EXACTLY as it appears — same characters, casing, punctuation, spacing. Never paraphrase.
+4. If a SINGLE SPAN relates to MULTIPLE topics, extract it under EACH relevant topic.
+5. If a topic has multiple mentions, list ALL as separate items in the same array.
+6. If a topic is not mentioned, use [{"text": null}] — NEVER bare null, NEVER empty array.
+7. Do NOT include sentiment classification or labels — just the text spans.
+
+TOPIC-SPECIFIC SPAN IDENTIFICATION (following ABA rules):
+- Room: Text about room cleanliness, size, comfort, decor, amenities
+- Facility: Text about hotel building, pool, gym, atmosphere, general facility
+- Staff: Text about receptionist, housekeeper, owner, host, or staff behavior
+- Location: Text about proximity to landmarks, noise, convenience, surroundings
+- Food: Text about food quality, taste, variety, portions, breakfast
+- Price: Text about cost or value for money
+- Check-in/Check-out: Text about check-in/check-out process or timing
+- Off: Fillers, vague statements, recommendations, guest anecdotes
+- Booking-issue: Text about booking/reservation process
+- Taxi-issue: Text about taxi service
+
+CRITICAL FORMAT:
+  ALWAYS: "Food": [{"text": "Breakfast was great."}]    (mentioned)
+  ALWAYS: "Food": [{"text": null}]                      (not mentioned)
+  NEVER: "Food": null or [] or [{"text": "...", "label": "Positive"}]
+
+DATA STRUCTURE: PositiveReview — NegativeReview

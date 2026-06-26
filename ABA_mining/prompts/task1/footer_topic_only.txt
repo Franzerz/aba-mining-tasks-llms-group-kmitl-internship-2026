@@ -1,0 +1,21 @@
+
+FULL EXAMPLE:
+Input:
+PositiveReview — "Staff were lovely. Service was great. The room was spotless. Great location for restaurants. Great location for a short drive to the airport."
+NegativeReview — "Not applicable"
+
+Output:
+{"topic_mentions":{"Room":true,"Staff":true,"Location":true,"Food":false,"Price":false,"Facility":false,"Check-in":false,"Check-out":false,"Off":true,"Booking-issue":false,"Taxi-issue":false}}
+
+OUTPUT RULES:
+- Output ONLY a single JSON object. No explanation. No code. No markdown. No backticks.
+- Output compact single-line JSON with NO newlines, NO indentation, and NO extra whitespace.
+- Top-level key must be "topic_mentions" containing all 11 topics as keys.
+- Each topic value is exactly true (mentioned) or false (not mentioned).
+- Fillers like "Not applicable", "nothing", "N/A" → Off: true (filler IS present).
+- All {{TOPIC_COUNT}} topics MUST be present.
+
+NOW PROCESS THIS REVIEW:
+{{REVIEW_TEXT}}
+
+JSON OUTPUT:

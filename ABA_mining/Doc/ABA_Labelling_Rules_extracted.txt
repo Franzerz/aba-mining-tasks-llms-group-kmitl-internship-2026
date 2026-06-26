@@ -1,0 +1,334 @@
+
+================================================================================
+PAGE 1/9
+================================================================================
+
+Understand the dataset.
+Our tasks are to tag 4 parts: 1) Topic, 2) Sentiment, 3) Head, 4) Body.
+Body is the most difficult (lots of rules) and needs more attention.
+The ABA labeling consists of 3 parts 1) Head, 2) Body, 3) Contrary.
+You don't need to tag Contrary. It will be automatically tagged based on Body.
+Example of Positive body: Body is comfortable_bed
+Contrary is no_evident_not_comfortable_bed
+Example of Negative body: Body is no_soundproof
+Contrary is have_evident_no_soundproof
+Checkpoint:
+1. You will see that the meaning of body and contrary are the same
+2. Read the whole sentence by combining head and body, check if it makes sense.
+3. Read the whole sentence by combining head and contrary, check if it makes sense.
+Both sentences (2, 3) must be understandable otherwise we need to fix the body or unlabel
+it (tag “Off”).
+Dataset statistics
+Original file: 1500 comments
+Selected: 785 comments (only comments containing positive or negative reviews)
+Classified topic: 11 Topics (Room, Staff, Location, Food, Facility, Price, Check-in,
+Check-out, Off, Booking-issue, Taxi-issue)
+Focused: 16 head (good_room, bad_room, good_staff, bad_staff, etc)
+1
+
+
+================================================================================
+PAGE 2/9
+================================================================================
+
+Rules to prepare “Body”.
+Body Decision log
+# Rule and instruction Example / Explanation etc
+1 Remove “very” Very clean room → clean_room
+Very clean → clean_room
+Extremely friendly staff → friendly_staff
+Great view → great_view
+2 Remove “s”, “es” staffs→staff
+3 Remove “ed” but do not remove if Meals well prepared → well_prepared_mea
+semantic necessary well decorated room → well_decorated_rooml
+4 Remove “.” “!”
+5 Remove articles, and preposition
+e.g. “a”, “the” if not necessary
+6 Change to lowercase letters
+7 Replace each space by an
+underscore (‘_’)
+8 Restrict to use the vocabularies
+appeared in the original text
+9 Restrict to maintain short phrases / Also we ate dinner a couple of times at the terrace and
+sentences (i.e. without adjectives everything was very tasty. → tasty_dinner
+and adverbs) unless necessary for
+meaning
+10 Correct typo (only if it easy to Stuff → staff
+guess), otherwise assign topic “Off”
+11 Correct the sentiment Sometimes, a positive comment contains a negative
+sentence / phrase. We correct those sentences to the
+correct sentiment. Same situation for negative comments
+.
+12 Sentiment matter Great view → great view
+Very clean room → clean room
+13 Rewrite the phrase using natural Meals well prepared → well_prepared_meal
+noun phrase order
+2
+
+
+================================================================================
+PAGE 3/9
+================================================================================
+
+Body Decision log
+# Rule and instruction Example / Explanation etc
+14 Double meanings: Split if there are -Great modern room → great_room, modern_room
+2 possible meanings
+-We could not turn on the mini fridge to cool our water
+bottles overnight ready for the following day. →
+cannot_turn_on_mini_fridge
+cannot_cool_water_bottle
+15 Multiple meanings: Split into all -We took pasta, pizza, salads and burgers and everything
+possible combination was piping hot and very tasty and homemade. →
+piping_hot_pasta, piping_hot_pizza, piping_hot_salad,
+piping_hot_burger, piping_hot_everything, tasty_pasta,
+and so on …
+16 Double sentiments in 1 sentence There are breakfasts, not a big variety but tasty
+Positive: tasty_breakfast
+Negative: not_big_breakfast
+17 Double topic: Tag 2 topic if the The room wasn't soundproof so you can hear the planes.
+sentence talks about 2 topics or → Tag Location and Room
+includes a bit of nuance.
+Despite being late we were offered food and drink in the
+bar which was most welcome. → Tag Staff and Facility
+The windows overlooked the courtyard, where it was quite
+noisy. → Tag Room, and Location
+18 Make it Noun Phrase, add subject, if -The location is great → great_location
+end with adjective -Staff is helpful → helpful_staff
+-Bus stop is very close → close_to_bus_stop
+-Meals is well prepared → well_prepared_meal
+19 Don’t add subject, if end with object -The location is near the airport → near_airport
+-The location is very close to bus stop →
+close_to_bus_stop
+- staff is buying fresh food → staff_buy_fresh_food
+20 For each comment, merge all untag
+(unlabel) sentence/phrase into 1
+row (Assign topic “Off”)
+3
+
+
+================================================================================
+PAGE 4/9
+================================================================================
+
+Body Decision log
+# Rule and instruction Example / Explanation etc
+21 Summary it, if the comment is We wanted a hotel for a night that is close to the airport
+indirect meaning (see examples and this hotel did that purpose more than fair. →
+under this table) close_to_airport
+22 Medium emotion is a positive -Fair room → Topic Room, Head good_room, Body
+sentiment fair_room
+23 Example: Need … -Need some renovation in lobby and common areas →
+need_renovation_in_lobby,
+need_renovation_in_common_area
+-the edges of the shower (between wall tiles and the
+shower floor) need replacement → more hooks on
+walls for towels etc.
+-Maybe the reception needs improvement. It is very old
+furniture → need_improvement_reception
+24 Add Need if necessary for -one more double hook in bathroom for towels. → not Need
+meaning ? enough hook in bathroom som
+ethin
+Add Not enough? -Would have liked more TV channels like RT Russia
+g
+Today→ not_enough_tv_channel more
+-more hooks on walls for towels etc.→
+not_enough_hook_on_wall
+-and so you had to draw the thick curtains if you wanted
+privacy. → not_enough_privacy
+-Property have a great potential with some care. →
+not_enough_care
+-The price is perhaps a little high for the comfort that a
+room gives you that is small as soon as you enter. →
+high_price_for_not_enough_comfort_room
+25 Indirect meaning: (no exist such -it would be nice if there was a breakfast buffet → No
+thing) no_buffet_breakfast
+Would be ___ If ___ -It would be great to have a clothes dryer at the balcony or
+Should be ___ in the bathroom → no_clothe_dryer
+Lack of ___ -they should be drawers in the room →
+no_drawer_in_room
+26 Indirect meaning: (no exist such This hotel is accessible to wheelchairs but there ramps No
+thing) are not to EU regulations.
+→hotel_not_accessible_to_wheelchair_as_it_said
+27 Indirect meaning: (-er) -Our son had a folding bed which could have been better -er
+Could/Should ___ –er (better, –-er) → folding_bed_could_be_better
+-The hotel staff should learn better English →
+staff_should_learn_better_English
+-Pool could of been bigger → pool_could_be_bigger
+4
+
+
+================================================================================
+PAGE 5/9
+================================================================================
+
+Body Decision log
+# Rule and instruction Example / Explanation etc
+-Swimming pool could be cleaner. →
+pool_could_be_cleaner
+28 Indirect meaning: (emphatic idiom) -The staff could not be more helpful and showed us to a
+couldn't have been more _ really nice room → helpful_staff
+-couldn't have been more pleased → pleased_staff
+-I couldn't have asked for more informative and reassuring
+service. → informative, reassuring_service
+29 If body duplicate with head →
+don’t add that body but add its
+contrary
+30 Good for me, Bad for me.
+Small room → bad but I like
+Close to airport → not good for me
+31 If it is possible to represent the I find it important to keep staff updated about these things.
+sentence using active voice, we → keep_staff_updated
+will use VP for simplicity
+32 If an original sentence is too long I did not like the behavior of the gentleman in the
+and the extracted part is too reservations. I was assured of breakfast in the price of the
+short, we can generate a room. Upon arrival he refused to provide breakfast in an
+corresponding proposition by unacceptable manner, and without even speaking the
+creating a sentence with the Cypriot language. → staff_has_unaceptable_manner
+extracted part
+21. (More Examples) Need to add interpret meaning: (need a new summary). See many
+examples below.
+Waited 10 minutes for someone to come greet us for wait_10_min wait_10_min lack_comm staff_take_p
+check in, no one on desk utes_for_gre utes_for_ch unication_s icture_of_pa
+et eck-in taff ssport
+Guy on desk told us we had not paid but we did
+then he took a picture of my passport which no hotel
+does at all which was very strange ?????
+- we have requested late check out (1pm) which we got and we keep_staff_upd lack_communi
+appreciate it. However, we got a call that prompted us to check out at ate cation_staff
+the normal time (12pm) as the next customers would arrive. I exllained
+thay we have been granted late check out and the clerk apologised. No
+problem for this, but I find it important to keep staff updated about these
+things.
+5
+
+
+================================================================================
+PAGE 6/9
+================================================================================
+
+difficult_to_fin
+and on the other hand, if you go by car, even though there is an open-air car park d_parking_spa
+very close, it's a real odyssey to be able to park. We had to leave the car far away. ce
+staff_failure_to_gu
+when we complained, they said they took care of it and it wasn't taken care of. est_request
+that they couldn’t wait for 15min as i had just fractured my ankle and not_kind_staff lack_of_empat
+need to change my bandage and the Lady of the house was literally hy_staff
+standing next to the door with a cleaner to clean the room. so i left
+without changing my bandage and had to do it outside on the street.
+We had ordered a shuttle and thought it was specific to the hotel but it turned out to be just
+a lambda taxi, the problem is that we waited for it for 40 minutes because it was late but
+nobody warned us. We had to pay it straight away when we thought it would be included in
+the hotel bill at the end of the stay. It would be better to indicate directly that it is staff_failure_to_c
+independent of the hotel, we would not have waited in front of other taxis and tried to ommunicate_with
+reach everyone... _taxi
+We booked a taxi at 04:30 in the morning to go to the airport. Very frustrating that the host didnt inform us staff_failure_to_
+that his taxi had a double Booking instead of ordening another for us. communicate_w
+ith_taxi
+Topic Off (unlabel) decision log
+# Topic Example Etc
+1 Unlabel if it is Too Vague to assign -Very good → unlabel (Off)
+a topic
+-clean, super friendly, convenient
+Clean → Topic Room
+Super friendly → Topic Staff
+Convenient→ unlabel (Off)
+-airy and comfortable room, super fast wifi, and a tip.
+airy and comfortable room, super fast wifi, → Topic
+Room
+and a tip → unlabel (Off)
+2 Unlabel recommendation, -I recommend it.
+complimentary -You should only sleep with air conditioning in the
+6
+
+
+================================================================================
+PAGE 7/9
+================================================================================
+
+Topic Off (unlabel) decision log
+# Topic Example Etc
+summer,
+-Pleasant and relaxing staying in Larnaca.
+3 Unlabel guest’s action -We had cocktails on the lovely patio and had the
+chance to meet and chat with other guests.
+Topic “Room” decision log
+# Topic Example Etc
+1 Word clean with no obvious noun Clean → clean_room
+will be Topic Room Super Clean → clean_room
+Clean setup → clean_setup_room
+1. We assume it is about room. Very clean → clean_room
+Cleanliness → clean_room
+2. Assign topic “Room” Clean basic → clean_room, basic_room
+Topic “Facility” decision log
+# Topic Example Etc
+1 The following nouns are classified New, comfortable apartments
+as Topic Facility. Topic: good_facility
+- Apartment Body: new_hotel, comfortable_hotel
+- Hotel
+I like hotels with a family atmosphere, cozy and not big,
+- Accommodation
+Topic: good_facility
+- Atmosphere
+Body: family_atmosphere_hotel, cozy_hotel
+- Place
+- Building
+More example: → _hotel
+clean_facility → clean_hotel
+Use _hotel for them clean_place
+nice_place
+beautiful_property
+clean_property
+good_place
+brand_new_building
+recently_renovated_building
+7
+
+
+================================================================================
+PAGE 8/9
+================================================================================
+
+Topic “Staff” decision log
+# Topic Example Etc
+1 The following nouns are classified as The owner and staff were exceptionally friendly and
+Topic Staff. supportive and helped with all our wishes.
+- People
+Body: friendly_staff, supportive_staff,
+- Receptionist
+help_with_all_our_wish
+- Housekeeper
+- Owner
+- Host
+Use _staff for them
+Topic “Room” or “Location” decision log
+# Topic Example Etc
+1 If the noise comes from inside the See
+room (bad walls, AC, neighbors, noise
+etc.) → Room source
+2 If the noise comes from outside See
+(beach, street, bars, etc.) → noise
+Location source
+3 If talking about the convenience of Very good if you have an early morning flight →
+being close to the airport → good_for_early_morning_flight (Topic Location)
+Location
+Location decision log
+Topic Decision Owner Status
+…Noise… → noise Person Not started
+… Noisy… → noise
+Noisy
+location→noisy_location
+Person In progress
+8
+
+
+================================================================================
+PAGE 9/9
+================================================================================
+
+Location decision log
+Topic Decision Owner Status
+Person Blocked
+Person Approved
+9
+

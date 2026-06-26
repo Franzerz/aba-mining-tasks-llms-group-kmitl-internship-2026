@@ -1,0 +1,25 @@
+Topic: {{TOPIC}} | Sentiment: {{SENTIMENT}}
+Review text: "{{SELECTED_CONTENT}}"
+
+List every quality about {{TOPIC}} from the text as snake_case noun phrases.
+Use only words from the text. Remove articles (a/an/the). One phrase per quality.
+
+Example — Topic: Room | Text: "clean and modern room, not big"
+Answer: {"body_literals": ["clean_[BLANK]", "modern_[BLANK]", "not_big_[BLANK]"]}
+Explanation — in the [BLANK] position it is should be Topic
+Correct: {"body_literals": ["clean_room", "modern_room", "not_big_room"]}
+
+Example — Topic: Staff | Text: "Staff is extremely helpful and easy to communicate with"
+Answer: {"body_literals": ["helpful_[BLANK]", "easy_to_communicate_with"]}
+Explanation — in the [BLANK] position it is should be Topic
+Correct: {"body_literals": ["helpful_staff", "easy_to_communicate_with"]}
+
+Example — Topic: Location | Text: "close to the airport, to very clean beach"
+Answer: {"body_literals": ["close_to_[BLANK]", "close_to_clean_[BLANK]"]}
+Explanation — in the [BLANK] position it is should be a location that support body_literals of Topic: Location
+Correct: {"body_literals": ["close_to_airport", "close_to_clean_beach"]}
+
+Answer for the review text above:
+{"body_literals": [
+
+

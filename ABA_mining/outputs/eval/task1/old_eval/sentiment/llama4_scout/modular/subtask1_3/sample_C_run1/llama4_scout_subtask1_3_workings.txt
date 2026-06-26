@@ -1,0 +1,296 @@
+========================================================================
+WORKINGS  –  task1_llama4_scout_extended11_subtask1_3_n20.csv
+========================================================================
+
+Has 'Text Span' : False
+Match strategy  : majority GT sentiment for (ID, Topic)
+Total LLM rows  : 32
+Sentiments      : ['Negative', 'Positive']
+
+
+────────────────────────────────────────────────────────────
+ID=41  Topic=Staff
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Majority GT sent  : Positive  (from ['Positive'])
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=41  Topic=Location
+  LLM Sentiment : Positive
+  GT candidates : 2
+  Majority GT sent  : Positive  (from ['Positive', 'Negative'])
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=41  Topic=Food
+  LLM Sentiment : Negative
+  GT candidates : 1
+  Majority GT sent  : Positive  (from ['Positive'])
+  Best GT Sentiment : Positive  → WRONG
+    Negative      LLM=yes  GT=no   → FP
+    Positive      LLM=no   GT=yes  → FN
+
+────────────────────────────────────────────────────────────
+ID=44  Topic=Staff
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Majority GT sent  : Positive  (from ['Positive'])
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=44  Topic=Facility
+  LLM Sentiment : Positive
+  GT candidates : 0
+  [No GT rows for this ID+Topic → skipped]
+
+────────────────────────────────────────────────────────────
+ID=45  Topic=Location
+  LLM Sentiment : Positive
+  GT candidates : 2
+  Majority GT sent  : Positive  (from ['Positive', 'Negative'])
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=45  Topic=Food
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Majority GT sent  : Positive  (from ['Positive'])
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=45  Topic=Price
+  LLM Sentiment : Positive
+  GT candidates : 0
+  [No GT rows for this ID+Topic → skipped]
+
+────────────────────────────────────────────────────────────
+ID=46  Topic=Price
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Majority GT sent  : Positive  (from ['Positive'])
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=47  Topic=Staff
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Majority GT sent  : Positive  (from ['Positive'])
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=47  Topic=Price
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Majority GT sent  : Positive  (from ['Positive'])
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=48  Topic=Room
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Majority GT sent  : Positive  (from ['Positive'])
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=48  Topic=Staff
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Majority GT sent  : Positive  (from ['Positive'])
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=49  Topic=Room
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Majority GT sent  : Positive  (from ['Positive'])
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=49  Topic=Location
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Majority GT sent  : Positive  (from ['Positive'])
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=49  Topic=Price
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Majority GT sent  : Positive  (from ['Positive'])
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=51  Topic=Room
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Majority GT sent  : Positive  (from ['Positive'])
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=51  Topic=Staff
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Majority GT sent  : Positive  (from ['Positive'])
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=51  Topic=Food
+  LLM Sentiment : Positive
+  GT candidates : 0
+  [No GT rows for this ID+Topic → skipped]
+
+────────────────────────────────────────────────────────────
+ID=53  Topic=Location
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Majority GT sent  : Positive  (from ['Positive'])
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=53  Topic=Food
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Majority GT sent  : Positive  (from ['Positive'])
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=53  Topic=Facility
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Majority GT sent  : Positive  (from ['Positive'])
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=54  Topic=Room
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Majority GT sent  : Positive  (from ['Positive'])
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=57  Topic=Room
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Majority GT sent  : Positive  (from ['Positive'])
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=57  Topic=Staff
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Majority GT sent  : Positive  (from ['Positive'])
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=57  Topic=Location
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Majority GT sent  : Positive  (from ['Positive'])
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=58  Topic=Room
+  LLM Sentiment : Negative
+  GT candidates : 1
+  Majority GT sent  : Negative  (from ['Negative'])
+  Best GT Sentiment : Negative  → CORRECT
+    Negative      LLM=yes  GT=yes  → TP
+    Positive      LLM=no   GT=no   → TN
+
+────────────────────────────────────────────────────────────
+ID=58  Topic=Staff
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Majority GT sent  : Positive  (from ['Positive'])
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=58  Topic=Location
+  LLM Sentiment : Positive
+  GT candidates : 2
+  Majority GT sent  : Positive  (from ['Positive', 'Negative'])
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=59  Topic=Location
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Majority GT sent  : Positive  (from ['Positive'])
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=59  Topic=Check-in
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Majority GT sent  : Positive  (from ['Positive'])
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+────────────────────────────────────────────────────────────
+ID=60  Topic=Check-in
+  LLM Sentiment : Positive
+  GT candidates : 1
+  Majority GT sent  : Positive  (from ['Positive'])
+  Best GT Sentiment : Positive  → CORRECT
+    Negative      LLM=no   GT=no   → TN
+    Positive      LLM=yes  GT=yes  → TP
+
+[Per-sentiment totals: Negative]
+  TP=1  FP=1  FN=0  TN=27
+  Acc=0.9655  Prec=0.5000  Rec=1.0000  F1=0.6667
+
+[Per-sentiment totals: Positive]
+  TP=27  FP=0  FN=1  TN=1
+  Acc=0.9655  Prec=1.0000  Rec=0.9643  F1=0.9818

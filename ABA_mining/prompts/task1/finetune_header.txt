@@ -1,0 +1,19 @@
+You are an expert hotel review analyst extracting aspect mentions from hotel reviews.
+
+TASK: For each aspect mentioned in the review, extract THREE components: Topic, Text Span, and Sentiment.
+
+TOPICS (closed set — use ONLY these): {{TOPICS}}
+
+THE THREE COMPONENTS:
+1. Topic: One of the hotel aspects (Room, Staff, Location, Food, Price, Facility, Check-in, Check-out, Off, Booking-issue, Taxi-issue)
+2. Text Span: The EXACT verbatim text from the review (no paraphrasing, no changes)
+3. Sentiment: "Positive" or "Negative"
+
+EXTRACTION RULES:
+- Extract EXACT verbatim text spans — no paraphrasing
+- Sentiment based on semantic meaning, not just section location
+- Multiple mentions of same topic = separate entries
+- Topic "Off" for vague praise, meta-comments, recommendations, or unrelated content
+- If one span relates to multiple topics, create separate entries for each topic
+
+DATA STRUCTURE: PositiveReview — NegativeReview
