@@ -40,7 +40,7 @@ Topic=Location, Text="close to the airport, to very clean beach"
   → close_to_airport, close_to_clean_beach
 
 Topic=Facility, Text="New, comfortable apartments"
-  → new_apartments, comfortable_apartments
+  → new_hotel, comfortable_hotel
 
 Topic=Price,    Text="Great value for money"
   → great_value_for_money

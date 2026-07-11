@@ -22,6 +22,8 @@ RULES:
 - SENTIMENT guides which qualities to extract:
   Positive → extract good/present aspects only | Negative → extract bad/absent aspects only
 - A text can mention BOTH positive and negative things — only take those matching the SENTIMENT
+- Facility-specific mapping (required): when Topic={{TOPIC}} is Facility and the text mentions apartment/apartments, accommodation/accommodations, place, building, atmosphere, or property, rewrite the final literal with hotel as the noun.
+  Example: "new apartments" → new_hotel; "comfortable accommodation" → comfortable_hotel
   Example: Topic=Room | Sentiment=Positive | Text="clean room, although not big"
   → ["clean_room"]  (only the positive quality — NOT not_big_room which is Negative)
   Example: Topic=Room | Sentiment=Negative | Text="clean room, although not big"

@@ -19,6 +19,11 @@ Answer: {"body_literals": ["close_to_[BLANK]", "close_to_clean_[BLANK]"]}
 Explanation — in the [BLANK] position it is should be a location that support body_literals of Topic: Location
 Correct: {"body_literals": ["close_to_airport", "close_to_clean_beach"]}
 
+Example — Topic: Facility | Text: "New, comfortable apartments"
+Answer: {"body_literals": ["new_[BLANK]", "comfortable_[BLANK]"]}
+Explanation — in the [BLANK] position it should be hotel for Facility, not apartments
+Correct: {"body_literals": ["new_hotel", "comfortable_hotel"]}
+
 Answer for the review text above:
 {"body_literals": [
 

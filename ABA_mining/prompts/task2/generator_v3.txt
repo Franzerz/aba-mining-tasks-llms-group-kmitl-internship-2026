@@ -38,6 +38,10 @@ Output: {"body_literals": ["close_to_airport", "close_to_clean_beach"]}
 Important: keep words EXACTLY as they appear in the text — do NOT change singular/plural form.
 Example: "apartments" stays "apartments", not "apartment".
 
+Facility-specific mapping (required for Topic=Facility):
+- If the text mentions apartment/apartments, accommodation/accommodations, place, building, atmosphere, or property, the final literal must use hotel as the noun.
+- Example: "new apartments" → new_hotel; "comfortable accommodation" → comfortable_hotel
+
 Now output ONLY the final JSON (no step-by-step text in output):
 {"body_literals": ["literal_1", ...]}
 

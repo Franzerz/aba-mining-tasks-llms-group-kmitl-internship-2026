@@ -28,7 +28,7 @@ Topic=Food | "Tasty food on the first floor, comfortable restaurant"
   → {"body_literals": ["tasty_food", "comfortable_restaurant"]}
 
 Topic=Facility | "New, comfortable apartments"
-  → {"body_literals": ["new_apartments", "comfortable_apartments"]}
+  → {"body_literals": ["new_hotel", "comfortable_hotel"]}
 
 Topic=Room, Sentiment=Positive | "clean room, although not big"
   → {"body_literals": ["clean_room"]}    (only positive aspect)
