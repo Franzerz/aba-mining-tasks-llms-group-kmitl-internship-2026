@@ -26,7 +26,7 @@ OFFICIAL BODY DECISION LOG RULES (Apply in order, strictly):
    Example: "a nice room" → nice_room
 6. Convert to lowercase
 7. Replace spaces with underscores
-8. Use ONLY words from original text (NO synonyms, NO external words)
+8. Use ONLY words from original text (NO synonyms, NO external words), except for the required topic noun mapping in Rule 16.
 9. Keep phrases SHORT — one noun + one key adjective/verb (unless meanings require split)
 10. Correct obvious typos only (else mark as inappropriate)
 11. Match sentiment — extract features matching the given sentiment only
@@ -41,9 +41,12 @@ OFFICIAL BODY DECISION LOG RULES (Apply in order, strictly):
     b) "-er comparatives" → "[noun]_could_be_[adjective]" — Example: "pool could be bigger" → pool_could_be_bigger
     c) "couldn't have been more X" → "[X]_[topic]" — Example: "couldn't have been more helpful" → helpful_staff
 16. TOPIC-SPECIFIC conversions:
-    - Room: "clean" → clean_room; use _room suffix
-    - Facility: {apartment, hotel, accommodation, place, building, atmosphere, property} → _hotel
-    - Staff: {people, receptionist, housekeeper, owner, host, gentleman, lady} → _staff
+    - Room: If the phrase is a standalone adjective or quality about a room, add _room.
+      Example: "clean" → clean_room
+    - Facility: If the phrase contains any of {apartment, apartments, hotel, accommodation, accommodations, place, building, atmosphere, property}, replace that word with hotel in the final literal.
+      Examples: "new apartments" → new_hotel, "comfortable accommodation" → comfortable_hotel
+    - Staff: If the phrase contains any of {people, receptionist, housekeeper, owner, host, gentleman, lady}, replace that word with staff in the final literal.
+      Examples: "helpful receptionist" → helpful_staff, "friendly people" → friendly_staff
     - Location: Noise outside (street, beach, bars) → Location; Noise inside (walls, AC) → Room
 17. If body duplicates head, use Contrary (opposite) instead
 18. Prefer active voice
@@ -68,7 +71,11 @@ Example 3 — Negative, Food:
 Text: "The breakfast was cold and the portions were too small"
 Output: {"head": "bad_food", "body_literals": ["cold_breakfast", "small_portions"]}
 
-Example 4 — Positive, Location:
+Example 4 — Positive, Facility:
+Text: "New, comfortable apartments"
+Output: {"head": "good_facility", "body_literals": ["new_hotel", "comfortable_hotel"]}
+
+Example 5 — Positive, Location:
 Text: "close to the airport and to a very clean beach"
 Output: {"head": "good_location", "body_literals": ["close_to_airport", "clean_beach"]}
 
