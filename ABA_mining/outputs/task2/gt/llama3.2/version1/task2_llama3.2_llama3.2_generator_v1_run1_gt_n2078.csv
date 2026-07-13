@@ -2089,7 +2089,7 @@ Review ID,Run,Source,Topic,Sentiment,Head,Selected Content,Literal,Literal Type,
 768,,gt,Room,Positive,good_room,"- terrace in the room,
   - well-furnished room and bathroom,",(no literals),,False,Additional properties are not allowed ('head' was unexpected)
 768,,gt,Food,Negative,bad_food,monotonous breakfasts (everyday the same set:,(no literals),,False,Additional properties are not allowed ('head' was unexpected)
-768,,gt,Facility,Negative,bad_facility,"the relaxation zone (swimming pool, deckchairs, billiards) definitely did not encourage you to use it.",(no literals),,False,Additional properties are not allowed ('head' was unexpected)
+768,,gt,Facility,Negative,bad_facility,"the relaxation zone (swimming pool, deckchairs, billiards) definitely did not encourage you to use it.",(no literals),,False,json_parse_error: Extra data: line 3 column 1 (char 55)
 769,,gt,Room,Positive,good_room,"Pros: cleanliness, (cleaning and change of towels daily)",(no literals),,False,Additional properties are not allowed ('head' was unexpected)
 769,,gt,Location,Positive,good_location,"2. the beach is within walking distance.
   3. a couple of taverns in the area
