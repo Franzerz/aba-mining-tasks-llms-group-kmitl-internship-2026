@@ -18,6 +18,7 @@ OFFICIAL BODY DECISION LOG RULES (Apply in order, strictly):
 1. Remove intensifiers: "very", "extremely", "really", "quite", "rather", "so", "such"
    Example: "Very clean room" → clean_room
 2. Remove plural suffixes "s", "es" if semantically safe
+
    Example: "staffs" → staff
 3. Remove "-ed" endings ONLY if not semantically critical
    Example: "well decorated room" → well_decorated_room (keep if necessary)
