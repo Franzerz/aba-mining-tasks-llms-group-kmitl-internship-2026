@@ -12,7 +12,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from dotenv import load_dotenv
 
-from internship.ABA_mining.src import (
+from src import (
     build_client,
     load_model_config,
     load_paths_config,

@@ -9,10 +9,10 @@ from pathlib import Path
 import yaml
 from dotenv import load_dotenv
 
-from internship.ABA_mining.src import load_model_config, load_paths_config, load_topics_config
-from internship.ABA_mining.src import build_client
-from internship.ABA_mining.src import run_task1
-from internship.ABA_mining.src.prompts import build_modular_prompt
+from src import load_model_config, load_paths_config, load_topics_config
+from src import build_client
+from src import run_task1
+from src.prompts import build_modular_prompt
 
 
 def _load_experiments(repo_root: Path) -> dict:
