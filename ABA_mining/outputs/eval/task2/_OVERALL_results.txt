@@ -1,0 +1,98 @@
+========================================================================
+OVERALL SUMMARY - 36 file(s) (all models / versions / runs combined)
+========================================================================
+
+------------------------------------------------------------------------
+ROW-LEVEL DATA INTEGRITY (combined across every file)
+------------------------------------------------------------------------
+  Total CSV rows        : 253133
+  Error rows            : 7858
+  Error rate             : 7858/253133 = 0.0310
+  Remaining (clean) rows: 245275/253133 = 0.9690
+
+------------------------------------------------------------------------
+HEAD: TRIPLE-GATE MATCHING (combined across every file)
+------------------------------------------------------------------------
+  Instances total : 74808
+  Gate 1 (Review ID match)              : 74808/74808 = 1.0000
+  Gate 2 (+ Head/claim+sentiment match)  : 72684/74808 = 0.9716
+  Gate 3 (+ same-content match)          : 72684/74808 = 0.9716
+  => Triple-Gate pass rate (accuracy)    : 72684/74808 = 0.9716
+
+------------------------------------------------------------------------
+BODY (LITERAL) TOKEN MATCHING - OVERALL (combined across every file)
+------------------------------------------------------------------------
+  Gate-3-aligned instances : 72684/74808  (Valid: 65188, Error: 7496)
+
+  --- INCLUDING error instances (every Gate-3-aligned instance) ---
+    TP=205629 FP=33035 FN=90363
+    Precision : 0.8616  (205629/238664)
+    Recall    : 0.6947  (205629/295992)
+    F1        : 0.7692
+    Micro TP=205629 FP=33035 FN=90363
+    Micro Precision : 0.8616  (205629/238664)
+    Micro Recall    : 0.6947  (205629/295992)
+    Micro F1        : 0.7692
+
+    Breakdown by prefix type:
+    Prefix type          TP     FP     FN     Prec      Rec       F1
+    raw               99803  19529  48193   0.8363   0.6744   0.7467
+    no_evident_not    91037   9965  33775   0.9013   0.7294   0.8063
+    have_evident      14789   3541   8395   0.8068   0.6379   0.7125
+
+  --- EXCLUDING error instances (Valid=True only) ---
+    TP=205629 FP=33035 FN=56766
+    Precision : 0.8616  (205629/238664)
+    Recall    : 0.7837  (205629/262395)
+    F1        : 0.8208
+    Micro TP=205629 FP=33035 FN=56766
+    Micro Precision : 0.8616  (205629/238664)
+    Micro Recall    : 0.7837  (205629/262395)
+    Micro F1        : 0.8208
+
+    Breakdown by prefix type:
+    Prefix type          TP     FP     FN     Prec      Rec       F1
+    raw               99803  19529  31393   0.8363   0.7607   0.7967
+    no_evident_not    91037   9965  20804   0.9013   0.8140   0.8554
+    have_evident      14789   3541   4569   0.8068   0.7640   0.7848
+
+------------------------------------------------------------------------
+PER-FILE LEADERBOARD (Gate pass rate, error rate, body F1 excluding errors)
+------------------------------------------------------------------------
+  File                                                                                           GateOK    ErrRow%  F1(excl-err)
+  outputs\task2\gt\llama3.2\version1\task2_llama3.2_llama3.2_generator_v1_run1_gt_n2078.csv    97.1607%    0.0000%        0.8365
+  outputs\task2\gt\llama3.2\version1\task2_llama3.2_llama3.2_generator_v1_run2_gt_n2078.csv    97.1607%    0.0000%        0.8367
+  outputs\task2\gt\llama3.2\version1\task2_llama3.2_llama3.2_generator_v1_run3_gt_n2078.csv    97.1607%    0.0000%        0.8367
+  outputs\task2\gt\llama3.2\version2\task2_llama3.2_llama3.2_generator_v2_run1_gt_n2078.csv    97.1607%    0.0000%        0.8294
+  outputs\task2\gt\llama3.2\version2\task2_llama3.2_llama3.2_generator_v2_run2_gt_n2078.csv    97.1607%    0.0000%        0.8291
+  outputs\task2\gt\llama3.2\version2\task2_llama3.2_llama3.2_generator_v2_run3_gt_n2078.csv    97.1607%    0.0000%        0.8290
+  outputs\task2\gt\llama3.2\version3\task2_llama3.2_llama3.2_generator_v3_run1_gt_n2078.csv    97.1607%    0.0760%        0.7631
+  outputs\task2\gt\llama3.2\version3\task2_llama3.2_llama3.2_generator_v3_run2_gt_n2078.csv    97.1607%    0.0760%        0.7631
+  outputs\task2\gt\llama3.2\version3\task2_llama3.2_llama3.2_generator_v3_run3_gt_n2078.csv    97.1607%    0.0760%        0.7631
+  outputs\task2\gt\llama3.2\version4\task2_llama3.2_llama3.2_generator_v4_run1_gt_n2078.csv    97.1607%    0.0788%        0.8187
+  outputs\task2\gt\llama3.2\version4\task2_llama3.2_llama3.2_generator_v4_run2_gt_n2078.csv    97.1607%    0.0788%        0.8187
+  outputs\task2\gt\llama3.2\version4\task2_llama3.2_llama3.2_generator_v4_run3_gt_n2078.csv    97.1607%    0.0788%        0.8187
+  outputs\task2\gt\llama3.2\version5\task2_llama3.2_llama3.2_generator_v5_run1_gt_n2078.csv    97.1607%    1.5630%        0.7107
+  outputs\task2\gt\llama3.2\version5\task2_llama3.2_llama3.2_generator_v5_run2_gt_n2078.csv    97.1607%    1.5630%        0.7107
+  outputs\task2\gt\llama3.2\version5\task2_llama3.2_llama3.2_generator_v5_run3_gt_n2078.csv    97.1607%    1.5630%        0.7107
+  outputs\task2\gt\llama3.2\version6\task2_llama3.2_llama3.2_generator_v6_run1_gt_n2078.csv    97.1607%    0.0185%        0.6914
+  outputs\task2\gt\llama3.2\version6\task2_llama3.2_llama3.2_generator_v6_run2_gt_n2078.csv    97.1607%    0.0185%        0.6914
+  outputs\task2\gt\llama3.2\version6\task2_llama3.2_llama3.2_generator_v6_run3_gt_n2078.csv    97.1607%    0.0185%        0.6914
+  outputs\task2\gt\llama4_scout\version1\task2_llama4_scout_llama4_scout_generator_v1_run1_gt_n2078.csv   97.1607%    4.9776%        0.8860
+  outputs\task2\gt\llama4_scout\version1\task2_llama4_scout_llama4_scout_generator_v1_run2_gt_n2078.csv   97.1607%    4.9682%        0.8859
+  outputs\task2\gt\llama4_scout\version1\task2_llama4_scout_llama4_scout_generator_v1_run3_gt_n2078.csv   97.1607%    4.9682%        0.8859
+  outputs\task2\gt\llama4_scout\version2\task2_llama4_scout_llama4_scout_generator_v2_run1_gt_n2078.csv   97.1607%    3.2691%        0.8856
+  outputs\task2\gt\llama4_scout\version2\task2_llama4_scout_llama4_scout_generator_v2_run2_gt_n2078.csv   97.1607%    3.2691%        0.8856
+  outputs\task2\gt\llama4_scout\version2\task2_llama4_scout_llama4_scout_generator_v2_run3_gt_n2078.csv   97.1607%    3.1554%        0.8834
+  outputs\task2\gt\llama4_scout\version3\task2_llama4_scout_llama4_scout_generator_v3_run1_gt_n2078.csv   97.1607%    3.4405%        0.8628
+  outputs\task2\gt\llama4_scout\version3\task2_llama4_scout_llama4_scout_generator_v3_run2_gt_n2078.csv   97.1607%    3.2263%        0.8622
+  outputs\task2\gt\llama4_scout\version3\task2_llama4_scout_llama4_scout_generator_v3_run3_gt_n2078.csv   97.1607%    3.2263%        0.8622
+  outputs\task2\gt\llama4_scout\version4\task2_llama4_scout_llama4_scout_generator_v4_run1_gt_n2078.csv   97.1607%   24.1019%        0.8937
+  outputs\task2\gt\llama4_scout\version4\task2_llama4_scout_llama4_scout_generator_v4_run2_gt_n2078.csv   97.1607%   23.7216%        0.8929
+  outputs\task2\gt\llama4_scout\version4\task2_llama4_scout_llama4_scout_generator_v4_run3_gt_n2078.csv   97.1607%   24.6122%        0.8919
+  outputs\task2\gt\llama4_scout\version5\task2_llama4_scout_llama4_scout_generator_v5_run1_gt_n2078.csv   97.1607%    5.6751%        0.8835
+  outputs\task2\gt\llama4_scout\version5\task2_llama4_scout_llama4_scout_generator_v5_run2_gt_n2078.csv   97.1607%    5.6751%        0.8835
+  outputs\task2\gt\llama4_scout\version5\task2_llama4_scout_llama4_scout_generator_v5_run3_gt_n2078.csv   97.1607%    5.6751%        0.8835
+  outputs\task2\gt\llama4_scout\version6\task2_llama4_scout_llama4_scout_generator_v6_run1_gt_n2078.csv   97.1607%    3.3740%        0.8622
+  outputs\task2\gt\llama4_scout\version6\task2_llama4_scout_llama4_scout_generator_v6_run2_gt_n2078.csv   97.1607%    3.3674%        0.8591
+  outputs\task2\gt\llama4_scout\version6\task2_llama4_scout_llama4_scout_generator_v6_run3_gt_n2078.csv   97.1607%    3.4572%        0.8614

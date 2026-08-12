@@ -1,0 +1,77 @@
+========================================================================
+EVALUATION RESULTS (v2) - task2_llama4_scout_llama4_scout_generator_v5_run2_gt_n2078.csv
+========================================================================
+
+------------------------------------------------------------------------
+ROW-LEVEL DATA INTEGRITY (errors are reported, never filtered out)
+------------------------------------------------------------------------
+  Total CSV rows        : 6643
+  Error rows (Valid=False / Errors set) : 377
+  Error rate             : 377/6643 = 0.0568
+  Remaining (clean) rows: 6266/6643 = 0.9432
+  Error message breakdown:
+       14  json_parse_error: Expecting value: line 1 column 1 (char 0)
+       12  json_parse_error: Extra data: line 3 column 1 (char 38)
+        9  json_parse_error: Extra data: line 3 column 1 (char 42)
+        8  json_parse_error: Extra data: line 3 column 1 (char 61)
+        8  json_parse_error: Extra data: line 3 column 1 (char 41)
+        8  json_parse_error: Extra data: line 3 column 1 (char 65)
+        8  json_parse_error: Extra data: line 3 column 1 (char 59)
+        8  json_parse_error: Extra data: line 3 column 1 (char 45)
+        7  json_parse_error: Extra data: line 3 column 1 (char 58)
+        7  json_parse_error: Extra data: line 3 column 1 (char 51)
+
+------------------------------------------------------------------------
+HEAD: TRIPLE-GATE MATCHING (prerequisite, not similarity-scored)
+------------------------------------------------------------------------
+  Instances (Review ID x Topic x Sentiment x Selected Content groups): 2078
+  Gate 1 (Review ID match)             : 2078/2078 = 1.0000
+  Gate 2 (+ Head/claim+sentiment match) : 2019/2078 = 0.9716
+  Gate 3 (+ same-content match)         : 2019/2078 = 0.9716
+  => Triple-Gate pass rate (accuracy)   : 2019/2078 = 0.9716
+  Gate-3 match kind breakdown : {'exact': 2019}
+
+------------------------------------------------------------------------
+BODY (LITERAL) TOKEN MATCHING
+------------------------------------------------------------------------
+  Prefix-Type Restriction: raw <-> raw, no_evident_not_ <-> no_evident_not_, have_evident_ <-> have_evident_ only.
+  TP = greedy 1:1 matched pairs (sim >= threshold, same prefix bucket).
+  FP = Pb - TP (unmatched predicted literals).  FN = Rb - TP (unmatched GT literals).
+  TN = not applicable / not computed for this task.
+  Instances passing Triple-Gate (evaluable) : 2019/2078 (not aligned / excluded from body scoring: 59)
+    of which Valid (no parse error) : 1666
+    of which Error (parse error, 0 predicted literals) : 353
+
+  --- INCLUDING error instances (Gate-3-aligned, all Valid states) (n=2019 aligned instances) ---
+    TP=5621 FP=521 FN=2601
+    Precision : 0.9152  (5621/6142)
+    Recall    : 0.6837  (5621/8222)
+    F1        : 0.7827
+    Micro TP=5621 FP=521 FN=2601
+    Micro Precision : 0.9152  (5621/6142)
+    Micro Recall    : 0.6837  (5621/8222)
+    Micro F1        : 0.7827
+
+    Breakdown by prefix type:
+    Prefix type          TP     FP     FN     Prec      Rec       F1
+    raw                2758    313   1353   0.8981   0.6709   0.7680
+    no_evident_not     2504    137    963   0.9481   0.7222   0.8199
+    have_evident        359     71    285   0.8349   0.5575   0.6685
+
+  --- EXCLUDING error instances (Gate-3-aligned, Valid=True only) (n=1666 aligned instances) ---
+    TP=5621 FP=521 FN=962
+    Precision : 0.9152  (5621/6142)
+    Recall    : 0.8539  (5621/6583)
+    F1        : 0.8835
+    Micro TP=5621 FP=521 FN=962
+    Micro Precision : 0.9152  (5621/6142)
+    Micro Recall    : 0.8539  (5621/6583)
+    Micro F1        : 0.8835
+
+    Breakdown by prefix type:
+    Prefix type          TP     FP     FN     Prec      Rec       F1
+    raw                2758    313    533   0.8981   0.8380   0.8670
+    no_evident_not     2504    137    360   0.9481   0.8743   0.9097
+    have_evident        359     71     69   0.8349   0.8388   0.8368
+
+Runtime: 29.77s

@@ -1,0 +1,70 @@
+========================================================================
+EVALUATION RESULTS (v2) - task2_llama4_scout_llama4_scout_generator_v4_run1_gt_n2078.csv
+========================================================================
+
+------------------------------------------------------------------------
+ROW-LEVEL DATA INTEGRITY (errors are reported, never filtered out)
+------------------------------------------------------------------------
+  Total CSV rows        : 4398
+  Error rows (Valid=False / Errors set) : 1060
+  Error rate             : 1060/4398 = 0.2410
+  Remaining (clean) rows: 3338/4398 = 0.7590
+  Error message breakdown:
+     1058  json_parse_error: Expecting value: line 1 column 1 (char 0)
+        1  json_parse_error: Extra data: line 3 column 1 (char 85)
+        1  json_parse_error: Extra data: line 2 column 1 (char 54)
+
+------------------------------------------------------------------------
+HEAD: TRIPLE-GATE MATCHING (prerequisite, not similarity-scored)
+------------------------------------------------------------------------
+  Instances (Review ID x Topic x Sentiment x Selected Content groups): 2078
+  Gate 1 (Review ID match)             : 2078/2078 = 1.0000
+  Gate 2 (+ Head/claim+sentiment match) : 2019/2078 = 0.9716
+  Gate 3 (+ same-content match)         : 2019/2078 = 0.9716
+  => Triple-Gate pass rate (accuracy)   : 2019/2078 = 0.9716
+  Gate-3 match kind breakdown : {'exact': 2019}
+
+------------------------------------------------------------------------
+BODY (LITERAL) TOKEN MATCHING
+------------------------------------------------------------------------
+  Prefix-Type Restriction: raw <-> raw, no_evident_not_ <-> no_evident_not_, have_evident_ <-> have_evident_ only.
+  TP = greedy 1:1 matched pairs (sim >= threshold, same prefix bucket).
+  FP = Pb - TP (unmatched predicted literals).  FN = Rb - TP (unmatched GT literals).
+  TN = not applicable / not computed for this task.
+  Instances passing Triple-Gate (evaluable) : 2019/2078 (not aligned / excluded from body scoring: 59)
+    of which Valid (no parse error) : 989
+    of which Error (parse error, 0 predicted literals) : 1030
+
+  --- INCLUDING error instances (Gate-3-aligned, all Valid states) (n=2019 aligned instances) ---
+    TP=2964 FP=272 FN=5258
+    Precision : 0.9159  (2964/3236)
+    Recall    : 0.3605  (2964/8222)
+    F1        : 0.5174
+    Micro TP=2964 FP=272 FN=5258
+    Micro Precision : 0.9159  (2964/3236)
+    Micro Recall    : 0.3605  (2964/8222)
+    Micro F1        : 0.5174
+
+    Breakdown by prefix type:
+    Prefix type          TP     FP     FN     Prec      Rec       F1
+    raw                1458    160   2653   0.9011   0.3547   0.5090
+    no_evident_not     1351     73   2116   0.9487   0.3897   0.5524
+    have_evident        155     39    489   0.7990   0.2407   0.3699
+
+  --- EXCLUDING error instances (Gate-3-aligned, Valid=True only) (n=989 aligned instances) ---
+    TP=2964 FP=272 FN=433
+    Precision : 0.9159  (2964/3236)
+    Recall    : 0.8725  (2964/3397)
+    F1        : 0.8937
+    Micro TP=2964 FP=272 FN=433
+    Micro Precision : 0.9159  (2964/3236)
+    Micro Recall    : 0.8725  (2964/3397)
+    Micro F1        : 0.8937
+
+    Breakdown by prefix type:
+    Prefix type          TP     FP     FN     Prec      Rec       F1
+    raw                1458    160    240   0.9011   0.8587   0.8794
+    no_evident_not     1351     73    164   0.9487   0.8917   0.9194
+    have_evident        155     39     29   0.7990   0.8424   0.8201
+
+Runtime: 23.52s

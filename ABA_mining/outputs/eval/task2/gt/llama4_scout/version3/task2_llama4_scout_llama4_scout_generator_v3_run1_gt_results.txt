@@ -1,0 +1,77 @@
+========================================================================
+EVALUATION RESULTS (v2) - task2_llama4_scout_llama4_scout_generator_v3_run1_gt_n2078.csv
+========================================================================
+
+------------------------------------------------------------------------
+ROW-LEVEL DATA INTEGRITY (errors are reported, never filtered out)
+------------------------------------------------------------------------
+  Total CSV rows        : 6685
+  Error rows (Valid=False / Errors set) : 230
+  Error rate             : 230/6685 = 0.0344
+  Remaining (clean) rows: 6455/6685 = 0.9656
+  Error message breakdown:
+      146  json_parse_error: Expecting value: line 1 column 1 (char 0)
+        8  json_parse_error: Expecting ',' delimiter: line 1 column 35 (char 34)
+        7  json_parse_error: Expecting ',' delimiter: line 1 column 36 (char 35)
+        5  json_parse_error: Expecting ',' delimiter: line 1 column 38 (char 37)
+        3  json_parse_error: Extra data: line 3 column 1 (char 61)
+        2  json_parse_error: Extra data: line 3 column 1 (char 35)
+        2  json_parse_error: Extra data: line 3 column 1 (char 39)
+        2  json_parse_error: Extra data: line 3 column 1 (char 44)
+        2  json_parse_error: Extra data: line 3 column 1 (char 53)
+        2  json_parse_error: Extra data: line 3 column 1 (char 62)
+
+------------------------------------------------------------------------
+HEAD: TRIPLE-GATE MATCHING (prerequisite, not similarity-scored)
+------------------------------------------------------------------------
+  Instances (Review ID x Topic x Sentiment x Selected Content groups): 2078
+  Gate 1 (Review ID match)             : 2078/2078 = 1.0000
+  Gate 2 (+ Head/claim+sentiment match) : 2019/2078 = 0.9716
+  Gate 3 (+ same-content match)         : 2019/2078 = 0.9716
+  => Triple-Gate pass rate (accuracy)   : 2019/2078 = 0.9716
+  Gate-3 match kind breakdown : {'exact': 2019}
+
+------------------------------------------------------------------------
+BODY (LITERAL) TOKEN MATCHING
+------------------------------------------------------------------------
+  Prefix-Type Restriction: raw <-> raw, no_evident_not_ <-> no_evident_not_, have_evident_ <-> have_evident_ only.
+  TP = greedy 1:1 matched pairs (sim >= threshold, same prefix bucket).
+  FP = Pb - TP (unmatched predicted literals).  FN = Rb - TP (unmatched GT literals).
+  TN = not applicable / not computed for this task.
+  Instances passing Triple-Gate (evaluable) : 2019/2078 (not aligned / excluded from body scoring: 59)
+    of which Valid (no parse error) : 1802
+    of which Error (parse error, 0 predicted literals) : 217
+
+  --- INCLUDING error instances (Gate-3-aligned, all Valid states) (n=2019 aligned instances) ---
+    TP=5900 FP=404 FN=2322
+    Precision : 0.9359  (5900/6304)
+    Recall    : 0.7176  (5900/8222)
+    F1        : 0.8123
+    Micro TP=5900 FP=404 FN=2322
+    Micro Precision : 0.9359  (5900/6304)
+    Micro Recall    : 0.7176  (5900/8222)
+    Micro F1        : 0.8123
+
+    Breakdown by prefix type:
+    Prefix type          TP     FP     FN     Prec      Rec       F1
+    raw                2881    271   1230   0.9140   0.7008   0.7933
+    no_evident_not     2631    102    836   0.9627   0.7589   0.8487
+    have_evident        388     31    256   0.9260   0.6025   0.7300
+
+  --- EXCLUDING error instances (Gate-3-aligned, Valid=True only) (n=1802 aligned instances) ---
+    TP=5900 FP=404 FN=1473
+    Precision : 0.9359  (5900/6304)
+    Recall    : 0.8002  (5900/7373)
+    F1        : 0.8628
+    Micro TP=5900 FP=404 FN=1473
+    Micro Precision : 0.9359  (5900/6304)
+    Micro Recall    : 0.8002  (5900/7373)
+    Micro F1        : 0.8628
+
+    Breakdown by prefix type:
+    Prefix type          TP     FP     FN     Prec      Rec       F1
+    raw                2881    271    806   0.9140   0.7814   0.8425
+    no_evident_not     2631    102    534   0.9627   0.8313   0.8922
+    have_evident        388     31    133   0.9260   0.7447   0.8255
+
+Runtime: 28.43s
