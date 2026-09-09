@@ -1,53 +1,55 @@
 #### PATCHARAKORN ####
 
 """
-Builds a real py_arg ABAF (flat ABA framework) directly from Task 3's gold data — one
-canonical structure that is BOTH what gets rendered to the user AND what py_arg evaluates,
-by construction. This is the fix for mu_team's core bug (see
-internship/ABA_mining/Doc — the graph shown and the framework evaluated were built
-independently and could silently disagree, e.g. synthetic contrary atoms invisible in the
-picture). Here there is only one structure; nothing added to it is ever hidden from the
-rendered view.
+Builds a generalized ABA framework (C*: A -> P(L), the advisor's "New" formalization) directly
+from Task 3's gold data, then reduces it to standard ABA (C: A -> L) via the Translation Rule
+(aba_translator.py) so py_arg can actually evaluate it.
 
-Construction (grounded in the real Task 2/3 ABA data model — see
-ABA_mining/Doc/ABA_Labelling_Rules_extracted.txt and Task3_Implementation_Report.md):
-  - Each gold row is (Original A, A, B, Vote) for the "Contrary(P)Body(N)" category:
-      A        = a body literal from a POSITIVE-sentiment complaint (e.g. easy_check-in)
-      Original A = A's auto-derived contrary (no_evident_not_{A})
-      B        = a candidate body literal from a NEGATIVE-sentiment complaint
-      Vote     = human annotation: does B actually attack A's assumption?
-  - Assumptions  = every distinct A and every distinct B (each is itself a body-literal
-    assumption in the Task 2 sense).
-  - Contrary(A)  = "Original A" column value (already given).
-    Contrary(B)  = synthesized as "have_evident_{B}", matching Task 2's own negative-sentiment
-    contrary convention (src/task2.py::make_contrary_literals) — B's own default contrary,
-    used when B isn't itself under attack by anything else in this slice.
-  - Rules:
-      good_{aspect} <- A       for every distinct A (Task 2's head-derivation rule)
-      bad_{aspect}  <- B       for every distinct B
-      Original_A    <- B       for every (A, B) pair where Vote == "Yes" — this is exactly
-                                what Task 3 measured: B is real evidence for A's contrary.
-  Every assumption gets a contrary (required by ABAF) and the framework is flat (no
-  assumption is ever a rule head) — verified by ABAF's own constructor, which raises if not.
+WHICH ATOM IS THE ASSUMPTION
+----------------------------
+This is the part an earlier version of this file got backwards, so it is worth stating plainly.
+The atom that is DEFEASIBLE -- the thing an argument rests on and that evidence can knock out --
+is `no_evident_not_X`, read as "there is no evidence that not-X". The plain mined literal `X` is
+an observed FACT from a review, not an assumption.
 
-NOTE on the current dataset: our own regenerated Task 2 output (llama3.2) uses different
-literal normalization than the literals baked into the Task 3 gold CSVs (mu_team's original
-extraction) — e.g. "easy_to_check_in" vs "easy_check-in" — so they cannot be cross-referenced
-yet. This builder is therefore self-contained within Task 3's gold data (real, not
-fabricated), rather than pulling in Task 2 output. Reconciling the two literal vocabularies so
-a fresh Task 2 run feeds straight into this builder is a follow-up, not done here.
+    proposition (fact)   easy_check-in
+    assumption           no_evident_not_easy_check-in
+    contrary of it       customer_wait_10_minute_for_check-in   (evidence that it wasn't easy)
+
+`no_evident_not_X` cannot be the *contrary* of `X` -- it is a statement that supports X, not one
+that contradicts it. Task 3 asks "is phrase B contrary to phrase A?" where phrase A is the
+`Original A` column, i.e. the assumption; a "Yes" means B is evidence against it. The previous
+team's database encodes exactly the same split (check_in.assumption = `no_evident_not_*`,
+check_in.proposition = the plain literal), so both the logic and their data agree.
+
+CONSTRUCTION, from a gold row (Original A, A, B, Vote)
+-----------------------------------------------------
+    A          positive-sentiment literal, e.g. easy_check-in            -> FACT
+    Original A the assumption for A, always "no_evident_not_" + A        -> ASSUMPTION
+    B          negative-sentiment literal                                -> FACT
+    Vote       human annotation: is B contrary to the assumption?
+
+    assumptions  = { no_evident_not_A }  u  { have_evident_B }
+    facts        = every A and every B          (empty-body rules; they were observed)
+    C*(no_evident_not_A) = { B : Vote(A, B) == "Yes" }      <- the multi-valued contrary
+                           or { have_evident_not_A } when nothing attacks it
+    C*(have_evident_B)   = { no_evident_B }                 <- default; nothing derives it
+    rules: good_{aspect} <- A, no_evident_not_A
+           bad_{aspect}  <- B, have_evident_B
+
+The compound rule (fact AND assumption together supporting the claim) is what makes both atoms
+point at the head claim, matching how the previous team drew it.
 """
 
 from __future__ import annotations
 
 from dataclasses import dataclass
-from pathlib import Path
 
 import pandas as pd
-from py_arg.aba_classes.aba_framework import ABAF
 from py_arg.aba_classes.rule import Rule
 
-from .config import ASPECT_GOLD_FILES, TASK3_GOLD_DIR
+from .aba_translator import NewAbaFramework, TranslationResult, translate_to_standard_abaf
+from .config import ASPECT_GOLD_FILES, TASK3_GOLD_DIR, TOPIC_TO_ASPECT
 
 PHRASE_A_CONTRARY_CANDIDATES = ["Original Assumption", "Original A"]
 PHRASE_A_BODY_CANDIDATES = ["Assumption", "A"]
@@ -58,11 +60,17 @@ VOTE_CANDIDATES = ["Vote"]
 @dataclass(frozen=True)
 class AbaBuildResult:
     aspect: str
-    framework: ABAF
-    # Metadata for rendering: every atom's role, kept 1:1 with what's in `framework` — nothing
-    # here that isn't also in the framework, and nothing in the framework missing from here.
-    atom_roles: dict[str, str]     # atom -> "head" | "assumption_pos" | "assumption_neg" | "contrary"
-    pairs: list[dict]              # raw (id, a, b, vote) rows, for the sidebar / audit trail
+    new_framework: NewAbaFramework      # C*: A -> P(L), pre-translation
+    translation: TranslationResult      # reduced ABAF (py_arg-ready) + clone bookkeeping
+    atom_roles: dict[str, str]          # atom -> head | assumption_pos/neg | proposition_pos/neg | contrary
+    pairs: list[dict]                   # raw (id, a, b, vote) rows, for the sidebar / audit trail
+    counts: dict[str, int]              # literal -> how many mined spans produced it (Task 1 gold)
+    heads: list[str]                    # the claim atoms, for the head-claim selector
+
+    @property
+    def framework(self):
+        """The reduced, standard ABAF -- what py_arg actually evaluates."""
+        return self.translation.framework
 
 
 def _detect_column(df: pd.DataFrame, candidates: list[str]) -> str | None:
@@ -77,20 +85,26 @@ def build_aba_framework(aspect: str) -> AbaBuildResult:
     if aspect not in ASPECT_GOLD_FILES:
         raise ValueError(f"No gold data for aspect '{aspect}'. Available: {list(ASPECT_GOLD_FILES)}")
 
-    csv_path = TASK3_GOLD_DIR / ASPECT_GOLD_FILES[aspect]
-    df = pd.read_csv(csv_path, dtype=str)
+    filename, sheet = ASPECT_GOLD_FILES[aspect]
+    csv_path = TASK3_GOLD_DIR / filename
+    # Four aspects were exported to single-sheet CSVs; facility's gold is still a multi-sheet
+    # workbook, so it names which sheet holds the Contrary(P)Body(N) category.
+    if sheet is None:
+        df = pd.read_csv(csv_path, dtype=str)
+    else:
+        df = pd.read_excel(csv_path, sheet_name=sheet, dtype=str)
 
-    a_contrary_col = _detect_column(df, PHRASE_A_CONTRARY_CANDIDATES)
+    a_assumption_col = _detect_column(df, PHRASE_A_CONTRARY_CANDIDATES)
     a_body_col = _detect_column(df, PHRASE_A_BODY_CANDIDATES)
     b_col = _detect_column(df, PHRASE_B_CANDIDATES)
     vote_col = _detect_column(df, VOTE_CANDIDATES)
-    if not all([a_contrary_col, a_body_col, b_col, vote_col]):
+    if not all([a_assumption_col, a_body_col, b_col, vote_col]):
         raise ValueError(f"Missing expected columns in {csv_path.name}. Found: {list(df.columns)}")
 
-    df = df[[a_contrary_col, a_body_col, b_col, vote_col]].copy()
-    df.columns = ["OriginalA", "A", "B", "Vote"]
-    df = df.dropna(subset=["OriginalA", "A", "B"])
-    for c in ["OriginalA", "A", "B"]:
+    df = df[[a_assumption_col, a_body_col, b_col, vote_col]].copy()
+    df.columns = ["AsmA", "A", "B", "Vote"]
+    df = df.dropna(subset=["AsmA", "A", "B"])
+    for c in ["AsmA", "A", "B"]:
         df[c] = df[c].astype(str).str.strip()
     df["Vote"] = df["Vote"].astype(str).str.strip().str.capitalize()
     df = df[(df["A"] != "") & (df["B"] != "")]
@@ -98,41 +112,94 @@ def build_aba_framework(aspect: str) -> AbaBuildResult:
     good_head = f"good_{aspect}"
     bad_head = f"bad_{aspect}"
 
-    assumptions: set[str] = set(df["A"]) | set(df["B"])
-    contraries: dict[str, str] = {}
-    for _, row in df[["A", "OriginalA"]].drop_duplicates().iterrows():
-        contraries[row["A"]] = row["OriginalA"]
-    for b in set(df["B"]):
-        if b not in contraries:
-            contraries[b] = f"have_evident_{b}"
+    a_values = sorted(set(df["A"]))          # positive facts
+    b_values = sorted(set(df["B"]))          # negative facts
+    # Each positive literal's assumption, taken from the gold file rather than reconstructed.
+    assumption_of_a = {row["A"]: row["AsmA"] for _, row in df[["A", "AsmA"]].drop_duplicates().iterrows()}
+    assumption_of_b = {b: f"have_evident_{b}" for b in b_values}
 
-    language: set[str] = set(assumptions) | set(contraries.values()) | {good_head, bad_head}
+    # C*: assumption -> set of contraries.
+    multi_contraries: dict[str, set[str]] = {}
+    for _, row in df[df["Vote"] == "Yes"].iterrows():
+        multi_contraries.setdefault(assumption_of_a[row["A"]], set()).add(row["B"])
+    # An assumption nothing attacks still needs a contrary for the framework to be well formed.
+    # "have evidence that not-X" is the natural one; nothing derives it, so it is never defeated.
+    for a, asm in assumption_of_a.items():
+        multi_contraries.setdefault(asm, {f"have_evident_not_{a}"})
+    for b, asm in assumption_of_b.items():
+        multi_contraries.setdefault(asm, {f"no_evident_{b}"})
+
+    assumptions: set[str] = set(assumption_of_a.values()) | set(assumption_of_b.values())
 
     rules: set[Rule] = set()
     atom_roles: dict[str, str] = {good_head: "head", bad_head: "head"}
 
-    for a in set(df["A"]):
-        rules.add(Rule(f"r_good_{a}", {a}, good_head))
-        atom_roles[a] = "assumption_pos"
-        atom_roles[contraries[a]] = "contrary"
+    # Facts: the literals were actually observed in reviews, so they are derivable outright.
+    # Without this the contraries would never be derivable and py_arg would find no attacks.
+    for a in a_values:
+        rules.add(Rule(f"f_{a}", set(), a))
+        rules.add(Rule(f"r_good_{a}", {a, assumption_of_a[a]}, good_head))
+        atom_roles[a] = "proposition_pos"
+        atom_roles[assumption_of_a[a]] = "assumption_pos"
+    for b in b_values:
+        rules.add(Rule(f"f_{b}", set(), b))
+        rules.add(Rule(f"r_bad_{b}", {b, assumption_of_b[b]}, bad_head))
+        atom_roles[b] = "proposition_neg"
+        atom_roles[assumption_of_b[b]] = "assumption_neg"
 
-    for b in set(df["B"]):
-        rules.add(Rule(f"r_bad_{b}", {b}, bad_head))
-        atom_roles.setdefault(b, "assumption_neg")
-        atom_roles.setdefault(contraries[b], "contrary")
+    language: set[str] = set(a_values) | set(b_values) | assumptions | {good_head, bad_head}
+    for contrary_set in multi_contraries.values():
+        language |= contrary_set
+    # Anything still unlabelled is a synthetic default contrary.
+    for contrary_set in multi_contraries.values():
+        for c in contrary_set:
+            atom_roles.setdefault(c, "contrary")
 
-    pairs: list[dict] = []
-    seen_attack_rules: set[tuple[str, str]] = set()
-    for i, row in df.reset_index(drop=True).iterrows():
-        vote = row["Vote"] if row["Vote"] in {"Yes", "No"} else None
-        pairs.append({
-            "id": i + 1, "a": row["A"], "original_a": row["OriginalA"], "b": row["B"], "vote": vote,
-        })
-        if vote == "Yes":
-            key = (row["OriginalA"], row["B"])
-            if key not in seen_attack_rules:
-                seen_attack_rules.add(key)
-                rules.add(Rule(f"r_attack_{len(seen_attack_rules)}", {row["B"]}, row["OriginalA"]))
+    new_framework = NewAbaFramework(
+        language=language, assumptions=assumptions, rules=rules, multi_contraries=multi_contraries,
+    )
+    translation = translate_to_standard_abaf(new_framework)
 
-    framework = ABAF(assumptions=assumptions, rules=rules, language=language, contraries=contraries)
-    return AbaBuildResult(aspect=aspect, framework=framework, atom_roles=atom_roles, pairs=pairs)
+    # Clones are atoms the translator invented; give each its original's role so the reduced
+    # view can colour it without re-deriving anything the translator already knows.
+    for original, clones in translation.clones_by_original.items():
+        role = atom_roles.get(original, "atom")
+        for clone in clones:
+            atom_roles.setdefault(clone, role)
+
+    pairs: list[dict] = [
+        {"id": i + 1, "a": row["A"], "assumption": row["AsmA"], "b": row["B"],
+         "vote": row["Vote"] if row["Vote"] in {"Yes", "No"} else None}
+        for i, row in df.reset_index(drop=True).iterrows()
+    ]
+
+    return AbaBuildResult(
+        aspect=aspect, new_framework=new_framework, translation=translation,
+        atom_roles=atom_roles, pairs=pairs,
+        counts=_literal_counts(aspect, a_values, b_values),
+        heads=[good_head, bad_head],
+    )
+
+
+def _literal_counts(aspect: str, a_values: list[str], b_values: list[str]) -> dict[str, int]:
+    """How many mined spans produced each literal, from the Task 1 gold file.
+
+    Task 3's literals came from the same extraction as Task 1's, so they line up exactly
+    (verified: 42/42 positive and 6/6 negative for check-in). This is the same "evidence count"
+    the previous team put in a badge on each node.
+    """
+    from .review_data import review_rows  # local import: avoids a cycle at module load
+
+    topic = {v: k for k, v in TOPIC_TO_ASPECT.items()}.get(aspect)
+    if not topic:
+        return {}
+    wanted = set(a_values) | set(b_values)
+    counts: dict[str, int] = {}
+    try:
+        for sentiment in ("Positive", "Negative"):
+            for row in review_rows(topic, sentiment):
+                if row["supporting"] in wanted:
+                    counts[row["supporting"]] = int(row["count"])
+    except Exception:
+        return {}   # counts are a nicety; never break the graph over them
+    return counts

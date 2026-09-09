@@ -1,44 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>ABA Graph Viewer</title>
-  <link rel="stylesheet" href="/assets/css/style.css" />
-  <script src="https://unpkg.com/cytoscape@3.30.2/dist/cytoscape.min.js"></script>
-</head>
-<body>
-  <header>
-    <h1>ABA Graph Viewer</h1>
-    <div class="controls">
-      <label>Aspect
-        <select id="aspect-select"></select>
-      </label>
-      <label>Semantics
-        <select id="semantics-select"></select>
-      </label>
-      <div class="view-toggle">
-        <button id="view-aba" class="active">ABA view</button>
-        <button id="view-aa">AA view</button>
-      </div>
-      <span id="status"></span>
-    </div>
-  </header>
-
-  <main>
-    <div id="cy"></div>
-    <aside id="sidebar">
-      <h2>Legend</h2>
-      <ul id="legend"></ul>
-      <h2>Extensions (<span id="ext-semantics-label"></span>)</h2>
-      <div id="extensions"></div>
-      <h2>Human-voted pairs</h2>
-      <p class="hint">Every pair below is real Task&nbsp;3 gold data. "Yes" pairs became attack
-        rules in the framework; nothing here is hidden from the graph.</p>
-      <div id="pairs"></div>
-    </aside>
-  </main>
-
-  <script src="/assets/js/graph-render.js"></script>
-  <script src="/assets/js/app.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABA Mining Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
