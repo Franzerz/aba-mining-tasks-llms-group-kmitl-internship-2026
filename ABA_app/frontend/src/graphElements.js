@@ -16,14 +16,8 @@ export function shortLabel(name) {
 }
 
 // The previous team put an "evidence count" badge on each node — how many mined review spans
-// produced that literal. Same number here, appended to the label (Cytoscape has no badge
-// primitive), sourced from the Task 1 gold file via /api/graph.
-function labelWithCount(id, counts) {
-  const base = shortLabel(id);
-  const n = counts ? counts[id] : undefined;
-  return n ? `${base}  ×${n}` : base;
-}
-
+// produced that literal. `count` rides along in the node data; GraphCanvas renders it as a
+// small overlapping circle badge rather than appending it to the text label.
 function nodeCollector(counts) {
   const nodes = [];
   const seen = new Set();
@@ -32,7 +26,7 @@ function nodeCollector(counts) {
     add(id, role) {
       if (seen.has(id)) return;
       seen.add(id);
-      nodes.push({ data: { id, label: labelWithCount(id, counts), full: id, role,
+      nodes.push({ data: { id, label: shortLabel(id), full: id, role,
                            count: (counts && counts[id]) || null } });
     },
   };

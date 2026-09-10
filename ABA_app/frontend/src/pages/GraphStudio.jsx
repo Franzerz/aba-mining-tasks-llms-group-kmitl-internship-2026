@@ -15,6 +15,19 @@ function SummaryCard({ label, value }) {
   );
 }
 
+function LegendList({ view }) {
+  return (
+    <ul className="m-0 p-0 list-none space-y-1.5">
+      {LEGENDS[view].map(([label, color, shape]) => (
+        <li key={label} className="flex items-center gap-2 text-[12px]">
+          <LegendIcon shape={shape} color={color} />
+          <span className="text-muted">{label}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 function SidebarCard({ title, hint, children }) {
   return (
     <section className="card p-4">
@@ -45,6 +58,54 @@ export default function GraphStudio() {
   // Empty = both claims. Otherwise only one side of the framework (good_X or bad_X).
   const [head, setHead] = useState(searchParams.get("head") || "");
   const canvasRef = useRef(null);
+  const sectionRef = useRef(null);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const [legendOpen, setLegendOpen] = useState(true);
+
+  // Escape exits fullscreen, and the page behind it shouldn't scroll while it's up.
+  useEffect(() => {
+    if (!isFullscreen) return;
+    const onKey = (e) => {
+      if (e.key === "Escape") setIsFullscreen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [isFullscreen]);
+
+  // Real browser fullscreen (like F11), on top of the fixed-overlay panel above — that overlay
+  // is what actually fills the screen if this API is unsupported or denied (e.g. embedded in an
+  // iframe without the `fullscreen` permission). The button only ever requests/exits; whether
+  // it's actually active is read back off the browser via fullscreenchange, so a native exit
+  // (Esc, F11, the browser's own "exit fullscreen" bar) also drops the overlay in step.
+  useEffect(() => {
+    const onFullscreenChange = () => {
+      if (!document.fullscreenElement) setIsFullscreen(false);
+    };
+    document.addEventListener("fullscreenchange", onFullscreenChange);
+    return () => document.removeEventListener("fullscreenchange", onFullscreenChange);
+  }, []);
+
+  function toggleFullscreen() {
+    if (isFullscreen) {
+      setIsFullscreen(false);
+      if (document.fullscreenElement) document.exitFullscreen?.().catch(() => {});
+    } else {
+      setIsFullscreen(true);
+      sectionRef.current?.requestFullscreen?.().catch(() => {});
+    }
+  }
+
+  // Cytoscape caches its container's pixel size, so it needs telling once the panel has
+  // actually reflowed to its new (fullscreen or not) dimensions.
+  useEffect(() => {
+    const id = requestAnimationFrame(() => canvasRef.current?.resize());
+    return () => cancelAnimationFrame(id);
+  }, [isFullscreen]);
 
   useEffect(() => {
     fetchAspects()
@@ -150,7 +211,14 @@ export default function GraphStudio() {
       )}
 
       <section className="mt-4 grid grid-cols-1 xl:grid-cols-[1fr_minmax(0,340px)] gap-4">
-        <section className="card p-5 min-w-0">
+        <section
+          ref={sectionRef}
+          className={
+            isFullscreen
+              ? "card p-5 min-w-0 fixed inset-0 z-50 rounded-none flex flex-col overflow-y-auto"
+              : "card p-5 min-w-0"
+          }
+        >
           <div className="flex items-center justify-between gap-3 flex-wrap mb-3">
             <div className="flex gap-1.5 flex-wrap">
               {VIEWS.map((v) => (
@@ -168,6 +236,13 @@ export default function GraphStudio() {
               <button className="btn" onClick={() => canvasRef.current?.zoomIn()} title="Zoom in">+</button>
               <button className="btn" onClick={() => canvasRef.current?.fit()} title="Fit to viewport">Fit</button>
               <button className="btn" onClick={() => canvasRef.current?.relayout()} title="Re-run the layout (it is randomized, so this can untangle a crowded spot)">Re-layout</button>
+              <button
+                className="btn"
+                onClick={toggleFullscreen}
+                title={isFullscreen ? "Exit fullscreen (Esc)" : "Expand the graph viewer to fill the screen"}
+              >
+                {isFullscreen ? "Exit fullscreen" : "Fullscreen"}
+              </button>
             </div>
           </div>
 
@@ -198,7 +273,13 @@ export default function GraphStudio() {
             )}
           </div>
 
-          <div className="h-[560px] border border-edge rounded-panel overflow-hidden relative">
+          <div
+            className={
+              isFullscreen
+                ? "flex-1 min-h-0 border border-edge rounded-panel overflow-hidden relative"
+                : "h-[560px] border border-edge rounded-panel overflow-hidden relative"
+            }
+          >
             {loading && (
               <div className="absolute inset-0 grid place-content-center text-[13px] text-muted bg-elevated/70 z-10">
                 Computing…
@@ -206,6 +287,28 @@ export default function GraphStudio() {
             )}
             <GraphCanvas ref={canvasRef} data={data} view={view} focus={focus} head={head}
                          onNodeSelect={setSelectedNode} />
+
+            {/* The sidebar (and its Legend card) is outside this fixed-overlay section, so it
+                disappears in fullscreen — float a copy over the canvas instead. */}
+            {isFullscreen && (
+              <div className="absolute top-3 right-3 z-20 card p-3 max-w-[240px] max-h-[80%] overflow-y-auto">
+                <div className="flex items-center justify-between gap-3">
+                  <span className="eyebrow">Legend</span>
+                  <button
+                    className="btn !px-2 !py-1 text-[11px]"
+                    onClick={() => setLegendOpen((o) => !o)}
+                    title={legendOpen ? "Collapse legend" : "Expand legend"}
+                  >
+                    {legendOpen ? "Hide" : "Show"}
+                  </button>
+                </div>
+                {legendOpen && (
+                  <div className="mt-2">
+                    <LegendList view={view} />
+                  </div>
+                )}
+              </div>
+            )}
           </div>
 
           {selectedNode ? (
@@ -225,14 +328,7 @@ export default function GraphStudio() {
 
         <aside className="flex flex-col gap-4 min-w-0">
           <SidebarCard title="Legend">
-            <ul className="m-0 p-0 list-none space-y-1.5">
-              {LEGENDS[view].map(([label, color, shape]) => (
-                <li key={label} className="flex items-center gap-2 text-[12px]">
-                  <LegendIcon shape={shape} color={color} />
-                  <span className="text-muted">{label}</span>
-                </li>
-              ))}
-            </ul>
+            <LegendList view={view} />
           </SidebarCard>
 
           <SidebarCard

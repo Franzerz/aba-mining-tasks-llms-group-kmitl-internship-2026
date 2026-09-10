@@ -120,6 +120,31 @@ const STYLESHEET = [
   },
   { selector: "edge[kind='defeat']", style: { "line-color": "#8a3434", "target-arrow-color": "#8a3434" } },
 
+  // "Evidence count" badge — a small circle sitting above and slightly overlapping its node,
+  // synthesized in syncBadges() below (Cytoscape nodes only support one label each, so this is
+  // a real second node rather than a style trick).
+  {
+    selector: ".count-badge",
+    style: {
+      shape: "ellipse",
+      width: 15,
+      height: 15,
+      "background-color": "#faf7f2",
+      "border-width": 1.5,
+      "border-color": "#a8947e",
+      color: "#2e241d",
+      label: "data(label)",
+      "font-size": 8,
+      "font-family": "Inter, sans-serif",
+      "text-valign": "center",
+      "text-halign": "center",
+      "text-margin-y": 0,
+      "text-background-opacity": 0,
+      "z-index": 500,
+      events: "no",
+    },
+  },
+
   // --- hover highlighting (declared last so it overrides the role/kind rules above) --------
   { selector: ".faded", style: { opacity: 0.12, "text-opacity": 0.06 } },
   {
@@ -204,6 +229,41 @@ function layoutFor(view, nodeCount) {
   return view === "aa" ? aaLayout(nodeCount) : abaLayout(nodeCount);
 }
 
+// A badge sits at the node's top-right corner, pulled in by this fraction of the node's
+// half-width/half-height so it overlaps rather than just touching the edge. The vertical pull
+// is smaller (closer to 1 = closer to the true corner) so the badge rides a bit higher than a
+// symmetric corner placement would put it.
+const BADGE_PULL_X = 0.75;
+const BADGE_PULL_Y = 0.95;
+
+function badgePosition(n) {
+  const pos = n.position();
+  return {
+    x: pos.x + (n.width() / 2) * BADGE_PULL_X,
+    y: pos.y - (n.height() / 2) * BADGE_PULL_Y,
+  };
+}
+
+// Rebuilds the count-badge nodes from scratch, one per real node carrying a `count`, perched on
+// that node's top-right corner so it reads as a small circle overlapping the big one.
+function syncBadges(cy) {
+  cy.nodes(".count-badge").remove();
+  cy.nodes()
+    .not(".count-badge")
+    .forEach((n) => {
+      const count = n.data("count");
+      if (!count) return;
+      cy.add({
+        group: "nodes",
+        data: { id: `${n.id()}__badge`, label: String(count) },
+        position: badgePosition(n),
+        classes: "count-badge",
+        selectable: false,
+        grabbable: false,
+      });
+    });
+}
+
 const GraphCanvas = forwardRef(function GraphCanvas({ data, view, focus, head, onNodeSelect }, ref) {
   const containerRef = useRef(null);
   const cyRef = useRef(null);
@@ -217,11 +277,20 @@ const GraphCanvas = forwardRef(function GraphCanvas({ data, view, focus, head, o
     zoomIn: () => cyRef.current?.zoom(cyRef.current.zoom() * 1.25),
     zoomOut: () => cyRef.current?.zoom(cyRef.current.zoom() / 1.25),
     fit: () => cyRef.current?.fit(undefined, 50),
+    // Cytoscape caches its container's pixel size, so a resize the browser didn't cause itself
+    // (e.g. the containing panel toggling fullscreen) needs an explicit nudge.
+    resize: () => {
+      const cy = cyRef.current;
+      if (!cy) return;
+      cy.resize();
+      fitReadable(cy);
+    },
     relayout: () => {
       const cy = cyRef.current;
       if (!cy) return;
-      cy.layout(layoutFor(viewRef.current, cy.nodes().length)).run();
+      cy.layout(layoutFor(viewRef.current, cy.nodes().not(".count-badge").length)).run();
       fitReadable(cy);
+      syncBadges(cy);
     },
   }));
 
@@ -252,6 +321,15 @@ const GraphCanvas = forwardRef(function GraphCanvas({ data, view, focus, head, o
       node.addClass("hl-focus");
     });
     cy.on("mouseout", "node", clearHighlight);
+    // Keep each count-badge glued to its node's top edge when the node is dragged.
+    cy.on("position", "node", (evt) => {
+      const n = evt.target;
+      if (n.hasClass("count-badge")) return;
+      const badge = cy.getElementById(`${n.id()}__badge`);
+      if (badge.nonempty()) {
+        badge.position(badgePosition(n));
+      }
+    });
     // A pointer can leave the canvas without firing mouseout on the node it was over.
     containerRef.current?.addEventListener("pointerleave", clearHighlight);
     cleanupRef.current = () => containerRef.current?.removeEventListener("pointerleave", clearHighlight);
@@ -274,6 +352,7 @@ const GraphCanvas = forwardRef(function GraphCanvas({ data, view, focus, head, o
     cy.resize();
     cy.layout(layoutFor(view, cy.nodes().length)).run();
     fitReadable(cy);
+    syncBadges(cy);
   }, [data, view, focus, head]);
 
   return <div ref={containerRef} className="w-full h-full rounded-panel bg-elevated" />;
