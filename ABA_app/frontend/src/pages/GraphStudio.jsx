@@ -1,9 +1,10 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import Frame, { PageHead } from "../components/Frame.jsx";
 import GraphCanvas from "../components/GraphCanvas.jsx";
 import LegendIcon from "../components/LegendIcon.jsx";
-import { LEGENDS, VIEWS, focusOptions } from "../graphElements.js";
+import LlmSummaryBody, { useLlmSummary } from "../components/LlmSummary.jsx";
+import { LEGENDS, VIEWS, focusOptions, graphFacts } from "../graphElements.js";
 import { fetchAspects, fetchGraph } from "../api.js";
 
 function SummaryCard({ label, value }) {
@@ -61,6 +62,12 @@ export default function GraphStudio() {
   const sectionRef = useRef(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [legendOpen, setLegendOpen] = useState(true);
+  const [summaryOpen, setSummaryOpen] = useState(true);
+
+  // Tallied from the same build + filters the canvas draws with, so the summary always
+  // describes the picture on screen rather than the whole framework behind it.
+  const facts = useMemo(() => graphFacts(data, view, focus, head), [data, view, focus, head]);
+  const llm = useLlmSummary(facts);
 
   // Escape exits fullscreen, and the page behind it shouldn't scroll while it's up.
   useEffect(() => {
@@ -288,25 +295,47 @@ export default function GraphStudio() {
             <GraphCanvas ref={canvasRef} data={data} view={view} focus={focus} head={head}
                          onNodeSelect={setSelectedNode} />
 
-            {/* The sidebar (and its Legend card) is outside this fixed-overlay section, so it
-                disappears in fullscreen — float a copy over the canvas instead. */}
+            {/* The sidebar is outside this fixed-overlay section, so its cards disappear in
+                fullscreen — float the two that matter while reading the graph over the canvas
+                instead, in one column so they can never overlap each other. */}
             {isFullscreen && (
-              <div className="absolute top-3 right-3 z-20 card p-3 max-w-[240px] max-h-[80%] overflow-y-auto">
-                <div className="flex items-center justify-between gap-3">
-                  <span className="eyebrow">Legend</span>
-                  <button
-                    className="btn !px-2 !py-1 text-[11px]"
-                    onClick={() => setLegendOpen((o) => !o)}
-                    title={legendOpen ? "Collapse legend" : "Expand legend"}
-                  >
-                    {legendOpen ? "Hide" : "Show"}
-                  </button>
-                </div>
-                {legendOpen && (
-                  <div className="mt-2">
-                    <LegendList view={view} />
+              <div className="absolute top-3 right-3 z-20 w-[270px] max-h-[calc(100%-1.5rem)]
+                              flex flex-col gap-2 overflow-y-auto">
+                <div className="card p-3">
+                  <div className="flex items-center justify-between gap-3">
+                    <span className="eyebrow">LLM Summary</span>
+                    <button
+                      className="btn !px-2 !py-1 text-[11px]"
+                      onClick={() => setSummaryOpen((o) => !o)}
+                      title={summaryOpen ? "Collapse summary" : "Expand summary"}
+                    >
+                      {summaryOpen ? "Hide" : "Show"}
+                    </button>
                   </div>
-                )}
+                  {summaryOpen && (
+                    <div className="mt-2">
+                      <LlmSummaryBody llm={llm} facts={facts} />
+                    </div>
+                  )}
+                </div>
+
+                <div className="card p-3">
+                  <div className="flex items-center justify-between gap-3">
+                    <span className="eyebrow">Legend</span>
+                    <button
+                      className="btn !px-2 !py-1 text-[11px]"
+                      onClick={() => setLegendOpen((o) => !o)}
+                      title={legendOpen ? "Collapse legend" : "Expand legend"}
+                    >
+                      {legendOpen ? "Hide" : "Show"}
+                    </button>
+                  </div>
+                  {legendOpen && (
+                    <div className="mt-2">
+                      <LegendList view={view} />
+                    </div>
+                  )}
+                </div>
               </div>
             )}
           </div>
@@ -327,6 +356,10 @@ export default function GraphStudio() {
         </section>
 
         <aside className="flex flex-col gap-4 min-w-0">
+          <SidebarCard title="LLM Summary" hint="Simple explanation of this graph for users">
+            <LlmSummaryBody llm={llm} facts={facts} />
+          </SidebarCard>
+
           <SidebarCard title="Legend">
             <LegendList view={view} />
           </SidebarCard>

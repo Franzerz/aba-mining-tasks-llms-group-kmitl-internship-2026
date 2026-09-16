@@ -8,6 +8,7 @@ from fastapi.staticfiles import StaticFiles
 
 from .config import DIST_DIR
 from .routes.graph import router as graph_router
+from .routes.llm import router as llm_router
 from .routes.review import router as review_router
 
 app = FastAPI(title="ABA App")
@@ -15,6 +16,7 @@ app = FastAPI(title="ABA App")
 # API routers first, so /api/* is never swallowed by the SPA catch-all below.
 app.include_router(graph_router)
 app.include_router(review_router)
+app.include_router(llm_router)
 
 if (DIST_DIR / "assets").is_dir():
     app.mount("/assets", StaticFiles(directory=DIST_DIR / "assets"), name="assets")

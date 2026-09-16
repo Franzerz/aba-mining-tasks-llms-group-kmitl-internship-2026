@@ -148,6 +148,147 @@ export const LEGENDS = {
 };
 
 
+// --- plain-English summary -------------------------------------------------------------------
+// The Graph Studio's LLM Summary card is for someone running a hotel, not reading a framework:
+// everything below converts the picture into guest-review terms before it reaches either the
+// offline text or the model prompt, so no framework vocabulary can leak into what they read.
+
+/** "no_evident_not_clear_instruction#x" -> "clear instruction", "good_check-in" -> "good check-in". */
+export function humanAtom(name) {
+  return shortLabel(String(name))
+    .replace(/^no_evident_not_/, "")
+    .replace(/^have_evident_/, "")
+    .replace(/_/g, " ")
+    .trim();
+}
+
+function uniqueHuman(names, limit) {
+  const seen = new Set();
+  const out = [];
+  for (const name of names) {
+    const human = humanAtom(name);
+    if (!human || seen.has(human)) continue;
+    seen.add(human);
+    out.push(human);
+    if (limit && out.length >= limit) break;
+  }
+  return out;
+}
+
+/** Tallies the graph AS DRAWN — same build + head/focus filters the canvas uses — so a summary
+ *  can never describe nodes that were filtered off the screen. */
+export function graphFacts(data, view, focus, head) {
+  if (!data) return null;
+  const elements = filterToFocus(filterToHead(buildElements(data, view), head), focus);
+  const nodes = elements.filter((e) => !e.data.source);
+  const edges = elements.filter((e) => e.data.source);
+
+  const byRole = (role) => nodes.filter((n) => n.data.role === role);
+  const byKind = (kind) => edges.filter((e) => e.data.kind === kind).length;
+
+  const praise = byRole("proposition_pos").length;
+  const complaints = byRole("proposition_neg").length;
+  const argumentNodes = byRole("argument").length;
+
+  const counts = {
+    nodes: nodes.length,
+    verdicts: byRole("head").length,
+    praise,
+    complaints,
+    // The AA view draws constructed arguments instead of the mined literals; either way this
+    // is "how many separate points are on screen" to the reader.
+    points: praise + complaints || argumentNodes,
+  };
+
+  const edgeCounts = {
+    support: byKind("support"),
+    // A contrary link and a defeat are both "these two cannot both stand" to a manager.
+    conflict: byKind("contrary") + byKind("defeat"),
+  };
+
+  // Evidence counts ride on the node data (how many mined review spans produced that literal),
+  // so the most-mentioned themes come straight off what is drawn.
+  const topThemes = uniqueHuman(
+    nodes
+      .filter((n) => n.data.count)
+      .sort((a, b) => b.data.count - a.data.count)
+      .map((n) => n.data.full || n.data.id),
+    5,
+  );
+
+  const unfiltered = !focus && !head;
+  const extensionSizes = (data.extensions || []).map((ext) => ext.length);
+
+  return {
+    aspect: data.aspect,
+    view,
+    semantics: data.semantics,
+    counts,
+    edges: edgeCounts,
+    headLabels: uniqueHuman(byRole("head").map((n) => n.data.full || n.data.id)),
+    topThemes,
+    focusLabel: focus ? humanAtom(focus) : "",
+    headLabel: head ? humanAtom(head) : "",
+    // Extensions are computed on the whole framework, so quoting them next to a filtered
+    // picture would describe something the reader cannot see.
+    extensions: unfiltered
+      ? { count: extensionSizes.length, largest: extensionSizes.length ? Math.max(...extensionSizes) : 0 }
+      : { count: 0, largest: 0 },
+  };
+}
+
+function countPhrase(n, singular, plural) {
+  return `${n.toLocaleString()} ${n === 1 ? singular : plural}`;
+}
+
+/** Shown before (or instead of) any model output — so the card is never empty, including on a
+ *  machine with no Ollama at all. */
+export function offlineSummary(facts) {
+  if (!facts) return "";
+  const { counts, edges, headLabels, topThemes, extensions } = facts;
+  const lines = [];
+
+  const scope = facts.focusLabel
+    ? `what guests said about ${facts.focusLabel}`
+    : `what guests said about ${facts.aspect}`;
+  lines.push(`- This picture shows ${scope}, and where those comments back each other up or clash.`);
+
+  if (counts.points) {
+    // Filtering to one verdict often leaves zero of one kind — say nothing about it rather
+    // than "0 are complaints".
+    const parts = [];
+    if (counts.praise) parts.push(countPhrase(counts.praise, "is praise", "are praise"));
+    if (counts.complaints) parts.push(countPhrase(counts.complaints, "is a complaint", "are complaints"));
+    const split = parts.length ? ` — ${parts.join(" and ")}` : "";
+    lines.push(`- ${countPhrase(counts.points, "guest point is", "guest points are")} on screen${split}.`);
+  }
+
+  if (headLabels.length) {
+    lines.push(`- They add up to the overall verdicts: ${headLabels.join(" and ")}.`);
+  }
+
+  lines.push(
+    `- ${countPhrase(edges.support, "link shows", "links show")} a comment backing a verdict, and ` +
+      `${countPhrase(edges.conflict, "link shows", "links show")} two comments that contradict each other.`,
+  );
+
+  if (topThemes.length) {
+    lines.push(`- The themes guests raised most often: ${topThemes.join(", ")}.`);
+  }
+
+  if (extensions.count) {
+    lines.push(
+      `- Even with those disagreements, ${countPhrase(
+        extensions.count,
+        "set of comments holds",
+        "different sets of comments hold",
+      )} together at once.`,
+    );
+  }
+
+  return lines.join("\n");
+}
+
 // --- focus ---------------------------------------------------------------------------------
 // mu_team's studio draws one graph per selected supporting literal rather than the whole
 // framework at once. Same idea here, but applied to whichever view is showing: pick any
