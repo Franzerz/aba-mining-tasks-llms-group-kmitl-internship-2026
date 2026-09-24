@@ -36,14 +36,13 @@ BODY (LITERAL) TOKEN MATCHING
     of which Error (parse error, 0 predicted literals) : 1030
 
   --- INCLUDING error instances (Gate-3-aligned, all Valid states) (n=2019 aligned instances) ---
-    TP=2964 FP=272 FN=5258
-    Precision : 0.9159  (2964/3236)
-    Recall    : 0.3605  (2964/8222)
-    F1        : 0.5174
     Micro TP=2964 FP=272 FN=5258
     Micro Precision : 0.9159  (2964/3236)
     Micro Recall    : 0.3605  (2964/8222)
     Micro F1        : 0.5174
+    Macro Precision (per-topic) : 0.9069  (mean over topics, n=6)
+    Macro Recall    (per-topic) : 0.4050  (mean over topics, n=6)
+    Macro F1        (per-topic) : 0.5539  (mean over topics, n=6)
 
     Breakdown by prefix type:
     Prefix type          TP     FP     FN     Prec      Rec       F1
@@ -52,14 +51,13 @@ BODY (LITERAL) TOKEN MATCHING
     have_evident        155     39    489   0.7990   0.2407   0.3699
 
   --- EXCLUDING error instances (Gate-3-aligned, Valid=True only) (n=989 aligned instances) ---
-    TP=2964 FP=272 FN=433
-    Precision : 0.9159  (2964/3236)
-    Recall    : 0.8725  (2964/3397)
-    F1        : 0.8937
     Micro TP=2964 FP=272 FN=433
     Micro Precision : 0.9159  (2964/3236)
     Micro Recall    : 0.8725  (2964/3397)
     Micro F1        : 0.8937
+    Macro Precision (per-topic) : 0.9069  (mean over topics, n=6)
+    Macro Recall    (per-topic) : 0.8639  (mean over topics, n=6)
+    Macro F1        (per-topic) : 0.8836  (mean over topics, n=6)
 
     Breakdown by prefix type:
     Prefix type          TP     FP     FN     Prec      Rec       F1
@@ -67,4 +65,4 @@ BODY (LITERAL) TOKEN MATCHING
     no_evident_not     1351     73    164   0.9487   0.8917   0.9194
     have_evident        155     39     29   0.7990   0.8424   0.8201
 
-Runtime: 23.52s
+Runtime: 20.29s

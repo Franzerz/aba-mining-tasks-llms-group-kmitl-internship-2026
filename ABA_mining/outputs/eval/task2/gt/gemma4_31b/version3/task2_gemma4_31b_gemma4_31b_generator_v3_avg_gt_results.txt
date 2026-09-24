@@ -1,0 +1,44 @@
+========================================================================
+VERSION AVERAGE (v2) - gemma4_31b / version3 (n=3 runs: run1, run2, run3)
+========================================================================
+
+Combines these per-run result files:
+    task2_gemma4_31b_gemma4_31b_generator_v3_run1_gt_results.txt
+    task2_gemma4_31b_gemma4_31b_generator_v3_run2_gt_results.txt
+    task2_gemma4_31b_gemma4_31b_generator_v3_run3_gt_results.txt
+
+------------------------------------------------------------------------
+BODY (LITERAL) TOKEN MATCHING - VERSION AVERAGE ACROSS RUNS
+------------------------------------------------------------------------
+  Micro avg = pool TP/FP/FN across all runs, then compute P/R/F1 once.
+  Macro avg = mean of each run's own macro (per-topic) P/R/F1.
+
+  --- INCLUDING error instances ---
+    Per-run Micro Precision : run1=0.9513  run2=0.9513  run3=0.9513
+    Per-run Micro Recall    : run1=0.7953  run2=0.7953  run3=0.7953
+    Per-run Micro F1        : run1=0.8663  run2=0.8663  run3=0.8663
+    Per-run Macro Precision : run1=0.9427  run2=0.9427  run3=0.9427
+    Per-run Macro Recall    : run1=0.8014  run2=0.8014  run3=0.8014
+    Per-run Macro F1        : run1=0.8649  run2=0.8649  run3=0.8649
+
+    Micro avg Precision : 0.9513  (19617/20622)
+    Micro avg Recall    : 0.7953  (19617/24666)
+    Micro avg F1        : 0.8663
+    Macro avg Precision : 0.9427  (mean over 3 runs)
+    Macro avg Recall    : 0.8014  (mean over 3 runs)
+    Macro avg F1        : 0.8649  (mean over 3 runs)
+
+  --- EXCLUDING error instances ---
+    Per-run Micro Precision : run1=0.9513  run2=0.9513  run3=0.9513
+    Per-run Micro Recall    : run1=0.7957  run2=0.7957  run3=0.7957
+    Per-run Micro F1        : run1=0.8666  run2=0.8666  run3=0.8666
+    Per-run Macro Precision : run1=0.9427  run2=0.9427  run3=0.9427
+    Per-run Macro Recall    : run1=0.8016  run2=0.8016  run3=0.8016
+    Per-run Macro F1        : run1=0.8650  run2=0.8650  run3=0.8650
+
+    Micro avg Precision : 0.9513  (19617/20622)
+    Micro avg Recall    : 0.7957  (19617/24654)
+    Micro avg F1        : 0.8666
+    Macro avg Precision : 0.9427  (mean over 3 runs)
+    Macro avg Recall    : 0.8016  (mean over 3 runs)
+    Macro avg F1        : 0.8650  (mean over 3 runs)

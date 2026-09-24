@@ -1,0 +1,75 @@
+========================================================================
+EVALUATION RESULTS (v2) - task2_gemma4_31b_gemma4_31b_generator_v2_run3_gt_n2078.csv
+========================================================================
+
+------------------------------------------------------------------------
+ROW-LEVEL DATA INTEGRITY (errors are reported, never filtered out)
+------------------------------------------------------------------------
+  Total CSV rows        : 2078
+  Error rows (Valid=False / Errors set) : 2078
+  Error rate             : 2078/2078 = 1.0000
+  Remaining (clean) rows: 0/2078 = 0.0000
+  Error message breakdown:
+      172  json_parse_error: Extra data: line 1 column 13 (char 12)
+      103  json_parse_error: Extra data: line 1 column 17 (char 16)
+      101  json_parse_error: Extra data: line 1 column 19 (char 18)
+       88  json_parse_error: Extra data: line 1 column 14 (char 13)
+       59  json_parse_error: Extra data: line 1 column 16 (char 15)
+       58  json_parse_error: Extra data: line 1 column 15 (char 14)
+       57  'friendly_staff' is not of type 'object'
+       56  json_parse_error: Extra data: line 1 column 18 (char 17)
+       51  json_parse_error: Extra data: line 1 column 22 (char 21)
+       46  json_parse_error: Extra data: line 1 column 20 (char 19)
+
+------------------------------------------------------------------------
+HEAD: TRIPLE-GATE MATCHING (prerequisite, not similarity-scored)
+------------------------------------------------------------------------
+  Instances (Review ID x Topic x Sentiment x Selected Content groups): 2078
+  Gate 1 (Review ID match)             : 2078/2078 = 1.0000
+  Gate 2 (+ Head/claim+sentiment match) : 2019/2078 = 0.9716
+  Gate 3 (+ same-content match)         : 2019/2078 = 0.9716
+  => Triple-Gate pass rate (accuracy)   : 2019/2078 = 0.9716
+  Gate-3 match kind breakdown : {'exact': 2019}
+
+------------------------------------------------------------------------
+BODY (LITERAL) TOKEN MATCHING
+------------------------------------------------------------------------
+  Prefix-Type Restriction: raw <-> raw, no_evident_not_ <-> no_evident_not_, have_evident_ <-> have_evident_ only.
+  TP = greedy 1:1 matched pairs (sim >= threshold, same prefix bucket).
+  FP = Pb - TP (unmatched predicted literals).  FN = Rb - TP (unmatched GT literals).
+  TN = not applicable / not computed for this task.
+  Instances passing Triple-Gate (evaluable) : 2019/2078 (not aligned / excluded from body scoring: 59)
+    of which Valid (no parse error) : 0
+    of which Error (parse error, 0 predicted literals) : 2019
+
+  --- INCLUDING error instances (Gate-3-aligned, all Valid states) (n=2019 aligned instances) ---
+    Micro TP=0 FP=0 FN=8222
+    Micro Precision : 0.0000  (0/0)
+    Micro Recall    : 0.0000  (0/8222)
+    Micro F1        : 0.0000
+    Macro Precision (per-topic) : 0.0000  (mean over topics, n=6)
+    Macro Recall    (per-topic) : 0.0000  (mean over topics, n=6)
+    Macro F1        (per-topic) : 0.0000  (mean over topics, n=6)
+
+    Breakdown by prefix type:
+    Prefix type          TP     FP     FN     Prec      Rec       F1
+    raw                   0      0   4111   0.0000   0.0000   0.0000
+    no_evident_not        0      0   3467   0.0000   0.0000   0.0000
+    have_evident          0      0    644   0.0000   0.0000   0.0000
+
+  --- EXCLUDING error instances (Gate-3-aligned, Valid=True only) (n=0 aligned instances) ---
+    Micro TP=0 FP=0 FN=0
+    Micro Precision : 0.0000  (0/0)
+    Micro Recall    : 0.0000  (0/0)
+    Micro F1        : 0.0000
+    Macro Precision (per-topic) : 0.0000  (mean over topics, n=0)
+    Macro Recall    (per-topic) : 0.0000  (mean over topics, n=0)
+    Macro F1        (per-topic) : 0.0000  (mean over topics, n=0)
+
+    Breakdown by prefix type:
+    Prefix type          TP     FP     FN     Prec      Rec       F1
+    raw                   0      0      0   0.0000   0.0000   0.0000
+    no_evident_not        0      0      0   0.0000   0.0000   0.0000
+    have_evident          0      0      0   0.0000   0.0000   0.0000
+
+Runtime: 10.76s

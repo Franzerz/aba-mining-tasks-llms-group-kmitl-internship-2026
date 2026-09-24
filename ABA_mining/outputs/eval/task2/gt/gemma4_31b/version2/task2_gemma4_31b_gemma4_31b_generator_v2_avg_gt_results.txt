@@ -1,0 +1,44 @@
+========================================================================
+VERSION AVERAGE (v2) - gemma4_31b / version2 (n=3 runs: run1, run2, run3)
+========================================================================
+
+Combines these per-run result files:
+    task2_gemma4_31b_gemma4_31b_generator_v2_run1_gt_results.txt
+    task2_gemma4_31b_gemma4_31b_generator_v2_run2_gt_results.txt
+    task2_gemma4_31b_gemma4_31b_generator_v2_run3_gt_results.txt
+
+------------------------------------------------------------------------
+BODY (LITERAL) TOKEN MATCHING - VERSION AVERAGE ACROSS RUNS
+------------------------------------------------------------------------
+  Micro avg = pool TP/FP/FN across all runs, then compute P/R/F1 once.
+  Macro avg = mean of each run's own macro (per-topic) P/R/F1.
+
+  --- INCLUDING error instances ---
+    Per-run Micro Precision : run1=0.0000  run2=0.0000  run3=0.0000
+    Per-run Micro Recall    : run1=0.0000  run2=0.0000  run3=0.0000
+    Per-run Micro F1        : run1=0.0000  run2=0.0000  run3=0.0000
+    Per-run Macro Precision : run1=0.0000  run2=0.0000  run3=0.0000
+    Per-run Macro Recall    : run1=0.0000  run2=0.0000  run3=0.0000
+    Per-run Macro F1        : run1=0.0000  run2=0.0000  run3=0.0000
+
+    Micro avg Precision : 0.0000  (0/0)
+    Micro avg Recall    : 0.0000  (0/24666)
+    Micro avg F1        : 0.0000
+    Macro avg Precision : 0.0000  (mean over 3 runs)
+    Macro avg Recall    : 0.0000  (mean over 3 runs)
+    Macro avg F1        : 0.0000  (mean over 3 runs)
+
+  --- EXCLUDING error instances ---
+    Per-run Micro Precision : run1=0.0000  run2=0.0000  run3=0.0000
+    Per-run Micro Recall    : run1=0.0000  run2=0.0000  run3=0.0000
+    Per-run Micro F1        : run1=0.0000  run2=0.0000  run3=0.0000
+    Per-run Macro Precision : run1=0.0000  run2=0.0000  run3=0.0000
+    Per-run Macro Recall    : run1=0.0000  run2=0.0000  run3=0.0000
+    Per-run Macro F1        : run1=0.0000  run2=0.0000  run3=0.0000
+
+    Micro avg Precision : 0.0000  (0/0)
+    Micro avg Recall    : 0.0000  (0/0)
+    Micro avg F1        : 0.0000
+    Macro avg Precision : 0.0000  (mean over 3 runs)
+    Macro avg Recall    : 0.0000  (mean over 3 runs)
+    Macro avg F1        : 0.0000  (mean over 3 runs)

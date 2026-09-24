@@ -1,0 +1,64 @@
+========================================================================
+EVALUATION RESULTS (v2) - task2_gemma4_31b_gemma4_31b_generator_v1_run3_gt_n2078.csv
+========================================================================
+
+------------------------------------------------------------------------
+ROW-LEVEL DATA INTEGRITY (errors are reported, never filtered out)
+------------------------------------------------------------------------
+  Total CSV rows        : 8169
+  Error rows (Valid=False / Errors set) : 0
+  Error rate             : 0/8169 = 0.0000
+  Remaining (clean) rows: 8169/8169 = 1.0000
+
+------------------------------------------------------------------------
+HEAD: TRIPLE-GATE MATCHING (prerequisite, not similarity-scored)
+------------------------------------------------------------------------
+  Instances (Review ID x Topic x Sentiment x Selected Content groups): 2078
+  Gate 1 (Review ID match)             : 2078/2078 = 1.0000
+  Gate 2 (+ Head/claim+sentiment match) : 2019/2078 = 0.9716
+  Gate 3 (+ same-content match)         : 2019/2078 = 0.9716
+  => Triple-Gate pass rate (accuracy)   : 2019/2078 = 0.9716
+  Gate-3 match kind breakdown : {'exact': 2019}
+
+------------------------------------------------------------------------
+BODY (LITERAL) TOKEN MATCHING
+------------------------------------------------------------------------
+  Prefix-Type Restriction: raw <-> raw, no_evident_not_ <-> no_evident_not_, have_evident_ <-> have_evident_ only.
+  TP = greedy 1:1 matched pairs (sim >= threshold, same prefix bucket).
+  FP = Pb - TP (unmatched predicted literals).  FN = Rb - TP (unmatched GT literals).
+  TN = not applicable / not computed for this task.
+  Instances passing Triple-Gate (evaluable) : 2019/2078 (not aligned / excluded from body scoring: 59)
+    of which Valid (no parse error) : 2019
+    of which Error (parse error, 0 predicted literals) : 0
+
+  --- INCLUDING error instances (Gate-3-aligned, all Valid states) (n=2019 aligned instances) ---
+    Micro TP=7433 FP=525 FN=789
+    Micro Precision : 0.9340  (7433/7958)
+    Micro Recall    : 0.9040  (7433/8222)
+    Micro F1        : 0.9188
+    Macro Precision (per-topic) : 0.9212  (mean over topics, n=6)
+    Macro Recall    (per-topic) : 0.8939  (mean over topics, n=6)
+    Macro F1        (per-topic) : 0.9067  (mean over topics, n=6)
+
+    Breakdown by prefix type:
+    Prefix type          TP     FP     FN     Prec      Rec       F1
+    raw                3665    314    446   0.9211   0.8915   0.9061
+    no_evident_not     3226    177    241   0.9480   0.9305   0.9392
+    have_evident        542     34    102   0.9410   0.8416   0.8885
+
+  --- EXCLUDING error instances (Gate-3-aligned, Valid=True only) (n=2019 aligned instances) ---
+    Micro TP=7433 FP=525 FN=789
+    Micro Precision : 0.9340  (7433/7958)
+    Micro Recall    : 0.9040  (7433/8222)
+    Micro F1        : 0.9188
+    Macro Precision (per-topic) : 0.9212  (mean over topics, n=6)
+    Macro Recall    (per-topic) : 0.8939  (mean over topics, n=6)
+    Macro F1        (per-topic) : 0.9067  (mean over topics, n=6)
+
+    Breakdown by prefix type:
+    Prefix type          TP     FP     FN     Prec      Rec       F1
+    raw                3665    314    446   0.9211   0.8915   0.9061
+    no_evident_not     3226    177    241   0.9480   0.9305   0.9392
+    have_evident        542     34    102   0.9410   0.8416   0.8885
+
+Runtime: 14.97s

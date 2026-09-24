@@ -18,6 +18,7 @@ takes only as a reference for GT loading / output-CSV shape:
 Run (from repo root, ABA_mining/):
     python evaluator/task2_eval_new.py
     python evaluator/task2_eval_new.py --glob "gt/llama3.2/version1/*.csv"
+    python evaluator/task2_eval_new.py --glob "gt/llama3.2/**/*.csv"
     python evaluator/task2_eval_new.py --limit 60
 """
 
@@ -25,6 +26,7 @@ import argparse
 import re
 import sys
 import time
+import unicodedata
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -51,7 +53,13 @@ N_BODY_COLS = 15
 NO_LITERAL_PLACEHOLDER = "(no literals)"
 
 TOKEN_SIM_THRESHOLD = 0.50    # body/cont literal-token cosine acceptance gate
-CONTENT_SIM_THRESHOLD = 0.75  # Gate 3 fallback: "same underlying content"
+CONTENT_SIM_THRESHOLD = 0.75  # Gate 3 fallback: "same underlying content".
+# NOTE: the paper's Data Preparation step (Sec 4.5.1) describes Gate 3 only as
+# light-normalized text comparison (Unicode + whitespace normalization, trailing
+# punctuation removal) with no embedding fallback. This cosine-similarity
+# fallback is a practical extension beyond the paper, kept so that instances
+# whose LLM-extracted text isn't byte-identical to GT content after light
+# normalization are not dropped from evaluation entirely.
 
 PREFIX_NO_EVIDENT_NOT = "no_evident_not_"
 PREFIX_HAVE_EVIDENT = "have_evident_"
@@ -79,10 +87,19 @@ def _get_model():
     return _model
 
 
+_TRAILING_PUNCT_RE = re.compile(r"[.,!?;:\"'‘’“”…]+$")
+
+
 def normalize(text) -> str:
+    """Light normalization for Gate-3 "same underlying content" matching, per
+    the paper's Data Preparation step: Unicode normalization (NFKC), whitespace
+    normalization, and removal of trivial trailing punctuation."""
     if pd.isna(text):
         return ""
-    return re.sub(r"\s+", " ", str(text).strip().lower())
+    s = unicodedata.normalize("NFKC", str(text))
+    s = re.sub(r"\s+", " ", s.strip()).lower()
+    s = _TRAILING_PUNCT_RE.sub("", s).strip()
+    return s
 
 
 def norm_id(value) -> str:
@@ -316,15 +333,18 @@ def prf1(tp: int, pb: int, rb: int) -> tuple:
 class Accumulator:
     def __init__(self):
         self.by_bucket = {p: {"tp": 0, "pb": 0, "rb": 0} for p in PREFIX_TYPES}
+        self.by_topic: dict = defaultdict(lambda: {"tp": 0, "pb": 0, "rb": 0})
         self.total = {"tp": 0, "pb": 0, "rb": 0}
 
-    def add(self, match_result: dict):
+    def add(self, match_result: dict, topic: str):
         for ptype in PREFIX_TYPES:
             b = match_result[ptype]
             acc = self.by_bucket[ptype]
             acc["tp"] += b["tp"]; acc["pb"] += b["pb"]; acc["rb"] += b["rb"]
         t = match_result["total"]
         self.total["tp"] += t["tp"]; self.total["pb"] += t["pb"]; self.total["rb"] += t["rb"]
+        bt = self.by_topic[topic]
+        bt["tp"] += t["tp"]; bt["pb"] += t["pb"]; bt["rb"] += t["rb"]
 
     def merge(self, other: "Accumulator"):
         for ptype in PREFIX_TYPES:
@@ -333,6 +353,33 @@ class Accumulator:
         self.total["tp"] += other.total["tp"]
         self.total["pb"] += other.total["pb"]
         self.total["rb"] += other.total["rb"]
+        for topic, b in other.by_topic.items():
+            a = self.by_topic[topic]
+            a["tp"] += b["tp"]; a["pb"] += b["pb"]; a["rb"] += b["rb"]
+
+
+def macro_prf1_per_topic(acc: "Accumulator") -> tuple:
+    """Macro-averaged P/R/F1 for Task 2, per definition: (1) compute
+    precision, recall, and F1 for each topic individually, from that
+    topic's aggregated TP/FP/FN counts across every aligned instance under
+    it; (2) average the resulting per-topic values, each topic weighted
+    equally regardless of how many literal pairs it contains.
+
+    A topic with no predicted and no expected literals (pb=0 and rb=0) has
+    no support and is excluded from the average -- there is nothing for it
+    to have gotten right or wrong."""
+    precisions, recalls, f1s = [], [], []
+    for b in acc.by_topic.values():
+        if b["pb"] == 0 and b["rb"] == 0:
+            continue
+        pp, rr, ff = prf1(b["tp"], b["pb"], b["rb"])
+        precisions.append(pp)
+        recalls.append(rr)
+        f1s.append(ff)
+    if not precisions:
+        return 0.0, 0.0, 0.0
+    n = len(precisions)
+    return sum(precisions) / n, sum(recalls) / n, sum(f1s) / n
 
 
 # ----------------------------------------------------------------------
@@ -513,9 +560,9 @@ def evaluate(llm_csv: Path, limit: int = None) -> dict:
         gt_lits = gt_rec["body"] + gt_rec["cont"]
         m = match_instance_tokens(pred_lits, gt_lits, emb_of)
 
-        acc_incl.add(m)
+        acc_incl.add(m, inst["topic"])
         if inst["valid"]:
-            acc_excl.add(m)
+            acc_excl.add(m, inst["topic"])
 
         t = m["total"]
         p_, r_, f_ = prf1(t["tp"], t["pb"], t["rb"])
@@ -552,14 +599,14 @@ def evaluate(llm_csv: Path, limit: int = None) -> dict:
         t = acc.total
         p_, r_, f_ = prf1(t["tp"], t["pb"], t["rb"])
         fp, fn = t["pb"] - t["tp"], t["rb"] - t["tp"]
-        R(f"    TP={t['tp']} FP={fp} FN={fn}")
-        R(f"    Precision : {p_:.4f}  ({t['tp']}/{t['pb']})")
-        R(f"    Recall    : {r_:.4f}  ({t['tp']}/{t['rb']})")
-        R(f"    F1        : {f_:.4f}")
         R(f"    Micro TP={t['tp']} FP={fp} FN={fn}")
         R(f"    Micro Precision : {p_:.4f}  ({t['tp']}/{t['pb']})")
         R(f"    Micro Recall    : {r_:.4f}  ({t['tp']}/{t['rb']})")
         R(f"    Micro F1        : {f_:.4f}")
+        mp_, mr_, mf_ = macro_prf1_per_topic(acc)
+        R(f"    Macro Precision (per-topic) : {mp_:.4f}  (mean over topics, n={len(acc.by_topic)})")
+        R(f"    Macro Recall    (per-topic) : {mr_:.4f}  (mean over topics, n={len(acc.by_topic)})")
+        R(f"    Macro F1        (per-topic) : {mf_:.4f}  (mean over topics, n={len(acc.by_topic)})")
         R(f"\n    Breakdown by prefix type:")
         R(f"    {'Prefix type':<16} {'TP':>6} {'FP':>6} {'FN':>6} {'Prec':>8} {'Rec':>8} {'F1':>8}")
         for ptype in PREFIX_TYPES:
@@ -650,14 +697,14 @@ def write_overall_summary(file_summaries: list) -> None:
         t = acc.total
         p_, r_, f_ = prf1(t["tp"], t["pb"], t["rb"])
         fp, fn = t["pb"] - t["tp"], t["rb"] - t["tp"]
-        R(f"    TP={t['tp']} FP={fp} FN={fn}")
-        R(f"    Precision : {p_:.4f}  ({t['tp']}/{t['pb']})")
-        R(f"    Recall    : {r_:.4f}  ({t['tp']}/{t['rb']})")
-        R(f"    F1        : {f_:.4f}")
         R(f"    Micro TP={t['tp']} FP={fp} FN={fn}")
         R(f"    Micro Precision : {p_:.4f}  ({t['tp']}/{t['pb']})")
         R(f"    Micro Recall    : {r_:.4f}  ({t['tp']}/{t['rb']})")
         R(f"    Micro F1        : {f_:.4f}")
+        mp_, mr_, mf_ = macro_prf1_per_topic(acc)
+        R(f"    Macro Precision (per-topic) : {mp_:.4f}  (mean over topics, n={len(acc.by_topic)})")
+        R(f"    Macro Recall    (per-topic) : {mr_:.4f}  (mean over topics, n={len(acc.by_topic)})")
+        R(f"    Macro F1        (per-topic) : {mf_:.4f}  (mean over topics, n={len(acc.by_topic)})")
         R(f"\n    Breakdown by prefix type:")
         R(f"    {'Prefix type':<16} {'TP':>6} {'FP':>6} {'FN':>6} {'Prec':>8} {'Rec':>8} {'F1':>8}")
         for ptype in PREFIX_TYPES:

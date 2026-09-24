@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import os
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -245,6 +246,39 @@ def load_task2_instances_llm(
     return instances
 
 
+def _instance_key(inst: Task2Instance) -> tuple:
+    return (inst.review_id, inst.topic, inst.selected_content, inst.sentiment, inst.source, inst.run)
+
+
+def _result_key(r: dict[str, Any]) -> tuple:
+    return (
+        r.get("review_id"), r.get("topic"), r.get("selected_content"),
+        r.get("sentiment"), r.get("source"), r.get("run"),
+    )
+
+
+def _load_checkpoint(out_path: Path) -> dict[tuple, dict[str, Any]]:
+    """Load already-completed rows from a previous (possibly SLURM-killed) run.
+
+    Reads whatever was flushed to disk so far. A truncated last line (job killed
+    mid-write) is skipped rather than crashing the resume.
+    """
+    existing: dict[tuple, dict[str, Any]] = {}
+    if not out_path.exists():
+        return existing
+    with out_path.open("r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                r = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            existing[_result_key(r)] = r
+    return existing
+
+
 def run_task2(
     *,
     repo_root: Path,
@@ -265,6 +299,24 @@ def run_task2(
 
     model_name = model_cfg.task1_model.replace(":", "_").replace("/", "_")
     out_path = out_dir / f"task2_{model_name}_{label}_{source}_n{len(instances)}.jsonl"
+    csv_path = out_path.with_suffix(".csv")
+
+    # --- Checkpoint / resume -------------------------------------------
+    # out_path also serves as the checkpoint file: every finished row is
+    # flushed to it immediately, so a SLURM job that gets killed mid-run can
+    # simply be resubmitted with the same args and pick up where it left off.
+    existing_results = _load_checkpoint(out_path)
+    pending = [inst for inst in instances if _instance_key(inst) not in existing_results]
+
+    if not pending:
+        print(f"[checkpoint] {out_path.name} already complete ({len(existing_results)}/{len(instances)}) — skipping generation")
+        ordered_results = [existing_results[_instance_key(inst)] for inst in instances]
+        _write_task2_csv(csv_path, ordered_results)
+        print(f"Wrote CSV:   {csv_path}")
+        return out_path
+
+    if existing_results:
+        print(f"[checkpoint] resuming {out_path.name}: {len(instances) - len(pending)}/{len(instances)} already done, {len(pending)} remaining")
 
     gen_template = load_prompt(repo_root, prompt_path)
 
@@ -329,19 +381,24 @@ def run_task2(
 
     from concurrent.futures import ThreadPoolExecutor, as_completed
 
-    results: list[dict[str, Any]] = [None] * len(instances)
-    with ThreadPoolExecutor(max_workers=model_cfg.num_workers) as ex:
-        fut_to_idx = {ex.submit(_process_one, inst): i for i, inst in enumerate(instances)}
-        for fut in tqdm(as_completed(fut_to_idx), total=len(instances), desc=f"Task2[{source}]"):
-            i = fut_to_idx[fut]
-            results[i] = fut.result()
-
-    with out_path.open("w", encoding="utf-8") as f:
-        for r in results:
+    # Append mode when resuming an existing (partial) checkpoint file, write
+    # mode when starting fresh. Each row is written and fsync'd as soon as it
+    # finishes — not buffered until the whole batch is done — so progress
+    # survives a SLURM time-limit kill.
+    file_mode = "a" if out_path.exists() else "w"
+    with out_path.open(file_mode, encoding="utf-8") as f, \
+            ThreadPoolExecutor(max_workers=model_cfg.num_workers) as ex:
+        fut_to_inst = {ex.submit(_process_one, inst): inst for inst in pending}
+        for fut in tqdm(as_completed(fut_to_inst), total=len(pending), desc=f"Task2[{source}]"):
+            inst = fut_to_inst[fut]
+            r = fut.result()
+            existing_results[_instance_key(inst)] = r
             f.write(json.dumps(r, ensure_ascii=False) + "\n")
+            f.flush()
+            os.fsync(f.fileno())
 
-    csv_path = out_path.with_suffix(".csv")
-    _write_task2_csv(csv_path, results)
+    ordered_results = [existing_results[_instance_key(inst)] for inst in instances]
+    _write_task2_csv(csv_path, ordered_results)
 
     print(f"Wrote JSONL: {out_path}")
     print(f"Wrote CSV:   {csv_path}")

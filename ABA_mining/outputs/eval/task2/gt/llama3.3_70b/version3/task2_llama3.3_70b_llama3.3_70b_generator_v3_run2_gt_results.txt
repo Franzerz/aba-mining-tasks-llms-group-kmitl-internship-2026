@@ -1,0 +1,75 @@
+========================================================================
+EVALUATION RESULTS (v2) - task2_llama3.3_70b_llama3.3_70b_generator_v3_run2_gt_n2078.csv
+========================================================================
+
+------------------------------------------------------------------------
+ROW-LEVEL DATA INTEGRITY (errors are reported, never filtered out)
+------------------------------------------------------------------------
+  Total CSV rows        : 7280
+  Error rows (Valid=False / Errors set) : 12
+  Error rate             : 12/7280 = 0.0016
+  Remaining (clean) rows: 7268/7280 = 0.9984
+  Error message breakdown:
+        2  json_parse_error: Extra data: line 3 column 1 (char 181)
+        2  json_parse_error: Extra data: line 3 column 1 (char 38)
+        1  json_parse_error: Extra data: line 3 column 1 (char 163)
+        1  json_parse_error: Extra data: line 3 column 1 (char 40)
+        1  json_parse_error: Extra data: line 3 column 1 (char 36)
+        1  json_parse_error: Extra data: line 3 column 1 (char 208)
+        1  json_parse_error: Expecting ',' delimiter: line 1 column 62 (char 61)
+        1  json_parse_error: Expecting ',' delimiter: line 1 column 65 (char 64)
+        1  json_parse_error: Expecting ',' delimiter: line 1 column 71 (char 70)
+        1  json_parse_error: Expecting ',' delimiter: line 1 column 82 (char 81)
+
+------------------------------------------------------------------------
+HEAD: TRIPLE-GATE MATCHING (prerequisite, not similarity-scored)
+------------------------------------------------------------------------
+  Instances (Review ID x Topic x Sentiment x Selected Content groups): 2078
+  Gate 1 (Review ID match)             : 2078/2078 = 1.0000
+  Gate 2 (+ Head/claim+sentiment match) : 2019/2078 = 0.9716
+  Gate 3 (+ same-content match)         : 2019/2078 = 0.9716
+  => Triple-Gate pass rate (accuracy)   : 2019/2078 = 0.9716
+  Gate-3 match kind breakdown : {'exact': 2019}
+
+------------------------------------------------------------------------
+BODY (LITERAL) TOKEN MATCHING
+------------------------------------------------------------------------
+  Prefix-Type Restriction: raw <-> raw, no_evident_not_ <-> no_evident_not_, have_evident_ <-> have_evident_ only.
+  TP = greedy 1:1 matched pairs (sim >= threshold, same prefix bucket).
+  FP = Pb - TP (unmatched predicted literals).  FN = Rb - TP (unmatched GT literals).
+  TN = not applicable / not computed for this task.
+  Instances passing Triple-Gate (evaluable) : 2019/2078 (not aligned / excluded from body scoring: 59)
+    of which Valid (no parse error) : 2007
+    of which Error (parse error, 0 predicted literals) : 12
+
+  --- INCLUDING error instances (Gate-3-aligned, all Valid states) (n=2019 aligned instances) ---
+    Micro TP=6415 FP=643 FN=1807
+    Micro Precision : 0.9089  (6415/7058)
+    Micro Recall    : 0.7802  (6415/8222)
+    Micro F1        : 0.8397
+    Macro Precision (per-topic) : 0.9080  (mean over topics, n=6)
+    Macro Recall    (per-topic) : 0.7818  (mean over topics, n=6)
+    Macro F1        (per-topic) : 0.8386  (mean over topics, n=6)
+
+    Breakdown by prefix type:
+    Prefix type          TP     FP     FN     Prec      Rec       F1
+    raw                3121    408    990   0.8844   0.7592   0.8170
+    no_evident_not     2830    150    637   0.9497   0.8163   0.8779
+    have_evident        464     85    180   0.8452   0.7205   0.7779
+
+  --- EXCLUDING error instances (Gate-3-aligned, Valid=True only) (n=2007 aligned instances) ---
+    Micro TP=6415 FP=643 FN=1755
+    Micro Precision : 0.9089  (6415/7058)
+    Micro Recall    : 0.7852  (6415/8170)
+    Micro F1        : 0.8425
+    Macro Precision (per-topic) : 0.9080  (mean over topics, n=6)
+    Macro Recall    (per-topic) : 0.7911  (mean over topics, n=6)
+    Macro F1        (per-topic) : 0.8437  (mean over topics, n=6)
+
+    Breakdown by prefix type:
+    Prefix type          TP     FP     FN     Prec      Rec       F1
+    raw                3121    408    964   0.8844   0.7640   0.8198
+    no_evident_not     2830    150    622   0.9497   0.8198   0.8800
+    have_evident        464     85    169   0.8452   0.7330   0.7851
+
+Runtime: 11.62s
