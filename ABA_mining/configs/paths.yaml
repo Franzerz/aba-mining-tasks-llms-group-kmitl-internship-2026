@@ -8,6 +8,10 @@ input:
   # Gold/evaluation dataset (human-annotated ground truth for evaluation)
   gold_csv: ./Dataset/Original ABA Dataset for Version 2 [Oct 23, 2025], Senior Project, MUICT - Sheet2_.csv
 
+  # Task 3 gold data: one CSV per aspect (check-in, check-out, price, staff),
+  # each a "Contrary(P)Body(N)" sheet exported from the Silver verification workbooks.
+  task3_dir: ./Dataset/Task3
+
 output:
   task1_dir: outputs/task1
   eval_dir: outputs/eval

@@ -15,6 +15,44 @@ from src import run_task1
 from src.prompts import build_modular_prompt
 
 
+class _FastOllamaClient:
+    """Ollama client that disables 'thinking' output.
+
+    Reasoning-capable models (Qwen3.x, Gemma thinking variants, DeepSeek-R1,
+    gpt-oss, ...) silently spend hundreds of extra tokens on a hidden
+    chain-of-thought before the JSON answer even starts. Passing think=False
+    skips that.
+    """
+
+    def __init__(self, options: dict) -> None:
+        import ollama
+
+        self._ollama = ollama
+        self._options = dict(options or {})
+        self._think_supported = True
+
+    def complete(self, *, model: str, prompt: str, temperature: float, top_p: float, max_output_tokens: int):
+        from src.llm import LLMResponse
+
+        options = dict(self._options)
+        options.setdefault("temperature", temperature)
+        options.setdefault("top_p", top_p)
+        options.setdefault("num_predict", max_output_tokens)
+
+        if self._think_supported:
+            try:
+                resp = self._ollama.generate(
+                    model=model, prompt=prompt, stream=False, think=False, options=options,
+                )
+                return LLMResponse(text=(resp.get("response") or "").strip())
+            except TypeError:
+                # Installed ollama-python client predates the `think` kwarg — disable for the rest of the run.
+                self._think_supported = False
+
+        resp = self._ollama.generate(model=model, prompt=prompt, stream=False, options=options)
+        return LLMResponse(text=(resp.get("response") or "").strip())
+
+
 def _load_experiments(repo_root: Path) -> dict:
     cfg_path = repo_root / "configs" / "experiments.yaml"
     with cfg_path.open(encoding="utf-8") as f:
@@ -70,7 +108,10 @@ Examples:
     if args.model:
         model_cfg = replace(model_cfg, task1_model=args.model, validator_model=args.model)
 
-    client = build_client(model_cfg.provider, ollama_options=model_cfg.ollama_options)
+    if model_cfg.provider.lower().strip() == "ollama":
+        client = _FastOllamaClient(options=model_cfg.ollama_options)
+    else:
+        client = build_client(model_cfg.provider, ollama_options=model_cfg.ollama_options)
 
     # ── Load experiment ───────────────────────────────────────────────────────
     experiments = _load_experiments(repo_root)

@@ -170,7 +170,11 @@ def local_validate_task1(parsed: Any, *, topics: list[str], review_text: str, ou
 
 def load_task1_instances_from_input(paths: PathsConfig, limit_reviews: int | None = None) -> list[Task1Instance]:
     """Load reviews from the input CSV. limit_reviews=None loads the whole dataset."""
-    df = pd.read_csv(paths.input_csv, dtype=str, keep_default_na=False)
+    try:
+        df = pd.read_csv(paths.input_csv, dtype=str, keep_default_na=False, encoding="utf-8-sig")
+    except UnicodeDecodeError:
+        # Excel's plain "CSV" export writes cp1252 instead of UTF-8
+        df = pd.read_csv(paths.input_csv, dtype=str, keep_default_na=False, encoding="cp1252")
     id_col = "Column1" if "Column1" in df.columns else "ID"
     if id_col not in df.columns:
         raise RuntimeError(f"Expected 'Column1' or 'ID' column in input_csv, found: {list(df.columns)}")
