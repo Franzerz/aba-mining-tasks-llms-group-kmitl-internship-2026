@@ -161,11 +161,11 @@ def _eval_run(run_id, df: pd.DataFrame, workings: list, results: list) -> None:
         df["Topic"].notna() &
         (df["Topic"].str.strip() != "") &
         (~df["Topic"].str.strip().str.lower().isin(_bad)) &
-        df["Text Span"].notna() &
-        (df["Text Span"].str.strip() != "")
+        df["Selected Content"].notna() &
+        (df["Selected Content"].str.strip() != "")
     ].copy()
     df["Topic"] = df["Topic"].str.strip()
-    df["norm"]  = df["Text Span"].apply(normalize)
+    df["norm"]  = df["Selected Content"].apply(normalize)
     df = df[df["norm"] != ""].reset_index(drop=True)
 
     if df.empty:
@@ -180,7 +180,7 @@ def _eval_run(run_id, df: pd.DataFrame, workings: list, results: list) -> None:
         rid   = row["Review ID"]
         topic = row["Topic"]
         lnorm = row["norm"]
-        lcont = row["Text Span"]
+        lcont = row["Selected Content"]
 
         gt_entries = gt_index.get((rid, topic), [])
         gt_norms   = [e[0] for e in gt_entries]
@@ -241,12 +241,14 @@ def evaluate(llm_csv: Path) -> None:
     raw = pd.read_csv(llm_csv)
     if "Review ID" not in raw.columns and "ID" in raw.columns:
         raw = raw.rename(columns={"ID": "Review ID"})
+    # Task 1 outputs written before the header rename still say "Text Span"
+    raw = raw.rename(columns={"Text Span": "Selected Content"})
 
     if "Errors" in raw.columns:
         raw = raw[raw["Errors"].isna() | (raw["Errors"].astype(str).str.strip().isin({"", "nan"}))].copy()
 
-    if "Topic" not in raw.columns or "Text Span" not in raw.columns:
-        print(f"  [SKIP 1.2] missing 'Topic' or 'Text Span' – {llm_csv.name}")
+    if "Topic" not in raw.columns or "Selected Content" not in raw.columns:
+        print(f"  [SKIP 1.2] missing 'Topic' or 'Selected Content' – {llm_csv.name}")
         return
 
     workings: list = []

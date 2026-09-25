@@ -456,7 +456,7 @@ def _write_readable_csv(csv_path: Path, results: list[dict[str, Any]], instances
                 else:
                     writer.writerow([review_id, run_idx, valid, "(parse failed)", errors])
         elif output_schema == "span_only":
-            writer.writerow(["Review ID", "Run", "Valid", "Topic", "Text Span", "Errors"])
+            writer.writerow(["Review ID", "Run", "Valid", "Topic", "Selected Content", "Errors"])
             for r in results:
                 review_id = r["review_id"]
                 run_idx = r.get("run_index", 1)
@@ -529,7 +529,7 @@ def _write_readable_csv(csv_path: Path, results: list[dict[str, Any]], instances
                 else:
                     writer.writerow([review_id, run_idx, valid, "(parse failed)", "", errors])
         else:  # full
-            writer.writerow(["Review ID", "Run", "Valid", "Topic", "Text Span", "Sentiment", "Errors"])
+            writer.writerow(["Review ID", "Run", "Valid", "Topic", "Selected Content", "Sentiment", "Errors"])
             for r in results:
                 review_id = r["review_id"]
                 run_idx = r.get("run_index", 1)

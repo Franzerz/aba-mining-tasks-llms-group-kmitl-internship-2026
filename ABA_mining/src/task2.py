@@ -77,21 +77,21 @@ def load_task2_instances_gt(
     - True duplicates (identical ID+Topic+Content+Sentiment) are dropped
     """
     gt = pd.read_csv(gold_csv)
-    gt = gt.rename(columns={"ID": "Review ID"})
+    gt = gt.rename(columns={"ID": "Review ID", "Pos/Neg": "Sentiment"})
     gt = gt[
         gt["Topic"].notna() &
         gt["Selected Content"].notna() &
-        gt["Pos/Neg"].notna()
+        gt["Sentiment"].notna()
     ].copy()
     gt["Topic"] = gt["Topic"].str.strip()
-    gt["Pos/Neg"] = gt["Pos/Neg"].str.strip()
+    gt["Sentiment"] = gt["Sentiment"].str.strip()
     gt = gt[
         (gt["Selected Content"].str.strip() != "") &
         (gt["Topic"] != "Off")                        # remove Off topic
     ].reset_index(drop=True)
 
     # Drop true duplicates (same ID + Topic + Content + Sentiment)
-    gt = gt.drop_duplicates(subset=["Review ID", "Topic", "Selected Content", "Pos/Neg"])
+    gt = gt.drop_duplicates(subset=["Review ID", "Topic", "Selected Content", "Sentiment"])
 
     instances: list[Task2Instance] = []
     skipped = 0
@@ -105,7 +105,7 @@ def load_task2_instances_gt(
             review_id=str(row["Review ID"]),
             topic=row["Topic"],
             selected_content=str(row["Selected Content"]).strip(),
-            sentiment=row["Pos/Neg"],
+            sentiment=row["Sentiment"],
             source="gt",
         ))
         if limit is not None and len(instances) >= limit:
@@ -120,7 +120,7 @@ def load_task2_instances_from_subtasks(
     limit: int | None = None,
     offset: int = 0,
 ) -> list[Task2Instance]:
-    """Load instances by joining subtask 1.2 (Text Span) + subtask 1.3 (Sentiment)
+    """Load instances by joining subtask 1.2 (Selected Content) + subtask 1.3 (Sentiment)
     on (Review ID, Run, Topic). Preferred over combined output when individual
     subtask runs produce better Task 1 evaluation results."""
     _bad = {"parse failed", "topics not found", "topic not found", "(parse failed)"}
@@ -128,18 +128,20 @@ def load_task2_instances_from_subtasks(
     df2 = pd.read_csv(csv_1_2)
     if "Review ID" not in df2.columns and "ID" in df2.columns:
         df2 = df2.rename(columns={"ID": "Review ID"})
+    # Task 1 outputs written before the header rename still say "Text Span"
+    df2 = df2.rename(columns={"Text Span": "Selected Content"})
     df2 = df2[
         df2["Topic"].notna() &
         (df2["Topic"].str.strip() != "") &
         (~df2["Topic"].str.strip().str.lower().isin(_bad)) &
-        df2["Text Span"].notna() &
-        (df2["Text Span"].str.strip() != "")
+        df2["Selected Content"].notna() &
+        (df2["Selected Content"].str.strip() != "")
     ].copy()
     if "Errors" in df2.columns:
         df2 = df2[df2["Errors"].isna() | df2["Errors"].astype(str).str.strip().isin({"", "nan"})].copy()
     df2["Topic"] = df2["Topic"].str.strip()
-    df2 = df2[["Review ID", "Run", "Topic", "Text Span"]].drop_duplicates(
-        subset=["Review ID", "Run", "Topic", "Text Span"]
+    df2 = df2[["Review ID", "Run", "Topic", "Selected Content"]].drop_duplicates(
+        subset=["Review ID", "Run", "Topic", "Selected Content"]
     )
 
     df3 = pd.read_csv(csv_1_3)
@@ -161,7 +163,7 @@ def load_task2_instances_from_subtasks(
     )
 
     raw = df2.merge(df3, on=["Review ID", "Run", "Topic"], how="inner")
-    raw = raw.drop_duplicates(subset=["Review ID", "Run", "Topic", "Text Span"]).reset_index(drop=True)
+    raw = raw.drop_duplicates(subset=["Review ID", "Run", "Topic", "Selected Content"]).reset_index(drop=True)
 
     instances: list[Task2Instance] = []
     skipped = 0
@@ -174,7 +176,7 @@ def load_task2_instances_from_subtasks(
         instances.append(Task2Instance(
             review_id=rid,
             topic=row["Topic"],
-            selected_content=str(row["Text Span"]).strip(),
+            selected_content=str(row["Selected Content"]).strip(),
             sentiment=row["Sentiment"],
             source="llm",
             run=run,
@@ -189,14 +191,16 @@ def load_task2_instances_llm(
     limit: int | None = None,
     offset: int = 0,
 ) -> list[Task2Instance]:
-    """Load instances from LLM combined output (Text Span + Sentiment columns)."""
+    """Load instances from LLM combined output (Selected Content + Sentiment columns)."""
     raw = pd.read_csv(llm_csv)
     if "Review ID" not in raw.columns and "ID" in raw.columns:
         raw = raw.rename(columns={"ID": "Review ID"})
+    # Task 1 outputs written before the header rename still say "Text Span"
+    raw = raw.rename(columns={"Text Span": "Selected Content"})
 
-    if "Text Span" not in raw.columns or "Sentiment" not in raw.columns:
+    if "Selected Content" not in raw.columns or "Sentiment" not in raw.columns:
         raise ValueError(
-            f"LLM CSV must have 'Text Span' and 'Sentiment' columns.\n"
+            f"LLM CSV must have 'Selected Content' and 'Sentiment' columns.\n"
             f"Found: {list(raw.columns)}\n"
             f"Use load_task2_instances_from_subtasks instead."
         )
@@ -206,8 +210,8 @@ def load_task2_instances_llm(
         raw["Topic"].notna() &
         (raw["Topic"].str.strip() != "") &
         (~raw["Topic"].str.strip().str.lower().isin(_bad)) &
-        raw["Text Span"].notna() &
-        (raw["Text Span"].str.strip() != "") &
+        raw["Selected Content"].notna() &
+        (raw["Selected Content"].str.strip() != "") &
         raw["Sentiment"].notna() &
         (raw["Sentiment"].str.strip() != "")
     ].copy()
@@ -216,7 +220,7 @@ def load_task2_instances_llm(
 
     raw["Topic"] = raw["Topic"].str.strip()
     raw["Sentiment"] = raw["Sentiment"].str.strip()
-    raw = raw.drop_duplicates(subset=["Review ID", "Run", "Topic", "Text Span"]).reset_index(drop=True)
+    raw = raw.drop_duplicates(subset=["Review ID", "Run", "Topic", "Selected Content"]).reset_index(drop=True)
 
     instances: list[Task2Instance] = []
     skipped = 0
@@ -228,7 +232,7 @@ def load_task2_instances_llm(
 
         rid = str(row["Review ID"]).replace(".0", "") if str(row["Review ID"]).endswith(".0") else str(row["Review ID"])
         topic = row["Topic"]
-        content = str(row["Text Span"]).strip()
+        content = str(row["Selected Content"]).strip()
         sentiment = row["Sentiment"]
         run = int(row["Run"]) if "Run" in raw.columns and pd.notna(row["Run"]) else None
 

@@ -88,6 +88,8 @@ def collect_scores(llm_csv: Path) -> dict[str, list[float]]:
     raw = pd.read_csv(llm_csv)
     if "Review ID" not in raw.columns and "ID" in raw.columns:
         raw = raw.rename(columns={"ID": "Review ID"})
+    # Task 1 outputs written before the header rename still say "Text Span"
+    raw = raw.rename(columns={"Text Span": "Selected Content"})
     if "Errors" in raw.columns:
         raw = raw[raw["Errors"].isna() | (raw["Errors"].astype(str).str.strip().isin({"", "nan"}))].copy()
 
@@ -96,11 +98,11 @@ def collect_scores(llm_csv: Path) -> dict[str, list[float]]:
         raw["Topic"].notna() &
         (raw["Topic"].str.strip() != "") &
         (~raw["Topic"].str.strip().str.lower().isin(_bad)) &
-        raw["Text Span"].notna() &
-        (raw["Text Span"].str.strip() != "")
+        raw["Selected Content"].notna() &
+        (raw["Selected Content"].str.strip() != "")
     ].copy()
     raw["Topic"] = raw["Topic"].str.strip()
-    raw["norm"]  = raw["Text Span"].apply(normalize)
+    raw["norm"]  = raw["Selected Content"].apply(normalize)
     raw = raw[raw["norm"] != ""].reset_index(drop=True)
 
     n = len(raw)
