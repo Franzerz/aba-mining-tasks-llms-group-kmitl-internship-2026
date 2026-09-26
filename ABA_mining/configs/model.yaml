@@ -8,7 +8,7 @@ provider: ollama
 generation:
   temperature: 0.0
   top_p: 0.05
-  max_output_tokens: 1500   # increased from 800; 11-topic JSON can exceed 800 tokens
+  max_output_tokens: 4096   # increased from 800; 11-topic JSON can exceed 800 tokens
 
 models:
   task1: llama4:scout
@@ -31,6 +31,6 @@ ollama:
   # num_ctx: 4096 is required — combined prompt template alone is ~2000 tokens;
   # add review text and you exceed the old 2048 limit, causing truncation.
   options:
-    num_ctx: 4096
+    num_ctx: 16384
     num_batch: 512
     num_thread: 16
