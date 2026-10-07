@@ -1,0 +1,13 @@
+======================================================================
+ALL
+======================================================================
+      Model        Shot    Topic           Category   Test Positive_Label  N_valid   TP   TN   FP  FN  Precision   Recall       F1  Accuracy
+qwen3.8_27b contrary_v6 facility Contrary(P)Body(N) Test 1            Yes    11686 1057 9189 1086 354   0.493234 0.749114 0.594823  0.876776
+qwen3.8_27b contrary_v6 facility Contrary(P)Body(N) Test 2            Yes    11686 1057 9189 1086 354   0.493234 0.749114 0.594823  0.876776
+qwen3.8_27b contrary_v6 facility Contrary(P)Body(N) Test 3            Yes    11686 1057 9189 1086 354   0.493234 0.749114 0.594823  0.876776
+
+======================================================================
+MICRO_BY_CATEGORY
+======================================================================
+      Model        Shot    Topic           Category Positive_Label  Precision   Recall       F1  Accuracy  N_valid   TP    TN   FP   FN
+qwen3.8_27b contrary_v6 facility Contrary(P)Body(N)            Yes   0.493234 0.749114 0.594823  0.876776    35058 3171 27567 3258 1062

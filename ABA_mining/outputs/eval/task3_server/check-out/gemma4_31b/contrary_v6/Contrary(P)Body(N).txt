@@ -1,0 +1,46 @@
+======================================================================
+Test 1
+======================================================================
+ID Vote LLM_Output Verify
+ 1  Yes        Yes     TP
+ 2  Yes        Yes     TP
+ 3   No         No     TN
+ 4   No         No     TN
+ 5   No         No     TN
+ 6  Yes         No     FN
+ 7  Yes        Yes     TP
+ 8  Yes        Yes     TP
+
+======================================================================
+Test 2
+======================================================================
+ID Vote LLM_Output Verify
+ 1  Yes        Yes     TP
+ 2  Yes        Yes     TP
+ 3   No         No     TN
+ 4   No         No     TN
+ 5   No         No     TN
+ 6  Yes         No     FN
+ 7  Yes        Yes     TP
+ 8  Yes        Yes     TP
+
+======================================================================
+Test 3
+======================================================================
+ID Vote LLM_Output Verify
+ 1  Yes        Yes     TP
+ 2  Yes        Yes     TP
+ 3   No         No     TN
+ 4   No         No     TN
+ 5   No         No     TN
+ 6  Yes         No     FN
+ 7  Yes        Yes     TP
+ 8  Yes        Yes     TP
+
+======================================================================
+SUMMARY
+======================================================================
+     Model        Shot     Topic           Category   Test Positive_Label  N_gold  N_pred  N_unparsed  N_valid  TP  TN  FP  FN  Precision  Recall       F1  Accuracy
+gemma4_31b contrary_v6 check-out Contrary(P)Body(N) Test 1            Yes       8       8           0        8   4   3   0   1        1.0     0.8 0.888889     0.875
+gemma4_31b contrary_v6 check-out Contrary(P)Body(N) Test 2            Yes       8       8           0        8   4   3   0   1        1.0     0.8 0.888889     0.875
+gemma4_31b contrary_v6 check-out Contrary(P)Body(N) Test 3            Yes       8       8           0        8   4   3   0   1        1.0     0.8 0.888889     0.875

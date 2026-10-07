@@ -12,13 +12,18 @@ WORKSPACE_ROOT = APP_ROOT.parent.parent  # d:\user\ReaLearn
 ABA_MINING_ROOT = WORKSPACE_ROOT / "internship" / "ABA_mining"
 TASK3_GOLD_DIR = ABA_MINING_ROOT / "Dataset" / "Task3"
 
-# Task 1 gold: one row per (review, topic, sentiment) with the mined span, head claim, and up
-# to 15 Body / Cont. Body literal pairs. Drives the Home dashboard and the Review page.
+# Task 1/2 gold: one row per (review, topic, sentiment) with the review ID, the mined span, head
+# claim, and up to 15 Body / Cont. Body literal pairs. Drives the Home dashboard, the Review page
+# and the literal sets of topics nobody voted on. Same file as `gold_csv` in
+# ABA_mining/configs/paths.yaml, so the app and the pipeline read one dataset.
 TASK1_GOLD_CSV = (
     ABA_MINING_ROOT
     / "Dataset"
-    / "[Create Gold] Remove duplicate + add more version - Create Gold from Nonny Version.csv"
+    / "Original ABA Dataset for Version 2 [Oct 23, 2025], Senior Project, MUICT - Sheet2_.csv"
 )
+
+# Derived files the app can rebuild at any time (safe to delete).
+CACHE_DIR = APP_ROOT / ".cache"
 
 FRONTEND_DIR = APP_ROOT / "frontend"
 DIST_DIR = FRONTEND_DIR / "dist"  # Vite build output, served by main.py
@@ -35,13 +40,11 @@ ASPECT_GOLD_FILES: dict[str, tuple[str, str | None]] = {
     "facility": ("5. Verify - Task 3 - Facility (Gold).xlsx", "Contrary(P)Body(N)"),
 }
 
-# Review-page topic label (as it appears in the Task 1 gold "Topic" column) -> graph aspect key.
-# Only these five have Task 3 gold data and can open a Graph Studio; the other topics in the
-# dataset are shown on the Review page but marked as having no framework yet.
-TOPIC_TO_ASPECT = {
-    "Check-in": "check-in",
-    "Check-out": "check-out",
-    "Price": "price",
-    "Staff": "staff",
-    "Facility": "facility",
-}
+# Contraries nobody has voted on come from one local model run over the full pair sets
+# (ABA_mining/build_task3_llm_pairs.py + run_task3.py --pairs-dir ... --output-root ...).
+# The model / prompt pair is the best llama3.2 setting from the Task 3 evaluation — see
+# ABA_mining/outputs/eval/task3_server/TASK3_MODEL_COMPARISON.md.
+LLM_PAIRS_DIR = TASK3_GOLD_DIR / "llm_pairs"
+LLM_PREDICTIONS_DIR = ABA_MINING_ROOT / "outputs" / "task3_llm_pairs"
+LLM_CONTRARY_MODEL = "llama3.2"
+LLM_CONTRARY_PROMPT = "contrary_v1"

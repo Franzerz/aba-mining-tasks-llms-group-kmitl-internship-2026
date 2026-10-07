@@ -1,0 +1,13 @@
+======================================================================
+ALL
+======================================================================
+   Model        Shot Topic           Category   Test Positive_Label  N_valid  TP  TN  FP  FN  Precision   Recall       F1  Accuracy
+llama3.2 contrary_v2 staff Contrary(P)Body(N) Test 1            Yes      500 147  35 312   6   0.320261 0.960784 0.480392     0.364
+llama3.2 contrary_v2 staff Contrary(P)Body(N) Test 2            Yes      500 147  35 312   6   0.320261 0.960784 0.480392     0.364
+llama3.2 contrary_v2 staff Contrary(P)Body(N) Test 3            Yes      500 147  35 312   6   0.320261 0.960784 0.480392     0.364
+
+======================================================================
+MICRO_BY_CATEGORY
+======================================================================
+   Model        Shot Topic           Category Positive_Label  Precision   Recall       F1  Accuracy  N_valid  TP  TN  FP  FN
+llama3.2 contrary_v2 staff Contrary(P)Body(N)            Yes   0.320261 0.960784 0.480392     0.364     1500 441 105 936  18

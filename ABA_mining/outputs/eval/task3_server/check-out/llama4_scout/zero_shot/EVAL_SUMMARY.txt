@@ -1,0 +1,11 @@
+======================================================================
+ALL
+======================================================================
+       Model      Shot     Topic           Category   Test Positive_Label  N_valid  TP  TN  FP  FN  Precision  Recall       F1  Accuracy
+llama4_scout zero_shot check-out Contrary(P)Body(N) Test 1            Yes        8   2   3   0   3        1.0     0.4 0.571429     0.625
+
+======================================================================
+MICRO_BY_CATEGORY
+======================================================================
+       Model      Shot     Topic           Category Positive_Label  Precision  Recall       F1  Accuracy  N_valid  TP  TN  FP  FN
+llama4_scout zero_shot check-out Contrary(P)Body(N)            Yes        1.0     0.4 0.571429     0.625        8   2   3   0   3

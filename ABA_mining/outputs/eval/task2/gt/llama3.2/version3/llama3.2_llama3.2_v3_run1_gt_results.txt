@@ -90,4 +90,4 @@ MICRO PRECISION / RECALL (per-literal sentence-embedding matching, threshold 0.8
     Staff              0.7298   0.6236   0.6725     1299   1764
     Taxi-issue         0.0417   0.0714   0.0526       24     14
 
-Runtime: 13.46s
+Runtime: 15.04s

@@ -1,0 +1,421 @@
+Timestamp,Run,ID,PhraseA,PhraseB,Prompt,RawOutput
+2026-09-28 12:39:08,1,7,no_evident_not_automated_check_out_machine,not_suitable_touch_panel,"Follow this 4-step recipe to decide if Phrase B is contrary to Phrase A.
+
+RECIPE:
+Step 1 (Strip)    - Remove the ""no_evident_not_"" / ""have_evident_"" prefix from A to get its base claim.
+Step 2 (Polarity) - Work out what kind of real-world fact would falsify that base claim.
+Step 3 (Match)    - Check whether B is exactly that kind of falsifying fact, about the same specific
+                    situation (not just the same general topic).
+Step 4 (Decide)   - If B matches -> Yes. If B is unrelated, a different specific complaint, or does
+                    not actually falsify the claim -> No.
+
+WORKED EXAMPLE 1 (contrary):
+Phrase A is no_evident_not_easy_check-in. Phrase B is customer_wait_10_minute_for_greet.
+Step 1: base claim = ""check-in is easy"".
+Step 2: falsified by any concrete delay/friction during check-in itself.
+Step 3: waiting 10 minutes to be greeted during check-in IS that kind of delay.
+Step 4: match -> Answer: Yes
+
+WORKED EXAMPLE 2 (not contrary):
+Phrase A is no_evident_not_easy_check-in. Phrase B is no_one_give_key_on_late_check-in.
+Step 1: base claim = ""check-in is easy"".
+Step 2: falsified by friction during check-in itself.
+Step 3: B is about late check-in key handover — a separate specific issue, not evidence check-in was hard.
+Step 4: no match -> Answer: No
+
+Now apply the recipe to this pair. Show Steps 1-4 briefly (one short line each), then end with the
+final line ""Answer: Yes"" or ""Answer: No"".
+
+Phrase A is no_evident_not_automated_check_out_machine. Phrase B is not_suitable_touch_panel.
+Step 1:
+","Step 1: Base claim = ""there is an automated check-out machine.""
+Step 2: Falsified by evidence that the check-out machine is *not* automated (e.g., requires staff, no self-service option).
+Step 3: B (""not suitable touch panel"") complains about the usability/quality of a component on the machine, not about the machine lacking automation — the machine can still be automated with a poorly designed panel.
+Step 4: B is a different specific complaint (component quality), not a denial of automation → no match.
+
+Answer: No"
+2026-09-28 12:39:16,1,5,no_evident_not_check_out_time_11am,no_explanation,"Follow this 4-step recipe to decide if Phrase B is contrary to Phrase A.
+
+RECIPE:
+Step 1 (Strip)    - Remove the ""no_evident_not_"" / ""have_evident_"" prefix from A to get its base claim.
+Step 2 (Polarity) - Work out what kind of real-world fact would falsify that base claim.
+Step 3 (Match)    - Check whether B is exactly that kind of falsifying fact, about the same specific
+                    situation (not just the same general topic).
+Step 4 (Decide)   - If B matches -> Yes. If B is unrelated, a different specific complaint, or does
+                    not actually falsify the claim -> No.
+
+WORKED EXAMPLE 1 (contrary):
+Phrase A is no_evident_not_easy_check-in. Phrase B is customer_wait_10_minute_for_greet.
+Step 1: base claim = ""check-in is easy"".
+Step 2: falsified by any concrete delay/friction during check-in itself.
+Step 3: waiting 10 minutes to be greeted during check-in IS that kind of delay.
+Step 4: match -> Answer: Yes
+
+WORKED EXAMPLE 2 (not contrary):
+Phrase A is no_evident_not_easy_check-in. Phrase B is no_one_give_key_on_late_check-in.
+Step 1: base claim = ""check-in is easy"".
+Step 2: falsified by friction during check-in itself.
+Step 3: B is about late check-in key handover — a separate specific issue, not evidence check-in was hard.
+Step 4: no match -> Answer: No
+
+Now apply the recipe to this pair. Show Steps 1-4 briefly (one short line each), then end with the
+final line ""Answer: Yes"" or ""Answer: No"".
+
+Phrase A is no_evident_not_check_out_time_11am. Phrase B is no_explanation.
+Step 1:
+","Step 1: Base claim = ""check-out time is 11am.""
+Step 2: Falsified by evidence that the actual check-out time is something other than 11am (e.g., 10am, 12pm).
+Step 3: B (""no_explanation"") is a complaint about a lack of communication, not a statement that the check-out time differs from 11am — it doesn't contradict the specific time claim.
+Step 4: No match — B is a different specific issue (missing explanation), not a falsifying fact about the time.
+
+Answer: No"
+2026-09-28 12:39:28,1,1,no_evident_not_late_check_out,not_suitable_touch_panel,"Follow this 4-step recipe to decide if Phrase B is contrary to Phrase A.
+
+RECIPE:
+Step 1 (Strip)    - Remove the ""no_evident_not_"" / ""have_evident_"" prefix from A to get its base claim.
+Step 2 (Polarity) - Work out what kind of real-world fact would falsify that base claim.
+Step 3 (Match)    - Check whether B is exactly that kind of falsifying fact, about the same specific
+                    situation (not just the same general topic).
+Step 4 (Decide)   - If B matches -> Yes. If B is unrelated, a different specific complaint, or does
+                    not actually falsify the claim -> No.
+
+WORKED EXAMPLE 1 (contrary):
+Phrase A is no_evident_not_easy_check-in. Phrase B is customer_wait_10_minute_for_greet.
+Step 1: base claim = ""check-in is easy"".
+Step 2: falsified by any concrete delay/friction during check-in itself.
+Step 3: waiting 10 minutes to be greeted during check-in IS that kind of delay.
+Step 4: match -> Answer: Yes
+
+WORKED EXAMPLE 2 (not contrary):
+Phrase A is no_evident_not_easy_check-in. Phrase B is no_one_give_key_on_late_check-in.
+Step 1: base claim = ""check-in is easy"".
+Step 2: falsified by friction during check-in itself.
+Step 3: B is about late check-in key handover — a separate specific issue, not evidence check-in was hard.
+Step 4: no match -> Answer: No
+
+Now apply the recipe to this pair. Show Steps 1-4 briefly (one short line each), then end with the
+final line ""Answer: Yes"" or ""Answer: No"".
+
+Phrase A is no_evident_not_late_check_out. Phrase B is not_suitable_touch_panel.
+Step 1:
+","Step 1: Base claim = ""check-out is late"" (the check-out process is slow/delayed).
+Step 2: Falsified by a concrete fact showing check-out was quick, fast, or had no delay.
+Step 3: B (""not suitable touch panel"") is about a device/interface usability issue, not about the speed or timing of the check-out process — different specific situation.
+Step 4: No match; B does not falsify the claim about check-out being late.
+
+Answer: No"
+2026-09-28 12:39:37,1,8,no_evident_not_automated_check_out_machine,no_explanation,"Follow this 4-step recipe to decide if Phrase B is contrary to Phrase A.
+
+RECIPE:
+Step 1 (Strip)    - Remove the ""no_evident_not_"" / ""have_evident_"" prefix from A to get its base claim.
+Step 2 (Polarity) - Work out what kind of real-world fact would falsify that base claim.
+Step 3 (Match)    - Check whether B is exactly that kind of falsifying fact, about the same specific
+                    situation (not just the same general topic).
+Step 4 (Decide)   - If B matches -> Yes. If B is unrelated, a different specific complaint, or does
+                    not actually falsify the claim -> No.
+
+WORKED EXAMPLE 1 (contrary):
+Phrase A is no_evident_not_easy_check-in. Phrase B is customer_wait_10_minute_for_greet.
+Step 1: base claim = ""check-in is easy"".
+Step 2: falsified by any concrete delay/friction during check-in itself.
+Step 3: waiting 10 minutes to be greeted during check-in IS that kind of delay.
+Step 4: match -> Answer: Yes
+
+WORKED EXAMPLE 2 (not contrary):
+Phrase A is no_evident_not_easy_check-in. Phrase B is no_one_give_key_on_late_check-in.
+Step 1: base claim = ""check-in is easy"".
+Step 2: falsified by friction during check-in itself.
+Step 3: B is about late check-in key handover — a separate specific issue, not evidence check-in was hard.
+Step 4: no match -> Answer: No
+
+Now apply the recipe to this pair. Show Steps 1-4 briefly (one short line each), then end with the
+final line ""Answer: Yes"" or ""Answer: No"".
+
+Phrase A is no_evident_not_automated_check_out_machine. Phrase B is no_explanation.
+Step 1:
+","Step 1: Base claim = ""there is an automated check-out machine"" (i.e., check-out is automated).
+Step 2: Falsified by a concrete fact showing no automated check-out machine exists / check-out requires manual human interaction.
+Step 3: B (""no_explanation"") is a vague, unspecified complaint; it does not state that an automated check-out machine is absent or that check-out was manual.
+Step 4: B does not specifically falsify the claim about an automated check-out machine → no match.
+
+Answer: No"
+2026-09-28 12:39:44,1,3,no_evident_not_late_check_out,no_guidance,"Follow this 4-step recipe to decide if Phrase B is contrary to Phrase A.
+
+RECIPE:
+Step 1 (Strip)    - Remove the ""no_evident_not_"" / ""have_evident_"" prefix from A to get its base claim.
+Step 2 (Polarity) - Work out what kind of real-world fact would falsify that base claim.
+Step 3 (Match)    - Check whether B is exactly that kind of falsifying fact, about the same specific
+                    situation (not just the same general topic).
+Step 4 (Decide)   - If B matches -> Yes. If B is unrelated, a different specific complaint, or does
+                    not actually falsify the claim -> No.
+
+WORKED EXAMPLE 1 (contrary):
+Phrase A is no_evident_not_easy_check-in. Phrase B is customer_wait_10_minute_for_greet.
+Step 1: base claim = ""check-in is easy"".
+Step 2: falsified by any concrete delay/friction during check-in itself.
+Step 3: waiting 10 minutes to be greeted during check-in IS that kind of delay.
+Step 4: match -> Answer: Yes
+
+WORKED EXAMPLE 2 (not contrary):
+Phrase A is no_evident_not_easy_check-in. Phrase B is no_one_give_key_on_late_check-in.
+Step 1: base claim = ""check-in is easy"".
+Step 2: falsified by friction during check-in itself.
+Step 3: B is about late check-in key handover — a separate specific issue, not evidence check-in was hard.
+Step 4: no match -> Answer: No
+
+Now apply the recipe to this pair. Show Steps 1-4 briefly (one short line each), then end with the
+final line ""Answer: Yes"" or ""Answer: No"".
+
+Phrase A is no_evident_not_late_check_out. Phrase B is no_guidance.
+Step 1:
+","Step 1: Base claim = ""check-out was late.""
+Step 2: Falsified by evidence the check-out was on time / not delayed.
+Step 3: ""no_guidance"" is about lack of direction/information, not about the timing of the check-out itself — a different specific issue.
+Step 4: No match → does not falsify the claim.
+
+Answer: No"
+2026-09-28 12:39:52,1,6,no_evident_not_check_out_time_11am,no_guidance,"Follow this 4-step recipe to decide if Phrase B is contrary to Phrase A.
+
+RECIPE:
+Step 1 (Strip)    - Remove the ""no_evident_not_"" / ""have_evident_"" prefix from A to get its base claim.
+Step 2 (Polarity) - Work out what kind of real-world fact would falsify that base claim.
+Step 3 (Match)    - Check whether B is exactly that kind of falsifying fact, about the same specific
+                    situation (not just the same general topic).
+Step 4 (Decide)   - If B matches -> Yes. If B is unrelated, a different specific complaint, or does
+                    not actually falsify the claim -> No.
+
+WORKED EXAMPLE 1 (contrary):
+Phrase A is no_evident_not_easy_check-in. Phrase B is customer_wait_10_minute_for_greet.
+Step 1: base claim = ""check-in is easy"".
+Step 2: falsified by any concrete delay/friction during check-in itself.
+Step 3: waiting 10 minutes to be greeted during check-in IS that kind of delay.
+Step 4: match -> Answer: Yes
+
+WORKED EXAMPLE 2 (not contrary):
+Phrase A is no_evident_not_easy_check-in. Phrase B is no_one_give_key_on_late_check-in.
+Step 1: base claim = ""check-in is easy"".
+Step 2: falsified by friction during check-in itself.
+Step 3: B is about late check-in key handover — a separate specific issue, not evidence check-in was hard.
+Step 4: no match -> Answer: No
+
+Now apply the recipe to this pair. Show Steps 1-4 briefly (one short line each), then end with the
+final line ""Answer: Yes"" or ""Answer: No"".
+
+Phrase A is no_evident_not_check_out_time_11am. Phrase B is no_guidance.
+Step 1:
+","Step 1: Base claim = ""check-out time is 11am.""
+Step 2: Falsified by evidence that the actual check-out time is something other than 11am (e.g., 10am, 12pm, or no fixed time).
+Step 3: ""no_guidance"" is a general complaint about lack of direction/information; it does not state a different check-out time or contradict the 11am figure specifically.
+Step 4: B is a different, unrelated specific issue — it does not falsify the 11am check-out claim.
+
+Answer: No"
+2026-09-28 12:39:57,1,2,no_evident_not_late_check_out,no_explanation,"Follow this 4-step recipe to decide if Phrase B is contrary to Phrase A.
+
+RECIPE:
+Step 1 (Strip)    - Remove the ""no_evident_not_"" / ""have_evident_"" prefix from A to get its base claim.
+Step 2 (Polarity) - Work out what kind of real-world fact would falsify that base claim.
+Step 3 (Match)    - Check whether B is exactly that kind of falsifying fact, about the same specific
+                    situation (not just the same general topic).
+Step 4 (Decide)   - If B matches -> Yes. If B is unrelated, a different specific complaint, or does
+                    not actually falsify the claim -> No.
+
+WORKED EXAMPLE 1 (contrary):
+Phrase A is no_evident_not_easy_check-in. Phrase B is customer_wait_10_minute_for_greet.
+Step 1: base claim = ""check-in is easy"".
+Step 2: falsified by any concrete delay/friction during check-in itself.
+Step 3: waiting 10 minutes to be greeted during check-in IS that kind of delay.
+Step 4: match -> Answer: Yes
+
+WORKED EXAMPLE 2 (not contrary):
+Phrase A is no_evident_not_easy_check-in. Phrase B is no_one_give_key_on_late_check-in.
+Step 1: base claim = ""check-in is easy"".
+Step 2: falsified by friction during check-in itself.
+Step 3: B is about late check-in key handover — a separate specific issue, not evidence check-in was hard.
+Step 4: no match -> Answer: No
+
+Now apply the recipe to this pair. Show Steps 1-4 briefly (one short line each), then end with the
+final line ""Answer: Yes"" or ""Answer: No"".
+
+Phrase A is no_evident_not_late_check_out. Phrase B is no_explanation.
+Step 1:
+","Step 1: Base claim = ""check-out was late.""
+Step 2: Falsified by evidence that the check-out was actually on time / not late.
+Step 3: ""no_explanation"" is about a missing explanation, not about the timing of the check-out; it doesn't address whether it was late.
+Step 4: No match — B is unrelated to the specific claim about check-out timing.
+
+Answer: No"
+2026-09-28 12:40:04,1,4,no_evident_not_check_out_time_11am,not_suitable_touch_panel,"Follow this 4-step recipe to decide if Phrase B is contrary to Phrase A.
+
+RECIPE:
+Step 1 (Strip)    - Remove the ""no_evident_not_"" / ""have_evident_"" prefix from A to get its base claim.
+Step 2 (Polarity) - Work out what kind of real-world fact would falsify that base claim.
+Step 3 (Match)    - Check whether B is exactly that kind of falsifying fact, about the same specific
+                    situation (not just the same general topic).
+Step 4 (Decide)   - If B matches -> Yes. If B is unrelated, a different specific complaint, or does
+                    not actually falsify the claim -> No.
+
+WORKED EXAMPLE 1 (contrary):
+Phrase A is no_evident_not_easy_check-in. Phrase B is customer_wait_10_minute_for_greet.
+Step 1: base claim = ""check-in is easy"".
+Step 2: falsified by any concrete delay/friction during check-in itself.
+Step 3: waiting 10 minutes to be greeted during check-in IS that kind of delay.
+Step 4: match -> Answer: Yes
+
+WORKED EXAMPLE 2 (not contrary):
+Phrase A is no_evident_not_easy_check-in. Phrase B is no_one_give_key_on_late_check-in.
+Step 1: base claim = ""check-in is easy"".
+Step 2: falsified by friction during check-in itself.
+Step 3: B is about late check-in key handover — a separate specific issue, not evidence check-in was hard.
+Step 4: no match -> Answer: No
+
+Now apply the recipe to this pair. Show Steps 1-4 briefly (one short line each), then end with the
+final line ""Answer: Yes"" or ""Answer: No"".
+
+Phrase A is no_evident_not_check_out_time_11am. Phrase B is not_suitable_touch_panel.
+Step 1:
+","Step 1: Base claim = ""check-out time is 11am.""
+Step 2: Falsified by a fact stating the check-out time is something other than 11am (e.g., 10am, 12pm, or no fixed time).
+Step 3: B (""not_suitable_touch_panel"") concerns the usability of a touch panel — a different device/interface issue, not the check-out time.
+Step 4: B is unrelated to the check-out-time claim; it does not falsify it.
+
+Answer: No"
+2026-09-28 12:40:11,1,9,no_evident_not_automated_check_out_machine,no_guidance,"Follow this 4-step recipe to decide if Phrase B is contrary to Phrase A.
+
+RECIPE:
+Step 1 (Strip)    - Remove the ""no_evident_not_"" / ""have_evident_"" prefix from A to get its base claim.
+Step 2 (Polarity) - Work out what kind of real-world fact would falsify that base claim.
+Step 3 (Match)    - Check whether B is exactly that kind of falsifying fact, about the same specific
+                    situation (not just the same general topic).
+Step 4 (Decide)   - If B matches -> Yes. If B is unrelated, a different specific complaint, or does
+                    not actually falsify the claim -> No.
+
+WORKED EXAMPLE 1 (contrary):
+Phrase A is no_evident_not_easy_check-in. Phrase B is customer_wait_10_minute_for_greet.
+Step 1: base claim = ""check-in is easy"".
+Step 2: falsified by any concrete delay/friction during check-in itself.
+Step 3: waiting 10 minutes to be greeted during check-in IS that kind of delay.
+Step 4: match -> Answer: Yes
+
+WORKED EXAMPLE 2 (not contrary):
+Phrase A is no_evident_not_easy_check-in. Phrase B is no_one_give_key_on_late_check-in.
+Step 1: base claim = ""check-in is easy"".
+Step 2: falsified by friction during check-in itself.
+Step 3: B is about late check-in key handover — a separate specific issue, not evidence check-in was hard.
+Step 4: no match -> Answer: No
+
+Now apply the recipe to this pair. Show Steps 1-4 briefly (one short line each), then end with the
+final line ""Answer: Yes"" or ""Answer: No"".
+
+Phrase A is no_evident_not_automated_check_out_machine. Phrase B is no_guidance.
+Step 1:
+","Step 1: Base claim = ""there is an automated check-out machine"" (i.e., check-out is automated/self-service).
+Step 2: Falsified by evidence that no automated check-out machine exists or that check-out requires manual/human handling.
+Step 3: ""no_guidance"" is a complaint about lack of direction/help, not about the absence of an automated check-out machine; a machine could exist yet still lack guidance.
+Step 4: Different specific issue; B does not falsify the base claim.
+
+Answer: No"
+2026-09-28 12:40:18,1,10,no_evident_not_offered_checkout_time,not_suitable_touch_panel,"Follow this 4-step recipe to decide if Phrase B is contrary to Phrase A.
+
+RECIPE:
+Step 1 (Strip)    - Remove the ""no_evident_not_"" / ""have_evident_"" prefix from A to get its base claim.
+Step 2 (Polarity) - Work out what kind of real-world fact would falsify that base claim.
+Step 3 (Match)    - Check whether B is exactly that kind of falsifying fact, about the same specific
+                    situation (not just the same general topic).
+Step 4 (Decide)   - If B matches -> Yes. If B is unrelated, a different specific complaint, or does
+                    not actually falsify the claim -> No.
+
+WORKED EXAMPLE 1 (contrary):
+Phrase A is no_evident_not_easy_check-in. Phrase B is customer_wait_10_minute_for_greet.
+Step 1: base claim = ""check-in is easy"".
+Step 2: falsified by any concrete delay/friction during check-in itself.
+Step 3: waiting 10 minutes to be greeted during check-in IS that kind of delay.
+Step 4: match -> Answer: Yes
+
+WORKED EXAMPLE 2 (not contrary):
+Phrase A is no_evident_not_easy_check-in. Phrase B is no_one_give_key_on_late_check-in.
+Step 1: base claim = ""check-in is easy"".
+Step 2: falsified by friction during check-in itself.
+Step 3: B is about late check-in key handover — a separate specific issue, not evidence check-in was hard.
+Step 4: no match -> Answer: No
+
+Now apply the recipe to this pair. Show Steps 1-4 briefly (one short line each), then end with the
+final line ""Answer: Yes"" or ""Answer: No"".
+
+Phrase A is no_evident_not_offered_checkout_time. Phrase B is not_suitable_touch_panel.
+Step 1:
+","Step 1: Base claim = ""checkout time is offered"" (i.e., the guest was told the checkout time).
+Step 2: Falsified by a concrete instance where the checkout time was *not* communicated or provided to the guest.
+Step 3: B (""not_suitable_touch_panel"") concerns an unsatisfactory physical interface/device — it says nothing about whether the checkout time was offered or withheld.
+Step 4: B is a different specific issue (a hardware/UX complaint), not evidence that checkout time was not offered → no match.
+
+Answer: No"
+2026-09-28 12:40:26,1,11,no_evident_not_offered_checkout_time,no_explanation,"Follow this 4-step recipe to decide if Phrase B is contrary to Phrase A.
+
+RECIPE:
+Step 1 (Strip)    - Remove the ""no_evident_not_"" / ""have_evident_"" prefix from A to get its base claim.
+Step 2 (Polarity) - Work out what kind of real-world fact would falsify that base claim.
+Step 3 (Match)    - Check whether B is exactly that kind of falsifying fact, about the same specific
+                    situation (not just the same general topic).
+Step 4 (Decide)   - If B matches -> Yes. If B is unrelated, a different specific complaint, or does
+                    not actually falsify the claim -> No.
+
+WORKED EXAMPLE 1 (contrary):
+Phrase A is no_evident_not_easy_check-in. Phrase B is customer_wait_10_minute_for_greet.
+Step 1: base claim = ""check-in is easy"".
+Step 2: falsified by any concrete delay/friction during check-in itself.
+Step 3: waiting 10 minutes to be greeted during check-in IS that kind of delay.
+Step 4: match -> Answer: Yes
+
+WORKED EXAMPLE 2 (not contrary):
+Phrase A is no_evident_not_easy_check-in. Phrase B is no_one_give_key_on_late_check-in.
+Step 1: base claim = ""check-in is easy"".
+Step 2: falsified by friction during check-in itself.
+Step 3: B is about late check-in key handover — a separate specific issue, not evidence check-in was hard.
+Step 4: no match -> Answer: No
+
+Now apply the recipe to this pair. Show Steps 1-4 briefly (one short line each), then end with the
+final line ""Answer: Yes"" or ""Answer: No"".
+
+Phrase A is no_evident_not_offered_checkout_time. Phrase B is no_explanation.
+Step 1:
+","Step 1: Base claim = ""checkout time is offered"" (i.e., the staff told the guest what the checkout time is).
+Step 2: Falsified by a concrete instance where the checkout time was *not* communicated to the guest.
+Step 3: ""no_explanation"" is a vague, general statement that could refer to any topic (a charge, a policy, a delay); it does not specifically state that the checkout time was withheld.
+Step 4: B is too broad and not about the same specific situation (checkout time being offered) → no match.
+
+Answer: No"
+2026-09-28 12:40:34,1,12,no_evident_not_offered_checkout_time,no_guidance,"Follow this 4-step recipe to decide if Phrase B is contrary to Phrase A.
+
+RECIPE:
+Step 1 (Strip)    - Remove the ""no_evident_not_"" / ""have_evident_"" prefix from A to get its base claim.
+Step 2 (Polarity) - Work out what kind of real-world fact would falsify that base claim.
+Step 3 (Match)    - Check whether B is exactly that kind of falsifying fact, about the same specific
+                    situation (not just the same general topic).
+Step 4 (Decide)   - If B matches -> Yes. If B is unrelated, a different specific complaint, or does
+                    not actually falsify the claim -> No.
+
+WORKED EXAMPLE 1 (contrary):
+Phrase A is no_evident_not_easy_check-in. Phrase B is customer_wait_10_minute_for_greet.
+Step 1: base claim = ""check-in is easy"".
+Step 2: falsified by any concrete delay/friction during check-in itself.
+Step 3: waiting 10 minutes to be greeted during check-in IS that kind of delay.
+Step 4: match -> Answer: Yes
+
+WORKED EXAMPLE 2 (not contrary):
+Phrase A is no_evident_not_easy_check-in. Phrase B is no_one_give_key_on_late_check-in.
+Step 1: base claim = ""check-in is easy"".
+Step 2: falsified by friction during check-in itself.
+Step 3: B is about late check-in key handover — a separate specific issue, not evidence check-in was hard.
+Step 4: no match -> Answer: No
+
+Now apply the recipe to this pair. Show Steps 1-4 briefly (one short line each), then end with the
+final line ""Answer: Yes"" or ""Answer: No"".
+
+Phrase A is no_evident_not_offered_checkout_time. Phrase B is no_guidance.
+Step 1:
+","Step 1: Base claim = ""checkout time is offered"" (i.e., the staff provided/communicated the checkout time).
+Step 2: Falsified by a specific fact that the checkout time was *not* communicated or provided to the guest.
+Step 3: ""no_guidance"" is a vague, general complaint about lack of direction/help; it does not specifically state that the checkout time was withheld or uncommunicated.
+Step 4: B is a broader, unrelated complaint rather than the specific falsifying fact about checkout time → no match.
+
+Answer: No"

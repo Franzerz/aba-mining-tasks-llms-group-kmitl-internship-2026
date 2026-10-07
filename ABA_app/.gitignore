@@ -9,3 +9,6 @@ __pycache__/
 
 # Local config (copy .env.example -> .env)
 .env
+
+# Rebuildable caches (slim copies of LLM prediction files)
+.cache/

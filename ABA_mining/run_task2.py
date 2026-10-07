@@ -20,6 +20,7 @@ from internship.ABA_mining.src import (
     load_model_config,
     load_paths_config,
     load_task2_instances_gt,
+    load_task2_instances_llm,
     run_task2,
 )
 
@@ -46,6 +47,9 @@ Examples:
                         help="Override model from model.yaml (e.g. --model llama3.2)")
     parser.add_argument("--prompt", default="prompts/task2/generator_v1.txt",
                         help="Prompt template path (default: prompts/task2/generator_v1.txt)")
+    parser.add_argument("--input", default=None,
+                        help="Run on a Task 1 output CSV instead of the gold CSV (needs Topic, "
+                             "Sentiment and Text Span / Selected Content columns)")
     parser.add_argument("--num-versions", type=int, default=1,
                         help="Number of versions to run (default: 1). Use --num-versions 3 for 3 versions.")
     args = parser.parse_args()
@@ -71,16 +75,22 @@ Examples:
     print(f"Task 2 — Body Literal Generation")
     print(f"Model    : {model_cfg.task1_model}")
     print(f"Prompt   : {args.prompt}")
+    print(f"Input    : {args.input or paths_cfg.gold_csv}")
     print(f"Dataset  : {'all instances' if args.n is None else f'first {args.n} instances'}")
     print(f"Versions : {args.num_versions}")
     print("=" * 60 + "\n")
 
-    instances = load_task2_instances_gt(
-        paths_cfg.gold_csv,
-        limit=args.n,
-        offset=args.offset,
-    )
-    print(f"Loaded {len(instances)} GT instances\n")
+    # A Task 1 output carries its own spans and sentiments, so it is the "llm" source; with no
+    # --input we fall back to the human gold CSV, the "gt" source.
+    if args.input:
+        source = "llm"
+        input_stem = Path(args.input).stem
+        instances = load_task2_instances_llm(Path(args.input), limit=args.n, offset=args.offset)
+    else:
+        source = "gt"
+        input_stem = None
+        instances = load_task2_instances_gt(paths_cfg.gold_csv, limit=args.n, offset=args.offset)
+    print(f"Loaded {len(instances)} {source.upper()} instances\n")
 
     # Extract version number from prompt file (e.g., generator_v1 → version1)
     version_match = prompt_label.replace("generator_", "")  # e.g., "v1" → "v1"
@@ -92,16 +102,20 @@ Examples:
         run_label = f"run{run_num}"
         print(f"[{run_num}/{args.num_versions}] Running Task 2 [{version_folder}] - {run_label}...\n")
 
+        # The input file goes into the label so the output records which Task 1 run fed it.
+        label = f"{model_folder}_{prompt_label}_{run_label}"
+        if input_stem:
+            label = f"{input_stem}_{label}"
         out_path = run_task2(
             repo_root=repo_root,
             client=client,
             model_cfg=model_cfg,
             paths_cfg=paths_cfg,
             instances=instances,
-            source="gt",
+            source=source,
             prompt_path=args.prompt,
-            output_subdir=f"gt/{model_folder}/{version_folder}",
-            label=f"{model_folder}_{prompt_label}_{run_label}",
+            output_subdir=f"{source}/{model_folder}/{version_folder}",
+            label=label,
         )
         output_paths.append(out_path)
         print(f"  → Wrote: {out_path}\n")

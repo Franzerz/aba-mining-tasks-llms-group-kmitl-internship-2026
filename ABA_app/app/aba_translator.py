@@ -23,18 +23,16 @@ The rule (matching the whiteboard's worked example B-bar = {C1, C2}):
 
 BRIDGING RULES (an addition beyond the whiteboard's literal example -- flag this to the advisor):
   The whiteboard example only covers B appearing in a rule BODY; its C1/C2 were plain atoms.
-  In our data the contrary atoms are frequently ASSUMPTIONS themselves -- a Proposition that
-  Task 3 voted as attacking A is itself an assumption with its own contrary. Splitting turns
-  the atom B into clones, so after translation NOTHING derives the bare atom "B" any more.
-  Every contrary pointing at B then becomes underivable, no argument ever concludes a contrary,
-  and py_arg finds ZERO defeats -- the attack graph comes out empty. (Measured before this fix
-  on check-in: 54 distinct contrary atoms, 0 of them derivable, 0 defeats.)
-  So for each clone we also emit:
+  If an assumption B is ALSO some other assumption's contrary, splitting B into clones means
+  nothing derives the bare atom "B" any more, so that contrary can never be concluded and the
+  attack silently disappears. For such a B we also emit, per clone:
       B <- B#Ci
   i.e. "B holds if it holds under any one of its lines of defense". B is no longer an
-  assumption after splitting (only its clones are), so this keeps the framework flat -- an
-  assumption never appears in a rule head. With this in place check-in yields 94 defeats,
-  price 400, staff 1889, and is_flat stays True.
+  assumption after splitting (only its clones are), so the framework stays flat.
+  They are emitted ONLY for assumptions that really are someone's contrary. With the current
+  builder no contrary is an assumption (contraries are observed facts, as in CLAR 2025), so none
+  are emitted -- adding them anyway only inflated the AA view with arguments that conclude an
+  original assumption and take part in no attack.
 """
 
 from __future__ import annotations
@@ -102,10 +100,12 @@ def translate_to_standard_abaf(new_fw: NewAbaFramework) -> TranslationResult:
             continue
         _expand_rule(rule, multi_valued_in_body, clones_by_original, reduced_rules)
 
-    # Bridging rules: keep the ORIGINAL atom derivable from any of its clones, so contraries
-    # that point at a split assumption still resolve. Without these the attack graph is empty
-    # -- see the module docstring for the measured before/after.
+    # Bridging rules: keep a split assumption derivable from any of its clones, but only where
+    # some contrary actually points at it -- see the module docstring.
+    contrary_atoms = set(reduced_contraries.values())
     for original, clones in clones_by_original.items():
+        if original not in contrary_atoms:
+            continue
         for clone in clones:
             reduced_rules.add(Rule(f"r_clone_{clone}", {clone}, original))
 

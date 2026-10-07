@@ -27,7 +27,10 @@ GENERATE_TIMEOUT_SECONDS = 600.0
 
 # Low temperature: this is a factual readout of numbers already on screen, not creative
 # writing, and a wandering model invents figures that contradict the picture.
-GENERATE_OPTIONS = {"temperature": 0.2, "top_p": 0.9, "num_predict": 500}
+# num_ctx matches ABA_mining/configs/model.yaml: Ollama keeps one runner per (model, context
+# size), so a summary asking for a different size has to wait for the model to be reloaded —
+# which never happens while a Task 3 batch keeps that model busy.
+GENERATE_OPTIONS = {"temperature": 0.2, "top_p": 0.9, "num_predict": 500, "num_ctx": 4096}
 
 
 def ollama_host() -> str:
@@ -139,9 +142,22 @@ def describe_facts(facts: dict) -> str:
         f"- Hotel topic under review: {topic}.",
         f"- Overall verdicts being weighed up: {', '.join(verdicts) if verdicts else 'none shown'}.",
         f"- Points taken from guest reviews and shown on screen: {counts.get('points', 0):,}.",
+    ]
+    # Without the split a small model reads "48 points" as 48 compliments.
+    if counts.get("praise") or counts.get("complaints"):
+        lines.append(
+            f"- Of those points, {counts.get('praise', 0):,} are praise and "
+            f"{counts.get('complaints', 0):,} are complaints."
+        )
+    lines += [
         f"- Connections where a point backs up a verdict: {edges.get('support', 0):,}.",
         f"- Connections where two points contradict each other: {edges.get('conflict', 0):,}.",
     ]
+    if edges.get("predicted"):
+        lines.append(
+            f"- {edges['predicted']:,} of those contradictions were guessed by an AI model and nobody "
+            f"has checked them yet, so they may be wrong (say this plainly)."
+        )
     if themes:
         lines.append(f"- The themes guests mentioned most: {', '.join(themes)}.")
     if facts.get("focusLabel"):

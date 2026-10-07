@@ -2,16 +2,30 @@
 
 from __future__ import annotations
 
+import threading
+from contextlib import asynccontextmanager
+
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
 from .config import DIST_DIR
 from .routes.graph import router as graph_router
+from .routes.graph import warm_caches
 from .routes.llm import router as llm_router
 from .routes.review import router as review_router
 
-app = FastAPI(title="ABA App")
+@asynccontextmanager
+async def lifespan(_: FastAPI):
+    # Build everything once in the background; requests are served meanwhile.
+    threading.Thread(target=warm_caches, name="warm-caches", daemon=True).start()
+    yield
+
+
+app = FastAPI(title="ABA App", lifespan=lifespan)
+# Graph responses for the LLM-only topics run to megabytes of highly repetitive JSON.
+app.add_middleware(GZipMiddleware, minimum_size=2048)
 
 # API routers first, so /api/* is never swallowed by the SPA catch-all below.
 app.include_router(graph_router)

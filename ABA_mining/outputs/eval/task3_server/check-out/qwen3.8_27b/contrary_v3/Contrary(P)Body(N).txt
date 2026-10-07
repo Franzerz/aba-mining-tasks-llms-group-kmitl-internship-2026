@@ -1,0 +1,46 @@
+======================================================================
+Test 1
+======================================================================
+ID Vote LLM_Output Verify
+ 1  Yes        Yes     TP
+ 2  Yes        Yes     TP
+ 3   No         No     TN
+ 4   No         No     TN
+ 5   No         No     TN
+ 6  Yes        Yes     TP
+ 7  Yes        Yes     TP
+ 8  Yes        Yes     TP
+
+======================================================================
+Test 2
+======================================================================
+ID Vote LLM_Output Verify
+ 1  Yes        Yes     TP
+ 2  Yes        Yes     TP
+ 3   No         No     TN
+ 4   No         No     TN
+ 5   No         No     TN
+ 6  Yes        Yes     TP
+ 7  Yes        Yes     TP
+ 8  Yes        Yes     TP
+
+======================================================================
+Test 3
+======================================================================
+ID Vote LLM_Output Verify
+ 1  Yes        Yes     TP
+ 2  Yes        Yes     TP
+ 3   No         No     TN
+ 4   No         No     TN
+ 5   No         No     TN
+ 6  Yes        Yes     TP
+ 7  Yes        Yes     TP
+ 8  Yes        Yes     TP
+
+======================================================================
+SUMMARY
+======================================================================
+      Model        Shot     Topic           Category   Test Positive_Label  N_gold  N_pred  N_unparsed  N_valid  TP  TN  FP  FN  Precision  Recall  F1  Accuracy
+qwen3.8_27b contrary_v3 check-out Contrary(P)Body(N) Test 1            Yes       8       8           0        8   5   3   0   0        1.0     1.0 1.0       1.0
+qwen3.8_27b contrary_v3 check-out Contrary(P)Body(N) Test 2            Yes       8       8           0        8   5   3   0   0        1.0     1.0 1.0       1.0
+qwen3.8_27b contrary_v3 check-out Contrary(P)Body(N) Test 3            Yes       8       8           0        8   5   3   0   0        1.0     1.0 1.0       1.0

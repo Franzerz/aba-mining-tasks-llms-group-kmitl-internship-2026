@@ -119,6 +119,37 @@ def normalize_parsed_json(parsed: Any, output_schema: str = "full", topics: list
     if not isinstance(parsed, dict):
         errors.append("Output is not a JSON object")
         return None, errors
+
+    if output_schema == "topic_only":
+        # Accept either the validator shape {"topic_mentions": {...}} or older outputs {"Topics": {...}}
+        choice = None
+        if "topic_mentions" in parsed:
+            choice = "topic_mentions"
+        elif "Topics" in parsed:
+            choice = "Topics"
+        else:
+            errors.append("Missing 'topic_mentions' key")
+            return None, errors
+
+        topic_map = parsed[choice]
+        if not isinstance(topic_map, dict):
+            errors.append("'topic_mentions' must be a dict")
+            return None, errors
+
+        normalized_topics = {}
+        for topic, value in topic_map.items():
+            if isinstance(value, bool):
+                normalized_topics[topic] = value
+            elif isinstance(value, str):
+                lowered = value.strip().lower()
+                if lowered in {"true", "false"}:
+                    normalized_topics[topic] = lowered == "true"
+                else:
+                    normalized_topics[topic] = bool(value)
+            else:
+                normalized_topics[topic] = bool(value)
+
+        return {"topic_mentions": normalized_topics}, errors
     
     # Handle different output schemas
     if output_schema == "span_only":

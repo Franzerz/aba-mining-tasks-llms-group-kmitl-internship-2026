@@ -1,0 +1,13 @@
+======================================================================
+ALL
+======================================================================
+     Model        Shot Topic           Category   Test Positive_Label  N_valid  TP  TN  FP  FN  Precision  Recall       F1  Accuracy
+gemma4_31b contrary_v2 price Contrary(P)Body(N) Test 1            Yes      455 342  36  19  58   0.947368   0.855 0.898817  0.830769
+gemma4_31b contrary_v2 price Contrary(P)Body(N) Test 2            Yes      455 342  36  19  58   0.947368   0.855 0.898817  0.830769
+gemma4_31b contrary_v2 price Contrary(P)Body(N) Test 3            Yes      455 342  36  19  58   0.947368   0.855 0.898817  0.830769
+
+======================================================================
+MICRO_BY_CATEGORY
+======================================================================
+     Model        Shot Topic           Category Positive_Label  Precision  Recall       F1  Accuracy  N_valid   TP  TN  FP  FN
+gemma4_31b contrary_v2 price Contrary(P)Body(N)            Yes   0.947368   0.855 0.898817  0.830769     1365 1026 108  57 174

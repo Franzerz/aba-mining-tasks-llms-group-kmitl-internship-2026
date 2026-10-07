@@ -22,6 +22,8 @@ from __future__ import annotations
 import concurrent.futures
 
 from py_arg.aba_classes.aba_framework import ABAF
+
+from . import fast_af
 from py_arg.aba_classes.semantics import (
     get_admissible_extensions as _admissible,
     get_complete_extensions as _complete,
@@ -58,6 +60,40 @@ SEMANTICS = {
 FAST_SEMANTICS = {"grounded"}
 DEFAULT_SEMANTICS = "grounded"
 EXTENSION_TIMEOUT_SECONDS = 15
+
+# Above this many assumptions (clones) py_arg's own generate_af / grounded loops take minutes to
+# hours (see fast_af.py), so the verified-identical indexed version is used instead. Every
+# human-voted topic stays below it and is evaluated by py_arg itself. The exhaustive semantics
+# are refused outright up there: they could never finish, and a timed-out worker thread keeps
+# burning CPU in the background because Python cannot kill it.
+FAST_PATH_MIN_ASSUMPTIONS = 2500
+
+
+def uses_fast_path(framework: ABAF) -> bool:
+    return len(framework.assumptions) >= FAST_PATH_MIN_ASSUMPTIONS
+
+
+def evaluate(framework: ABAF, semantics: str) -> tuple[dict, list[list[str]], str]:
+    """(AA view, extensions, engine) from ONE argument graph, whichever engine builds it."""
+    if semantics not in SEMANTICS:
+        raise ValueError(f"Unknown semantics '{semantics}'. Options: {list(SEMANTICS)}")
+    if not uses_fast_path(framework):
+        return build_aa_view(framework), compute_extensions(framework, semantics), "py_arg"
+
+    if semantics not in FAST_SEMANTICS:
+        raise ValueError(
+            f"'{semantics}' is not available for a framework this size "
+            f"({len(framework.assumptions):,} assumptions): py_arg enumerates it exhaustively. "
+            f"Use 'grounded'."
+        )
+    af = fast_af.generate(framework)
+    view = {
+        "arguments": [{"id": name, "premise": sorted(premise), "conclusion": conclusion}
+                      for name, (premise, conclusion) in af.arguments.items()],
+        "defeats": [{"source": src, "target": dst} for src, dst in af.defeats],
+    }
+    extension = sorted(fast_af.grounded_assumptions(framework, af))
+    return view, [extension], "indexed (verified = py_arg)"
 
 
 def compute_extensions(framework: ABAF, semantics: str) -> list[list[str]]:

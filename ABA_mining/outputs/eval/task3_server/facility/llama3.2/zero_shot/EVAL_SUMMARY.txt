@@ -1,0 +1,21 @@
+======================================================================
+ALL
+======================================================================
+   Model      Shot    Topic           Category   Test Positive_Label  N_valid  TP  TN  FP  FN  Precision   Recall       F1  Accuracy
+llama3.2 zero_shot facility Contrary(N)Body(N) Test 1             No      500 158   0   0 342   1.000000 0.316000 0.480243  0.316000
+llama3.2 zero_shot facility Contrary(N)Body(N) Test 2             No      500 158   0   0 342   1.000000 0.316000 0.480243  0.316000
+llama3.2 zero_shot facility Contrary(N)Body(N) Test 3             No      500 158   0   0 342   1.000000 0.316000 0.480243  0.316000
+llama3.2 zero_shot facility Contrary(P)Body(N) Test 1            Yes      478  49 149 267  13   0.155063 0.790323 0.259259  0.414226
+llama3.2 zero_shot facility Contrary(P)Body(N) Test 2            Yes      478  48 149 267  14   0.152381 0.774194 0.254642  0.412134
+llama3.2 zero_shot facility Contrary(P)Body(N) Test 3            Yes      478  48 149 267  14   0.152381 0.774194 0.254642  0.412134
+llama3.2 zero_shot facility Contrary(P)Body(P) Test 1             No      500 144   0   0 356   1.000000 0.288000 0.447205  0.288000
+llama3.2 zero_shot facility Contrary(P)Body(P) Test 2             No      500 144   0   0 356   1.000000 0.288000 0.447205  0.288000
+llama3.2 zero_shot facility Contrary(P)Body(P) Test 3             No      500 144   0   0 356   1.000000 0.288000 0.447205  0.288000
+
+======================================================================
+MICRO_BY_CATEGORY
+======================================================================
+   Model      Shot    Topic           Category Positive_Label  Precision  Recall       F1  Accuracy  N_valid  TP  TN  FP   FN
+llama3.2 zero_shot facility Contrary(N)Body(N)             No   1.000000 0.31600 0.480243  0.316000     1500 474   0   0 1026
+llama3.2 zero_shot facility Contrary(P)Body(N)            Yes   0.153277 0.77957 0.256184  0.412831     1434 145 447 801   41
+llama3.2 zero_shot facility Contrary(P)Body(P)             No   1.000000 0.28800 0.447205  0.288000     1500 432   0   0 1068
