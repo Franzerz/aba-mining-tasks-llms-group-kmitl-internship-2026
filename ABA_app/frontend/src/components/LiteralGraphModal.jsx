@@ -112,7 +112,9 @@ export default function LiteralGraphModal({ aspect, topic, literal, sentiment, s
           <div className="flex gap-2 shrink-0">
             <button
               className="btn"
-              onClick={() => navigate(hotelLink(`/graph?aspect=${encodeURIComponent(aspect)}&view=${view}&focus=${encodeURIComponent(literal)}${contraries !== "pn" ? `&contraries=${contraries}` : ""}`))}
+              // merge=0 so Graph Studio opens on the same unmerged picture this modal drew;
+              // without it the reader lands on the Loose default and the node count changes.
+              onClick={() => navigate(hotelLink(`/graph?aspect=${encodeURIComponent(aspect)}&view=${view}&focus=${encodeURIComponent(literal)}&merge=0${contraries !== "pn" ? `&contraries=${contraries}` : ""}`))}
             >
               Open in Graph Studio
             </button>

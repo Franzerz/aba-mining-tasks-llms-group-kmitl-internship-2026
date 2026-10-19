@@ -5,7 +5,8 @@ import GraphCanvas from "../components/GraphCanvas.jsx";
 import LegendList from "../components/LegendList.jsx";
 import LlmSummaryBody, { useLlmSummary } from "../components/LlmSummary.jsx";
 import {
-  CONTRARY_SETS, DEFAULT_CONTRARY_SET, DEFAULT_VIEW, MERGE_LEVELS, VIEWS, acceptedAssumptions,
+  CONTRARY_SETS, DEFAULT_CONTRARY_SET, DEFAULT_MERGE, DEFAULT_VIEW, MERGE_LEVELS, VIEWS,
+  acceptedAssumptions, normaliseMerge,
   backsHead, focusOptions,
   graphFacts,
 } from "../graphElements.js";
@@ -57,7 +58,7 @@ function toggleSet(current, key) {
  *  would give a number that disagrees with the extension the server computed. Clicking an
  *  assumption focuses the graph on the literal it rests on.
  */
-function AcceptedAssumptionsPanel({ data, onFocus }) {
+function AcceptedAssumptionsPanel({ data, view, onFocus }) {
   const result = useMemo(() => acceptedAssumptions(data), [data]);
   const literalOf = useMemo(() => {
     const map = new Map();
@@ -76,16 +77,26 @@ function AcceptedAssumptionsPanel({ data, onFocus }) {
 
   if (!result) return null;
   const { accepted, rejected, total, semantics } = result;
+  // Name them the way the picture on screen names them: the Simple view merges a literal with
+  // its assumption and shows the literal, the ABA view draws the assumption as its own node and
+  // shows its real no_evident_not_ / have_evident_ name. The set of accepted assumptions is the
+  // same either way -- only the label changes.
+  const simple = view === "simple";
+  // Sort by the text on the chip. acceptedAssumptions orders by the raw atom, which in the
+  // Simple view is the invisible prefix: the reader would see every have_evident_ point first,
+  // then every no_evident_not_ one, each alphabetical, and the list would look unsorted.
+  const shown = (atom) => (simple ? literalOf.get(atom) || atom : atom);
+  const byShown = (a, b) => shown(a).localeCompare(shown(b));
 
   const Chip = ({ atom }) => (
     <button
       type="button"
       onClick={() => onFocus(literalOf.get(atom) || atom)}
-      title={`${atom} — show it in the graph`}
+      title={simple ? `${atom} — show it in the graph` : "Show it in the graph"}
       className="text-[11px] font-mono px-1.5 py-1 rounded border border-edge bg-elevated
                  hover:bg-panel break-all text-left"
     >
-      {atom}
+      {simple ? literalOf.get(atom) || atom : atom}
     </button>
   );
 
@@ -110,7 +121,7 @@ function AcceptedAssumptionsPanel({ data, onFocus }) {
         </p>
       ) : (
         <div className="flex flex-wrap gap-1 max-h-56 overflow-y-auto">
-          {accepted.map((a) => <Chip key={a} atom={a} />)}
+          {[...accepted].sort(byShown).map((a) => <Chip key={a} atom={a} />)}
         </div>
       )}
 
@@ -120,7 +131,7 @@ function AcceptedAssumptionsPanel({ data, onFocus }) {
             {rejected.length} not accepted — something in the data contradicts them
           </summary>
           <div className="flex flex-wrap gap-1 mt-1.5 max-h-56 overflow-y-auto opacity-70">
-            {rejected.map((a) => <Chip key={a} atom={a} />)}
+            {[...rejected].sort(byShown).map((a) => <Chip key={a} atom={a} />)}
           </div>
         </details>
       )}
@@ -178,7 +189,7 @@ export default function GraphStudio() {
   const [view, setView] = useState(VIEWS.some((v) => v.key === urlView) ? urlView : DEFAULT_VIEW);
   // 0 = every point on its own node. Otherwise near-identical wordings share one (see
   // mergeSimilar): topics repeat themselves, and the picture is mostly the same point rephrased.
-  const [merge, setMerge] = useState(Number(searchParams.get("merge")) || 0);
+  const [merge, setMerge] = useState(() => normaliseMerge(searchParams.get("merge")));
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -209,12 +220,19 @@ export default function GraphStudio() {
   // Until the reader picks a side, the graph shows the topic's good_X claim.
   const currentHead = head || data?.heads?.[0] || "";
   const facts = useMemo(
-    () => graphFacts(data, view, focus, currentHead, { placeholders: showPlaceholders }),
-    [data, view, focus, currentHead, showPlaceholders],
+    () => graphFacts(data, view, focus, currentHead, { placeholders: showPlaceholders, merge }),
+    [data, view, focus, currentHead, showPlaceholders, merge],
   );
   const llm = useLlmSummary(facts);
   const needsFocus = Boolean(data?.partial && view !== "new_aba" && !focus);
   const tooLarge = needsFocus || Boolean(facts && facts.counts.elements > MAX_DRAW_ELEMENTS);
+
+  // The URL owns the merge level, so Back and Forward move it. Reading it only in the useState
+  // initializer left the dropdown and the canvas on the old level while the URL showed the new.
+  useEffect(() => {
+    const fromUrl = normaliseMerge(searchParams.get("merge"));
+    if (fromUrl !== merge) setMerge(fromUrl);
+  }, [searchParams]);   // eslint-disable-line react-hooks/exhaustive-deps
 
   // Escape exits fullscreen, and the page behind it shouldn't scroll while it's up.
   useEffect(() => {
@@ -313,7 +331,7 @@ export default function GraphStudio() {
     const params = {};
     if (nextAspect) params.aspect = nextAspect;
     if (nextView && nextView !== DEFAULT_VIEW) params.view = nextView;
-    if (merge) params.merge = String(merge);
+    if (merge !== DEFAULT_MERGE) params.merge = String(merge);
     if (nextFocus) params.focus = nextFocus;
     if (nextHead) params.head = nextHead;
     if (nextContraries && nextContraries !== DEFAULT_CONTRARY_SET) params.contraries = nextContraries;
@@ -367,7 +385,7 @@ export default function GraphStudio() {
   function changeMerge(next) {
     setMerge(next);
     const params = Object.fromEntries(searchParams.entries());
-    if (next) params.merge = String(next);
+    if (next !== DEFAULT_MERGE) params.merge = String(next);
     else delete params.merge;
     setSearchParams(params);
   }
@@ -634,7 +652,7 @@ export default function GraphStudio() {
             <LegendList view={view} data={data} />
           </SidebarCard>
 
-          <AcceptedAssumptionsPanel data={data} onFocus={changeFocus} />
+          <AcceptedAssumptionsPanel data={data} view={view} onFocus={changeFocus} />
 
           <SidebarCard
             title={`Extensions (${data?.semantics || "—"})`}

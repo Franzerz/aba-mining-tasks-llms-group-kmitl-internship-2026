@@ -394,6 +394,33 @@ python -m unittest tests.test_fast_af -v          # fast path == py_arg
 Frontend development with hot reload: run uvicorn as above and `npm run dev` in `frontend/`
 (Vite proxies `/api`).
 
+### With Docker
+
+```bash
+cd internship/ABA_app
+docker compose up --build        # http://127.0.0.1:8000/
+```
+
+One image: the Vite build runs in a `node:22-alpine` stage and its output is served by the
+FastAPI app in a `python:3.13-slim` stage, so there is one port and no separate web server.
+
+**The mined data is mounted, not copied in.** Most of `ABA_mining` is deliberately not in git
+(`outputs/task3_llm_pairs` alone is several GB), so an image carrying it could not be rebuilt
+from a clone. `docker-compose.yml` mounts `../ABA_mining` read-only at `/data`, and the app
+finds it through `ABA_MINING_ROOT`. That variable also works outside Docker, which is the only
+change needed to run the app from a different checkout layout.
+
+| variable | default | what it does |
+|---|---|---|
+| `ABA_MINING_ROOT` | the sibling `ABA_mining` directory | where `Dataset/` and `outputs/` are read from |
+| `ABA_MINING_DIR` | `../ABA_mining` | host path that gets mounted at `/data` |
+| `ABA_PORT` | `8000` | host port |
+| `OLLAMA_HOST` | `http://host.docker.internal:11434` | optional, for the plain-English summary |
+
+The container runs as an unprivileged user and mounts the data read-only — it only ever reads.
+Derived caches live in a named volume so a restart does not re-parse every gold workbook. The
+plain-English summary needs Ollama on the host; without it that panel is simply skipped.
+
 ## Current numbers (grounded semantics)
 
 Each topic with the contrary sets it actually has: the human-voted ones with their single voted

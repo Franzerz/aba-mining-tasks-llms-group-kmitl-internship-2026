@@ -323,8 +323,11 @@ function uniqueHuman(names, limit) {
  *  can never describe nodes that were filtered off the screen. */
 export function graphFacts(data, view, focus, head, options = {}) {
   if (!data) return null;
-  const elements = filterToFocus(
-    filterToHead(buildElements(data, view, { ...options, head }), head), focus);
+  // Merging too, and in the same order the canvas applies it. Without this every count here
+  // describes the unmerged graph while the reader is looking at the merged one.
+  const elements = mergeSimilar(
+    filterToFocus(filterToHead(buildElements(data, view, { ...options, head }), head), focus),
+    options.merge || 0);
   const nodes = elements.filter((e) => !e.data.source);
   const edges = elements.filter((e) => e.data.source);
 
@@ -470,6 +473,21 @@ export const MERGE_LEVELS = [
   { value: 0.65, label: "Similar wording" },
   { value: 0.55, label: "Loose" },
 ];
+// Loose by default: a topic restates the same point in a dozen wordings, and the unmerged
+// picture is mostly repetition. "Off" is still one step away for anyone checking a single point.
+export const DEFAULT_MERGE = 0.55;
+
+/** A merge level from the URL, snapped to one the selector can actually show.
+ *
+ *  `?merge=0.7` is not one of MERGE_LEVELS, so a <select> given it matches no <option> and
+ *  silently renders the first one ("Off") while the graph is in fact merged at 0.7. Snapping
+ *  keeps the control and the picture telling the same story. */
+export function normaliseMerge(raw) {
+  if (raw === null || raw === undefined || raw === "") return DEFAULT_MERGE;
+  const value = Number(raw);
+  if (!Number.isFinite(value)) return DEFAULT_MERGE;
+  return MERGE_LEVELS.some((m) => m.value === value) ? value : DEFAULT_MERGE;
+}
 
 /** Levenshtein distance, abandoned as soon as it cannot come in at or under `max`. */
 function editDistance(a, b, max) {
@@ -566,31 +584,62 @@ export function mergeSimilar(elements, threshold) {
   const nodes = elements.filter((e) => !e.data.source);
   const edges = elements.filter((e) => e.data.source);
 
-  // Only same-role names are ever compared, so a literal is never folded into an assumption.
-  const groupOf = new Map();
-  const members = new Map();
+  // Compare and name groups by what the reader SEES, not by the node id. In the Simple view a
+  // node is keyed by its assumption (no_evident_not_X) but shown as its literal, so grouping on
+  // ids both merged differently from the ABA view -- the shared prefix inflates the similarity
+  // of every pair -- and put the prefix back on the merged label.
+  const shownName = (n) => String(n.data.literal || n.data.id);
+
+  // Every key carries the ROLE as well as the name. A literal mined with both sentiments is one
+  // word but two points, a praise one and a complaint one, and folding them together would
+  // delete the attack between them: remapped to one node, that edge has source === target and
+  // is dropped below. Keying on the name alone silently loses it.
+  const key = (role, name) => `${role}\u0000${name}`;
+
+  const groupOfKey = new Map();      // role+name     -> the group's name
+  const members = new Map();         // role+group    -> the distinct names folded into it
   for (const role of MERGEABLE) {
-    const names = nodes.filter((n) => n.data.role === role).map((n) => String(n.data.id));
+    const names = [...new Set(nodes.filter((n) => n.data.role === role).map(shownName))];
     if (names.length < 2) continue;
     for (const [name, group] of similarityGroups(names, threshold)) {
-      groupOf.set(name, group);
-      if (!members.has(group)) members.set(group, []);
-      members.get(group).push(name);
+      groupOfKey.set(key(role, name), group);
+      const gk = key(role, group);
+      if (!members.has(gk)) members.set(gk, new Set());
+      members.get(gk).add(name);
     }
   }
-  const to = (id) => groupOf.get(id) || id;
+
+  // One pass for both the per-node group and each group's representative. The merged node keeps
+  // a real node id so the edges still resolve; the group's name is only what it is labelled with.
+  const groupKeyOf = new Map();      // node id -> role+group, or undefined when it merges with nothing
+  const repOf = new Map();           // role+group -> id of the node that represents it
+  for (const n of nodes) {
+    const id = String(n.data.id);
+    const group = groupOfKey.get(key(n.data.role, shownName(n)));
+    if (group === undefined) continue;
+    const gk = key(n.data.role, group);
+    groupKeyOf.set(id, gk);
+    const current = repOf.get(gk);
+    if (current === undefined || id < current) repOf.set(gk, id);
+  }
+  const remap = (id) => {
+    const gk = groupKeyOf.get(String(id));
+    return gk === undefined ? String(id) : repOf.get(gk);
+  };
 
   const merged = new Map();
   for (const n of nodes) {
-    const id = to(n.data.id);
-    const group = members.get(id) || [n.data.id];
+    const id = remap(n.data.id);
+    const gk = groupKeyOf.get(String(n.data.id));
+    const group = gk === undefined ? [shownName(n)] : [...members.get(gk)];
     const existing = merged.get(id);
     if (!existing) {
+      const name = gk === undefined ? shownName(n) : gk.slice(gk.indexOf("\u0000") + 1);
       merged.set(id, {
         data: {
           ...n.data,
           id,
-          label: group.length > 1 ? `${shortLabel(id)} +${group.length - 1}` : n.data.label,
+          label: group.length > 1 ? `${shortLabel(name)} +${group.length - 1}` : n.data.label,
           full: group.length > 1 ? group.slice().sort().join(", ") : n.data.full,
           count: n.data.count || null,
           merged: group.length > 1 ? group.length : undefined,
@@ -604,8 +653,8 @@ export function mergeSimilar(elements, threshold) {
   const seen = new Set();
   const keptEdges = [];
   for (const e of edges) {
-    const source = to(e.data.source);
-    const target = to(e.data.target);
+    const source = remap(e.data.source);
+    const target = remap(e.data.target);
     if (source === target) continue;               // the group swallowed this link
     const key = `${e.data.kind}|${source}|${target}`;
     if (seen.has(key)) continue;

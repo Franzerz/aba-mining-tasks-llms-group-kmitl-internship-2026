@@ -1,0 +1,25 @@
+# Build context is ABA_app/. Keep it to source: everything else is either rebuilt in the image
+# or mounted at run time.
+**/__pycache__/
+**/*.py[cod]
+.venv/
+venv/
+
+# Rebuilt by the frontend stage
+frontend/node_modules/
+frontend/dist/
+
+# Derived at run time, and machine-specific
+.cache/
+benchmark/
+_benchmark_port
+tests/
+
+.env
+.env.*
+.git/
+.gitignore
+*.md
+Dockerfile
+.dockerignore
+docker-compose.yml

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 
 APP_ROOT = Path(__file__).resolve().parent.parent
@@ -9,7 +10,13 @@ WORKSPACE_ROOT = APP_ROOT.parent.parent  # d:\user\ReaLearn
 
 # Task 1/3 gold data lives in the ABA_mining pipeline project, not copied here — read directly
 # from there so this app always reflects the same data the pipeline produces.
-ABA_MINING_ROOT = WORKSPACE_ROOT / "internship" / "ABA_mining"
+#
+# ABA_MINING_ROOT overrides the location. A container has no such repo layout, and most of that
+# tree is deliberately not in git (outputs/task3_llm_pairs alone is several GB), so the data is
+# mounted at run time rather than baked into the image. See docker-compose.yml.
+ABA_MINING_ROOT = Path(
+    os.environ.get("ABA_MINING_ROOT") or WORKSPACE_ROOT / "internship" / "ABA_mining"
+)
 TASK3_GOLD_DIR = ABA_MINING_ROOT / "Dataset" / "Task3"
 
 # Task 1/2 gold: one row per (review, topic, sentiment) with the review ID, the mined span, head
