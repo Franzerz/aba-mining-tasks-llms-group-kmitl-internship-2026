@@ -675,11 +675,26 @@ export function mergeSimilar(elements, threshold) {
  *  because the clones together stand for the one assumption. Reading it off the extension keeps
  *  this identical to what py_arg computed rather than re-deriving acceptance here.
  */
-export function acceptedAssumptions(data) {
+export function acceptedAssumptions(data, head = "") {
   if (!data || !data.extensions || !data.extensions.length) return null;
   const multi = (data.new_aba && data.new_aba.multi_contraries) || {};
-  const assumptions = (data.new_aba && data.new_aba.assumptions) || [];
+  let assumptions = (data.new_aba && data.new_aba.assumptions) || [];
   if (!assumptions.length) return null;
+
+  // Scoped to the claim on screen. Acceptance itself is a property of the whole framework and
+  // is read off the extension either way -- but a chip is a link into the graph, and the graph
+  // only ever draws one claim's side, so listing the other side's assumptions offers clicks
+  // that land on nothing. The contrary set needs no handling here: it is chosen before the
+  // request, so `data` is already the framework that set produces.
+  if (head) {
+    const backing = new Set();
+    for (const rule of (data.new_aba && data.new_aba.rules) || []) {
+      if (rule.head !== head) continue;
+      for (const atom of rule.body) backing.add(atom);
+    }
+    assumptions = assumptions.filter((a) => backing.has(a));
+    if (!assumptions.length) return null;
+  }
 
   const clonesIn = new Map();
   for (const member of data.extensions[0]) {

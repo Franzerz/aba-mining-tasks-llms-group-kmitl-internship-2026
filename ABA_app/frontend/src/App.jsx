@@ -3,6 +3,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import TopNav from "./components/TopNav.jsx";
 import Home from "./pages/Home.jsx";
 import Review from "./pages/Review.jsx";
+import About from "./pages/About.jsx";
 
 // Graph Studio carries Cytoscape (most of the bundle); load it only when it is opened.
 const GraphStudio = lazy(() => import("./pages/GraphStudio.jsx"));
@@ -14,6 +15,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/review" element={<Review />} />
+        <Route path="/about" element={<About />} />
         <Route
           path="/graph"
           element={

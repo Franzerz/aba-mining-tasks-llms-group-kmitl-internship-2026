@@ -28,11 +28,11 @@ function TopicCard({ topic, active, onClick }) {
       aria-disabled={!hasFramework}
       onClick={hasFramework ? onClick : undefined}
       title={hasFramework
-        ? `${topic.topic}: ${topic.reviews} reviews (${topic.total} opinions) — ABA framework available` +
+        ? `${topic.topic}: ${topic.reviews} reviews (${topic.total} opinions) - ABA framework available` +
           (predicted ? " (contraries voted by an LLM, not by a person)"
             : noPairs ? " (only one sentiment was mined, so there is no pair to vote on)"
             : " (contraries voted by humans)")
-        : `${topic.topic}: ${topic.reviews} reviews (${topic.total} opinions) — no contraries yet, so no framework`}
+        : `${topic.topic}: ${topic.reviews} reviews (${topic.total} opinions) - no contraries yet, so no framework`}
       className={`text-left rounded-panel border p-4 transition-colors ${
         active
           ? "border-accent bg-elevated shadow-soft"
@@ -147,13 +147,13 @@ function SentimentPanel({ title, tone, rows, loading, query, onOpenGraph, hasCou
                 <span className="text-[12px] font-semibold break-words">{row.supporting}</span>
                 <span className="text-[12px] text-muted tabular-nums text-right"
                       title={hasCounts ? undefined : "This hotel's literals come from its vote files, which do not record which reviews produced them."}>
-                  {hasCounts ? row.count : "—"}
+                  {hasCounts ? row.count : "-"}
                 </span>
                 <GraphButton row={row} onOpen={onOpenGraph} />
               </summary>
               <div className="mt-2 pl-1 border-l-2 border-edge">
                 <p className="text-[11px] text-muted m-0 mb-1">
-                  Head claim: <code className="text-ink">{row.head || "—"}</code>
+                  Head claim: <code className="text-ink">{row.head || "-"}</code>
                   {row.contrary && <> · assumption: <code className="text-ink">{row.contrary}</code></>}
                 </p>
                 <ul className="m-0 pl-4 text-[12px] text-muted space-y-1">

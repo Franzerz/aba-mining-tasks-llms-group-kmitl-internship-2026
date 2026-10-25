@@ -58,8 +58,8 @@ function toggleSet(current, key) {
  *  would give a number that disagrees with the extension the server computed. Clicking an
  *  assumption focuses the graph on the literal it rests on.
  */
-function AcceptedAssumptionsPanel({ data, view, onFocus }) {
-  const result = useMemo(() => acceptedAssumptions(data), [data]);
+function AcceptedAssumptionsPanel({ data, view, head, onFocus }) {
+  const result = useMemo(() => acceptedAssumptions(data, head), [data, head]);
   const literalOf = useMemo(() => {
     const map = new Map();
     const roles = (data && data.new_aba && data.new_aba.atom_roles) || {};
@@ -103,8 +103,9 @@ function AcceptedAssumptionsPanel({ data, view, onFocus }) {
   return (
     <SidebarCard
       title={`Accepted assumption(s) (${semantics || "—"})`}
-      hint={`${accepted.length} of ${total} assumptions in this topic's framework are accepted — `
-            + "the whole framework, not just the claim shown in the graph. Click one to show it."}
+      hint={`${accepted.length} of ${total} assumptions behind ${head || "this topic"} are `
+            + "accepted under the selected semantics and contrary set. Click one to show it in "
+            + "the graph."}
     >
       <div className="flex items-baseline justify-between gap-2 mb-1.5">
         <span className="text-[12px] font-bold text-positive">Accepted</span>
@@ -652,7 +653,8 @@ export default function GraphStudio() {
             <LegendList view={view} data={data} />
           </SidebarCard>
 
-          <AcceptedAssumptionsPanel data={data} view={view} onFocus={changeFocus} />
+          <AcceptedAssumptionsPanel data={data} view={view} head={currentHead}
+                                    onFocus={changeFocus} />
 
           <SidebarCard
             title={`Extensions (${data?.semantics || "—"})`}

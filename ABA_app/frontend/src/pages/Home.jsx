@@ -13,7 +13,7 @@ import { fetchDatasetSummary, fetchTopicRatios, hotelLink } from "../api.js";
 const PIPELINE = [
   { task: "Task 1", title: "Topic & sentiment mining", body: "Finds which topics each hotel review talks about, the words it uses, and whether it praises or complains." },
   { task: "Task 2", title: "Body-literal generation", body: "Turns each of those raw sub opinions into short literals (e.g. clean_room) and the assumptions behind them." },
-  { task: "Task 3", title: "Contrary classification", body: "Decides, for a pair of literals, whether one is evidence against the other — the attack relation." },
+  { task: "Task 3", title: "Contrary classification", body: "Decides, for a pair of literals, whether one is evidence against the other, the attack relation." },
   { task: "Task 4", title: "ABA framework & graph", body: "Assembles the framework, applies the Translation Rule, and evaluates it with py_arg." },
 ];
 
@@ -87,12 +87,12 @@ const VOTED_BY_CHIPS = {
 
 function VotedByChip({ topic }) {
   const chip = topic.aspect ? VOTED_BY_CHIPS[topic.contrary_source] : null;
-  if (!chip) return <span className="text-[11px] text-muted">—</span>;
+  if (!chip) return <span className="text-[11px] text-muted">-</span>;
   const [label, cls, title] = chip;
   return (
     <Link
       to={hotelLink(`/graph?aspect=${encodeURIComponent(topic.aspect)}`)}
-      title={`${title} — open in Graph Studio`}
+      title={`${title} open in Graph Studio`}
       className={`inline-flex items-center rounded-full border px-2 py-0.5 text-[10.5px] font-bold
                   hover:brightness-95 transition ${cls}`}
     >
@@ -290,7 +290,7 @@ export default function Home() {
       <PageHead
         eyebrow="Assumption-Based Argumentation"
         title="ABA Mining Studio"
-        subtitle="Mining argumentation frameworks from hotel reviews — from raw review text through
+        subtitle="Mining argumentation frameworks from hotel reviews, from raw review text through
           topic and literal extraction to a formally evaluated ABA/AA graph."
         actions={
           <>
@@ -321,7 +321,7 @@ export default function Home() {
                 "one review's praise or complaint about one topic" +
                 (summary.off_topic_rows ? ` · ${summary.off_topic_rows} off-topic rows left out` : "")
               }
-              info={"One thing a guest said about one topic — a single piece of praise, or a " +
+              info={"One thing a guest said about one topic, a single piece of praise, or a " +
                     "single complaint. A guest who talks about three topics gives three of them, " +
                     "which is why there are more of these than reviews."}
             />
@@ -329,7 +329,7 @@ export default function Home() {
               label="Topics"
               value={summary.topics}
               hint="room, staff, location, …"
-              info={"The things guests talk about — the room, the staff, the location, and so " +
+              info={"The things guests talk about, the room, the staff, the location, and so " +
                     "on. Each one can be opened as its own graph."}
             />
             <StatCard
@@ -360,7 +360,7 @@ export default function Home() {
                 Across every topic, guests gave{" "}
                 <strong className="text-positive">{summary.positive.toLocaleString()} positive</strong> and{" "}
                 <strong className="text-negative">{summary.negative.toLocaleString()} negative</strong>{" "}
-                raw sub opinions — about {Math.max(1, Math.round(summary.positive / Math.max(summary.negative, 1)))} praises
+                raw sub opinions, about {Math.max(1, Math.round(summary.positive / Math.max(summary.negative, 1)))} praises
                 for every complaint.
               </p>
             </article>

@@ -8,6 +8,7 @@ const LINKS = [
   { to: "/", label: "Home", end: true },
   { to: "/review", label: "Review Analysis" },
   { to: "/graph", label: "Graph Studio" },
+  { to: "/about", label: "About" },
 ];
 
 /** Which hotel's data the whole site is showing.
