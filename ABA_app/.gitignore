@@ -1,0 +1,14 @@
+# Frontend build
+frontend/node_modules/
+frontend/dist/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Local config (copy .env.example -> .env)
+.env
+
+# Rebuildable caches (slim copies of LLM prediction files)
+.cache/

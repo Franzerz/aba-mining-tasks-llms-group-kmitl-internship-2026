@@ -198,7 +198,12 @@ def load_task2_instances_llm(
     # Task 1 outputs written before the header rename still say "Text Span"
     raw = raw.rename(columns={"Text Span": "Selected Content"})
 
-    if "Selected Content" not in raw.columns or "Sentiment" not in raw.columns:
+    # Task 1's combined output names the span "Text Span"; its sequence output names the same
+    # column "Selected Content". Either is fine here.
+    if "Text Span" not in raw.columns and "Selected Content" in raw.columns:
+        raw = raw.rename(columns={"Selected Content": "Text Span"})
+
+    if "Text Span" not in raw.columns or "Sentiment" not in raw.columns:
         raise ValueError(
             f"LLM CSV must have 'Selected Content' and 'Sentiment' columns.\n"
             f"Found: {list(raw.columns)}\n"
@@ -220,7 +225,9 @@ def load_task2_instances_llm(
 
     raw["Topic"] = raw["Topic"].str.strip()
     raw["Sentiment"] = raw["Sentiment"].str.strip()
-    raw = raw.drop_duplicates(subset=["Review ID", "Run", "Topic", "Selected Content"]).reset_index(drop=True)
+    # A Task 1 sequence output has no Run column, so dedup on the identifying columns present.
+    dedup_on = [c for c in ("Review ID", "Run", "Topic", "Text Span") if c in raw.columns]
+    raw = raw.drop_duplicates(subset=dedup_on).reset_index(drop=True)
 
     instances: list[Task2Instance] = []
     skipped = 0

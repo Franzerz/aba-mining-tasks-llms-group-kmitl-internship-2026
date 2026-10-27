@@ -1,0 +1,13 @@
+======================================================================
+ALL
+======================================================================
+   Model        Shot Topic           Category   Test Positive_Label  N_valid  TP  TN  FP  FN  Precision  Recall       F1  Accuracy
+llama3.2 contrary_v5 price Contrary(P)Body(N) Test 1            Yes      455 373  24  31  27   0.923267  0.9325 0.927861  0.872527
+llama3.2 contrary_v5 price Contrary(P)Body(N) Test 2            Yes      455 372  24  31  28   0.923077  0.9300 0.926526  0.870330
+llama3.2 contrary_v5 price Contrary(P)Body(N) Test 3            Yes      455 372  24  31  28   0.923077  0.9300 0.926526  0.870330
+
+======================================================================
+MICRO_BY_CATEGORY
+======================================================================
+   Model        Shot Topic           Category Positive_Label  Precision   Recall       F1  Accuracy  N_valid   TP  TN  FP  FN
+llama3.2 contrary_v5 price Contrary(P)Body(N)            Yes    0.92314 0.930833 0.926971  0.871062     1365 1117  72  93  83

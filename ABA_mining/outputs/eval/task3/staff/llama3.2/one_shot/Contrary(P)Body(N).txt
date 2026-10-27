@@ -1,0 +1,1522 @@
+======================================================================
+Test 1
+======================================================================
+  ID Vote LLM_Output Verify
+5239  Yes         No     FN
+ 913   No         No     TN
+ 205  Yes         No     FN
+6075   No         No     TN
+2254   No         No     TN
+2007   No         No     TN
+1829   No         No     TN
+1144  Yes        Yes     TP
+6034   No         No     TN
+ 840  Yes         No     FN
+5544   No         No     TN
+6068   No         No     TN
+4468   No         No     TN
+ 713   No         No     TN
+4838  Yes         No     FN
+3457  Yes         No     FN
+ 261  Yes        Yes     TP
+ 245  Yes         No     FN
+ 768  Yes         No     FN
+1792  Yes         No     FN
+1906   No         No     TN
+4140   No         No     TN
+4932   No         No     TN
+ 218   No         No     TN
+4598   No         No     TN
+1629   No         No     TN
+5866   No         No     TN
+5324   No         No     TN
+5746   No         No     TN
+4465   No         No     TN
+3437  Yes         No     FN
+1806  Yes         No     FN
+3680   No         No     TN
+4828   No         No     TN
+2279   No         No     TN
+  54  Yes        Yes     TP
+6217  Yes         No     FN
+1308  Yes         No     FN
+5720   No         No     TN
+3463  Yes         No     FN
+2788  Yes         No     FN
+2277   No         No     TN
+1274   No         No     TN
+1764  Yes        Yes     TP
+6255   No        Yes     FP
+2758  Yes         No     FN
+ 838  Yes         No     FN
+ 760  Yes        Yes     TP
+3113  Yes         No     FN
+ 793   No         No     TN
+2941  Yes         No     FN
+2818   No         No     TN
+4946   No         No     TN
+2167   No         No     TN
+ 356   No         No     TN
+5978   No         No     TN
+3764   No         No     TN
+4393   No         No     TN
+1023   No         No     TN
+3101   No         No     TN
+ 646   No         No     TN
+4523   No         No     TN
+2402   No         No     TN
+5150   No         No     TN
+5067  Yes         No     FN
+2963   No         No     TN
+4730   No         No     TN
+1576   No         No     TN
+5772   No        Yes     FP
+ 570  Yes        Yes     TP
+ 376  Yes         No     FN
+5418   No         No     TN
+1867  Yes         No     FN
+2371   No         No     TN
+ 654  Yes         No     FN
+1908   No         No     TN
+ 828   No         No     TN
+3114   No         No     TN
+2278   No         No     TN
+3715   No         No     TN
+5208   No         No     TN
+2989   No        Yes     FP
+1333   No        Yes     FP
+3033   No         No     TN
+2911  Yes         No     FN
+1717   No         No     TN
+5491   No         No     TN
+2188   No         No     TN
+5750   No         No     TN
+5600   No         No     TN
+5309   No         No     TN
+ 585   No         No     TN
+4991   No         No     TN
+5202   No         No     TN
+1402   No        Yes     FP
+4376   No         No     TN
+5974   No        Yes     FP
+2006   No         No     TN
+1339   No         No     TN
+3787   No         No     TN
+3109   No         No     TN
+2212   No         No     TN
+5243   No         No     TN
+5638   No         No     TN
+4563   No         No     TN
+1800   No         No     TN
+5609  Yes         No     FN
+2657  Yes         No     FN
+ 459  Yes        Yes     TP
+1877  Yes         No     FN
+ 263   No         No     TN
+2585   No        Yes     FP
+3287  Yes         No     FN
+2194   No         No     TN
+ 543  Yes         No     FN
+1729   No         No     TN
+4647   No         No     TN
+5882   No        Yes     FP
+2578   No         No     TN
+1742   No        Yes     FP
+5370  Yes         No     FN
+4090   No         No     TN
+3242   No        Yes     FP
+5267   No         No     TN
+3759  Yes        Yes     TP
+1171   No         No     TN
+2170  Yes         No     FN
+2021   No         No     TN
+6103   No         No     TN
+4599   No        Yes     FP
+4416   No         No     TN
+2153   No         No     TN
+6120   No         No     TN
+4789   No         No     TN
+3510   No         No     TN
+4781   No         No     TN
+3272  Yes         No     FN
+2966  Yes         No     FN
+1797   No         No     TN
+1134  Yes         No     FN
+4175   No         No     TN
+4043  Yes        Yes     TP
+ 745  Yes         No     FN
+6192   No         No     TN
+ 386  Yes         No     FN
+ 899   No         No     TN
+1253   No         No     TN
+5141  Yes         No     FN
+1311   No         No     TN
+5575   No         No     TN
+3459   No         No     TN
+4886   No         No     TN
+ 521   No         No     TN
+3153   No         No     TN
+3127   No         No     TN
+4882   No         No     TN
+3835  Yes        Yes     TP
+4335   No         No     TN
+2060   No         No     TN
+4533   No         No     TN
+  95   No         No     TN
+5573  Yes         No     FN
+5905   No         No     TN
+ 939  Yes         No     FN
+5585   No         No     TN
+4399   No         No     TN
+6152   No         No     TN
+2186   No         No     TN
+5251   No         No     TN
+2787  Yes         No     FN
+ 914   No        Yes     FP
+2405   No         No     TN
+3562   No         No     TN
+1296  Yes         No     FN
+3717   No         No     TN
+  27   No         No     TN
+5916  Yes         No     FN
+5896   No         No     TN
+2158   No         No     TN
+4101  Yes         No     FN
+6242   No         No     TN
+1464  Yes         No     FN
+4159   No         No     TN
+ 872   No         No     TN
+5123   No         No     TN
+2445  Yes         No     FN
+5235   No         No     TN
+4989   No         No     TN
+1630   No         No     TN
+3064  Yes         No     FN
+6247   No         No     TN
+1324   No         No     TN
+4419   No         No     TN
+4345   No         No     TN
+   5  Yes         No     FN
+4907   No         No     TN
+2656  Yes         No     FN
+4003   No        Yes     FP
+ 160  Yes        Yes     TP
+ 917   No         No     TN
+2974   No         No     TN
+2520   No         No     TN
+1962   No         No     TN
+ 475  Yes         No     FN
+1974   No         No     TN
+4648   No         No     TN
+ 702  Yes         No     FN
+5996   No         No     TN
+3982   No         No     TN
+ 567  Yes         No     FN
+6231   No         No     TN
+4364  Yes        Yes     TP
+1031   No         No     TN
+1052  Yes         No     FN
+5405   No         No     TN
+3894  Yes         No     FN
+4504   No         No     TN
+1353  Yes         No     FN
+2172  Yes         No     FN
+4323   No         No     TN
+4970   No         No     TN
+3467   No        Yes     FP
+1736   No         No     TN
+4418   No         No     TN
+6188   No         No     TN
+5980   No         No     TN
+5652  Yes        Yes     TP
+1648   No         No     TN
+5841   No         No     TN
+2554   No        Yes     FP
+3269  Yes         No     FN
+5503   No         No     TN
+3060   No         No     TN
+3589   No         No     TN
+4240  Yes         No     FN
+3699   No         No     TN
+ 992   No         No     TN
+2031  Yes         No     FN
+1841  Yes         No     FN
+ 525   No         No     TN
+2770  Yes         No     FN
+ 173  Yes         No     FN
+4820   No         No     TN
+4538  Yes         No     FN
+1886  Yes         No     FN
+4821   No         No     TN
+1805   No         No     TN
+  59  Yes         No     FN
+ 582  Yes         No     FN
+5799   No         No     TN
+5170  Yes         No     FN
+ 483   No         No     TN
+1876  Yes         No     FN
+ 553  Yes         No     FN
+ 258   No         No     TN
+2707   No         No     TN
+ 581   No         No     TN
+4212   No         No     TN
+1950   No         No     TN
+2282   No         No     TN
+5481  Yes         No     FN
+3977   No         No     TN
+1756  Yes         No     FN
+1084   No         No     TN
+5926   No         No     TN
+4678   No         No     TN
+4721   No         No     TN
+3873   No         No     TN
+1991  Yes         No     FN
+3875   No         No     TN
+3335   No         No     TN
+1560   No         No     TN
+ 773  Yes         No     FN
+ 795   No         No     TN
+5399   No         No     TN
+3532  Yes         No     FN
+2903   No         No     TN
+3470  Yes         No     FN
+3368   No         No     TN
+3826   No        Yes     FP
+5973   No         No     TN
+ 444  Yes         No     FN
+5517   No         No     TN
+5354   No         No     TN
+5294   No         No     TN
+ 807   No         No     TN
+ 497   No         No     TN
+3299   No         No     TN
+5966   No         No     TN
+2780  Yes         No     FN
+ 896   No        Yes     FP
+2037  Yes         No     FN
+1570   No         No     TN
+1559  Yes         No     FN
+4394  Yes        Yes     TP
+3676   No         No     TN
+1149  Yes        Yes     TP
+1504   No         No     TN
+3790  Yes         No     FN
+2047   No         No     TN
+ 618   No         No     TN
+3631  Yes         No     FN
+4509   No        Yes     FP
+ 803  Yes         No     FN
+ 415   No         No     TN
+5343   No         No     TN
+4429   No         No     TN
+ 121   No         No     TN
+ 765  Yes         No     FN
+6174   No         No     TN
+1937   No         No     TN
+1363   No         No     TN
+3330  Yes        Yes     TP
+3979   No         No     TN
+3944   No         No     TN
+1752   No         No     TN
+3286   No         No     TN
+ 481  Yes         No     FN
+1349   No         No     TN
+3105   No         No     TN
+  18   No         No     TN
+3199   No         No     TN
+2173   No         No     TN
+3728   No         No     TN
+2337  Yes         No     FN
+3466  Yes         No     FN
+5707   No         No     TN
+5985   No         No     TN
+4553   No         No     TN
+5423   No         No     TN
+5886   No         No     TN
+3987  Yes         No     FN
+1269   No         No     TN
+1556   No         No     TN
+2431  Yes         No     FN
+1784  Yes         No     FN
+ 480  Yes         No     FN
+4745  Yes         No     FN
+6028   No         No     TN
+4442  Yes         No     FN
+ 500   No         No     TN
+6128   No         No     TN
+2570  Yes         No     FN
+ 469   No         No     TN
+ 411  Yes         No     FN
+4786   No         No     TN
+3906   No         No     TN
+4120   No         No     TN
+4351   No         No     TN
+1290   No         No     TN
+ 466  Yes         No     FN
+4161   No         No     TN
+ 657  Yes         No     FN
+1523   No         No     TN
+ 562  Yes         No     FN
+4875   No        Yes     FP
+ 557  Yes         No     FN
+5532   No         No     TN
+1927  Yes        Yes     TP
+3308   No         No     TN
+ 983  Yes        Yes     TP
+4667   No         No     TN
+2017   No         No     TN
+4743   No         No     TN
+4871   No         No     TN
+ 326  Yes         No     FN
+5074   No         No     TN
+ 672   No         No     TN
+3435  Yes         No     FN
+5386   No         No     TN
+4782   No         No     TN
+4631  Yes        Yes     TP
+4283   No         No     TN
+2592   No         No     TN
+2137   No         No     TN
+1674   No         No     TN
+5487   No         No     TN
+5868   No         No     TN
+2574   No         No     TN
+1956   No         No     TN
+2176   No         No     TN
+3243   No         No     TN
+1073  Yes         No     FN
+5288   No         No     TN
+2458  Yes         No     FN
+3746   No         No     TN
+2591   No         No     TN
+6160   No         No     TN
+ 595   No         No     TN
+  77  Yes         No     FN
+3755  Yes         No     FN
+5089  Yes         No     FN
+4613  Yes         No     FN
+ 820   No         No     TN
+ 601   No         No     TN
+4405   No         No     TN
+1747   No        Yes     FP
+4145   No         No     TN
+1086   No         No     TN
+2860  Yes         No     FN
+ 564  Yes         No     FN
+2002   No         No     TN
+3028   No         No     TN
+2335  Yes         No     FN
+1293   No         No     TN
+3590   No         No     TN
+4451   No         No     TN
+5764   No         No     TN
+2479   No         No     TN
+5011   No         No     TN
+5358   No        Yes     FP
+4334   No         No     TN
+  65   No         No     TN
+5472   No         No     TN
+4544   No         No     TN
+2453   No         No     TN
+5435  Yes         No     FN
+ 849   No         No     TN
+1101   No         No     TN
+ 946   No         No     TN
+ 877   No         No     TN
+6082   No         No     TN
+2232   No         No     TN
+2309  Yes         No     FN
+4955   No         No     TN
+1726   No        Yes     FP
+5879   No         No     TN
+2809   No         No     TN
+1668   No         No     TN
+5632  Yes         No     FN
+5196   No         No     TN
+2163   No         No     TN
+4141   No         No     TN
+2058   No         No     TN
+ 417   No         No     TN
+ 757   No         No     TN
+5197   No        Yes     FP
+2267  Yes         No     FN
+ 362   No         No     TN
+  30  Yes         No     FN
+2733   No         No     TN
+1072  Yes         No     FN
+5220   No        Yes     FP
+2146  Yes         No     FN
+6073   No         No     TN
+3620  Yes         No     FN
+4520  Yes         No     FN
+5781  Yes         No     FN
+3504  Yes         No     FN
+4595  Yes        Yes     TP
+  80  Yes         No     FN
+ 617   No         No     TN
+5661   No         No     TN
+1222   No         No     TN
+4470   No         No     TN
+ 296   No         No     TN
+3025   No         No     TN
+4772   No         No     TN
+4527   No         No     TN
+1214   No         No     TN
+3521   No         No     TN
+1045  Yes         No     FN
+ 343  Yes         No     FN
+2526   No         No     TN
+2988   No         No     TN
+ 327   No         No     TN
+2932  Yes         No     FN
+1721   No         No     TN
+5588   No         No     TN
+2045   No         No     TN
+5464   No         No     TN
+ 843   No         No     TN
+2898   No         No     TN
+4587  Yes         No     FN
+5085   No         No     TN
+6140   No        Yes     FP
+1267   No         No     TN
+1940   No         No     TN
+1332   No         No     TN
+1451   No         No     TN
+3378  Yes         No     FN
+ 204  Yes         No     FN
+1470  Yes         No     FN
+2722  Yes         No     FN
+3373   No         No     TN
+5488   No         No     TN
+6022   No         No     TN
+2033   No         No     TN
+1305   No         No     TN
+5745  Yes        Yes     TP
+ 886   No         No     TN
+3134  Yes         No     FN
+ 318  Yes         No     FN
+3856   No         No     TN
+1823  Yes         No     FN
+1635   No         No     TN
+3771  Yes        Yes     TP
+2865  Yes         No     FN
+2501   No         No     TN
+1865   No         No     TN
+
+======================================================================
+Test 2
+======================================================================
+  ID Vote LLM_Output Verify
+5239  Yes         No     FN
+ 913   No         No     TN
+ 205  Yes         No     FN
+6075   No         No     TN
+2254   No         No     TN
+2007   No         No     TN
+1829   No         No     TN
+1144  Yes        Yes     TP
+6034   No         No     TN
+ 840  Yes         No     FN
+5544   No         No     TN
+6068   No         No     TN
+4468   No         No     TN
+ 713   No         No     TN
+4838  Yes         No     FN
+3457  Yes         No     FN
+ 261  Yes        Yes     TP
+ 245  Yes         No     FN
+ 768  Yes         No     FN
+1792  Yes         No     FN
+1906   No         No     TN
+4140   No         No     TN
+4932   No         No     TN
+ 218   No         No     TN
+4598   No         No     TN
+1629   No         No     TN
+5866   No         No     TN
+5324   No         No     TN
+5746   No         No     TN
+4465   No         No     TN
+3437  Yes         No     FN
+1806  Yes         No     FN
+3680   No         No     TN
+4828   No         No     TN
+2279   No         No     TN
+  54  Yes        Yes     TP
+6217  Yes         No     FN
+1308  Yes         No     FN
+5720   No         No     TN
+3463  Yes         No     FN
+2788  Yes         No     FN
+2277   No         No     TN
+1274   No         No     TN
+1764  Yes        Yes     TP
+6255   No        Yes     FP
+2758  Yes         No     FN
+ 838  Yes         No     FN
+ 760  Yes        Yes     TP
+3113  Yes         No     FN
+ 793   No         No     TN
+2941  Yes         No     FN
+2818   No         No     TN
+4946   No         No     TN
+2167   No         No     TN
+ 356   No         No     TN
+5978   No         No     TN
+3764   No         No     TN
+4393   No         No     TN
+1023   No         No     TN
+3101   No         No     TN
+ 646   No         No     TN
+4523   No         No     TN
+2402   No         No     TN
+5150   No         No     TN
+5067  Yes         No     FN
+2963   No         No     TN
+4730   No         No     TN
+1576   No         No     TN
+5772   No        Yes     FP
+ 570  Yes        Yes     TP
+ 376  Yes         No     FN
+5418   No         No     TN
+1867  Yes         No     FN
+2371   No         No     TN
+ 654  Yes         No     FN
+1908   No         No     TN
+ 828   No         No     TN
+3114   No         No     TN
+2278   No         No     TN
+3715   No         No     TN
+5208   No         No     TN
+2989   No        Yes     FP
+1333   No        Yes     FP
+3033   No         No     TN
+2911  Yes         No     FN
+1717   No         No     TN
+5491   No         No     TN
+2188   No         No     TN
+5750   No         No     TN
+5600   No         No     TN
+5309   No         No     TN
+ 585   No         No     TN
+4991   No         No     TN
+5202   No         No     TN
+1402   No        Yes     FP
+4376   No         No     TN
+5974   No        Yes     FP
+2006   No         No     TN
+1339   No         No     TN
+3787   No         No     TN
+3109   No         No     TN
+2212   No         No     TN
+5243   No         No     TN
+5638   No         No     TN
+4563   No         No     TN
+1800   No         No     TN
+5609  Yes         No     FN
+2657  Yes         No     FN
+ 459  Yes        Yes     TP
+1877  Yes         No     FN
+ 263   No         No     TN
+2585   No        Yes     FP
+3287  Yes         No     FN
+2194   No         No     TN
+ 543  Yes         No     FN
+1729   No         No     TN
+4647   No         No     TN
+5882   No        Yes     FP
+2578   No         No     TN
+1742   No        Yes     FP
+5370  Yes         No     FN
+4090   No         No     TN
+3242   No        Yes     FP
+5267   No         No     TN
+3759  Yes        Yes     TP
+1171   No         No     TN
+2170  Yes         No     FN
+2021   No         No     TN
+6103   No         No     TN
+4599   No        Yes     FP
+4416   No         No     TN
+2153   No         No     TN
+6120   No         No     TN
+4789   No         No     TN
+3510   No         No     TN
+4781   No         No     TN
+3272  Yes         No     FN
+2966  Yes         No     FN
+1797   No         No     TN
+1134  Yes         No     FN
+4175   No         No     TN
+4043  Yes        Yes     TP
+ 745  Yes         No     FN
+6192   No         No     TN
+ 386  Yes         No     FN
+ 899   No         No     TN
+1253   No         No     TN
+5141  Yes         No     FN
+1311   No         No     TN
+5575   No         No     TN
+3459   No         No     TN
+4886   No         No     TN
+ 521   No         No     TN
+3153   No         No     TN
+3127   No         No     TN
+4882   No         No     TN
+3835  Yes        Yes     TP
+4335   No         No     TN
+2060   No         No     TN
+4533   No         No     TN
+  95   No         No     TN
+5573  Yes         No     FN
+5905   No         No     TN
+ 939  Yes         No     FN
+5585   No         No     TN
+4399   No         No     TN
+6152   No         No     TN
+2186   No         No     TN
+5251   No         No     TN
+2787  Yes         No     FN
+ 914   No        Yes     FP
+2405   No         No     TN
+3562   No         No     TN
+1296  Yes         No     FN
+3717   No        Yes     FP
+  27   No         No     TN
+5916  Yes         No     FN
+5896   No         No     TN
+2158   No         No     TN
+4101  Yes         No     FN
+6242   No         No     TN
+1464  Yes         No     FN
+4159   No         No     TN
+ 872   No         No     TN
+5123   No         No     TN
+2445  Yes         No     FN
+5235   No         No     TN
+4989   No         No     TN
+1630   No         No     TN
+3064  Yes         No     FN
+6247   No         No     TN
+1324   No         No     TN
+4419   No         No     TN
+4345   No         No     TN
+   5  Yes         No     FN
+4907   No         No     TN
+2656  Yes         No     FN
+4003   No        Yes     FP
+ 160  Yes        Yes     TP
+ 917   No         No     TN
+2974   No         No     TN
+2520   No         No     TN
+1962   No         No     TN
+ 475  Yes         No     FN
+1974   No         No     TN
+4648   No         No     TN
+ 702  Yes         No     FN
+5996   No         No     TN
+3982   No         No     TN
+ 567  Yes         No     FN
+6231   No         No     TN
+4364  Yes        Yes     TP
+1031   No         No     TN
+1052  Yes         No     FN
+5405   No         No     TN
+3894  Yes         No     FN
+4504   No         No     TN
+1353  Yes         No     FN
+2172  Yes         No     FN
+4323   No         No     TN
+4970   No         No     TN
+3467   No        Yes     FP
+1736   No         No     TN
+4418   No         No     TN
+6188   No         No     TN
+5980   No         No     TN
+5652  Yes        Yes     TP
+1648   No         No     TN
+5841   No         No     TN
+2554   No        Yes     FP
+3269  Yes         No     FN
+5503   No         No     TN
+3060   No         No     TN
+3589   No         No     TN
+4240  Yes         No     FN
+3699   No         No     TN
+ 992   No         No     TN
+2031  Yes         No     FN
+1841  Yes         No     FN
+ 525   No         No     TN
+2770  Yes         No     FN
+ 173  Yes         No     FN
+4820   No         No     TN
+4538  Yes         No     FN
+1886  Yes         No     FN
+4821   No         No     TN
+1805   No         No     TN
+  59  Yes         No     FN
+ 582  Yes         No     FN
+5799   No         No     TN
+5170  Yes         No     FN
+ 483   No         No     TN
+1876  Yes         No     FN
+ 553  Yes         No     FN
+ 258   No         No     TN
+2707   No         No     TN
+ 581   No         No     TN
+4212   No         No     TN
+1950   No         No     TN
+2282   No         No     TN
+5481  Yes         No     FN
+3977   No         No     TN
+1756  Yes         No     FN
+1084   No         No     TN
+5926   No         No     TN
+4678   No         No     TN
+4721   No         No     TN
+3873   No         No     TN
+1991  Yes         No     FN
+3875   No         No     TN
+3335   No         No     TN
+1560   No         No     TN
+ 773  Yes         No     FN
+ 795   No         No     TN
+5399   No         No     TN
+3532  Yes         No     FN
+2903   No         No     TN
+3470  Yes         No     FN
+3368   No         No     TN
+3826   No        Yes     FP
+5973   No         No     TN
+ 444  Yes         No     FN
+5517   No         No     TN
+5354   No         No     TN
+5294   No         No     TN
+ 807   No         No     TN
+ 497   No         No     TN
+3299   No         No     TN
+5966   No         No     TN
+2780  Yes         No     FN
+ 896   No        Yes     FP
+2037  Yes         No     FN
+1570   No         No     TN
+1559  Yes         No     FN
+4394  Yes        Yes     TP
+3676   No         No     TN
+1149  Yes        Yes     TP
+1504   No         No     TN
+3790  Yes         No     FN
+2047   No         No     TN
+ 618   No         No     TN
+3631  Yes         No     FN
+4509   No        Yes     FP
+ 803  Yes         No     FN
+ 415   No         No     TN
+5343   No         No     TN
+4429   No         No     TN
+ 121   No         No     TN
+ 765  Yes         No     FN
+6174   No         No     TN
+1937   No         No     TN
+1363   No         No     TN
+3330  Yes        Yes     TP
+3979   No         No     TN
+3944   No         No     TN
+1752   No         No     TN
+3286   No         No     TN
+ 481  Yes         No     FN
+1349   No         No     TN
+3105   No         No     TN
+  18   No         No     TN
+3199   No         No     TN
+2173   No         No     TN
+3728   No         No     TN
+2337  Yes         No     FN
+3466  Yes         No     FN
+5707   No         No     TN
+5985   No         No     TN
+4553   No         No     TN
+5423   No         No     TN
+5886   No         No     TN
+3987  Yes         No     FN
+1269   No         No     TN
+1556   No         No     TN
+2431  Yes         No     FN
+1784  Yes         No     FN
+ 480  Yes         No     FN
+4745  Yes         No     FN
+6028   No         No     TN
+4442  Yes         No     FN
+ 500   No         No     TN
+6128   No         No     TN
+2570  Yes         No     FN
+ 469   No         No     TN
+ 411  Yes         No     FN
+4786   No         No     TN
+3906   No         No     TN
+4120   No         No     TN
+4351   No         No     TN
+1290   No         No     TN
+ 466  Yes         No     FN
+4161   No         No     TN
+ 657  Yes         No     FN
+1523   No         No     TN
+ 562  Yes         No     FN
+4875   No        Yes     FP
+ 557  Yes         No     FN
+5532   No         No     TN
+1927  Yes        Yes     TP
+3308   No         No     TN
+ 983  Yes        Yes     TP
+4667   No         No     TN
+2017   No         No     TN
+4743   No         No     TN
+4871   No         No     TN
+ 326  Yes         No     FN
+5074   No         No     TN
+ 672   No         No     TN
+3435  Yes         No     FN
+5386   No         No     TN
+4782   No         No     TN
+4631  Yes        Yes     TP
+4283   No         No     TN
+2592   No         No     TN
+2137   No         No     TN
+1674   No         No     TN
+5487   No         No     TN
+5868   No         No     TN
+2574   No         No     TN
+1956   No         No     TN
+2176   No         No     TN
+3243   No         No     TN
+1073  Yes         No     FN
+5288   No         No     TN
+2458  Yes         No     FN
+3746   No         No     TN
+2591   No         No     TN
+6160   No         No     TN
+ 595   No         No     TN
+  77  Yes         No     FN
+3755  Yes         No     FN
+5089  Yes         No     FN
+4613  Yes         No     FN
+ 820   No         No     TN
+ 601   No         No     TN
+4405   No         No     TN
+1747   No        Yes     FP
+4145   No         No     TN
+1086   No         No     TN
+2860  Yes         No     FN
+ 564  Yes         No     FN
+2002   No         No     TN
+3028   No         No     TN
+2335  Yes         No     FN
+1293   No         No     TN
+3590   No         No     TN
+4451   No         No     TN
+5764   No         No     TN
+2479   No         No     TN
+5011   No         No     TN
+5358   No        Yes     FP
+4334   No         No     TN
+  65   No         No     TN
+5472   No         No     TN
+4544   No         No     TN
+2453   No         No     TN
+5435  Yes         No     FN
+ 849   No         No     TN
+1101   No         No     TN
+ 946   No         No     TN
+ 877   No         No     TN
+6082   No         No     TN
+2232   No         No     TN
+2309  Yes         No     FN
+4955   No         No     TN
+1726   No        Yes     FP
+5879   No         No     TN
+2809   No         No     TN
+1668   No         No     TN
+5632  Yes         No     FN
+5196   No         No     TN
+2163   No         No     TN
+4141   No         No     TN
+2058   No         No     TN
+ 417   No         No     TN
+ 757   No         No     TN
+5197   No        Yes     FP
+2267  Yes         No     FN
+ 362   No         No     TN
+  30  Yes         No     FN
+2733   No         No     TN
+1072  Yes         No     FN
+5220   No        Yes     FP
+2146  Yes         No     FN
+6073   No         No     TN
+3620  Yes         No     FN
+4520  Yes         No     FN
+5781  Yes         No     FN
+3504  Yes         No     FN
+4595  Yes        Yes     TP
+  80  Yes         No     FN
+ 617   No         No     TN
+5661   No         No     TN
+1222   No         No     TN
+4470   No         No     TN
+ 296   No         No     TN
+3025   No         No     TN
+4772   No         No     TN
+4527   No         No     TN
+1214   No         No     TN
+3521   No         No     TN
+1045  Yes         No     FN
+ 343  Yes         No     FN
+2526   No         No     TN
+2988   No         No     TN
+ 327   No         No     TN
+2932  Yes         No     FN
+1721   No         No     TN
+5588   No         No     TN
+2045   No         No     TN
+5464   No         No     TN
+ 843   No         No     TN
+2898   No         No     TN
+4587  Yes         No     FN
+5085   No         No     TN
+6140   No        Yes     FP
+1267   No         No     TN
+1940   No         No     TN
+1332   No         No     TN
+1451   No         No     TN
+3378  Yes         No     FN
+ 204  Yes         No     FN
+1470  Yes         No     FN
+2722  Yes         No     FN
+3373   No         No     TN
+5488   No         No     TN
+6022   No         No     TN
+2033   No         No     TN
+1305   No         No     TN
+5745  Yes        Yes     TP
+ 886   No         No     TN
+3134  Yes         No     FN
+ 318  Yes         No     FN
+3856   No         No     TN
+1823  Yes         No     FN
+1635   No         No     TN
+3771  Yes        Yes     TP
+2865  Yes         No     FN
+2501   No         No     TN
+1865   No         No     TN
+
+======================================================================
+Test 3
+======================================================================
+  ID Vote LLM_Output Verify
+5239  Yes         No     FN
+ 913   No         No     TN
+ 205  Yes         No     FN
+6075   No         No     TN
+2254   No         No     TN
+2007   No         No     TN
+1829   No         No     TN
+1144  Yes        Yes     TP
+6034   No         No     TN
+ 840  Yes         No     FN
+5544   No         No     TN
+6068   No         No     TN
+4468   No         No     TN
+ 713   No         No     TN
+4838  Yes         No     FN
+3457  Yes         No     FN
+ 261  Yes        Yes     TP
+ 245  Yes         No     FN
+ 768  Yes         No     FN
+1792  Yes         No     FN
+1906   No         No     TN
+4140   No         No     TN
+4932   No         No     TN
+ 218   No         No     TN
+4598   No         No     TN
+1629   No         No     TN
+5866   No         No     TN
+5324   No         No     TN
+5746   No         No     TN
+4465   No         No     TN
+3437  Yes         No     FN
+1806  Yes         No     FN
+3680   No         No     TN
+4828   No         No     TN
+2279   No         No     TN
+  54  Yes        Yes     TP
+6217  Yes         No     FN
+1308  Yes         No     FN
+5720   No         No     TN
+3463  Yes         No     FN
+2788  Yes         No     FN
+2277   No         No     TN
+1274   No         No     TN
+1764  Yes        Yes     TP
+6255   No        Yes     FP
+2758  Yes         No     FN
+ 838  Yes         No     FN
+ 760  Yes        Yes     TP
+3113  Yes         No     FN
+ 793   No         No     TN
+2941  Yes         No     FN
+2818   No         No     TN
+4946   No         No     TN
+2167   No         No     TN
+ 356   No         No     TN
+5978   No         No     TN
+3764   No         No     TN
+4393   No         No     TN
+1023   No         No     TN
+3101   No         No     TN
+ 646   No         No     TN
+4523   No         No     TN
+2402   No         No     TN
+5150   No         No     TN
+5067  Yes         No     FN
+2963   No         No     TN
+4730   No         No     TN
+1576   No         No     TN
+5772   No        Yes     FP
+ 570  Yes        Yes     TP
+ 376  Yes         No     FN
+5418   No         No     TN
+1867  Yes         No     FN
+2371   No         No     TN
+ 654  Yes         No     FN
+1908   No         No     TN
+ 828   No         No     TN
+3114   No         No     TN
+2278   No         No     TN
+3715   No         No     TN
+5208   No         No     TN
+2989   No        Yes     FP
+1333   No        Yes     FP
+3033   No         No     TN
+2911  Yes         No     FN
+1717   No         No     TN
+5491   No         No     TN
+2188   No         No     TN
+5750   No         No     TN
+5600   No         No     TN
+5309   No         No     TN
+ 585   No         No     TN
+4991   No         No     TN
+5202   No         No     TN
+1402   No        Yes     FP
+4376   No         No     TN
+5974   No        Yes     FP
+2006   No         No     TN
+1339   No         No     TN
+3787   No         No     TN
+3109   No         No     TN
+2212   No         No     TN
+5243   No         No     TN
+5638   No         No     TN
+4563   No         No     TN
+1800   No         No     TN
+5609  Yes         No     FN
+2657  Yes         No     FN
+ 459  Yes        Yes     TP
+1877  Yes         No     FN
+ 263   No         No     TN
+2585   No        Yes     FP
+3287  Yes         No     FN
+2194   No         No     TN
+ 543  Yes         No     FN
+1729   No         No     TN
+4647   No         No     TN
+5882   No        Yes     FP
+2578   No         No     TN
+1742   No        Yes     FP
+5370  Yes         No     FN
+4090   No         No     TN
+3242   No        Yes     FP
+5267   No         No     TN
+3759  Yes        Yes     TP
+1171   No         No     TN
+2170  Yes         No     FN
+2021   No         No     TN
+6103   No         No     TN
+4599   No        Yes     FP
+4416   No         No     TN
+2153   No         No     TN
+6120   No         No     TN
+4789   No         No     TN
+3510   No         No     TN
+4781   No         No     TN
+3272  Yes         No     FN
+2966  Yes         No     FN
+1797   No         No     TN
+1134  Yes         No     FN
+4175   No         No     TN
+4043  Yes        Yes     TP
+ 745  Yes         No     FN
+6192   No         No     TN
+ 386  Yes         No     FN
+ 899   No         No     TN
+1253   No         No     TN
+5141  Yes         No     FN
+1311   No         No     TN
+5575   No         No     TN
+3459   No         No     TN
+4886   No         No     TN
+ 521   No         No     TN
+3153   No         No     TN
+3127   No         No     TN
+4882   No         No     TN
+3835  Yes        Yes     TP
+4335   No         No     TN
+2060   No         No     TN
+4533   No         No     TN
+  95   No         No     TN
+5573  Yes         No     FN
+5905   No         No     TN
+ 939  Yes         No     FN
+5585   No         No     TN
+4399   No         No     TN
+6152   No         No     TN
+2186   No         No     TN
+5251   No         No     TN
+2787  Yes         No     FN
+ 914   No        Yes     FP
+2405   No         No     TN
+3562   No         No     TN
+1296  Yes         No     FN
+3717   No        Yes     FP
+  27   No         No     TN
+5916  Yes         No     FN
+5896   No         No     TN
+2158   No         No     TN
+4101  Yes         No     FN
+6242   No         No     TN
+1464  Yes         No     FN
+4159   No         No     TN
+ 872   No         No     TN
+5123   No         No     TN
+2445  Yes         No     FN
+5235   No         No     TN
+4989   No         No     TN
+1630   No         No     TN
+3064  Yes         No     FN
+6247   No         No     TN
+1324   No         No     TN
+4419   No         No     TN
+4345   No         No     TN
+   5  Yes         No     FN
+4907   No         No     TN
+2656  Yes         No     FN
+4003   No        Yes     FP
+ 160  Yes        Yes     TP
+ 917   No         No     TN
+2974   No         No     TN
+2520   No         No     TN
+1962   No         No     TN
+ 475  Yes         No     FN
+1974   No         No     TN
+4648   No         No     TN
+ 702  Yes         No     FN
+5996   No         No     TN
+3982   No         No     TN
+ 567  Yes         No     FN
+6231   No         No     TN
+4364  Yes        Yes     TP
+1031   No         No     TN
+1052  Yes         No     FN
+5405   No         No     TN
+3894  Yes         No     FN
+4504   No         No     TN
+1353  Yes         No     FN
+2172  Yes         No     FN
+4323   No         No     TN
+4970   No         No     TN
+3467   No        Yes     FP
+1736   No         No     TN
+4418   No         No     TN
+6188   No         No     TN
+5980   No         No     TN
+5652  Yes        Yes     TP
+1648   No         No     TN
+5841   No         No     TN
+2554   No        Yes     FP
+3269  Yes         No     FN
+5503   No         No     TN
+3060   No         No     TN
+3589   No         No     TN
+4240  Yes         No     FN
+3699   No         No     TN
+ 992   No         No     TN
+2031  Yes         No     FN
+1841  Yes         No     FN
+ 525   No         No     TN
+2770  Yes         No     FN
+ 173  Yes         No     FN
+4820   No         No     TN
+4538  Yes         No     FN
+1886  Yes         No     FN
+4821   No         No     TN
+1805   No         No     TN
+  59  Yes         No     FN
+ 582  Yes         No     FN
+5799   No         No     TN
+5170  Yes         No     FN
+ 483   No         No     TN
+1876  Yes         No     FN
+ 553  Yes         No     FN
+ 258   No         No     TN
+2707   No         No     TN
+ 581   No         No     TN
+4212   No         No     TN
+1950   No         No     TN
+2282   No         No     TN
+5481  Yes         No     FN
+3977   No         No     TN
+1756  Yes         No     FN
+1084   No         No     TN
+5926   No         No     TN
+4678   No         No     TN
+4721   No         No     TN
+3873   No         No     TN
+1991  Yes         No     FN
+3875   No         No     TN
+3335   No         No     TN
+1560   No         No     TN
+ 773  Yes         No     FN
+ 795   No         No     TN
+5399   No         No     TN
+3532  Yes         No     FN
+2903   No         No     TN
+3470  Yes         No     FN
+3368   No         No     TN
+3826   No        Yes     FP
+5973   No         No     TN
+ 444  Yes         No     FN
+5517   No         No     TN
+5354   No         No     TN
+5294   No         No     TN
+ 807   No         No     TN
+ 497   No         No     TN
+3299   No         No     TN
+5966   No         No     TN
+2780  Yes         No     FN
+ 896   No        Yes     FP
+2037  Yes         No     FN
+1570   No         No     TN
+1559  Yes         No     FN
+4394  Yes        Yes     TP
+3676   No         No     TN
+1149  Yes        Yes     TP
+1504   No         No     TN
+3790  Yes         No     FN
+2047   No         No     TN
+ 618   No         No     TN
+3631  Yes         No     FN
+4509   No        Yes     FP
+ 803  Yes         No     FN
+ 415   No         No     TN
+5343   No         No     TN
+4429   No         No     TN
+ 121   No         No     TN
+ 765  Yes         No     FN
+6174   No         No     TN
+1937   No         No     TN
+1363   No         No     TN
+3330  Yes        Yes     TP
+3979   No         No     TN
+3944   No         No     TN
+1752   No         No     TN
+3286   No         No     TN
+ 481  Yes         No     FN
+1349   No         No     TN
+3105   No         No     TN
+  18   No         No     TN
+3199   No         No     TN
+2173   No         No     TN
+3728   No         No     TN
+2337  Yes         No     FN
+3466  Yes         No     FN
+5707   No         No     TN
+5985   No         No     TN
+4553   No         No     TN
+5423   No         No     TN
+5886   No         No     TN
+3987  Yes         No     FN
+1269   No         No     TN
+1556   No         No     TN
+2431  Yes         No     FN
+1784  Yes         No     FN
+ 480  Yes         No     FN
+4745  Yes         No     FN
+6028   No         No     TN
+4442  Yes         No     FN
+ 500   No         No     TN
+6128   No         No     TN
+2570  Yes         No     FN
+ 469   No         No     TN
+ 411  Yes         No     FN
+4786   No         No     TN
+3906   No         No     TN
+4120   No         No     TN
+4351   No         No     TN
+1290   No         No     TN
+ 466  Yes         No     FN
+4161   No         No     TN
+ 657  Yes         No     FN
+1523   No         No     TN
+ 562  Yes         No     FN
+4875   No        Yes     FP
+ 557  Yes         No     FN
+5532   No         No     TN
+1927  Yes        Yes     TP
+3308   No         No     TN
+ 983  Yes        Yes     TP
+4667   No         No     TN
+2017   No         No     TN
+4743   No         No     TN
+4871   No         No     TN
+ 326  Yes         No     FN
+5074   No         No     TN
+ 672   No         No     TN
+3435  Yes         No     FN
+5386   No         No     TN
+4782   No         No     TN
+4631  Yes        Yes     TP
+4283   No         No     TN
+2592   No         No     TN
+2137   No         No     TN
+1674   No         No     TN
+5487   No         No     TN
+5868   No         No     TN
+2574   No         No     TN
+1956   No         No     TN
+2176   No         No     TN
+3243   No         No     TN
+1073  Yes         No     FN
+5288   No         No     TN
+2458  Yes         No     FN
+3746   No         No     TN
+2591   No         No     TN
+6160   No         No     TN
+ 595   No         No     TN
+  77  Yes         No     FN
+3755  Yes         No     FN
+5089  Yes         No     FN
+4613  Yes         No     FN
+ 820   No         No     TN
+ 601   No         No     TN
+4405   No         No     TN
+1747   No        Yes     FP
+4145   No         No     TN
+1086   No         No     TN
+2860  Yes         No     FN
+ 564  Yes         No     FN
+2002   No         No     TN
+3028   No         No     TN
+2335  Yes         No     FN
+1293   No         No     TN
+3590   No         No     TN
+4451   No         No     TN
+5764   No         No     TN
+2479   No         No     TN
+5011   No         No     TN
+5358   No        Yes     FP
+4334   No         No     TN
+  65   No         No     TN
+5472   No         No     TN
+4544   No         No     TN
+2453   No         No     TN
+5435  Yes         No     FN
+ 849   No         No     TN
+1101   No         No     TN
+ 946   No         No     TN
+ 877   No         No     TN
+6082   No         No     TN
+2232   No         No     TN
+2309  Yes         No     FN
+4955   No         No     TN
+1726   No        Yes     FP
+5879   No         No     TN
+2809   No         No     TN
+1668   No         No     TN
+5632  Yes         No     FN
+5196   No         No     TN
+2163   No         No     TN
+4141   No         No     TN
+2058   No         No     TN
+ 417   No         No     TN
+ 757   No         No     TN
+5197   No        Yes     FP
+2267  Yes         No     FN
+ 362   No         No     TN
+  30  Yes         No     FN
+2733   No         No     TN
+1072  Yes         No     FN
+5220   No        Yes     FP
+2146  Yes         No     FN
+6073   No         No     TN
+3620  Yes         No     FN
+4520  Yes         No     FN
+5781  Yes         No     FN
+3504  Yes         No     FN
+4595  Yes        Yes     TP
+  80  Yes         No     FN
+ 617   No         No     TN
+5661   No         No     TN
+1222   No         No     TN
+4470   No         No     TN
+ 296   No         No     TN
+3025   No         No     TN
+4772   No         No     TN
+4527   No         No     TN
+1214   No         No     TN
+3521   No         No     TN
+1045  Yes         No     FN
+ 343  Yes         No     FN
+2526   No         No     TN
+2988   No         No     TN
+ 327   No         No     TN
+2932  Yes         No     FN
+1721   No         No     TN
+5588   No         No     TN
+2045   No         No     TN
+5464   No         No     TN
+ 843   No         No     TN
+2898   No         No     TN
+4587  Yes         No     FN
+5085   No         No     TN
+6140   No        Yes     FP
+1267   No         No     TN
+1940   No         No     TN
+1332   No         No     TN
+1451   No         No     TN
+3378  Yes         No     FN
+ 204  Yes         No     FN
+1470  Yes         No     FN
+2722  Yes         No     FN
+3373   No         No     TN
+5488   No         No     TN
+6022   No         No     TN
+2033   No         No     TN
+1305   No         No     TN
+5745  Yes        Yes     TP
+ 886   No         No     TN
+3134  Yes         No     FN
+ 318  Yes         No     FN
+3856   No         No     TN
+1823  Yes         No     FN
+1635   No         No     TN
+3771  Yes        Yes     TP
+2865  Yes         No     FN
+2501   No         No     TN
+1865   No         No     TN
+
+======================================================================
+SUMMARY
+======================================================================
+   Model     Shot Topic           Category   Test Positive_Label  N_valid  TP  TN  FP  FN  Precision   Recall       F1  Accuracy
+llama3.2 one_shot staff Contrary(P)Body(N) Test 1            Yes      500  22 322  25 131   0.468085 0.143791 0.220000     0.688
+llama3.2 one_shot staff Contrary(P)Body(N) Test 2            Yes      500  22 321  26 131   0.458333 0.143791 0.218906     0.686
+llama3.2 one_shot staff Contrary(P)Body(N) Test 3            Yes      500  22 321  26 131   0.458333 0.143791 0.218906     0.686

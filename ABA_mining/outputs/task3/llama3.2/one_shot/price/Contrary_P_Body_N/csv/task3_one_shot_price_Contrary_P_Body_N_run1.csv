@@ -1,0 +1,2731 @@
+ID,Prompt,PhraseA,PhraseB,Test 1
+1,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_great_quality.
+",no_evident_not_great_quality,unlabeled_shampoo_dispenser_for_this_price,No
+2,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_great_quality.
+",no_evident_not_great_quality,shampoo_seem_cheap_considering_hotel_cost,No
+3,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_great_quality.
+",no_evident_not_great_quality,guesthouse_but_price_like_hotel,No
+4,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_great_quality.
+",no_evident_not_great_quality,for_money_you_pay_you_get_one_small_water_bottle,No
+5,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_great_quality.
+",no_evident_not_great_quality,expensive_for_what_you_get,Yes
+6,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_great_quality.
+",no_evident_not_great_quality,expensive_rate_for_what_offer,No
+7,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_great_quality.
+",no_evident_not_great_quality,overpriced_for_facility,No
+8,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_great_quality.
+",no_evident_not_great_quality,meal_not_include_in_price,No
+9,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_great_quality.
+",no_evident_not_great_quality,high_price_for_not_enough_comfort_room,No
+10,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_great_quality.
+",no_evident_not_great_quality,high_price_for_small_room,No
+11,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_great_quality.
+",no_evident_not_great_quality,expensive_hotel,No
+12,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_great_quality.
+",no_evident_not_great_quality,expensive_for_average_hotel,No
+13,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_great_quality.
+",no_evident_not_great_quality,expensive_for_3_star_hotel,No
+14,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_great_price.
+",no_evident_not_great_price,unlabeled_shampoo_dispenser_for_this_price,Yes
+15,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_great_price.
+",no_evident_not_great_price,shampoo_seem_cheap_considering_hotel_cost,No
+16,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_great_price.
+",no_evident_not_great_price,guesthouse_but_price_like_hotel,No
+17,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_great_price.
+",no_evident_not_great_price,for_money_you_pay_you_get_one_small_water_bottle,No
+18,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_great_price.
+",no_evident_not_great_price,expensive_for_what_you_get,Yes
+19,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_great_price.
+",no_evident_not_great_price,expensive_rate_for_what_offer,No
+20,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_great_price.
+",no_evident_not_great_price,overpriced_for_facility,No
+21,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_great_price.
+",no_evident_not_great_price,meal_not_include_in_price,No
+22,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_great_price.
+",no_evident_not_great_price,high_price_for_not_enough_comfort_room,No
+23,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_great_price.
+",no_evident_not_great_price,high_price_for_small_room,No
+24,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_great_price.
+",no_evident_not_great_price,expensive_hotel,No
+25,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_great_price.
+",no_evident_not_great_price,expensive_for_average_hotel,No
+26,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_great_price.
+",no_evident_not_great_price,expensive_for_3_star_hotel,No
+27,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_value_for_money.
+",no_evident_not_value_for_money,unlabeled_shampoo_dispenser_for_this_price,Yes
+28,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_value_for_money.
+",no_evident_not_value_for_money,shampoo_seem_cheap_considering_hotel_cost,No
+29,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_value_for_money.
+",no_evident_not_value_for_money,guesthouse_but_price_like_hotel,No
+30,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_value_for_money.
+",no_evident_not_value_for_money,for_money_you_pay_you_get_one_small_water_bottle,No
+31,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_value_for_money.
+",no_evident_not_value_for_money,expensive_for_what_you_get,Yes
+32,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_value_for_money.
+",no_evident_not_value_for_money,expensive_rate_for_what_offer,No
+33,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_value_for_money.
+",no_evident_not_value_for_money,overpriced_for_facility,Yes
+34,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_value_for_money.
+",no_evident_not_value_for_money,meal_not_include_in_price,No
+35,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_value_for_money.
+",no_evident_not_value_for_money,high_price_for_not_enough_comfort_room,No
+36,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_value_for_money.
+",no_evident_not_value_for_money,high_price_for_small_room,No
+37,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_value_for_money.
+",no_evident_not_value_for_money,expensive_hotel,No
+38,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_value_for_money.
+",no_evident_not_value_for_money,expensive_for_average_hotel,No
+39,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_value_for_money.
+",no_evident_not_value_for_money,expensive_for_3_star_hotel,No
+40,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_good_facility_for_tariff_charge.
+",no_evident_not_good_facility_for_tariff_charge,unlabeled_shampoo_dispenser_for_this_price,No
+41,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_good_facility_for_tariff_charge.
+",no_evident_not_good_facility_for_tariff_charge,shampoo_seem_cheap_considering_hotel_cost,No
+42,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_good_facility_for_tariff_charge.
+",no_evident_not_good_facility_for_tariff_charge,guesthouse_but_price_like_hotel,No
+43,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_good_facility_for_tariff_charge.
+",no_evident_not_good_facility_for_tariff_charge,for_money_you_pay_you_get_one_small_water_bottle,No
+44,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_good_facility_for_tariff_charge.
+",no_evident_not_good_facility_for_tariff_charge,expensive_for_what_you_get,No
+45,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_good_facility_for_tariff_charge.
+",no_evident_not_good_facility_for_tariff_charge,expensive_rate_for_what_offer,No
+46,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_good_facility_for_tariff_charge.
+",no_evident_not_good_facility_for_tariff_charge,overpriced_for_facility,Yes
+47,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_good_facility_for_tariff_charge.
+",no_evident_not_good_facility_for_tariff_charge,meal_not_include_in_price,No
+48,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_good_facility_for_tariff_charge.
+",no_evident_not_good_facility_for_tariff_charge,high_price_for_not_enough_comfort_room,No
+49,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_good_facility_for_tariff_charge.
+",no_evident_not_good_facility_for_tariff_charge,high_price_for_small_room,No
+50,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_good_facility_for_tariff_charge.
+",no_evident_not_good_facility_for_tariff_charge,expensive_hotel,No
+51,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_good_facility_for_tariff_charge.
+",no_evident_not_good_facility_for_tariff_charge,expensive_for_average_hotel,No
+52,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_good_facility_for_tariff_charge.
+",no_evident_not_good_facility_for_tariff_charge,expensive_for_3_star_hotel,No
+53,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_great_value_for_money.
+",no_evident_not_great_value_for_money,unlabeled_shampoo_dispenser_for_this_price,Yes
+54,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_great_value_for_money.
+",no_evident_not_great_value_for_money,shampoo_seem_cheap_considering_hotel_cost,No
+55,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_great_value_for_money.
+",no_evident_not_great_value_for_money,guesthouse_but_price_like_hotel,No
+56,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_great_value_for_money.
+",no_evident_not_great_value_for_money,for_money_you_pay_you_get_one_small_water_bottle,No
+57,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_great_value_for_money.
+",no_evident_not_great_value_for_money,expensive_for_what_you_get,Yes
+58,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_great_value_for_money.
+",no_evident_not_great_value_for_money,expensive_rate_for_what_offer,No
+59,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_great_value_for_money.
+",no_evident_not_great_value_for_money,overpriced_for_facility,Yes
+60,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_great_value_for_money.
+",no_evident_not_great_value_for_money,meal_not_include_in_price,No
+61,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_great_value_for_money.
+",no_evident_not_great_value_for_money,high_price_for_not_enough_comfort_room,No
+62,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_great_value_for_money.
+",no_evident_not_great_value_for_money,high_price_for_small_room,No
+63,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_great_value_for_money.
+",no_evident_not_great_value_for_money,expensive_hotel,No
+64,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_great_value_for_money.
+",no_evident_not_great_value_for_money,expensive_for_average_hotel,No
+65,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_great_value_for_money.
+",no_evident_not_great_value_for_money,expensive_for_3_star_hotel,No
+66,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_good_value_for_money.
+",no_evident_not_good_value_for_money,unlabeled_shampoo_dispenser_for_this_price,Yes
+67,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_good_value_for_money.
+",no_evident_not_good_value_for_money,shampoo_seem_cheap_considering_hotel_cost,No
+68,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_good_value_for_money.
+",no_evident_not_good_value_for_money,guesthouse_but_price_like_hotel,No
+69,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_good_value_for_money.
+",no_evident_not_good_value_for_money,for_money_you_pay_you_get_one_small_water_bottle,No
+70,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_good_value_for_money.
+",no_evident_not_good_value_for_money,expensive_for_what_you_get,Yes
+71,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_good_value_for_money.
+",no_evident_not_good_value_for_money,expensive_rate_for_what_offer,No
+72,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_good_value_for_money.
+",no_evident_not_good_value_for_money,overpriced_for_facility,Yes
+73,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_good_value_for_money.
+",no_evident_not_good_value_for_money,meal_not_include_in_price,No
+74,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_good_value_for_money.
+",no_evident_not_good_value_for_money,high_price_for_not_enough_comfort_room,No
+75,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_good_value_for_money.
+",no_evident_not_good_value_for_money,high_price_for_small_room,No
+76,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_good_value_for_money.
+",no_evident_not_good_value_for_money,expensive_hotel,No
+77,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_good_value_for_money.
+",no_evident_not_good_value_for_money,expensive_for_average_hotel,No
+78,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_good_value_for_money.
+",no_evident_not_good_value_for_money,expensive_for_3_star_hotel,No
+79,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_exceptional_value.
+",no_evident_not_exceptional_value,unlabeled_shampoo_dispenser_for_this_price,No
+80,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_exceptional_value.
+",no_evident_not_exceptional_value,shampoo_seem_cheap_considering_hotel_cost,No
+81,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_exceptional_value.
+",no_evident_not_exceptional_value,guesthouse_but_price_like_hotel,No
+82,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_exceptional_value.
+",no_evident_not_exceptional_value,for_money_you_pay_you_get_one_small_water_bottle,No
+83,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_exceptional_value.
+",no_evident_not_exceptional_value,expensive_for_what_you_get,Yes
+84,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_exceptional_value.
+",no_evident_not_exceptional_value,expensive_rate_for_what_offer,No
+85,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_exceptional_value.
+",no_evident_not_exceptional_value,overpriced_for_facility,Yes
+86,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_exceptional_value.
+",no_evident_not_exceptional_value,meal_not_include_in_price,No
+87,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_exceptional_value.
+",no_evident_not_exceptional_value,high_price_for_not_enough_comfort_room,Yes
+88,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_exceptional_value.
+",no_evident_not_exceptional_value,high_price_for_small_room,Yes
+89,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_exceptional_value.
+",no_evident_not_exceptional_value,expensive_hotel,No
+90,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_exceptional_value.
+",no_evident_not_exceptional_value,expensive_for_average_hotel,No
+91,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_exceptional_value.
+",no_evident_not_exceptional_value,expensive_for_3_star_hotel,No
+92,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_good_value.
+",no_evident_not_good_value,unlabeled_shampoo_dispenser_for_this_price,Yes
+93,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_good_value.
+",no_evident_not_good_value,shampoo_seem_cheap_considering_hotel_cost,No
+94,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_good_value.
+",no_evident_not_good_value,guesthouse_but_price_like_hotel,No
+95,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_good_value.
+",no_evident_not_good_value,for_money_you_pay_you_get_one_small_water_bottle,No
+96,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_good_value.
+",no_evident_not_good_value,expensive_for_what_you_get,Yes
+97,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_good_value.
+",no_evident_not_good_value,expensive_rate_for_what_offer,No
+98,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_good_value.
+",no_evident_not_good_value,overpriced_for_facility,Yes
+99,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_good_value.
+",no_evident_not_good_value,meal_not_include_in_price,No
+100,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_good_value.
+",no_evident_not_good_value,high_price_for_not_enough_comfort_room,No
+101,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_good_value.
+",no_evident_not_good_value,high_price_for_small_room,Yes
+102,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_good_value.
+",no_evident_not_good_value,expensive_hotel,No
+103,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_good_value.
+",no_evident_not_good_value,expensive_for_average_hotel,Yes
+104,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_good_value.
+",no_evident_not_good_value,expensive_for_3_star_hotel,No
+105,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_reasonable_price.
+",no_evident_not_reasonable_price,unlabeled_shampoo_dispenser_for_this_price,Yes
+106,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_reasonable_price.
+",no_evident_not_reasonable_price,shampoo_seem_cheap_considering_hotel_cost,No
+107,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_reasonable_price.
+",no_evident_not_reasonable_price,guesthouse_but_price_like_hotel,No
+108,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_reasonable_price.
+",no_evident_not_reasonable_price,for_money_you_pay_you_get_one_small_water_bottle,No
+109,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_reasonable_price.
+",no_evident_not_reasonable_price,expensive_for_what_you_get,Yes
+110,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_reasonable_price.
+",no_evident_not_reasonable_price,expensive_rate_for_what_offer,No
+111,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_reasonable_price.
+",no_evident_not_reasonable_price,overpriced_for_facility,Yes
+112,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_reasonable_price.
+",no_evident_not_reasonable_price,meal_not_include_in_price,No
+113,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_reasonable_price.
+",no_evident_not_reasonable_price,high_price_for_not_enough_comfort_room,No
+114,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_reasonable_price.
+",no_evident_not_reasonable_price,high_price_for_small_room,Yes
+115,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_reasonable_price.
+",no_evident_not_reasonable_price,expensive_hotel,No
+116,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_reasonable_price.
+",no_evident_not_reasonable_price,expensive_for_average_hotel,No
+117,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_reasonable_price.
+",no_evident_not_reasonable_price,expensive_for_3_star_hotel,No
+118,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_beautiful_hotel_for_cheap_price.
+",no_evident_not_beautiful_hotel_for_cheap_price,unlabeled_shampoo_dispenser_for_this_price,Yes
+119,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_beautiful_hotel_for_cheap_price.
+",no_evident_not_beautiful_hotel_for_cheap_price,shampoo_seem_cheap_considering_hotel_cost,No
+120,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_beautiful_hotel_for_cheap_price.
+",no_evident_not_beautiful_hotel_for_cheap_price,guesthouse_but_price_like_hotel,No
+121,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_beautiful_hotel_for_cheap_price.
+",no_evident_not_beautiful_hotel_for_cheap_price,for_money_you_pay_you_get_one_small_water_bottle,No
+122,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_beautiful_hotel_for_cheap_price.
+",no_evident_not_beautiful_hotel_for_cheap_price,expensive_for_what_you_get,No
+123,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_beautiful_hotel_for_cheap_price.
+",no_evident_not_beautiful_hotel_for_cheap_price,expensive_rate_for_what_offer,No
+124,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_beautiful_hotel_for_cheap_price.
+",no_evident_not_beautiful_hotel_for_cheap_price,overpriced_for_facility,Yes
+125,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_beautiful_hotel_for_cheap_price.
+",no_evident_not_beautiful_hotel_for_cheap_price,meal_not_include_in_price,No
+126,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_beautiful_hotel_for_cheap_price.
+",no_evident_not_beautiful_hotel_for_cheap_price,high_price_for_not_enough_comfort_room,No
+127,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_beautiful_hotel_for_cheap_price.
+",no_evident_not_beautiful_hotel_for_cheap_price,high_price_for_small_room,No
+128,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_beautiful_hotel_for_cheap_price.
+",no_evident_not_beautiful_hotel_for_cheap_price,expensive_hotel,No
+129,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_beautiful_hotel_for_cheap_price.
+",no_evident_not_beautiful_hotel_for_cheap_price,expensive_for_average_hotel,No
+130,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_beautiful_hotel_for_cheap_price.
+",no_evident_not_beautiful_hotel_for_cheap_price,expensive_for_3_star_hotel,No
+131,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_great_for_price.
+",no_evident_not_great_for_price,unlabeled_shampoo_dispenser_for_this_price,Yes
+132,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_great_for_price.
+",no_evident_not_great_for_price,shampoo_seem_cheap_considering_hotel_cost,No
+133,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_great_for_price.
+",no_evident_not_great_for_price,guesthouse_but_price_like_hotel,No
+134,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_great_for_price.
+",no_evident_not_great_for_price,for_money_you_pay_you_get_one_small_water_bottle,No
+135,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_great_for_price.
+",no_evident_not_great_for_price,expensive_for_what_you_get,Yes
+136,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_great_for_price.
+",no_evident_not_great_for_price,expensive_rate_for_what_offer,No
+137,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_great_for_price.
+",no_evident_not_great_for_price,overpriced_for_facility,Yes
+138,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_great_for_price.
+",no_evident_not_great_for_price,meal_not_include_in_price,No
+139,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_great_for_price.
+",no_evident_not_great_for_price,high_price_for_not_enough_comfort_room,No
+140,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_great_for_price.
+",no_evident_not_great_for_price,high_price_for_small_room,No
+141,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_great_for_price.
+",no_evident_not_great_for_price,expensive_hotel,No
+142,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_great_for_price.
+",no_evident_not_great_for_price,expensive_for_average_hotel,No
+143,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_great_for_price.
+",no_evident_not_great_for_price,expensive_for_3_star_hotel,No
+144,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_excellent_value_for_money.
+",no_evident_not_excellent_value_for_money,unlabeled_shampoo_dispenser_for_this_price,Yes
+145,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_excellent_value_for_money.
+",no_evident_not_excellent_value_for_money,shampoo_seem_cheap_considering_hotel_cost,No
+146,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_excellent_value_for_money.
+",no_evident_not_excellent_value_for_money,guesthouse_but_price_like_hotel,No
+147,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_excellent_value_for_money.
+",no_evident_not_excellent_value_for_money,for_money_you_pay_you_get_one_small_water_bottle,No
+148,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_excellent_value_for_money.
+",no_evident_not_excellent_value_for_money,expensive_for_what_you_get,Yes
+149,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_excellent_value_for_money.
+",no_evident_not_excellent_value_for_money,expensive_rate_for_what_offer,No
+150,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_excellent_value_for_money.
+",no_evident_not_excellent_value_for_money,overpriced_for_facility,Yes
+151,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_excellent_value_for_money.
+",no_evident_not_excellent_value_for_money,meal_not_include_in_price,No
+152,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_excellent_value_for_money.
+",no_evident_not_excellent_value_for_money,high_price_for_not_enough_comfort_room,No
+153,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_excellent_value_for_money.
+",no_evident_not_excellent_value_for_money,high_price_for_small_room,No
+154,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_excellent_value_for_money.
+",no_evident_not_excellent_value_for_money,expensive_hotel,No
+155,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_excellent_value_for_money.
+",no_evident_not_excellent_value_for_money,expensive_for_average_hotel,No
+156,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_excellent_value_for_money.
+",no_evident_not_excellent_value_for_money,expensive_for_3_star_hotel,Yes
+157,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_worth_price.
+",no_evident_not_worth_price,unlabeled_shampoo_dispenser_for_this_price,Yes
+158,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_worth_price.
+",no_evident_not_worth_price,shampoo_seem_cheap_considering_hotel_cost,No
+159,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_worth_price.
+",no_evident_not_worth_price,guesthouse_but_price_like_hotel,No
+160,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_worth_price.
+",no_evident_not_worth_price,for_money_you_pay_you_get_one_small_water_bottle,No
+161,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_worth_price.
+",no_evident_not_worth_price,expensive_for_what_you_get,Yes
+162,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_worth_price.
+",no_evident_not_worth_price,expensive_rate_for_what_offer,No
+163,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_worth_price.
+",no_evident_not_worth_price,overpriced_for_facility,Yes
+164,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_worth_price.
+",no_evident_not_worth_price,meal_not_include_in_price,No
+165,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_worth_price.
+",no_evident_not_worth_price,high_price_for_not_enough_comfort_room,Yes
+166,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_worth_price.
+",no_evident_not_worth_price,high_price_for_small_room,Yes
+167,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_worth_price.
+",no_evident_not_worth_price,expensive_hotel,No
+168,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_worth_price.
+",no_evident_not_worth_price,expensive_for_average_hotel,No
+169,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_worth_price.
+",no_evident_not_worth_price,expensive_for_3_star_hotel,No
+170,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_cheap.
+",no_evident_not_cheap,unlabeled_shampoo_dispenser_for_this_price,No
+171,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_cheap.
+",no_evident_not_cheap,shampoo_seem_cheap_considering_hotel_cost,No
+172,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_cheap.
+",no_evident_not_cheap,guesthouse_but_price_like_hotel,No
+173,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_cheap.
+",no_evident_not_cheap,for_money_you_pay_you_get_one_small_water_bottle,No
+174,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_cheap.
+",no_evident_not_cheap,expensive_for_what_you_get,Yes
+175,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_cheap.
+",no_evident_not_cheap,expensive_rate_for_what_offer,No
+176,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_cheap.
+",no_evident_not_cheap,overpriced_for_facility,Yes
+177,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_cheap.
+",no_evident_not_cheap,meal_not_include_in_price,No
+178,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_cheap.
+",no_evident_not_cheap,high_price_for_not_enough_comfort_room,Yes
+179,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_cheap.
+",no_evident_not_cheap,high_price_for_small_room,Yes
+180,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_cheap.
+",no_evident_not_cheap,expensive_hotel,No
+181,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_cheap.
+",no_evident_not_cheap,expensive_for_average_hotel,Yes
+182,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_cheap.
+",no_evident_not_cheap,expensive_for_3_star_hotel,No
+183,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_good_rate_for_excellent_accommodation.
+",no_evident_not_good_rate_for_excellent_accommodation,unlabeled_shampoo_dispenser_for_this_price,Yes
+184,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_good_rate_for_excellent_accommodation.
+",no_evident_not_good_rate_for_excellent_accommodation,shampoo_seem_cheap_considering_hotel_cost,No
+185,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_good_rate_for_excellent_accommodation.
+",no_evident_not_good_rate_for_excellent_accommodation,guesthouse_but_price_like_hotel,No
+186,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_good_rate_for_excellent_accommodation.
+",no_evident_not_good_rate_for_excellent_accommodation,for_money_you_pay_you_get_one_small_water_bottle,No
+187,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_good_rate_for_excellent_accommodation.
+",no_evident_not_good_rate_for_excellent_accommodation,expensive_for_what_you_get,Yes
+188,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_good_rate_for_excellent_accommodation.
+",no_evident_not_good_rate_for_excellent_accommodation,expensive_rate_for_what_offer,No
+189,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_good_rate_for_excellent_accommodation.
+",no_evident_not_good_rate_for_excellent_accommodation,overpriced_for_facility,Yes
+190,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_good_rate_for_excellent_accommodation.
+",no_evident_not_good_rate_for_excellent_accommodation,meal_not_include_in_price,No
+191,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_good_rate_for_excellent_accommodation.
+",no_evident_not_good_rate_for_excellent_accommodation,high_price_for_not_enough_comfort_room,No
+192,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_good_rate_for_excellent_accommodation.
+",no_evident_not_good_rate_for_excellent_accommodation,high_price_for_small_room,Yes
+193,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_good_rate_for_excellent_accommodation.
+",no_evident_not_good_rate_for_excellent_accommodation,expensive_hotel,No
+194,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_good_rate_for_excellent_accommodation.
+",no_evident_not_good_rate_for_excellent_accommodation,expensive_for_average_hotel,No
+195,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_good_rate_for_excellent_accommodation.
+",no_evident_not_good_rate_for_excellent_accommodation,expensive_for_3_star_hotel,No
+196,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_good_hotel_for_ £50_per_night.
+",no_evident_not_good_hotel_for_ £50_per_night,unlabeled_shampoo_dispenser_for_this_price,No
+197,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_good_hotel_for_ £50_per_night.
+",no_evident_not_good_hotel_for_ £50_per_night,shampoo_seem_cheap_considering_hotel_cost,No
+198,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_good_hotel_for_ £50_per_night.
+",no_evident_not_good_hotel_for_ £50_per_night,guesthouse_but_price_like_hotel,No
+199,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_good_hotel_for_ £50_per_night.
+",no_evident_not_good_hotel_for_ £50_per_night,for_money_you_pay_you_get_one_small_water_bottle,No
+200,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_good_hotel_for_ £50_per_night.
+",no_evident_not_good_hotel_for_ £50_per_night,expensive_for_what_you_get,Yes
+201,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_good_hotel_for_ £50_per_night.
+",no_evident_not_good_hotel_for_ £50_per_night,expensive_rate_for_what_offer,No
+202,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_good_hotel_for_ £50_per_night.
+",no_evident_not_good_hotel_for_ £50_per_night,overpriced_for_facility,No
+203,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_good_hotel_for_ £50_per_night.
+",no_evident_not_good_hotel_for_ £50_per_night,meal_not_include_in_price,No
+204,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_good_hotel_for_ £50_per_night.
+",no_evident_not_good_hotel_for_ £50_per_night,high_price_for_not_enough_comfort_room,No
+205,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_good_hotel_for_ £50_per_night.
+",no_evident_not_good_hotel_for_ £50_per_night,high_price_for_small_room,No
+206,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_good_hotel_for_ £50_per_night.
+",no_evident_not_good_hotel_for_ £50_per_night,expensive_hotel,No
+207,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_good_hotel_for_ £50_per_night.
+",no_evident_not_good_hotel_for_ £50_per_night,expensive_for_average_hotel,No
+208,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_good_hotel_for_ £50_per_night.
+",no_evident_not_good_hotel_for_ £50_per_night,expensive_for_3_star_hotel,No
+209,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_room_excellent_value_for_money.
+",no_evident_not_room_excellent_value_for_money,unlabeled_shampoo_dispenser_for_this_price,No
+210,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_room_excellent_value_for_money.
+",no_evident_not_room_excellent_value_for_money,shampoo_seem_cheap_considering_hotel_cost,No
+211,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_room_excellent_value_for_money.
+",no_evident_not_room_excellent_value_for_money,guesthouse_but_price_like_hotel,No
+212,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_room_excellent_value_for_money.
+",no_evident_not_room_excellent_value_for_money,for_money_you_pay_you_get_one_small_water_bottle,No
+213,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_room_excellent_value_for_money.
+",no_evident_not_room_excellent_value_for_money,expensive_for_what_you_get,Yes
+214,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_room_excellent_value_for_money.
+",no_evident_not_room_excellent_value_for_money,expensive_rate_for_what_offer,No
+215,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_room_excellent_value_for_money.
+",no_evident_not_room_excellent_value_for_money,overpriced_for_facility,Yes
+216,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_room_excellent_value_for_money.
+",no_evident_not_room_excellent_value_for_money,meal_not_include_in_price,No
+217,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_room_excellent_value_for_money.
+",no_evident_not_room_excellent_value_for_money,high_price_for_not_enough_comfort_room,Yes
+218,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_room_excellent_value_for_money.
+",no_evident_not_room_excellent_value_for_money,high_price_for_small_room,No
+219,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_room_excellent_value_for_money.
+",no_evident_not_room_excellent_value_for_money,expensive_hotel,No
+220,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_room_excellent_value_for_money.
+",no_evident_not_room_excellent_value_for_money,expensive_for_average_hotel,No
+221,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_room_excellent_value_for_money.
+",no_evident_not_room_excellent_value_for_money,expensive_for_3_star_hotel,No
+222,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_location_excellent_value_for_money.
+",no_evident_not_location_excellent_value_for_money,unlabeled_shampoo_dispenser_for_this_price,No
+223,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_location_excellent_value_for_money.
+",no_evident_not_location_excellent_value_for_money,shampoo_seem_cheap_considering_hotel_cost,No
+224,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_location_excellent_value_for_money.
+",no_evident_not_location_excellent_value_for_money,guesthouse_but_price_like_hotel,No
+225,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_location_excellent_value_for_money.
+",no_evident_not_location_excellent_value_for_money,for_money_you_pay_you_get_one_small_water_bottle,No
+226,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_location_excellent_value_for_money.
+",no_evident_not_location_excellent_value_for_money,expensive_for_what_you_get,No
+227,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_location_excellent_value_for_money.
+",no_evident_not_location_excellent_value_for_money,expensive_rate_for_what_offer,No
+228,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_location_excellent_value_for_money.
+",no_evident_not_location_excellent_value_for_money,overpriced_for_facility,Yes
+229,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_location_excellent_value_for_money.
+",no_evident_not_location_excellent_value_for_money,meal_not_include_in_price,No
+230,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_location_excellent_value_for_money.
+",no_evident_not_location_excellent_value_for_money,high_price_for_not_enough_comfort_room,No
+231,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_location_excellent_value_for_money.
+",no_evident_not_location_excellent_value_for_money,high_price_for_small_room,No
+232,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_location_excellent_value_for_money.
+",no_evident_not_location_excellent_value_for_money,expensive_hotel,No
+233,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_location_excellent_value_for_money.
+",no_evident_not_location_excellent_value_for_money,expensive_for_average_hotel,No
+234,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_location_excellent_value_for_money.
+",no_evident_not_location_excellent_value_for_money,expensive_for_3_star_hotel,No
+235,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_worth_every_Euro_spend.
+",no_evident_not_worth_every_Euro_spend,unlabeled_shampoo_dispenser_for_this_price,No
+236,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_worth_every_Euro_spend.
+",no_evident_not_worth_every_Euro_spend,shampoo_seem_cheap_considering_hotel_cost,No
+237,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_worth_every_Euro_spend.
+",no_evident_not_worth_every_Euro_spend,guesthouse_but_price_like_hotel,No
+238,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_worth_every_Euro_spend.
+",no_evident_not_worth_every_Euro_spend,for_money_you_pay_you_get_one_small_water_bottle,No
+239,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_worth_every_Euro_spend.
+",no_evident_not_worth_every_Euro_spend,expensive_for_what_you_get,Yes
+240,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_worth_every_Euro_spend.
+",no_evident_not_worth_every_Euro_spend,expensive_rate_for_what_offer,No
+241,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_worth_every_Euro_spend.
+",no_evident_not_worth_every_Euro_spend,overpriced_for_facility,Yes
+242,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_worth_every_Euro_spend.
+",no_evident_not_worth_every_Euro_spend,meal_not_include_in_price,No
+243,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_worth_every_Euro_spend.
+",no_evident_not_worth_every_Euro_spend,high_price_for_not_enough_comfort_room,No
+244,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_worth_every_Euro_spend.
+",no_evident_not_worth_every_Euro_spend,high_price_for_small_room,No
+245,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_worth_every_Euro_spend.
+",no_evident_not_worth_every_Euro_spend,expensive_hotel,No
+246,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_worth_every_Euro_spend.
+",no_evident_not_worth_every_Euro_spend,expensive_for_average_hotel,No
+247,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_worth_every_Euro_spend.
+",no_evident_not_worth_every_Euro_spend,expensive_for_3_star_hotel,No
+248,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_economic_price.
+",no_evident_not_economic_price,unlabeled_shampoo_dispenser_for_this_price,Yes
+249,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_economic_price.
+",no_evident_not_economic_price,shampoo_seem_cheap_considering_hotel_cost,No
+250,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_economic_price.
+",no_evident_not_economic_price,guesthouse_but_price_like_hotel,No
+251,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_economic_price.
+",no_evident_not_economic_price,for_money_you_pay_you_get_one_small_water_bottle,No
+252,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_economic_price.
+",no_evident_not_economic_price,expensive_for_what_you_get,Yes
+253,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_economic_price.
+",no_evident_not_economic_price,expensive_rate_for_what_offer,No
+254,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_economic_price.
+",no_evident_not_economic_price,overpriced_for_facility,No
+255,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_economic_price.
+",no_evident_not_economic_price,meal_not_include_in_price,No
+256,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_economic_price.
+",no_evident_not_economic_price,high_price_for_not_enough_comfort_room,No
+257,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_economic_price.
+",no_evident_not_economic_price,high_price_for_small_room,Yes
+258,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_economic_price.
+",no_evident_not_economic_price,expensive_hotel,No
+259,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_economic_price.
+",no_evident_not_economic_price,expensive_for_average_hotel,No
+260,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_economic_price.
+",no_evident_not_economic_price,expensive_for_3_star_hotel,No
+261,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_not_expensive_price.
+",no_evident_not_not_expensive_price,unlabeled_shampoo_dispenser_for_this_price,Yes
+262,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_not_expensive_price.
+",no_evident_not_not_expensive_price,shampoo_seem_cheap_considering_hotel_cost,No
+263,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_not_expensive_price.
+",no_evident_not_not_expensive_price,guesthouse_but_price_like_hotel,No
+264,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_not_expensive_price.
+",no_evident_not_not_expensive_price,for_money_you_pay_you_get_one_small_water_bottle,No
+265,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_not_expensive_price.
+",no_evident_not_not_expensive_price,expensive_for_what_you_get,No
+266,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_not_expensive_price.
+",no_evident_not_not_expensive_price,expensive_rate_for_what_offer,No
+267,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_not_expensive_price.
+",no_evident_not_not_expensive_price,overpriced_for_facility,No
+268,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_not_expensive_price.
+",no_evident_not_not_expensive_price,meal_not_include_in_price,No
+269,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_not_expensive_price.
+",no_evident_not_not_expensive_price,high_price_for_not_enough_comfort_room,No
+270,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_not_expensive_price.
+",no_evident_not_not_expensive_price,high_price_for_small_room,No
+271,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_not_expensive_price.
+",no_evident_not_not_expensive_price,expensive_hotel,No
+272,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_not_expensive_price.
+",no_evident_not_not_expensive_price,expensive_for_average_hotel,No
+273,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_not_expensive_price.
+",no_evident_not_not_expensive_price,expensive_for_3_star_hotel,No
+274,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_great_value.
+",no_evident_not_great_value,unlabeled_shampoo_dispenser_for_this_price,Yes
+275,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_great_value.
+",no_evident_not_great_value,shampoo_seem_cheap_considering_hotel_cost,No
+276,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_great_value.
+",no_evident_not_great_value,guesthouse_but_price_like_hotel,No
+277,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_great_value.
+",no_evident_not_great_value,for_money_you_pay_you_get_one_small_water_bottle,No
+278,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_great_value.
+",no_evident_not_great_value,expensive_for_what_you_get,Yes
+279,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_great_value.
+",no_evident_not_great_value,expensive_rate_for_what_offer,No
+280,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_great_value.
+",no_evident_not_great_value,overpriced_for_facility,Yes
+281,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_great_value.
+",no_evident_not_great_value,meal_not_include_in_price,No
+282,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_great_value.
+",no_evident_not_great_value,high_price_for_not_enough_comfort_room,No
+283,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_great_value.
+",no_evident_not_great_value,high_price_for_small_room,Yes
+284,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_great_value.
+",no_evident_not_great_value,expensive_hotel,No
+285,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_great_value.
+",no_evident_not_great_value,expensive_for_average_hotel,No
+286,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_great_value.
+",no_evident_not_great_value,expensive_for_3_star_hotel,Yes
+287,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_right_price.
+",no_evident_not_right_price,unlabeled_shampoo_dispenser_for_this_price,Yes
+288,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_right_price.
+",no_evident_not_right_price,shampoo_seem_cheap_considering_hotel_cost,No
+289,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_right_price.
+",no_evident_not_right_price,guesthouse_but_price_like_hotel,No
+290,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_right_price.
+",no_evident_not_right_price,for_money_you_pay_you_get_one_small_water_bottle,No
+291,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_right_price.
+",no_evident_not_right_price,expensive_for_what_you_get,Yes
+292,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_right_price.
+",no_evident_not_right_price,expensive_rate_for_what_offer,No
+293,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_right_price.
+",no_evident_not_right_price,overpriced_for_facility,No
+294,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_right_price.
+",no_evident_not_right_price,meal_not_include_in_price,No
+295,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_right_price.
+",no_evident_not_right_price,high_price_for_not_enough_comfort_room,No
+296,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_right_price.
+",no_evident_not_right_price,high_price_for_small_room,Yes
+297,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_right_price.
+",no_evident_not_right_price,expensive_hotel,No
+298,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_right_price.
+",no_evident_not_right_price,expensive_for_average_hotel,No
+299,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_right_price.
+",no_evident_not_right_price,expensive_for_3_star_hotel,No
+300,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_right_performance.
+",no_evident_not_right_performance,unlabeled_shampoo_dispenser_for_this_price,No
+301,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_right_performance.
+",no_evident_not_right_performance,shampoo_seem_cheap_considering_hotel_cost,No
+302,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_right_performance.
+",no_evident_not_right_performance,guesthouse_but_price_like_hotel,No
+303,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_right_performance.
+",no_evident_not_right_performance,for_money_you_pay_you_get_one_small_water_bottle,No
+304,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_right_performance.
+",no_evident_not_right_performance,expensive_for_what_you_get,No
+305,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_right_performance.
+",no_evident_not_right_performance,expensive_rate_for_what_offer,No
+306,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_right_performance.
+",no_evident_not_right_performance,overpriced_for_facility,No
+307,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_right_performance.
+",no_evident_not_right_performance,meal_not_include_in_price,No
+308,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_right_performance.
+",no_evident_not_right_performance,high_price_for_not_enough_comfort_room,No
+309,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_right_performance.
+",no_evident_not_right_performance,high_price_for_small_room,No
+310,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_right_performance.
+",no_evident_not_right_performance,expensive_hotel,No
+311,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_right_performance.
+",no_evident_not_right_performance,expensive_for_average_hotel,No
+312,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_right_performance.
+",no_evident_not_right_performance,expensive_for_3_star_hotel,No
+313,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_cheap_price.
+",no_evident_not_cheap_price,unlabeled_shampoo_dispenser_for_this_price,Yes
+314,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_cheap_price.
+",no_evident_not_cheap_price,shampoo_seem_cheap_considering_hotel_cost,No
+315,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_cheap_price.
+",no_evident_not_cheap_price,guesthouse_but_price_like_hotel,No
+316,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_cheap_price.
+",no_evident_not_cheap_price,for_money_you_pay_you_get_one_small_water_bottle,No
+317,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_cheap_price.
+",no_evident_not_cheap_price,expensive_for_what_you_get,Yes
+318,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_cheap_price.
+",no_evident_not_cheap_price,expensive_rate_for_what_offer,Yes
+319,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_cheap_price.
+",no_evident_not_cheap_price,overpriced_for_facility,Yes
+320,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_cheap_price.
+",no_evident_not_cheap_price,meal_not_include_in_price,No
+321,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_cheap_price.
+",no_evident_not_cheap_price,high_price_for_not_enough_comfort_room,No
+322,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_cheap_price.
+",no_evident_not_cheap_price,high_price_for_small_room,Yes
+323,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_cheap_price.
+",no_evident_not_cheap_price,expensive_hotel,No
+324,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_cheap_price.
+",no_evident_not_cheap_price,expensive_for_average_hotel,No
+325,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_cheap_price.
+",no_evident_not_cheap_price,expensive_for_3_star_hotel,No
+326,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_full_value_for_price.
+",no_evident_not_full_value_for_price,unlabeled_shampoo_dispenser_for_this_price,Yes
+327,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_full_value_for_price.
+",no_evident_not_full_value_for_price,shampoo_seem_cheap_considering_hotel_cost,No
+328,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_full_value_for_price.
+",no_evident_not_full_value_for_price,guesthouse_but_price_like_hotel,No
+329,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_full_value_for_price.
+",no_evident_not_full_value_for_price,for_money_you_pay_you_get_one_small_water_bottle,No
+330,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_full_value_for_price.
+",no_evident_not_full_value_for_price,expensive_for_what_you_get,Yes
+331,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_full_value_for_price.
+",no_evident_not_full_value_for_price,expensive_rate_for_what_offer,No
+332,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_full_value_for_price.
+",no_evident_not_full_value_for_price,overpriced_for_facility,Yes
+333,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_full_value_for_price.
+",no_evident_not_full_value_for_price,meal_not_include_in_price,No
+334,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_full_value_for_price.
+",no_evident_not_full_value_for_price,high_price_for_not_enough_comfort_room,Yes
+335,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_full_value_for_price.
+",no_evident_not_full_value_for_price,high_price_for_small_room,Yes
+336,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_full_value_for_price.
+",no_evident_not_full_value_for_price,expensive_hotel,No
+337,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_full_value_for_price.
+",no_evident_not_full_value_for_price,expensive_for_average_hotel,No
+338,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_full_value_for_price.
+",no_evident_not_full_value_for_price,expensive_for_3_star_hotel,No
+339,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_good_value_for_price.
+",no_evident_not_good_value_for_price,unlabeled_shampoo_dispenser_for_this_price,Yes
+340,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_good_value_for_price.
+",no_evident_not_good_value_for_price,shampoo_seem_cheap_considering_hotel_cost,No
+341,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_good_value_for_price.
+",no_evident_not_good_value_for_price,guesthouse_but_price_like_hotel,No
+342,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_good_value_for_price.
+",no_evident_not_good_value_for_price,for_money_you_pay_you_get_one_small_water_bottle,No
+343,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_good_value_for_price.
+",no_evident_not_good_value_for_price,expensive_for_what_you_get,Yes
+344,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_good_value_for_price.
+",no_evident_not_good_value_for_price,expensive_rate_for_what_offer,Yes
+345,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_good_value_for_price.
+",no_evident_not_good_value_for_price,overpriced_for_facility,Yes
+346,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_good_value_for_price.
+",no_evident_not_good_value_for_price,meal_not_include_in_price,No
+347,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_good_value_for_price.
+",no_evident_not_good_value_for_price,high_price_for_not_enough_comfort_room,Yes
+348,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_good_value_for_price.
+",no_evident_not_good_value_for_price,high_price_for_small_room,Yes
+349,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_good_value_for_price.
+",no_evident_not_good_value_for_price,expensive_hotel,No
+350,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_good_value_for_price.
+",no_evident_not_good_value_for_price,expensive_for_average_hotel,Yes
+351,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_good_value_for_price.
+",no_evident_not_good_value_for_price,expensive_for_3_star_hotel,Yes
+352,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_undervalue_establishment.
+",no_evident_not_undervalue_establishment,unlabeled_shampoo_dispenser_for_this_price,No
+353,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_undervalue_establishment.
+",no_evident_not_undervalue_establishment,shampoo_seem_cheap_considering_hotel_cost,No
+354,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_undervalue_establishment.
+",no_evident_not_undervalue_establishment,guesthouse_but_price_like_hotel,No
+355,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_undervalue_establishment.
+",no_evident_not_undervalue_establishment,for_money_you_pay_you_get_one_small_water_bottle,No
+356,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_undervalue_establishment.
+",no_evident_not_undervalue_establishment,expensive_for_what_you_get,No
+357,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_undervalue_establishment.
+",no_evident_not_undervalue_establishment,expensive_rate_for_what_offer,No
+358,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_undervalue_establishment.
+",no_evident_not_undervalue_establishment,overpriced_for_facility,No
+359,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_undervalue_establishment.
+",no_evident_not_undervalue_establishment,meal_not_include_in_price,No
+360,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_undervalue_establishment.
+",no_evident_not_undervalue_establishment,high_price_for_not_enough_comfort_room,No
+361,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_undervalue_establishment.
+",no_evident_not_undervalue_establishment,high_price_for_small_room,No
+362,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_undervalue_establishment.
+",no_evident_not_undervalue_establishment,expensive_hotel,No
+363,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_undervalue_establishment.
+",no_evident_not_undervalue_establishment,expensive_for_average_hotel,No
+364,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_undervalue_establishment.
+",no_evident_not_undervalue_establishment,expensive_for_3_star_hotel,No
+365,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_cheap_room.
+",no_evident_not_cheap_room,unlabeled_shampoo_dispenser_for_this_price,No
+366,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_cheap_room.
+",no_evident_not_cheap_room,shampoo_seem_cheap_considering_hotel_cost,No
+367,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_cheap_room.
+",no_evident_not_cheap_room,guesthouse_but_price_like_hotel,No
+368,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_cheap_room.
+",no_evident_not_cheap_room,for_money_you_pay_you_get_one_small_water_bottle,No
+369,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_cheap_room.
+",no_evident_not_cheap_room,expensive_for_what_you_get,Yes
+370,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_cheap_room.
+",no_evident_not_cheap_room,expensive_rate_for_what_offer,No
+371,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_cheap_room.
+",no_evident_not_cheap_room,overpriced_for_facility,Yes
+372,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_cheap_room.
+",no_evident_not_cheap_room,meal_not_include_in_price,No
+373,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_cheap_room.
+",no_evident_not_cheap_room,high_price_for_not_enough_comfort_room,Yes
+374,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_cheap_room.
+",no_evident_not_cheap_room,high_price_for_small_room,Yes
+375,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_cheap_room.
+",no_evident_not_cheap_room,expensive_hotel,No
+376,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_cheap_room.
+",no_evident_not_cheap_room,expensive_for_average_hotel,No
+377,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_cheap_room.
+",no_evident_not_cheap_room,expensive_for_3_star_hotel,No
+378,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_satisfied_price.
+",no_evident_not_satisfied_price,unlabeled_shampoo_dispenser_for_this_price,Yes
+379,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_satisfied_price.
+",no_evident_not_satisfied_price,shampoo_seem_cheap_considering_hotel_cost,No
+380,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_satisfied_price.
+",no_evident_not_satisfied_price,guesthouse_but_price_like_hotel,No
+381,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_satisfied_price.
+",no_evident_not_satisfied_price,for_money_you_pay_you_get_one_small_water_bottle,No
+382,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_satisfied_price.
+",no_evident_not_satisfied_price,expensive_for_what_you_get,No
+383,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_satisfied_price.
+",no_evident_not_satisfied_price,expensive_rate_for_what_offer,No
+384,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_satisfied_price.
+",no_evident_not_satisfied_price,overpriced_for_facility,No
+385,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_satisfied_price.
+",no_evident_not_satisfied_price,meal_not_include_in_price,No
+386,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_satisfied_price.
+",no_evident_not_satisfied_price,high_price_for_not_enough_comfort_room,No
+387,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_satisfied_price.
+",no_evident_not_satisfied_price,high_price_for_small_room,No
+388,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_satisfied_price.
+",no_evident_not_satisfied_price,expensive_hotel,No
+389,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_satisfied_price.
+",no_evident_not_satisfied_price,expensive_for_average_hotel,No
+390,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_satisfied_price.
+",no_evident_not_satisfied_price,expensive_for_3_star_hotel,No
+391,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_unbeatable_value_for_money.
+",no_evident_not_unbeatable_value_for_money,unlabeled_shampoo_dispenser_for_this_price,Yes
+392,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_unbeatable_value_for_money.
+",no_evident_not_unbeatable_value_for_money,shampoo_seem_cheap_considering_hotel_cost,No
+393,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_unbeatable_value_for_money.
+",no_evident_not_unbeatable_value_for_money,guesthouse_but_price_like_hotel,No
+394,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_unbeatable_value_for_money.
+",no_evident_not_unbeatable_value_for_money,for_money_you_pay_you_get_one_small_water_bottle,No
+395,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_unbeatable_value_for_money.
+",no_evident_not_unbeatable_value_for_money,expensive_for_what_you_get,No
+396,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_unbeatable_value_for_money.
+",no_evident_not_unbeatable_value_for_money,expensive_rate_for_what_offer,No
+397,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_unbeatable_value_for_money.
+",no_evident_not_unbeatable_value_for_money,overpriced_for_facility,No
+398,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_unbeatable_value_for_money.
+",no_evident_not_unbeatable_value_for_money,meal_not_include_in_price,No
+399,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_unbeatable_value_for_money.
+",no_evident_not_unbeatable_value_for_money,high_price_for_not_enough_comfort_room,No
+400,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_unbeatable_value_for_money.
+",no_evident_not_unbeatable_value_for_money,high_price_for_small_room,No
+401,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_unbeatable_value_for_money.
+",no_evident_not_unbeatable_value_for_money,expensive_hotel,No
+402,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_unbeatable_value_for_money.
+",no_evident_not_unbeatable_value_for_money,expensive_for_average_hotel,No
+403,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_unbeatable_value_for_money.
+",no_evident_not_unbeatable_value_for_money,expensive_for_3_star_hotel,No
+404,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_excellent_price.
+",no_evident_not_excellent_price,unlabeled_shampoo_dispenser_for_this_price,Yes
+405,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_excellent_price.
+",no_evident_not_excellent_price,shampoo_seem_cheap_considering_hotel_cost,No
+406,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_excellent_price.
+",no_evident_not_excellent_price,guesthouse_but_price_like_hotel,No
+407,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_excellent_price.
+",no_evident_not_excellent_price,for_money_you_pay_you_get_one_small_water_bottle,No
+408,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_excellent_price.
+",no_evident_not_excellent_price,expensive_for_what_you_get,Yes
+409,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_excellent_price.
+",no_evident_not_excellent_price,expensive_rate_for_what_offer,No
+410,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_excellent_price.
+",no_evident_not_excellent_price,overpriced_for_facility,No
+411,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_excellent_price.
+",no_evident_not_excellent_price,meal_not_include_in_price,No
+412,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_excellent_price.
+",no_evident_not_excellent_price,high_price_for_not_enough_comfort_room,No
+413,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_excellent_price.
+",no_evident_not_excellent_price,high_price_for_small_room,No
+414,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_excellent_price.
+",no_evident_not_excellent_price,expensive_hotel,No
+415,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_excellent_price.
+",no_evident_not_excellent_price,expensive_for_average_hotel,No
+416,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_excellent_price.
+",no_evident_not_excellent_price,expensive_for_3_star_hotel,No
+417,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_excellent_quality_ratio.
+",no_evident_not_excellent_quality_ratio,unlabeled_shampoo_dispenser_for_this_price,No
+418,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_excellent_quality_ratio.
+",no_evident_not_excellent_quality_ratio,shampoo_seem_cheap_considering_hotel_cost,No
+419,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_excellent_quality_ratio.
+",no_evident_not_excellent_quality_ratio,guesthouse_but_price_like_hotel,No
+420,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_excellent_quality_ratio.
+",no_evident_not_excellent_quality_ratio,for_money_you_pay_you_get_one_small_water_bottle,No
+421,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_excellent_quality_ratio.
+",no_evident_not_excellent_quality_ratio,expensive_for_what_you_get,No
+422,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_excellent_quality_ratio.
+",no_evident_not_excellent_quality_ratio,expensive_rate_for_what_offer,No
+423,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_excellent_quality_ratio.
+",no_evident_not_excellent_quality_ratio,overpriced_for_facility,No
+424,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_excellent_quality_ratio.
+",no_evident_not_excellent_quality_ratio,meal_not_include_in_price,No
+425,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_excellent_quality_ratio.
+",no_evident_not_excellent_quality_ratio,high_price_for_not_enough_comfort_room,No
+426,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_excellent_quality_ratio.
+",no_evident_not_excellent_quality_ratio,high_price_for_small_room,No
+427,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_excellent_quality_ratio.
+",no_evident_not_excellent_quality_ratio,expensive_hotel,No
+428,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_excellent_quality_ratio.
+",no_evident_not_excellent_quality_ratio,expensive_for_average_hotel,No
+429,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_excellent_quality_ratio.
+",no_evident_not_excellent_quality_ratio,expensive_for_3_star_hotel,No
+430,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_perfect_price_for_what_we_expect.
+",no_evident_not_perfect_price_for_what_we_expect,unlabeled_shampoo_dispenser_for_this_price,No
+431,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_perfect_price_for_what_we_expect.
+",no_evident_not_perfect_price_for_what_we_expect,shampoo_seem_cheap_considering_hotel_cost,No
+432,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_perfect_price_for_what_we_expect.
+",no_evident_not_perfect_price_for_what_we_expect,guesthouse_but_price_like_hotel,No
+433,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_perfect_price_for_what_we_expect.
+",no_evident_not_perfect_price_for_what_we_expect,for_money_you_pay_you_get_one_small_water_bottle,No
+434,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_perfect_price_for_what_we_expect.
+",no_evident_not_perfect_price_for_what_we_expect,expensive_for_what_you_get,No
+435,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_perfect_price_for_what_we_expect.
+",no_evident_not_perfect_price_for_what_we_expect,expensive_rate_for_what_offer,No
+436,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_perfect_price_for_what_we_expect.
+",no_evident_not_perfect_price_for_what_we_expect,overpriced_for_facility,No
+437,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_perfect_price_for_what_we_expect.
+",no_evident_not_perfect_price_for_what_we_expect,meal_not_include_in_price,No
+438,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_perfect_price_for_what_we_expect.
+",no_evident_not_perfect_price_for_what_we_expect,high_price_for_not_enough_comfort_room,No
+439,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_perfect_price_for_what_we_expect.
+",no_evident_not_perfect_price_for_what_we_expect,high_price_for_small_room,No
+440,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_perfect_price_for_what_we_expect.
+",no_evident_not_perfect_price_for_what_we_expect,expensive_hotel,No
+441,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_perfect_price_for_what_we_expect.
+",no_evident_not_perfect_price_for_what_we_expect,expensive_for_average_hotel,No
+442,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_perfect_price_for_what_we_expect.
+",no_evident_not_perfect_price_for_what_we_expect,expensive_for_3_star_hotel,No
+443,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is unlabeled_shampoo_dispenser_for_this_price. Phrase A is no_evident_not_excellent_value.
+",no_evident_not_excellent_value,unlabeled_shampoo_dispenser_for_this_price,Yes
+444,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is shampoo_seem_cheap_considering_hotel_cost. Phrase A is no_evident_not_excellent_value.
+",no_evident_not_excellent_value,shampoo_seem_cheap_considering_hotel_cost,No
+445,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is guesthouse_but_price_like_hotel. Phrase A is no_evident_not_excellent_value.
+",no_evident_not_excellent_value,guesthouse_but_price_like_hotel,No
+446,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is for_money_you_pay_you_get_one_small_water_bottle. Phrase A is no_evident_not_excellent_value.
+",no_evident_not_excellent_value,for_money_you_pay_you_get_one_small_water_bottle,No
+447,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_what_you_get. Phrase A is no_evident_not_excellent_value.
+",no_evident_not_excellent_value,expensive_for_what_you_get,Yes
+448,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_rate_for_what_offer. Phrase A is no_evident_not_excellent_value.
+",no_evident_not_excellent_value,expensive_rate_for_what_offer,No
+449,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is overpriced_for_facility. Phrase A is no_evident_not_excellent_value.
+",no_evident_not_excellent_value,overpriced_for_facility,Yes
+450,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is meal_not_include_in_price. Phrase A is no_evident_not_excellent_value.
+",no_evident_not_excellent_value,meal_not_include_in_price,No
+451,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_not_enough_comfort_room. Phrase A is no_evident_not_excellent_value.
+",no_evident_not_excellent_value,high_price_for_not_enough_comfort_room,No
+452,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is high_price_for_small_room. Phrase A is no_evident_not_excellent_value.
+",no_evident_not_excellent_value,high_price_for_small_room,Yes
+453,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_hotel. Phrase A is no_evident_not_excellent_value.
+",no_evident_not_excellent_value,expensive_hotel,No
+454,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_average_hotel. Phrase A is no_evident_not_excellent_value.
+",no_evident_not_excellent_value,expensive_for_average_hotel,Yes
+455,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is expensive_for_3_star_hotel. Phrase A is no_evident_not_excellent_value.
+",no_evident_not_excellent_value,expensive_for_3_star_hotel,Yes

@@ -1,0 +1,18 @@
+======================================================================
+Test 1
+======================================================================
+ID Vote LLM_Output Verify
+ 1  Yes         No     FN
+ 2  Yes         No     FN
+ 3   No         No     TN
+ 4   No         No     TN
+ 5   No         No     TN
+ 6  Yes        Yes     TP
+ 7  Yes         No     FN
+ 8  Yes        Yes     TP
+
+======================================================================
+SUMMARY
+======================================================================
+       Model      Shot     Topic           Category   Test Positive_Label  N_gold  N_pred  N_unparsed  N_valid  TP  TN  FP  FN  Precision  Recall       F1  Accuracy
+llama4_scout zero_shot check-out Contrary(P)Body(N) Test 1            Yes       8       8           0        8   2   3   0   3        1.0     0.4 0.571429     0.625

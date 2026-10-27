@@ -1,0 +1,33 @@
+Timestamp,Run,ID,PhraseA,PhraseB,Prompt,RawOutput
+2026-08-10 22:40:35,1,6,no_evident_not_late_departure_no_extra_cost,staff_not_allow_late_check-out_for_delay_plane,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_not_allow_late_check-out_for_delay_plane. Phrase A is no_evident_not_late_departure_no_extra_cost.
+",Yes
+2026-08-10 22:40:35,1,7,no_evident_not_hotel_allow_late_departure,staff_not_allow_late_check-out_for_delay_plane,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_not_allow_late_check-out_for_delay_plane. Phrase A is no_evident_not_hotel_allow_late_departure.
+",Yes
+2026-08-10 22:40:35,1,3,no_evident_not_fast_check-out,staff_not_allow_late_check-out_for_delay_plane,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_not_allow_late_check-out_for_delay_plane. Phrase A is no_evident_not_fast_check-out.
+",Yes
+2026-08-10 22:40:35,1,8,no_evident_not_possibility_for_late_check_out,staff_not_allow_late_check-out_for_delay_plane,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_not_allow_late_check-out_for_delay_plane. Phrase A is no_evident_not_possibility_for_late_check_out.
+",Yes
+2026-08-10 22:40:35,1,4,no_evident_not_no_problem_left_at_night,staff_not_allow_late_check-out_for_delay_plane,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_not_allow_late_check-out_for_delay_plane. Phrase A is no_evident_not_no_problem_left_at_night.
+",Yes
+2026-08-10 22:40:35,1,1,no_evident_not_good_check-out_time,staff_not_allow_late_check-out_for_delay_plane,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_not_allow_late_check-out_for_delay_plane. Phrase A is no_evident_not_good_check-out_time.
+",Yes
+2026-08-10 22:40:35,1,5,no_evident_not_staff_give_early_check-out,staff_not_allow_late_check-out_for_delay_plane,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_not_allow_late_check-out_for_delay_plane. Phrase A is no_evident_not_staff_give_early_check-out.
+",Yes
+2026-08-10 22:40:35,1,2,no_evident_not_allow_to_check-out_later,staff_not_allow_late_check-out_for_delay_plane,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_not_allow_late_check-out_for_delay_plane. Phrase A is no_evident_not_allow_to_check-out_later.
+",Yes

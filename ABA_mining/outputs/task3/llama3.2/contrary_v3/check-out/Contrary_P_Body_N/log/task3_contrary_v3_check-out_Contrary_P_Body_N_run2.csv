@@ -1,0 +1,217 @@
+Timestamp,Run,ID,PhraseA,PhraseB,Prompt,RawOutput
+2026-08-10 23:45:36,2,2,no_evident_not_allow_to_check-out_later,staff_not_allow_late_check-out_for_delay_plane,"You are reasoning about an ABA argumentation framework from hotel reviews.
+
+Phrase A is an assumption of the form ""no_evident_not_X"" (assumes no evidence that X is false) or
+""have_evident_no_Y"" (assumes evidence that Y is missing). Phrase B is a candidate fact mined from a
+different complaint. Phrase B is CONTRARY to Phrase A only if B, taken as true, is the concrete
+counter-evidence that breaks A's assumption about the same specific situation.
+
+Think step by step in ONE short sentence, then give the final verdict on its own line as
+""Answer: Yes"" or ""Answer: No"". Do not write more than one reasoning sentence.
+
+Worked example (contrary case):
+Phrase A is no_evident_not_easy_check-in. Phrase B is customer_wait_10_minute_for_greet.
+Reasoning: Waiting 10 minutes to be greeted is direct proof check-in was not easy, so it breaks the assumption.
+Answer: Yes
+
+Worked example (not contrary case):
+Phrase A is no_evident_not_easy_check-in. Phrase B is no_one_give_key_on_late_check-in.
+Reasoning: This is a separate complaint about late-checkin key handling, not evidence that check-in itself was hard.
+Answer: No
+
+Now do the same for this pair. Give exactly one reasoning sentence, then the Answer line.
+
+Phrase A is no_evident_not_allow_to_check-out_later. Phrase B is staff_not_allow_late_check-out_for_delay_plane.
+Reasoning:
+","If waiting 10 minutes to be greeted breaks the assumption that check-in was easy, then if a staff member not allowing late check-out for a delay plane breaks the assumption that it's allowed to check out later, then Phrase B is contrary to Phrase A.
+
+Answer: Yes"
+2026-08-10 23:45:37,2,3,no_evident_not_fast_check-out,staff_not_allow_late_check-out_for_delay_plane,"You are reasoning about an ABA argumentation framework from hotel reviews.
+
+Phrase A is an assumption of the form ""no_evident_not_X"" (assumes no evidence that X is false) or
+""have_evident_no_Y"" (assumes evidence that Y is missing). Phrase B is a candidate fact mined from a
+different complaint. Phrase B is CONTRARY to Phrase A only if B, taken as true, is the concrete
+counter-evidence that breaks A's assumption about the same specific situation.
+
+Think step by step in ONE short sentence, then give the final verdict on its own line as
+""Answer: Yes"" or ""Answer: No"". Do not write more than one reasoning sentence.
+
+Worked example (contrary case):
+Phrase A is no_evident_not_easy_check-in. Phrase B is customer_wait_10_minute_for_greet.
+Reasoning: Waiting 10 minutes to be greeted is direct proof check-in was not easy, so it breaks the assumption.
+Answer: Yes
+
+Worked example (not contrary case):
+Phrase A is no_evident_not_easy_check-in. Phrase B is no_one_give_key_on_late_check-in.
+Reasoning: This is a separate complaint about late-checkin key handling, not evidence that check-in itself was hard.
+Answer: No
+
+Now do the same for this pair. Give exactly one reasoning sentence, then the Answer line.
+
+Phrase A is no_evident_not_fast_check-out. Phrase B is staff_not_allow_late_check-out_for_delay_plane.
+Reasoning:
+","If waiting 10 minutes to be greeted implies that check-in was not easy, then if a plane is delayed and staff do not allow late check-out for such delays, it directly contradicts the assumption that no evidence suggests check-in was hard.
+
+Answer: Yes"
+2026-08-10 23:45:38,2,5,no_evident_not_staff_give_early_check-out,staff_not_allow_late_check-out_for_delay_plane,"You are reasoning about an ABA argumentation framework from hotel reviews.
+
+Phrase A is an assumption of the form ""no_evident_not_X"" (assumes no evidence that X is false) or
+""have_evident_no_Y"" (assumes evidence that Y is missing). Phrase B is a candidate fact mined from a
+different complaint. Phrase B is CONTRARY to Phrase A only if B, taken as true, is the concrete
+counter-evidence that breaks A's assumption about the same specific situation.
+
+Think step by step in ONE short sentence, then give the final verdict on its own line as
+""Answer: Yes"" or ""Answer: No"". Do not write more than one reasoning sentence.
+
+Worked example (contrary case):
+Phrase A is no_evident_not_easy_check-in. Phrase B is customer_wait_10_minute_for_greet.
+Reasoning: Waiting 10 minutes to be greeted is direct proof check-in was not easy, so it breaks the assumption.
+Answer: Yes
+
+Worked example (not contrary case):
+Phrase A is no_evident_not_easy_check-in. Phrase B is no_one_give_key_on_late_check-in.
+Reasoning: This is a separate complaint about late-checkin key handling, not evidence that check-in itself was hard.
+Answer: No
+
+Now do the same for this pair. Give exactly one reasoning sentence, then the Answer line.
+
+Phrase A is no_evident_not_staff_give_early_check-out. Phrase B is staff_not_allow_late_check-out_for_delay_plane.
+Reasoning:
+","If waiting for a delayed plane to allow late check-out would be evidence that staff do not give early check-out, then it directly contradicts the assumption that no one has been given an early check-out.
+
+Answer: Yes"
+2026-08-10 23:45:38,2,6,no_evident_not_late_departure_no_extra_cost,staff_not_allow_late_check-out_for_delay_plane,"You are reasoning about an ABA argumentation framework from hotel reviews.
+
+Phrase A is an assumption of the form ""no_evident_not_X"" (assumes no evidence that X is false) or
+""have_evident_no_Y"" (assumes evidence that Y is missing). Phrase B is a candidate fact mined from a
+different complaint. Phrase B is CONTRARY to Phrase A only if B, taken as true, is the concrete
+counter-evidence that breaks A's assumption about the same specific situation.
+
+Think step by step in ONE short sentence, then give the final verdict on its own line as
+""Answer: Yes"" or ""Answer: No"". Do not write more than one reasoning sentence.
+
+Worked example (contrary case):
+Phrase A is no_evident_not_easy_check-in. Phrase B is customer_wait_10_minute_for_greet.
+Reasoning: Waiting 10 minutes to be greeted is direct proof check-in was not easy, so it breaks the assumption.
+Answer: Yes
+
+Worked example (not contrary case):
+Phrase A is no_evident_not_easy_check-in. Phrase B is no_one_give_key_on_late_check-in.
+Reasoning: This is a separate complaint about late-checkin key handling, not evidence that check-in itself was hard.
+Answer: No
+
+Now do the same for this pair. Give exactly one reasoning sentence, then the Answer line.
+
+Phrase A is no_evident_not_late_departure_no_extra_cost. Phrase B is staff_not_allow_late_check-out_for_delay_plane.
+Reasoning:
+","If waiting 10 minutes to be greeted breaks the assumption that check-in was easy, then not allowing late check-out for a delay plane breaking the assumption that there would be no extra cost for late departure implies that there might be an extra cost.
+
+Answer: No"
+2026-08-10 23:45:39,2,1,no_evident_not_good_check-out_time,staff_not_allow_late_check-out_for_delay_plane,"You are reasoning about an ABA argumentation framework from hotel reviews.
+
+Phrase A is an assumption of the form ""no_evident_not_X"" (assumes no evidence that X is false) or
+""have_evident_no_Y"" (assumes evidence that Y is missing). Phrase B is a candidate fact mined from a
+different complaint. Phrase B is CONTRARY to Phrase A only if B, taken as true, is the concrete
+counter-evidence that breaks A's assumption about the same specific situation.
+
+Think step by step in ONE short sentence, then give the final verdict on its own line as
+""Answer: Yes"" or ""Answer: No"". Do not write more than one reasoning sentence.
+
+Worked example (contrary case):
+Phrase A is no_evident_not_easy_check-in. Phrase B is customer_wait_10_minute_for_greet.
+Reasoning: Waiting 10 minutes to be greeted is direct proof check-in was not easy, so it breaks the assumption.
+Answer: Yes
+
+Worked example (not contrary case):
+Phrase A is no_evident_not_easy_check-in. Phrase B is no_one_give_key_on_late_check-in.
+Reasoning: This is a separate complaint about late-checkin key handling, not evidence that check-in itself was hard.
+Answer: No
+
+Now do the same for this pair. Give exactly one reasoning sentence, then the Answer line.
+
+Phrase A is no_evident_not_good_check-out_time. Phrase B is staff_not_allow_late_check-out_for_delay_plane.
+Reasoning:
+","If waiting 10 minutes to be greeted breaks the assumption that check-in was easy, then if a delay in a plane prevents late-check out, it should break the assumption that check-out time is good.
+
+Answer: Yes"
+2026-08-10 23:45:40,2,7,no_evident_not_hotel_allow_late_departure,staff_not_allow_late_check-out_for_delay_plane,"You are reasoning about an ABA argumentation framework from hotel reviews.
+
+Phrase A is an assumption of the form ""no_evident_not_X"" (assumes no evidence that X is false) or
+""have_evident_no_Y"" (assumes evidence that Y is missing). Phrase B is a candidate fact mined from a
+different complaint. Phrase B is CONTRARY to Phrase A only if B, taken as true, is the concrete
+counter-evidence that breaks A's assumption about the same specific situation.
+
+Think step by step in ONE short sentence, then give the final verdict on its own line as
+""Answer: Yes"" or ""Answer: No"". Do not write more than one reasoning sentence.
+
+Worked example (contrary case):
+Phrase A is no_evident_not_easy_check-in. Phrase B is customer_wait_10_minute_for_greet.
+Reasoning: Waiting 10 minutes to be greeted is direct proof check-in was not easy, so it breaks the assumption.
+Answer: Yes
+
+Worked example (not contrary case):
+Phrase A is no_evident_not_easy_check-in. Phrase B is no_one_give_key_on_late_check-in.
+Reasoning: This is a separate complaint about late-checkin key handling, not evidence that check-in itself was hard.
+Answer: No
+
+Now do the same for this pair. Give exactly one reasoning sentence, then the Answer line.
+
+Phrase A is no_evident_not_hotel_allow_late_departure. Phrase B is staff_not_allow_late_check-out_for_delay_plane.
+Reasoning:
+","If waiting for a delayed plane to allow late check-out directly contradicts the assumption that hotels do not allow late departures, then Phrase B breaks Phrase A's assumption.
+
+Answer: Yes"
+2026-08-10 23:45:40,2,4,no_evident_not_no_problem_left_at_night,staff_not_allow_late_check-out_for_delay_plane,"You are reasoning about an ABA argumentation framework from hotel reviews.
+
+Phrase A is an assumption of the form ""no_evident_not_X"" (assumes no evidence that X is false) or
+""have_evident_no_Y"" (assumes evidence that Y is missing). Phrase B is a candidate fact mined from a
+different complaint. Phrase B is CONTRARY to Phrase A only if B, taken as true, is the concrete
+counter-evidence that breaks A's assumption about the same specific situation.
+
+Think step by step in ONE short sentence, then give the final verdict on its own line as
+""Answer: Yes"" or ""Answer: No"". Do not write more than one reasoning sentence.
+
+Worked example (contrary case):
+Phrase A is no_evident_not_easy_check-in. Phrase B is customer_wait_10_minute_for_greet.
+Reasoning: Waiting 10 minutes to be greeted is direct proof check-in was not easy, so it breaks the assumption.
+Answer: Yes
+
+Worked example (not contrary case):
+Phrase A is no_evident_not_easy_check-in. Phrase B is no_one_give_key_on_late_check-in.
+Reasoning: This is a separate complaint about late-checkin key handling, not evidence that check-in itself was hard.
+Answer: No
+
+Now do the same for this pair. Give exactly one reasoning sentence, then the Answer line.
+
+Phrase A is no_evident_not_no_problem_left_at_night. Phrase B is staff_not_allow_late_check-out_for_delay_plane.
+Reasoning:
+","If waiting 10 minutes to be greeted breaks the assumption that check-in was easy, then not allowing late check-out for a delay plane breaking the assumption that there would be no problem with leaving at night.
+
+Answer: No"
+2026-08-10 23:45:41,2,8,no_evident_not_possibility_for_late_check_out,staff_not_allow_late_check-out_for_delay_plane,"You are reasoning about an ABA argumentation framework from hotel reviews.
+
+Phrase A is an assumption of the form ""no_evident_not_X"" (assumes no evidence that X is false) or
+""have_evident_no_Y"" (assumes evidence that Y is missing). Phrase B is a candidate fact mined from a
+different complaint. Phrase B is CONTRARY to Phrase A only if B, taken as true, is the concrete
+counter-evidence that breaks A's assumption about the same specific situation.
+
+Think step by step in ONE short sentence, then give the final verdict on its own line as
+""Answer: Yes"" or ""Answer: No"". Do not write more than one reasoning sentence.
+
+Worked example (contrary case):
+Phrase A is no_evident_not_easy_check-in. Phrase B is customer_wait_10_minute_for_greet.
+Reasoning: Waiting 10 minutes to be greeted is direct proof check-in was not easy, so it breaks the assumption.
+Answer: Yes
+
+Worked example (not contrary case):
+Phrase A is no_evident_not_easy_check-in. Phrase B is no_one_give_key_on_late_check-in.
+Reasoning: This is a separate complaint about late-checkin key handling, not evidence that check-in itself was hard.
+Answer: No
+
+Now do the same for this pair. Give exactly one reasoning sentence, then the Answer line.
+
+Phrase A is no_evident_not_possibility_for_late_check_out. Phrase B is staff_not_allow_late_check-out_for_delay_plane.
+Reasoning:
+","If waiting 10 minutes to be greeted implies that check-in was not easy, and waiting for a delayed plane implies that late-check out is possible, then the two situations are related.
+
+Answer: No"

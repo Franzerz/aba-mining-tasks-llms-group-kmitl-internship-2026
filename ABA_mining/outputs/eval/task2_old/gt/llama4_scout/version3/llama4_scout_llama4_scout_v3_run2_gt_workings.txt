@@ -1809,15 +1809,15 @@ ID=36  Topic=Food  Sentiment=Positive
   GT  body literals : ['polite_staff', 'excellent_food', 'passion_show_in_presentation']
   GT  cont  literals: ['no_evident_not_polite_staff', 'no_evident_not_excellent_food', 'no_evident_not_passion_show_in_presentation']
   LLM concat        : excellent_food , no_evident_not_excellent_food
-  GT  concat        : polite_staff , excellent_food , passion_show_in_presentation
- 
- 
- 
- 
- 
- 
- 
- 
+  GT  concat        : polite_staff , excellent_food , passion_show_in_presentation
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
   , no_evident_not_polite_staff , no_evident_not_excellent_food , no_evident_not_passion_show_in_presentation
   Cosine similarity : 0.6736  → PASS (threshold 0.5)  [MANUAL CHECK: confirm this is the right GT body]
   Rule compliance (body literals):
@@ -3048,24 +3048,24 @@ ID=62  Topic=Room  Sentiment=Negative
   GT  body literals : ['folding_bed_could_be_better', 'comfortable_regular_beds']
   GT  cont  literals: ['have_evident_folding_bed_could_be_better', 'have_evident_comfortable_regular_beds']
   LLM concat        : 
-  GT  concat        : folding_bed_could_be_better
- 
- 
- 
- 
- 
- 
- 
- 
-  , comfortable_regular_beds , have_evident_folding_bed_could_be_better
- 
- 
- 
- 
- 
- 
- 
- 
+  GT  concat        : folding_bed_could_be_better
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  , comfortable_regular_beds , have_evident_folding_bed_could_be_better
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
   , have_evident_comfortable_regular_beds
   [Empty literal set on one side → similarity not computed]
 
@@ -33748,8 +33748,8 @@ ID=659  Topic=Location  Sentiment=Negative
   GT  body literals : ['noisy_location', 'ringing_area', 'accumulate_sound', 'airplane_sound', 'car_sound', 'slamming_trunk_sound']
   GT  cont  literals: ['have_evident_noisy_location', 'have_evident_ringing_area', 'have_evident_accumulate_sound', 'have_evident_airplane_sound', 'have_evident_car_sound', 'have_evident_slamming_trunk_sound']
   LLM concat        : noisy_area , terrible_force , noisy_airport , noisy_cars , noisy_trunk , have_evident_noisy_area , have_evident_terrible_force , have_evident_noisy_airport , have_evident_noisy_cars , have_evident_noisy_trunk
-  GT  concat        : noisy_location , ringing_area , accumulate_sound
-  , airplane_sound , car_sound , slamming_trunk_sound , have_evident_noisy_location , have_evident_ringing_area , have_evident_accumulate_sound
+  GT  concat        : noisy_location , ringing_area , accumulate_sound
+  , airplane_sound , car_sound , slamming_trunk_sound , have_evident_noisy_location , have_evident_ringing_area , have_evident_accumulate_sound
   , have_evident_airplane_sound , have_evident_car_sound , have_evident_slamming_trunk_sound
   Cosine similarity : 0.7675  → PASS (threshold 0.5)  [MANUAL CHECK: confirm this is the right GT body]
   Rule compliance (body literals):

@@ -7,11 +7,23 @@ Task 3 evaluator, structured to match mu_work's Task3_Evaluation.py:
   - one EVAL_SUMMARY.xlsx per (model, prompt version, aspect) with ALL + MICRO_BY_CATEGORY sheets
   - one top-level TASK3_VERIFY_MASTER_SUMMARY.xlsx aggregating every discovered prediction file
     (ALL_EVAL_SUMMARY + AVG_BY_MODEL_SHOT_TOPIC_CAT, picking the best-scoring Test per config)
+  - two CSVs laid out like the team's Google Sheet, ready to import:
+      TASK3_SHEET_PER_TOPIC.csv              one row per model/version/topic/category/test
+      TASK3_SUMMARY_FOR_SHEETS[_ALL_TOPICS].csv  one row per model/version/run, macro + micro
 
-Reads predictions from the "_sheet.xlsx" wide tables written by run_task3.py
-(outputs/task3/{model}/{label}/{aspect}/{category}/..._sheet.xlsx) and gold Vote from the
-Task 3 gold CSVs via src.task3.load_task3_instances (not a separate hardcoded GT path list,
-since that loader already handles this project's column-name variants).
+Reads predictions from either layout run_task3.py can leave behind, under
+{pred_dir}/{model}/{label}/{aspect}/{category}/:
+  - csv/..._run{N}.csv   one file per run, each carrying a "Test N" column (the per-prediction
+                         checkpoint files — always present, and the only thing a run that was
+                         copied back from the server before its tidy pass finished will have)
+  - ..._sheet.xlsx       the wide ID + Test 1..N table written after all runs finish
+Per-run CSVs win when both exist, since they are the source of truth the sheet is built from.
+Gold Vote comes from the Task 3 gold files via src.task3.load_task3_instances (not a separate
+hardcoded GT path list, since that loader already handles this project's column-name variants).
+
+Every prediction row is checked against its gold row: the (PhraseA, PhraseB) the model was shown
+must be the pair gold has under that ID. IDs only mean something relative to one specific gold
+file, so a run made against a different file version would otherwise score silently wrong.
 
 "Shot" in the output columns holds the prompt-version label (e.g. "zero_shot", "contrary_v3"),
 generalizing mu_work's 0-shot/1-shot column to this project's 8 prompt variants.
@@ -19,6 +31,7 @@ generalizing mu_work's 0-shot/1-shot column to this project's 8 prompt variants.
 
 from __future__ import annotations
 
+import argparse
 import re
 import sys
 from pathlib import Path
@@ -132,34 +145,122 @@ def _round_metrics(df: pd.DataFrame, decimals: int = 6) -> pd.DataFrame:
     return df
 
 
-def _find_prediction_sheets() -> list[Path]:
-    return sorted(PRED_BASE.rglob("*_sheet.xlsx"))
+_RUN_RE = re.compile(r"_run(\d+)\.csv$")
+UNPARSED = "<unparsed>"
 
 
-def _parse_sheet_path(path: Path) -> tuple[str, str, str, str] | None:
-    """Returns (model, label, aspect, category) from
-    outputs/task3/{model}/{label}/{aspect}/{category_token}/{run_base}_sheet.xlsx
-    """
-    try:
-        rel = path.relative_to(PRED_BASE)
-    except ValueError:
-        return None
-    parts = rel.parts
-    if len(parts) < 5:
-        return None
-    model, label, aspect, category_token = parts[0], parts[1], parts[2], parts[3]
-    # Map the filesystem-safe category token back to a display name for the categories we know.
-    category = next(
-        (c for c in POSITIVE_LABEL_BY_CATEGORY if re.sub(r"[^\w\-]+", "_", c).strip("_") == category_token),
-        category_token,
+def _category_from_token(token: str) -> str:
+    """Maps the filesystem-safe category token (Contrary_P_Body_N) back to its display name."""
+    return next(
+        (c for c in POSITIVE_LABEL_BY_CATEGORY if re.sub(r"[^\w\-]+", "_", c).strip("_") == token),
+        token,
     )
-    return model, label, aspect, category
 
 
-def evaluate_one(model: str, label: str, aspect: str, category: str, pred_xlsx: Path, task3_dir: Path) -> pd.DataFrame:
+def _discover_predictions(pred_base: Path) -> dict[tuple[str, str, str, str], dict]:
+    """Finds every (model, label, aspect, category) under pred_base, in either layout.
+
+    Returns {key: {"runs": {run_no: csv_path}, "sheet": xlsx_path | None}}.
+    """
+    found: dict[tuple[str, str, str, str], dict] = {}
+
+    def entry(parts: tuple[str, ...]) -> dict:
+        key = (parts[0], parts[1], parts[2], _category_from_token(parts[3]))
+        return found.setdefault(key, {"runs": {}, "sheet": None})
+
+    for path in pred_base.rglob("*.csv"):
+        parts = path.relative_to(pred_base).parts
+        # {model}/{label}/{aspect}/{category}/csv/{file}_runN.csv  (log/ holds raw text; skip)
+        if len(parts) != 6 or parts[4] != "csv":
+            continue
+        m = _RUN_RE.search(path.name)
+        if m:
+            entry(parts)["runs"][int(m.group(1))] = path
+
+    for path in pred_base.rglob("*_sheet.xlsx"):
+        parts = path.relative_to(pred_base).parts
+        if len(parts) == 5:
+            entry(parts)["sheet"] = path
+
+    return found
+
+
+def _load_wide_predictions(item: dict) -> pd.DataFrame:
+    """ID [+ PhraseA, PhraseB] + one "Test N" column per run.
+
+    Runs are joined on ID with an OUTER join: a run that was cut off partway (the server dying
+    mid-run) simply has NaN for the IDs it never reached, and is scored on the rows it did finish
+    rather than dragging the complete runs down with it.
+    """
+    if item["runs"]:
+        wide: pd.DataFrame | None = None
+        for run_no in sorted(item["runs"]):
+            df = pd.read_csv(item["runs"][run_no], dtype=str)
+            test_col = f"Test {run_no}"
+            if test_col not in df.columns:
+                continue
+            keep = ["ID", test_col] + [c for c in ("PhraseA", "PhraseB") if c in df.columns]
+            df = df[keep].drop_duplicates(subset=["ID"], keep="last")
+            # A blank cell here means the row WAS attempted but the answer couldn't be parsed
+            # (e.g. a reasoning prompt running past max_tokens before "Answer: Yes/No"). Mark it,
+            # so after the outer join a NaN unambiguously means "this run never reached the row".
+            # The marker is not Yes/No, so it still counts as invalid rather than as a prediction.
+            df[test_col] = df[test_col].fillna(UNPARSED)
+            df.loc[df[test_col].astype(str).str.strip() == "", test_col] = UNPARSED
+            if wide is None:
+                wide = df
+            else:
+                phrase_cols = [c for c in ("PhraseA", "PhraseB") if c in df.columns and c in wide.columns]
+                wide = wide.merge(df.drop(columns=phrase_cols), on="ID", how="outer")
+                # fill phrases for IDs only this run reached
+                for c in phrase_cols:
+                    fill = df.set_index("ID")[c]
+                    wide[c] = wide[c].fillna(wide["ID"].map(fill))
+        return wide if wide is not None else pd.DataFrame()
+
+    if item["sheet"] is not None:
+        return pd.read_excel(item["sheet"], dtype=str)
+    return pd.DataFrame()
+
+
+def _check_alignment(pdf: pd.DataFrame, gold: dict) -> tuple[int, int, list[str]]:
+    """Returns (checked, mismatched, examples): does each predicted ID carry the same phrase pair
+    as the gold row with that ID?"""
+    if "PhraseA" not in pdf.columns or "PhraseB" not in pdf.columns:
+        return 0, 0, []
+    checked = mismatched = 0
+    examples: list[str] = []
+    for id_, a, b in zip(pdf["ID"], pdf["PhraseA"], pdf["PhraseB"]):
+        g = gold.get(id_)
+        if g is None:
+            continue
+        checked += 1
+        if (str(a).strip(), str(b).strip()) != (g.phrase_a.strip(), g.phrase_b.strip()):
+            mismatched += 1
+            if len(examples) < 3:
+                examples.append(f"ID {id_}: pred=({a}, {b}) gold=({g.phrase_a}, {g.phrase_b})")
+    return checked, mismatched, examples
+
+
+_GOLD_CACHE: dict[tuple[str, str], dict] = {}
+
+
+def _gold_for(task3_dir: Path, aspect: str, category: str) -> dict:
+    """ID -> Task3Instance for one (aspect, category); loaded once per process."""
+    key = (aspect, category)
+    if key not in _GOLD_CACHE:
+        instances = load_task3_instances(task3_dir, aspects=[aspect], categories=[category], max_per_group=None)
+        _GOLD_CACHE[key] = {inst.row_id: inst for inst in instances}
+    return _GOLD_CACHE[key]
+
+
+ALIGNMENT_ISSUES: list[dict] = []
+
+
+def evaluate_one(model: str, label: str, aspect: str, category: str, item: dict, task3_dir: Path) -> pd.DataFrame:
     positive_label = POSITIVE_LABEL_BY_CATEGORY.get(category)
     if positive_label is None:
-        print(f"  [SKIP] unknown category '{category}' for {pred_xlsx.name} — no positive-label mapping")
+        print(f"  [SKIP] unknown category '{category}' for {model}/{label}/{aspect} — no positive-label mapping")
         return pd.DataFrame()
 
     # IDs are only unique WITHIN a category (each category sheet restarts its own ID
@@ -168,17 +269,32 @@ def evaluate_one(model: str, label: str, aspect: str, category: str, pred_xlsx: 
     # max_per_group=None: predictions may have been generated from a random subset: we need
     # the FULL vote lookup so any ID that shows up in the prediction file resolves correctly,
     # not just whichever subset a sampling cap would keep.
-    gt_instances = load_task3_instances(task3_dir, aspects=[aspect], categories=[category], max_per_group=None)
-    gt_map = {inst.row_id: inst.gold_vote for inst in gt_instances}
+    gold = _gold_for(task3_dir, aspect, category)
+    gt_map = {row_id: inst.gold_vote for row_id, inst in gold.items()}
     if not gt_map:
         print(f"  [SKIP] no gold data for aspect '{aspect}' / category '{category}'")
         return pd.DataFrame()
 
-    pdf = pd.read_excel(pred_xlsx, dtype=str).fillna("")
-    test_cols = [c for c in pdf.columns if re.match(r"^Test \d+$", str(c))]
-    if not test_cols:
-        print(f"  [SKIP] no Test N columns in {pred_xlsx.name}")
+    pdf = _load_wide_predictions(item)
+    if pdf.empty:
+        print(f"  [SKIP] no readable predictions for {model}/{label}/{aspect}/{category}")
         return pd.DataFrame()
+    test_cols = sorted(
+        (c for c in pdf.columns if re.match(r"^Test \d+$", str(c))),
+        key=lambda c: int(c.split()[1]),
+    )
+    if not test_cols:
+        print(f"  [SKIP] no Test N columns for {model}/{label}/{aspect}/{category}")
+        return pd.DataFrame()
+
+    checked, mismatched, examples = _check_alignment(pdf, gold)
+    if mismatched:
+        ALIGNMENT_ISSUES.append({"Model": model, "Shot": label, "Topic": aspect, "Category": category,
+                                 "Checked": checked, "Mismatched": mismatched,
+                                 "Example": examples[0] if examples else ""})
+        print(f"  [WARN] {model}/{label}/{aspect}/{category}: {mismatched}/{checked} prediction rows "
+              f"do not match their gold phrase pair — e.g. {examples[0]}")
+    pdf = pdf.fillna("")
 
     out_dir = EVAL_BASE / aspect / model / label
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -190,6 +306,11 @@ def evaluate_one(model: str, label: str, aspect: str, category: str, pred_xlsx: 
         for tcol in test_cols:
             tmp = pdf[["ID", tcol]].copy()
             tmp.columns = ["ID", "LLM_Output"]
+            # N_pred = rows this run ATTEMPTED (a run cut off mid-way leaves them blank);
+            # N_unparsed = attempted but no Yes/No could be read from the answer.
+            attempted = tmp["LLM_Output"].astype(str).str.strip() != ""
+            n_pred = int(attempted.sum())
+            n_unparsed = int((tmp["LLM_Output"] == UNPARSED).sum())
             tmp["LLM_Output"] = tmp["LLM_Output"].map(norm_yn)
             tmp["Vote"] = tmp["ID"].map(gt_map)
             tmp = tmp[tmp["Vote"].notna()].copy()
@@ -200,12 +321,14 @@ def evaluate_one(model: str, label: str, aspect: str, category: str, pred_xlsx: 
 
             met = compute_metrics(tmp["Vote"], tmp["LLM_Output"], positive_label)
             met.update({"Model": model, "Shot": label, "Topic": aspect, "Category": category,
-                        "Test": tcol, "Positive_Label": positive_label})
+                        "Test": tcol, "Positive_Label": positive_label,
+                        "N_pred": n_pred, "N_unparsed": n_unparsed, "N_gold": len(gt_map)})
             summary_rows.append(met)
 
         summary_df = pd.DataFrame(summary_rows)[
             ["Model", "Shot", "Topic", "Category", "Test", "Positive_Label",
-             "N_valid", "TP", "TN", "FP", "FN", "Precision", "Recall", "F1", "Accuracy"]
+             "N_gold", "N_pred", "N_unparsed", "N_valid", "TP", "TN", "FP", "FN",
+             "Precision", "Recall", "F1", "Accuracy"]
         ]
         summary_df.to_excel(writer, sheet_name="SUMMARY", index=False)
         sheets_for_txt.append(("SUMMARY", summary_df))
@@ -267,7 +390,8 @@ def write_master_summary(
 
     out_path = out_path or MASTER_SUMMARY_XLSX
     cols = ["Model", "Shot", "Topic", "Category", "Test", "Positive_Label",
-            "N_valid", "TP", "TN", "FP", "FN", "Precision", "Recall", "F1", "Accuracy"]
+            "N_gold", "N_pred", "N_unparsed", "N_valid", "TP", "TN", "FP", "FN",
+            "Precision", "Recall", "F1", "Accuracy"]
     all_eval_summary = master_df[cols].copy()
 
     avg_metrics = (
@@ -310,16 +434,62 @@ def write_master_summary(
     print(f"\n[MASTER SUMMARY SAVED] {out_path.relative_to(REPO_ROOT)} (+ .txt)")
 
 
+# Display names used by the Google Sheet's dropdown chips, so the CSVs paste in without
+# "invalid value" warnings. Anything not listed here is written as-is.
+SHEET_VERSION_NAMES = {"zero_shot": "Zero-shot", "one_shot": "One-shot",
+                       **{f"contrary_v{i}": f"Contrary{i}" for i in range(1, 10)}}
+SHEET_TOPIC_NAMES = {"check-in": "Check-in", "check-out": "Check-out", "price": "Price",
+                     "staff": "Staff", "facility": "Facility"}
+SHEET_TOPIC_ORDER = list(SHEET_TOPIC_NAMES)
+SHEET_METRICS = ["Precision", "Recall", "F1", "Accuracy"]
+
+# The per-run table pools TP/FP/FN/TN across topics, which is only meaningful when every pooled
+# row uses the same positive label — so it covers ONE category. Contrary(P)Body(N) is the one
+# every model ran; the other categories stay visible, per topic, in the per-topic table.
+SHEET_RUN_CATEGORY = "Contrary(P)Body(N)"
+
+
+def _sheet_order(df: pd.DataFrame) -> pd.DataFrame:
+    version_rank = {v: i for i, v in enumerate(SHEET_VERSION_NAMES)}
+    topic_rank = {t: i for i, t in enumerate(SHEET_TOPIC_ORDER)}
+    return df.assign(
+        _v=df["Shot"].map(version_rank).fillna(len(version_rank)),
+        _t=df["Topic"].map(topic_rank).fillna(len(topic_rank)) if "Topic" in df else 0,
+        _r=df["Test"].str.extract(r"(\d+)", expand=False).astype(int),
+    )
+
+
+def write_sheet_per_topic(all_rows: list[pd.DataFrame], out_path: Path) -> None:
+    """Sheet table 1 — one row per (Model, Version, Topic, Category, Test):
+    Model | Version | Topic | Category | Test | Label | Precision | Recall | F1 | Accuracy
+    Label is the positive label the metrics were computed against."""
+    if not all_rows:
+        return
+    df = _sheet_order(pd.concat(all_rows, ignore_index=True))
+    df = df.sort_values(["Model", "_v", "_t", "Category", "_r"])
+    out = pd.DataFrame({
+        "Model": df["Model"],
+        "Version": df["Shot"].map(lambda v: SHEET_VERSION_NAMES.get(v, v)),
+        "Topic": df["Topic"].map(lambda t: SHEET_TOPIC_NAMES.get(t, t)),
+        "Category": df["Category"],
+        "Test": df["Test"],
+        "Label": df["Positive_Label"],
+        **{m: df[m].round(4) for m in SHEET_METRICS},
+    })
+    out.to_csv(out_path, index=False)
+    print(f"[SHEET TABLE 1] {out_path.relative_to(REPO_ROOT)}  ({len(out)} rows)")
+
+
 def write_sheet_summary(
     all_rows: list[pd.DataFrame],
     topics: list[str] | None = None,
     out_path: Path | None = None,
 ) -> None:
-    """Writes a flat CSV for pasting straight into a Google Sheet: one row per
-    (Model, Version, Run), aggregated across every topic/category evaluated for that combo.
-    Mirrors the Model/Version/Run + Macro+Micro Precision/Recall/F1/Accuracy layout of the
-    existing Task 2 tracking sheet, generalized to Task 3 (no Head/Body split needed here —
-    Task 3 only classifies one thing: Yes/No contrary).
+    """Sheet table 2 — one row per (Model, Version, Run), aggregated across topics:
+    Model | Version | Topic | Run | Macro P/R/F1/Acc | Micro P/R/F1/Acc
+    Macro = plain mean of the per-topic metrics; Micro = metrics from TP/FP/FN/TN pooled across
+    topics. "Topic" lists the topics that went into that run's row, so a run that is missing a
+    topic is visible rather than silently averaged over fewer.
 
     topics=None aggregates every topic evaluated so far; pass a topic list (e.g.
     MU_WORK_TOPICS) to scope the aggregation down to just those topics.
@@ -327,18 +497,18 @@ def write_sheet_summary(
     if not all_rows:
         return
     master_df = pd.concat(all_rows, ignore_index=True)
+    master_df = master_df[master_df["Category"] == SHEET_RUN_CATEGORY]
     if topics is not None:
         master_df = master_df[master_df["Topic"].isin(topics)]
-        if master_df.empty:
-            print(f"[WARN] No rows left after filtering to topics={topics}")
-            return
+    if master_df.empty:
+        print(f"[WARN] No {SHEET_RUN_CATEGORY} rows left for topics={topics}")
+        return
     group_cols = ["Model", "Shot", "Test"]
 
-    macro = master_df.groupby(group_cols, as_index=False)[["Precision", "Recall", "F1", "Accuracy"]].mean()
-    macro = macro.rename(columns={"Precision": "Macro Precision", "Recall": "Macro Recall",
-                                   "F1": "Macro F1", "Accuracy": "Macro Accuracy"})
+    macro = master_df.groupby(group_cols, as_index=False)[SHEET_METRICS].mean()
+    macro = macro.rename(columns={m: f"Macro {m}" for m in SHEET_METRICS})
 
-    pooled = master_df.groupby(group_cols, as_index=False)[["TP", "TN", "FP", "FN", "N_valid"]].sum()
+    pooled = master_df.groupby(group_cols, as_index=False)[["TP", "TN", "FP", "FN"]].sum()
     pooled["Micro Precision"] = safe_div_series(pooled["TP"], pooled["TP"] + pooled["FP"])
     pooled["Micro Recall"] = safe_div_series(pooled["TP"], pooled["TP"] + pooled["FN"])
     pooled["Micro F1"] = safe_div_series(2 * pooled["Micro Precision"] * pooled["Micro Recall"],
@@ -346,59 +516,68 @@ def write_sheet_summary(
     pooled["Micro Accuracy"] = safe_div_series(pooled["TP"] + pooled["TN"],
                                                 pooled["TP"] + pooled["TN"] + pooled["FP"] + pooled["FN"])
 
+    topic_rank = {t: i for i, t in enumerate(SHEET_TOPIC_ORDER)}
     topics_covered = (
         master_df.groupby(group_cols)["Topic"]
-        .apply(lambda s: ", ".join(sorted(set(s))))
+        .apply(lambda s: ", ".join(SHEET_TOPIC_NAMES.get(t, t)
+                                   for t in sorted(set(s), key=lambda t: topic_rank.get(t, 99))))
         .reset_index()
-        .rename(columns={"Topic": "Topics"})
     )
 
-    out = macro.merge(
-        pooled[group_cols + ["N_valid", "Micro Precision", "Micro Recall", "Micro F1", "Micro Accuracy"]],
-        on=group_cols,
-    ).merge(topics_covered, on=group_cols)
+    out = macro.merge(pooled.drop(columns=["TP", "TN", "FP", "FN"]), on=group_cols)
+    out = out.merge(topics_covered, on=group_cols)
+    out = _sheet_order(out).sort_values(["Model", "_v", "_r"])
 
-    out = out.rename(columns={"Shot": "Version", "Test": "Run"})
-    out["Run"] = out["Run"].str.replace("Test ", "", regex=False)
-
-    metric_cols = ["Macro Precision", "Macro Recall", "Macro F1", "Macro Accuracy",
-                   "Micro Precision", "Micro Recall", "Micro F1", "Micro Accuracy"]
-    for c in metric_cols:
-        out[c] = out[c].round(4)
-
-    out = out[["Model", "Version", "Run", "Topics", "N_valid"] + metric_cols]
-    out = out.sort_values(["Model", "Version", "Run"]).reset_index(drop=True)
+    metric_cols = [f"Macro {m}" for m in SHEET_METRICS] + [f"Micro {m}" for m in SHEET_METRICS]
+    out = pd.DataFrame({
+        "Model": out["Model"],
+        "Version": out["Shot"].map(lambda v: SHEET_VERSION_NAMES.get(v, v)),
+        "Topic": out["Topic"],
+        "Run": out["_r"],
+        **{c: out[c].round(4) for c in metric_cols},
+    })
 
     csv_path = out_path or (EVAL_BASE / "TASK3_SUMMARY_FOR_SHEETS.csv")
     out.to_csv(csv_path, index=False)
-    print(f"[SHEET SUMMARY] {csv_path.relative_to(REPO_ROOT)}  ({len(out)} rows)")
+    print(f"[SHEET TABLE 2] {csv_path.relative_to(REPO_ROOT)}  ({len(out)} rows)")
 
 
 def main() -> None:
+    global PRED_BASE, EVAL_BASE, MASTER_SUMMARY_XLSX
+
+    parser = argparse.ArgumentParser(description="Evaluate Task 3 predictions against gold votes.")
+    parser.add_argument("--pred-dir", default=str(PRED_BASE),
+                        help="Folder whose children are model folders (default: outputs/task3). "
+                             "Point this at a copied-back server folder to evaluate it on its own.")
+    parser.add_argument("--eval-dir", default=str(EVAL_BASE),
+                        help="Where to write results (default: outputs/eval/task3). Use a separate "
+                             "folder per batch so results from different runs never mix.")
+    args = parser.parse_args()
+
+    PRED_BASE = Path(args.pred_dir).resolve()
+    EVAL_BASE = Path(args.eval_dir).resolve()
+    MASTER_SUMMARY_XLSX = EVAL_BASE / "TASK3_VERIFY_MASTER_SUMMARY.xlsx"
+
     paths_cfg = load_paths_config(REPO_ROOT)
 
-    sheets = _find_prediction_sheets()
-    if not sheets:
-        sys.exit(f"[ERROR] No prediction files found under {PRED_BASE} "
-                  f"(run run_task3.py first)")
+    discovered = _discover_predictions(PRED_BASE)
+    if not discovered:
+        sys.exit(f"[ERROR] No prediction files found under {PRED_BASE} (run run_task3.py first)")
 
-    print(f"Found {len(sheets)} prediction sheet(s) under {PRED_BASE.relative_to(REPO_ROOT)}\n")
+    n_runs = sum(len(v["runs"]) for v in discovered.values())
+    print(f"Found {len(discovered)} (model, version, topic, category) group(s), {n_runs} run file(s) "
+          f"under {PRED_BASE}\n")
 
     # Group by (model, label, aspect) so EVAL_SUMMARY.xlsx covers every category found for that combo.
-    grouped: dict[tuple[str, str, str], list[tuple[str, Path]]] = {}
-    for path in sheets:
-        parsed = _parse_sheet_path(path)
-        if parsed is None:
-            print(f"  [SKIP] unrecognized path structure: {path.relative_to(REPO_ROOT)}")
-            continue
-        model, label, aspect, category = parsed
-        grouped.setdefault((model, label, aspect), []).append((category, path))
+    grouped: dict[tuple[str, str, str], list[tuple[str, dict]]] = {}
+    for (model, label, aspect, category), item in discovered.items():
+        grouped.setdefault((model, label, aspect), []).append((category, item))
 
     all_rows: list[pd.DataFrame] = []
     for (model, label, aspect), items in sorted(grouped.items()):
         combined = []
-        for category, path in items:
-            df = evaluate_one(model, label, aspect, category, path, paths_cfg.task3_dir)
+        for category, item in sorted(items, key=lambda x: x[0]):
+            df = evaluate_one(model, label, aspect, category, item, paths_cfg.task3_dir)
             if not df.empty:
                 combined.append(df)
         if combined:
@@ -413,10 +592,23 @@ def main() -> None:
     write_master_summary(
         all_rows, out_path=EVAL_BASE / "TASK3_VERIFY_MASTER_SUMMARY_ALL_TOPICS.xlsx",
     )
+    write_sheet_per_topic(all_rows, out_path=EVAL_BASE / "TASK3_SHEET_PER_TOPIC.csv")
     write_sheet_summary(all_rows, topics=MU_WORK_TOPICS)
     write_sheet_summary(
         all_rows, out_path=EVAL_BASE / "TASK3_SUMMARY_FOR_SHEETS_ALL_TOPICS.csv",
     )
+
+    report = EVAL_BASE / "ALIGNMENT_CHECK.csv"
+    if ALIGNMENT_ISSUES:
+        pd.DataFrame(ALIGNMENT_ISSUES).to_csv(report, index=False)
+        print()
+        print(f"[ALIGNMENT] {len(ALIGNMENT_ISSUES)} group(s) have predictions that do not match "
+              f"their gold phrase pair — see {report.relative_to(REPO_ROOT)}")
+    else:
+        pd.DataFrame([{"Result": "every prediction row matched its gold (PhraseA, PhraseB) pair"}]).to_csv(
+            report, index=False)
+        print()
+        print("[ALIGNMENT] every prediction row matched its gold phrase pair")
 
 
 if __name__ == "__main__":

@@ -1,6 +1,7 @@
 #### RATCHANON ####
 
 import re
+import os
 import sys
 import time
 from collections import Counter, defaultdict
@@ -193,6 +194,28 @@ _gt_raw = _gt_raw[
 ].copy()
 _gt_raw["Topic"] = _gt_raw["Topic"].str.strip()
 _gt_raw["Sentiment"] = _gt_raw["Sentiment"].str.strip()
+
+# Optionally hold out a set of review IDs before any metric is computed.
+#
+# Set ABA_EVAL_EXCLUDE_IDS to a file with one review ID per line (blank lines and lines starting
+# with # are ignored). Nothing is excluded by default, so the numbers this script has always
+# produced are unchanged unless the variable is set. EXCLUDE_TAG is appended to the output file
+# names so an excluded run never overwrites the baseline one.
+EXCLUDE_TAG = ""
+EXCLUDED_IDS: set[str] = set()
+_exclude_file = os.environ.get("ABA_EVAL_EXCLUDE_IDS", "").strip()
+if _exclude_file:
+    _ids = {line.strip() for line in Path(_exclude_file).read_text(encoding="utf-8").splitlines()
+            if line.strip() and not line.startswith("#")}
+    _before_rows, _before_ids = len(_gt_raw), _gt_raw["Review ID"].astype(str).str.strip().nunique()
+    _gt_raw = _gt_raw[~_gt_raw["Review ID"].astype(str).str.strip().isin(_ids)]
+    _after_ids = _gt_raw["Review ID"].astype(str).str.strip().nunique()
+    EXCLUDED_IDS = {str(i).strip() for i in _ids}
+    EXCLUDE_TAG = "_excl" + str(len(_ids))
+    print(f"[exclude] {Path(_exclude_file).name}: {len(_ids)} IDs listed")
+    print(f"[exclude] gold rows {_before_rows} -> {len(_gt_raw)}   "
+          f"IDs {_before_ids} -> {_after_ids}")
+
 _gt_raw = _gt_raw.reset_index(drop=True)
 
 _BODY_COLS = [f"Body {i}" for i in range(1, N_BODY_COLS + 1) if f"Body {i}" in _gt_raw.columns]
@@ -310,6 +333,10 @@ def compute_micro_precision_recall(raw: pd.DataFrame, model) -> dict:
         return A @ B.T
 
     out: dict = {}
+    # The same counts the micro ratios are built from, kept per (review, topic, label type).
+    # A micro ratio is a sum over these, so a confidence interval can be bootstrapped by
+    # resampling reviews and re-summing -- no re-running of the model or the matcher.
+    per_key: list[dict] = []
     for ltype in ("body", "cont", "both"):
         tp_pred = tp_gt = total_pred = total_gt = 0
         topic_counts: dict = defaultdict(lambda: {"tp_pred": 0, "total_pred": 0, "tp_gt": 0, "total_gt": 0})
@@ -336,6 +363,9 @@ def compute_micro_precision_recall(raw: pd.DataFrame, model) -> dict:
 
             tp_pred += matched_pred; total_pred += len(p_list)
             tp_gt += matched_gt; total_gt += len(g_list)
+            per_key.append({"review": key[0], "topic": topic, "ltype": ltype,
+                            "tp_pred": matched_pred, "total_pred": len(p_list),
+                            "tp_gt": matched_gt, "total_gt": len(g_list)})
             tc = topic_counts[topic]
             tc["tp_pred"] += matched_pred; tc["total_pred"] += len(p_list)
             tc["tp_gt"] += matched_gt; tc["total_gt"] += len(g_list)
@@ -358,6 +388,7 @@ def compute_micro_precision_recall(raw: pd.DataFrame, model) -> dict:
             "tp_gt": tp_gt, "total_gt": total_gt,
             "per_topic": per_topic,
         }
+    out["_per_key"] = per_key   # not a label type; the report loop reads the three by name
 
     return out
 
@@ -380,8 +411,8 @@ def _write(llm_csv: Path, workings: list, results: list) -> None:
     subdir, stem = _stem_parts(llm_csv, LLM_DIR)
     out_dir = EVAL_DIR / subdir
     out_dir.mkdir(parents=True, exist_ok=True)
-    r_path = out_dir / f"{stem}_results.txt"
-    w_path = out_dir / f"{stem}_workings.txt"
+    r_path = out_dir / f"{stem}{EXCLUDE_TAG}_results.txt"
+    w_path = out_dir / f"{stem}{EXCLUDE_TAG}_workings.txt"
     r_path.write_text("\n".join(results), encoding="utf-8")
     w_path.write_text("\n".join(workings), encoding="utf-8")
     print(f"  Saved: {r_path.relative_to(TASK_DIR)}")
@@ -402,6 +433,13 @@ def evaluate(llm_csv: Path, limit: int = None) -> None:
         return
 
     raw["Review ID"] = raw["Review ID"].apply(norm_id)
+    # The same hold-out must apply to BOTH sides. Dropping the IDs only from the gold would leave
+    # the model's literals for them with nothing to match against, turning every one into a false
+    # positive and collapsing precision for a reason that has nothing to do with model quality.
+    if EXCLUDED_IDS:
+        before = len(raw)
+        raw = raw[~raw["Review ID"].astype(str).str.strip().isin(EXCLUDED_IDS)]
+        print(f"[exclude] predictions {before} -> {len(raw)} rows")
     raw["Topic"] = raw["Topic"].astype(str).str.strip()
     raw["Sentiment"] = raw["Sentiment"].astype(str).str.strip()
     raw["Selected Content"] = raw["Selected Content"].astype(str)
@@ -605,6 +643,15 @@ def evaluate(llm_csv: Path, limit: int = None) -> None:
               f"{t['n_pred']:>8} {t['n_gt']:>6}")
 
     R(f"\nRuntime: {elapsed:.2f}s")
+
+    per_key = micro.get("_per_key") or []
+    if per_key:
+        subdir, stem = _stem_parts(llm_csv, LLM_DIR)
+        counts_dir = EVAL_DIR / subdir
+        counts_dir.mkdir(parents=True, exist_ok=True)
+        counts_path = counts_dir / f"{stem}{EXCLUDE_TAG}_percounts.csv"
+        pd.DataFrame(per_key).to_csv(counts_path, index=False)
+        print(f"Wrote per-review counts: {counts_path}")
 
     _write(llm_csv, workings, results)
     print("\n".join(results))

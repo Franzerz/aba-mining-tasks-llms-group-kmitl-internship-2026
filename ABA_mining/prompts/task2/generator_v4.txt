@@ -23,6 +23,7 @@ Example — Topic: Facility | Text: "New, comfortable apartments"
 Answer: {"body_literals": ["new_[BLANK]", "comfortable_[BLANK]"]}
 Explanation — in the [BLANK] position it should be hotel for Facility, not apartments
 Correct: {"body_literals": ["new_hotel", "comfortable_hotel"]}
+Important override: for Topic=Facility, whenever the text mentions apartment/apartments, accommodation/accommodations, place, building, atmosphere, or property, the final literal MUST use hotel as the noun. This is a hard rule.
 
 Answer for the review text above:
 {"body_literals": [

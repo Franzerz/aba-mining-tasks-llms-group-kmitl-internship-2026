@@ -1,0 +1,201 @@
+======================================================================
+ALL_EVAL_SUMMARY
+======================================================================
+   Model        Shot     Topic           Category   Test Positive_Label  N_valid  TP  TN  FP  FN  Precision   Recall       F1  Accuracy
+llama3.2 contrary_v1  check-in Contrary(P)Body(N) Test 1            Yes      252  56  81  77  38   0.421053 0.595745 0.493392  0.543651
+llama3.2 contrary_v1  check-in Contrary(P)Body(N) Test 2            Yes      252  56  80  78  38   0.417910 0.595745 0.491228  0.539683
+llama3.2 contrary_v1  check-in Contrary(P)Body(N) Test 3            Yes      252  56  80  78  38   0.417910 0.595745 0.491228  0.539683
+llama3.2 contrary_v1 check-out Contrary(P)Body(N) Test 1            Yes        8   5   0   3   0   0.625000 1.000000 0.769231  0.625000
+llama3.2 contrary_v1 check-out Contrary(P)Body(N) Test 2            Yes        8   5   0   3   0   0.625000 1.000000 0.769231  0.625000
+llama3.2 contrary_v1 check-out Contrary(P)Body(N) Test 3            Yes        8   5   0   3   0   0.625000 1.000000 0.769231  0.625000
+llama3.2 contrary_v1  facility Contrary(N)Body(N) Test 1             No      500 425   0   0  75   1.000000 0.850000 0.918919  0.850000
+llama3.2 contrary_v1  facility Contrary(N)Body(N) Test 2             No      500 422   0   0  78   1.000000 0.844000 0.915401  0.844000
+llama3.2 contrary_v1  facility Contrary(N)Body(N) Test 3             No      500 423   0   0  77   1.000000 0.846000 0.916576  0.846000
+llama3.2 contrary_v1  facility Contrary(P)Body(P) Test 1             No      500 422   0   0  78   1.000000 0.844000 0.915401  0.844000
+llama3.2 contrary_v1  facility Contrary(P)Body(P) Test 2             No      500 422   0   0  78   1.000000 0.844000 0.915401  0.844000
+llama3.2 contrary_v1  facility Contrary(P)Body(P) Test 3             No      500 422   0   0  78   1.000000 0.844000 0.915401  0.844000
+llama3.2 contrary_v1     price Contrary(P)Body(N) Test 1            Yes      455 383  12  43  17   0.899061 0.957500 0.927361  0.868132
+llama3.2 contrary_v1     price Contrary(P)Body(N) Test 2            Yes      455 383  12  43  17   0.899061 0.957500 0.927361  0.868132
+llama3.2 contrary_v1     price Contrary(P)Body(N) Test 3            Yes      455 383  12  43  17   0.899061 0.957500 0.927361  0.868132
+llama3.2 contrary_v1     staff Contrary(P)Body(N) Test 1            Yes      500 115 169 178  38   0.392491 0.751634 0.515695  0.568000
+llama3.2 contrary_v1     staff Contrary(P)Body(N) Test 2            Yes      500 115 168 179  38   0.391156 0.751634 0.514541  0.566000
+llama3.2 contrary_v1     staff Contrary(P)Body(N) Test 3            Yes      500 115 168 179  38   0.391156 0.751634 0.514541  0.566000
+llama3.2 contrary_v2  check-in Contrary(P)Body(N) Test 1            Yes      252  81  23 135  13   0.375000 0.861702 0.522581  0.412698
+llama3.2 contrary_v2  check-in Contrary(P)Body(N) Test 2            Yes      252  81  23 135  13   0.375000 0.861702 0.522581  0.412698
+llama3.2 contrary_v2  check-in Contrary(P)Body(N) Test 3            Yes      252  81  23 135  13   0.375000 0.861702 0.522581  0.412698
+llama3.2 contrary_v2 check-out Contrary(P)Body(N) Test 1            Yes        8   5   0   3   0   0.625000 1.000000 0.769231  0.625000
+llama3.2 contrary_v2 check-out Contrary(P)Body(N) Test 2            Yes        8   5   0   3   0   0.625000 1.000000 0.769231  0.625000
+llama3.2 contrary_v2 check-out Contrary(P)Body(N) Test 3            Yes        8   5   0   3   0   0.625000 1.000000 0.769231  0.625000
+llama3.2 contrary_v2  facility Contrary(N)Body(N) Test 1             No      500 143   0   0 357   1.000000 0.286000 0.444790  0.286000
+llama3.2 contrary_v2  facility Contrary(N)Body(N) Test 2             No      500 139   0   0 361   1.000000 0.278000 0.435055  0.278000
+llama3.2 contrary_v2  facility Contrary(N)Body(N) Test 3             No      500 139   0   0 361   1.000000 0.278000 0.435055  0.278000
+llama3.2 contrary_v2  facility Contrary(P)Body(P) Test 1             No      500 411   0   0  89   1.000000 0.822000 0.902305  0.822000
+llama3.2 contrary_v2  facility Contrary(P)Body(P) Test 2             No      500 411   0   0  89   1.000000 0.822000 0.902305  0.822000
+llama3.2 contrary_v2  facility Contrary(P)Body(P) Test 3             No      500 411   0   0  89   1.000000 0.822000 0.902305  0.822000
+llama3.2 contrary_v2     price Contrary(P)Body(N) Test 1            Yes      455 391  10  45   9   0.896789 0.977500 0.935407  0.881319
+llama3.2 contrary_v2     price Contrary(P)Body(N) Test 2            Yes      455 391  10  45   9   0.896789 0.977500 0.935407  0.881319
+llama3.2 contrary_v2     price Contrary(P)Body(N) Test 3            Yes      455 391  10  45   9   0.896789 0.977500 0.935407  0.881319
+llama3.2 contrary_v2     staff Contrary(P)Body(N) Test 1            Yes      500 147  35 312   6   0.320261 0.960784 0.480392  0.364000
+llama3.2 contrary_v2     staff Contrary(P)Body(N) Test 2            Yes      500 147  35 312   6   0.320261 0.960784 0.480392  0.364000
+llama3.2 contrary_v2     staff Contrary(P)Body(N) Test 3            Yes      500 147  35 312   6   0.320261 0.960784 0.480392  0.364000
+llama3.2 contrary_v3  check-in Contrary(P)Body(N) Test 1            Yes      252  29 111  47  65   0.381579 0.308511 0.341177  0.555556
+llama3.2 contrary_v3  check-in Contrary(P)Body(N) Test 2            Yes      252  29 111  47  65   0.381579 0.308511 0.341177  0.555556
+llama3.2 contrary_v3  check-in Contrary(P)Body(N) Test 3            Yes      252  29 111  47  65   0.381579 0.308511 0.341177  0.555556
+llama3.2 contrary_v3 check-out Contrary(P)Body(N) Test 1            Yes        8   3   1   2   2   0.600000 0.600000 0.600000  0.500000
+llama3.2 contrary_v3 check-out Contrary(P)Body(N) Test 2            Yes        8   3   1   2   2   0.600000 0.600000 0.600000  0.500000
+llama3.2 contrary_v3 check-out Contrary(P)Body(N) Test 3            Yes        8   3   1   2   2   0.600000 0.600000 0.600000  0.500000
+llama3.2 contrary_v3  facility Contrary(N)Body(N) Test 1             No      500 405   0   0  95   1.000000 0.810000 0.895028  0.810000
+llama3.2 contrary_v3  facility Contrary(N)Body(N) Test 2             No      500 409   0   0  91   1.000000 0.818000 0.899890  0.818000
+llama3.2 contrary_v3  facility Contrary(N)Body(N) Test 3             No      500 409   0   0  91   1.000000 0.818000 0.899890  0.818000
+llama3.2 contrary_v3  facility Contrary(P)Body(P) Test 1             No      500 322   0   0 178   1.000000 0.644000 0.783455  0.644000
+llama3.2 contrary_v3  facility Contrary(P)Body(P) Test 2             No      500 322   0   0 178   1.000000 0.644000 0.783455  0.644000
+llama3.2 contrary_v3  facility Contrary(P)Body(P) Test 3             No      500 322   0   0 178   1.000000 0.644000 0.783455  0.644000
+llama3.2 contrary_v3     price Contrary(P)Body(N) Test 1            Yes      455 274  24  31 126   0.898361 0.685000 0.777305  0.654945
+llama3.2 contrary_v3     price Contrary(P)Body(N) Test 2            Yes      455 274  24  31 126   0.898361 0.685000 0.777305  0.654945
+llama3.2 contrary_v3     price Contrary(P)Body(N) Test 3            Yes      455 274  24  31 126   0.898361 0.685000 0.777305  0.654945
+llama3.2 contrary_v3     staff Contrary(P)Body(N) Test 1            Yes      500  93 160 187  60   0.332143 0.607843 0.429561  0.506000
+llama3.2 contrary_v3     staff Contrary(P)Body(N) Test 2            Yes      500  93 160 187  60   0.332143 0.607843 0.429561  0.506000
+llama3.2 contrary_v3     staff Contrary(P)Body(N) Test 3            Yes      500  93 160 187  60   0.332143 0.607843 0.429561  0.506000
+llama3.2 contrary_v4  check-in Contrary(P)Body(N) Test 1            Yes      252   0 158   0  94   0.000000 0.000000 0.000000  0.626984
+llama3.2 contrary_v4  check-in Contrary(P)Body(N) Test 2            Yes      252   0 158   0  94   0.000000 0.000000 0.000000  0.626984
+llama3.2 contrary_v4  check-in Contrary(P)Body(N) Test 3            Yes      252   0 158   0  94   0.000000 0.000000 0.000000  0.626984
+llama3.2 contrary_v4 check-out Contrary(P)Body(N) Test 1            Yes        8   0   3   0   5   0.000000 0.000000 0.000000  0.375000
+llama3.2 contrary_v4 check-out Contrary(P)Body(N) Test 2            Yes        8   0   3   0   5   0.000000 0.000000 0.000000  0.375000
+llama3.2 contrary_v4 check-out Contrary(P)Body(N) Test 3            Yes        8   0   3   0   5   0.000000 0.000000 0.000000  0.375000
+llama3.2 contrary_v4  facility Contrary(N)Body(N) Test 1             No      500 500   0   0   0   1.000000 1.000000 1.000000  1.000000
+llama3.2 contrary_v4  facility Contrary(N)Body(N) Test 2             No      500 500   0   0   0   1.000000 1.000000 1.000000  1.000000
+llama3.2 contrary_v4  facility Contrary(N)Body(N) Test 3             No      500 500   0   0   0   1.000000 1.000000 1.000000  1.000000
+llama3.2 contrary_v4  facility Contrary(P)Body(P) Test 1             No      500 500   0   0   0   1.000000 1.000000 1.000000  1.000000
+llama3.2 contrary_v4  facility Contrary(P)Body(P) Test 2             No      500 500   0   0   0   1.000000 1.000000 1.000000  1.000000
+llama3.2 contrary_v4  facility Contrary(P)Body(P) Test 3             No      500 500   0   0   0   1.000000 1.000000 1.000000  1.000000
+llama3.2 contrary_v4     price Contrary(P)Body(N) Test 1            Yes      455   0  55   0 400   0.000000 0.000000 0.000000  0.120879
+llama3.2 contrary_v4     price Contrary(P)Body(N) Test 2            Yes      455   0  55   0 400   0.000000 0.000000 0.000000  0.120879
+llama3.2 contrary_v4     price Contrary(P)Body(N) Test 3            Yes      455   0  55   0 400   0.000000 0.000000 0.000000  0.120879
+llama3.2 contrary_v4     staff Contrary(P)Body(N) Test 1            Yes      500   0 347   0 153   0.000000 0.000000 0.000000  0.694000
+llama3.2 contrary_v4     staff Contrary(P)Body(N) Test 2            Yes      500   0 347   0 153   0.000000 0.000000 0.000000  0.694000
+llama3.2 contrary_v4     staff Contrary(P)Body(N) Test 3            Yes      500   0 347   0 153   0.000000 0.000000 0.000000  0.694000
+llama3.2 contrary_v5  check-in Contrary(P)Body(N) Test 1            Yes      252  83  36 122  11   0.404878 0.882979 0.555184  0.472222
+llama3.2 contrary_v5  check-in Contrary(P)Body(N) Test 2            Yes      252  83  36 122  11   0.404878 0.882979 0.555184  0.472222
+llama3.2 contrary_v5  check-in Contrary(P)Body(N) Test 3            Yes      252  83  36 122  11   0.404878 0.882979 0.555184  0.472222
+llama3.2 contrary_v5 check-out Contrary(P)Body(N) Test 1            Yes        8   5   1   2   0   0.714286 1.000000 0.833334  0.750000
+llama3.2 contrary_v5 check-out Contrary(P)Body(N) Test 2            Yes        8   5   1   2   0   0.714286 1.000000 0.833334  0.750000
+llama3.2 contrary_v5 check-out Contrary(P)Body(N) Test 3            Yes        8   5   1   2   0   0.714286 1.000000 0.833334  0.750000
+llama3.2 contrary_v5  facility Contrary(N)Body(N) Test 1             No      500  48   0   0 452   1.000000 0.096000 0.175182  0.096000
+llama3.2 contrary_v5  facility Contrary(N)Body(N) Test 2             No      500  48   0   0 452   1.000000 0.096000 0.175182  0.096000
+llama3.2 contrary_v5  facility Contrary(N)Body(N) Test 3             No      500  48   0   0 452   1.000000 0.096000 0.175182  0.096000
+llama3.2 contrary_v5  facility Contrary(P)Body(P) Test 1             No      500 362   0   0 138   1.000000 0.724000 0.839907  0.724000
+llama3.2 contrary_v5  facility Contrary(P)Body(P) Test 2             No      500 363   0   0 137   1.000000 0.726000 0.841251  0.726000
+llama3.2 contrary_v5  facility Contrary(P)Body(P) Test 3             No      500 363   0   0 137   1.000000 0.726000 0.841251  0.726000
+llama3.2 contrary_v5     price Contrary(P)Body(N) Test 1            Yes      455 373  24  31  27   0.923267 0.932500 0.927861  0.872527
+llama3.2 contrary_v5     price Contrary(P)Body(N) Test 2            Yes      455 372  24  31  28   0.923077 0.930000 0.926526  0.870330
+llama3.2 contrary_v5     price Contrary(P)Body(N) Test 3            Yes      455 372  24  31  28   0.923077 0.930000 0.926526  0.870330
+llama3.2 contrary_v5     staff Contrary(P)Body(N) Test 1            Yes      500 115 109 238  38   0.325779 0.751634 0.454545  0.448000
+llama3.2 contrary_v5     staff Contrary(P)Body(N) Test 2            Yes      500 115 109 238  38   0.325779 0.751634 0.454545  0.448000
+llama3.2 contrary_v5     staff Contrary(P)Body(N) Test 3            Yes      500 115 109 238  38   0.325779 0.751634 0.454545  0.448000
+llama3.2 contrary_v6  check-in Contrary(P)Body(N) Test 1            Yes      252  36 109  49  58   0.423529 0.382979 0.402235  0.575397
+llama3.2 contrary_v6  check-in Contrary(P)Body(N) Test 2            Yes      252  34 111  47  60   0.419753 0.361702 0.388571  0.575397
+llama3.2 contrary_v6  check-in Contrary(P)Body(N) Test 3            Yes      252  34 111  47  60   0.419753 0.361702 0.388571  0.575397
+llama3.2 contrary_v6 check-out Contrary(P)Body(N) Test 1            Yes        8   5   0   3   0   0.625000 1.000000 0.769231  0.625000
+llama3.2 contrary_v6 check-out Contrary(P)Body(N) Test 2            Yes        8   5   0   3   0   0.625000 1.000000 0.769231  0.625000
+llama3.2 contrary_v6 check-out Contrary(P)Body(N) Test 3            Yes        8   5   0   3   0   0.625000 1.000000 0.769231  0.625000
+llama3.2 contrary_v6  facility Contrary(N)Body(N) Test 1             No      500 354   0   0 146   1.000000 0.708000 0.829040  0.708000
+llama3.2 contrary_v6  facility Contrary(N)Body(N) Test 2             No      500 366   0   0 134   1.000000 0.732000 0.845266  0.732000
+llama3.2 contrary_v6  facility Contrary(N)Body(N) Test 3             No      500 366   0   0 134   1.000000 0.732000 0.845266  0.732000
+llama3.2 contrary_v6  facility Contrary(P)Body(P) Test 1             No      500 370   0   0 130   1.000000 0.740000 0.850575  0.740000
+llama3.2 contrary_v6  facility Contrary(P)Body(P) Test 2             No      500 370   0   0 130   1.000000 0.740000 0.850575  0.740000
+llama3.2 contrary_v6  facility Contrary(P)Body(P) Test 3             No      500 370   0   0 130   1.000000 0.740000 0.850575  0.740000
+llama3.2 contrary_v6     price Contrary(P)Body(N) Test 1            Yes      455 303  20  35  97   0.896450 0.757500 0.821138  0.709890
+llama3.2 contrary_v6     price Contrary(P)Body(N) Test 2            Yes      455 302  20  35  98   0.896142 0.755000 0.819538  0.707692
+llama3.2 contrary_v6     price Contrary(P)Body(N) Test 3            Yes      455 303  20  35  97   0.896450 0.757500 0.821138  0.709890
+llama3.2 contrary_v6     staff Contrary(P)Body(N) Test 1            Yes      500  88 231 116  65   0.431373 0.575163 0.492997  0.638000
+llama3.2 contrary_v6     staff Contrary(P)Body(N) Test 2            Yes      500  88 231 116  65   0.431373 0.575163 0.492997  0.638000
+llama3.2 contrary_v6     staff Contrary(P)Body(N) Test 3            Yes      500  88 231 116  65   0.431373 0.575163 0.492997  0.638000
+llama3.2    one_shot  check-in Contrary(P)Body(N) Test 1            Yes      252   0 157   1  94   0.000000 0.000000 0.000000  0.623016
+llama3.2    one_shot  check-in Contrary(P)Body(N) Test 2            Yes      252   0 157   1  94   0.000000 0.000000 0.000000  0.623016
+llama3.2    one_shot  check-in Contrary(P)Body(N) Test 3            Yes      252   0 157   1  94   0.000000 0.000000 0.000000  0.623016
+llama3.2    one_shot check-out Contrary(P)Body(N) Test 1            Yes        8   1   3   0   4   1.000000 0.200000 0.333333  0.500000
+llama3.2    one_shot check-out Contrary(P)Body(N) Test 2            Yes        8   1   3   0   4   1.000000 0.200000 0.333333  0.500000
+llama3.2    one_shot check-out Contrary(P)Body(N) Test 3            Yes        8   1   3   0   4   1.000000 0.200000 0.333333  0.500000
+llama3.2    one_shot  facility Contrary(N)Body(N) Test 1             No      500  98   0   0 402   1.000000 0.196000 0.327759  0.196000
+llama3.2    one_shot  facility Contrary(N)Body(N) Test 2             No      500  98   0   0 402   1.000000 0.196000 0.327759  0.196000
+llama3.2    one_shot  facility Contrary(N)Body(N) Test 3             No      500  99   0   0 401   1.000000 0.198000 0.330551  0.198000
+llama3.2    one_shot  facility Contrary(P)Body(P) Test 1             No      500 271   0   0 229   1.000000 0.542000 0.702983  0.542000
+llama3.2    one_shot  facility Contrary(P)Body(P) Test 2             No      500 271   0   0 229   1.000000 0.542000 0.702983  0.542000
+llama3.2    one_shot  facility Contrary(P)Body(P) Test 3             No      500 271   0   0 229   1.000000 0.542000 0.702983  0.542000
+llama3.2    one_shot     price Contrary(P)Body(N) Test 1            Yes      455  98  53   2 302   0.980000 0.245000 0.392000  0.331868
+llama3.2    one_shot     price Contrary(P)Body(N) Test 2            Yes      455  98  53   2 302   0.980000 0.245000 0.392000  0.331868
+llama3.2    one_shot     price Contrary(P)Body(N) Test 3            Yes      455  98  53   2 302   0.980000 0.245000 0.392000  0.331868
+llama3.2    one_shot     staff Contrary(P)Body(N) Test 1            Yes      500  22 322  25 131   0.468085 0.143791 0.220000  0.688000
+llama3.2    one_shot     staff Contrary(P)Body(N) Test 2            Yes      500  22 321  26 131   0.458333 0.143791 0.218906  0.686000
+llama3.2    one_shot     staff Contrary(P)Body(N) Test 3            Yes      500  22 321  26 131   0.458333 0.143791 0.218906  0.686000
+llama3.2   zero_shot  check-in Contrary(P)Body(N) Test 1            Yes      252  58  71  87  36   0.400000 0.617021 0.485356  0.511905
+llama3.2   zero_shot  check-in Contrary(P)Body(N) Test 2            Yes      252  57  70  88  37   0.393103 0.606383 0.476987  0.503968
+llama3.2   zero_shot  check-in Contrary(P)Body(N) Test 3            Yes      252  58  70  88  36   0.397260 0.617021 0.483333  0.507937
+llama3.2   zero_shot check-out Contrary(P)Body(N) Test 1            Yes        8   5   0   3   0   0.625000 1.000000 0.769231  0.625000
+llama3.2   zero_shot check-out Contrary(P)Body(N) Test 2            Yes        8   5   0   3   0   0.625000 1.000000 0.769231  0.625000
+llama3.2   zero_shot check-out Contrary(P)Body(N) Test 3            Yes        8   5   0   3   0   0.625000 1.000000 0.769231  0.625000
+llama3.2   zero_shot  facility Contrary(N)Body(N) Test 1             No      500 158   0   0 342   1.000000 0.316000 0.480243  0.316000
+llama3.2   zero_shot  facility Contrary(N)Body(N) Test 2             No      500 158   0   0 342   1.000000 0.316000 0.480243  0.316000
+llama3.2   zero_shot  facility Contrary(N)Body(N) Test 3             No      500 158   0   0 342   1.000000 0.316000 0.480243  0.316000
+llama3.2   zero_shot  facility Contrary(P)Body(P) Test 1             No      500 144   0   0 356   1.000000 0.288000 0.447205  0.288000
+llama3.2   zero_shot  facility Contrary(P)Body(P) Test 2             No      500 144   0   0 356   1.000000 0.288000 0.447205  0.288000
+llama3.2   zero_shot  facility Contrary(P)Body(P) Test 3             No      500 144   0   0 356   1.000000 0.288000 0.447205  0.288000
+llama3.2   zero_shot     price Contrary(P)Body(N) Test 1            Yes      455 356  13  42  44   0.894472 0.890000 0.892230  0.810989
+llama3.2   zero_shot     price Contrary(P)Body(N) Test 2            Yes      455 356  13  42  44   0.894472 0.890000 0.892230  0.810989
+llama3.2   zero_shot     price Contrary(P)Body(N) Test 3            Yes      455 355  13  42  45   0.894207 0.887500 0.890841  0.808791
+llama3.2   zero_shot     staff Contrary(P)Body(N) Test 1            Yes      500 124 142 205  29   0.376900 0.810458 0.514523  0.532000
+llama3.2   zero_shot     staff Contrary(P)Body(N) Test 2            Yes      500 124 138 209  29   0.372372 0.810458 0.510288  0.524000
+llama3.2   zero_shot     staff Contrary(P)Body(N) Test 3            Yes      500 123 139 208  30   0.371601 0.803922 0.508264  0.524000
+
+======================================================================
+AVG_BY_MODEL_SHOT_TOPIC_CAT
+======================================================================
+   Model        Shot     Topic           Category Positive_Label  Precision   Recall       F1  Accuracy Best Test
+llama3.2 contrary_v1  check-in Contrary(P)Body(N)            Yes   0.418958 0.595745 0.491949  0.541006    Test 1
+llama3.2 contrary_v1 check-out Contrary(P)Body(N)            Yes   0.625000 1.000000 0.769231  0.625000    Test 1
+llama3.2 contrary_v1  facility Contrary(N)Body(N)             No   1.000000 0.846667 0.916965  0.846667    Test 1
+llama3.2 contrary_v1  facility Contrary(P)Body(P)             No   1.000000 0.844000 0.915401  0.844000    Test 1
+llama3.2 contrary_v1     price Contrary(P)Body(N)            Yes   0.899061 0.957500 0.927361  0.868132    Test 1
+llama3.2 contrary_v1     staff Contrary(P)Body(N)            Yes   0.391601 0.751634 0.514926  0.566667    Test 1
+llama3.2 contrary_v2  check-in Contrary(P)Body(N)            Yes   0.375000 0.861702 0.522581  0.412698    Test 1
+llama3.2 contrary_v2 check-out Contrary(P)Body(N)            Yes   0.625000 1.000000 0.769231  0.625000    Test 1
+llama3.2 contrary_v2  facility Contrary(N)Body(N)             No   1.000000 0.280667 0.438300  0.280667    Test 1
+llama3.2 contrary_v2  facility Contrary(P)Body(P)             No   1.000000 0.822000 0.902305  0.822000    Test 1
+llama3.2 contrary_v2     price Contrary(P)Body(N)            Yes   0.896789 0.977500 0.935407  0.881319    Test 1
+llama3.2 contrary_v2     staff Contrary(P)Body(N)            Yes   0.320261 0.960784 0.480392  0.364000    Test 1
+llama3.2 contrary_v3  check-in Contrary(P)Body(N)            Yes   0.381579 0.308511 0.341177  0.555556    Test 1
+llama3.2 contrary_v3 check-out Contrary(P)Body(N)            Yes   0.600000 0.600000 0.600000  0.500000    Test 1
+llama3.2 contrary_v3  facility Contrary(N)Body(N)             No   1.000000 0.815333 0.898269  0.815333    Test 2
+llama3.2 contrary_v3  facility Contrary(P)Body(P)             No   1.000000 0.644000 0.783455  0.644000    Test 1
+llama3.2 contrary_v3     price Contrary(P)Body(N)            Yes   0.898361 0.685000 0.777305  0.654945    Test 1
+llama3.2 contrary_v3     staff Contrary(P)Body(N)            Yes   0.332143 0.607843 0.429561  0.506000    Test 1
+llama3.2 contrary_v4  check-in Contrary(P)Body(N)            Yes   0.000000 0.000000 0.000000  0.626984    Test 1
+llama3.2 contrary_v4 check-out Contrary(P)Body(N)            Yes   0.000000 0.000000 0.000000  0.375000    Test 1
+llama3.2 contrary_v4  facility Contrary(N)Body(N)             No   1.000000 1.000000 1.000000  1.000000    Test 1
+llama3.2 contrary_v4  facility Contrary(P)Body(P)             No   1.000000 1.000000 1.000000  1.000000    Test 1
+llama3.2 contrary_v4     price Contrary(P)Body(N)            Yes   0.000000 0.000000 0.000000  0.120879    Test 1
+llama3.2 contrary_v4     staff Contrary(P)Body(N)            Yes   0.000000 0.000000 0.000000  0.694000    Test 1
+llama3.2 contrary_v5  check-in Contrary(P)Body(N)            Yes   0.404878 0.882979 0.555184  0.472222    Test 1
+llama3.2 contrary_v5 check-out Contrary(P)Body(N)            Yes   0.714286 1.000000 0.833334  0.750000    Test 1
+llama3.2 contrary_v5  facility Contrary(N)Body(N)             No   1.000000 0.096000 0.175182  0.096000    Test 1
+llama3.2 contrary_v5  facility Contrary(P)Body(P)             No   1.000000 0.725333 0.840803  0.725333    Test 2
+llama3.2 contrary_v5     price Contrary(P)Body(N)            Yes   0.923140 0.930833 0.926971  0.871062    Test 1
+llama3.2 contrary_v5     staff Contrary(P)Body(N)            Yes   0.325779 0.751634 0.454545  0.448000    Test 1
+llama3.2 contrary_v6  check-in Contrary(P)Body(N)            Yes   0.421012 0.368794 0.393126  0.575397    Test 1
+llama3.2 contrary_v6 check-out Contrary(P)Body(N)            Yes   0.625000 1.000000 0.769231  0.625000    Test 1
+llama3.2 contrary_v6  facility Contrary(N)Body(N)             No   1.000000 0.724000 0.839857  0.724000    Test 2
+llama3.2 contrary_v6  facility Contrary(P)Body(P)             No   1.000000 0.740000 0.850575  0.740000    Test 1
+llama3.2 contrary_v6     price Contrary(P)Body(N)            Yes   0.896347 0.756667 0.820605  0.709157    Test 1
+llama3.2 contrary_v6     staff Contrary(P)Body(N)            Yes   0.431373 0.575163 0.492997  0.638000    Test 1
+llama3.2    one_shot  check-in Contrary(P)Body(N)            Yes   0.000000 0.000000 0.000000  0.623016    Test 1
+llama3.2    one_shot check-out Contrary(P)Body(N)            Yes   1.000000 0.200000 0.333333  0.500000    Test 1
+llama3.2    one_shot  facility Contrary(N)Body(N)             No   1.000000 0.196667 0.328690  0.196667    Test 3
+llama3.2    one_shot  facility Contrary(P)Body(P)             No   1.000000 0.542000 0.702983  0.542000    Test 1
+llama3.2    one_shot     price Contrary(P)Body(N)            Yes   0.980000 0.245000 0.392000  0.331868    Test 1
+llama3.2    one_shot     staff Contrary(P)Body(N)            Yes   0.461584 0.143791 0.219271  0.686667    Test 1
+llama3.2   zero_shot  check-in Contrary(P)Body(N)            Yes   0.396788 0.613475 0.481892  0.507937    Test 1
+llama3.2   zero_shot check-out Contrary(P)Body(N)            Yes   0.625000 1.000000 0.769231  0.625000    Test 1
+llama3.2   zero_shot  facility Contrary(N)Body(N)             No   1.000000 0.316000 0.480243  0.316000    Test 1
+llama3.2   zero_shot  facility Contrary(P)Body(P)             No   1.000000 0.288000 0.447205  0.288000    Test 1
+llama3.2   zero_shot     price Contrary(P)Body(N)            Yes   0.894384 0.889167 0.891767  0.810256    Test 1
+llama3.2   zero_shot     staff Contrary(P)Body(N)            Yes   0.373624 0.808279 0.511025  0.526667    Test 1

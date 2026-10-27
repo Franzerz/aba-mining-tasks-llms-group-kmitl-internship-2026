@@ -1,0 +1,21 @@
+======================================================================
+ALL
+======================================================================
+   Model        Shot    Topic           Category   Test Positive_Label  N_valid  TP  TN  FP  FN  Precision   Recall       F1  Accuracy
+llama3.2 contrary_v1 facility Contrary(N)Body(N) Test 1             No      500 425   0   0  75   1.000000 0.850000 0.918919  0.850000
+llama3.2 contrary_v1 facility Contrary(N)Body(N) Test 2             No      500 422   0   0  78   1.000000 0.844000 0.915401  0.844000
+llama3.2 contrary_v1 facility Contrary(N)Body(N) Test 3             No      500 423   0   0  77   1.000000 0.846000 0.916576  0.846000
+llama3.2 contrary_v1 facility Contrary(P)Body(N) Test 1            Yes      478  42 320  96  20   0.304348 0.677419 0.420000  0.757322
+llama3.2 contrary_v1 facility Contrary(P)Body(N) Test 2            Yes      478  40 329  87  22   0.314961 0.645161 0.423281  0.771967
+llama3.2 contrary_v1 facility Contrary(P)Body(N) Test 3            Yes      478  40 329  87  22   0.314961 0.645161 0.423281  0.771967
+llama3.2 contrary_v1 facility Contrary(P)Body(P) Test 1             No      500 422   0   0  78   1.000000 0.844000 0.915401  0.844000
+llama3.2 contrary_v1 facility Contrary(P)Body(P) Test 2             No      500 422   0   0  78   1.000000 0.844000 0.915401  0.844000
+llama3.2 contrary_v1 facility Contrary(P)Body(P) Test 3             No      500 422   0   0  78   1.000000 0.844000 0.915401  0.844000
+
+======================================================================
+MICRO_BY_CATEGORY
+======================================================================
+   Model        Shot    Topic           Category Positive_Label  Precision   Recall       F1  Accuracy  N_valid   TP  TN  FP  FN
+llama3.2 contrary_v1 facility Contrary(N)Body(N)             No   1.000000 0.846667 0.916968  0.846667     1500 1270   0   0 230
+llama3.2 contrary_v1 facility Contrary(P)Body(N)            Yes   0.311224 0.655914 0.422145  0.767085     1434  122 978 270  64
+llama3.2 contrary_v1 facility Contrary(P)Body(P)             No   1.000000 0.844000 0.915401  0.844000     1500 1266   0   0 234

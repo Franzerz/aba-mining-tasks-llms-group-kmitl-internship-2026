@@ -66,6 +66,17 @@ Examples:
                         help="Max output tokens per call (default: 300; CoT/recipe prompts need room to reason)")
     parser.add_argument("--no-resume", action="store_true",
                         help="Ignore existing output files and re-run everything")
+    parser.add_argument("--pairs-dir", type=Path, default=None,
+                        help="Read pairs from this folder instead of the voted gold set in "
+                             "configs/paths.yaml, e.g. Dataset/Task3/llm_pairs (unvoted pairs "
+                             "from build_task3_llm_pairs.py; categories are not filtered by votes)")
+    parser.add_argument("--num-workers", type=int, default=None,
+                        help="Concurrent requests (default: performance.num_workers in "
+                             "configs/model.yaml). A local Ollama serving one request at a time "
+                             "gains nothing from many.")
+    parser.add_argument("--output-root", type=Path, default=Path("outputs/task3"),
+                        help="Where predictions go (default: outputs/task3). Keep LLM-only runs "
+                             "on unvoted pairs separate, e.g. outputs/task3_llm_pairs")
     args = parser.parse_args()
 
     repo_root = REPO_ROOT
@@ -77,6 +88,8 @@ Examples:
     model_override = args.model or args.model_name
     if model_override:
         model_cfg = replace(model_cfg, task1_model=model_override, validator_model=model_override)
+    if args.num_workers:
+        model_cfg = replace(model_cfg, num_workers=args.num_workers)
 
     client = build_client(model_cfg.provider, ollama_options=model_cfg.ollama_options)
     model_folder = model_cfg.task1_model.replace(":", "_").replace("/", "_").replace("-", "_")
@@ -89,14 +102,17 @@ Examples:
     print(f"Aspects    : {'all' if args.aspects is None else ', '.join(args.aspects)}")
     print(f"Categories : {'all usable' if args.categories is None else ', '.join(args.categories)}")
     print(f"Runs       : {args.n_runs}")
+    print(f"Pairs from : {args.pairs_dir or paths_cfg.task3_dir}")
     print("=" * 60 + "\n")
 
+    pairs_dir = (repo_root / args.pairs_dir).resolve() if args.pairs_dir else paths_cfg.task3_dir
     instances = load_task3_instances(
-        paths_cfg.task3_dir,
+        pairs_dir,
         aspects=args.aspects,
         categories=args.categories,
         max_per_group=args.max_pairs_per_category or None,
         seed=args.seed,
+        skip_incomplete=args.pairs_dir is None,
     )
     if args.n is not None:
         limited: dict[tuple[str, str], int] = {}
@@ -117,7 +133,7 @@ Examples:
         print(f"  {aspect:<12} {category:<20} {n}")
     print()
 
-    output_dir = repo_root / "outputs" / "task3" / model_folder / prompt_label
+    output_dir = (repo_root / args.output_root).resolve() / model_folder / prompt_label
 
     for run_idx in range(1, args.n_runs + 1):
         print(f"[{run_idx}/{args.n_runs}] Running Task 3 [{prompt_label}]...\n")

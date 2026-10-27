@@ -1,0 +1,315 @@
+RUN-TO-RUN SPREAD  (F1 over Test 1/2/3)
+model        prompt       topic       runs   pairs   mean F1        sd
+----------------------------------------------------------------------
+gemma4_31b   contrary_v1  check-in       3     252    0.6449   0.01184
+gemma4_31b   contrary_v1  check-out      3       8    1.0000   0.00000
+gemma4_31b   contrary_v1  facility       3   11686    0.6141   0.00000
+gemma4_31b   contrary_v1  price          3     455    0.9153   0.00000
+gemma4_31b   contrary_v1  staff          3    6256    0.5859   0.00023
+gemma4_31b   contrary_v2  check-in       3     252    0.6484   0.00000
+gemma4_31b   contrary_v2  check-out      3       8    1.0000   0.00000
+gemma4_31b   contrary_v2  facility       3   11686    0.6100   0.00000
+gemma4_31b   contrary_v2  price          3     455    0.8988   0.00000
+gemma4_31b   contrary_v2  staff          3    6256    0.6633   0.00000
+gemma4_31b   contrary_v3  check-in       3     252    0.6667   0.00000
+gemma4_31b   contrary_v3  check-out      3       8    1.0000   0.00000
+gemma4_31b   contrary_v3  facility       3   11686    0.6048   0.00000
+gemma4_31b   contrary_v3  price          3     455    0.8996   0.00000
+gemma4_31b   contrary_v3  staff          3    6256    0.6745   0.00000
+gemma4_31b   contrary_v4  check-in       3     252    0.7240   0.00000
+gemma4_31b   contrary_v4  check-out      3       8    0.9091   0.00000
+gemma4_31b   contrary_v4  facility       3   11686    0.5043   0.00000
+gemma4_31b   contrary_v4  price          3     455    0.9274   0.00000
+gemma4_31b   contrary_v4  staff          3    6256    0.5785   0.00000
+gemma4_31b   contrary_v5  check-in       3     252    0.6026   0.00000
+gemma4_31b   contrary_v5  check-out      3       8    1.0000   0.00000
+gemma4_31b   contrary_v5  facility       3   11686    0.5633   0.00000
+gemma4_31b   contrary_v5  price          3     455    0.9265   0.00000
+gemma4_31b   contrary_v5  staff          3    6256    0.5936   0.00000
+gemma4_31b   contrary_v6  check-in       3     252    0.6857   0.00000
+gemma4_31b   contrary_v6  check-out      3       8    0.8889   0.00000
+gemma4_31b   contrary_v6  facility       3   11686    0.6020   0.00000
+gemma4_31b   contrary_v6  price          3     455    0.8780   0.00000
+gemma4_31b   contrary_v6  staff          3    6256    0.6589   0.00000
+gemma4_31b   one_shot     check-in       3     252    0.5590   0.00000
+gemma4_31b   one_shot     check-out      3       8    0.3333   0.00000
+gemma4_31b   one_shot     facility       3   11686    0.0861   0.00000
+gemma4_31b   one_shot     price          3     455    0.2304   0.00000
+gemma4_31b   one_shot     staff          3    6256    0.2099   0.00000
+gemma4_31b   zero_shot    check-in       3     252    0.1731   0.00000
+gemma4_31b   zero_shot    check-out      3       8    0.7500   0.00000
+gemma4_31b   zero_shot    facility       3   11686    0.1922   0.00000
+gemma4_31b   zero_shot    price          3     455    0.6910   0.00000
+gemma4_31b   zero_shot    staff          3    6256    0.2819   0.00000
+llama3.2     contrary_v1  check-in       3     252    0.4919   0.00125
+llama3.2     contrary_v1  check-out      3       8    0.7692   0.00000
+llama3.2     contrary_v1  facility       3     500    0.9170   0.00179
+llama3.2     contrary_v1  facility       3     478    0.4222   0.00189
+llama3.2     contrary_v1  facility       3     500    0.9154   0.00000
+llama3.2     contrary_v1  price          3     455    0.9274   0.00000
+llama3.2     contrary_v1  staff          3     500    0.5149   0.00067
+llama3.2     contrary_v2  check-in       3     252    0.5226   0.00000
+llama3.2     contrary_v2  check-out      3       8    0.7692   0.00000
+llama3.2     contrary_v2  facility       3     500    0.4383   0.00562
+llama3.2     contrary_v2  facility       3     478    0.2970   0.00000
+llama3.2     contrary_v2  facility       3     500    0.9023   0.00000
+llama3.2     contrary_v2  price          3     455    0.9354   0.00000
+llama3.2     contrary_v2  staff          3     500    0.4804   0.00000
+llama3.2     contrary_v3  check-in       3     252    0.3412   0.00000
+llama3.2     contrary_v3  check-out      3       8    0.6000   0.00000
+llama3.2     contrary_v3  facility       3     500    0.8983   0.00281
+llama3.2     contrary_v3  facility       3     478    0.3228   0.00000
+llama3.2     contrary_v3  facility       3     500    0.7835   0.00000
+llama3.2     contrary_v3  price          3     455    0.7773   0.00000
+llama3.2     contrary_v3  staff          3     500    0.4296   0.00000
+llama3.2     contrary_v4  check-in       3     252    0.0000   0.00000
+llama3.2     contrary_v4  check-out      3       8    0.0000   0.00000
+llama3.2     contrary_v4  facility       3     500    1.0000   0.00000
+llama3.2     contrary_v4  facility       3     478    0.0317   0.00000
+llama3.2     contrary_v4  facility       3     500    1.0000   0.00000
+llama3.2     contrary_v4  price          3     455    0.0000   0.00000
+llama3.2     contrary_v4  staff          3     500    0.0000   0.00000
+llama3.2     contrary_v5  check-in       3     252    0.5552   0.00000
+llama3.2     contrary_v5  check-out      3       8    0.8333   0.00000
+llama3.2     contrary_v5  facility       3     500    0.1752   0.00000
+llama3.2     contrary_v5  facility       3     478    0.2726   0.00246
+llama3.2     contrary_v5  facility       3     500    0.8408   0.00078
+llama3.2     contrary_v5  price          3     455    0.9270   0.00077
+llama3.2     contrary_v5  staff          3     500    0.4545   0.00000
+llama3.2     contrary_v6  check-in       3     252    0.3931   0.00789
+llama3.2     contrary_v6  check-out      3       8    0.7692   0.00000
+llama3.2     contrary_v6  facility       3     500    0.8399   0.00937
+llama3.2     contrary_v6  facility       3     478    0.3092   0.00985
+llama3.2     contrary_v6  facility       3     500    0.8506   0.00000
+llama3.2     contrary_v6  price          3     455    0.8206   0.00092
+llama3.2     contrary_v6  staff          3     500    0.4930   0.00000
+llama3.2     one_shot     check-in       3     252    0.0000   0.00000
+llama3.2     one_shot     check-out      3       8    0.3333   0.00000
+llama3.2     one_shot     facility       3     500    0.3287   0.00161
+llama3.2     one_shot     facility       3     478    0.2489   0.00000
+llama3.2     one_shot     facility       3     500    0.7030   0.00000
+llama3.2     one_shot     price          3     455    0.3920   0.00000
+llama3.2     one_shot     staff          3     500    0.2193   0.00063
+llama3.2     zero_shot    check-in       3     252    0.4819   0.00437
+llama3.2     zero_shot    check-out      3       8    0.7692   0.00000
+llama3.2     zero_shot    facility       3     500    0.4802   0.00000
+llama3.2     zero_shot    facility       3     478    0.2562   0.00267
+llama3.2     zero_shot    facility       3     500    0.4472   0.00000
+llama3.2     zero_shot    price          3     455    0.8918   0.00080
+llama3.2     zero_shot    staff          3     500    0.5110   0.00319
+llama4_scout contrary_v1  check-in       3     252    0.4545   0.00000
+llama4_scout contrary_v1  check-out      3       8    1.0000   0.00000
+llama4_scout contrary_v1  facility       3   11686    0.4384   0.00728
+llama4_scout contrary_v1  price          2     455    0.7623   0.00000
+llama4_scout contrary_v1  staff          2    6256    0.3535   0.00047
+llama4_scout one_shot     check-in       3     252    0.5865   0.00000
+llama4_scout one_shot     check-out      3       8    0.8333   0.00000
+llama4_scout one_shot     facility       3   11686    0.3638   0.00000
+llama4_scout one_shot     price          3     455    0.8933   0.00000
+llama4_scout one_shot     staff          3    6256    0.5257   0.00000
+llama4_scout zero_shot    check-in       1     252    0.3134   0.00000
+llama4_scout zero_shot    check-out      1       8    0.5714   0.00000
+llama4_scout zero_shot    facility       1   11686    0.1425   0.00000
+llama4_scout zero_shot    price          1     455    0.5690   0.00000
+llama4_scout zero_shot    staff          1    2596    0.2048   0.00000
+qwen3.8_27b  contrary_v1  check-in       3     252    0.2393   0.00128
+qwen3.8_27b  contrary_v1  check-out      3       8    0.7500   0.00000
+qwen3.8_27b  contrary_v1  facility       3   11686    0.1464   0.00011
+qwen3.8_27b  contrary_v1  price          3     455    0.5318   0.00056
+qwen3.8_27b  contrary_v1  staff          3    6256    0.1316   0.00004
+qwen3.8_27b  contrary_v2  check-in       3     252    0.2931   0.00000
+qwen3.8_27b  contrary_v2  check-out      3       8    0.8889   0.00000
+qwen3.8_27b  contrary_v2  facility       3   11686    0.5775   0.00000
+qwen3.8_27b  contrary_v2  price          3     455    0.8770   0.00000
+qwen3.8_27b  contrary_v2  staff          3    6256    0.5302   0.00000
+qwen3.8_27b  contrary_v3  check-in       3     252    0.4857   0.00000
+qwen3.8_27b  contrary_v3  check-out      3       8    1.0000   0.00000
+qwen3.8_27b  contrary_v3  facility       3   11686    0.4642   0.00000
+qwen3.8_27b  contrary_v3  price          3     455    0.8298   0.00000
+qwen3.8_27b  contrary_v3  staff          3    6256    0.5516   0.00000
+qwen3.8_27b  contrary_v4  check-in       3     252    0.5251   0.00000
+qwen3.8_27b  contrary_v4  check-out      3       8    0.9091   0.00000
+qwen3.8_27b  contrary_v4  facility       3   11686    0.6339   0.00000
+qwen3.8_27b  contrary_v4  price          3     455    0.9274   0.00000
+qwen3.8_27b  contrary_v4  staff          3    6256    0.5541   0.00000
+qwen3.8_27b  contrary_v5  check-in       3     252    0.1010   0.00000
+qwen3.8_27b  contrary_v5  check-out      3       8    0.8889   0.00000
+qwen3.8_27b  contrary_v5  facility       3   11686    0.0169   0.00000
+qwen3.8_27b  contrary_v5  price          3     455    0.3051   0.00000
+qwen3.8_27b  contrary_v5  staff          3    6256    0.0189   0.00000
+qwen3.8_27b  contrary_v6  check-in       3     252    0.5324   0.00000
+qwen3.8_27b  contrary_v6  check-out      3       8    0.8889   0.00000
+qwen3.8_27b  contrary_v6  facility       3   11686    0.5948   0.00000
+qwen3.8_27b  contrary_v6  price          3     455    0.9287   0.00000
+qwen3.8_27b  contrary_v6  staff          3    6254    0.5526   0.00000
+qwen3.8_27b  one_shot     check-in       3     252    0.1121   0.00000
+qwen3.8_27b  one_shot     check-out      3       8    0.0000   0.00000
+qwen3.8_27b  one_shot     facility       3   11686    0.0042   0.00000
+qwen3.8_27b  one_shot     price          3     455    0.0387   0.00000
+qwen3.8_27b  one_shot     staff          3    6256    0.0084   0.00000
+qwen3.8_27b  zero_shot    check-in       3     252    0.0000   0.00000
+qwen3.8_27b  zero_shot    check-out      3       8    0.0000   0.00000
+qwen3.8_27b  zero_shot    facility       3   11686    0.0138   0.00000
+qwen3.8_27b  zero_shot    price          3     455    0.0932   0.00000
+qwen3.8_27b  zero_shot    staff          3    6256    0.0063   0.00000
+
+configurations: 151   with a non-zero run-to-run sd: 27
+largest run-to-run standard deviation: 0.01184
+
+
+BOOTSTRAP OVER PAIRS  (Test 1, B=2000, 95% interval)
+model        prompt       topic         pairs       F1              95% CI       SE
+-----------------------------------------------------------------------------------
+gemma4_31b   contrary_v1  check-in        252   0.6585    [0.5696, 0.7379]   0.0438
+gemma4_31b   contrary_v1  check-out         8   1.0000    [1.0000, 1.0000]   0.0000
+gemma4_31b   contrary_v1  facility      11686   0.6141    [0.5944, 0.6333]   0.0098
+gemma4_31b   contrary_v1  price           455   0.9153    [0.8939, 0.9339]   0.0104
+gemma4_31b   contrary_v1  staff          6256   0.5858    [0.5665, 0.6051]   0.0096
+gemma4_31b   contrary_v2  check-in        252   0.6484    [0.5600, 0.7255]   0.0427
+gemma4_31b   contrary_v2  check-out         8   1.0000    [1.0000, 1.0000]   0.0000
+gemma4_31b   contrary_v2  facility      11686   0.6100    [0.5910, 0.6286]   0.0096
+gemma4_31b   contrary_v2  price           455   0.8988    [0.8748, 0.9190]   0.0114
+gemma4_31b   contrary_v2  staff          6256   0.6633    [0.6471, 0.6796]   0.0082
+gemma4_31b   contrary_v3  check-in        252   0.6667    [0.5833, 0.7444]   0.0416
+gemma4_31b   contrary_v3  check-out         8   1.0000    [1.0000, 1.0000]   0.0000
+gemma4_31b   contrary_v3  facility      11686   0.6048    [0.5847, 0.6241]   0.0102
+gemma4_31b   contrary_v3  price           455   0.8996    [0.8752, 0.9208]   0.0116
+gemma4_31b   contrary_v3  staff          6256   0.6745    [0.6575, 0.6908]   0.0084
+gemma4_31b   contrary_v4  check-in        252   0.7240    [0.6514, 0.7833]   0.0344
+gemma4_31b   contrary_v4  check-out         8   0.9091    [0.6667, 1.0000]   0.1023
+gemma4_31b   contrary_v4  facility      11686   0.5043    [0.4884, 0.5206]   0.0084
+gemma4_31b   contrary_v4  price           455   0.9274    [0.9084, 0.9458]   0.0095
+gemma4_31b   contrary_v4  staff          6256   0.5785    [0.5626, 0.5947]   0.0082
+gemma4_31b   contrary_v5  check-in        252   0.6026    [0.5033, 0.6914]   0.0476
+gemma4_31b   contrary_v5  check-out         8   1.0000    [1.0000, 1.0000]   0.0000
+gemma4_31b   contrary_v5  facility      11686   0.5633    [0.5403, 0.5850]   0.0115
+gemma4_31b   contrary_v5  price           455   0.9265    [0.9069, 0.9437]   0.0096
+gemma4_31b   contrary_v5  staff          6256   0.5936    [0.5749, 0.6128]   0.0096
+gemma4_31b   contrary_v6  check-in        252   0.6857    [0.6012, 0.7579]   0.0409
+gemma4_31b   contrary_v6  check-out         8   0.8889    [0.5000, 1.0000]   0.1408
+gemma4_31b   contrary_v6  facility      11686   0.6020    [0.5806, 0.6216]   0.0106
+gemma4_31b   contrary_v6  price           455   0.8780    [0.8521, 0.9011]   0.0128
+gemma4_31b   contrary_v6  staff          6256   0.6589    [0.6404, 0.6769]   0.0092
+gemma4_31b   one_shot     check-in        252   0.5590    [0.4596, 0.6441]   0.0478
+gemma4_31b   one_shot     check-out         8   0.3333    [0.0000, 0.7500]   0.2461
+gemma4_31b   one_shot     facility      11686   0.0861    [0.0676, 0.1056]   0.0098
+gemma4_31b   one_shot     price           455   0.2304    [0.1802, 0.2802]   0.0258
+gemma4_31b   one_shot     staff          6256   0.2099    [0.1882, 0.2319]   0.0114
+gemma4_31b   zero_shot    check-in        252   0.1731    [0.0784, 0.2783]   0.0507
+gemma4_31b   zero_shot    check-out         8   0.7500    [0.0000, 1.0000]   0.2101
+gemma4_31b   zero_shot    facility      11686   0.1922    [0.1667, 0.2170]   0.0130
+gemma4_31b   zero_shot    price           455   0.6910    [0.6515, 0.7314]   0.0207
+gemma4_31b   zero_shot    staff          6256   0.2819    [0.2586, 0.3051]   0.0119
+llama3.2     contrary_v1  check-in        252   0.4934    [0.4093, 0.5690]   0.0403
+llama3.2     contrary_v1  check-out         8   0.7692    [0.4000, 0.9350]   0.1396
+llama3.2     contrary_v1  facility        500   0.9189    [0.9011, 0.9362]   0.0093
+llama3.2     contrary_v1  facility        478   0.4200    [0.3269, 0.5000]   0.0443
+llama3.2     contrary_v1  facility        500   0.9154    [0.8962, 0.9328]   0.0095
+llama3.2     contrary_v1  price           455   0.9274    [0.9084, 0.9458]   0.0095
+llama3.2     contrary_v1  staff           500   0.5157    [0.4579, 0.5708]   0.0295
+llama3.2     contrary_v2  check-in        252   0.5226    [0.4548, 0.5879]   0.0342
+llama3.2     contrary_v2  check-out         8   0.7692    [0.4000, 0.9350]   0.1396
+llama3.2     contrary_v2  facility        500   0.4448    [0.3974, 0.4894]   0.0244
+llama3.2     contrary_v2  facility        478   0.2970    [0.2370, 0.3560]   0.0304
+llama3.2     contrary_v2  facility        500   0.9023    [0.8814, 0.9213]   0.0103
+llama3.2     contrary_v2  price           455   0.9354    [0.9175, 0.9515]   0.0087
+llama3.2     contrary_v2  staff           500   0.4804    [0.4317, 0.5302]   0.0250
+llama3.2     contrary_v3  check-in        252   0.3412    [0.2456, 0.4303]   0.0471
+llama3.2     contrary_v3  check-out         8   0.6000    [0.2222, 0.9091]   0.1916
+llama3.2     contrary_v3  facility        500   0.8950    [0.8739, 0.9154]   0.0108
+llama3.2     contrary_v3  facility        478   0.3228    [0.2457, 0.3897]   0.0365
+llama3.2     contrary_v3  facility        500   0.7835    [0.7531, 0.8124]   0.0158
+llama3.2     contrary_v3  price           455   0.7773    [0.7406, 0.8089]   0.0176
+llama3.2     contrary_v3  staff           500   0.4296    [0.3704, 0.4874]   0.0299
+llama3.2     contrary_v4  check-in        252   0.0000    [0.0000, 0.0000]   0.0000
+llama3.2     contrary_v4  check-out         8   0.0000    [0.0000, 0.0000]   0.0000
+llama3.2     contrary_v4  facility        500   1.0000    [1.0000, 1.0000]   0.0000
+llama3.2     contrary_v4  facility        478   0.0317    [0.0000, 0.1017]   0.0311
+llama3.2     contrary_v4  facility        500   1.0000    [1.0000, 1.0000]   0.0000
+llama3.2     contrary_v4  price           455   0.0000    [0.0000, 0.0000]   0.0000
+llama3.2     contrary_v4  staff           500   0.0000    [0.0000, 0.0000]   0.0000
+llama3.2     contrary_v5  check-in        252   0.5552    [0.4842, 0.6234]   0.0354
+llama3.2     contrary_v5  check-out         8   0.8333    [0.5000, 1.0000]   0.1301
+llama3.2     contrary_v5  facility        500   0.1752    [0.1273, 0.2175]   0.0226
+llama3.2     contrary_v5  facility        478   0.2741    [0.2078, 0.3334]   0.0319
+llama3.2     contrary_v5  facility        500   0.8399    [0.8138, 0.8649]   0.0134
+llama3.2     contrary_v5  price           455   0.9279    [0.9084, 0.9457]   0.0096
+llama3.2     contrary_v5  staff           500   0.4545    [0.3959, 0.5068]   0.0287
+llama3.2     contrary_v6  check-in        252   0.4022    [0.3051, 0.4885]   0.0463
+llama3.2     contrary_v6  check-out         8   0.7692    [0.4000, 0.9350]   0.1396
+llama3.2     contrary_v6  facility        500   0.8290    [0.8024, 0.8545]   0.0139
+llama3.2     contrary_v6  facility        478   0.3206    [0.2443, 0.3873]   0.0365
+llama3.2     contrary_v6  facility        500   0.8506    [0.8249, 0.8751]   0.0130
+llama3.2     contrary_v6  price           455   0.8211    [0.7906, 0.8495]   0.0153
+llama3.2     contrary_v6  staff           500   0.4930    [0.4250, 0.5510]   0.0329
+llama3.2     one_shot     check-in        252   0.0000    [0.0000, 0.0000]   0.0000
+llama3.2     one_shot     check-out         8   0.3333    [0.0000, 0.7500]   0.2461
+llama3.2     one_shot     facility        500   0.3278    [0.2788, 0.3740]   0.0248
+llama3.2     one_shot     facility        478   0.2489    [0.1956, 0.3037]   0.0276
+llama3.2     one_shot     facility        500   0.7030    [0.6667, 0.7374]   0.0187
+llama3.2     one_shot     price           455   0.3920    [0.3395, 0.4462]   0.0280
+llama3.2     one_shot     staff           500   0.2200    [0.1428, 0.3005]   0.0397
+llama3.2     zero_shot    check-in        252   0.4854    [0.4089, 0.5606]   0.0397
+llama3.2     zero_shot    check-out         8   0.7692    [0.4000, 0.9350]   0.1396
+llama3.2     zero_shot    facility        500   0.4802    [0.4326, 0.5229]   0.0239
+llama3.2     zero_shot    facility        478   0.2593    [0.1972, 0.3150]   0.0297
+llama3.2     zero_shot    facility        500   0.4472    [0.4000, 0.4917]   0.0243
+llama3.2     zero_shot    price           455   0.8922    [0.8688, 0.9138]   0.0117
+llama3.2     zero_shot    staff           500   0.5145    [0.4605, 0.5685]   0.0276
+llama4_scout contrary_v1  check-in        252   0.4545    [0.3471, 0.5606]   0.0540
+llama4_scout contrary_v1  check-out         8   1.0000    [1.0000, 1.0000]   0.0000
+llama4_scout contrary_v1  facility      11686   0.4426    [0.4162, 0.4672]   0.0130
+llama4_scout contrary_v1  price           455   0.7623    [0.7248, 0.7971]   0.0188
+llama4_scout contrary_v1  staff          6256   0.3538    [0.3297, 0.3774]   0.0124
+llama4_scout one_shot     check-in        252   0.5865    [0.5073, 0.6633]   0.0407
+llama4_scout one_shot     check-out         8   0.8333    [0.5000, 1.0000]   0.1301
+llama4_scout one_shot     facility      11686   0.3638    [0.3437, 0.3830]   0.0104
+llama4_scout one_shot     price           455   0.8933    [0.8694, 0.9148]   0.0116
+llama4_scout one_shot     staff          6256   0.5257    [0.5086, 0.5423]   0.0086
+llama4_scout zero_shot    check-in        252   0.3134    [0.2121, 0.4174]   0.0521
+llama4_scout zero_shot    check-out         8   0.5714    [0.0000, 0.9231]   0.2524
+llama4_scout zero_shot    facility      11686   0.1425    [0.1231, 0.1617]   0.0100
+llama4_scout zero_shot    price           455   0.5690    [0.5219, 0.6172]   0.0246
+llama4_scout zero_shot    staff          2596   0.2048    [0.1752, 0.2333]   0.0149
+qwen3.8_27b  contrary_v1  check-in        252   0.2407    [0.1372, 0.3559]   0.0550
+qwen3.8_27b  contrary_v1  check-out         8   0.7500    [0.0000, 1.0000]   0.2101
+qwen3.8_27b  contrary_v1  facility      11686   0.1465    [0.1229, 0.1714]   0.0123
+qwen3.8_27b  contrary_v1  price           455   0.5311    [0.4820, 0.5809]   0.0258
+qwen3.8_27b  contrary_v1  staff          6256   0.1316    [0.1120, 0.1516]   0.0102
+qwen3.8_27b  contrary_v2  check-in        252   0.2931    [0.1896, 0.4091]   0.0553
+qwen3.8_27b  contrary_v2  check-out         8   0.8889    [0.5000, 1.0000]   0.1408
+qwen3.8_27b  contrary_v2  facility      11686   0.5775    [0.5525, 0.6009]   0.0125
+qwen3.8_27b  contrary_v2  price           455   0.8770    [0.8508, 0.9008]   0.0129
+qwen3.8_27b  contrary_v2  staff          6256   0.5302    [0.5078, 0.5515]   0.0113
+qwen3.8_27b  contrary_v3  check-in        252   0.4857    [0.3840, 0.5816]   0.0508
+qwen3.8_27b  contrary_v3  check-out         8   1.0000    [1.0000, 1.0000]   0.0000
+qwen3.8_27b  contrary_v3  facility      11686   0.4642    [0.4390, 0.4899]   0.0132
+qwen3.8_27b  contrary_v3  price           455   0.8298    [0.7977, 0.8583]   0.0157
+qwen3.8_27b  contrary_v3  staff          6256   0.5516    [0.5316, 0.5714]   0.0104
+qwen3.8_27b  contrary_v4  check-in        252   0.5251    [0.4331, 0.6111]   0.0452
+qwen3.8_27b  contrary_v4  check-out         8   0.9091    [0.6667, 1.0000]   0.1023
+qwen3.8_27b  contrary_v4  facility      11686   0.6339    [0.6125, 0.6536]   0.0104
+qwen3.8_27b  contrary_v4  price           455   0.9274    [0.9086, 0.9456]   0.0094
+qwen3.8_27b  contrary_v4  staff          6256   0.5541    [0.5334, 0.5733]   0.0101
+qwen3.8_27b  contrary_v5  check-in        252   0.1010    [0.0222, 0.1895]   0.0424
+qwen3.8_27b  contrary_v5  check-out         8   0.8889    [0.5000, 1.0000]   0.1408
+qwen3.8_27b  contrary_v5  facility      11686   0.0169    [0.0083, 0.0268]   0.0048
+qwen3.8_27b  contrary_v5  price           455   0.3051    [0.2516, 0.3591]   0.0275
+qwen3.8_27b  contrary_v5  staff          6256   0.0189    [0.0112, 0.0285]   0.0045
+qwen3.8_27b  contrary_v6  check-in        252   0.5324    [0.4227, 0.6242]   0.0520
+qwen3.8_27b  contrary_v6  check-out         8   0.8889    [0.5000, 1.0000]   0.1408
+qwen3.8_27b  contrary_v6  facility      11686   0.5948    [0.5752, 0.6138]   0.0097
+qwen3.8_27b  contrary_v6  price           455   0.9287    [0.9095, 0.9466]   0.0095
+qwen3.8_27b  contrary_v6  staff          6254   0.5526    [0.5320, 0.5722]   0.0105
+qwen3.8_27b  one_shot     check-in        252   0.1121    [0.0381, 0.2056]   0.0418
+qwen3.8_27b  one_shot     check-out         8   0.0000    [0.0000, 0.0000]   0.0000
+qwen3.8_27b  one_shot     facility      11686   0.0042    [0.0000, 0.0099]   0.0025
+qwen3.8_27b  one_shot     price           455   0.0387    [0.0147, 0.0675]   0.0136
+qwen3.8_27b  one_shot     staff          6256   0.0084    [0.0032, 0.0151]   0.0031
+qwen3.8_27b  zero_shot    check-in        252   0.0000    [0.0000, 0.0000]   0.0000
+qwen3.8_27b  zero_shot    check-out         8   0.0000    [0.0000, 0.0000]   0.0000
+qwen3.8_27b  zero_shot    facility      11686   0.0138    [0.0058, 0.0235]   0.0044
+qwen3.8_27b  zero_shot    price           455   0.0932    [0.0567, 0.1333]   0.0196
+qwen3.8_27b  zero_shot    staff          6256   0.0063    [0.0021, 0.0123]   0.0026
+
+bootstrap standard error: 0.0000 to 0.2524

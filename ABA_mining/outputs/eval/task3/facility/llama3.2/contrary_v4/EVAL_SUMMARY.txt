@@ -1,0 +1,17 @@
+======================================================================
+ALL
+======================================================================
+   Model        Shot    Topic           Category   Test Positive_Label  N_valid  TP  TN  FP  FN  Precision  Recall  F1  Accuracy
+llama3.2 contrary_v4 facility Contrary(N)Body(N) Test 1             No      500 500   0   0   0        1.0     1.0 1.0       1.0
+llama3.2 contrary_v4 facility Contrary(N)Body(N) Test 2             No      500 500   0   0   0        1.0     1.0 1.0       1.0
+llama3.2 contrary_v4 facility Contrary(N)Body(N) Test 3             No      500 500   0   0   0        1.0     1.0 1.0       1.0
+llama3.2 contrary_v4 facility Contrary(P)Body(P) Test 1             No      500 500   0   0   0        1.0     1.0 1.0       1.0
+llama3.2 contrary_v4 facility Contrary(P)Body(P) Test 2             No      500 500   0   0   0        1.0     1.0 1.0       1.0
+llama3.2 contrary_v4 facility Contrary(P)Body(P) Test 3             No      500 500   0   0   0        1.0     1.0 1.0       1.0
+
+======================================================================
+MICRO_BY_CATEGORY
+======================================================================
+   Model        Shot    Topic           Category Positive_Label  Precision  Recall  F1  Accuracy  N_valid   TP  TN  FP  FN
+llama3.2 contrary_v4 facility Contrary(N)Body(N)             No        1.0     1.0 1.0       1.0     1500 1500   0   0   0
+llama3.2 contrary_v4 facility Contrary(P)Body(P)             No        1.0     1.0 1.0       1.0     1500 1500   0   0   0

@@ -1,0 +1,7 @@
+ID,Original A,A,B,Vote
+1,no_evident_not_taxi_waiting_for_us,taxi_waiting_for_us,booked_taxi_no_show,
+2,no_evident_not_taxi_waiting_for_us,taxi_waiting_for_us,booked_taxi_not_come,
+3,no_evident_not_taxi_waiting_for_us,taxi_waiting_for_us,charge_above_price_taxi,
+4,no_evident_not_taxi_waiting_for_us,taxi_waiting_for_us,no_alternative_transport_at_midnight,
+5,no_evident_not_taxi_waiting_for_us,taxi_waiting_for_us,organized_taxi_come_late,
+6,no_evident_not_taxi_waiting_for_us,taxi_waiting_for_us,staff_drive_me_to_airport,

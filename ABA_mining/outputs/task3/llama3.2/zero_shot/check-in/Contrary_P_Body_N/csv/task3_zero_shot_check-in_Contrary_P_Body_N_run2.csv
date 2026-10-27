@@ -1,0 +1,1009 @@
+ID,Prompt,PhraseA,PhraseB,Test 2
+1,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_easy_check-in.
+",no_evident_not_easy_check-in,no_one_give_key_on_late_check-in,Yes
+2,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_easy_check-in.
+",no_evident_not_easy_check-in,door_lock_on_late_check-in,Yes
+3,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_easy_check-in.
+",no_evident_not_easy_check-in,customer_wait_10_minute_for_greet,No
+4,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_easy_check-in.
+",no_evident_not_easy_check-in,customer_wait_10_minute_for_check-in,No
+5,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_easy_check-in.
+",no_evident_not_easy_check-in,staff_misunderstand_on_payment,No
+6,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_easy_check-in.
+",no_evident_not_easy_check-in,staff_take_picture_of_passport,Yes
+7,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_clear_instruction_to_access_room.
+",no_evident_not_clear_instruction_to_access_room,no_one_give_key_on_late_check-in,Yes
+8,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_clear_instruction_to_access_room.
+",no_evident_not_clear_instruction_to_access_room,door_lock_on_late_check-in,Yes
+9,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_clear_instruction_to_access_room.
+",no_evident_not_clear_instruction_to_access_room,customer_wait_10_minute_for_greet,No
+10,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_clear_instruction_to_access_room.
+",no_evident_not_clear_instruction_to_access_room,customer_wait_10_minute_for_check-in,No
+11,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_clear_instruction_to_access_room.
+",no_evident_not_clear_instruction_to_access_room,staff_misunderstand_on_payment,No
+12,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_clear_instruction_to_access_room.
+",no_evident_not_clear_instruction_to_access_room,staff_take_picture_of_passport,Yes
+13,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_clear_instruction_to_enter_hotel.
+",no_evident_not_clear_instruction_to_enter_hotel,no_one_give_key_on_late_check-in,Yes
+14,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_clear_instruction_to_enter_hotel.
+",no_evident_not_clear_instruction_to_enter_hotel,door_lock_on_late_check-in,Yes
+15,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_clear_instruction_to_enter_hotel.
+",no_evident_not_clear_instruction_to_enter_hotel,customer_wait_10_minute_for_greet,Yes
+16,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_clear_instruction_to_enter_hotel.
+",no_evident_not_clear_instruction_to_enter_hotel,customer_wait_10_minute_for_check-in,No
+17,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_clear_instruction_to_enter_hotel.
+",no_evident_not_clear_instruction_to_enter_hotel,staff_misunderstand_on_payment,No
+18,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_clear_instruction_to_enter_hotel.
+",no_evident_not_clear_instruction_to_enter_hotel,staff_take_picture_of_passport,Yes
+19,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_sent_instruction_in_advance.
+",no_evident_not_sent_instruction_in_advance,no_one_give_key_on_late_check-in,Yes
+20,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_sent_instruction_in_advance.
+",no_evident_not_sent_instruction_in_advance,door_lock_on_late_check-in,No
+21,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_sent_instruction_in_advance.
+",no_evident_not_sent_instruction_in_advance,customer_wait_10_minute_for_greet,No
+22,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_sent_instruction_in_advance.
+",no_evident_not_sent_instruction_in_advance,customer_wait_10_minute_for_check-in,No
+23,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_sent_instruction_in_advance.
+",no_evident_not_sent_instruction_in_advance,staff_misunderstand_on_payment,No
+24,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_sent_instruction_in_advance.
+",no_evident_not_sent_instruction_in_advance,staff_take_picture_of_passport,No
+25,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_perfect_instruction.
+",no_evident_not_perfect_instruction,no_one_give_key_on_late_check-in,Yes
+26,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_perfect_instruction.
+",no_evident_not_perfect_instruction,door_lock_on_late_check-in,No
+27,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_perfect_instruction.
+",no_evident_not_perfect_instruction,customer_wait_10_minute_for_greet,No
+28,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_perfect_instruction.
+",no_evident_not_perfect_instruction,customer_wait_10_minute_for_check-in,No
+29,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_perfect_instruction.
+",no_evident_not_perfect_instruction,staff_misunderstand_on_payment,No
+30,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_perfect_instruction.
+",no_evident_not_perfect_instruction,staff_take_picture_of_passport,No
+31,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_easy_late_night_check-in.
+",no_evident_not_easy_late_night_check-in,no_one_give_key_on_late_check-in,Yes
+32,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_easy_late_night_check-in.
+",no_evident_not_easy_late_night_check-in,door_lock_on_late_check-in,Yes
+33,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_easy_late_night_check-in.
+",no_evident_not_easy_late_night_check-in,customer_wait_10_minute_for_greet,No
+34,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_easy_late_night_check-in.
+",no_evident_not_easy_late_night_check-in,customer_wait_10_minute_for_check-in,No
+35,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_easy_late_night_check-in.
+",no_evident_not_easy_late_night_check-in,staff_misunderstand_on_payment,No
+36,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_easy_late_night_check-in.
+",no_evident_not_easy_late_night_check-in,staff_take_picture_of_passport,No
+37,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_comfortable_late_night_check-in.
+",no_evident_not_comfortable_late_night_check-in,no_one_give_key_on_late_check-in,Yes
+38,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_comfortable_late_night_check-in.
+",no_evident_not_comfortable_late_night_check-in,door_lock_on_late_check-in,Yes
+39,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_comfortable_late_night_check-in.
+",no_evident_not_comfortable_late_night_check-in,customer_wait_10_minute_for_greet,No
+40,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_comfortable_late_night_check-in.
+",no_evident_not_comfortable_late_night_check-in,customer_wait_10_minute_for_check-in,No
+41,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_comfortable_late_night_check-in.
+",no_evident_not_comfortable_late_night_check-in,staff_misunderstand_on_payment,No
+42,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_comfortable_late_night_check-in.
+",no_evident_not_comfortable_late_night_check-in,staff_take_picture_of_passport,No
+43,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_easy_self_check-in.
+",no_evident_not_easy_self_check-in,no_one_give_key_on_late_check-in,Yes
+44,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_easy_self_check-in.
+",no_evident_not_easy_self_check-in,door_lock_on_late_check-in,Yes
+45,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_easy_self_check-in.
+",no_evident_not_easy_self_check-in,customer_wait_10_minute_for_greet,No
+46,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_easy_self_check-in.
+",no_evident_not_easy_self_check-in,customer_wait_10_minute_for_check-in,No
+47,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_easy_self_check-in.
+",no_evident_not_easy_self_check-in,staff_misunderstand_on_payment,No
+48,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_easy_self_check-in.
+",no_evident_not_easy_self_check-in,staff_take_picture_of_passport,Yes
+49,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_quick_check-in.
+",no_evident_not_quick_check-in,no_one_give_key_on_late_check-in,Yes
+50,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_quick_check-in.
+",no_evident_not_quick_check-in,door_lock_on_late_check-in,Yes
+51,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_quick_check-in.
+",no_evident_not_quick_check-in,customer_wait_10_minute_for_greet,No
+52,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_quick_check-in.
+",no_evident_not_quick_check-in,customer_wait_10_minute_for_check-in,Yes
+53,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_quick_check-in.
+",no_evident_not_quick_check-in,staff_misunderstand_on_payment,No
+54,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_quick_check-in.
+",no_evident_not_quick_check-in,staff_take_picture_of_passport,No
+55,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_easy_check-in_at_3am.
+",no_evident_not_easy_check-in_at_3am,no_one_give_key_on_late_check-in,Yes
+56,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_easy_check-in_at_3am.
+",no_evident_not_easy_check-in_at_3am,door_lock_on_late_check-in,Yes
+57,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_easy_check-in_at_3am.
+",no_evident_not_easy_check-in_at_3am,customer_wait_10_minute_for_greet,Yes
+58,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_easy_check-in_at_3am.
+",no_evident_not_easy_check-in_at_3am,customer_wait_10_minute_for_check-in,Yes
+59,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_easy_check-in_at_3am.
+",no_evident_not_easy_check-in_at_3am,staff_misunderstand_on_payment,Yes
+60,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_easy_check-in_at_3am.
+",no_evident_not_easy_check-in_at_3am,staff_take_picture_of_passport,Yes
+61,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_staff_accommodated_arrival_at_3am.
+",no_evident_not_staff_accommodated_arrival_at_3am,no_one_give_key_on_late_check-in,Yes
+62,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_staff_accommodated_arrival_at_3am.
+",no_evident_not_staff_accommodated_arrival_at_3am,door_lock_on_late_check-in,Yes
+63,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_staff_accommodated_arrival_at_3am.
+",no_evident_not_staff_accommodated_arrival_at_3am,customer_wait_10_minute_for_greet,No
+64,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_staff_accommodated_arrival_at_3am.
+",no_evident_not_staff_accommodated_arrival_at_3am,customer_wait_10_minute_for_check-in,No
+65,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_staff_accommodated_arrival_at_3am.
+",no_evident_not_staff_accommodated_arrival_at_3am,staff_misunderstand_on_payment,Yes
+66,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_staff_accommodated_arrival_at_3am.
+",no_evident_not_staff_accommodated_arrival_at_3am,staff_take_picture_of_passport,Yes
+67,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_clear_instruction.
+",no_evident_not_clear_instruction,no_one_give_key_on_late_check-in,Yes
+68,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_clear_instruction.
+",no_evident_not_clear_instruction,door_lock_on_late_check-in,No
+69,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_clear_instruction.
+",no_evident_not_clear_instruction,customer_wait_10_minute_for_greet,No
+70,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_clear_instruction.
+",no_evident_not_clear_instruction,customer_wait_10_minute_for_check-in,No
+71,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_clear_instruction.
+",no_evident_not_clear_instruction,staff_misunderstand_on_payment,No
+72,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_clear_instruction.
+",no_evident_not_clear_instruction,staff_take_picture_of_passport,Yes
+73,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_late_chek-in_at_1am_worked_well.
+",no_evident_not_late_chek-in_at_1am_worked_well,no_one_give_key_on_late_check-in,Yes
+74,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_late_chek-in_at_1am_worked_well.
+",no_evident_not_late_chek-in_at_1am_worked_well,door_lock_on_late_check-in,Yes
+75,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_late_chek-in_at_1am_worked_well.
+",no_evident_not_late_chek-in_at_1am_worked_well,customer_wait_10_minute_for_greet,No
+76,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_late_chek-in_at_1am_worked_well.
+",no_evident_not_late_chek-in_at_1am_worked_well,customer_wait_10_minute_for_check-in,No
+77,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_late_chek-in_at_1am_worked_well.
+",no_evident_not_late_chek-in_at_1am_worked_well,staff_misunderstand_on_payment,Yes
+78,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_late_chek-in_at_1am_worked_well.
+",no_evident_not_late_chek-in_at_1am_worked_well,staff_take_picture_of_passport,Yes
+79,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_hotel_make_sure_to_check-in_at_late_night.
+",no_evident_not_hotel_make_sure_to_check-in_at_late_night,no_one_give_key_on_late_check-in,Yes
+80,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_hotel_make_sure_to_check-in_at_late_night.
+",no_evident_not_hotel_make_sure_to_check-in_at_late_night,door_lock_on_late_check-in,Yes
+81,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_hotel_make_sure_to_check-in_at_late_night.
+",no_evident_not_hotel_make_sure_to_check-in_at_late_night,customer_wait_10_minute_for_greet,No
+82,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_hotel_make_sure_to_check-in_at_late_night.
+",no_evident_not_hotel_make_sure_to_check-in_at_late_night,customer_wait_10_minute_for_check-in,Yes
+83,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_hotel_make_sure_to_check-in_at_late_night.
+",no_evident_not_hotel_make_sure_to_check-in_at_late_night,staff_misunderstand_on_payment,Yes
+84,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_hotel_make_sure_to_check-in_at_late_night.
+",no_evident_not_hotel_make_sure_to_check-in_at_late_night,staff_take_picture_of_passport,Yes
+85,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_excellent communication_on_late_check-in_process.
+",no_evident_not_excellent communication_on_late_check-in_process,no_one_give_key_on_late_check-in,Yes
+86,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_excellent communication_on_late_check-in_process.
+",no_evident_not_excellent communication_on_late_check-in_process,door_lock_on_late_check-in,Yes
+87,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_excellent communication_on_late_check-in_process.
+",no_evident_not_excellent communication_on_late_check-in_process,customer_wait_10_minute_for_greet,No
+88,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_excellent communication_on_late_check-in_process.
+",no_evident_not_excellent communication_on_late_check-in_process,customer_wait_10_minute_for_check-in,No
+89,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_excellent communication_on_late_check-in_process.
+",no_evident_not_excellent communication_on_late_check-in_process,staff_misunderstand_on_payment,Yes
+90,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_excellent communication_on_late_check-in_process.
+",no_evident_not_excellent communication_on_late_check-in_process,staff_take_picture_of_passport,Yes
+91,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_staff_aware_late_arraival.
+",no_evident_not_staff_aware_late_arraival,no_one_give_key_on_late_check-in,Yes
+92,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_staff_aware_late_arraival.
+",no_evident_not_staff_aware_late_arraival,door_lock_on_late_check-in,Yes
+93,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_staff_aware_late_arraival.
+",no_evident_not_staff_aware_late_arraival,customer_wait_10_minute_for_greet,No
+94,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_staff_aware_late_arraival.
+",no_evident_not_staff_aware_late_arraival,customer_wait_10_minute_for_check-in,No
+95,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_staff_aware_late_arraival.
+",no_evident_not_staff_aware_late_arraival,staff_misunderstand_on_payment,Yes
+96,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_staff_aware_late_arraival.
+",no_evident_not_staff_aware_late_arraival,staff_take_picture_of_passport,Yes
+97,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_staff_make_late_check-in_simple.
+",no_evident_not_staff_make_late_check-in_simple,no_one_give_key_on_late_check-in,Yes
+98,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_staff_make_late_check-in_simple.
+",no_evident_not_staff_make_late_check-in_simple,door_lock_on_late_check-in,Yes
+99,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_staff_make_late_check-in_simple.
+",no_evident_not_staff_make_late_check-in_simple,customer_wait_10_minute_for_greet,No
+100,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_staff_make_late_check-in_simple.
+",no_evident_not_staff_make_late_check-in_simple,customer_wait_10_minute_for_check-in,No
+101,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_staff_make_late_check-in_simple.
+",no_evident_not_staff_make_late_check-in_simple,staff_misunderstand_on_payment,No
+102,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_staff_make_late_check-in_simple.
+",no_evident_not_staff_make_late_check-in_simple,staff_take_picture_of_passport,No
+103,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_got_self_check-in_instruction_on_late_arrival.
+",no_evident_not_got_self_check-in_instruction_on_late_arrival,no_one_give_key_on_late_check-in,Yes
+104,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_got_self_check-in_instruction_on_late_arrival.
+",no_evident_not_got_self_check-in_instruction_on_late_arrival,door_lock_on_late_check-in,Yes
+105,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_got_self_check-in_instruction_on_late_arrival.
+",no_evident_not_got_self_check-in_instruction_on_late_arrival,customer_wait_10_minute_for_greet,No
+106,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_got_self_check-in_instruction_on_late_arrival.
+",no_evident_not_got_self_check-in_instruction_on_late_arrival,customer_wait_10_minute_for_check-in,Yes
+107,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_got_self_check-in_instruction_on_late_arrival.
+",no_evident_not_got_self_check-in_instruction_on_late_arrival,staff_misunderstand_on_payment,Yes
+108,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_got_self_check-in_instruction_on_late_arrival.
+",no_evident_not_got_self_check-in_instruction_on_late_arrival,staff_take_picture_of_passport,Yes
+109,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_staff_allow_early_check-in_in_morning.
+",no_evident_not_staff_allow_early_check-in_in_morning,no_one_give_key_on_late_check-in,Yes
+110,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_staff_allow_early_check-in_in_morning.
+",no_evident_not_staff_allow_early_check-in_in_morning,door_lock_on_late_check-in,Yes
+111,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_staff_allow_early_check-in_in_morning.
+",no_evident_not_staff_allow_early_check-in_in_morning,customer_wait_10_minute_for_greet,No
+112,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_staff_allow_early_check-in_in_morning.
+",no_evident_not_staff_allow_early_check-in_in_morning,customer_wait_10_minute_for_check-in,No
+113,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_staff_allow_early_check-in_in_morning.
+",no_evident_not_staff_allow_early_check-in_in_morning,staff_misunderstand_on_payment,No
+114,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_staff_allow_early_check-in_in_morning.
+",no_evident_not_staff_allow_early_check-in_in_morning,staff_take_picture_of_passport,Yes
+115,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_late_night_arrival_no_problem.
+",no_evident_not_late_night_arrival_no_problem,no_one_give_key_on_late_check-in,Yes
+116,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_late_night_arrival_no_problem.
+",no_evident_not_late_night_arrival_no_problem,door_lock_on_late_check-in,Yes
+117,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_late_night_arrival_no_problem.
+",no_evident_not_late_night_arrival_no_problem,customer_wait_10_minute_for_greet,No
+118,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_late_night_arrival_no_problem.
+",no_evident_not_late_night_arrival_no_problem,customer_wait_10_minute_for_check-in,No
+119,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_late_night_arrival_no_problem.
+",no_evident_not_late_night_arrival_no_problem,staff_misunderstand_on_payment,Yes
+120,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_late_night_arrival_no_problem.
+",no_evident_not_late_night_arrival_no_problem,staff_take_picture_of_passport,Yes
+121,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_fast_check-in.
+",no_evident_not_fast_check-in,no_one_give_key_on_late_check-in,Yes
+122,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_fast_check-in.
+",no_evident_not_fast_check-in,door_lock_on_late_check-in,No
+123,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_fast_check-in.
+",no_evident_not_fast_check-in,customer_wait_10_minute_for_greet,No
+124,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_fast_check-in.
+",no_evident_not_fast_check-in,customer_wait_10_minute_for_check-in,Yes
+125,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_fast_check-in.
+",no_evident_not_fast_check-in,staff_misunderstand_on_payment,No
+126,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_fast_check-in.
+",no_evident_not_fast_check-in,staff_take_picture_of_passport,No
+127,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_quick_check-in_at_night.
+",no_evident_not_quick_check-in_at_night,no_one_give_key_on_late_check-in,Yes
+128,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_quick_check-in_at_night.
+",no_evident_not_quick_check-in_at_night,door_lock_on_late_check-in,Yes
+129,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_quick_check-in_at_night.
+",no_evident_not_quick_check-in_at_night,customer_wait_10_minute_for_greet,Yes
+130,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_quick_check-in_at_night.
+",no_evident_not_quick_check-in_at_night,customer_wait_10_minute_for_check-in,Yes
+131,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_quick_check-in_at_night.
+",no_evident_not_quick_check-in_at_night,staff_misunderstand_on_payment,No
+132,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_quick_check-in_at_night.
+",no_evident_not_quick_check-in_at_night,staff_take_picture_of_passport,Yes
+133,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_room_ready_to_check-in_by_12.
+",no_evident_not_room_ready_to_check-in_by_12,no_one_give_key_on_late_check-in,Yes
+134,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_room_ready_to_check-in_by_12.
+",no_evident_not_room_ready_to_check-in_by_12,door_lock_on_late_check-in,No
+135,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_room_ready_to_check-in_by_12.
+",no_evident_not_room_ready_to_check-in_by_12,customer_wait_10_minute_for_greet,No
+136,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_room_ready_to_check-in_by_12.
+",no_evident_not_room_ready_to_check-in_by_12,customer_wait_10_minute_for_check-in,No
+137,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_room_ready_to_check-in_by_12.
+",no_evident_not_room_ready_to_check-in_by_12,staff_misunderstand_on_payment,No
+138,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_room_ready_to_check-in_by_12.
+",no_evident_not_room_ready_to_check-in_by_12,staff_take_picture_of_passport,Yes
+139,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_clear_check-in_direction_at_late_night.
+",no_evident_not_clear_check-in_direction_at_late_night,no_one_give_key_on_late_check-in,Yes
+140,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_clear_check-in_direction_at_late_night.
+",no_evident_not_clear_check-in_direction_at_late_night,door_lock_on_late_check-in,Yes
+141,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_clear_check-in_direction_at_late_night.
+",no_evident_not_clear_check-in_direction_at_late_night,customer_wait_10_minute_for_greet,No
+142,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_clear_check-in_direction_at_late_night.
+",no_evident_not_clear_check-in_direction_at_late_night,customer_wait_10_minute_for_check-in,Yes
+143,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_clear_check-in_direction_at_late_night.
+",no_evident_not_clear_check-in_direction_at_late_night,staff_misunderstand_on_payment,No
+144,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_clear_check-in_direction_at_late_night.
+",no_evident_not_clear_check-in_direction_at_late_night,staff_take_picture_of_passport,Yes
+145,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_easy_check-in_direction_at_late_night.
+",no_evident_not_easy_check-in_direction_at_late_night,no_one_give_key_on_late_check-in,Yes
+146,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_easy_check-in_direction_at_late_night.
+",no_evident_not_easy_check-in_direction_at_late_night,door_lock_on_late_check-in,Yes
+147,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_easy_check-in_direction_at_late_night.
+",no_evident_not_easy_check-in_direction_at_late_night,customer_wait_10_minute_for_greet,No
+148,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_easy_check-in_direction_at_late_night.
+",no_evident_not_easy_check-in_direction_at_late_night,customer_wait_10_minute_for_check-in,No
+149,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_easy_check-in_direction_at_late_night.
+",no_evident_not_easy_check-in_direction_at_late_night,staff_misunderstand_on_payment,Yes
+150,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_easy_check-in_direction_at_late_night.
+",no_evident_not_easy_check-in_direction_at_late_night,staff_take_picture_of_passport,Yes
+151,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_can_move_in_early.
+",no_evident_not_can_move_in_early,no_one_give_key_on_late_check-in,Yes
+152,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_can_move_in_early.
+",no_evident_not_can_move_in_early,door_lock_on_late_check-in,Yes
+153,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_can_move_in_early.
+",no_evident_not_can_move_in_early,customer_wait_10_minute_for_greet,No
+154,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_can_move_in_early.
+",no_evident_not_can_move_in_early,customer_wait_10_minute_for_check-in,No
+155,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_can_move_in_early.
+",no_evident_not_can_move_in_early,staff_misunderstand_on_payment,No
+156,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_can_move_in_early.
+",no_evident_not_can_move_in_early,staff_take_picture_of_passport,Yes
+157,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_no_problem_self_check-in_at_middle_night.
+",no_evident_not_no_problem_self_check-in_at_middle_night,no_one_give_key_on_late_check-in,Yes
+158,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_no_problem_self_check-in_at_middle_night.
+",no_evident_not_no_problem_self_check-in_at_middle_night,door_lock_on_late_check-in,Yes
+159,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_no_problem_self_check-in_at_middle_night.
+",no_evident_not_no_problem_self_check-in_at_middle_night,customer_wait_10_minute_for_greet,No
+160,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_no_problem_self_check-in_at_middle_night.
+",no_evident_not_no_problem_self_check-in_at_middle_night,customer_wait_10_minute_for_check-in,Yes
+161,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_no_problem_self_check-in_at_middle_night.
+",no_evident_not_no_problem_self_check-in_at_middle_night,staff_misunderstand_on_payment,Yes
+162,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_no_problem_self_check-in_at_middle_night.
+",no_evident_not_no_problem_self_check-in_at_middle_night,staff_take_picture_of_passport,Yes
+163,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_no_problem_check-in_after_12_at_night.
+",no_evident_not_no_problem_check-in_after_12_at_night,no_one_give_key_on_late_check-in,Yes
+164,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_no_problem_check-in_after_12_at_night.
+",no_evident_not_no_problem_check-in_after_12_at_night,door_lock_on_late_check-in,Yes
+165,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_no_problem_check-in_after_12_at_night.
+",no_evident_not_no_problem_check-in_after_12_at_night,customer_wait_10_minute_for_greet,No
+166,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_no_problem_check-in_after_12_at_night.
+",no_evident_not_no_problem_check-in_after_12_at_night,customer_wait_10_minute_for_check-in,Yes
+167,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_no_problem_check-in_after_12_at_night.
+",no_evident_not_no_problem_check-in_after_12_at_night,staff_misunderstand_on_payment,Yes
+168,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_no_problem_check-in_after_12_at_night.
+",no_evident_not_no_problem_check-in_after_12_at_night,staff_take_picture_of_passport,Yes
+169,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_staff_help_check-in_after_midnight.
+",no_evident_not_staff_help_check-in_after_midnight,no_one_give_key_on_late_check-in,Yes
+170,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_staff_help_check-in_after_midnight.
+",no_evident_not_staff_help_check-in_after_midnight,door_lock_on_late_check-in,Yes
+171,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_staff_help_check-in_after_midnight.
+",no_evident_not_staff_help_check-in_after_midnight,customer_wait_10_minute_for_greet,No
+172,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_staff_help_check-in_after_midnight.
+",no_evident_not_staff_help_check-in_after_midnight,customer_wait_10_minute_for_check-in,No
+173,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_staff_help_check-in_after_midnight.
+",no_evident_not_staff_help_check-in_after_midnight,staff_misunderstand_on_payment,No
+174,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_staff_help_check-in_after_midnight.
+",no_evident_not_staff_help_check-in_after_midnight,staff_take_picture_of_passport,Yes
+175,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_easy_self_check-in_at_night.
+",no_evident_not_easy_self_check-in_at_night,no_one_give_key_on_late_check-in,Yes
+176,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_easy_self_check-in_at_night.
+",no_evident_not_easy_self_check-in_at_night,door_lock_on_late_check-in,Yes
+177,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_easy_self_check-in_at_night.
+",no_evident_not_easy_self_check-in_at_night,customer_wait_10_minute_for_greet,No
+178,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_easy_self_check-in_at_night.
+",no_evident_not_easy_self_check-in_at_night,customer_wait_10_minute_for_check-in,No
+179,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_easy_self_check-in_at_night.
+",no_evident_not_easy_self_check-in_at_night,staff_misunderstand_on_payment,Yes
+180,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_easy_self_check-in_at_night.
+",no_evident_not_easy_self_check-in_at_night,staff_take_picture_of_passport,Yes
+181,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_staff_left_clear_information_for_arrival.
+",no_evident_not_staff_left_clear_information_for_arrival,no_one_give_key_on_late_check-in,Yes
+182,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_staff_left_clear_information_for_arrival.
+",no_evident_not_staff_left_clear_information_for_arrival,door_lock_on_late_check-in,No
+183,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_staff_left_clear_information_for_arrival.
+",no_evident_not_staff_left_clear_information_for_arrival,customer_wait_10_minute_for_greet,No
+184,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_staff_left_clear_information_for_arrival.
+",no_evident_not_staff_left_clear_information_for_arrival,customer_wait_10_minute_for_check-in,No
+185,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_staff_left_clear_information_for_arrival.
+",no_evident_not_staff_left_clear_information_for_arrival,staff_misunderstand_on_payment,No
+186,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_staff_left_clear_information_for_arrival.
+",no_evident_not_staff_left_clear_information_for_arrival,staff_take_picture_of_passport,Yes
+187,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_staff_left_precise_information_for_arrival.
+",no_evident_not_staff_left_precise_information_for_arrival,no_one_give_key_on_late_check-in,Yes
+188,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_staff_left_precise_information_for_arrival.
+",no_evident_not_staff_left_precise_information_for_arrival,door_lock_on_late_check-in,No
+189,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_staff_left_precise_information_for_arrival.
+",no_evident_not_staff_left_precise_information_for_arrival,customer_wait_10_minute_for_greet,No
+190,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_staff_left_precise_information_for_arrival.
+",no_evident_not_staff_left_precise_information_for_arrival,customer_wait_10_minute_for_check-in,No
+191,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_staff_left_precise_information_for_arrival.
+",no_evident_not_staff_left_precise_information_for_arrival,staff_misunderstand_on_payment,No
+192,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_staff_left_precise_information_for_arrival.
+",no_evident_not_staff_left_precise_information_for_arrival,staff_take_picture_of_passport,Yes
+193,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_staff_send_photo_for_arrival.
+",no_evident_not_staff_send_photo_for_arrival,no_one_give_key_on_late_check-in,Yes
+194,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_staff_send_photo_for_arrival.
+",no_evident_not_staff_send_photo_for_arrival,door_lock_on_late_check-in,Yes
+195,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_staff_send_photo_for_arrival.
+",no_evident_not_staff_send_photo_for_arrival,customer_wait_10_minute_for_greet,No
+196,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_staff_send_photo_for_arrival.
+",no_evident_not_staff_send_photo_for_arrival,customer_wait_10_minute_for_check-in,No
+197,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_staff_send_photo_for_arrival.
+",no_evident_not_staff_send_photo_for_arrival,staff_misunderstand_on_payment,No
+198,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_staff_send_photo_for_arrival.
+",no_evident_not_staff_send_photo_for_arrival,staff_take_picture_of_passport,Yes
+199,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_staff_take_care_late_check-in.
+",no_evident_not_staff_take_care_late_check-in,no_one_give_key_on_late_check-in,Yes
+200,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_staff_take_care_late_check-in.
+",no_evident_not_staff_take_care_late_check-in,door_lock_on_late_check-in,Yes
+201,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_staff_take_care_late_check-in.
+",no_evident_not_staff_take_care_late_check-in,customer_wait_10_minute_for_greet,No
+202,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_staff_take_care_late_check-in.
+",no_evident_not_staff_take_care_late_check-in,customer_wait_10_minute_for_check-in,No
+203,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_staff_take_care_late_check-in.
+",no_evident_not_staff_take_care_late_check-in,staff_misunderstand_on_payment,No
+204,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_staff_take_care_late_check-in.
+",no_evident_not_staff_take_care_late_check-in,staff_take_picture_of_passport,Yes
+205,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_fluid_check-in.
+",no_evident_not_fluid_check-in,no_one_give_key_on_late_check-in,Yes
+206,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_fluid_check-in.
+",no_evident_not_fluid_check-in,door_lock_on_late_check-in,Yes
+207,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_fluid_check-in.
+",no_evident_not_fluid_check-in,customer_wait_10_minute_for_greet,No
+208,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_fluid_check-in.
+",no_evident_not_fluid_check-in,customer_wait_10_minute_for_check-in,No
+209,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_fluid_check-in.
+",no_evident_not_fluid_check-in,staff_misunderstand_on_payment,No
+210,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_fluid_check-in.
+",no_evident_not_fluid_check-in,staff_take_picture_of_passport,Yes
+211,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_staff_wait_for_check-in_at_3am.
+",no_evident_not_staff_wait_for_check-in_at_3am,no_one_give_key_on_late_check-in,Yes
+212,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_staff_wait_for_check-in_at_3am.
+",no_evident_not_staff_wait_for_check-in_at_3am,door_lock_on_late_check-in,Yes
+213,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_staff_wait_for_check-in_at_3am.
+",no_evident_not_staff_wait_for_check-in_at_3am,customer_wait_10_minute_for_greet,Yes
+214,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_staff_wait_for_check-in_at_3am.
+",no_evident_not_staff_wait_for_check-in_at_3am,customer_wait_10_minute_for_check-in,Yes
+215,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_staff_wait_for_check-in_at_3am.
+",no_evident_not_staff_wait_for_check-in_at_3am,staff_misunderstand_on_payment,No
+216,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_staff_wait_for_check-in_at_3am.
+",no_evident_not_staff_wait_for_check-in_at_3am,staff_take_picture_of_passport,Yes
+217,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_staff_give_early_check-in.
+",no_evident_not_staff_give_early_check-in,no_one_give_key_on_late_check-in,Yes
+218,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_staff_give_early_check-in.
+",no_evident_not_staff_give_early_check-in,door_lock_on_late_check-in,Yes
+219,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_staff_give_early_check-in.
+",no_evident_not_staff_give_early_check-in,customer_wait_10_minute_for_greet,No
+220,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_staff_give_early_check-in.
+",no_evident_not_staff_give_early_check-in,customer_wait_10_minute_for_check-in,No
+221,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_staff_give_early_check-in.
+",no_evident_not_staff_give_early_check-in,staff_misunderstand_on_payment,No
+222,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_staff_give_early_check-in.
+",no_evident_not_staff_give_early_check-in,staff_take_picture_of_passport,Yes
+223,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_late_arrival_no_extra_cost.
+",no_evident_not_late_arrival_no_extra_cost,no_one_give_key_on_late_check-in,Yes
+224,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_late_arrival_no_extra_cost.
+",no_evident_not_late_arrival_no_extra_cost,door_lock_on_late_check-in,Yes
+225,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_late_arrival_no_extra_cost.
+",no_evident_not_late_arrival_no_extra_cost,customer_wait_10_minute_for_greet,No
+226,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_late_arrival_no_extra_cost.
+",no_evident_not_late_arrival_no_extra_cost,customer_wait_10_minute_for_check-in,No
+227,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_late_arrival_no_extra_cost.
+",no_evident_not_late_arrival_no_extra_cost,staff_misunderstand_on_payment,No
+228,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_late_arrival_no_extra_cost.
+",no_evident_not_late_arrival_no_extra_cost,staff_take_picture_of_passport,Yes
+229,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_hotel_allow_late_arrival.
+",no_evident_not_hotel_allow_late_arrival,no_one_give_key_on_late_check-in,Yes
+230,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_hotel_allow_late_arrival.
+",no_evident_not_hotel_allow_late_arrival,door_lock_on_late_check-in,Yes
+231,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_hotel_allow_late_arrival.
+",no_evident_not_hotel_allow_late_arrival,customer_wait_10_minute_for_greet,No
+232,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_hotel_allow_late_arrival.
+",no_evident_not_hotel_allow_late_arrival,customer_wait_10_minute_for_check-in,No
+233,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_hotel_allow_late_arrival.
+",no_evident_not_hotel_allow_late_arrival,staff_misunderstand_on_payment,No
+234,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_hotel_allow_late_arrival.
+",no_evident_not_hotel_allow_late_arrival,staff_take_picture_of_passport,Yes
+235,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_perfect_welcome_at_4am_arrival.
+",no_evident_not_perfect_welcome_at_4am_arrival,no_one_give_key_on_late_check-in,Yes
+236,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_perfect_welcome_at_4am_arrival.
+",no_evident_not_perfect_welcome_at_4am_arrival,door_lock_on_late_check-in,Yes
+237,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_perfect_welcome_at_4am_arrival.
+",no_evident_not_perfect_welcome_at_4am_arrival,customer_wait_10_minute_for_greet,No
+238,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_perfect_welcome_at_4am_arrival.
+",no_evident_not_perfect_welcome_at_4am_arrival,customer_wait_10_minute_for_check-in,Yes
+239,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_perfect_welcome_at_4am_arrival.
+",no_evident_not_perfect_welcome_at_4am_arrival,staff_misunderstand_on_payment,Yes
+240,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_perfect_welcome_at_4am_arrival.
+",no_evident_not_perfect_welcome_at_4am_arrival,staff_take_picture_of_passport,Yes
+241,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_perfect_welcome_at_1:30am_in_morning.
+",no_evident_not_perfect_welcome_at_1:30am_in_morning,no_one_give_key_on_late_check-in,Yes
+242,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_perfect_welcome_at_1:30am_in_morning.
+",no_evident_not_perfect_welcome_at_1:30am_in_morning,door_lock_on_late_check-in,Yes
+243,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_perfect_welcome_at_1:30am_in_morning.
+",no_evident_not_perfect_welcome_at_1:30am_in_morning,customer_wait_10_minute_for_greet,Yes
+244,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_perfect_welcome_at_1:30am_in_morning.
+",no_evident_not_perfect_welcome_at_1:30am_in_morning,customer_wait_10_minute_for_check-in,Yes
+245,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_perfect_welcome_at_1:30am_in_morning.
+",no_evident_not_perfect_welcome_at_1:30am_in_morning,staff_misunderstand_on_payment,No
+246,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_perfect_welcome_at_1:30am_in_morning.
+",no_evident_not_perfect_welcome_at_1:30am_in_morning,staff_take_picture_of_passport,Yes
+247,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is no_one_give_key_on_late_check-in. Phrase A is no_evident_not_can_check-in_at_4am.
+",no_evident_not_can_check-in_at_4am,no_one_give_key_on_late_check-in,Yes
+248,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is door_lock_on_late_check-in. Phrase A is no_evident_not_can_check-in_at_4am.
+",no_evident_not_can_check-in_at_4am,door_lock_on_late_check-in,Yes
+249,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_greet. Phrase A is no_evident_not_can_check-in_at_4am.
+",no_evident_not_can_check-in_at_4am,customer_wait_10_minute_for_greet,Yes
+250,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is customer_wait_10_minute_for_check-in. Phrase A is no_evident_not_can_check-in_at_4am.
+",no_evident_not_can_check-in_at_4am,customer_wait_10_minute_for_check-in,Yes
+251,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_misunderstand_on_payment. Phrase A is no_evident_not_can_check-in_at_4am.
+",no_evident_not_can_check-in_at_4am,staff_misunderstand_on_payment,Yes
+252,"Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is staff_take_picture_of_passport. Phrase A is no_evident_not_can_check-in_at_4am.
+",no_evident_not_can_check-in_at_4am,staff_take_picture_of_passport,Yes

@@ -1,0 +1,1522 @@
+======================================================================
+Test 1
+======================================================================
+   ID Vote LLM_Output Verify
+20953   No        Yes     FN
+ 3649   No        Yes     FN
+  820   No         No     TP
+24300   No         No     TP
+ 9013   No        Yes     FN
+ 8025   No        Yes     FN
+ 7315   No         No     TP
+ 4573   No         No     TP
+24133   No        Yes     FN
+ 3359   No        Yes     FN
+22175   No        Yes     FN
+24271   No        Yes     FN
+29235   No         No     TP
+17871   No        Yes     FN
+ 2849   No        Yes     FN
+19350   No        Yes     FN
+13826   No         No     TP
+ 1042   No        Yes     FN
+  977   No        Yes     FN
+ 3071   No        Yes     FN
+ 7165   No        Yes     FN
+ 7624   No        Yes     FN
+16560   No        Yes     FN
+19727   No        Yes     FN
+  870   No        Yes     FN
+18391   No         No     TP
+ 6516   No        Yes     FN
+23463   No         No     TP
+21296   No        Yes     FN
+22982   No        Yes     FN
+17857   No        Yes     FN
+13747   No        Yes     FN
+ 7224   No        Yes     FN
+14720   No         No     TP
+19310   No         No     TP
+ 9116   No        Yes     FN
+26524   No        Yes     FN
+28486   No        Yes     FN
+  213   No        Yes     FN
+24865   No        Yes     FN
+26406   No        Yes     FN
+ 5232   No         No     TP
+22877   No        Yes     FN
+13849   No         No     TP
+11150   No        Yes     FN
+ 9106   No        Yes     FN
+ 5095   No        Yes     FN
+ 7056   No        Yes     FN
+31366   No         No     TP
+25019   No        Yes     FN
+11030   No         No     TP
+ 3350   No        Yes     FN
+ 3040   No        Yes     FN
+12450   No        Yes     FN
+ 3170   No        Yes     FN
+11764   No        Yes     FN
+27771   No        Yes     FN
+11271   No        Yes     FN
+19783   No        Yes     FN
+ 8668   No        Yes     FN
+26448   No        Yes     FN
+ 1424   No        Yes     FN
+23912   No         No     TP
+15055   No         No     TP
+17572   No        Yes     FN
+ 4091   No        Yes     FN
+31888   No        Yes     FN
+30222   No        Yes     FN
+12404   No        Yes     FN
+ 2583   No         No     TP
+18090   No        Yes     FN
+ 9607   No        Yes     FN
+27178   No        Yes     FN
+20600   No        Yes     FN
+20268   No        Yes     FN
+29015   No        Yes     FN
+28237   No        Yes     FN
+11851   No        Yes     FN
+18919   No        Yes     FN
+ 6301   No        Yes     FN
+23088   No        Yes     FN
+ 2280   No        Yes     FN
+ 1502   No        Yes     FN
+21669   No         No     TP
+ 7468   No         No     TP
+25332   No        Yes     FN
+ 9483   No        Yes     FN
+32284   No         No     TP
+ 2615   No         No     TP
+28028   No        Yes     FN
+ 7629   No        Yes     FN
+28393   No        Yes     FN
+ 3310   No        Yes     FN
+12456   No        Yes     FN
+ 9109   No        Yes     FN
+14858   No        Yes     FN
+20831   No        Yes     FN
+27333   No         No     TP
+11955   No         No     TP
+ 5330   No        Yes     FN
+12131   No        Yes     FN
+11642   No         No     TP
+ 6866   No         No     TP
+21961   No        Yes     FN
+ 8749   No        Yes     FN
+22998   No        Yes     FN
+30693   No        Yes     FN
+22399   No        Yes     FN
+21235   No         No     TP
+ 2340   No         No     TP
+19961   No        Yes     FN
+20807   No        Yes     FN
+ 5608   No        Yes     FN
+17503   No        Yes     FN
+23893   No        Yes     FN
+ 8022   No         No     TP
+ 5355   No         No     TP
+15148   No        Yes     FN
+12434   No        Yes     FN
+ 8846   No         No     TP
+30324   No         No     TP
+20972   No        Yes     FN
+22550   No         No     TP
+18251   No        Yes     FN
+ 7197   No         No     TP
+22434   No        Yes     FN
+10627   No        Yes     FN
+27619   No        Yes     FN
+25177   No        Yes     FN
+25428   No        Yes     FN
+ 1833   No        Yes     FN
+ 7506   No        Yes     FN
+26929   No        Yes     FN
+ 1052   No        Yes     FN
+26380   No         No     TP
+10337   No        Yes     FN
+13146   No        Yes     FN
+ 8774   No        Yes     FN
+ 2169   No        Yes     FN
+ 6914   No        Yes     FN
+29922   No         No     TP
+30898   No         No     TP
+18586   No        Yes     FN
+28717   No        Yes     FN
+23525   No        Yes     FN
+10312   No        Yes     FN
+ 6968   No        Yes     FN
+21478   No         No     TP
+16359   No        Yes     FN
+12965   No        Yes     FN
+28990   No        Yes     FN
+29968   No         No     TP
+21065   No        Yes     FN
+15036   No        Yes     FN
+ 4682   No        Yes     FN
+ 8680   No        Yes     FN
+ 4576   No        Yes     FN
+ 8082   No         No     TP
+24412   No        Yes     FN
+18395   No         No     TP
+17662   No        Yes     FN
+ 8610   No        Yes     FN
+24479   No        Yes     FN
+19156   No        Yes     FN
+14039   No        Yes     FN
+29420   No        Yes     FN
+19122   No        Yes     FN
+13088   No         No     TP
+11862   No        Yes     FN
+ 7187   No         No     TP
+ 4533   No        Yes     FN
+16697   No        Yes     FN
+16172   No         No     TP
+ 2979   No         No     TP
+24766   No        Yes     FN
+ 1544   No        Yes     FN
+28217   No        Yes     FN
+ 3593   No        Yes     FN
+ 5009   No        Yes     FN
+20561   No        Yes     FN
+ 5243   No         No     TP
+25955   No        Yes     FN
+22299   No         No     TP
+13834   No         No     TP
+19544   No        Yes     FN
+ 2082   No        Yes     FN
+12609   No        Yes     FN
+12505   No        Yes     FN
+19527   No        Yes     FN
+15338   No        Yes     FN
+17339   No        Yes     FN
+ 8239   No        Yes     FN
+31821   No         No     TP
+18129   No         No     TP
+28207   No         No     TP
+30882   No        Yes     FN
+  377   No        Yes     FN
+22292   No        Yes     FN
+23617   No        Yes     FN
+ 3754   No         No     TP
+22339   No        Yes     FN
+28993   No        Yes     FN
+17596   No        Yes     FN
+24605   No        Yes     FN
+ 8744   No        Yes     FN
+25186   No         No     TP
+21004   No        Yes     FN
+11147   No        Yes     FN
+ 3656   No        Yes     FN
+ 9618   No        Yes     FN
+14247   No        Yes     FN
+ 5183   No        Yes     FN
+14868   No        Yes     FN
+  107   No        Yes     FN
+31255   No         No     TP
+23662   No        Yes     FN
+28700   No        Yes     FN
+23583   No        Yes     FN
+ 8631   No        Yes     FN
+31847   No         No     TP
+16404   No        Yes     FN
+24968   No        Yes     FN
+ 5855   No        Yes     FN
+16636   No        Yes     FN
+29905   No         No     TP
+ 3487   No        Yes     FN
+28526   No        Yes     FN
+20490   No         No     TP
+ 9780   No         No     TP
+27580   No        Yes     FN
+20938   No         No     TP
+19955   No        Yes     FN
+ 6518   No        Yes     FN
+12253   No        Yes     FN
+24986   No         No     TP
+ 5294   No         No     TP
+17675   No        Yes     FN
+31245   No        Yes     FN
+25515   No        Yes     FN
+30227   No         No     TP
+17379   No        Yes     FN
+30098   No        Yes     FN
+   19   No        Yes     FN
+19627   No        Yes     FN
+10622   No         No     TP
+16011   No        Yes     FN
+  639   No        Yes     FN
+ 3666   No        Yes     FN
+30445   No        Yes     FN
+11895   No        Yes     FN
+28794   No        Yes     FN
+32288   No        Yes     FN
+27253   No         No     TP
+26437   No        Yes     FN
+10077   No         No     TP
+ 7847   No         No     TP
+ 1899   No        Yes     FN
+ 7893   No         No     TP
+28771   No         No     TP
+18592   No        Yes     FN
+31030   No         No     TP
+ 2581   No         No     TP
+ 2807   No         No     TP
+23984   No         No     TP
+15925   No         No     TP
+26740   No        Yes     FN
+ 2268   No        Yes     FN
+32047   No        Yes     FN
+24924   No        Yes     FN
+17456   No        Yes     FN
+25095   No         No     TP
+ 4121   No         No     TP
+ 4208   No        Yes     FN
+21619   No        Yes     FN
+15575   No         No     TP
+31027   No        Yes     FN
+18016   No        Yes     FN
+ 5411   No        Yes     FN
+ 8686   No        Yes     FN
+17291   No        Yes     FN
+28588   No        Yes     FN
+19877   No        Yes     FN
+13866   No        Yes     FN
+31601   No        Yes     FN
+ 6941   No        Yes     FN
+30439   No        Yes     FN
+17672   No        Yes     FN
+24749   No         No     TP
+23919   No         No     TP
+22606   No        Yes     FN
+ 6592   No        Yes     FN
+23362   No        Yes     FN
+10215   No        Yes     FN
+13075   No        Yes     FN
+22010   No        Yes     FN
+12237   No        Yes     FN
+14356   No        Yes     FN
+29479   No        Yes     FN
+16960   No        Yes     FN
+14795   No        Yes     FN
+ 3966   No        Yes     FN
+ 8124   No         No     TP
+ 7363   No        Yes     FN
+ 2099   No        Yes     FN
+11079   No        Yes     FN
+  690   No        Yes     FN
+19278   No        Yes     FN
+18151   No         No     TP
+ 7541   No         No     TP
+19283   No        Yes     FN
+ 7217   No        Yes     FN
+  236   No        Yes     FN
+ 2327   No         No     TP
+23195   No        Yes     FN
+20680   No        Yes     FN
+ 1930   No        Yes     FN
+ 7502   No         No     TP
+ 2209   No        Yes     FN
+29669   No        Yes     FN
+ 1030   No        Yes     FN
+28169   No         No     TP
+10828   No         No     TP
+ 2322   No        Yes     FN
+16848   No         No     TP
+ 7799   No         No     TP
+ 9126   No        Yes     FN
+21922   No        Yes     FN
+15907   No        Yes     FN
+ 7021   No        Yes     FN
+17670   No        Yes     FN
+ 4336   No        Yes     FN
+23703   No        Yes     FN
+30655   No        Yes     FN
+28914   No        Yes     FN
+18712   No        Yes     FN
+18882   No        Yes     FN
+15489   No        Yes     FN
+ 7963   No        Yes     FN
+25711   No        Yes     FN
+15499   No         No     TP
+26461   No        Yes     FN
+13339   No        Yes     FN
+ 6240   No         No     TP
+ 3091   No        Yes     FN
+ 3177   No        Yes     FN
+21594   No        Yes     FN
+14125   No        Yes     FN
+11610   No        Yes     FN
+13880   No        Yes     FN
+13471   No        Yes     FN
+15304   No        Yes     FN
+28307   No        Yes     FN
+23891   No         No     TP
+ 1776   No        Yes     FN
+22065   No        Yes     FN
+21413   No        Yes     FN
+32250   No         No     TP
+21175   No         No     TP
+ 3225   No        Yes     FN
+ 1987   No        Yes     FN
+13194   No        Yes     FN
+23863   No         No     TP
+11119   No        Yes     FN
+26234   No         No     TP
+28236   No         No     TP
+ 3581   No         No     TP
+ 8148   No        Yes     FN
+ 6279   No        Yes     FN
+ 6233   No        Yes     FN
+17574   No         No     TP
+14701   No        Yes     FN
+ 4594   No         No     TP
+13825   No         No     TP
+ 6013   No         No     TP
+ 9128   No        Yes     FN
+15160   No        Yes     FN
+ 8186   No         No     TP
+28656   No        Yes     FN
+30254   No         No     TP
+ 2471   No         No     TP
+14521   No        Yes     FN
+26478   No        Yes     FN
+28225   No        Yes     FN
+28049   No        Yes     FN
+18034   No        Yes     FN
+ 3209   No        Yes     FN
+ 1658   No        Yes     FN
+21370   No        Yes     FN
+17714   No        Yes     FN
+27395   No        Yes     FN
+  484   No        Yes     FN
+31753   No         No     TP
+ 3057   No         No     TP
+30356   No         No     TP
+24693   No        Yes     FN
+27811   No         No     TP
+ 7746   No        Yes     FN
+ 5450   No         No     TP
+13318   No        Yes     FN
+15914   No         No     TP
+15774   No        Yes     FN
+ 7005   No         No     TP
+28333   No        Yes     FN
+13142   No        Yes     FN
+29572   No        Yes     FN
+ 1922   No         No     TP
+ 5395   No         No     TP
+12419   No         No     TP
+   71   No        Yes     FN
+32287   No        Yes     FN
+12794   No        Yes     FN
+ 8691   No        Yes     FN
+30361   No         No     TP
+25693   No        Yes     FN
+25728   No        Yes     FN
+14910   No        Yes     FN
+ 9348   No        Yes     FN
+13862   No        Yes     FN
+22826   No         No     TP
+31370   No         No     TP
+23938   No         No     TP
+25670   No        Yes     FN
+18212   No        Yes     FN
+21689   No         No     TP
+23541   No         No     TP
+15948   No         No     TP
+ 5073   No        Yes     FN
+ 6223   No         No     TP
+ 9723   No        Yes     FN
+ 7134   No        Yes     FN
+31743   No         No     TP
+ 1917   No        Yes     FN
+18979   No         No     TP
+24109   No         No     TP
+17767   No         No     TP
+ 1998   No        Yes     FN
+24510   No        Yes     FN
+10277   No        Yes     FN
+ 1874   No        Yes     FN
+ 1644   No        Yes     FN
+19143   No         No     TP
+15624   No         No     TP
+16478   No        Yes     FN
+30127   No        Yes     FN
+27942   No        Yes     FN
+17404   No        Yes     FN
+ 5159   No        Yes     FN
+ 1864   No        Yes     FN
+31483   No         No     TP
+16641   No        Yes     FN
+ 2626   No        Yes     FN
+27897   No        Yes     FN
+ 6090   No        Yes     FN
+ 2246   No        Yes     FN
+19499   No        Yes     FN
+ 2227   No        Yes     FN
+22126   No        Yes     FN
+28241   No        Yes     FN
+ 7708   No        Yes     FN
+13231   No         No     TP
+ 3929   No        Yes     FN
+30855   No         No     TP
+29173   No        Yes     FN
+18668   No        Yes     FN
+ 8068   No        Yes     FN
+18971   No        Yes     FN
+19482   No        Yes     FN
+ 1303   No         No     TP
+20296   No        Yes     FN
+ 2687   No         No     TP
+13738   No         No     TP
+21541   No         No     TP
+19126   No         No     TP
+18522   No         No     TP
+17131   No        Yes     FN
+10367   No         No     TP
+30629   No        Yes     FN
+ 8545   No         No     TP
+ 6694   No        Yes     FN
+21946   No         No     TP
+23469   No        Yes     FN
+10296   No        Yes     FN
+ 7822   No        Yes     FN
+ 8704   No        Yes     FN
+12970   No        Yes     FN
+ 4289   No        Yes     FN
+21152   No         No     TP
+ 9831   No        Yes     FN
+14983   No        Yes     FN
+10361   No        Yes     FN
+30443   No        Yes     FN
+24638   No         No     TP
+30663   No         No     TP
+ 2378   No        Yes     FN
+  306   No        Yes     FN
+15018   No        Yes     FN
+20355   No         No     TP
+18449   No         No     TP
+ 3277   No        Yes     FN
+ 2401   No         No     TP
+
+======================================================================
+Test 2
+======================================================================
+   ID Vote LLM_Output Verify
+20953   No        Yes     FN
+ 3649   No        Yes     FN
+  820   No         No     TP
+24300   No         No     TP
+ 9013   No        Yes     FN
+ 8025   No        Yes     FN
+ 7315   No         No     TP
+ 4573   No         No     TP
+24133   No        Yes     FN
+ 3359   No        Yes     FN
+22175   No        Yes     FN
+24271   No        Yes     FN
+29235   No         No     TP
+17871   No        Yes     FN
+ 2849   No        Yes     FN
+19350   No        Yes     FN
+13826   No         No     TP
+ 1042   No        Yes     FN
+  977   No        Yes     FN
+ 3071   No        Yes     FN
+ 7165   No        Yes     FN
+ 7624   No        Yes     FN
+16560   No        Yes     FN
+19727   No        Yes     FN
+  870   No        Yes     FN
+18391   No         No     TP
+ 6516   No        Yes     FN
+23463   No         No     TP
+21296   No        Yes     FN
+22982   No        Yes     FN
+17857   No        Yes     FN
+13747   No        Yes     FN
+ 7224   No        Yes     FN
+14720   No         No     TP
+19310   No         No     TP
+ 9116   No        Yes     FN
+26524   No        Yes     FN
+28486   No        Yes     FN
+  213   No        Yes     FN
+24865   No        Yes     FN
+26406   No        Yes     FN
+ 5232   No         No     TP
+22877   No        Yes     FN
+13849   No         No     TP
+11150   No        Yes     FN
+ 9106   No        Yes     FN
+ 5095   No        Yes     FN
+ 7056   No        Yes     FN
+31366   No         No     TP
+25019   No        Yes     FN
+11030   No         No     TP
+ 3350   No        Yes     FN
+ 3040   No        Yes     FN
+12450   No        Yes     FN
+ 3170   No        Yes     FN
+11764   No        Yes     FN
+27771   No        Yes     FN
+11271   No        Yes     FN
+19783   No        Yes     FN
+ 8668   No        Yes     FN
+26448   No        Yes     FN
+ 1424   No        Yes     FN
+23912   No         No     TP
+15055   No         No     TP
+17572   No        Yes     FN
+ 4091   No        Yes     FN
+31888   No        Yes     FN
+30222   No        Yes     FN
+12404   No        Yes     FN
+ 2583   No         No     TP
+18090   No        Yes     FN
+ 9607   No        Yes     FN
+27178   No        Yes     FN
+20600   No        Yes     FN
+20268   No        Yes     FN
+29015   No        Yes     FN
+28237   No        Yes     FN
+11851   No        Yes     FN
+18919   No        Yes     FN
+ 6301   No        Yes     FN
+23088   No        Yes     FN
+ 2280   No        Yes     FN
+ 1502   No        Yes     FN
+21669   No         No     TP
+ 7468   No         No     TP
+25332   No        Yes     FN
+ 9483   No        Yes     FN
+32284   No         No     TP
+ 2615   No         No     TP
+28028   No        Yes     FN
+ 7629   No        Yes     FN
+28393   No        Yes     FN
+ 3310   No        Yes     FN
+12456   No        Yes     FN
+ 9109   No        Yes     FN
+14858   No        Yes     FN
+20831   No        Yes     FN
+27333   No         No     TP
+11955   No         No     TP
+ 5330   No        Yes     FN
+12131   No        Yes     FN
+11642   No         No     TP
+ 6866   No         No     TP
+21961   No        Yes     FN
+ 8749   No        Yes     FN
+22998   No        Yes     FN
+30693   No        Yes     FN
+22399   No        Yes     FN
+21235   No         No     TP
+ 2340   No         No     TP
+19961   No        Yes     FN
+20807   No        Yes     FN
+ 5608   No        Yes     FN
+17503   No        Yes     FN
+23893   No        Yes     FN
+ 8022   No         No     TP
+ 5355   No         No     TP
+15148   No        Yes     FN
+12434   No        Yes     FN
+ 8846   No         No     TP
+30324   No         No     TP
+20972   No        Yes     FN
+22550   No         No     TP
+18251   No        Yes     FN
+ 7197   No         No     TP
+22434   No        Yes     FN
+10627   No        Yes     FN
+27619   No        Yes     FN
+25177   No        Yes     FN
+25428   No        Yes     FN
+ 1833   No        Yes     FN
+ 7506   No        Yes     FN
+26929   No        Yes     FN
+ 1052   No        Yes     FN
+26380   No         No     TP
+10337   No        Yes     FN
+13146   No        Yes     FN
+ 8774   No        Yes     FN
+ 2169   No        Yes     FN
+ 6914   No        Yes     FN
+29922   No         No     TP
+30898   No         No     TP
+18586   No        Yes     FN
+28717   No        Yes     FN
+23525   No        Yes     FN
+10312   No        Yes     FN
+ 6968   No        Yes     FN
+21478   No         No     TP
+16359   No        Yes     FN
+12965   No        Yes     FN
+28990   No        Yes     FN
+29968   No         No     TP
+21065   No        Yes     FN
+15036   No        Yes     FN
+ 4682   No        Yes     FN
+ 8680   No        Yes     FN
+ 4576   No        Yes     FN
+ 8082   No         No     TP
+24412   No        Yes     FN
+18395   No         No     TP
+17662   No        Yes     FN
+ 8610   No        Yes     FN
+24479   No        Yes     FN
+19156   No        Yes     FN
+14039   No        Yes     FN
+29420   No        Yes     FN
+19122   No        Yes     FN
+13088   No         No     TP
+11862   No        Yes     FN
+ 7187   No         No     TP
+ 4533   No        Yes     FN
+16697   No        Yes     FN
+16172   No         No     TP
+ 2979   No         No     TP
+24766   No        Yes     FN
+ 1544   No        Yes     FN
+28217   No        Yes     FN
+ 3593   No        Yes     FN
+ 5009   No        Yes     FN
+20561   No        Yes     FN
+ 5243   No         No     TP
+25955   No        Yes     FN
+22299   No         No     TP
+13834   No         No     TP
+19544   No        Yes     FN
+ 2082   No        Yes     FN
+12609   No        Yes     FN
+12505   No        Yes     FN
+19527   No        Yes     FN
+15338   No        Yes     FN
+17339   No        Yes     FN
+ 8239   No        Yes     FN
+31821   No         No     TP
+18129   No         No     TP
+28207   No         No     TP
+30882   No        Yes     FN
+  377   No        Yes     FN
+22292   No        Yes     FN
+23617   No        Yes     FN
+ 3754   No         No     TP
+22339   No        Yes     FN
+28993   No        Yes     FN
+17596   No        Yes     FN
+24605   No        Yes     FN
+ 8744   No        Yes     FN
+25186   No         No     TP
+21004   No        Yes     FN
+11147   No        Yes     FN
+ 3656   No        Yes     FN
+ 9618   No        Yes     FN
+14247   No        Yes     FN
+ 5183   No        Yes     FN
+14868   No        Yes     FN
+  107   No        Yes     FN
+31255   No         No     TP
+23662   No        Yes     FN
+28700   No        Yes     FN
+23583   No        Yes     FN
+ 8631   No        Yes     FN
+31847   No         No     TP
+16404   No        Yes     FN
+24968   No        Yes     FN
+ 5855   No        Yes     FN
+16636   No        Yes     FN
+29905   No         No     TP
+ 3487   No        Yes     FN
+28526   No        Yes     FN
+20490   No         No     TP
+ 9780   No         No     TP
+27580   No        Yes     FN
+20938   No         No     TP
+19955   No        Yes     FN
+ 6518   No        Yes     FN
+12253   No        Yes     FN
+24986   No         No     TP
+ 5294   No         No     TP
+17675   No        Yes     FN
+31245   No        Yes     FN
+25515   No        Yes     FN
+30227   No         No     TP
+17379   No        Yes     FN
+30098   No        Yes     FN
+   19   No        Yes     FN
+19627   No        Yes     FN
+10622   No         No     TP
+16011   No        Yes     FN
+  639   No        Yes     FN
+ 3666   No        Yes     FN
+30445   No        Yes     FN
+11895   No        Yes     FN
+28794   No        Yes     FN
+32288   No        Yes     FN
+27253   No         No     TP
+26437   No        Yes     FN
+10077   No         No     TP
+ 7847   No         No     TP
+ 1899   No        Yes     FN
+ 7893   No         No     TP
+28771   No         No     TP
+18592   No        Yes     FN
+31030   No         No     TP
+ 2581   No         No     TP
+ 2807   No         No     TP
+23984   No         No     TP
+15925   No         No     TP
+26740   No        Yes     FN
+ 2268   No        Yes     FN
+32047   No        Yes     FN
+24924   No        Yes     FN
+17456   No        Yes     FN
+25095   No         No     TP
+ 4121   No         No     TP
+ 4208   No        Yes     FN
+21619   No        Yes     FN
+15575   No         No     TP
+31027   No        Yes     FN
+18016   No        Yes     FN
+ 5411   No        Yes     FN
+ 8686   No        Yes     FN
+17291   No        Yes     FN
+28588   No        Yes     FN
+19877   No        Yes     FN
+13866   No        Yes     FN
+31601   No        Yes     FN
+ 6941   No        Yes     FN
+30439   No        Yes     FN
+17672   No        Yes     FN
+24749   No         No     TP
+23919   No         No     TP
+22606   No        Yes     FN
+ 6592   No        Yes     FN
+23362   No        Yes     FN
+10215   No        Yes     FN
+13075   No        Yes     FN
+22010   No        Yes     FN
+12237   No        Yes     FN
+14356   No        Yes     FN
+29479   No        Yes     FN
+16960   No        Yes     FN
+14795   No        Yes     FN
+ 3966   No        Yes     FN
+ 8124   No         No     TP
+ 7363   No        Yes     FN
+ 2099   No        Yes     FN
+11079   No        Yes     FN
+  690   No        Yes     FN
+19278   No        Yes     FN
+18151   No         No     TP
+ 7541   No         No     TP
+19283   No        Yes     FN
+ 7217   No        Yes     FN
+  236   No        Yes     FN
+ 2327   No         No     TP
+23195   No        Yes     FN
+20680   No        Yes     FN
+ 1930   No        Yes     FN
+ 7502   No         No     TP
+ 2209   No        Yes     FN
+29669   No        Yes     FN
+ 1030   No        Yes     FN
+28169   No         No     TP
+10828   No         No     TP
+ 2322   No        Yes     FN
+16848   No         No     TP
+ 7799   No         No     TP
+ 9126   No        Yes     FN
+21922   No        Yes     FN
+15907   No        Yes     FN
+ 7021   No        Yes     FN
+17670   No        Yes     FN
+ 4336   No        Yes     FN
+23703   No        Yes     FN
+30655   No        Yes     FN
+28914   No        Yes     FN
+18712   No        Yes     FN
+18882   No        Yes     FN
+15489   No        Yes     FN
+ 7963   No        Yes     FN
+25711   No        Yes     FN
+15499   No         No     TP
+26461   No        Yes     FN
+13339   No        Yes     FN
+ 6240   No         No     TP
+ 3091   No        Yes     FN
+ 3177   No        Yes     FN
+21594   No        Yes     FN
+14125   No        Yes     FN
+11610   No        Yes     FN
+13880   No        Yes     FN
+13471   No        Yes     FN
+15304   No        Yes     FN
+28307   No        Yes     FN
+23891   No         No     TP
+ 1776   No        Yes     FN
+22065   No        Yes     FN
+21413   No        Yes     FN
+32250   No         No     TP
+21175   No         No     TP
+ 3225   No        Yes     FN
+ 1987   No        Yes     FN
+13194   No        Yes     FN
+23863   No         No     TP
+11119   No        Yes     FN
+26234   No         No     TP
+28236   No         No     TP
+ 3581   No         No     TP
+ 8148   No        Yes     FN
+ 6279   No        Yes     FN
+ 6233   No        Yes     FN
+17574   No         No     TP
+14701   No        Yes     FN
+ 4594   No         No     TP
+13825   No         No     TP
+ 6013   No         No     TP
+ 9128   No        Yes     FN
+15160   No        Yes     FN
+ 8186   No         No     TP
+28656   No        Yes     FN
+30254   No         No     TP
+ 2471   No         No     TP
+14521   No        Yes     FN
+26478   No        Yes     FN
+28225   No        Yes     FN
+28049   No        Yes     FN
+18034   No        Yes     FN
+ 3209   No        Yes     FN
+ 1658   No        Yes     FN
+21370   No        Yes     FN
+17714   No        Yes     FN
+27395   No        Yes     FN
+  484   No        Yes     FN
+31753   No         No     TP
+ 3057   No         No     TP
+30356   No         No     TP
+24693   No        Yes     FN
+27811   No         No     TP
+ 7746   No        Yes     FN
+ 5450   No         No     TP
+13318   No        Yes     FN
+15914   No         No     TP
+15774   No        Yes     FN
+ 7005   No         No     TP
+28333   No        Yes     FN
+13142   No        Yes     FN
+29572   No        Yes     FN
+ 1922   No         No     TP
+ 5395   No         No     TP
+12419   No         No     TP
+   71   No        Yes     FN
+32287   No        Yes     FN
+12794   No        Yes     FN
+ 8691   No        Yes     FN
+30361   No         No     TP
+25693   No        Yes     FN
+25728   No        Yes     FN
+14910   No        Yes     FN
+ 9348   No        Yes     FN
+13862   No        Yes     FN
+22826   No         No     TP
+31370   No         No     TP
+23938   No         No     TP
+25670   No        Yes     FN
+18212   No        Yes     FN
+21689   No         No     TP
+23541   No         No     TP
+15948   No         No     TP
+ 5073   No        Yes     FN
+ 6223   No         No     TP
+ 9723   No        Yes     FN
+ 7134   No        Yes     FN
+31743   No         No     TP
+ 1917   No        Yes     FN
+18979   No         No     TP
+24109   No         No     TP
+17767   No         No     TP
+ 1998   No        Yes     FN
+24510   No        Yes     FN
+10277   No        Yes     FN
+ 1874   No        Yes     FN
+ 1644   No        Yes     FN
+19143   No         No     TP
+15624   No         No     TP
+16478   No        Yes     FN
+30127   No        Yes     FN
+27942   No        Yes     FN
+17404   No        Yes     FN
+ 5159   No        Yes     FN
+ 1864   No        Yes     FN
+31483   No         No     TP
+16641   No        Yes     FN
+ 2626   No        Yes     FN
+27897   No        Yes     FN
+ 6090   No        Yes     FN
+ 2246   No        Yes     FN
+19499   No        Yes     FN
+ 2227   No        Yes     FN
+22126   No        Yes     FN
+28241   No        Yes     FN
+ 7708   No        Yes     FN
+13231   No         No     TP
+ 3929   No        Yes     FN
+30855   No         No     TP
+29173   No        Yes     FN
+18668   No        Yes     FN
+ 8068   No        Yes     FN
+18971   No        Yes     FN
+19482   No        Yes     FN
+ 1303   No         No     TP
+20296   No        Yes     FN
+ 2687   No         No     TP
+13738   No         No     TP
+21541   No         No     TP
+19126   No         No     TP
+18522   No         No     TP
+17131   No        Yes     FN
+10367   No         No     TP
+30629   No        Yes     FN
+ 8545   No         No     TP
+ 6694   No        Yes     FN
+21946   No         No     TP
+23469   No        Yes     FN
+10296   No        Yes     FN
+ 7822   No        Yes     FN
+ 8704   No        Yes     FN
+12970   No        Yes     FN
+ 4289   No        Yes     FN
+21152   No         No     TP
+ 9831   No        Yes     FN
+14983   No        Yes     FN
+10361   No        Yes     FN
+30443   No        Yes     FN
+24638   No         No     TP
+30663   No         No     TP
+ 2378   No        Yes     FN
+  306   No        Yes     FN
+15018   No        Yes     FN
+20355   No         No     TP
+18449   No         No     TP
+ 3277   No        Yes     FN
+ 2401   No         No     TP
+
+======================================================================
+Test 3
+======================================================================
+   ID Vote LLM_Output Verify
+20953   No        Yes     FN
+ 3649   No        Yes     FN
+  820   No         No     TP
+24300   No         No     TP
+ 9013   No        Yes     FN
+ 8025   No        Yes     FN
+ 7315   No         No     TP
+ 4573   No         No     TP
+24133   No        Yes     FN
+ 3359   No        Yes     FN
+22175   No        Yes     FN
+24271   No        Yes     FN
+29235   No         No     TP
+17871   No        Yes     FN
+ 2849   No        Yes     FN
+19350   No        Yes     FN
+13826   No         No     TP
+ 1042   No        Yes     FN
+  977   No        Yes     FN
+ 3071   No        Yes     FN
+ 7165   No        Yes     FN
+ 7624   No        Yes     FN
+16560   No        Yes     FN
+19727   No        Yes     FN
+  870   No        Yes     FN
+18391   No         No     TP
+ 6516   No        Yes     FN
+23463   No         No     TP
+21296   No        Yes     FN
+22982   No        Yes     FN
+17857   No        Yes     FN
+13747   No        Yes     FN
+ 7224   No        Yes     FN
+14720   No         No     TP
+19310   No         No     TP
+ 9116   No        Yes     FN
+26524   No        Yes     FN
+28486   No        Yes     FN
+  213   No        Yes     FN
+24865   No        Yes     FN
+26406   No        Yes     FN
+ 5232   No         No     TP
+22877   No        Yes     FN
+13849   No         No     TP
+11150   No        Yes     FN
+ 9106   No        Yes     FN
+ 5095   No        Yes     FN
+ 7056   No        Yes     FN
+31366   No         No     TP
+25019   No        Yes     FN
+11030   No         No     TP
+ 3350   No        Yes     FN
+ 3040   No        Yes     FN
+12450   No        Yes     FN
+ 3170   No        Yes     FN
+11764   No        Yes     FN
+27771   No        Yes     FN
+11271   No        Yes     FN
+19783   No        Yes     FN
+ 8668   No        Yes     FN
+26448   No        Yes     FN
+ 1424   No        Yes     FN
+23912   No         No     TP
+15055   No         No     TP
+17572   No        Yes     FN
+ 4091   No        Yes     FN
+31888   No        Yes     FN
+30222   No        Yes     FN
+12404   No        Yes     FN
+ 2583   No         No     TP
+18090   No        Yes     FN
+ 9607   No        Yes     FN
+27178   No        Yes     FN
+20600   No        Yes     FN
+20268   No        Yes     FN
+29015   No        Yes     FN
+28237   No        Yes     FN
+11851   No        Yes     FN
+18919   No        Yes     FN
+ 6301   No        Yes     FN
+23088   No        Yes     FN
+ 2280   No        Yes     FN
+ 1502   No        Yes     FN
+21669   No         No     TP
+ 7468   No         No     TP
+25332   No        Yes     FN
+ 9483   No        Yes     FN
+32284   No         No     TP
+ 2615   No         No     TP
+28028   No        Yes     FN
+ 7629   No        Yes     FN
+28393   No        Yes     FN
+ 3310   No        Yes     FN
+12456   No        Yes     FN
+ 9109   No        Yes     FN
+14858   No        Yes     FN
+20831   No        Yes     FN
+27333   No         No     TP
+11955   No         No     TP
+ 5330   No        Yes     FN
+12131   No        Yes     FN
+11642   No         No     TP
+ 6866   No         No     TP
+21961   No        Yes     FN
+ 8749   No        Yes     FN
+22998   No        Yes     FN
+30693   No        Yes     FN
+22399   No        Yes     FN
+21235   No         No     TP
+ 2340   No         No     TP
+19961   No        Yes     FN
+20807   No        Yes     FN
+ 5608   No        Yes     FN
+17503   No        Yes     FN
+23893   No        Yes     FN
+ 8022   No         No     TP
+ 5355   No         No     TP
+15148   No        Yes     FN
+12434   No        Yes     FN
+ 8846   No         No     TP
+30324   No         No     TP
+20972   No        Yes     FN
+22550   No         No     TP
+18251   No        Yes     FN
+ 7197   No         No     TP
+22434   No        Yes     FN
+10627   No        Yes     FN
+27619   No        Yes     FN
+25177   No        Yes     FN
+25428   No        Yes     FN
+ 1833   No        Yes     FN
+ 7506   No        Yes     FN
+26929   No        Yes     FN
+ 1052   No        Yes     FN
+26380   No         No     TP
+10337   No        Yes     FN
+13146   No        Yes     FN
+ 8774   No        Yes     FN
+ 2169   No        Yes     FN
+ 6914   No        Yes     FN
+29922   No         No     TP
+30898   No         No     TP
+18586   No        Yes     FN
+28717   No        Yes     FN
+23525   No        Yes     FN
+10312   No        Yes     FN
+ 6968   No        Yes     FN
+21478   No         No     TP
+16359   No        Yes     FN
+12965   No        Yes     FN
+28990   No        Yes     FN
+29968   No         No     TP
+21065   No        Yes     FN
+15036   No        Yes     FN
+ 4682   No        Yes     FN
+ 8680   No        Yes     FN
+ 4576   No        Yes     FN
+ 8082   No         No     TP
+24412   No        Yes     FN
+18395   No         No     TP
+17662   No        Yes     FN
+ 8610   No        Yes     FN
+24479   No        Yes     FN
+19156   No        Yes     FN
+14039   No        Yes     FN
+29420   No        Yes     FN
+19122   No        Yes     FN
+13088   No         No     TP
+11862   No        Yes     FN
+ 7187   No         No     TP
+ 4533   No        Yes     FN
+16697   No        Yes     FN
+16172   No         No     TP
+ 2979   No         No     TP
+24766   No        Yes     FN
+ 1544   No        Yes     FN
+28217   No        Yes     FN
+ 3593   No        Yes     FN
+ 5009   No        Yes     FN
+20561   No        Yes     FN
+ 5243   No         No     TP
+25955   No        Yes     FN
+22299   No         No     TP
+13834   No         No     TP
+19544   No        Yes     FN
+ 2082   No        Yes     FN
+12609   No        Yes     FN
+12505   No        Yes     FN
+19527   No        Yes     FN
+15338   No        Yes     FN
+17339   No        Yes     FN
+ 8239   No        Yes     FN
+31821   No         No     TP
+18129   No         No     TP
+28207   No         No     TP
+30882   No        Yes     FN
+  377   No        Yes     FN
+22292   No        Yes     FN
+23617   No        Yes     FN
+ 3754   No         No     TP
+22339   No        Yes     FN
+28993   No        Yes     FN
+17596   No        Yes     FN
+24605   No        Yes     FN
+ 8744   No        Yes     FN
+25186   No         No     TP
+21004   No        Yes     FN
+11147   No        Yes     FN
+ 3656   No        Yes     FN
+ 9618   No        Yes     FN
+14247   No        Yes     FN
+ 5183   No        Yes     FN
+14868   No        Yes     FN
+  107   No        Yes     FN
+31255   No         No     TP
+23662   No        Yes     FN
+28700   No        Yes     FN
+23583   No        Yes     FN
+ 8631   No        Yes     FN
+31847   No         No     TP
+16404   No        Yes     FN
+24968   No        Yes     FN
+ 5855   No        Yes     FN
+16636   No        Yes     FN
+29905   No         No     TP
+ 3487   No        Yes     FN
+28526   No        Yes     FN
+20490   No         No     TP
+ 9780   No         No     TP
+27580   No        Yes     FN
+20938   No         No     TP
+19955   No        Yes     FN
+ 6518   No        Yes     FN
+12253   No        Yes     FN
+24986   No         No     TP
+ 5294   No         No     TP
+17675   No        Yes     FN
+31245   No        Yes     FN
+25515   No        Yes     FN
+30227   No         No     TP
+17379   No        Yes     FN
+30098   No        Yes     FN
+   19   No        Yes     FN
+19627   No        Yes     FN
+10622   No         No     TP
+16011   No        Yes     FN
+  639   No        Yes     FN
+ 3666   No        Yes     FN
+30445   No        Yes     FN
+11895   No        Yes     FN
+28794   No        Yes     FN
+32288   No        Yes     FN
+27253   No         No     TP
+26437   No        Yes     FN
+10077   No         No     TP
+ 7847   No         No     TP
+ 1899   No        Yes     FN
+ 7893   No         No     TP
+28771   No         No     TP
+18592   No        Yes     FN
+31030   No         No     TP
+ 2581   No         No     TP
+ 2807   No         No     TP
+23984   No         No     TP
+15925   No         No     TP
+26740   No        Yes     FN
+ 2268   No        Yes     FN
+32047   No        Yes     FN
+24924   No        Yes     FN
+17456   No        Yes     FN
+25095   No         No     TP
+ 4121   No         No     TP
+ 4208   No        Yes     FN
+21619   No        Yes     FN
+15575   No         No     TP
+31027   No        Yes     FN
+18016   No        Yes     FN
+ 5411   No        Yes     FN
+ 8686   No        Yes     FN
+17291   No        Yes     FN
+28588   No        Yes     FN
+19877   No        Yes     FN
+13866   No        Yes     FN
+31601   No        Yes     FN
+ 6941   No        Yes     FN
+30439   No        Yes     FN
+17672   No        Yes     FN
+24749   No         No     TP
+23919   No         No     TP
+22606   No        Yes     FN
+ 6592   No        Yes     FN
+23362   No        Yes     FN
+10215   No        Yes     FN
+13075   No        Yes     FN
+22010   No        Yes     FN
+12237   No        Yes     FN
+14356   No        Yes     FN
+29479   No        Yes     FN
+16960   No        Yes     FN
+14795   No        Yes     FN
+ 3966   No        Yes     FN
+ 8124   No         No     TP
+ 7363   No        Yes     FN
+ 2099   No        Yes     FN
+11079   No        Yes     FN
+  690   No        Yes     FN
+19278   No        Yes     FN
+18151   No         No     TP
+ 7541   No         No     TP
+19283   No        Yes     FN
+ 7217   No        Yes     FN
+  236   No        Yes     FN
+ 2327   No         No     TP
+23195   No        Yes     FN
+20680   No        Yes     FN
+ 1930   No        Yes     FN
+ 7502   No         No     TP
+ 2209   No        Yes     FN
+29669   No        Yes     FN
+ 1030   No        Yes     FN
+28169   No         No     TP
+10828   No         No     TP
+ 2322   No        Yes     FN
+16848   No         No     TP
+ 7799   No         No     TP
+ 9126   No        Yes     FN
+21922   No        Yes     FN
+15907   No        Yes     FN
+ 7021   No        Yes     FN
+17670   No        Yes     FN
+ 4336   No        Yes     FN
+23703   No        Yes     FN
+30655   No        Yes     FN
+28914   No        Yes     FN
+18712   No        Yes     FN
+18882   No        Yes     FN
+15489   No        Yes     FN
+ 7963   No        Yes     FN
+25711   No        Yes     FN
+15499   No         No     TP
+26461   No        Yes     FN
+13339   No        Yes     FN
+ 6240   No         No     TP
+ 3091   No        Yes     FN
+ 3177   No        Yes     FN
+21594   No        Yes     FN
+14125   No        Yes     FN
+11610   No        Yes     FN
+13880   No        Yes     FN
+13471   No        Yes     FN
+15304   No        Yes     FN
+28307   No        Yes     FN
+23891   No         No     TP
+ 1776   No        Yes     FN
+22065   No        Yes     FN
+21413   No        Yes     FN
+32250   No         No     TP
+21175   No         No     TP
+ 3225   No        Yes     FN
+ 1987   No        Yes     FN
+13194   No        Yes     FN
+23863   No         No     TP
+11119   No        Yes     FN
+26234   No         No     TP
+28236   No         No     TP
+ 3581   No         No     TP
+ 8148   No        Yes     FN
+ 6279   No        Yes     FN
+ 6233   No        Yes     FN
+17574   No         No     TP
+14701   No        Yes     FN
+ 4594   No         No     TP
+13825   No         No     TP
+ 6013   No         No     TP
+ 9128   No        Yes     FN
+15160   No        Yes     FN
+ 8186   No         No     TP
+28656   No        Yes     FN
+30254   No         No     TP
+ 2471   No         No     TP
+14521   No        Yes     FN
+26478   No        Yes     FN
+28225   No        Yes     FN
+28049   No        Yes     FN
+18034   No        Yes     FN
+ 3209   No        Yes     FN
+ 1658   No        Yes     FN
+21370   No        Yes     FN
+17714   No        Yes     FN
+27395   No        Yes     FN
+  484   No        Yes     FN
+31753   No         No     TP
+ 3057   No         No     TP
+30356   No         No     TP
+24693   No        Yes     FN
+27811   No         No     TP
+ 7746   No        Yes     FN
+ 5450   No         No     TP
+13318   No        Yes     FN
+15914   No         No     TP
+15774   No        Yes     FN
+ 7005   No         No     TP
+28333   No        Yes     FN
+13142   No        Yes     FN
+29572   No        Yes     FN
+ 1922   No         No     TP
+ 5395   No         No     TP
+12419   No         No     TP
+   71   No        Yes     FN
+32287   No        Yes     FN
+12794   No        Yes     FN
+ 8691   No        Yes     FN
+30361   No         No     TP
+25693   No        Yes     FN
+25728   No        Yes     FN
+14910   No        Yes     FN
+ 9348   No        Yes     FN
+13862   No        Yes     FN
+22826   No         No     TP
+31370   No         No     TP
+23938   No         No     TP
+25670   No        Yes     FN
+18212   No        Yes     FN
+21689   No         No     TP
+23541   No         No     TP
+15948   No         No     TP
+ 5073   No        Yes     FN
+ 6223   No         No     TP
+ 9723   No        Yes     FN
+ 7134   No        Yes     FN
+31743   No         No     TP
+ 1917   No        Yes     FN
+18979   No         No     TP
+24109   No         No     TP
+17767   No         No     TP
+ 1998   No        Yes     FN
+24510   No        Yes     FN
+10277   No        Yes     FN
+ 1874   No        Yes     FN
+ 1644   No        Yes     FN
+19143   No         No     TP
+15624   No         No     TP
+16478   No        Yes     FN
+30127   No        Yes     FN
+27942   No        Yes     FN
+17404   No        Yes     FN
+ 5159   No        Yes     FN
+ 1864   No        Yes     FN
+31483   No         No     TP
+16641   No        Yes     FN
+ 2626   No        Yes     FN
+27897   No        Yes     FN
+ 6090   No        Yes     FN
+ 2246   No        Yes     FN
+19499   No        Yes     FN
+ 2227   No        Yes     FN
+22126   No        Yes     FN
+28241   No        Yes     FN
+ 7708   No        Yes     FN
+13231   No         No     TP
+ 3929   No        Yes     FN
+30855   No         No     TP
+29173   No        Yes     FN
+18668   No        Yes     FN
+ 8068   No        Yes     FN
+18971   No        Yes     FN
+19482   No        Yes     FN
+ 1303   No         No     TP
+20296   No        Yes     FN
+ 2687   No         No     TP
+13738   No         No     TP
+21541   No         No     TP
+19126   No         No     TP
+18522   No         No     TP
+17131   No        Yes     FN
+10367   No         No     TP
+30629   No        Yes     FN
+ 8545   No         No     TP
+ 6694   No        Yes     FN
+21946   No         No     TP
+23469   No        Yes     FN
+10296   No        Yes     FN
+ 7822   No        Yes     FN
+ 8704   No        Yes     FN
+12970   No        Yes     FN
+ 4289   No        Yes     FN
+21152   No         No     TP
+ 9831   No        Yes     FN
+14983   No        Yes     FN
+10361   No        Yes     FN
+30443   No        Yes     FN
+24638   No         No     TP
+30663   No         No     TP
+ 2378   No        Yes     FN
+  306   No        Yes     FN
+15018   No        Yes     FN
+20355   No         No     TP
+18449   No         No     TP
+ 3277   No        Yes     FN
+ 2401   No         No     TP
+
+======================================================================
+SUMMARY
+======================================================================
+   Model      Shot    Topic           Category   Test Positive_Label  N_valid  TP  TN  FP  FN  Precision  Recall       F1  Accuracy
+llama3.2 zero_shot facility Contrary(P)Body(P) Test 1             No      500 144   0   0 356        1.0   0.288 0.447205     0.288
+llama3.2 zero_shot facility Contrary(P)Body(P) Test 2             No      500 144   0   0 356        1.0   0.288 0.447205     0.288
+llama3.2 zero_shot facility Contrary(P)Body(P) Test 3             No      500 144   0   0 356        1.0   0.288 0.447205     0.288

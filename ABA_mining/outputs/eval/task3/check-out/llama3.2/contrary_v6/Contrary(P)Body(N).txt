@@ -1,0 +1,46 @@
+======================================================================
+Test 1
+======================================================================
+ID Vote LLM_Output Verify
+ 1  Yes        Yes     TP
+ 2  Yes        Yes     TP
+ 3   No        Yes     FP
+ 4   No        Yes     FP
+ 5   No        Yes     FP
+ 6  Yes        Yes     TP
+ 7  Yes        Yes     TP
+ 8  Yes        Yes     TP
+
+======================================================================
+Test 2
+======================================================================
+ID Vote LLM_Output Verify
+ 1  Yes        Yes     TP
+ 2  Yes        Yes     TP
+ 3   No        Yes     FP
+ 4   No        Yes     FP
+ 5   No        Yes     FP
+ 6  Yes        Yes     TP
+ 7  Yes        Yes     TP
+ 8  Yes        Yes     TP
+
+======================================================================
+Test 3
+======================================================================
+ID Vote LLM_Output Verify
+ 1  Yes        Yes     TP
+ 2  Yes        Yes     TP
+ 3   No        Yes     FP
+ 4   No        Yes     FP
+ 5   No        Yes     FP
+ 6  Yes        Yes     TP
+ 7  Yes        Yes     TP
+ 8  Yes        Yes     TP
+
+======================================================================
+SUMMARY
+======================================================================
+   Model        Shot     Topic           Category   Test Positive_Label  N_valid  TP  TN  FP  FN  Precision  Recall       F1  Accuracy
+llama3.2 contrary_v6 check-out Contrary(P)Body(N) Test 1            Yes        8   5   0   3   0      0.625     1.0 0.769231     0.625
+llama3.2 contrary_v6 check-out Contrary(P)Body(N) Test 2            Yes        8   5   0   3   0      0.625     1.0 0.769231     0.625
+llama3.2 contrary_v6 check-out Contrary(P)Body(N) Test 3            Yes        8   5   0   3   0      0.625     1.0 0.769231     0.625

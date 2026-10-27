@@ -29,6 +29,7 @@ Topic=Food | "Tasty food on the first floor, comfortable restaurant"
 
 Topic=Facility | "New, comfortable apartments"
   → {"body_literals": ["new_hotel", "comfortable_hotel"]}
+Important override: if Topic=Facility and the text mentions apartment/apartments, accommodation/accommodations, place, building, atmosphere, or property, the literal MUST end with hotel, not apartment(s)/accommodation. This is a hard rule.
 
 Topic=Room, Sentiment=Positive | "clean room, although not big"
   → {"body_literals": ["clean_room"]}    (only positive aspect)

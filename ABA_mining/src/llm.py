@@ -81,16 +81,29 @@ class OllamaClient(LLMClient):
             os.environ["OLLAMA_HOST"] = host
         self._ollama = ollama
         self._options = options or {}
+        # Optional per-request timeout (seconds). The default client waits forever, and a local
+        # runner that wedges then stalls a long sweep silently instead of failing so it can be
+        # retried. Unset = old behaviour, since a large model can legitimately be slow.
+        timeout = os.getenv("OLLAMA_REQUEST_TIMEOUT")
+        self._client = ollama.Client(host=host, timeout=float(timeout)) if timeout else None
 
     def complete(self, *, model: str, prompt: str, temperature: float, top_p: float, max_output_tokens: int) -> LLMResponse:
 
         options = dict(self._options)
         options.setdefault("temperature", temperature)
         options.setdefault("top_p", top_p)
-        
+
         options.setdefault("num_predict", max_output_tokens)
 
-        resp = self._ollama.generate(model=model, prompt=prompt, stream=False, options=options)
+        # think=False: for "hybrid reasoning" models (e.g. the Qwen3 family), Ollama's
+        # `thinking` field is separate from `response` (so parsing was never contaminated),
+        # but the model still spends real generation time producing those reasoning tokens
+        # before the final answer even though they land in a different field — that's where
+        # the slowdown comes from. Disabling it skips that step entirely. Ollama silently
+        # ignores this option for models that don't support thinking at all, so it's safe to
+        # always pass regardless of which model is being called.
+        generate = self._client.generate if self._client is not None else self._ollama.generate
+        resp = generate(model=model, prompt=prompt, stream=False, think=False, options=options)
         return LLMResponse(text=(resp.get("response") or "").strip())
 
 

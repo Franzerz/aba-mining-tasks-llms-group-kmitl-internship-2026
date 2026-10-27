@@ -1,0 +1,13 @@
+======================================================================
+ALL
+======================================================================
+     Model     Shot    Topic           Category   Test Positive_Label  N_valid  TP    TN  FP   FN  Precision   Recall       F1  Accuracy
+gemma4_31b one_shot facility Contrary(P)Body(N) Test 1            Yes    11686  67 10197  78 1344   0.462069 0.047484 0.086118  0.878316
+gemma4_31b one_shot facility Contrary(P)Body(N) Test 2            Yes    11686  67 10197  78 1344   0.462069 0.047484 0.086118  0.878316
+gemma4_31b one_shot facility Contrary(P)Body(N) Test 3            Yes    11686  67 10197  78 1344   0.462069 0.047484 0.086118  0.878316
+
+======================================================================
+MICRO_BY_CATEGORY
+======================================================================
+     Model     Shot    Topic           Category Positive_Label  Precision   Recall       F1  Accuracy  N_valid  TP    TN  FP   FN
+gemma4_31b one_shot facility Contrary(P)Body(N)            Yes   0.462069 0.047484 0.086118  0.878316    35058 201 30591 234 4032

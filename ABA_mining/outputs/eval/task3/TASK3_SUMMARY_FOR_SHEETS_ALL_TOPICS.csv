@@ -1,0 +1,25 @@
+Model,Version,Run,Topics,N_valid,Macro Precision,Macro Recall,Macro F1,Macro Accuracy,Micro Precision,Micro Recall,Micro F1,Micro Accuracy
+llama3.2,contrary_v1,1,"check-in, check-out, facility, price, staff",2215,0.7229,0.8331,0.7567,0.7165,0.8237,0.8511,0.8372,0.753
+llama3.2,contrary_v1,2,"check-in, check-out, facility, price, staff",2215,0.7222,0.8321,0.7555,0.7145,0.8224,0.8493,0.8356,0.7508
+llama3.2,contrary_v1,3,"check-in, check-out, facility, price, staff",2215,0.7222,0.8325,0.7557,0.7148,0.8225,0.8499,0.836,0.7512
+llama3.2,contrary_v2,1,"check-in, check-out, facility, price, staff",2215,0.7028,0.818,0.6758,0.5652,0.7041,0.7131,0.7086,0.5625
+llama3.2,contrary_v2,2,"check-in, check-out, facility, price, staff",2215,0.7028,0.8167,0.6742,0.5638,0.7034,0.7107,0.707,0.5607
+llama3.2,contrary_v2,3,"check-in, check-out, facility, price, staff",2215,0.7028,0.8167,0.6742,0.5638,0.7034,0.7107,0.707,0.5607
+llama3.2,contrary_v3,1,"check-in, check-out, facility, price, staff",2215,0.702,0.6092,0.6378,0.6118,0.8083,0.6816,0.7396,0.642
+llama3.2,contrary_v3,2,"check-in, check-out, facility, price, staff",2215,0.702,0.6106,0.6386,0.6131,0.8089,0.684,0.7412,0.6438
+llama3.2,contrary_v3,3,"check-in, check-out, facility, price, staff",2215,0.702,0.6106,0.6386,0.6131,0.8089,0.684,0.7412,0.6438
+llama3.2,contrary_v4,1,"check-in, check-out, facility, price, staff",2215,0.3333,0.3333,0.3333,0.6361,1.0,0.6053,0.7541,0.7056
+llama3.2,contrary_v4,2,"check-in, check-out, facility, price, staff",2215,0.3333,0.3333,0.3333,0.6361,1.0,0.6053,0.7541,0.7056
+llama3.2,contrary_v4,3,"check-in, check-out, facility, price, staff",2215,0.3333,0.3333,0.3333,0.6361,1.0,0.6053,0.7541,0.7056
+llama3.2,contrary_v5,1,"check-in, check-out, facility, price, staff",2215,0.728,0.7312,0.631,0.5605,0.715,0.5969,0.6506,0.5219
+llama3.2,contrary_v5,2,"check-in, check-out, facility, price, staff",2215,0.728,0.7311,0.631,0.5604,0.715,0.5969,0.6506,0.5219
+llama3.2,contrary_v5,3,"check-in, check-out, facility, price, staff",2215,0.728,0.7311,0.631,0.5604,0.715,0.5969,0.6506,0.5219
+llama3.2,contrary_v6,1,"check-in, check-out, facility, price, staff",2215,0.7294,0.6939,0.6942,0.666,0.8506,0.6998,0.7679,0.6844
+llama3.2,contrary_v6,2,"check-in, check-out, facility, price, staff",2215,0.7287,0.694,0.6944,0.6697,0.8529,0.7052,0.772,0.6894
+llama3.2,contrary_v6,3,"check-in, check-out, facility, price, staff",2215,0.7288,0.6944,0.6946,0.67,0.853,0.7058,0.7724,0.6898
+llama3.2,one_shot,1,"check-in, check-out, facility, price, staff",2215,0.7413,0.2211,0.3293,0.4801,0.9459,0.2966,0.4516,0.4628
+llama3.2,one_shot,2,"check-in, check-out, facility, price, staff",2215,0.7397,0.2211,0.3292,0.4798,0.9441,0.2966,0.4514,0.4623
+llama3.2,one_shot,3,"check-in, check-out, facility, price, staff",2215,0.7397,0.2215,0.3296,0.4801,0.9442,0.2972,0.4521,0.4628
+llama3.2,zero_shot,1,"check-in, check-out, facility, price, staff",2215,0.7161,0.6536,0.5981,0.514,0.7149,0.5115,0.5963,0.4835
+llama3.2,zero_shot,2,"check-in, check-out, facility, price, staff",2215,0.7142,0.6518,0.596,0.5113,0.7116,0.5109,0.5948,0.4808
+llama3.2,zero_shot,3,"check-in, check-out, facility, price, staff",2215,0.7147,0.6521,0.5965,0.5116,0.712,0.5103,0.5945,0.4808

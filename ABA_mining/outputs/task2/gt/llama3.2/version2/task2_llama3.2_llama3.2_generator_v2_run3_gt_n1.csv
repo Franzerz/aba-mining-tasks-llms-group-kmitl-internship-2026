@@ -1,0 +1,5 @@
+Review ID,Run,Source,Topic,Sentiment,Head,Selected Content,Literal,Literal Type,Valid,Errors
+1,,gt,Facility,Positive,good_facility,"New, comfortable apartments",new_hotel,body,True,
+1,,gt,Facility,Positive,good_facility,"New, comfortable apartments",comfortable_hotel,body,True,
+1,,gt,Facility,Positive,good_facility,"New, comfortable apartments",no_evident_not_new_hotel,cont,True,
+1,,gt,Facility,Positive,good_facility,"New, comfortable apartments",no_evident_not_comfortable_hotel,cont,True,

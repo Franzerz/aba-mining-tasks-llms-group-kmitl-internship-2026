@@ -14,26 +14,27 @@ HEAD CHECK
 BODY MATCH (sentence-embedding cosine similarity vs GT 'Concat')
 ────────────────────────────────────────────────────────────────────────
   GT match type breakdown : {'exact': 2078}
-  Evaluated  : 2052
-  Pass rate (>= 0.5) : 2024/2052 = 0.9864
-  Mean similarity        : 0.8205
-  Median similarity      : 0.8317
-  Min / Max               : 0.2654 / 1.0000
+  Evaluated  : 1921
+  Pass rate (>= 0.5) : 1890/1921 = 0.9839
+  Mean similarity        : 0.8281
+  Median similarity      : 0.8404
+  Min / Max               : 0.2959 / 1.0000
 
 ────────────────────────────────────────────────────────────────────────
 RULE COMPLIANCE (body literals, mechanically-checkable rules only)
 ────────────────────────────────────────────────────────────────────────
-  Literals checked : 5191
-  Clean (no violations) : 2154  (0.4149)
+  Literals checked : 4881
+  Clean (no violations) : 2074  (0.4249)
   Violations by rule code:
-    R8             2568
-    R16(soft)      421
-    R16            306
-    R5             27
-    R1             21
-    R6             17
-    R9             16
-    R7             1
+    R8             2425
+    R16(soft)      345
+    R16            24
+    R5             23
+    R6             19
+    R9             12
+    R1             11
+    R7             3
+    R4             1
 
   Rules requiring semantic/human judgement and NOT auto-checked: R2 (safe plural removal), R3 (-ed ending necessity), R10 (typo correction), R11 (sentiment-matched extraction), R12/R13 (double-meaning splitting), R14 (implied-noun phrasing), R15 (indirect-meaning rewrites), R18 (active voice), R19 (multi-meaning extraction).
 
@@ -43,51 +44,51 @@ MICRO PRECISION / RECALL (per-literal sentence-embedding matching, threshold 0.8
   Counts are aggregated across ALL instances before computing a single global ratio (micro), not averaged per-instance (macro).
 
   Label type: BODY
-    Precision : 0.3654  (1867/5110 literals matched)
-    Recall    : 0.4540  (1898/4181 GT literals covered)
-    F1        : 0.4049
+    Precision : 0.3683  (1768/4800 literals matched)
+    Recall    : 0.4291  (1794/4181 GT literals covered)
+    F1        : 0.3964
     Topic                Prec      Rec       F1   n_pred   n_gt
-    Booking-issue      0.0000   0.0000   0.0000       10      5
-    Check-in           0.1176   0.2000   0.1481      102     55
-    Check-out          0.3333   0.4444   0.3810       12      9
-    Facility           0.1080   0.1419   0.1226      565    437
-    Food               0.3091   0.3542   0.3301      427    384
-    Location           0.3245   0.3802   0.3502     1060    910
-    Price              0.2571   0.2647   0.2609       70     68
-    Room               0.5196   0.6699   0.5853     1807   1424
-    Staff              0.3427   0.4127   0.3745     1033    882
-    Taxi-issue         0.1250   0.4286   0.1935       24      7
+    Booking-issue      0.0000   0.0000   0.0000        7      5
+    Check-in           0.1290   0.2000   0.1569       93     55
+    Check-out          0.2500   0.3333   0.2857       12      9
+    Facility           0.2251   0.2792   0.2493      533    437
+    Food               0.2729   0.3021   0.2868      414    384
+    Location           0.3083   0.3670   0.3351     1090    910
+    Price              0.2540   0.2353   0.2443       63     68
+    Room               0.4737   0.5927   0.5266     1752   1424
+    Staff              0.4146   0.3912   0.4025      808    882
+    Taxi-issue         0.1071   0.4286   0.1714       28      7
 
   Label type: CONT
-    Precision : 0.5918  (3069/5186 literals matched)
-    Recall    : 0.6594  (2757/4181 GT literals covered)
-    F1        : 0.6238
+    Precision : 0.6298  (3069/4873 literals matched)
+    Recall    : 0.6434  (2690/4181 GT literals covered)
+    F1        : 0.6365
     Topic                Prec      Rec       F1   n_pred   n_gt
-    Booking-issue      0.0000   0.0000   0.0000       10      5
-    Check-in           0.1863   0.3091   0.2325      102     55
+    Booking-issue      0.0000   0.0000   0.0000        7      5
+    Check-in           0.2258   0.3455   0.2731       93     55
     Check-out          0.4167   0.5556   0.4762       12      9
-    Facility           0.2302   0.3105   0.2644      569    438
-    Food               0.5721   0.6484   0.6079      430    384
-    Location           0.4726   0.5578   0.5117     1096    909
-    Price              0.6000   0.6176   0.6087       70     68
-    Room               0.8385   0.8265   0.8325     1833   1424
-    Staff              0.5413   0.7007   0.6108     1040    882
-    Taxi-issue         0.3333   0.8571   0.4800       24      7
+    Facility           0.5281   0.6301   0.5746      534    438
+    Food               0.5516   0.6250   0.5860      417    384
+    Location           0.4515   0.5369   0.4905     1134    909
+    Price              0.5873   0.5441   0.5649       63     68
+    Room               0.8452   0.7654   0.8033     1776   1424
+    Staff              0.5859   0.6020   0.5939      809    882
+    Taxi-issue         0.2500   0.5714   0.3478       28      7
 
   Label type: BOTH
-    Precision : 0.4794  (4936/10296 literals matched)
-    Recall    : 0.5567  (4655/8362 GT literals covered)
-    F1        : 0.5152
+    Precision : 0.5001  (4837/9673 literals matched)
+    Recall    : 0.5362  (4484/8362 GT literals covered)
+    F1        : 0.5175
     Topic                Prec      Rec       F1   n_pred   n_gt
-    Booking-issue      0.0000   0.0000   0.0000       20     10
-    Check-in           0.1520   0.2545   0.1903      204    110
-    Check-out          0.3750   0.5000   0.4286       24     18
-    Facility           0.1693   0.2263   0.1937     1134    875
-    Food               0.4411   0.5013   0.4693      857    768
-    Location           0.3998   0.4689   0.4316     2156   1819
-    Price              0.4286   0.4412   0.4348      140    136
-    Room               0.6802   0.7482   0.7126     3640   2848
-    Staff              0.4424   0.5567   0.4930     2073   1764
-    Taxi-issue         0.2292   0.6429   0.3379       48     14
+    Booking-issue      0.0000   0.0000   0.0000       14     10
+    Check-in           0.1774   0.2727   0.2150      186    110
+    Check-out          0.3333   0.4444   0.3810       24     18
+    Facility           0.3768   0.4549   0.4121     1067    875
+    Food               0.4128   0.4635   0.4367      831    768
+    Location           0.3813   0.4519   0.4136     2224   1819
+    Price              0.4206   0.3897   0.4046      126    136
+    Room               0.6607   0.6791   0.6698     3528   2848
+    Staff              0.5003   0.4966   0.4984     1617   1764
+    Taxi-issue         0.1786   0.5000   0.2632       56     14
 
-Runtime: 20.35s
+Runtime: 14.90s

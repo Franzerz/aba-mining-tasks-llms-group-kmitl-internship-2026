@@ -11,8 +11,8 @@ generation:
   max_output_tokens: 4096   # increased from 800; 11-topic JSON can exceed 800 tokens
 
 models:
-  task1: llama4:scout
-  validator: llama4:scout
+  task1: llama3.2
+  validator: llama3.2
   # Other available models on this machine:
   # llama3.2-vision:11b-instruct-q8_0  (vision model)
 

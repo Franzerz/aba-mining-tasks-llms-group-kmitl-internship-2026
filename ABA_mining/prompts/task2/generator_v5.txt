@@ -42,6 +42,8 @@ Topic=Location, Text="close to the airport, to very clean beach"
 Topic=Facility, Text="New, comfortable apartments"
   → new_hotel, comfortable_hotel
 
+Important override: if Topic=Facility and the text mentions apartment/apartments, accommodation/accommodations, place, building, atmosphere, or property, the literal MUST end with hotel, not apartment(s)/accommodation. This is a hard rule.
+
 Topic=Price,    Text="Great value for money"
   → great_value_for_money
 

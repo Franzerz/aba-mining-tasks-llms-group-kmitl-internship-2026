@@ -1,0 +1,28 @@
+# Run the whole site with: docker compose up --build
+#
+# The mined data is mounted, not copied: most of ABA_mining is not in git, so an image carrying
+# it could not be rebuilt from a clone. Point ABA_MINING_DIR elsewhere if your checkout differs.
+
+services:
+  aba-app:
+    build: .
+    image: aba-graph-studio:latest
+    ports:
+      - "${ABA_PORT:-8000}:8000"
+    environment:
+      # Where the container looks for Dataset/ and outputs/. Matches the mount below.
+      ABA_MINING_ROOT: /data
+      # Optional: a local Ollama for the plain-English summary. host.docker.internal reaches
+      # the host from inside the container; the summary is skipped when nothing answers.
+      OLLAMA_HOST: ${OLLAMA_HOST:-http://host.docker.internal:11434}
+    volumes:
+      # Read-only: the app only ever reads the mined data.
+      - ${ABA_MINING_DIR:-../ABA_mining}:/data:ro
+      # Derived caches survive restarts, so a cold start does not re-read every gold workbook.
+      - aba-cache:/app/.cache
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+
+volumes:
+  aba-cache:

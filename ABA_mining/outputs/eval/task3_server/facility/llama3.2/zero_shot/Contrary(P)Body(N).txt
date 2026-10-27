@@ -1,0 +1,1522 @@
+======================================================================
+Test 1
+======================================================================
+   ID Vote LLM_Output Verify
+   10   No        Yes     FP
+10022   No         No     TN
+10134   No        Yes     FP
+10148   No        Yes     FP
+10169   No        Yes     FP
+10178   No        Yes     FP
+10245   No         No     TN
+10281   No        Yes     FP
+10300   No        Yes     FP
+10340   No        Yes     FP
+10392   No        Yes     FP
+10393   No         No     TN
+10404   No         No     TN
+ 1041   No        Yes     FP
+10416   No        Yes     FP
+10439   No         No     TN
+10469             Yes    NaN
+10477              No    NaN
+10486   No         No     TN
+ 1050   No        Yes     FP
+10502             Yes    NaN
+10511             Yes    NaN
+10533   No        Yes     FP
+10576   No         No     TN
+10588             Yes    NaN
+10618  Yes         No     FN
+10648   No        Yes     FP
+10685   No         No     TN
+  107  Yes        Yes     TP
+10707   No         No     TN
+10715   No        Yes     FP
+10739   No         No     TN
+10771   No        Yes     FP
+10797   No         No     TN
+10810             Yes    NaN
+10814   No        Yes     FP
+10835   No        Yes     FP
+10845   No         No     TN
+ 1085   No        Yes     FP
+10869              No    NaN
+10928             Yes    NaN
+10943   No         No     TN
+10961   No         No     TN
+10973   No         No     TN
+10976   No         No     TN
+10981   No        Yes     FP
+11005   No         No     TN
+11033             Yes    NaN
+ 1105   No        Yes     FP
+11063   No         No     TN
+11088             Yes    NaN
+ 1114   No        Yes     FP
+11146   No         No     TN
+11150   No         No     TN
+11170   No        Yes     FP
+11175   No        Yes     FP
+11200  Yes         No     FN
+11217   No        Yes     FP
+ 1123  Yes        Yes     TP
+11264   No         No     TN
+11275   No         No     TN
+ 1128   No        Yes     FP
+11303   No        Yes     FP
+11322   No        Yes     FP
+ 1134   No         No     TN
+ 1138   No        Yes     FP
+ 1140   No        Yes     FP
+11413             Yes    NaN
+11439   No        Yes     FP
+11490   No         No     TN
+11491   No         No     TN
+11499   No         No     TN
+11527   No        Yes     FP
+11544   No        Yes     FP
+11562   No        Yes     FP
+11598   No        Yes     FP
+ 1161   No        Yes     FP
+ 1164   No        Yes     FP
+11681   No         No     TN
+ 1170   No        Yes     FP
+11732             Yes    NaN
+11735   No        Yes     FP
+11758   No        Yes     FP
+11763   No        Yes     FP
+11771  Yes        Yes     TP
+11792   No        Yes     FP
+  118  Yes        Yes     TP
+11809   No        Yes     FP
+11831   No         No     TN
+11852   No        Yes     FP
+ 1189   No        Yes     FP
+11932   No        Yes     FP
+11946   No        Yes     FP
+11947   No        Yes     FP
+11956   No        Yes     FP
+11960   No         No     TN
+11969   No         No     TN
+11992   No        Yes     FP
+ 1201   No        Yes     FP
+12044   No         No     TN
+12055   No         No     TN
+ 1233   No        Yes     FP
+ 1236   No        Yes     FP
+  129   No        Yes     FP
+ 1291   No         No     TN
+ 1292   No         No     TN
+ 1308   No         No     TN
+ 1313   No         No     TN
+ 1344   No        Yes     FP
+ 1404   No        Yes     FP
+ 1425   No         No     TN
+ 1490   No        Yes     FP
+ 1513   No         No     TN
+ 1520  Yes        Yes     TP
+ 1529  Yes        Yes     TP
+  153   No         No     TN
+ 1536   No        Yes     FP
+ 1546   No        Yes     FP
+ 1585   No        Yes     FP
+ 1589   No        Yes     FP
+  159   No         No     TN
+ 1605   No        Yes     FP
+ 1613   No        Yes     FP
+ 1639   No        Yes     FP
+ 1655   No        Yes     FP
+ 1675   No        Yes     FP
+ 1680   No        Yes     FP
+ 1685   No        Yes     FP
+ 1698   No         No     TN
+ 1744   No         No     TN
+ 1754   No        Yes     FP
+ 1772   No        Yes     FP
+ 1791   No        Yes     FP
+ 1797   No         No     TN
+ 1825   No        Yes     FP
+ 1828   No         No     TN
+ 1833   No         No     TN
+ 1877   No        Yes     FP
+  189   No        Yes     FP
+ 1892   No        Yes     FP
+ 1965   No         No     TN
+ 1983   No         No     TN
+ 2046   No        Yes     FP
+ 2061  Yes         No     FN
+ 2089  Yes        Yes     TP
+ 2104   No        Yes     FP
+ 2144   No        Yes     FP
+ 2145   No        Yes     FP
+ 2168  Yes        Yes     TP
+ 2171   No        Yes     FP
+ 2201  Yes         No     FN
+ 2267   No        Yes     FP
+ 2287   No        Yes     FP
+ 2288   No         No     TN
+ 2297   No         No     TN
+ 2341   No        Yes     FP
+  242   No         No     TN
+ 2427  Yes         No     FN
+ 2443   No        Yes     FP
+ 2505  Yes        Yes     TP
+ 2533  Yes         No     FN
+ 2537   No         No     TN
+ 2547   No        Yes     FP
+ 2548   No        Yes     FP
+ 2580   No         No     TN
+ 2585   No         No     TN
+ 2592   No        Yes     FP
+ 2609   No        Yes     FP
+ 2616  Yes        Yes     TP
+ 2622   No        Yes     FP
+ 2647   No         No     TN
+ 2648   No         No     TN
+ 2663  Yes        Yes     TP
+ 2665   No        Yes     FP
+ 2678   No        Yes     FP
+ 2698   No         No     TN
+ 2706   No        Yes     FP
+ 2725   No        Yes     FP
+ 2804  Yes         No     FN
+ 2901   No        Yes     FP
+ 2928  Yes        Yes     TP
+ 2939   No         No     TN
+ 3007   No        Yes     FP
+ 3045   No         No     TN
+ 3112   No        Yes     FP
+ 3117   No        Yes     FP
+ 3120   No         No     TN
+ 3140   No         No     TN
+ 3151   No        Yes     FP
+ 3165   No        Yes     FP
+  320   No        Yes     FP
+ 3258   No        Yes     FP
+ 3259   No        Yes     FP
+ 3270  Yes        Yes     TP
+ 3296   No        Yes     FP
+ 3336   No         No     TN
+ 3347   No        Yes     FP
+ 3433   No        Yes     FP
+ 3442   No         No     TN
+  345   No        Yes     FP
+ 3451   No         No     TN
+ 3457   No         No     TN
+ 3471   No        Yes     FP
+ 3484   No        Yes     FP
+ 3493   No        Yes     FP
+ 3503   No         No     TN
+ 3511   No        Yes     FP
+ 3528   No        Yes     FP
+ 3567   No        Yes     FP
+ 3583   No        Yes     FP
+ 3594   No        Yes     FP
+ 3599   No        Yes     FP
+   36   No        Yes     FP
+ 3609   No         No     TN
+ 3612   No         No     TN
+ 3645   No        Yes     FP
+ 3653   No         No     TN
+ 3658   No         No     TN
+ 3682   No        Yes     FP
+ 3729   No        Yes     FP
+ 3734   No        Yes     FP
+ 3751   No        Yes     FP
+ 3753   No        Yes     FP
+ 3771   No        Yes     FP
+ 3812   No        Yes     FP
+ 3815   No        Yes     FP
+ 3854  Yes         No     FN
+ 3873  Yes        Yes     TP
+ 3879  Yes        Yes     TP
+  388   No        Yes     FP
+ 3900   No         No     TN
+ 3911   No         No     TN
+ 3924   No         No     TN
+ 3947   No        Yes     FP
+ 3982   No         No     TN
+ 4003   No         No     TN
+ 4011   No         No     TN
+ 4013   No        Yes     FP
+ 4034   No         No     TN
+ 4041   No        Yes     FP
+ 4062   No         No     TN
+ 4066  Yes        Yes     TP
+  407   No        Yes     FP
+ 4074   No         No     TN
+ 4089  Yes        Yes     TP
+ 4093   No        Yes     FP
+  410  Yes         No     FN
+ 4115   No         No     TN
+ 4120   No        Yes     FP
+ 4273   No        Yes     FP
+ 4292   No        Yes     FP
+ 4305   No        Yes     FP
+ 4316   No        Yes     FP
+ 4326   No        Yes     FP
+ 4334  Yes        Yes     TP
+ 4340   No        Yes     FP
+ 4343  Yes        Yes     TP
+ 4346   No         No     TN
+  435   No         No     TN
+ 4352   No        Yes     FP
+ 4372   No        Yes     FP
+ 4375   No        Yes     FP
+ 4387   No        Yes     FP
+ 4423   No        Yes     FP
+ 4463   No         No     TN
+ 4507   No         No     TN
+ 4534   No        Yes     FP
+ 4553   No        Yes     FP
+ 4555   No        Yes     FP
+ 4558   No         No     TN
+ 4563  Yes        Yes     TP
+ 4564   No         No     TN
+ 4565   No        Yes     FP
+ 4574   No         No     TN
+ 4617   No         No     TN
+ 4670   No        Yes     FP
+ 4674   No        Yes     FP
+ 4742   No        Yes     FP
+ 4804  Yes        Yes     TP
+ 4809   No        Yes     FP
+ 4862   No        Yes     FP
+  489   No        Yes     FP
+ 4890   No        Yes     FP
+ 4906   No        Yes     FP
+ 4916   No         No     TN
+ 4957   No        Yes     FP
+ 5001   No         No     TN
+ 5039   No         No     TN
+ 5051   No        Yes     FP
+ 5108   No        Yes     FP
+ 5139   No        Yes     FP
+ 5148   No        Yes     FP
+  515  Yes        Yes     TP
+ 5156   No        Yes     FP
+ 5169   No        Yes     FP
+ 5181   No        Yes     FP
+ 5184   No        Yes     FP
+  521   No        Yes     FP
+  526  Yes         No     FN
+ 5311  Yes        Yes     TP
+ 5314  Yes        Yes     TP
+ 5379   No         No     TN
+   54   No        Yes     FP
+ 5414  Yes         No     FN
+ 5443   No        Yes     FP
+ 5465   No        Yes     FP
+ 5515  Yes        Yes     TP
+ 5540  Yes        Yes     TP
+ 5560   No        Yes     FP
+ 5574   No        Yes     FP
+ 5575   No         No     TN
+ 5618   No         No     TN
+ 5636   No         No     TN
+ 5719   No         No     TN
+ 5729   No         No     TN
+ 5754   No        Yes     FP
+ 5795   No         No     TN
+ 5805  Yes         No     FN
+ 5821   No        Yes     FP
+ 5863   No        Yes     FP
+ 5882  Yes        Yes     TP
+   59   No        Yes     FP
+  591  Yes        Yes     TP
+ 5926   No        Yes     FP
+ 5931   No         No     TN
+ 5948   No         No     TN
+ 5975   No         No     TN
+ 5978   No         No     TN
+ 6050   No        Yes     FP
+ 6055   No         No     TN
+ 6066   No        Yes     FP
+ 6119   No        Yes     FP
+ 6127   No        Yes     FP
+ 6202   No        Yes     FP
+ 6210  Yes        Yes     TP
+ 6217   No        Yes     FP
+ 6225   No        Yes     FP
+ 6228   No        Yes     FP
+ 6253   No         No     TN
+ 6268   No         No     TN
+ 6305   No        Yes     FP
+  635   No        Yes     FP
+ 6397   No        Yes     FP
+ 6483   No        Yes     FP
+ 6485   No        Yes     FP
+  652   No        Yes     FP
+ 6529   No        Yes     FP
+ 6538   No         No     TN
+  654   No        Yes     FP
+ 6544   No        Yes     FP
+ 6571  Yes        Yes     TP
+ 6573  Yes        Yes     TP
+ 6597  Yes        Yes     TP
+ 6616  Yes        Yes     TP
+ 6659   No        Yes     FP
+ 6670   No         No     TN
+ 6736   No         No     TN
+ 6746   No        Yes     FP
+ 6756   No        Yes     FP
+  686   No        Yes     FP
+ 6869   No         No     TN
+ 6874   No         No     TN
+ 6913   No        Yes     FP
+ 6917   No        Yes     FP
+ 6925   No         No     TN
+ 6931   No        Yes     FP
+ 6933   No        Yes     FP
+ 6940   No         No     TN
+ 7008   No         No     TN
+ 7020   No         No     TN
+ 7042   No        Yes     FP
+ 7063   No         No     TN
+  712   No         No     TN
+ 7124   No         No     TN
+ 7178   No        Yes     FP
+ 7180   No         No     TN
+  723   No        Yes     FP
+ 7240  Yes        Yes     TP
+ 7261  Yes         No     FN
+ 7351   No        Yes     FP
+ 7360   No         No     TN
+ 7398   No        Yes     FP
+ 7429   No        Yes     FP
+ 7434   No        Yes     FP
+ 7455   No         No     TN
+ 7492  Yes        Yes     TP
+ 7509   No        Yes     FP
+  751   No         No     TN
+ 7518   No        Yes     FP
+ 7528   No         No     TN
+ 7542   No        Yes     FP
+ 7574   No        Yes     FP
+ 7580   No        Yes     FP
+ 7652   No        Yes     FP
+ 7669   No        Yes     FP
+ 7712  Yes        Yes     TP
+  772   No         No     TN
+ 7745  Yes        Yes     TP
+ 7750   No        Yes     FP
+ 7788   No        Yes     FP
+ 7812   No         No     TN
+ 7887   No        Yes     FP
+ 7954   No        Yes     FP
+ 7957   No        Yes     FP
+ 7963   No         No     TN
+ 7974   No        Yes     FP
+ 8005   No        Yes     FP
+ 8006   No         No     TN
+ 8086   No        Yes     FP
+ 8180   No        Yes     FP
+ 8202   No        Yes     FP
+  822   No         No     TN
+ 8239   No        Yes     FP
+ 8280   No         No     TN
+ 8281   No         No     TN
+ 8289   No        Yes     FP
+  829   No         No     TN
+ 8318   No        Yes     FP
+ 8321   No        Yes     FP
+  833   No        Yes     FP
+ 8347   No         No     TN
+ 8349   No         No     TN
+ 8424   No        Yes     FP
+ 8480   No        Yes     FP
+ 8566   No        Yes     FP
+ 8646   No        Yes     FP
+ 8667   No         No     TN
+ 8670   No        Yes     FP
+ 8690   No        Yes     FP
+ 8702   No        Yes     FP
+ 8728   No         No     TN
+ 8752   No        Yes     FP
+ 8786   No        Yes     FP
+ 8787   No        Yes     FP
+ 8798   No        Yes     FP
+ 8809  Yes        Yes     TP
+ 8831  Yes        Yes     TP
+ 8835             Yes    NaN
+ 8836             Yes    NaN
+ 8838  Yes        Yes     TP
+ 8857   No        Yes     FP
+  888   No         No     TN
+ 8884   No         No     TN
+ 8901              No    NaN
+ 8929   No         No     TN
+ 8936   No         No     TN
+ 8939   No         No     TN
+ 9008             Yes    NaN
+ 9017   No         No     TN
+ 9039  Yes        Yes     TP
+ 9045   No        Yes     FP
+ 9053              No    NaN
+ 9065             Yes    NaN
+ 9076             Yes    NaN
+ 9087   No        Yes     FP
+ 9106  Yes        Yes     TP
+ 9126   No         No     TN
+  917  Yes        Yes     TP
+ 9174   No        Yes     FP
+ 9190   No         No     TN
+ 9196   No        Yes     FP
+ 9198   No         No     TN
+ 9225             Yes    NaN
+ 9261   No        Yes     FP
+ 9293   No        Yes     FP
+ 9296   No        Yes     FP
+  932   No         No     TN
+ 9334   No        Yes     FP
+ 9356   No        Yes     FP
+  937   No        Yes     FP
+ 9441   No        Yes     FP
+ 9460   No        Yes     FP
+ 9486   No         No     TN
+ 9490   No        Yes     FP
+  950   No        Yes     FP
+ 9544   No        Yes     FP
+ 9561  Yes        Yes     TP
+ 9563   No        Yes     FP
+ 9572   No         No     TN
+ 9578   No        Yes     FP
+  959   No        Yes     FP
+  961   No         No     TN
+ 9639   No         No     TN
+ 9642  Yes        Yes     TP
+  965   No         No     TN
+ 9655             Yes    NaN
+ 9675   No        Yes     FP
+ 9741   No        Yes     FP
+ 9750  Yes        Yes     TP
+ 9764   No        Yes     FP
+ 9772   No         No     TN
+ 9814   No        Yes     FP
+ 9864              No    NaN
+ 9892   No        Yes     FP
+ 9910  Yes        Yes     TP
+ 9939  Yes        Yes     TP
+  994   No        Yes     FP
+ 9978   No        Yes     FP
+ 9981   No        Yes     FP
+  999  Yes        Yes     TP
+
+======================================================================
+Test 2
+======================================================================
+   ID Vote LLM_Output Verify
+   10   No        Yes     FP
+10022   No         No     TN
+10134   No        Yes     FP
+10148   No        Yes     FP
+10169   No        Yes     FP
+10178   No        Yes     FP
+10245   No         No     TN
+10281   No        Yes     FP
+10300   No        Yes     FP
+10340   No        Yes     FP
+10392   No        Yes     FP
+10393   No         No     TN
+10404   No         No     TN
+ 1041   No        Yes     FP
+10416   No        Yes     FP
+10439   No         No     TN
+10469             Yes    NaN
+10477              No    NaN
+10486   No         No     TN
+ 1050   No        Yes     FP
+10502             Yes    NaN
+10511             Yes    NaN
+10533   No        Yes     FP
+10576   No         No     TN
+10588             Yes    NaN
+10618  Yes         No     FN
+10648   No        Yes     FP
+10685   No         No     TN
+  107  Yes         No     FN
+10707   No         No     TN
+10715   No        Yes     FP
+10739   No         No     TN
+10771   No        Yes     FP
+10797   No         No     TN
+10810             Yes    NaN
+10814   No        Yes     FP
+10835   No        Yes     FP
+10845   No         No     TN
+ 1085   No        Yes     FP
+10869              No    NaN
+10928             Yes    NaN
+10943   No         No     TN
+10961   No         No     TN
+10973   No         No     TN
+10976   No         No     TN
+10981   No        Yes     FP
+11005   No         No     TN
+11033             Yes    NaN
+ 1105   No        Yes     FP
+11063   No         No     TN
+11088             Yes    NaN
+ 1114   No        Yes     FP
+11146   No         No     TN
+11150   No         No     TN
+11170   No        Yes     FP
+11175   No        Yes     FP
+11200  Yes         No     FN
+11217   No        Yes     FP
+ 1123  Yes        Yes     TP
+11264   No         No     TN
+11275   No         No     TN
+ 1128   No        Yes     FP
+11303   No        Yes     FP
+11322   No        Yes     FP
+ 1134   No         No     TN
+ 1138   No        Yes     FP
+ 1140   No        Yes     FP
+11413             Yes    NaN
+11439   No        Yes     FP
+11490   No         No     TN
+11491   No         No     TN
+11499   No         No     TN
+11527   No        Yes     FP
+11544   No        Yes     FP
+11562   No        Yes     FP
+11598   No        Yes     FP
+ 1161   No        Yes     FP
+ 1164   No        Yes     FP
+11681   No         No     TN
+ 1170   No        Yes     FP
+11732             Yes    NaN
+11735   No        Yes     FP
+11758   No        Yes     FP
+11763   No        Yes     FP
+11771  Yes        Yes     TP
+11792   No        Yes     FP
+  118  Yes        Yes     TP
+11809   No        Yes     FP
+11831   No         No     TN
+11852   No        Yes     FP
+ 1189   No        Yes     FP
+11932   No        Yes     FP
+11946   No        Yes     FP
+11947   No        Yes     FP
+11956   No        Yes     FP
+11960   No         No     TN
+11969   No         No     TN
+11992   No        Yes     FP
+ 1201   No        Yes     FP
+12044   No         No     TN
+12055   No         No     TN
+ 1233   No        Yes     FP
+ 1236   No        Yes     FP
+  129   No        Yes     FP
+ 1291   No         No     TN
+ 1292   No         No     TN
+ 1308   No         No     TN
+ 1313   No         No     TN
+ 1344   No        Yes     FP
+ 1404   No        Yes     FP
+ 1425   No         No     TN
+ 1490   No        Yes     FP
+ 1513   No         No     TN
+ 1520  Yes        Yes     TP
+ 1529  Yes        Yes     TP
+  153   No         No     TN
+ 1536   No        Yes     FP
+ 1546   No        Yes     FP
+ 1585   No        Yes     FP
+ 1589   No        Yes     FP
+  159   No         No     TN
+ 1605   No        Yes     FP
+ 1613   No        Yes     FP
+ 1639   No        Yes     FP
+ 1655   No        Yes     FP
+ 1675   No        Yes     FP
+ 1680   No        Yes     FP
+ 1685   No        Yes     FP
+ 1698   No         No     TN
+ 1744   No         No     TN
+ 1754   No        Yes     FP
+ 1772   No        Yes     FP
+ 1791   No        Yes     FP
+ 1797   No         No     TN
+ 1825   No        Yes     FP
+ 1828   No         No     TN
+ 1833   No         No     TN
+ 1877   No        Yes     FP
+  189   No        Yes     FP
+ 1892   No        Yes     FP
+ 1965   No         No     TN
+ 1983   No         No     TN
+ 2046   No        Yes     FP
+ 2061  Yes         No     FN
+ 2089  Yes        Yes     TP
+ 2104   No        Yes     FP
+ 2144   No        Yes     FP
+ 2145   No        Yes     FP
+ 2168  Yes        Yes     TP
+ 2171   No        Yes     FP
+ 2201  Yes         No     FN
+ 2267   No        Yes     FP
+ 2287   No        Yes     FP
+ 2288   No         No     TN
+ 2297   No         No     TN
+ 2341   No        Yes     FP
+  242   No         No     TN
+ 2427  Yes         No     FN
+ 2443   No        Yes     FP
+ 2505  Yes        Yes     TP
+ 2533  Yes         No     FN
+ 2537   No         No     TN
+ 2547   No        Yes     FP
+ 2548   No        Yes     FP
+ 2580   No         No     TN
+ 2585   No         No     TN
+ 2592   No        Yes     FP
+ 2609   No        Yes     FP
+ 2616  Yes        Yes     TP
+ 2622   No        Yes     FP
+ 2647   No         No     TN
+ 2648   No         No     TN
+ 2663  Yes        Yes     TP
+ 2665   No        Yes     FP
+ 2678   No        Yes     FP
+ 2698   No         No     TN
+ 2706   No        Yes     FP
+ 2725   No        Yes     FP
+ 2804  Yes         No     FN
+ 2901   No        Yes     FP
+ 2928  Yes        Yes     TP
+ 2939   No         No     TN
+ 3007   No        Yes     FP
+ 3045   No         No     TN
+ 3112   No        Yes     FP
+ 3117   No        Yes     FP
+ 3120   No         No     TN
+ 3140   No         No     TN
+ 3151   No        Yes     FP
+ 3165   No        Yes     FP
+  320   No        Yes     FP
+ 3258   No        Yes     FP
+ 3259   No        Yes     FP
+ 3270  Yes        Yes     TP
+ 3296   No        Yes     FP
+ 3336   No         No     TN
+ 3347   No        Yes     FP
+ 3433   No        Yes     FP
+ 3442   No         No     TN
+  345   No        Yes     FP
+ 3451   No         No     TN
+ 3457   No         No     TN
+ 3471   No        Yes     FP
+ 3484   No        Yes     FP
+ 3493   No        Yes     FP
+ 3503   No         No     TN
+ 3511   No        Yes     FP
+ 3528   No        Yes     FP
+ 3567   No        Yes     FP
+ 3583   No        Yes     FP
+ 3594   No        Yes     FP
+ 3599   No        Yes     FP
+   36   No        Yes     FP
+ 3609   No         No     TN
+ 3612   No         No     TN
+ 3645   No        Yes     FP
+ 3653   No         No     TN
+ 3658   No         No     TN
+ 3682   No        Yes     FP
+ 3729   No        Yes     FP
+ 3734   No        Yes     FP
+ 3751   No        Yes     FP
+ 3753   No        Yes     FP
+ 3771   No        Yes     FP
+ 3812   No        Yes     FP
+ 3815   No        Yes     FP
+ 3854  Yes         No     FN
+ 3873  Yes        Yes     TP
+ 3879  Yes        Yes     TP
+  388   No        Yes     FP
+ 3900   No         No     TN
+ 3911   No         No     TN
+ 3924   No         No     TN
+ 3947   No        Yes     FP
+ 3982   No         No     TN
+ 4003   No         No     TN
+ 4011   No         No     TN
+ 4013   No        Yes     FP
+ 4034   No         No     TN
+ 4041   No        Yes     FP
+ 4062   No         No     TN
+ 4066  Yes        Yes     TP
+  407   No        Yes     FP
+ 4074   No         No     TN
+ 4089  Yes        Yes     TP
+ 4093   No        Yes     FP
+  410  Yes         No     FN
+ 4115   No         No     TN
+ 4120   No        Yes     FP
+ 4273   No        Yes     FP
+ 4292   No        Yes     FP
+ 4305   No        Yes     FP
+ 4316   No        Yes     FP
+ 4326   No        Yes     FP
+ 4334  Yes        Yes     TP
+ 4340   No        Yes     FP
+ 4343  Yes        Yes     TP
+ 4346   No         No     TN
+  435   No         No     TN
+ 4352   No        Yes     FP
+ 4372   No        Yes     FP
+ 4375   No        Yes     FP
+ 4387   No        Yes     FP
+ 4423   No        Yes     FP
+ 4463   No         No     TN
+ 4507   No         No     TN
+ 4534   No        Yes     FP
+ 4553   No        Yes     FP
+ 4555   No        Yes     FP
+ 4558   No         No     TN
+ 4563  Yes        Yes     TP
+ 4564   No         No     TN
+ 4565   No        Yes     FP
+ 4574   No         No     TN
+ 4617   No         No     TN
+ 4670   No        Yes     FP
+ 4674   No        Yes     FP
+ 4742   No        Yes     FP
+ 4804  Yes        Yes     TP
+ 4809   No        Yes     FP
+ 4862   No        Yes     FP
+  489   No        Yes     FP
+ 4890   No        Yes     FP
+ 4906   No        Yes     FP
+ 4916   No         No     TN
+ 4957   No        Yes     FP
+ 5001   No         No     TN
+ 5039   No         No     TN
+ 5051   No        Yes     FP
+ 5108   No        Yes     FP
+ 5139   No        Yes     FP
+ 5148   No        Yes     FP
+  515  Yes        Yes     TP
+ 5156   No        Yes     FP
+ 5169   No        Yes     FP
+ 5181   No        Yes     FP
+ 5184   No        Yes     FP
+  521   No        Yes     FP
+  526  Yes         No     FN
+ 5311  Yes        Yes     TP
+ 5314  Yes        Yes     TP
+ 5379   No         No     TN
+   54   No        Yes     FP
+ 5414  Yes         No     FN
+ 5443   No        Yes     FP
+ 5465   No        Yes     FP
+ 5515  Yes        Yes     TP
+ 5540  Yes        Yes     TP
+ 5560   No        Yes     FP
+ 5574   No        Yes     FP
+ 5575   No         No     TN
+ 5618   No         No     TN
+ 5636   No         No     TN
+ 5719   No         No     TN
+ 5729   No         No     TN
+ 5754   No        Yes     FP
+ 5795   No         No     TN
+ 5805  Yes         No     FN
+ 5821   No        Yes     FP
+ 5863   No        Yes     FP
+ 5882  Yes        Yes     TP
+   59   No        Yes     FP
+  591  Yes        Yes     TP
+ 5926   No        Yes     FP
+ 5931   No         No     TN
+ 5948   No         No     TN
+ 5975   No         No     TN
+ 5978   No         No     TN
+ 6050   No        Yes     FP
+ 6055   No         No     TN
+ 6066   No        Yes     FP
+ 6119   No        Yes     FP
+ 6127   No        Yes     FP
+ 6202   No        Yes     FP
+ 6210  Yes        Yes     TP
+ 6217   No        Yes     FP
+ 6225   No        Yes     FP
+ 6228   No        Yes     FP
+ 6253   No         No     TN
+ 6268   No         No     TN
+ 6305   No        Yes     FP
+  635   No        Yes     FP
+ 6397   No        Yes     FP
+ 6483   No        Yes     FP
+ 6485   No        Yes     FP
+  652   No        Yes     FP
+ 6529   No        Yes     FP
+ 6538   No         No     TN
+  654   No        Yes     FP
+ 6544   No        Yes     FP
+ 6571  Yes        Yes     TP
+ 6573  Yes        Yes     TP
+ 6597  Yes        Yes     TP
+ 6616  Yes        Yes     TP
+ 6659   No        Yes     FP
+ 6670   No         No     TN
+ 6736   No         No     TN
+ 6746   No        Yes     FP
+ 6756   No        Yes     FP
+  686   No        Yes     FP
+ 6869   No         No     TN
+ 6874   No         No     TN
+ 6913   No        Yes     FP
+ 6917   No        Yes     FP
+ 6925   No         No     TN
+ 6931   No        Yes     FP
+ 6933   No        Yes     FP
+ 6940   No         No     TN
+ 7008   No         No     TN
+ 7020   No         No     TN
+ 7042   No        Yes     FP
+ 7063   No         No     TN
+  712   No         No     TN
+ 7124   No         No     TN
+ 7178   No        Yes     FP
+ 7180   No         No     TN
+  723   No        Yes     FP
+ 7240  Yes        Yes     TP
+ 7261  Yes         No     FN
+ 7351   No        Yes     FP
+ 7360   No         No     TN
+ 7398   No        Yes     FP
+ 7429   No        Yes     FP
+ 7434   No        Yes     FP
+ 7455   No         No     TN
+ 7492  Yes        Yes     TP
+ 7509   No        Yes     FP
+  751   No         No     TN
+ 7518   No        Yes     FP
+ 7528   No         No     TN
+ 7542   No        Yes     FP
+ 7574   No        Yes     FP
+ 7580   No        Yes     FP
+ 7652   No        Yes     FP
+ 7669   No        Yes     FP
+ 7712  Yes        Yes     TP
+  772   No         No     TN
+ 7745  Yes        Yes     TP
+ 7750   No        Yes     FP
+ 7788   No        Yes     FP
+ 7812   No         No     TN
+ 7887   No        Yes     FP
+ 7954   No        Yes     FP
+ 7957   No        Yes     FP
+ 7963   No         No     TN
+ 7974   No        Yes     FP
+ 8005   No        Yes     FP
+ 8006   No         No     TN
+ 8086   No        Yes     FP
+ 8180   No        Yes     FP
+ 8202   No        Yes     FP
+  822   No         No     TN
+ 8239   No        Yes     FP
+ 8280   No         No     TN
+ 8281   No         No     TN
+ 8289   No        Yes     FP
+  829   No         No     TN
+ 8318   No        Yes     FP
+ 8321   No        Yes     FP
+  833   No        Yes     FP
+ 8347   No         No     TN
+ 8349   No         No     TN
+ 8424   No        Yes     FP
+ 8480   No        Yes     FP
+ 8566   No        Yes     FP
+ 8646   No        Yes     FP
+ 8667   No         No     TN
+ 8670   No        Yes     FP
+ 8690   No        Yes     FP
+ 8702   No        Yes     FP
+ 8728   No         No     TN
+ 8752   No        Yes     FP
+ 8786   No        Yes     FP
+ 8787   No        Yes     FP
+ 8798   No        Yes     FP
+ 8809  Yes        Yes     TP
+ 8831  Yes        Yes     TP
+ 8835             Yes    NaN
+ 8836             Yes    NaN
+ 8838  Yes        Yes     TP
+ 8857   No        Yes     FP
+  888   No         No     TN
+ 8884   No         No     TN
+ 8901              No    NaN
+ 8929   No         No     TN
+ 8936   No         No     TN
+ 8939   No         No     TN
+ 9008             Yes    NaN
+ 9017   No         No     TN
+ 9039  Yes        Yes     TP
+ 9045   No        Yes     FP
+ 9053              No    NaN
+ 9065             Yes    NaN
+ 9076             Yes    NaN
+ 9087   No        Yes     FP
+ 9106  Yes        Yes     TP
+ 9126   No         No     TN
+  917  Yes        Yes     TP
+ 9174   No        Yes     FP
+ 9190   No         No     TN
+ 9196   No        Yes     FP
+ 9198   No         No     TN
+ 9225             Yes    NaN
+ 9261   No        Yes     FP
+ 9293   No        Yes     FP
+ 9296   No        Yes     FP
+  932   No         No     TN
+ 9334   No        Yes     FP
+ 9356   No        Yes     FP
+  937   No        Yes     FP
+ 9441   No        Yes     FP
+ 9460   No        Yes     FP
+ 9486   No         No     TN
+ 9490   No        Yes     FP
+  950   No        Yes     FP
+ 9544   No        Yes     FP
+ 9561  Yes        Yes     TP
+ 9563   No        Yes     FP
+ 9572   No         No     TN
+ 9578   No        Yes     FP
+  959   No        Yes     FP
+  961   No         No     TN
+ 9639   No         No     TN
+ 9642  Yes        Yes     TP
+  965   No         No     TN
+ 9655             Yes    NaN
+ 9675   No        Yes     FP
+ 9741   No        Yes     FP
+ 9750  Yes        Yes     TP
+ 9764   No        Yes     FP
+ 9772   No         No     TN
+ 9814   No        Yes     FP
+ 9864              No    NaN
+ 9892   No        Yes     FP
+ 9910  Yes        Yes     TP
+ 9939  Yes        Yes     TP
+  994   No        Yes     FP
+ 9978   No        Yes     FP
+ 9981   No        Yes     FP
+  999  Yes        Yes     TP
+
+======================================================================
+Test 3
+======================================================================
+   ID Vote LLM_Output Verify
+   10   No        Yes     FP
+10022   No         No     TN
+10134   No        Yes     FP
+10148   No        Yes     FP
+10169   No        Yes     FP
+10178   No        Yes     FP
+10245   No         No     TN
+10281   No        Yes     FP
+10300   No        Yes     FP
+10340   No        Yes     FP
+10392   No        Yes     FP
+10393   No         No     TN
+10404   No         No     TN
+ 1041   No        Yes     FP
+10416   No        Yes     FP
+10439   No         No     TN
+10469             Yes    NaN
+10477              No    NaN
+10486   No         No     TN
+ 1050   No        Yes     FP
+10502             Yes    NaN
+10511             Yes    NaN
+10533   No        Yes     FP
+10576   No         No     TN
+10588             Yes    NaN
+10618  Yes         No     FN
+10648   No        Yes     FP
+10685   No         No     TN
+  107  Yes         No     FN
+10707   No         No     TN
+10715   No        Yes     FP
+10739   No         No     TN
+10771   No        Yes     FP
+10797   No         No     TN
+10810             Yes    NaN
+10814   No        Yes     FP
+10835   No        Yes     FP
+10845   No         No     TN
+ 1085   No        Yes     FP
+10869              No    NaN
+10928             Yes    NaN
+10943   No         No     TN
+10961   No         No     TN
+10973   No         No     TN
+10976   No         No     TN
+10981   No        Yes     FP
+11005   No         No     TN
+11033             Yes    NaN
+ 1105   No        Yes     FP
+11063   No         No     TN
+11088             Yes    NaN
+ 1114   No        Yes     FP
+11146   No         No     TN
+11150   No         No     TN
+11170   No        Yes     FP
+11175   No        Yes     FP
+11200  Yes         No     FN
+11217   No        Yes     FP
+ 1123  Yes        Yes     TP
+11264   No         No     TN
+11275   No         No     TN
+ 1128   No        Yes     FP
+11303   No        Yes     FP
+11322   No        Yes     FP
+ 1134   No         No     TN
+ 1138   No        Yes     FP
+ 1140   No        Yes     FP
+11413             Yes    NaN
+11439   No        Yes     FP
+11490   No         No     TN
+11491   No         No     TN
+11499   No         No     TN
+11527   No        Yes     FP
+11544   No        Yes     FP
+11562   No        Yes     FP
+11598   No        Yes     FP
+ 1161   No        Yes     FP
+ 1164   No        Yes     FP
+11681   No         No     TN
+ 1170   No        Yes     FP
+11732             Yes    NaN
+11735   No        Yes     FP
+11758   No        Yes     FP
+11763   No        Yes     FP
+11771  Yes        Yes     TP
+11792   No        Yes     FP
+  118  Yes        Yes     TP
+11809   No        Yes     FP
+11831   No         No     TN
+11852   No        Yes     FP
+ 1189   No        Yes     FP
+11932   No        Yes     FP
+11946   No        Yes     FP
+11947   No        Yes     FP
+11956   No        Yes     FP
+11960   No         No     TN
+11969   No         No     TN
+11992   No        Yes     FP
+ 1201   No        Yes     FP
+12044   No         No     TN
+12055   No         No     TN
+ 1233   No        Yes     FP
+ 1236   No        Yes     FP
+  129   No        Yes     FP
+ 1291   No         No     TN
+ 1292   No         No     TN
+ 1308   No         No     TN
+ 1313   No         No     TN
+ 1344   No        Yes     FP
+ 1404   No        Yes     FP
+ 1425   No         No     TN
+ 1490   No        Yes     FP
+ 1513   No         No     TN
+ 1520  Yes        Yes     TP
+ 1529  Yes        Yes     TP
+  153   No         No     TN
+ 1536   No        Yes     FP
+ 1546   No        Yes     FP
+ 1585   No        Yes     FP
+ 1589   No        Yes     FP
+  159   No         No     TN
+ 1605   No        Yes     FP
+ 1613   No        Yes     FP
+ 1639   No        Yes     FP
+ 1655   No        Yes     FP
+ 1675   No        Yes     FP
+ 1680   No        Yes     FP
+ 1685   No        Yes     FP
+ 1698   No         No     TN
+ 1744   No         No     TN
+ 1754   No        Yes     FP
+ 1772   No        Yes     FP
+ 1791   No        Yes     FP
+ 1797   No         No     TN
+ 1825   No        Yes     FP
+ 1828   No         No     TN
+ 1833   No         No     TN
+ 1877   No        Yes     FP
+  189   No        Yes     FP
+ 1892   No        Yes     FP
+ 1965   No         No     TN
+ 1983   No         No     TN
+ 2046   No        Yes     FP
+ 2061  Yes         No     FN
+ 2089  Yes        Yes     TP
+ 2104   No        Yes     FP
+ 2144   No        Yes     FP
+ 2145   No        Yes     FP
+ 2168  Yes        Yes     TP
+ 2171   No        Yes     FP
+ 2201  Yes         No     FN
+ 2267   No        Yes     FP
+ 2287   No        Yes     FP
+ 2288   No         No     TN
+ 2297   No         No     TN
+ 2341   No        Yes     FP
+  242   No         No     TN
+ 2427  Yes         No     FN
+ 2443   No        Yes     FP
+ 2505  Yes        Yes     TP
+ 2533  Yes         No     FN
+ 2537   No         No     TN
+ 2547   No        Yes     FP
+ 2548   No        Yes     FP
+ 2580   No         No     TN
+ 2585   No         No     TN
+ 2592   No        Yes     FP
+ 2609   No        Yes     FP
+ 2616  Yes        Yes     TP
+ 2622   No        Yes     FP
+ 2647   No         No     TN
+ 2648   No         No     TN
+ 2663  Yes        Yes     TP
+ 2665   No        Yes     FP
+ 2678   No        Yes     FP
+ 2698   No         No     TN
+ 2706   No        Yes     FP
+ 2725   No        Yes     FP
+ 2804  Yes         No     FN
+ 2901   No        Yes     FP
+ 2928  Yes        Yes     TP
+ 2939   No         No     TN
+ 3007   No        Yes     FP
+ 3045   No         No     TN
+ 3112   No        Yes     FP
+ 3117   No        Yes     FP
+ 3120   No         No     TN
+ 3140   No         No     TN
+ 3151   No        Yes     FP
+ 3165   No        Yes     FP
+  320   No        Yes     FP
+ 3258   No        Yes     FP
+ 3259   No        Yes     FP
+ 3270  Yes        Yes     TP
+ 3296   No        Yes     FP
+ 3336   No         No     TN
+ 3347   No        Yes     FP
+ 3433   No        Yes     FP
+ 3442   No         No     TN
+  345   No        Yes     FP
+ 3451   No         No     TN
+ 3457   No         No     TN
+ 3471   No        Yes     FP
+ 3484   No        Yes     FP
+ 3493   No        Yes     FP
+ 3503   No         No     TN
+ 3511   No        Yes     FP
+ 3528   No        Yes     FP
+ 3567   No        Yes     FP
+ 3583   No        Yes     FP
+ 3594   No        Yes     FP
+ 3599   No        Yes     FP
+   36   No        Yes     FP
+ 3609   No         No     TN
+ 3612   No         No     TN
+ 3645   No        Yes     FP
+ 3653   No         No     TN
+ 3658   No         No     TN
+ 3682   No        Yes     FP
+ 3729   No        Yes     FP
+ 3734   No        Yes     FP
+ 3751   No        Yes     FP
+ 3753   No        Yes     FP
+ 3771   No        Yes     FP
+ 3812   No        Yes     FP
+ 3815   No        Yes     FP
+ 3854  Yes         No     FN
+ 3873  Yes        Yes     TP
+ 3879  Yes        Yes     TP
+  388   No        Yes     FP
+ 3900   No         No     TN
+ 3911   No         No     TN
+ 3924   No         No     TN
+ 3947   No        Yes     FP
+ 3982   No         No     TN
+ 4003   No         No     TN
+ 4011   No         No     TN
+ 4013   No        Yes     FP
+ 4034   No         No     TN
+ 4041   No        Yes     FP
+ 4062   No         No     TN
+ 4066  Yes        Yes     TP
+  407   No        Yes     FP
+ 4074   No         No     TN
+ 4089  Yes        Yes     TP
+ 4093   No        Yes     FP
+  410  Yes         No     FN
+ 4115   No         No     TN
+ 4120   No        Yes     FP
+ 4273   No        Yes     FP
+ 4292   No        Yes     FP
+ 4305   No        Yes     FP
+ 4316   No        Yes     FP
+ 4326   No        Yes     FP
+ 4334  Yes        Yes     TP
+ 4340   No        Yes     FP
+ 4343  Yes        Yes     TP
+ 4346   No         No     TN
+  435   No         No     TN
+ 4352   No        Yes     FP
+ 4372   No        Yes     FP
+ 4375   No        Yes     FP
+ 4387   No        Yes     FP
+ 4423   No        Yes     FP
+ 4463   No         No     TN
+ 4507   No         No     TN
+ 4534   No        Yes     FP
+ 4553   No        Yes     FP
+ 4555   No        Yes     FP
+ 4558   No         No     TN
+ 4563  Yes        Yes     TP
+ 4564   No         No     TN
+ 4565   No        Yes     FP
+ 4574   No         No     TN
+ 4617   No         No     TN
+ 4670   No        Yes     FP
+ 4674   No        Yes     FP
+ 4742   No        Yes     FP
+ 4804  Yes        Yes     TP
+ 4809   No        Yes     FP
+ 4862   No        Yes     FP
+  489   No        Yes     FP
+ 4890   No        Yes     FP
+ 4906   No        Yes     FP
+ 4916   No         No     TN
+ 4957   No        Yes     FP
+ 5001   No         No     TN
+ 5039   No         No     TN
+ 5051   No        Yes     FP
+ 5108   No        Yes     FP
+ 5139   No        Yes     FP
+ 5148   No        Yes     FP
+  515  Yes        Yes     TP
+ 5156   No        Yes     FP
+ 5169   No        Yes     FP
+ 5181   No        Yes     FP
+ 5184   No        Yes     FP
+  521   No        Yes     FP
+  526  Yes         No     FN
+ 5311  Yes        Yes     TP
+ 5314  Yes        Yes     TP
+ 5379   No         No     TN
+   54   No        Yes     FP
+ 5414  Yes         No     FN
+ 5443   No        Yes     FP
+ 5465   No        Yes     FP
+ 5515  Yes        Yes     TP
+ 5540  Yes        Yes     TP
+ 5560   No        Yes     FP
+ 5574   No        Yes     FP
+ 5575   No         No     TN
+ 5618   No         No     TN
+ 5636   No         No     TN
+ 5719   No         No     TN
+ 5729   No         No     TN
+ 5754   No        Yes     FP
+ 5795   No         No     TN
+ 5805  Yes         No     FN
+ 5821   No        Yes     FP
+ 5863   No        Yes     FP
+ 5882  Yes        Yes     TP
+   59   No        Yes     FP
+  591  Yes        Yes     TP
+ 5926   No        Yes     FP
+ 5931   No         No     TN
+ 5948   No         No     TN
+ 5975   No         No     TN
+ 5978   No         No     TN
+ 6050   No        Yes     FP
+ 6055   No         No     TN
+ 6066   No        Yes     FP
+ 6119   No        Yes     FP
+ 6127   No        Yes     FP
+ 6202   No        Yes     FP
+ 6210  Yes        Yes     TP
+ 6217   No        Yes     FP
+ 6225   No        Yes     FP
+ 6228   No        Yes     FP
+ 6253   No         No     TN
+ 6268   No         No     TN
+ 6305   No        Yes     FP
+  635   No        Yes     FP
+ 6397   No        Yes     FP
+ 6483   No        Yes     FP
+ 6485   No        Yes     FP
+  652   No        Yes     FP
+ 6529   No        Yes     FP
+ 6538   No         No     TN
+  654   No        Yes     FP
+ 6544   No        Yes     FP
+ 6571  Yes        Yes     TP
+ 6573  Yes        Yes     TP
+ 6597  Yes        Yes     TP
+ 6616  Yes        Yes     TP
+ 6659   No        Yes     FP
+ 6670   No         No     TN
+ 6736   No         No     TN
+ 6746   No        Yes     FP
+ 6756   No        Yes     FP
+  686   No        Yes     FP
+ 6869   No         No     TN
+ 6874   No         No     TN
+ 6913   No        Yes     FP
+ 6917   No        Yes     FP
+ 6925   No         No     TN
+ 6931   No        Yes     FP
+ 6933   No        Yes     FP
+ 6940   No         No     TN
+ 7008   No         No     TN
+ 7020   No         No     TN
+ 7042   No        Yes     FP
+ 7063   No         No     TN
+  712   No         No     TN
+ 7124   No         No     TN
+ 7178   No        Yes     FP
+ 7180   No         No     TN
+  723   No        Yes     FP
+ 7240  Yes        Yes     TP
+ 7261  Yes         No     FN
+ 7351   No        Yes     FP
+ 7360   No         No     TN
+ 7398   No        Yes     FP
+ 7429   No        Yes     FP
+ 7434   No        Yes     FP
+ 7455   No         No     TN
+ 7492  Yes        Yes     TP
+ 7509   No        Yes     FP
+  751   No         No     TN
+ 7518   No        Yes     FP
+ 7528   No         No     TN
+ 7542   No        Yes     FP
+ 7574   No        Yes     FP
+ 7580   No        Yes     FP
+ 7652   No        Yes     FP
+ 7669   No        Yes     FP
+ 7712  Yes        Yes     TP
+  772   No         No     TN
+ 7745  Yes        Yes     TP
+ 7750   No        Yes     FP
+ 7788   No        Yes     FP
+ 7812   No         No     TN
+ 7887   No        Yes     FP
+ 7954   No        Yes     FP
+ 7957   No        Yes     FP
+ 7963   No         No     TN
+ 7974   No        Yes     FP
+ 8005   No        Yes     FP
+ 8006   No         No     TN
+ 8086   No        Yes     FP
+ 8180   No        Yes     FP
+ 8202   No        Yes     FP
+  822   No         No     TN
+ 8239   No        Yes     FP
+ 8280   No         No     TN
+ 8281   No         No     TN
+ 8289   No        Yes     FP
+  829   No         No     TN
+ 8318   No        Yes     FP
+ 8321   No        Yes     FP
+  833   No        Yes     FP
+ 8347   No         No     TN
+ 8349   No         No     TN
+ 8424   No        Yes     FP
+ 8480   No        Yes     FP
+ 8566   No        Yes     FP
+ 8646   No        Yes     FP
+ 8667   No         No     TN
+ 8670   No        Yes     FP
+ 8690   No        Yes     FP
+ 8702   No        Yes     FP
+ 8728   No         No     TN
+ 8752   No        Yes     FP
+ 8786   No        Yes     FP
+ 8787   No        Yes     FP
+ 8798   No        Yes     FP
+ 8809  Yes        Yes     TP
+ 8831  Yes        Yes     TP
+ 8835             Yes    NaN
+ 8836             Yes    NaN
+ 8838  Yes        Yes     TP
+ 8857   No        Yes     FP
+  888   No         No     TN
+ 8884   No         No     TN
+ 8901              No    NaN
+ 8929   No         No     TN
+ 8936   No         No     TN
+ 8939   No         No     TN
+ 9008             Yes    NaN
+ 9017   No         No     TN
+ 9039  Yes        Yes     TP
+ 9045   No        Yes     FP
+ 9053              No    NaN
+ 9065             Yes    NaN
+ 9076             Yes    NaN
+ 9087   No        Yes     FP
+ 9106  Yes        Yes     TP
+ 9126   No         No     TN
+  917  Yes        Yes     TP
+ 9174   No        Yes     FP
+ 9190   No         No     TN
+ 9196   No        Yes     FP
+ 9198   No         No     TN
+ 9225             Yes    NaN
+ 9261   No        Yes     FP
+ 9293   No        Yes     FP
+ 9296   No        Yes     FP
+  932   No         No     TN
+ 9334   No        Yes     FP
+ 9356   No        Yes     FP
+  937   No        Yes     FP
+ 9441   No        Yes     FP
+ 9460   No        Yes     FP
+ 9486   No         No     TN
+ 9490   No        Yes     FP
+  950   No        Yes     FP
+ 9544   No        Yes     FP
+ 9561  Yes        Yes     TP
+ 9563   No        Yes     FP
+ 9572   No         No     TN
+ 9578   No        Yes     FP
+  959   No        Yes     FP
+  961   No         No     TN
+ 9639   No         No     TN
+ 9642  Yes        Yes     TP
+  965   No         No     TN
+ 9655             Yes    NaN
+ 9675   No        Yes     FP
+ 9741   No        Yes     FP
+ 9750  Yes        Yes     TP
+ 9764   No        Yes     FP
+ 9772   No         No     TN
+ 9814   No        Yes     FP
+ 9864              No    NaN
+ 9892   No        Yes     FP
+ 9910  Yes        Yes     TP
+ 9939  Yes        Yes     TP
+  994   No        Yes     FP
+ 9978   No        Yes     FP
+ 9981   No        Yes     FP
+  999  Yes        Yes     TP
+
+======================================================================
+SUMMARY
+======================================================================
+   Model      Shot    Topic           Category   Test Positive_Label  N_gold  N_pred  N_unparsed  N_valid  TP  TN  FP  FN  Precision   Recall       F1  Accuracy
+llama3.2 zero_shot facility Contrary(P)Body(N) Test 1            Yes   12060     500           0      478  49 149 267  13   0.155063 0.790323 0.259259  0.414226
+llama3.2 zero_shot facility Contrary(P)Body(N) Test 2            Yes   12060     500           0      478  48 149 267  14   0.152381 0.774194 0.254642  0.412134
+llama3.2 zero_shot facility Contrary(P)Body(N) Test 3            Yes   12060     500           0      478  48 149 267  14   0.152381 0.774194 0.254642  0.412134

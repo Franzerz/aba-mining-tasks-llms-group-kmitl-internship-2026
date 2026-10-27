@@ -1,0 +1,13 @@
+======================================================================
+ALL
+======================================================================
+   Model      Shot    Topic           Category   Test Positive_Label  N_valid  TP  TN  FP  FN  Precision   Recall       F1  Accuracy
+llama3.2 zero_shot check-in Contrary(P)Body(N) Test 1            Yes      252  58  71  87  36   0.400000 0.617021 0.485356  0.511905
+llama3.2 zero_shot check-in Contrary(P)Body(N) Test 2            Yes      252  57  70  88  37   0.393103 0.606383 0.476987  0.503968
+llama3.2 zero_shot check-in Contrary(P)Body(N) Test 3            Yes      252  58  70  88  36   0.397260 0.617021 0.483333  0.507937
+
+======================================================================
+MICRO_BY_CATEGORY
+======================================================================
+   Model      Shot    Topic           Category Positive_Label  Precision   Recall       F1  Accuracy  N_valid  TP  TN  FP  FN
+llama3.2 zero_shot check-in Contrary(P)Body(N)            Yes   0.396789 0.613475 0.481894  0.507937      756 173 211 263 109

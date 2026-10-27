@@ -1,0 +1,13 @@
+======================================================================
+ALL
+======================================================================
+       Model     Shot Topic           Category   Test Positive_Label  N_valid   TP   TN   FP  FN  Precision   Recall       F1  Accuracy
+llama4_scout one_shot staff Contrary(P)Body(N) Test 1            Yes     6256 1264 2711 1656 625   0.432877 0.669137 0.525681   0.63539
+llama4_scout one_shot staff Contrary(P)Body(N) Test 2            Yes     6256 1264 2711 1656 625   0.432877 0.669137 0.525681   0.63539
+llama4_scout one_shot staff Contrary(P)Body(N) Test 3            Yes     6256 1264 2711 1656 625   0.432877 0.669137 0.525681   0.63539
+
+======================================================================
+MICRO_BY_CATEGORY
+======================================================================
+       Model     Shot Topic           Category Positive_Label  Precision   Recall       F1  Accuracy  N_valid   TP   TN   FP   FN
+llama4_scout one_shot staff Contrary(P)Body(N)            Yes   0.432877 0.669137 0.525681   0.63539    18768 3792 8133 4968 1875
