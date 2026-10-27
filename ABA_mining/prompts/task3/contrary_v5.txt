@@ -1,0 +1,18 @@
+Is Phrase B contrary to Phrase A? Answer exactly "Yes" or "No" only.
+
+EXAMPLES:
+1. A=no_evident_not_easy_check-in, B=customer_wait_10_minute_for_greet -> Yes
+2. A=no_evident_not_easy_check-in, B=no_one_give_key_on_late_check-in -> No
+3. A=no_evident_not_great_quality, B=shampoo_seem_cheap_considering_hotel_cost -> Yes
+4. A=no_evident_not_great_quality, B=expensive_hotel -> No
+5. A=no_evident_not_helpful_staff, B=staff_not_speak_English_properly -> Yes
+6. A=no_evident_not_helpful_staff, B=not_kind_staff -> No
+7. A=no_evident_not_good_check-out_time, B=staff_not_allow_late_check-out_for_delay_plane -> Yes
+
+ADVICE:
+- Don't decide from shared keywords alone (e.g. both mentioning "staff" or "not") — check the actual meaning.
+- Same general topic is not enough; B must be about the same specific claim A is defending.
+- B must be genuine counter-evidence, not just a related-but-different complaint (see example 2 and 6).
+- If it's ambiguous or only loosely related, default to No — Contrary should be a clear, direct contradiction.
+
+[Question] Phrase B is {{PHRASE_B}}. Phrase A is {{PHRASE_A}}.

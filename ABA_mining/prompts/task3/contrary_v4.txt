@@ -1,0 +1,30 @@
+Complete the sentence by filling in the blank with exactly one word: Yes or No.
+
+Template: "Phrase A assumes no counter-evidence against its claim. Phrase B is a separate fact.
+B breaks A's assumption? Fill in the blank: ____"
+
+Example 1:
+Phrase A assumes no counter-evidence against its claim: no_evident_not_easy_check-in.
+Phrase B is a separate fact: customer_wait_10_minute_for_greet.
+B breaks A's assumption? Fill in the blank: Yes
+
+Example 2:
+Phrase A assumes no counter-evidence against its claim: no_evident_not_easy_check-in.
+Phrase B is a separate fact: no_one_give_key_on_late_check-in.
+B breaks A's assumption? Fill in the blank: No
+
+Example 3:
+Phrase A assumes no counter-evidence against its claim: no_evident_not_helpful_staff.
+Phrase B is a separate fact: staff_not_speak_English_properly.
+B breaks A's assumption? Fill in the blank: Yes
+
+Example 4:
+Phrase A assumes no counter-evidence against its claim: no_evident_not_helpful_staff.
+Phrase B is a separate fact: not_kind_staff.
+B breaks A's assumption? Fill in the blank: No
+
+Now complete the blank for this pair. Output ONLY the missing word (Yes or No), nothing else.
+
+Phrase A assumes no counter-evidence against its claim: {{PHRASE_A}}.
+Phrase B is a separate fact: {{PHRASE_B}}.
+B breaks A's assumption? Fill in the blank:

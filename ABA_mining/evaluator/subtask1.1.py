@@ -92,8 +92,12 @@ def _load_topic_sets(df: pd.DataFrame) -> dict:
             (df["Topic"].str.strip() != "") &
             (~df["Topic"].str.strip().str.lower().isin(_BAD_VALS))
         ].copy()
-        valid["Topic"] = valid["Topic"].str.strip()
-        return valid.groupby("Review ID")["Topic"].apply(set).to_dict()
+        # subtask1_1 output lists all of a review's topics in one cell, e.g. "Location, Room"
+        result: dict = {}
+        for _, row in valid.iterrows():
+            topics = {t.strip() for t in str(row["Topic"]).split(",") if t.strip() and t.strip() != "(none)"}
+            result.setdefault(row["Review ID"], set()).update(topics)
+        return result
 
     return {}
 

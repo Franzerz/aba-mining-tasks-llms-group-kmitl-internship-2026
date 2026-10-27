@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -436,7 +437,7 @@ def _write_readable_csv(csv_path: Path, results: list[dict[str, Any]], instances
         writer = csv_mod.writer(f)
 
         if output_schema == "topic_only":
-            writer.writerow(["Review ID", "Run", "Valid", "Topics Present", "Errors"])
+            writer.writerow(["Review ID", "Run", "Valid", "Topic", "Errors"])
             for r in results:
                 review_id = r["review_id"]
                 run_idx = r.get("run_index", 1)
@@ -574,4 +575,291 @@ def _write_readable_csv(csv_path: Path, results: list[dict[str, Any]], instances
                             writer.writerow([review_id, run_idx, valid, "(no topics found)", "", "", errors])
                 else:
                     writer.writerow([review_id, run_idx, valid, "(parse failed)", "", "", errors])
+
+
+# ── "sequence" experiment ────────────────────────────────────────────────────
+# subtask 1.1 -> 1.2 -> 1.3, each step given the previous step's answer.
+# Each subtask finishes for ALL reviews before the next subtask starts.
+#   1. Topics:    the subtask1_1 prompt picks the topics the review mentions.
+#   2. Text:      the subtask1_2 prompt is asked only about those topics ({{TOPICS}} = picked topics).
+#   3. Sentiment: the subtask1_3 prompt labels each piece of text on its own
+#                 ({{TOPICS}} = its topic, {{REVIEW_TEXT}} = the full review + that text to label).
+
+SEQUENCE_STEPS = {"subtask1_1": "topic_only", "subtask1_2": "span_only", "subtask1_3": "sentiment_only"}
+
+# Must match how load_task1_instances_from_input builds review_text
+_POS_PREFIX = 'PositiveReview — "'
+_NEG_SEPARATOR = '"\nNegativeReview — "'
+
+
+def _section_sentiment(review_text: str, text: str) -> str:
+    """Sentiment implied by which box the text was written in ("" if it's in both or neither)."""
+    body = review_text[len(_POS_PREFIX):-1] if review_text.startswith(_POS_PREFIX) else review_text
+    positive, _, negative = body.partition(_NEG_SEPARATOR)
+    in_positive, in_negative = text in positive, text in negative
+    if in_positive and not in_negative:
+        return "Positive"
+    if in_negative and not in_positive:
+        return "Negative"
+    return ""
+
+
+_TOPIC_ARRAY = re.compile(r'"([^"]+)"\s*:\s*\[')
+# Ends at `"}` (or `", "label"`) so an unescaped `"` inside the text doesn't cut it short
+_TEXT_ITEM = re.compile(r'"text"\s*:\s*"(.*?)"\s*(?:\}|,\s*"label")', re.DOTALL)
+
+
+def _salvage_spans(raw: str, topics: list[str]) -> dict[str, list[str]]:
+    """Recover {topic: [texts]} from a subtask1_2 answer that isn't valid JSON.
+
+    On long reviews the model's answer can get cut off, or contain an unescaped quote.
+    Every complete {"text": "..."} item is kept; the broken or cut-off part is skipped.
+    """
+    wanted = set(topics)
+    starts = [(m.group(1), m.start(), m.end()) for m in _TOPIC_ARRAY.finditer(raw)]
+    found: dict[str, list[str]] = {}
+    for i, (topic, _, body_start) in enumerate(starts):
+        if topic not in wanted:
+            continue
+        body_end = starts[i + 1][1] if i + 1 < len(starts) else len(raw)
+        for m in _TEXT_ITEM.finditer(raw, body_start, body_end):
+            value = m.group(1)
+            try:
+                value = json.loads(f'"{value}"')
+            except json.JSONDecodeError:
+                value = value.replace('\\"', '"')
+            if value.strip() and value not in found.setdefault(topic, []):
+                found[topic].append(value)
+    return {t: xs for t, xs in found.items() if xs}
+
+
+def _read_jsonl(path: Path) -> list[dict[str, Any]]:
+    records: list[dict[str, Any]] = []
+    with path.open(encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                rec = json.loads(line)
+            except json.JSONDecodeError:
+                continue  # a line cut off by a crash
+            if "review_id" in rec:
+                records.append(rec)
+    return records
+
+
+def run_task1_sequence(
+    *,
+    client: LLMClient,
+    topics_cfg: TopicsConfig,
+    model_cfg: ModelConfig,
+    instances: list[Task1Instance],
+    topics_template: str,
+    spans_template: str,
+    sentiments_template: str,
+    out_jsonl: Path,
+    step_jsonls: dict[str, Path],
+    runs_per_id: int = 3,
+) -> Path:
+    """Runs subtask1_1 for all reviews, then subtask1_2 for all, then subtask1_3 for all.
+
+    Each subtask's answers go to step_jsonls[subtask] (+ .csv in that subtask's usual format).
+    Final CSV: Review ID, Topic, Selected Content, Sentiment, Errors."""
+    topics = topics_cfg.topics
+
+    def _ask(template: str, **fields: str) -> tuple[str, Any, str | None]:
+        resp = client.complete(
+            model=model_cfg.task1_model,
+            prompt=render_prompt(template, **fields),
+            temperature=model_cfg.temperature,
+            top_p=model_cfg.top_p,
+            max_output_tokens=model_cfg.max_output_tokens,
+        )
+        ok, parsed, err = try_parse_json(resp.text)
+        return resp.text, (parsed if ok else None), err
+
+    def _step_topics(inst: Task1Instance) -> dict[str, Any]:
+        raw, parsed, err = _ask(
+            topics_template,
+            TOPICS=", ".join(topics),
+            TOPIC_COUNT=str(len(topics)),
+            REVIEW_TEXT=inst.review_text,
+        )
+        norm = None
+        if parsed is None:
+            errors = [f"json_parse_error: {err}"]
+        else:
+            norm, errors = normalize_parsed_json(parsed, output_schema="topic_only", topics=topics)
+            if norm is not None:
+                errors = local_validate_task1(norm, topics=topics, review_text=inst.review_text, output_schema="topic_only")
+        mentions = norm["topic_mentions"] if norm else {}
+        # Topics marked true are used even if the model left other topics out
+        selected = [t for t in topics if mentions.get(t) is True]
+        return {"raw_output": raw, "parsed": norm, "errors": errors, "selected": selected}
+
+    def _step_spans(inst: Task1Instance, selected: list[str]) -> dict[str, Any]:
+        texts: dict[str, list[str]] = {t: [] for t in selected}
+        if not selected:
+            return {"raw_output": "", "parsed": {"spans": {}}, "errors": [], "texts": texts}
+
+        raw, parsed, err = _ask(
+            spans_template,
+            TOPICS=", ".join(selected),
+            TOPIC_COUNT=str(len(selected)),
+            REVIEW_TEXT=inst.review_text,
+        )
+        errors: list[str] = []
+        spans = parsed.get("spans") if isinstance(parsed, dict) else None
+        salvaged = False
+        if parsed is None:
+            recovered = _salvage_spans(raw, selected)
+            if recovered:
+                # Answer wasn't valid JSON (e.g. cut off on a long review); keep its complete items
+                spans = {t: [{"text": x} for x in xs] for t, xs in recovered.items()}
+                salvaged = True
+            else:
+                errors = [f"json_parse_error: {err}"]
+        elif not isinstance(spans, dict):
+            errors = ["Missing 'spans' key"]
+
+        if isinstance(spans, dict):
+            for topic in selected:
+                items = spans.get(topic)
+                for item in items if isinstance(items, list) else []:
+                    text = item.get("text") if isinstance(item, dict) else None
+                    if isinstance(text, str) and text.strip() and text != "null" and text not in texts[topic]:
+                        texts[topic].append(text)
+                        if text not in inst.review_text:
+                            errors.append(f"{topic}: text span '{text}' not found verbatim in review_text")
+
+        step_parsed = None
+        if isinstance(spans, dict):
+            step_parsed = {"spans": {t: [{"text": x} for x in texts[t]] or [{"text": None}] for t in selected}}
+        # A topic picked in step 1 with no text here is simply dropped (no rows, no error)
+        return {"raw_output": raw, "parsed": step_parsed, "errors": errors, "texts": texts, "salvaged": salvaged}
+
+    def _step_sentiments(inst: Task1Instance, texts: dict[str, list[str]]) -> dict[str, Any]:
+        raw_outputs: list[str] = []
+        errors: list[str] = []
+        rows: list[dict[str, str]] = []
+        section_fallbacks: list[str] = []
+        for topic, topic_texts in texts.items():
+            for text in topic_texts:
+                # Full review (same as subtask1_1 gets) for context, plus the one text to label
+                review_with_text = (
+                    f'{inst.review_text}\n'
+                    f'Selected Content ({topic}) — "{text}"\n'
+                    f'Label only the Selected Content above for {topic}.'
+                )
+                raw, parsed, err = _ask(
+                    sentiments_template,
+                    TOPICS=topic,
+                    TOPIC_COUNT="1",
+                    REVIEW_TEXT=review_with_text,
+                )
+                raw_outputs.append(raw)
+                sentiments = parsed.get("sentiments") if isinstance(parsed, dict) else None
+                value = sentiments.get(topic) if isinstance(sentiments, dict) else None
+                sentiment = ""
+                if parsed is None:
+                    errors.append(f"{topic}: json_parse_error: {err}")
+                elif not isinstance(sentiments, dict):
+                    errors.append(f"{topic}: Missing 'sentiments' key")
+                elif isinstance(value, str) and value.strip().lower() in ("positive", "negative"):
+                    sentiment = value.strip().capitalize()
+                elif topic != "Off":
+                    # No opinion words (e.g. just "Location" or "Elevator"): the model answers null.
+                    # Fall back to the box it was written in: liked -> Positive, disliked -> Negative.
+                    # Off with no sentiment stays blank (fillers like "Nothing at all.").
+                    sentiment = _section_sentiment(inst.review_text, text)
+                    if sentiment:
+                        section_fallbacks.append(text)
+                    else:
+                        errors.append(f"{topic}: no Positive/Negative for '{text}'")
+                rows.append({"topic": topic, "text": text, "sentiment": sentiment})
+        parsed_out = {"annotations": [r for r in rows if r["sentiment"]]}
+        return {
+            "raw_output": raw_outputs,
+            "parsed": parsed_out,
+            "errors": errors,
+            "rows": rows,
+            # Texts whose sentiment came from the review box, not from the model (kept for checking)
+            "section_fallbacks": section_fallbacks,
+        }
+
+    keys = [(inst.review_id, ri) for inst in instances for ri in range(1, runs_per_id + 1)]
+
+    def _run_stage(name: str, carry_key: str, make_step) -> dict[tuple[str, int], dict[str, Any]]:
+        """Run one subtask over every review/run before the next subtask starts.
+
+        Each answer is appended to that subtask's jsonl as soon as it finishes, so a crash resumes
+        inside the same subtask. carry_key is the field the next subtask needs; records without it
+        (e.g. from an older version of this code) are redone.
+        """
+        path = step_jsonls[name]
+        done = {
+            (str(r["review_id"]), int(r.get("run_index", 1))): r
+            for r in (_read_jsonl(path) if path.exists() else [])
+            if carry_key in r
+        }
+        todo = [(inst, ri) for inst in instances for ri in range(1, runs_per_id + 1) if (inst.review_id, ri) not in done]
+        print(f"{name}: {len(todo)} to process, {len(done)} already done")
+
+        with path.open("a", encoding="utf-8") as f:
+            for inst, ri in tqdm(todo, desc=f"Task1 sequence {name}"):
+                step = make_step(inst, ri)
+                rec = {
+                    "review_id": inst.review_id,
+                    "run_index": ri,
+                    "output_schema": SEQUENCE_STEPS[name],
+                    "valid": not step["errors"],
+                    **step,
+                }
+                f.write(json.dumps(rec, ensure_ascii=False) + "\n")
+                f.flush()
+                done[(inst.review_id, ri)] = rec
+
+        _write_readable_csv(path.with_suffix(".csv"), [done[k] for k in keys], instances, output_schema=SEQUENCE_STEPS[name])
+        return done
+
+    # 1. subtask1_1 for every review, 2. subtask1_2 for every review, 3. subtask1_3 for every review
+    step1 = _run_stage("subtask1_1", "selected", lambda inst, ri: _step_topics(inst))
+    step2 = _run_stage("subtask1_2", "texts", lambda inst, ri: _step_spans(inst, step1[(inst.review_id, ri)]["selected"]))
+    step3 = _run_stage("subtask1_3", "rows", lambda inst, ri: _step_sentiments(inst, step2[(inst.review_id, ri)]["texts"]))
+
+    # Final result: one record per review/run, rows from subtask1_3, errors from all three subtasks
+    records: list[dict[str, Any]] = []
+    for key in keys:
+        errors: list[str] = []
+        for name, stage in (("subtask1_1", step1), ("subtask1_2", step2), ("subtask1_3", step3)):
+            errors += [f"{name}: {e}" for e in stage[key]["errors"]]
+        records.append({
+            "review_id": key[0],
+            "run_index": key[1],
+            "rows": step3[key]["rows"],
+            "valid": len(errors) == 0,
+            "errors": errors,
+        })
+
+    with out_jsonl.open("w", encoding="utf-8") as f:
+        for rec in records:
+            f.write(json.dumps(rec, ensure_ascii=False) + "\n")
+    _write_sequence_csv(out_jsonl.with_suffix(".csv"), records)
+
+    return out_jsonl
+
+
+def _write_sequence_csv(csv_path: Path, records: list[dict[str, Any]]) -> None:
+    import csv as csv_mod
+
+    with csv_path.open("w", encoding="utf-8", newline="") as f:
+        writer = csv_mod.writer(f)
+        writer.writerow(["Review ID", "Topic", "Selected Content", "Sentiment", "Errors"])
+        for r in records:
+            errors = "; ".join(r.get("errors", []))
+            if not r["rows"]:
+                writer.writerow([r["review_id"], "(no annotations found)", "", "", errors])
+            for row in r["rows"]:
+                writer.writerow([r["review_id"], row["topic"], row["text"], row["sentiment"], errors])
 

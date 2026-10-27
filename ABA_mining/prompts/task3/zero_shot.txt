@@ -1,0 +1,3 @@
+Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Question] Phrase B is {{PHRASE_B}}. Phrase A is {{PHRASE_A}}.

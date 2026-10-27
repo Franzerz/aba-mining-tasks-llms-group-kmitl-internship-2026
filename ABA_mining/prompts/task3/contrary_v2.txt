@@ -1,0 +1,35 @@
+Task: decide if Proposition B contradicts Assumption A.
+
+Steps:
+1. A defends a claim (strip "no_evident_not_" / "have_evident_" to see it).
+2. B states a fact.
+3. Does B disprove A's claim? Same specific issue only, not just same topic.
+
+Output pattern (always use this exact shape):
+A: <phrase>
+B: <phrase>
+Answer: Yes/No
+
+Examples:
+
+A: no_evident_not_easy_check-in
+B: customer_wait_10_minute_for_greet
+Answer: Yes
+
+A: no_evident_not_easy_check-in
+B: no_one_give_key_on_late_check-in
+Answer: No
+
+A: no_evident_not_great_quality
+B: shampoo_seem_cheap_considering_hotel_cost
+Answer: Yes
+
+A: no_evident_not_great_quality
+B: expensive_hotel
+Answer: No
+
+Now answer for this pair. Output ONLY the final line "Answer: Yes" or "Answer: No" — no other text.
+
+A: {{PHRASE_A}}
+B: {{PHRASE_B}}
+Answer:

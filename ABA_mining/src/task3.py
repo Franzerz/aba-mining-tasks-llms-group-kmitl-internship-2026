@@ -117,6 +117,12 @@ def _detect_column(df: pd.DataFrame, candidates: list[str]) -> str | None:
 
 
 def aspect_from_filename(path: Path) -> str:
+    # task3_csv_prepare.py names files "<Topic> - <Category>.csv" (e.g. "Food - Contrary(N)Body(P).csv",
+    # "Booking-issue - Contrary(P)Body(N).csv") -> aspect is the lowercased topic part.
+    if " - " in path.stem:
+        topic = path.stem.split(" - ", 1)[0].strip()
+        if topic:
+            return re.sub(r"\s+", "-", topic.lower())
     lower = path.name.lower()
     if "check-out" in lower or "checkout" in lower:
         return "check-out"
@@ -129,6 +135,16 @@ def aspect_from_filename(path: Path) -> str:
     if "facility" in lower:
         return "facility"
     return path.stem[:40]
+
+
+def category_from_filename(path: Path) -> str:
+    """Polarity category named in a CSV filename (e.g. "Food - Contrary(N)Body(P).csv").
+    Legacy per-aspect CSVs without a category in the name were always Contrary(P)Body(N)."""
+    lower = path.name.lower()
+    for category in ALL_CATEGORIES:
+        if category.lower() in lower:
+            return category
+    return "Contrary(P)Body(N)"
 
 
 def safe_file_token(value: str) -> str:
@@ -207,17 +223,22 @@ def load_task3_instances(
     wanted_categories = categories if categories is not None else ALL_CATEGORIES
     instances: list[Task3Instance] = []
 
+    if aspects:
+        aspects = [a.lower() for a in aspects]
+
+    # One CSV per (aspect, category): "<Topic> - <Category>.csv" from task3_csv_prepare.py.
+    # These are unvoted candidate pairs, so INCOMPLETE_ASPECT_CATEGORIES (which tracks human
+    # voting progress in the xlsx workbooks) doesn't apply here.
     for csv_path in sorted(task3_dir.glob("*.csv")):
         aspect = aspect_from_filename(csv_path)
+        category = category_from_filename(csv_path)
         if aspects and aspect not in aspects:
             continue
-        if "Contrary(P)Body(N)" not in wanted_categories:
-            continue
-        if (aspect, "Contrary(P)Body(N)") in INCOMPLETE_ASPECT_CATEGORIES:
+        if category not in wanted_categories:
             continue
 
         df = pd.read_csv(csv_path, dtype=str)
-        instances.extend(_extract_rows(df, "Contrary(P)Body(N)", aspect, csv_path.name))
+        instances.extend(_extract_rows(df, category, aspect, csv_path.name))
 
     # Multiple xlsx workbooks can match the same aspect (e.g. a "(Gold)" workbook superseding
     # an older "(Silver)" one once voting finishes) -- load exactly ONE per aspect, never both,
@@ -255,7 +276,6 @@ def load_task3_instances(
             instances.extend(_extract_rows(df, category, aspect, f"{xlsx_path.name}::{category}"))
 
     if max_per_group:
-        rng = random.Random(seed)
         grouped: dict[tuple[str, str], list[Task3Instance]] = {}
         for inst in instances:
             grouped.setdefault((inst.aspect, inst.category), []).append(inst)
@@ -263,6 +283,9 @@ def load_task3_instances(
         capped: list[Task3Instance] = []
         for (aspect, category), group in grouped.items():
             if len(group) > max_per_group:
+                # Seeded per group so a group's sample doesn't depend on which other groups were
+                # loaded (--aspects / --categories) -- keeps resume/skip matching across runs.
+                rng = random.Random(f"{seed}|{aspect}|{category}")
                 group = rng.sample(group, max_per_group)
             capped.extend(group)
         instances = capped
@@ -425,6 +448,16 @@ def run_task3(
             done_keys = _load_done_keys(run_csv) if resume else set()
             todo_mask = ~(df_input["ID"] + "||" + df_input["PhraseA"] + "||" + df_input["PhraseB"]).isin(done_keys)
             todo = df_input[todo_mask]
+
+            if resume and run_csv.exists() and not len(todo):
+                # Already fully processed for this run -- leave its csv/log untouched, just refresh
+                # the wide sheet so the ALL_sheets workbook still includes this category.
+                print(f"[task3] skip {aspect} / {category} run{run_idx}: "
+                      f"{run_csv.name} already has all {len(df_input)} pair(s)")
+                wide = _build_master_wide(df_input, csv_dir, run_base, n_runs)
+                wide.to_excel(sheet_dir / f"{run_base}_sheet.xlsx", index=False)
+                category_wide[category] = wide
+                continue
 
             if len(todo):
                 with ThreadPoolExecutor(max_workers=model_cfg.num_workers) as ex:

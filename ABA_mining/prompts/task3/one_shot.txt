@@ -1,0 +1,5 @@
+Is phrase B contrary to phrase A? Answer exactly 'Yes' or 'No' only. Do not provide any extra text.
+
+[Example] Phrase B is no_one_answer_phone. Phrase A is no_evident_not_prompt_response_staff. Answer is 'Yes'.
+
+[Question] Phrase B is {{PHRASE_B}}. Phrase A is {{PHRASE_A}}.

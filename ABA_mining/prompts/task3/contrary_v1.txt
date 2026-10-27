@@ -1,0 +1,44 @@
+You are checking arguments in an ABA (Assumption-Based Argumentation) framework built from hotel review mining.
+
+BACKGROUND:
+Phrase A is always an auto-derived "Assumption" — it defends a claim by asserting no counter-evidence
+exists. It has one of two forms:
+- "no_evident_not_X" → defends that X IS true (assumes no evidence proves X false)
+- "have_evident_no_Y" → defends that Y IS absent (assumes there IS evidence Y is missing)
+
+Phrase B is a candidate "Proposition" — a separate fact mined from another part of the review data.
+
+TASK: Decide whether Phrase B is CONTRARY to Phrase A — meaning: if Phrase B is true, does it act as
+the counter-evidence that breaks Phrase A's assumption?
+
+RULES (apply in order):
+1. Strip the "no_evident_not_" or "have_evident_" prefix from Phrase A to recover the underlying claim.
+2. Ask: does Phrase B describe a concrete fact that, if true, disproves that claim?
+3. Phrase B must be about the SAME specific situation as the claim, not merely the same general topic.
+   A different specific complaint about the same topic is usually NOT contrary.
+4. Do not judge by shared keywords (e.g. both containing "not" or "no") — judge the meaning.
+5. If B provides real counter-evidence against A's claim → Yes. Otherwise → No.
+
+CONTRASTIVE EXAMPLES:
+
+1) Phrase A is no_evident_not_easy_check-in. Phrase B is customer_wait_10_minute_for_greet.
+   → Waiting 10 minutes to be greeted is direct evidence check-in was NOT easy. Answer: Yes
+
+2) Phrase A is no_evident_not_easy_check-in. Phrase B is no_one_give_key_on_late_check-in.
+   → This is about late check-in key handover, a different specific issue than check-in being easy. Answer: No
+
+3) Phrase A is no_evident_not_great_quality. Phrase B is shampoo_seem_cheap_considering_hotel_cost.
+   → Cheap-feeling shampoo for the price directly undercuts the "great quality" claim. Answer: Yes
+
+4) Phrase A is no_evident_not_great_quality. Phrase B is expensive_hotel.
+   → "Expensive" is a price complaint, not evidence about quality. Answer: No
+
+5) Phrase A is no_evident_not_helpful_staff. Phrase B is not_kind_staff.
+   → "Not kind" is a distinct complaint (attitude) from "not helpful" (competence/assistance) —
+     it does not itself prove staff were unhelpful. Answer: No
+
+OUTPUT FORMAT: Respond with exactly one word, "Yes" or "No". No explanation, no punctuation.
+
+NOW DECIDE:
+Phrase A is {{PHRASE_A}}. Phrase B is {{PHRASE_B}}.
+Answer:

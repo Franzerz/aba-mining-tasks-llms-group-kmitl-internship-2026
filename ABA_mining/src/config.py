@@ -33,6 +33,7 @@ class ModelConfig:
 class PathsConfig:
     input_csv: Path
     gold_csv: Path
+    task3_dir: Path
     task1_dir: Path
     eval_dir: Path
 
@@ -80,7 +81,7 @@ def load_paths_config(repo_root: Path) -> PathsConfig:
     return PathsConfig(
         input_csv=(repo_root / inp["input_csv"]).resolve(),
         gold_csv=(repo_root / inp["gold_csv"]).resolve(),
+        task3_dir=(repo_root / inp["task3_dir"]).resolve(),
         task1_dir=(repo_root / out["task1_dir"]).resolve(),
         eval_dir=(repo_root / out["eval_dir"]).resolve(),
     )
-
